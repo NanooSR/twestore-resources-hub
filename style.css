@@ -1,0 +1,11 @@
+:root { --bg:#0d1117; --panel:#161b22; --line:#30363d; --text:#e6edf3; --muted:#9da7b3; --accent:#58a6ff; --accent2:#2ea043; }
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:24px}
+.site-header,.site-footer{background:#0b0f14;border-bottom:1px solid var(--line)} .site-footer{border-top:1px solid var(--line);border-bottom:none;margin-top:32px}
+.eyebrow,.meta,.muted{color:var(--muted);font-size:.95rem}.subhead{max-width:780px;color:#c9d1d9}
+.hero,.card,.callout{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;margin:0 0 20px 0}
+.callout{border-left:5px solid var(--accent2)} .disclosure{border-left:5px solid #d29922}
+.page-grid{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(260px,1fr);gap:20px}.page-list{display:grid;gap:16px}.page-list-item{padding:14px;border:1px solid var(--line);border-radius:10px;background:#11161d}
+ul,ol{padding-left:20px} h1,h2,h3,h4{line-height:1.25} .cta{border-left:5px solid var(--accent2)}
+@media (max-width:900px){.page-grid{grid-template-columns:1fr}.wrap{padding:18px}}
