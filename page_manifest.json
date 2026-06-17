@@ -172,6 +172,52 @@
     "url_slug": "best-church-facilities-maintenance-janitorial-and-safety-supplies"
   },
   {
+    "page_key": "best-church-giving-offering-and-donation-station-supplies",
+    "page_title": "Best Church Giving, Offering, and Donation Station Supplies",
+    "page_type": "evergreen_best_tools",
+    "content_pillar": "church_supplies",
+    "related_twestore_product": "TWE Invoice & Cash-Flow Toolkit",
+    "cross_sell_cta": "Use the Invoice & Cash-Flow Toolkit as the control layer behind giving paperwork, donation handling, and count-room follow-up so offering flow stays documented instead of memory-based.",
+    "helper_summary": "This page helps churches choose practical giving, offering, and donation-station supplies so donation handling feels clearer, safer, and easier to repeat.",
+    "bounty_fit": "Amazon Business can fit later if this lane grows into recurring admin, giving, and front-desk procurement across multiple ministry teams.",
+    "comparison_points": [
+      "Giving-station purchases should reduce confusion and handoff risk before they try to look ceremonial.",
+      "The best offering-flow buy usually improves collection clarity, secure temporary holding, or count-room organization.",
+      "Donation-support supplies earn their place when they make recurring giving routines easier to explain and repeat."
+    ],
+    "recommendation_slots": [
+      {
+        "name": "Best church offering bag set for cleaner service-day collection flow",
+        "reason": "For churches that still run physical offering collection and need a more consistent handoff tool instead of improvising week to week.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0CJ32DD17?tag=resourceshubca-20",
+        "cta_label": "See offering bag set on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca church offering bag set."
+      },
+      {
+        "name": "Best lockable donation box for giving stations and secure temporary drop flow",
+        "reason": "For churches that need a clearer way to handle forms, envelopes, or donation slips at a front desk, event table, or unattended giving point.",
+        "affiliate_url": "https://www.amazon.ca/dp/B09BHPYTXK?tag=resourceshubca-20",
+        "cta_label": "See lockable donation box on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca lockable donation box."
+      },
+      {
+        "name": "Best church offering envelope supply for recurring paper giving routines",
+        "reason": "For churches that still need a dependable physical giving workflow alongside digital options and want less envelope scramble in the office.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0DNN6MZRP?tag=resourceshubca-20",
+        "cta_label": "See offering envelopes on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca church offering-envelope option."
+      },
+      {
+        "name": "Best accordion file organizer for sorting giving paperwork and follow-up documents",
+        "reason": "For churches that need a cleaner way to separate giving forms, deposit notes, guest paperwork, or temporary admin packets after a service.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0D8JDKTT4?tag=resourceshubca-20",
+        "cta_label": "See accordion organizer on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca accordion file organizer."
+      }
+    ],
+    "url_slug": "best-church-giving-offering-and-donation-station-supplies"
+  },
+  {
     "page_key": "best-church-green-room-backstage-and-worship-team-support-supplies",
     "page_title": "Best Church Green-Room, Backstage, and Worship-Team Support Supplies",
     "page_type": "evergreen_best_tools",
@@ -448,6 +494,52 @@
       }
     ],
     "url_slug": "best-church-meal-service-serving-and-cleanup-supplies"
+  },
+  {
+    "page_key": "best-church-memorial-service-and-funeral-hospitality-supplies",
+    "page_title": "Best Church Memorial-Service and Funeral Hospitality Supplies",
+    "page_type": "evergreen_best_tools",
+    "content_pillar": "church_supplies",
+    "related_twestore_product": "TWE Client Onboarding Starter Kit",
+    "cross_sell_cta": "Use the Client Onboarding Starter Kit as the handoff framework behind memorial-service hospitality so room prep, sign-in flow, sympathy follow-up, and family-facing tasks stay organized during emotionally heavy days.",
+    "helper_summary": "This page helps churches choose practical memorial-service and funeral hospitality supplies so care for families and guests feels calmer, more organized, and easier to sustain.",
+    "bounty_fit": "Amazon Business can fit later if this lane grows into recurring bereavement, hospitality, and event-support ordering across the church.",
+    "comparison_points": [
+      "Memorial-support purchases should reduce family and volunteer strain before they try to add visual polish.",
+      "The best funeral-hospitality buy usually improves sign-in flow, sympathy follow-up, comfort support, or small-table staging.",
+      "Bereavement-support supplies earn their place when they make a hard day feel more organized and less improvised for the serving team."
+    ],
+    "recommendation_slots": [
+      {
+        "name": "Best memorial guest book for cleaner family sign-in and remembrance capture",
+        "reason": "For churches that want an easier way to gather names, messages, and guest presence during memorial services without a last-minute improvised notebook.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0DHZJHKM7?tag=resourceshubca-20",
+        "cta_label": "See memorial guest book on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca memorial guest book."
+      },
+      {
+        "name": "Best sympathy card set for family follow-up and bereavement care notes",
+        "reason": "For churches that want a steadier follow-up rhythm after the service instead of depending on scattered single cards and forgotten note-writing.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0CTQ4J2HB?tag=resourceshubca-20",
+        "cta_label": "See sympathy card set on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca sympathy card set."
+      },
+      {
+        "name": "Best folding tray-table set for overflow comfort tables and quick hospitality staging",
+        "reason": "For churches that need fast temporary surfaces for guest books, tissues, water, printed handouts, or family-room support during memorial events.",
+        "affiliate_url": "https://www.amazon.ca/dp/B07MDJNF6R?tag=resourceshubca-20",
+        "cta_label": "See folding tray-table set on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca folding tray-table set."
+      },
+      {
+        "name": "Best decorative tissue box cover for counseling corners and memorial hospitality tables",
+        "reason": "For churches that want a cleaner, less improvised way to keep tissues accessible in family rooms, memorial sign-in areas, or pastoral care spaces.",
+        "affiliate_url": "https://www.amazon.ca/dp/B004CEQ0QI?tag=resourceshubca-20",
+        "cta_label": "See tissue box cover on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca tissue box cover."
+      }
+    ],
+    "url_slug": "best-church-memorial-service-and-funeral-hospitality-supplies"
   },
   {
     "page_key": "best-church-nursery-sanitation-and-child-safety-supplies",
@@ -1410,7 +1502,7 @@
     "content_pillar": "church_supplies",
     "related_twestore_product": "TWE Operator Systems Bundle",
     "cross_sell_cta": "Use the Operator Systems Bundle as the operating layer behind this buying path so office flow, service-day prep, kids ministry resets, event setup, and volunteer handoffs become repeatable instead of leader-dependent.",
-    "helper_summary": "This landing guide groups the church-buying pages into one practical path so church and ministry teams can move from office friction to Sunday flow, care rooms, recovery support, volunteer hospitality, small groups, events, hospitality, and volunteer coordination without losing context.",
+    "helper_summary": "This landing guide groups the church-buying pages into one practical path so church and ministry teams can move from office friction to Sunday flow, care rooms, recovery support, volunteer hospitality, giving flow, memorial support, small groups, events, hospitality, and volunteer coordination without losing context.",
     "bounty_fit": "Amazon Business can fit later if this procurement path turns into recurring multi-team church ordering.",
     "comparison_points": [
       "The right first church-buying page depends on where friction shows up first: office admin, Sunday service, kids ministry, front-door flow, or event setup.",
