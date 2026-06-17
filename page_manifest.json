@@ -78,7 +78,10 @@
     "recommendation_slots": [
       {
         "name": "Best desk organizer bundle",
-        "reason": "For keeping intake, notes, and physical admin items from taking over the surface."
+        "reason": "For keeping intake, notes, and physical admin items from taking over the surface.",
+        "affiliate_url": "https://www.amazon.ca/dp/B07RX17FKL?tag=resourceshubca-20",
+        "cta_label": "See organizer bundle on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca desk organizer bundle option."
       },
       {
         "name": "Best document scanner or compact filing tool",
@@ -109,7 +112,10 @@
     "recommendation_slots": [
       {
         "name": "Best USB microphone for desk use",
-        "reason": "For buyers who need a simple, strong audio upgrade."
+        "reason": "For buyers who need a simple, strong audio upgrade.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0872CFTGK?tag=resourceshubca-20",
+        "cta_label": "See USB microphone option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca USB microphone option."
       },
       {
         "name": "Best webcam for meetings and tutorials",
@@ -140,7 +146,10 @@
     "recommendation_slots": [
       {
         "name": "Best overall standing desk pick",
-        "reason": "For buyers who want a stable work surface that will actually get used daily."
+        "reason": "For buyers who want a stable work surface that will actually get used daily.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20",
+        "cta_label": "See standing desk option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca standing desk option."
       },
       {
         "name": "Best ergonomic chair value pick",
@@ -171,7 +180,10 @@
     "recommendation_slots": [
       {
         "name": "Best scanner or compact document tool",
-        "reason": "For buyers who handle recurring paper or intake artifacts."
+        "reason": "For buyers who handle recurring paper or intake artifacts.",
+        "affiliate_url": "https://www.amazon.ca/dp/B07KQZWPYN?tag=resourceshubca-20",
+        "cta_label": "See document scanner option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca document scanner option."
       },
       {
         "name": "Best label maker or filing support pick",
