@@ -536,3 +536,17 @@ main.wrap {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
+
+.church-feature-grid {
+  margin-bottom: 12px;
+}
+
+.feature-card-strong {
+  border-color: rgba(115, 183, 255, 0.32);
+  background: linear-gradient(180deg, rgba(13, 28, 54, 0.94), rgba(10, 20, 37, 0.92));
+}
+
+#church-featured-block {
+  margin-top: 8px;
+}
