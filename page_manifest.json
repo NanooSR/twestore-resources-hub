@@ -16,7 +16,10 @@
     "recommendation_slots": [
       {
         "name": "Best compact scanner or document-capture tool",
-        "reason": "For buyers who keep losing momentum when paperwork stays physical too long."
+        "reason": "For buyers who keep losing momentum when paperwork stays physical too long.",
+        "affiliate_url": "https://www.amazon.ca/dp/B07KQZWPYN?tag=resourceshubca-20",
+        "cta_label": "See compact scanner option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca compact scanner option."
       },
       {
         "name": "Best filing organizer or tray system",
@@ -47,7 +50,10 @@
     "recommendation_slots": [
       {
         "name": "Best portable monitor or second-screen option",
-        "reason": "For comparing sources and notes without constant tab shuffling."
+        "reason": "For comparing sources and notes without constant tab shuffling.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0B9GLG86C?tag=resourceshubca-20",
+        "cta_label": "See portable monitor option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca portable monitor option."
       },
       {
         "name": "Best external SSD or backup drive",
@@ -214,7 +220,10 @@
     "recommendation_slots": [
       {
         "name": "Best headphones for focus and interview prep",
-        "reason": "For job seekers working in shared or noisy environments."
+        "reason": "For job seekers working in shared or noisy environments.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0GFSPX7SS?tag=resourceshubca-20",
+        "cta_label": "See work-headset option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca work-headset option."
       },
       {
         "name": "Best webcam or light improvement",
@@ -245,7 +254,10 @@
     "recommendation_slots": [
       {
         "name": "Best monitor light or task lamp for KPI reviews",
-        "reason": "For buyers whose reviews happen early, late, or in visually dull desk conditions."
+        "reason": "For buyers whose reviews happen early, late, or in visually dull desk conditions.",
+        "affiliate_url": "https://www.amazon.ca/dp/B08DKQ3JG1?tag=resourceshubca-20",
+        "cta_label": "See monitor light option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca monitor light option."
       },
       {
         "name": "Best whiteboard or side-note capture tool",
@@ -276,7 +288,10 @@
     "recommendation_slots": [
       {
         "name": "Best whiteboard or dry-erase planner",
-        "reason": "For visible recurring workflows and weekly process reminders."
+        "reason": "For visible recurring workflows and weekly process reminders.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0CGLP5LQD?tag=resourceshubca-20",
+        "cta_label": "See dry-erase planner option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca dry-erase planner option."
       },
       {
         "name": "Best label or filing support tool",
@@ -307,7 +322,10 @@
     "recommendation_slots": [
       {
         "name": "Best standing desk for all-day laptop and monitor work",
-        "reason": "For buyers whose main goal is posture, stability, and enough surface for daily operator work."
+        "reason": "For buyers whose main goal is posture, stability, and enough surface for daily operator work.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20",
+        "cta_label": "See standing desk option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca standing desk option."
       },
       {
         "name": "Best compact standing desk for smaller rooms",
@@ -338,7 +356,10 @@
     "recommendation_slots": [
       {
         "name": "Best desk-ready USB microphone for meetings and Looms",
-        "reason": "For buyers who want a clear upgrade without audio complexity."
+        "reason": "For buyers who want a clear upgrade without audio complexity.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0872CFTGK?tag=resourceshubca-20",
+        "cta_label": "See USB microphone option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca USB microphone option."
       },
       {
         "name": "Best compact USB microphone for smaller desks",
@@ -369,7 +390,10 @@
     "recommendation_slots": [
       {
         "name": "Best monitor arm or riser",
-        "reason": "For buyers who need cleaner screen placement during scorecard reviews."
+        "reason": "For buyers who need cleaner screen placement during scorecard reviews.",
+        "affiliate_url": "https://www.amazon.ca/dp/B07T3KCQ94?tag=resourceshubca-20",
+        "cta_label": "See monitor arm option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca monitor arm option."
       },
       {
         "name": "Best desk lamp or monitor light",
