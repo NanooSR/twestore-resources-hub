@@ -89,11 +89,6 @@
     "twe-client-portal-delivery-hub",
     "twe-client-portal-delivery-hub"
   ],
-  "redirects": [
-    {
-      "route": "/resources",
-      "location": "https://www.thewatchersedge.ca/"
-    }
-  ],
+  "redirects": [],
   "exported_count": 48
 }
