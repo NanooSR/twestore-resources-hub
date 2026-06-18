@@ -48,9 +48,10 @@
     "/store/twe-ai-agent-ops-logbook",
     "/store/twe-client-portal-delivery-hub",
     "/store/twe-client-portal-delivery-hub",
-    "/store/twe-client-portal-delivery-hub"
+    "/store/twe-client-portal-delivery-hub",
+    "/store/twe-amazon-affiliate-store-quickstart-kit"
   ],
-  "product_count": 36,
+  "product_count": 37,
   "product_slugs": [
     "the-watchers-edge-botops-toolkit",
     "twe-solo-crm-follow-up-system",
@@ -87,8 +88,9 @@
     "twe-ai-agent-ops-logbook",
     "twe-client-portal-delivery-hub",
     "twe-client-portal-delivery-hub",
-    "twe-client-portal-delivery-hub"
+    "twe-client-portal-delivery-hub",
+    "twe-amazon-affiliate-store-quickstart-kit"
   ],
   "redirects": [],
-  "exported_count": 48
+  "exported_count": 49
 }
