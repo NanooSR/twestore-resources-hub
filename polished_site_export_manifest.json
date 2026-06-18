@@ -93,10 +93,6 @@
     {
       "route": "/resources",
       "location": "https://www.thewatchersedge.ca/"
-    },
-    {
-      "route": "/command-center",
-      "location": "/ops-center-7f3b/login"
     }
   ],
   "exported_count": 48
