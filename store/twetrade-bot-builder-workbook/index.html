@@ -352,6 +352,86 @@
         border-radius: 16px;
         border: 1px solid rgba(196, 209, 203, 0.72);
       }
+      .lightbox-trigger {
+        display: block;
+        width: 100%;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        cursor: zoom-in;
+        text-align: left;
+      }
+      .lightbox-trigger:focus-visible {
+        outline: 3px solid rgba(9, 103, 114, 0.55);
+        outline-offset: 4px;
+        border-radius: 18px;
+      }
+      .preview-card figcaption {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        color: var(--ink-soft);
+        font-size: 0.95rem;
+        font-weight: 700;
+      }
+      .zoom-hint {
+        color: var(--brand);
+        white-space: nowrap;
+      }
+      .image-lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(14px, 3vw, 36px);
+        background: rgba(5, 13, 22, 0.88);
+        backdrop-filter: blur(8px);
+      }
+      .image-lightbox.is-open { display: flex; }
+      .lightbox-panel {
+        position: relative;
+        width: min(1400px, 96vw);
+        max-height: 94vh;
+        display: grid;
+        gap: 12px;
+        padding: clamp(10px, 1.6vw, 18px);
+        border: 1px solid rgba(255,255,255,0.22);
+        border-radius: 22px;
+        background: rgba(255,255,255,0.96);
+        box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+      }
+      .lightbox-panel img {
+        width: 100%;
+        max-height: calc(94vh - 96px);
+        object-fit: contain;
+        border-radius: 16px;
+        background: #07111f;
+      }
+      .lightbox-caption {
+        margin: 0;
+        color: var(--ink-soft);
+        font-weight: 700;
+      }
+      .lightbox-close {
+        position: absolute;
+        top: -14px;
+        right: -14px;
+        min-width: 42px;
+        min-height: 42px;
+        border: 0;
+        border-radius: 999px;
+        background: var(--brand);
+        color: #fff;
+        font: inherit;
+        font-weight: 800;
+        cursor: pointer;
+        box-shadow: var(--shadow-md);
+      }
       .pill {
         display: inline-flex;
         align-items: center;
@@ -559,6 +639,8 @@
         .hero, .card, .feature-card, .stat-card, .mini-card, .faq-item, .path-card, .timeline-step, .quote-card, .editorial-card, .product, .dock-card { padding: 20px; }
         .nav { padding: 14px; }
         .nav-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .lightbox-panel { width: 100%; }
+        .lightbox-close { top: 8px; right: 8px; }
       }
     </style>
   </head>
@@ -606,7 +688,7 @@
       <a class="btn secondary" href="/store">Back to store</a>
       <a class="btn ghost" href="/store?family=business-systems-and-template-kits">More in this product family</a>
     </div>
-    <p class="lede" style="margin-top: 16px;">Plan, organize, document, and review a serious trading-bot build with premium worksheets, sanitized real-interface examples, prompt workflows, and safer paper-testing structure before live-risk decisions enter the picture.</p>
+    <p class="lede" style="margin-top: 16px;">Plan, organize, document, and review a serious trading-bot build with premium worksheets, click-to-enlarge sanitized interface examples, expanded AI prompt packs, and safer paper-testing structure before live-risk decisions enter the picture.</p>
   </div>
   <div class="mini-stack">
     <article class="mini-card">
@@ -658,24 +740,145 @@
   <div class="grid two product-preview-grid">
     
     <figure class="preview-card">
-      <img src="/static/public_site/product_previews/twetrade-bot-builder-workbook/01_twetrade_polished_hero.png" alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit">
+      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twetrade-bot-builder-workbook/01_twetrade_polished_hero.png" data-lightbox-alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit" data-lightbox-caption="TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit preview 1">
+        <img src="/static/public_site/product_previews/twetrade-bot-builder-workbook/01_twetrade_polished_hero.png" alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit">
+      </button>
+      <figcaption>
+        <span>Preview 1</span>
+        <span class="zoom-hint">Click to enlarge</span>
+      </figcaption>
     </figure>
     
     <figure class="preview-card">
-      <img src="/static/public_site/product_previews/twetrade-bot-builder-workbook/02_twetrade_real_interface_previews.png" alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit">
+      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twetrade-bot-builder-workbook/02_twetrade_prompt_pack_bonus.png" data-lightbox-alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit" data-lightbox-caption="TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit preview 2">
+        <img src="/static/public_site/product_previews/twetrade-bot-builder-workbook/02_twetrade_prompt_pack_bonus.png" alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit">
+      </button>
+      <figcaption>
+        <span>Preview 2</span>
+        <span class="zoom-hint">Click to enlarge</span>
+      </figcaption>
     </figure>
     
     <figure class="preview-card">
-      <img src="/static/public_site/product_previews/twetrade-bot-builder-workbook/03_twetrade_whats_included.png" alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit">
+      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twetrade-bot-builder-workbook/02_twetrade_real_interface_previews.png" data-lightbox-alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit" data-lightbox-caption="TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit preview 3">
+        <img src="/static/public_site/product_previews/twetrade-bot-builder-workbook/02_twetrade_real_interface_previews.png" alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit">
+      </button>
+      <figcaption>
+        <span>Preview 3</span>
+        <span class="zoom-hint">Click to enlarge</span>
+      </figcaption>
     </figure>
     
     <figure class="preview-card">
-      <img src="/static/public_site/product_previews/twetrade-bot-builder-workbook/04_twetrade_build_workflow.png" alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit">
+      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twetrade-bot-builder-workbook/03_twetrade_whats_included.png" data-lightbox-alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit" data-lightbox-caption="TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit preview 4">
+        <img src="/static/public_site/product_previews/twetrade-bot-builder-workbook/03_twetrade_whats_included.png" alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit">
+      </button>
+      <figcaption>
+        <span>Preview 4</span>
+        <span class="zoom-hint">Click to enlarge</span>
+      </figcaption>
     </figure>
     
     <figure class="preview-card">
-      <img src="/static/public_site/product_previews/twetrade-bot-builder-workbook/05_twetrade_trust_and_safety.png" alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit">
+      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twetrade-bot-builder-workbook/04_twetrade_build_workflow.png" data-lightbox-alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit" data-lightbox-caption="TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit preview 5">
+        <img src="/static/public_site/product_previews/twetrade-bot-builder-workbook/04_twetrade_build_workflow.png" alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit">
+      </button>
+      <figcaption>
+        <span>Preview 5</span>
+        <span class="zoom-hint">Click to enlarge</span>
+      </figcaption>
     </figure>
+    
+    <figure class="preview-card">
+      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twetrade-bot-builder-workbook/05_twetrade_trust_and_safety.png" data-lightbox-alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit" data-lightbox-caption="TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit preview 6">
+        <img src="/static/public_site/product_previews/twetrade-bot-builder-workbook/05_twetrade_trust_and_safety.png" alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit">
+      </button>
+      <figcaption>
+        <span>Preview 6</span>
+        <span class="zoom-hint">Click to enlarge</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="preview-card">
+      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twetrade-bot-builder-workbook/06_twetrade_dashboard_large_example.png" data-lightbox-alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit" data-lightbox-caption="TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit preview 7">
+        <img src="/static/public_site/product_previews/twetrade-bot-builder-workbook/06_twetrade_dashboard_large_example.png" alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit">
+      </button>
+      <figcaption>
+        <span>Preview 7</span>
+        <span class="zoom-hint">Click to enlarge</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="preview-card">
+      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twetrade-bot-builder-workbook/07_twetrade_research_large_example.png" data-lightbox-alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit" data-lightbox-caption="TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit preview 8">
+        <img src="/static/public_site/product_previews/twetrade-bot-builder-workbook/07_twetrade_research_large_example.png" alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit">
+      </button>
+      <figcaption>
+        <span>Preview 8</span>
+        <span class="zoom-hint">Click to enlarge</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="preview-card">
+      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twetrade-bot-builder-workbook/08_twetrade_settings_large_example.png" data-lightbox-alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit" data-lightbox-caption="TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit preview 9">
+        <img src="/static/public_site/product_previews/twetrade-bot-builder-workbook/08_twetrade_settings_large_example.png" alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit">
+      </button>
+      <figcaption>
+        <span>Preview 9</span>
+        <span class="zoom-hint">Click to enlarge</span>
+      </figcaption>
+    </figure>
+    
+    <figure class="preview-card">
+      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twetrade-bot-builder-workbook/09_twetrade_log_large_example.png" data-lightbox-alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit" data-lightbox-caption="TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit preview 10">
+        <img src="/static/public_site/product_previews/twetrade-bot-builder-workbook/09_twetrade_log_large_example.png" alt="Buyer-safe product preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit">
+      </button>
+      <figcaption>
+        <span>Preview 10</span>
+        <span class="zoom-hint">Click to enlarge</span>
+      </figcaption>
+    </figure>
+    
+  </div>
+</section>
+
+
+
+<section class="section card strong-card">
+  <div class="section-head" style="align-items: center; margin-bottom: 16px;">
+    <div>
+      <p class="eyebrow">Prompt pack bonus</p>
+      <h2>Prompt workflows built for planning, testing, and cleaner reviews</h2>
+      <p class="muted" style="margin-bottom: 0;">These prompts are positioned as practical project-support templates: they help buyers ask better questions, document decisions, troubleshoot calmly, and keep safety boundaries visible without promising trading outcomes.</p>
+    </div>
+    <a class="btn secondary" href="https://nanoojr.gumroad.com/l/twetrade-bot-builder-workbook">Open secure checkout</a>
+  </div>
+  <div class="grid three">
+    
+    <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
+      <p class="eyebrow">Prompt workflow</p>
+      <h3>Use planning prompts to turn a rough bot idea into a clearer architecture, assumptions list, testing path, and safer first-version scope</h3>
+    </article>
+    
+    <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
+      <p class="eyebrow">Prompt workflow</p>
+      <h3>Use documentation prompts to convert notes, screenshots, logs, and decisions into organized project records without pasting secrets or private account data</h3>
+    </article>
+    
+    <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
+      <p class="eyebrow">Prompt workflow</p>
+      <h3>Use testing and review prompts to create paper/simulation test cases, session reviews, debugging notes, and evidence checklists</h3>
+    </article>
+    
+    <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
+      <p class="eyebrow">Prompt workflow</p>
+      <h3>Use troubleshooting prompts to rank likely causes, choose the smallest next diagnostic step, and avoid random changes</h3>
+    </article>
+    
+    <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
+      <p class="eyebrow">Prompt workflow</p>
+      <h3>Use handoff and improvement prompts to plan next actions, summarize progress, and keep safety boundaries visible without claiming signals, profit, or trading outcomes</h3>
+    </article>
     
   </div>
 </section>
@@ -691,9 +894,9 @@ The builder starts with an idea, then quickly ends up with scattered prompts, un
 
 The TWETrade Bot Builder Workbook gives buyers a safer educational structure for the project side of bot building. It helps them plan what they are trying to build, document assumptions, separate paper testing from live-risk decisions, track lessons, and review next steps more clearly.
 
-This production-polished version also integrates useful patterns from old TWETrade prompt materials. The original prompts were reviewed and sanitized, then converted into customer-safe templates for staged audits, findings consolidation, implementation planning, debugging, simulation review, documentation handoff, secure credential-flow planning, and screenshot-to-build-plan workflows.
+The prompt packs are now a major part of the value. Useful patterns from old TWETrade prompt materials were reviewed, sanitized, and converted into customer-safe templates for staged audits, findings consolidation, implementation planning, debugging, simulation review, documentation handoff, secure credential-flow planning, screenshot-to-build-plan workflows, and calm decision reviews.
 
-The visual previews now include sanitized real TWETrade-side interface images alongside clean workbook graphics. They show the kind of dashboard, settings, research, database, log, help, and API-planning surfaces a buyer can learn to organize without exposing private accounts, balances, credentials, API keys, source code, sensitive logs, or trading signals.</p>
+The visual previews now include click-to-enlarge sanitized TWETrade-side interface images alongside clean workbook graphics. They show the kind of dashboard, settings, research, database, log, help, and API-planning surfaces a buyer can learn to organize without exposing private accounts, balances, credentials, API keys, source code, sensitive logs, or trading signals.</p>
   </article>
   <article class="card">
     <p class="eyebrow">Where you buy</p>
@@ -712,7 +915,7 @@ The visual previews now include sanitized real TWETrade-side interface images al
   <article class="card">
     <p class="eyebrow">Expected result</p>
     <h2>What changes after setup</h2>
-    <p class="muted">Move from a vague bot idea into a clearer project plan with worksheets, paper-testing boundaries, risk-review prompts, build notes, troubleshooting structure, staged AI prompt workflows, sanitized interface planning examples, and a decision log.</p>
+    <p class="muted">Move from a vague bot idea into a clearer project plan with worksheets, paper-testing boundaries, risk-review prompts, build notes, troubleshooting structure, staged AI prompt workflows, readable sanitized interface planning examples, and a decision log.</p>
   </article>
 </section>
 
@@ -762,9 +965,9 @@ The visual previews now include sanitized real TWETrade-side interface images al
       
       <li>Launch readiness worksheet</li>
       
-      <li>Core AI prompt pack for planning, review, and troubleshooting</li>
+      <li>Core AI prompt pack for planning, architecture review, strategy-spec drafting, testing, debugging, logs, risk review, documentation, paper-session review, and launch-readiness challenge questions</li>
       
-      <li>Advanced AI prompt workflows derived from sanitized old TWETrade prompt material</li>
+      <li>Advanced AI prompt workflows derived from sanitized old TWETrade prompt material for audit, findings-to-action, implementation planning, simulation review, documentation handoff, secure credential-flow planning, and screenshot-to-build-plan work</li>
       
       <li>Old prompt review and sanitization notes so buyers understand what was kept, rewritten, and excluded</li>
       
@@ -1073,5 +1276,50 @@ The visual previews now include sanitized real TWETrade-side interface images al
         </div>
       </footer>
     </div>
+    <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
+      <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Expanded product image">
+        <button class="lightbox-close" type="button" aria-label="Close expanded image">×</button>
+        <img src="" alt="">
+        <p class="lightbox-caption"></p>
+      </div>
+    </div>
+    <script>
+      (function () {
+        const lightbox = document.getElementById('image-lightbox');
+        if (!lightbox) return;
+        const image = lightbox.querySelector('img');
+        const caption = lightbox.querySelector('.lightbox-caption');
+        const closeButton = lightbox.querySelector('.lightbox-close');
+        let lastFocus = null;
+
+        function closeLightbox() {
+          lightbox.classList.remove('is-open');
+          lightbox.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+          if (lastFocus) lastFocus.focus();
+        }
+
+        document.querySelectorAll('[data-lightbox-src]').forEach((trigger) => {
+          trigger.addEventListener('click', () => {
+            lastFocus = trigger;
+            image.src = trigger.getAttribute('data-lightbox-src');
+            image.alt = trigger.getAttribute('data-lightbox-alt') || trigger.querySelector('img')?.alt || 'Expanded product image';
+            caption.textContent = trigger.getAttribute('data-lightbox-caption') || 'Expanded product image preview';
+            lightbox.classList.add('is-open');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            closeButton.focus();
+          });
+        });
+
+        closeButton.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (event) => {
+          if (event.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+        });
+      })();
+    </script>
   </body>
 </html>
