@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Watchers Edge helps practical buyers find digital tools, buyer guides, church resources, and support paths with clearer next steps.">
     <title>TheWatchersEdge.ca | TWE AI Agent Ops Logbook</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -379,6 +380,24 @@
       .dock-card {
         background: linear-gradient(180deg, #fffdf9, #f6efe6);
       }
+      .store-filter-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 2.2fr) repeat(3, minmax(150px, 1fr)) auto;
+        gap: 12px;
+        align-items: end;
+      }
+      .store-main-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.82fr);
+        gap: 22px;
+        align-items: start;
+      }
+      .store-compare-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) repeat(3, minmax(90px, 0.5fr));
+        gap: 12px;
+        align-items: start;
+      }
       .hero-kicker {
         display: inline-flex;
         align-items: center;
@@ -459,6 +478,14 @@
       }
       @media (max-width: 900px) {
         .split { grid-template-columns: 1fr; }
+        .store-filter-grid,
+        .store-main-layout,
+        .store-compare-row {
+          grid-template-columns: 1fr;
+        }
+        .store-filter-grid .cta-row {
+          justify-content: flex-start;
+        }
       }
       @media (max-width: 640px) {
         .shell { padding: 16px; }

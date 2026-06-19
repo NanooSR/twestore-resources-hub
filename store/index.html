@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Watchers Edge helps practical buyers find digital tools, buyer guides, church resources, and support paths with clearer next steps.">
     <title>TheWatchersEdge.ca | Store</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -379,6 +380,24 @@
       .dock-card {
         background: linear-gradient(180deg, #fffdf9, #f6efe6);
       }
+      .store-filter-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 2.2fr) repeat(3, minmax(150px, 1fr)) auto;
+        gap: 12px;
+        align-items: end;
+      }
+      .store-main-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.82fr);
+        gap: 22px;
+        align-items: start;
+      }
+      .store-compare-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) repeat(3, minmax(90px, 0.5fr));
+        gap: 12px;
+        align-items: start;
+      }
       .hero-kicker {
         display: inline-flex;
         align-items: center;
@@ -459,6 +478,14 @@
       }
       @media (max-width: 900px) {
         .split { grid-template-columns: 1fr; }
+        .store-filter-grid,
+        .store-main-layout,
+        .store-compare-row {
+          grid-template-columns: 1fr;
+        }
+        .store-filter-grid .cta-row {
+          justify-content: flex-start;
+        }
       }
       @media (max-width: 640px) {
         .shell { padding: 16px; }
@@ -546,7 +573,7 @@
     <a class="pill is-accent" href="/command-center">Buying Guide</a>
   </div>
   <form action="/store" method="get" style="display: grid; gap: 14px;">
-    <div style="display: grid; grid-template-columns: minmax(0, 2.2fr) repeat(3, minmax(150px, 1fr)) auto; gap: 12px; align-items: end;">
+    <div class="store-filter-grid">
       <label style="display: grid; gap: 6px;">
         <span class="eyebrow">Search</span>
         <input type="text" name="q" value="" placeholder="Products, business tasks, outcomes, FAQs, church needs, support guidance">
@@ -709,7 +736,7 @@
       </article>
       
       <article class="mini-card" style="padding: 16px 18px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-        <div style="display: grid; grid-template-columns: minmax(0, 1.2fr) repeat(3, minmax(90px, 0.5fr)); gap: 12px; align-items: start;">
+        <div class="store-compare-row">
           <div>
             <h3 style="margin-bottom: 4px; font-size: 1.1rem;"><a href="/store/the-watchers-edge-botops-toolkit" style="text-decoration: none;">The Watchers Edge BotOps Toolkit</a></h3>
             <p class="muted" style="margin-bottom: 0;">Broader business-system kits for buyers who want one stronger reusable foundation instead of a single narrow fix.</p>
@@ -730,7 +757,7 @@
       </article>
       
       <article class="mini-card" style="padding: 16px 18px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-        <div style="display: grid; grid-template-columns: minmax(0, 1.2fr) repeat(3, minmax(90px, 0.5fr)); gap: 12px; align-items: start;">
+        <div class="store-compare-row">
           <div>
             <h3 style="margin-bottom: 4px; font-size: 1.1rem;"><a href="/store/twe-solo-crm-follow-up-system" style="text-decoration: none;">TWE Solo CRM Follow-Up System</a></h3>
             <p class="muted" style="margin-bottom: 0;">Stay on top of every lead with a simple solo CRM built for weekly follow-up and revenue discipline.</p>
@@ -751,7 +778,7 @@
       </article>
       
       <article class="mini-card" style="padding: 16px 18px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-        <div style="display: grid; grid-template-columns: minmax(0, 1.2fr) repeat(3, minmax(90px, 0.5fr)); gap: 12px; align-items: start;">
+        <div class="store-compare-row">
           <div>
             <h3 style="margin-bottom: 4px; font-size: 1.1rem;"><a href="/store/twe-client-onboarding-starter-kit" style="text-decoration: none;">TWE Client Onboarding Starter Kit</a></h3>
             <p class="muted" style="margin-bottom: 0;">Launch cleaner client projects with a repeatable intake, kickoff, and delivery flow buyers can set up fast.</p>
@@ -775,7 +802,7 @@
   </article>
 </section>
 
-<section class="section" style="display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.82fr); gap: 22px; align-items: start;">
+<section class="section store-main-layout">
   <div class="mini-stack" style="gap: 22px;">
     <article class="card" style="padding: 24px; border-radius: 22px;">
       <div class="section-head" style="margin-bottom: 14px; align-items: center;">
@@ -841,7 +868,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/the-watchers-edge-botops-toolkit">View details</a>
               <a class="btn" href="https://nanoojr.gumroad.com/l/ltusy">Buy now</a>
-              <a class="btn secondary" href="/store/the-watchers-edge-botops-toolkit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -870,7 +897,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-solo-crm-follow-up-system">View details</a>
               <a class="btn" href="https://nanoojr.gumroad.com/l/imjodh">Buy now</a>
-              <a class="btn secondary" href="/store/twe-solo-crm-follow-up-system">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -899,7 +926,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-client-onboarding-starter-kit">View details</a>
               <a class="btn" href="https://nanoojr.gumroad.com/l/dbldih">Buy now</a>
-              <a class="btn secondary" href="/store/twe-client-onboarding-starter-kit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -928,7 +955,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-ai-output-qa-review-kit">View details</a>
               <a class="btn" href="https://nanoojr.gumroad.com/l/ehnwj">Buy now</a>
-              <a class="btn secondary" href="/store/twe-ai-output-qa-review-kit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -957,7 +984,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-sop-runbook-builder-pack">View details</a>
               <a class="btn" href="https://nanoojr.gumroad.com/l/incyjw">Buy now</a>
-              <a class="btn secondary" href="/store/twe-sop-runbook-builder-pack">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -986,7 +1013,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-invoice-cash-flow-toolkit">View details</a>
               <a class="btn" href="https://nanoojr.gumroad.com/l/nrjgjj">Buy now</a>
-              <a class="btn secondary" href="/store/twe-invoice-cash-flow-toolkit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1015,7 +1042,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-ai-research-sprint-kit">View details</a>
               <a class="btn" href="https://nanoojr.gumroad.com/l/wssar">Buy now</a>
-              <a class="btn secondary" href="/store/twe-ai-research-sprint-kit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1044,7 +1071,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-weekly-kpi-dashboard-scorecard">View details</a>
               <a class="btn" href="https://nanoojr.gumroad.com/l/qnigp">Buy now</a>
-              <a class="btn secondary" href="/store/twe-weekly-kpi-dashboard-scorecard">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1073,7 +1100,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-content-repurposing-calendar-kit">View details</a>
               <a class="btn" href="https://nanoojr.gumroad.com/l/yxbfxe">Buy now</a>
-              <a class="btn secondary" href="/store/twe-content-repurposing-calendar-kit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1102,7 +1129,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-ai-agent-ops-logbook">View details</a>
               <a class="btn" href="https://nanoojr.gumroad.com/l/danoh">Buy now</a>
-              <a class="btn secondary" href="/store/twe-ai-agent-ops-logbook">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1131,7 +1158,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-resume-tailoring-job-tracker-kit">View details</a>
               <a class="btn" href="https://www.etsy.com/ca/listing/4522004085/resume-tailoring-job-tracker-notion">Buy now</a>
-              <a class="btn secondary" href="/store/twe-resume-tailoring-job-tracker-kit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1160,7 +1187,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-client-onboarding-starter-kit">View details</a>
               <a class="btn" href="https://www.etsy.com/ca/listing/4522011484/client-onboarding-template-notion-client">Buy now</a>
-              <a class="btn secondary" href="/store/twe-client-onboarding-starter-kit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1189,7 +1216,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-solo-crm-follow-up-system">View details</a>
               <a class="btn" href="https://www.etsy.com/ca/listing/4522012472/solo-crm-notion-template-follow-up">Buy now</a>
-              <a class="btn secondary" href="/store/twe-solo-crm-follow-up-system">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1218,7 +1245,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-resume-tailoring-job-tracker-kit">View details</a>
               <a class="btn" href="https://ca.pinterest.com/pin/1111544751858155035/">Buy now</a>
-              <a class="btn secondary" href="/store/twe-resume-tailoring-job-tracker-kit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1247,7 +1274,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-client-onboarding-starter-kit">View details</a>
               <a class="btn" href="https://ca.pinterest.com/pin/1111544751858155286/">Buy now</a>
-              <a class="btn secondary" href="/store/twe-client-onboarding-starter-kit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1276,7 +1303,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-solo-crm-follow-up-system">View details</a>
               <a class="btn" href="https://ca.pinterest.com/pin/1111544751858155358/">Buy now</a>
-              <a class="btn secondary" href="/store/twe-solo-crm-follow-up-system">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1305,7 +1332,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-resume-tailoring-job-tracker-kit">View details</a>
               <a class="btn" href="https://nanoojr.gumroad.com/l/nfuhde">Buy now</a>
-              <a class="btn secondary" href="/store/twe-resume-tailoring-job-tracker-kit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1334,7 +1361,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/the-watchers-edge-botops-toolkit">View details</a>
               <a class="btn" href="https://ca.pinterest.com/pin/1111544751858156839/">Buy now</a>
-              <a class="btn secondary" href="/store/the-watchers-edge-botops-toolkit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1363,7 +1390,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-ai-output-qa-review-kit">View details</a>
               <a class="btn" href="https://ca.pinterest.com/pin/1111544751858157029/">Buy now</a>
-              <a class="btn secondary" href="/store/twe-ai-output-qa-review-kit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1392,7 +1419,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-sop-runbook-builder-pack">View details</a>
               <a class="btn" href="https://ca.pinterest.com/pin/1111544751858157065/">Buy now</a>
-              <a class="btn secondary" href="/store/twe-sop-runbook-builder-pack">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1421,7 +1448,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-invoice-cash-flow-toolkit">View details</a>
               <a class="btn" href="https://ca.pinterest.com/pin/1111544751858157101/">Buy now</a>
-              <a class="btn secondary" href="/store/twe-invoice-cash-flow-toolkit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1450,7 +1477,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-ai-research-sprint-kit">View details</a>
               <a class="btn" href="https://ca.pinterest.com/pin/1111544751858157997/">Buy now</a>
-              <a class="btn secondary" href="/store/twe-ai-research-sprint-kit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1479,7 +1506,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-weekly-kpi-dashboard-scorecard">View details</a>
               <a class="btn" href="https://ca.pinterest.com/pin/1111544751858158331/">Buy now</a>
-              <a class="btn secondary" href="/store/twe-weekly-kpi-dashboard-scorecard">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1508,7 +1535,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-content-repurposing-calendar-kit">View details</a>
               <a class="btn" href="https://ca.pinterest.com/pin/1111544751858166413/">Buy now</a>
-              <a class="btn secondary" href="/store/twe-content-repurposing-calendar-kit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1537,7 +1564,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-ai-agent-ops-logbook">View details</a>
               <a class="btn" href="https://ca.pinterest.com/pin/1111544751858170451/">Buy now</a>
-              <a class="btn secondary" href="/store/twe-ai-agent-ops-logbook">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1566,7 +1593,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-operator-systems-bundle">View details</a>
               <a class="btn" href="https://nanoojr.gumroad.com/l/operator-systems-bundle">Buy now</a>
-              <a class="btn secondary" href="/store/twe-operator-systems-bundle">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1595,7 +1622,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-ai-output-qa-review-kit">View details</a>
               <a class="btn" href="https://www.etsy.com/ca/listing/4522444257/ai-content-qa-template-review-checklist">Buy now</a>
-              <a class="btn secondary" href="/store/twe-ai-output-qa-review-kit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1624,7 +1651,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-sop-runbook-builder-pack">View details</a>
               <a class="btn" href="https://www.etsy.com/ca/listing/4522436816/sop-template-runbook-builder-operations">Buy now</a>
-              <a class="btn secondary" href="/store/twe-sop-runbook-builder-pack">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1653,7 +1680,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-invoice-cash-flow-toolkit">View details</a>
               <a class="btn" href="https://www.etsy.com/ca/listing/4522450760/invoice-tracker-template-cash-flow">Buy now</a>
-              <a class="btn secondary" href="/store/twe-invoice-cash-flow-toolkit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1682,7 +1709,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-content-repurposing-calendar-kit">View details</a>
               <a class="btn" href="https://www.etsy.com/ca/listing/4522464416/content-calendar-template-repurposing">Buy now</a>
-              <a class="btn secondary" href="/store/twe-content-repurposing-calendar-kit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1711,7 +1738,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-ai-research-sprint-kit">View details</a>
               <a class="btn" href="https://www.etsy.com/ca/listing/4522468748/research-tracker-template-source-log">Buy now</a>
-              <a class="btn secondary" href="/store/twe-ai-research-sprint-kit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1740,7 +1767,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-weekly-kpi-dashboard-scorecard">View details</a>
               <a class="btn" href="https://www.etsy.com/ca/listing/4522464209/kpi-dashboard-template-weekly-scorecard">Buy now</a>
-              <a class="btn secondary" href="/store/twe-weekly-kpi-dashboard-scorecard">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1769,7 +1796,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-ai-agent-ops-logbook">View details</a>
               <a class="btn" href="https://www.etsy.com/ca/listing/4522467665/ai-ops-logbook-template-agent-run-log">Buy now</a>
-              <a class="btn secondary" href="/store/twe-ai-agent-ops-logbook">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1798,7 +1825,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-client-portal-delivery-hub">View details</a>
               <a class="btn" href="https://www.etsy.com/ca/listing/4523022892/client-portal-template-client-onboarding">Buy now</a>
-              <a class="btn secondary" href="/store/twe-client-portal-delivery-hub">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1827,7 +1854,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-client-portal-delivery-hub">View details</a>
               
-              <a class="btn secondary" href="/store/twe-client-portal-delivery-hub">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1856,7 +1883,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-client-portal-delivery-hub">View details</a>
               
-              <a class="btn secondary" href="/store/twe-client-portal-delivery-hub">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1885,7 +1912,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twe-amazon-affiliate-store-quickstart-kit">View details</a>
               
-              <a class="btn secondary" href="/store/twe-amazon-affiliate-store-quickstart-kit">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
@@ -1914,7 +1941,7 @@
             <div class="cta-row" style="margin-top: 0;">
               <a class="btn" href="/store/twetrade-bot-builder-workbook">View details</a>
               <a class="btn" href="https://nanoojr.gumroad.com/l/twetrade-bot-builder-workbook">Buy now</a>
-              <a class="btn secondary" href="/store/twetrade-bot-builder-workbook">View details</a>
+              <a class="btn secondary" href="/collections">Compare options</a>
             </div>
           </div>
         </article>
