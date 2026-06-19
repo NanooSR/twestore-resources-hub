@@ -9,7 +9,7 @@
     <style>
       :root {
         color-scheme: light;
-        --bg: #f6f1ea;
+        --bg: #f3eee6;
         --bg-2: #fffdf9;
         --panel: rgba(255, 252, 247, 0.96);
         --panel-soft: rgba(248, 241, 233, 0.92);
@@ -24,6 +24,10 @@
         --gold: #ef9b13;
         --gold-soft: #fff1d6;
         --berry: #8c5b53;
+        --sage: #e9f3ee;
+        --sky: #e8f3f6;
+        --cream: #fff7e8;
+        --rose: #f7ebe6;
         --shadow-sm: 0 10px 26px rgba(23, 52, 58, 0.07);
         --shadow-md: 0 24px 56px rgba(23, 52, 58, 0.10);
         --radius-sm: 8px;
@@ -38,9 +42,10 @@
         margin: 0;
         font-family: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
         background:
-          radial-gradient(circle at top left, rgba(9, 103, 114, 0.05), transparent 26%),
-          radial-gradient(circle at 92% 2%, rgba(239, 155, 19, 0.05), transparent 16%),
-          linear-gradient(180deg, #fffefc 0%, #f8f3eb 34%, #f3eee6 100%);
+          radial-gradient(circle at top left, rgba(9, 103, 114, 0.10), transparent 28%),
+          radial-gradient(circle at 92% 2%, rgba(239, 155, 19, 0.10), transparent 20%),
+          radial-gradient(circle at 85% 48%, rgba(140, 91, 83, 0.06), transparent 22%),
+          linear-gradient(180deg, #fffefc 0%, #f8f3eb 34%, #efe8de 100%);
         color: var(--ink);
       }
       a { color: inherit; }
@@ -233,7 +238,7 @@
       h4 { font-size: 1.02rem; font-weight: 700; }
       p, li { margin: 0 0 14px; line-height: 1.65; }
       ul { margin: 0; padding-left: 18px; }
-      .muted { color: var(--muted); }
+      .muted { color: #52696e; }
       .lede {
         max-width: 780px;
         font-size: 1.12rem;
@@ -317,7 +322,8 @@
       .quote-card h3,
       .quote-card h4,
       .quote-card p:not(.eyebrow) { color: #fff; }
-      .quote-card .muted { color: rgba(255,255,255,0.84); }
+      .quote-card .muted { color: rgba(255,255,255,0.88); }
+      .quote-card .eyebrow { color: #ffe4b5; }
       .stat-card strong,
       .stat-number {
         display: block;
@@ -377,6 +383,49 @@
       .editorial-card {
         background: linear-gradient(180deg, #fffefa, #f8f3ea);
       }
+      .accent-card {
+        border-color: rgba(9, 103, 114, 0.24);
+        background: linear-gradient(145deg, #fffefa 0%, var(--sky) 100%);
+      }
+      .warm-card {
+        border-color: rgba(239, 155, 19, 0.30);
+        background: linear-gradient(145deg, #fffdfa 0%, var(--cream) 100%);
+      }
+      .strong-card {
+        border-color: rgba(9, 103, 114, 0.42);
+        background: linear-gradient(145deg, #0d6570 0%, #17343a 100%);
+        color: #fff;
+      }
+      .strong-card h2,
+      .strong-card h3,
+      .strong-card h4,
+      .strong-card p:not(.eyebrow),
+      .strong-card .muted,
+      .strong-card .stat-label { color: rgba(255,255,255,0.90); }
+      .strong-card .eyebrow { color: #ffe4b5; }
+      .store-hero-cards {
+        gap: 16px;
+        align-items: stretch;
+      }
+      .store-hero-cards > article {
+        min-height: 178px;
+        position: relative;
+        overflow: hidden;
+      }
+      .store-hero-cards > article::after {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        right: -34px;
+        bottom: -42px;
+        width: 120px;
+        height: 120px;
+        border-radius: 999px;
+        background: rgba(9, 103, 114, 0.08);
+        pointer-events: none;
+      }
+      .store-hero-cards > article > * { position: relative; z-index: 1; }
+      .store-hero-cards .strong-card::after { background: rgba(255,255,255,0.12); }
       .dock-card {
         background: linear-gradient(180deg, #fffdf9, #f6efe6);
       }
@@ -539,23 +588,23 @@
     </div>
   </div>
 
-  <div class="grid four" style="gap: 14px; align-items: stretch;">
-    <article class="stat-card" style="padding: 20px 18px; border-radius: 16px; background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,241,233,0.92));">
+  <div class="grid four store-hero-cards">
+    <article class="stat-card warm-card" style="padding: 20px 18px; border-radius: 16px;">
       <span class="eyebrow">Catalog</span>
       <strong style="display:block; font-size: 2.4rem; font-weight: 600; line-height: 1; margin-bottom: 8px;">38</strong>
       <div class="stat-label">live offers currently available in the store</div>
     </article>
-    <article class="stat-card" style="padding: 20px 18px; border-radius: 16px; background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(220,238,237,0.64));">
+    <article class="stat-card accent-card" style="padding: 20px 18px; border-radius: 16px;">
       <span class="eyebrow">Current view</span>
       <strong style="display:block; font-size: 2.4rem; font-weight: 600; line-height: 1; margin-bottom: 8px;">38</strong>
       <div class="stat-label">offers visible in this filtered store view</div>
     </article>
-    <article class="editorial-card" style="padding: 20px 18px; border-radius: 16px;">
+    <article class="editorial-card warm-card" style="padding: 20px 18px; border-radius: 16px;">
       <p class="eyebrow">Store note</p>
       <h3 style="margin-bottom: 8px;">Curated, practical offers</h3>
       <p class="muted" style="margin-bottom: 0;">Each offer is framed around the business problem it solves so buyers can shop with context instead of guessing from a file name alone.</p>
     </article>
-    <article class="quote-card" style="padding: 20px 18px; border-radius: 16px; background: linear-gradient(135deg, rgba(255,241,214,0.95), rgba(255,252,247,0.96));">
+    <article class="quote-card strong-card" style="padding: 20px 18px; border-radius: 16px;">
       <p class="eyebrow">Buyer clarity</p>
       <h3 style="margin-bottom: 8px;">Easier buying decisions</h3>
       <p class="muted" style="margin-bottom: 0;">Keep search, filters, and guided paths visible so the store helps people decide instead of just browse.</p>
