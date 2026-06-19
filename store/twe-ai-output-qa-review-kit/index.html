@@ -425,32 +425,29 @@
       }
       @media (max-width: 1180px) {
         .nav {
-          grid-template-columns: minmax(0, 1fr) minmax(250px, 320px);
-          grid-template-areas:
-            "brand search"
-            "links links";
-          align-items: start;
-        }
-        .nav-search {
-          max-width: 320px;
-        }
-        .nav-links {
-          justify-content: flex-start;
-          padding-top: 4px;
-        }
-      }
-      @media (max-width: 900px) {
-        .nav {
           grid-template-columns: 1fr;
           grid-template-areas:
             "brand"
             "search"
             "links";
+          align-items: stretch;
+          gap: 14px;
         }
         .nav-search {
           max-width: none;
           justify-self: stretch;
         }
+        .nav-links {
+          justify-content: flex-start;
+          padding-top: 2px;
+          gap: 6px;
+        }
+        .nav-links a {
+          padding: 7px 10px;
+          font-size: 0.9rem;
+        }
+      }
+      @media (max-width: 900px) {
         .split { grid-template-columns: 1fr; }
       }
       @media (max-width: 640px) {
