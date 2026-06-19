@@ -431,20 +431,28 @@
             "search"
             "links";
           align-items: stretch;
-          gap: 14px;
+          gap: 12px;
         }
         .nav-search {
           max-width: none;
           justify-self: stretch;
         }
         .nav-links {
-          justify-content: flex-start;
-          padding-top: 2px;
-          gap: 6px;
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          justify-content: stretch;
+          gap: 8px;
         }
         .nav-links a {
-          padding: 7px 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 36px;
+          padding: 7px 9px;
+          border: 1px solid rgba(9, 103, 114, 0.12);
+          background: rgba(255, 255, 255, 0.72);
           font-size: 0.9rem;
+          text-align: center;
         }
       }
       @media (max-width: 900px) {
@@ -454,6 +462,7 @@
         .shell { padding: 16px; }
         .hero, .card, .feature-card, .stat-card, .mini-card, .faq-item, .path-card, .timeline-step, .quote-card, .editorial-card, .product, .dock-card { padding: 20px; }
         .nav { padding: 14px; }
+        .nav-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       }
     </style>
   </head>
