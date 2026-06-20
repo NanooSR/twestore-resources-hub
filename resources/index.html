@@ -696,6 +696,24 @@
         border: 1px solid rgba(255,255,255,0.92);
         box-shadow: inset 0 0 0 1px rgba(9, 103, 114, 0.06);
       }
+      .resource-picture.is-amazon-photo {
+        padding: 16px;
+        background:
+          radial-gradient(circle at 20% 20%, rgba(239,155,19,0.14), transparent 30%),
+          radial-gradient(circle at 82% 24%, rgba(9,103,114,0.12), transparent 32%),
+          linear-gradient(180deg, rgba(255,255,255,0.99), rgba(246,243,238,0.92));
+      }
+      .resource-picture.is-amazon-photo img {
+        object-fit: contain;
+        border: 0;
+        box-shadow: none;
+        background: transparent;
+      }
+      .resource-card-amazon-title {
+        margin-top: -2px;
+        font-size: 0.9rem;
+        color: var(--ink-soft);
+      }
       .resource-picture.compact { min-height: 86px; padding: 14px; }
       .resource-picture.compact img {
         min-height: 86px;
@@ -1282,131 +1300,139 @@
   <div class="affiliate-scroll" tabindex="0" aria-label="Scroll featured Amazon affiliate quick picks">
     
     <article class="affiliate-tile" data-resource-card data-category="workspace" data-search-text="Home office anchor Quick pick Standing desk for daily operator work A high-ticket, broad-demand desk upgrade for buyers rebuilding the surface they use every day. https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html workspace Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20">
-      <div class="resource-picture"><img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Workspace%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f6fffd%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d9f3ef%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f766e%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f766e%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f766e%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f766e%27%3EHome%20office%20anchor%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f766e%27%3EWorkspace%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EStanding%20desk%20for%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Edaily%20operator%20work%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" alt="Illustrated preview for Standing desk for daily operator work"></div>
+      <div class="resource-picture is-amazon-photo"><img src="https://m.media-amazon.com/images/I/714K5vgjQdL._AC_SL1500_.jpg" alt="FEZIBO Standing Desk 47 x 24 Inch, Height Adjustable Desk with Memory Buttons, Electric Sit Stand Desk with 7th Gen Lift System, Home Office Table with Splice Board (Maple)" loading="lazy"></div>
       <div class="resource-card-badges">
         <span class="resource-chip">Workspace</span>
-        <span class="resource-chip">Quick pick</span>
+        <span class="resource-chip">Tables</span>
       </div>
       <h3>Standing desk for daily operator work</h3>
       <p class="muted">A high-ticket, broad-demand desk upgrade for buyers rebuilding the surface they use every day.</p>
+      <p class="resource-card-amazon-title"><strong>Amazon item:</strong> FEZIBO Standing Desk 47 x 24 Inch, Height Adjustable Desk with Memory Buttons, Electric Sit Stand Desk with 7th Gen Lift System, Home Office Table with Splice Board (Maple)</p>
       <p class="resource-card-guide-note"><strong>Buyer guide:</strong> Best Standing Desk Upgrades For Solo Operators</p>
       <div class="cta-row resource-card-actions" style="margin-top: 0;">
         <a class="btn" href="https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
         <a class="btn ghost" href="https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html">Read buying guide</a>
       </div>
-      <p class="resource-card-disclaimer">Affiliate link. Amazon opens separately; The Watchers Edge stays the guide and recommendation layer.</p>
+      <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
     </article>
     
     <article class="affiliate-tile" data-resource-card data-category="admin-paperwork" data-search-text="Admin paperwork Quick pick Portable document scanner for paperwork capture Useful when invoices, intake forms, receipts, and client paperwork are slowing down admin flow. https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html admin-paperwork Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20">
-      <div class="resource-picture"><img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Admin%20%26amp%3B%20paperwork%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f7fbff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d8ebff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20paperwork%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20%26amp%3B%20paperwork%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EPortable%20document%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Escanner%20for%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" alt="Illustrated preview for Portable document scanner for paperwork capture"></div>
+      <div class="resource-picture is-amazon-photo"><img src="https://m.media-amazon.com/images/I/5186q1u92zL._AC_SL1500_.jpg" alt="Epson WorkForce ES-50 Portable Sheet-fed Document Scanner for PC and Mac, Black" loading="lazy"></div>
       <div class="resource-card-badges">
         <span class="resource-chip">Admin &amp; paperwork</span>
-        <span class="resource-chip">Quick pick</span>
+        <span class="resource-chip">Document Scanners</span>
       </div>
       <h3>Portable document scanner for paperwork capture</h3>
       <p class="muted">Useful when invoices, intake forms, receipts, and client paperwork are slowing down admin flow.</p>
+      <p class="resource-card-amazon-title"><strong>Amazon item:</strong> Epson WorkForce ES-50 Portable Sheet-fed Document Scanner for PC and Mac, Black</p>
       <p class="resource-card-guide-note"><strong>Buyer guide:</strong> Best Invoice Filing And Admin Office Setup</p>
       <div class="cta-row resource-card-actions" style="margin-top: 0;">
         <a class="btn" href="https://www.amazon.ca/dp/B07KQZWPYN?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
         <a class="btn ghost" href="https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html">Read buying guide</a>
       </div>
-      <p class="resource-card-disclaimer">Affiliate link. Amazon opens separately; The Watchers Edge stays the guide and recommendation layer.</p>
+      <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
     </article>
     
     <article class="affiliate-tile" data-resource-card data-category="admin-paperwork" data-search-text="Admin organization Quick pick Label maker for files, bins, and workflow reset A repeat-use organizer that fits office, church, creator, and client-delivery setups. https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html admin-paperwork Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20">
-      <div class="resource-picture"><img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Admin%20%26amp%3B%20paperwork%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f7fbff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d8ebff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20organization%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20%26amp%3B%20paperwork%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3ELabel%20maker%20for%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Efiles%20bins%20and%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" alt="Illustrated preview for Label maker for files, bins, and workflow reset"></div>
+      <div class="resource-picture is-amazon-photo"><img src="https://m.media-amazon.com/images/I/71cBfxUjyYL._AC_SL1500_.jpg" alt="Label Maker Machine with Tape, P21 Portable Bluetooth Label Printer, Wireless Built-in Cutter Sticker Maker Mini Label Makers with Multiple Templates for Organizing Storage Office Home, Black" loading="lazy"></div>
       <div class="resource-card-badges">
         <span class="resource-chip">Admin &amp; paperwork</span>
-        <span class="resource-chip">Quick pick</span>
+        <span class="resource-chip">Label Printers &amp; Makers</span>
       </div>
       <h3>Label maker for files, bins, and workflow reset</h3>
       <p class="muted">A repeat-use organizer that fits office, church, creator, and client-delivery setups.</p>
+      <p class="resource-card-amazon-title"><strong>Amazon item:</strong> Label Maker Machine with Tape, P21 Portable Bluetooth Label Printer, Wireless Built-in Cutter Sticker Maker Mini Label Makers with Multiple Templates for Organizing Storage Office Home, Black</p>
       <p class="resource-card-guide-note"><strong>Buyer guide:</strong> Best Admin Desk Tools For Invoices And Paperwork</p>
       <div class="cta-row resource-card-actions" style="margin-top: 0;">
         <a class="btn" href="https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
         <a class="btn ghost" href="https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html">Read buying guide</a>
       </div>
-      <p class="resource-card-disclaimer">Affiliate link. Amazon opens separately; The Watchers Edge stays the guide and recommendation layer.</p>
+      <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
     </article>
     
     <article class="affiliate-tile" data-resource-card data-category="creator-calls" data-search-text="Creator audio Quick pick USB microphone for calls and content Audio is one of the fastest professionalism upgrades for creators, consultants, coaches, and service providers. https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20">
-      <div class="resource-picture"><img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Creator%20%26amp%3B%20calls%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23fcf8ff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23ede4ff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20audio%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20%26amp%3B%20calls%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EUSB%20microphone%20for%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Ecalls%20and%20content%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" alt="Illustrated preview for USB microphone for calls and content"></div>
+      <div class="resource-picture is-amazon-photo"><img src="https://m.media-amazon.com/images/I/51I0+PRVbwL._AC_SL1500_.jpg" alt="CMTECK USB Computer Microphone G009, Noise-Cancelling Recording Desktop Mic for PC/Laptop for Online Chatting, Home Studio, Podcasting, Gaming, Skype, YouTube with Mute Function(Windows/Mac)" loading="lazy"></div>
       <div class="resource-card-badges">
         <span class="resource-chip">Creator &amp; calls</span>
-        <span class="resource-chip">Quick pick</span>
+        <span class="resource-chip">Computer Microphones</span>
       </div>
       <h3>USB microphone for calls and content</h3>
       <p class="muted">Audio is one of the fastest professionalism upgrades for creators, consultants, coaches, and service providers.</p>
+      <p class="resource-card-amazon-title"><strong>Amazon item:</strong> CMTECK USB Computer Microphone G009, Noise-Cancelling Recording Desktop Mic for PC/Laptop for Online Chatting, Home Studio, Podcasting, Gaming, Skype, YouTube with Mute Function(Windows/Mac)</p>
       <p class="resource-card-guide-note"><strong>Buyer guide:</strong> Best Creator Recording Setup For Calls Content And Client Work</p>
       <div class="cta-row resource-card-actions" style="margin-top: 0;">
         <a class="btn" href="https://www.amazon.ca/dp/B0872CFTGK?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
         <a class="btn ghost" href="https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html">Read buying guide</a>
       </div>
-      <p class="resource-card-disclaimer">Affiliate link. Amazon opens separately; The Watchers Edge stays the guide and recommendation layer.</p>
+      <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
     </article>
     
     <article class="affiliate-tile" data-resource-card data-category="creator-calls" data-search-text="Creator video Quick pick Webcam for meetings, tutorials, and interviews A broad creator and remote-work category where better clarity can make buyer-facing work feel more trustworthy. https://www.thewatchersedge.ca/creator-gear-deals.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20">
-      <div class="resource-picture"><img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Creator%20%26amp%3B%20calls%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23fcf8ff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23ede4ff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20video%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20%26amp%3B%20calls%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EWebcam%20for%20and%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Emeetings%20tutorials%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" alt="Illustrated preview for Webcam for meetings, tutorials, and interviews"></div>
+      <div class="resource-picture is-amazon-photo"><img src="https://m.media-amazon.com/images/I/61-K2lXmHQL._AC_SL1500_.jpg" alt="EMEET 1080P Webcam with Microphone, C960 Web Camera, 2 Mics Streaming Webcam, 90°FOV Computer Camera, Plug and Play USB Web Cam for Online Calling/Conferencing, Zoom/Teams/Facetime/YouTube, Laptop/PC" loading="lazy"></div>
       <div class="resource-card-badges">
         <span class="resource-chip">Creator &amp; calls</span>
-        <span class="resource-chip">Quick pick</span>
+        <span class="resource-chip">Webcams</span>
       </div>
       <h3>Webcam for meetings, tutorials, and interviews</h3>
       <p class="muted">A broad creator and remote-work category where better clarity can make buyer-facing work feel more trustworthy.</p>
+      <p class="resource-card-amazon-title"><strong>Amazon item:</strong> EMEET 1080P Webcam with Microphone, C960 Web Camera, 2 Mics Streaming Webcam, 90°FOV Computer Camera, Plug and Play USB Web Cam for Online Calling/Conferencing, Zoom/Teams/Facetime/YouTube, Laptop/PC</p>
       <p class="resource-card-guide-note"><strong>Buyer guide:</strong> Creator Gear Deals</p>
       <div class="cta-row resource-card-actions" style="margin-top: 0;">
         <a class="btn" href="https://www.amazon.ca/dp/B07M6Y7355?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
         <a class="btn ghost" href="https://www.thewatchersedge.ca/creator-gear-deals.html">Read buying guide</a>
       </div>
-      <p class="resource-card-disclaimer">Affiliate link. Amazon opens separately; The Watchers Edge stays the guide and recommendation layer.</p>
+      <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
     </article>
     
     <article class="affiliate-tile" data-resource-card data-category="research-reading" data-search-text="Research desk Quick pick Portable monitor for source comparison Helpful when research, AI review, job-search work, or KPI sessions need notes and source material visible together. https://www.thewatchersedge.ca/best-ai-research-desk-setup.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20">
-      <div class="resource-picture"><img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Research%20%26amp%3B%20reading%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23fffaf2%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23fff1d8%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%2392400e%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%2392400e%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%2392400e%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%2392400e%27%3EResearch%20desk%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%2392400e%27%3EResearch%20%26amp%3B%20reading%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EPortable%20monitor%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Efor%20source%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" alt="Illustrated preview for Portable monitor for source comparison"></div>
+      <div class="resource-picture is-amazon-photo"><img src="https://m.media-amazon.com/images/I/81zFeH-C0gL._AC_SL1500_.jpg" alt="InnoView Portable Monitor 15.6&amp;#34; 1080P Portable Monitor for Laptop with Protective Sleeve Built-in 90° Adjustable Stand USB C HDMI Ultra-Slim Laptop Screen Extender for MacBook Phone PS Xbox Switch" loading="lazy"></div>
       <div class="resource-card-badges">
         <span class="resource-chip">Research &amp; reading</span>
-        <span class="resource-chip">Quick pick</span>
+        <span class="resource-chip">Monitors</span>
       </div>
       <h3>Portable monitor for source comparison</h3>
       <p class="muted">Helpful when research, AI review, job-search work, or KPI sessions need notes and source material visible together.</p>
+      <p class="resource-card-amazon-title"><strong>Amazon item:</strong> InnoView Portable Monitor 15.6&#34; 1080P Portable Monitor for Laptop with Protective Sleeve Built-in 90° Adjustable Stand USB C HDMI Ultra-Slim Laptop Screen Extender for MacBook Phone PS Xbox Switch</p>
       <p class="resource-card-guide-note"><strong>Buyer guide:</strong> Best AI Research Desk Setup</p>
       <div class="cta-row resource-card-actions" style="margin-top: 0;">
         <a class="btn" href="https://www.amazon.ca/dp/B0B9GLG86C?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
         <a class="btn ghost" href="https://www.thewatchersedge.ca/best-ai-research-desk-setup.html">Read buying guide</a>
       </div>
-      <p class="resource-card-disclaimer">Affiliate link. Amazon opens separately; The Watchers Edge stays the guide and recommendation layer.</p>
+      <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
     </article>
     
     <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Church fellowship Quick pick Coffee urn for fellowship and welcome-hour demand A repeat-use church procurement category for lobbies, fellowship halls, volunteer rooms, and service-day hospitality. https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20">
-      <div class="resource-picture"><img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Church%20%26amp%3B%20ministry%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f8fff9%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23dbf5e4%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%23166534%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%23166534%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%23166534%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%23166534%27%3EChurch%20fellowship%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%23166534%27%3EChurch%20%26amp%3B%20ministry%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3ECoffee%20urn%20for%20and%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Efellowship%20welcome%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" alt="Illustrated preview for Coffee urn for fellowship and welcome-hour demand"></div>
+      <div class="resource-picture is-amazon-photo"><img src="https://m.media-amazon.com/images/I/61+QhB0YylL._AC_SL1500_.jpg" alt="West Bend 58002 Highly Polished Aluminum Commercial Coffee Urn Features Automatic Temperature Control Large Capacity with Quick Brewing Easy Prep and Clean Up, 42-Cup, Silver" loading="lazy"></div>
       <div class="resource-card-badges">
         <span class="resource-chip">Church &amp; ministry</span>
-        <span class="resource-chip">Quick pick</span>
+        <span class="resource-chip">Coffee Urns</span>
       </div>
       <h3>Coffee urn for fellowship and welcome-hour demand</h3>
       <p class="muted">A repeat-use church procurement category for lobbies, fellowship halls, volunteer rooms, and service-day hospitality.</p>
+      <p class="resource-card-amazon-title"><strong>Amazon item:</strong> West Bend 58002 Highly Polished Aluminum Commercial Coffee Urn Features Automatic Temperature Control Large Capacity with Quick Brewing Easy Prep and Clean Up, 42-Cup, Silver</p>
       <p class="resource-card-guide-note"><strong>Buyer guide:</strong> Best Church Kitchen Coffee And Fellowship Supplies</p>
       <div class="cta-row resource-card-actions" style="margin-top: 0;">
         <a class="btn" href="https://www.amazon.ca/dp/B00006WNSN?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
         <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html">Read buying guide</a>
       </div>
-      <p class="resource-card-disclaimer">Affiliate link. Amazon opens separately; The Watchers Edge stays the guide and recommendation layer.</p>
+      <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
     </article>
     
     <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Church audio Quick pick Wireless microphone system for services and events A higher-intent ministry gear category that can support services, classrooms, events, and volunteer-run recordings. https://www.thewatchersedge.ca/best-church-livestream-teaching-and-volunteer-coordination-tools.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20">
-      <div class="resource-picture"><img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Church%20%26amp%3B%20ministry%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f8fff9%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23dbf5e4%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%23166534%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%23166534%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%23166534%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%23166534%27%3EChurch%20audio%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%23166534%27%3EChurch%20%26amp%3B%20ministry%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EWireless%20system%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Emicrophone%20for%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" alt="Illustrated preview for Wireless microphone system for services and events"></div>
+      <div class="resource-picture is-amazon-photo"><img src="https://m.media-amazon.com/images/I/718+0nDBFrL._AC_SL1500_.jpg" alt="TONOR Wireless Microphone,Metal Dual Professional UHF Cordless Dynamic Mic Handheld Microphone System for Home Karaoke, Meeting, Party, Church, DJ, Wedding, Home KTV Set, 200ft(TW820)" loading="lazy"></div>
       <div class="resource-card-badges">
         <span class="resource-chip">Church &amp; ministry</span>
-        <span class="resource-chip">Quick pick</span>
+        <span class="resource-chip">Handheld</span>
       </div>
       <h3>Wireless microphone system for services and events</h3>
       <p class="muted">A higher-intent ministry gear category that can support services, classrooms, events, and volunteer-run recordings.</p>
+      <p class="resource-card-amazon-title"><strong>Amazon item:</strong> TONOR Wireless Microphone,Metal Dual Professional UHF Cordless Dynamic Mic Handheld Microphone System for Home Karaoke, Meeting, Party, Church, DJ, Wedding, Home KTV Set, 200ft(TW820)</p>
       <p class="resource-card-guide-note"><strong>Buyer guide:</strong> Best Church Livestream Teaching And Volunteer Coordination Tools</p>
       <div class="cta-row resource-card-actions" style="margin-top: 0;">
         <a class="btn" href="https://www.amazon.ca/dp/B07RKN9FF6?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
         <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-livestream-teaching-and-volunteer-coordination-tools.html">Read buying guide</a>
       </div>
-      <p class="resource-card-disclaimer">Affiliate link. Amazon opens separately; The Watchers Edge stays the guide and recommendation layer.</p>
+      <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
     </article>
     
   </div>
@@ -1447,99 +1473,105 @@
       <div class="grid three">
         
         <article class="mini-card" data-resource-card data-category="research-reading" data-search-text="Home office and solo-operator upgrades Standing desk for all-day laptop and monitor work High-intent desk upgrade for posture, stability, and daily use. https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Standing desk for all-day laptop and monitor work"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Standing desk for all-day laptop and monitor work" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Standing desk for all-day laptop and monitor work</h4>
+          <h3>Standing desk for all-day laptop and monitor work</h3>
           <p class="muted">High-intent desk upgrade for posture, stability, and daily use.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="workspace" data-search-text="Home office and solo-operator upgrades Compact standing desk for smaller rooms For buyers who want the ergonomic win without rebuilding the whole room. https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html workspace Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Compact standing desk for smaller rooms"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Compact standing desk for smaller rooms" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Compact standing desk for smaller rooms</h4>
+          <h3>Compact standing desk for smaller rooms</h3>
           <p class="muted">For buyers who want the ergonomic win without rebuilding the whole room.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0G2QB7PB1?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="admin-paperwork" data-search-text="Home office and solo-operator upgrades Ergonomic chair value pick Everyday comfort category for long client, admin, and review blocks. https://www.thewatchersedge.ca/best-home-office-setup-for-solo-operators.html admin-paperwork Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Ergonomic chair value pick"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Ergonomic chair value pick" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Ergonomic chair value pick</h4>
+          <h3>Ergonomic chair value pick</h3>
           <p class="muted">Everyday comfort category for long client, admin, and review blocks.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B09N93L2RQ?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-home-office-setup-for-solo-operators.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="workspace" data-search-text="Home office and solo-operator upgrades Anti-fatigue standing support add-on A lower-ticket add-on that makes standing work feel more sustainable. https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html workspace Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Anti-fatigue standing support add-on"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Anti-fatigue standing support add-on" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Anti-fatigue standing support add-on</h4>
+          <h3>Anti-fatigue standing support add-on</h3>
           <p class="muted">A lower-ticket add-on that makes standing work feel more sustainable.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B07DCPSJPN?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="workspace" data-search-text="Home office and solo-operator upgrades Cable-management tray Quick desk cleanup pick for power clutter and visible chaos. https://www.thewatchersedge.ca/home-office-deals-for-freelancers.html workspace Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Cable-management tray"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Cable-management tray" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Cable-management tray</h4>
+          <h3>Cable-management tray</h3>
           <p class="muted">Quick desk cleanup pick for power clutter and visible chaos.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0BPLRX32S?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/home-office-deals-for-freelancers.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="research-reading" data-search-text="Home office and solo-operator upgrades Monitor arm or riser Strong fit for weekly reviews, scorecards, and clearer screen placement. https://www.thewatchersedge.ca/best-weekly-kpi-review-workspace.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Monitor arm or riser"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Monitor arm or riser" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Monitor arm or riser</h4>
+          <h3>Monitor arm or riser</h3>
           <p class="muted">Strong fit for weekly reviews, scorecards, and clearer screen placement.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B07T3KCQ94?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-weekly-kpi-review-workspace.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
       </div>
@@ -1556,99 +1588,105 @@
       <div class="grid three">
         
         <article class="mini-card" data-resource-card data-category="admin-paperwork" data-search-text="Admin, paperwork, and client-delivery tools Compact scanner or document-capture tool Best fit when paper keeps delaying invoices, receipts, forms, and client intake. https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html admin-paperwork Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Compact scanner or document-capture tool"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Compact scanner or document-capture tool" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Compact scanner or document-capture tool</h4>
+          <h3>Compact scanner or document-capture tool</h3>
           <p class="muted">Best fit when paper keeps delaying invoices, receipts, forms, and client intake.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B07KQZWPYN?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="admin-paperwork" data-search-text="Admin, paperwork, and client-delivery tools Filing organizer or tray system Keeps active paperwork visible without letting it take over the desk. https://www.thewatchersedge.ca/best-client-onboarding-desk-setup.html admin-paperwork Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Filing organizer or tray system"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Filing organizer or tray system" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Filing organizer or tray system</h4>
+          <h3>Filing organizer or tray system</h3>
           <p class="muted">Keeps active paperwork visible without letting it take over the desk.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B07RX17FKL?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-client-onboarding-desk-setup.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="admin-paperwork" data-search-text="Admin, paperwork, and client-delivery tools Label maker for files and bins Helps buyers name, sort, and re-find admin materials faster. https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html admin-paperwork Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Label maker for files and bins"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Label maker for files and bins" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Label maker for files and bins</h4>
+          <h3>Label maker for files and bins</h3>
           <p class="muted">Helps buyers name, sort, and re-find admin materials faster.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="admin-paperwork" data-search-text="Admin, paperwork, and client-delivery tools Shredder or privacy-support tool For offices that handle sensitive paper and need cleaner disposal habits. https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html admin-paperwork Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Shredder or privacy-support tool"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Shredder or privacy-support tool" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Shredder or privacy-support tool</h4>
+          <h3>Shredder or privacy-support tool</h3>
           <p class="muted">For offices that handle sensitive paper and need cleaner disposal habits.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0F6C6LZ5J?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="research-reading" data-search-text="Admin, paperwork, and client-delivery tools Desk organizer bundle A practical client-onboarding pick for notes, forms, and surface reset. https://www.thewatchersedge.ca/best-client-onboarding-desk-setup.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Desk organizer bundle"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Desk organizer bundle" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Desk organizer bundle</h4>
+          <h3>Desk organizer bundle</h3>
           <p class="muted">A practical client-onboarding pick for notes, forms, and surface reset.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B07RX17FKL?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-client-onboarding-desk-setup.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="creator-calls" data-search-text="Admin, paperwork, and client-delivery tools Webcam and call-light setup for kickoff calls For operators who run client intake or onboarding calls from the same desk. https://www.thewatchersedge.ca/best-client-onboarding-desk-setup.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Webcam and call-light setup for kickoff calls"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Webcam and call-light setup for kickoff calls" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Webcam and call-light setup for kickoff calls</h4>
+          <h3>Webcam and call-light setup for kickoff calls</h3>
           <p class="muted">For operators who run client intake or onboarding calls from the same desk.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B07M6Y7355?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-client-onboarding-desk-setup.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
       </div>
@@ -1665,99 +1703,105 @@
       <div class="grid three">
         
         <article class="mini-card" data-resource-card data-category="creator-calls" data-search-text="Creator, calls, and meeting gear Desk-ready USB microphone Audio upgrade for meetings, Looms, tutorials, and client-facing content. https://www.thewatchersedge.ca/best-usb-microphone-upgrades-for-calls-and-content.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Desk-ready USB microphone"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Desk-ready USB microphone" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Desk-ready USB microphone</h4>
+          <h3>Desk-ready USB microphone</h3>
           <p class="muted">Audio upgrade for meetings, Looms, tutorials, and client-facing content.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0872CFTGK?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-usb-microphone-upgrades-for-calls-and-content.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="creator-calls" data-search-text="Creator, calls, and meeting gear Compact USB microphone For smaller desks where audio matters but space is limited. https://www.thewatchersedge.ca/best-usb-microphone-upgrades-for-calls-and-content.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Compact USB microphone"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Compact USB microphone" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Compact USB microphone</h4>
+          <h3>Compact USB microphone</h3>
           <p class="muted">For smaller desks where audio matters but space is limited.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0CT6DFXRH?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-usb-microphone-upgrades-for-calls-and-content.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="creator-calls" data-search-text="Creator, calls, and meeting gear Microphone arm or placement add-on Useful when sound problems come from placement, not just microphone quality. https://www.thewatchersedge.ca/best-usb-microphone-upgrades-for-calls-and-content.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Microphone arm or placement add-on"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Microphone arm or placement add-on" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Microphone arm or placement add-on</h4>
+          <h3>Microphone arm or placement add-on</h3>
           <p class="muted">Useful when sound problems come from placement, not just microphone quality.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0CS9K4665?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-usb-microphone-upgrades-for-calls-and-content.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="creator-calls" data-search-text="Creator, calls, and meeting gear Webcam for meetings and tutorials Broad creator and remote-work pick for trust-building camera clarity. https://www.thewatchersedge.ca/creator-gear-deals.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Webcam for meetings and tutorials"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Webcam for meetings and tutorials" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Webcam for meetings and tutorials</h4>
+          <h3>Webcam for meetings and tutorials</h3>
           <p class="muted">Broad creator and remote-work pick for trust-building camera clarity.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B07M6Y7355?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/creator-gear-deals.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="creator-calls" data-search-text="Creator, calls, and meeting gear Light setup for calls and short-form content Low-friction visual upgrade for dim rooms and lightweight content setups. https://www.thewatchersedge.ca/creator-gear-deals.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Light setup for calls and short-form content"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Light setup for calls and short-form content" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Light setup for calls and short-form content</h4>
+          <h3>Light setup for calls and short-form content</h3>
           <p class="muted">Low-friction visual upgrade for dim rooms and lightweight content setups.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B09K7F27SW?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/creator-gear-deals.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Creator, calls, and meeting gear Wireless microphone system for church or event speaking A higher-ticket audio pick that also fits volunteer-run events and teaching rooms. https://www.thewatchersedge.ca/best-church-livestream-teaching-and-volunteer-coordination-tools.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Wireless microphone system for church or event speaking"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Wireless microphone system for church or event speaking" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Wireless microphone system for church or event speaking</h4>
+          <h3>Wireless microphone system for church or event speaking</h3>
           <p class="muted">A higher-ticket audio pick that also fits volunteer-run events and teaching rooms.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B07RKN9FF6?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-livestream-teaching-and-volunteer-coordination-tools.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
       </div>
@@ -1774,99 +1818,105 @@
       <div class="grid three">
         
         <article class="mini-card" data-resource-card data-category="research-reading" data-search-text="Research, reading, and job-search setup Portable monitor or second-screen option For comparing sources, notes, drafts, and AI output without tab shuffling. https://www.thewatchersedge.ca/best-ai-research-desk-setup.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Portable monitor or second-screen option"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Portable monitor or second-screen option" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Portable monitor or second-screen option</h4>
+          <h3>Portable monitor or second-screen option</h3>
           <p class="muted">For comparing sources, notes, drafts, and AI output without tab shuffling.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0B9GLG86C?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-ai-research-desk-setup.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="research-reading" data-search-text="Research, reading, and job-search setup External SSD or backup drive For local research archives, downloads, interview recordings, and exported work. https://www.thewatchersedge.ca/best-ai-research-desk-setup.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for External SSD or backup drive"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for External SSD or backup drive" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">External SSD or backup drive</h4>
+          <h3>External SSD or backup drive</h3>
           <p class="muted">For local research archives, downloads, interview recordings, and exported work.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B08GTYFC37?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-ai-research-desk-setup.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="creator-calls" data-search-text="Research, reading, and job-search setup Desk lamp or monitor light Helps longer research, review, and evening work feel less fatiguing. https://www.thewatchersedge.ca/best-review-desk-lighting-and-note-capture-tools.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Desk lamp or monitor light"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Desk lamp or monitor light" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Desk lamp or monitor light</h4>
+          <h3>Desk lamp or monitor light</h3>
           <p class="muted">Helps longer research, review, and evening work feel less fatiguing.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B08DKQ3JG1?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-review-desk-lighting-and-note-capture-tools.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="research-reading" data-search-text="Research, reading, and job-search setup Notebook or whiteboard companion Turns review sessions into written decisions and next actions. https://www.thewatchersedge.ca/best-weekly-kpi-review-workspace.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Notebook or whiteboard companion"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Notebook or whiteboard companion" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Notebook or whiteboard companion</h4>
+          <h3>Notebook or whiteboard companion</h3>
           <p class="muted">Turns review sessions into written decisions and next actions.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B07YLTJHH4?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-weekly-kpi-review-workspace.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="research-reading" data-search-text="Research, reading, and job-search setup Headphones for focus and interview prep Strong fit for job seekers or researchers working in shared/noisy environments. https://www.thewatchersedge.ca/best-resume-tailoring-and-interview-desk-setup.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Headphones for focus and interview prep"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Headphones for focus and interview prep" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Headphones for focus and interview prep</h4>
+          <h3>Headphones for focus and interview prep</h3>
           <p class="muted">Strong fit for job seekers or researchers working in shared/noisy environments.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0GFSPX7SS?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-resume-tailoring-and-interview-desk-setup.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="research-reading" data-search-text="Research, reading, and job-search setup Kindle or low-clutter reading setup For buyers who want a lighter reading workflow instead of paper piles. https://www.thewatchersedge.ca/productivity-books-and-kindle-deals.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Kindle or low-clutter reading setup"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Kindle or low-clutter reading setup" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Kindle or low-clutter reading setup</h4>
+          <h3>Kindle or low-clutter reading setup</h3>
           <p class="muted">For buyers who want a lighter reading workflow instead of paper piles.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0CFPWLGF2?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/productivity-books-and-kindle-deals.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
       </div>
@@ -1883,195 +1933,207 @@
       <div class="grid three">
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Offering-envelope supply For churches that still need a clean physical giving flow alongside digital options. https://www.thewatchersedge.ca/best-church-office-and-record-keeping-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Offering-envelope supply"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Offering-envelope supply" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Offering-envelope supply</h4>
+          <h3>Offering-envelope supply</h3>
           <p class="muted">For churches that still need a clean physical giving flow alongside digital options.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0DNN6MZRP?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-office-and-record-keeping-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Visitor-card follow-up set For first-time guest capture, prayer requests, and follow-up routines. https://www.thewatchersedge.ca/best-church-office-and-record-keeping-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Visitor-card follow-up set"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Visitor-card follow-up set" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Visitor-card follow-up set</h4>
+          <h3>Visitor-card follow-up set</h3>
           <p class="muted">For first-time guest capture, prayer requests, and follow-up routines.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0D7GKPZ96?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-office-and-record-keeping-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Dry-erase planner for weekly ministry visibility For volunteers, rooms, announcements, and recurring weekly tasks. https://www.thewatchersedge.ca/best-church-office-and-record-keeping-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Dry-erase planner for weekly ministry visibility"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Dry-erase planner for weekly ministry visibility" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Dry-erase planner for weekly ministry visibility</h4>
+          <h3>Dry-erase planner for weekly ministry visibility</h3>
           <p class="muted">For volunteers, rooms, announcements, and recurring weekly tasks.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0CGLP5LQD?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-office-and-record-keeping-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Pre-filled communion cup supply A recurring service-flow supply for simpler prep and cleanup on communion weeks. https://www.thewatchersedge.ca/best-church-service-welcome-and-classroom-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Pre-filled communion cup supply"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Pre-filled communion cup supply" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Pre-filled communion cup supply</h4>
+          <h3>Pre-filled communion cup supply</h3>
           <p class="muted">A recurring service-flow supply for simpler prep and cleanup on communion weeks.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B00PUTWIII?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-service-welcome-and-classroom-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Rolling ministry cart For moving welcome, kids-ministry, and service-day supplies between rooms. https://www.thewatchersedge.ca/best-church-service-welcome-and-classroom-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Rolling ministry cart"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Rolling ministry cart" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Rolling ministry cart</h4>
+          <h3>Rolling ministry cart</h3>
           <p class="muted">For moving welcome, kids-ministry, and service-day supplies between rooms.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0F1CDL63G?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-service-welcome-and-classroom-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Coffee urn for fellowship and welcome hour High-use hospitality item for lobbies, fellowship halls, and volunteer rooms. https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Coffee urn for fellowship and welcome hour"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Coffee urn for fellowship and welcome hour" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Coffee urn for fellowship and welcome hour</h4>
+          <h3>Coffee urn for fellowship and welcome hour</h3>
           <p class="muted">High-use hospitality item for lobbies, fellowship halls, and volunteer rooms.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B00006WNSN?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Airpot for portable coffee refill flow Keeps coffee service moving from prep rooms to welcome tables or overflow spaces. https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Airpot for portable coffee refill flow"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Airpot for portable coffee refill flow" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Airpot for portable coffee refill flow</h4>
+          <h3>Airpot for portable coffee refill flow</h3>
           <p class="muted">Keeps coffee service moving from prep rooms to welcome tables or overflow spaces.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B01MRGIZE9?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Condiment organizer for coffee stations Keeps cups, lids, stir sticks, sweeteners, and napkins reachable instead of scattered. https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Condiment organizer for coffee stations"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Condiment organizer for coffee stations" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Condiment organizer for coffee stations</h4>
+          <h3>Condiment organizer for coffee stations</h3>
           <p class="muted">Keeps cups, lids, stir sticks, sweeteners, and napkins reachable instead of scattered.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B06XH5QDQJ?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Bilingual wet-floor sign Practical hallway, washroom, kitchen, and fellowship-area safety pick. https://www.thewatchersedge.ca/best-church-facilities-maintenance-janitorial-and-safety-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Bilingual wet-floor sign"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Bilingual wet-floor sign" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Bilingual wet-floor sign</h4>
+          <h3>Bilingual wet-floor sign</h3>
           <p class="muted">Practical hallway, washroom, kitchen, and fellowship-area safety pick.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B000LDLEWE?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-facilities-maintenance-janitorial-and-safety-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Janitorial cart for room resets For churches carrying liners, sprays, paper products, and reset supplies across rooms. https://www.thewatchersedge.ca/best-church-facilities-maintenance-janitorial-and-safety-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Janitorial cart for room resets"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Janitorial cart for room resets" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Janitorial cart for room resets</h4>
+          <h3>Janitorial cart for room resets</h3>
           <p class="muted">For churches carrying liners, sprays, paper products, and reset supplies across rooms.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B073S9XS14?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-facilities-maintenance-janitorial-and-safety-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Bulk disinfecting wipes for nursery touchpoints Repeat-use nursery/kids ministry supply for check-in surfaces, toys, tables, and shared items. https://www.thewatchersedge.ca/best-church-nursery-sanitation-and-child-safety-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Bulk disinfecting wipes for nursery touchpoints"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Bulk disinfecting wipes for nursery touchpoints" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Bulk disinfecting wipes for nursery touchpoints</h4>
+          <h3>Bulk disinfecting wipes for nursery touchpoints</h3>
           <p class="muted">Repeat-use nursery/kids ministry supply for check-in surfaces, toys, tables, and shared items.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B09XJC428L?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-nursery-sanitation-and-child-safety-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Nursery gate for room separation Helps separate nursery flow, hallway traffic, pickup boundaries, and toddler movement. https://www.thewatchersedge.ca/best-church-nursery-sanitation-and-child-safety-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Nursery gate for room separation"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Nursery gate for room separation" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Nursery gate for room separation</h4>
+          <h3>Nursery gate for room separation</h3>
           <p class="muted">Helps separate nursery flow, hallway traffic, pickup boundaries, and toddler movement.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B071989QVZ?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-nursery-sanitation-and-child-safety-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
       </div>
@@ -2088,275 +2150,292 @@
       <div class="grid three">
         
         <article class="mini-card" data-resource-card data-category="research-reading" data-search-text="Focused next-buy lane from existing guide pages Cable and docking cleanup bundle A fast desk-reset pick for buyers whose monitors, laptop power, and peripherals create daily visual clutter. https://www.thewatchersedge.ca/best-home-office-setup-for-solo-operators.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Cable and docking cleanup bundle"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Cable and docking cleanup bundle" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Cable and docking cleanup bundle</h4>
+          <h3>Cable and docking cleanup bundle</h3>
           <p class="muted">A fast desk-reset pick for buyers whose monitors, laptop power, and peripherals create daily visual clutter.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0BY8QNV1C?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-home-office-setup-for-solo-operators.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="workspace" data-search-text="Focused next-buy lane from existing guide pages Ergonomic foot-rest support Lower-ticket comfort upgrade for buyers who already sit long hours and are not ready to replace the whole chair. https://www.thewatchersedge.ca/home-office-deals-for-freelancers.html workspace Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Ergonomic foot-rest support"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Ergonomic foot-rest support" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Ergonomic foot-rest support</h4>
+          <h3>Ergonomic foot-rest support</h3>
           <p class="muted">Lower-ticket comfort upgrade for buyers who already sit long hours and are not ready to replace the whole chair.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B07L3RVF7C?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/home-office-deals-for-freelancers.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="research-reading" data-search-text="Focused next-buy lane from existing guide pages Adjustable book stand for desk reading Supports research, annotation, and low-clutter reading without burying the work surface in books and papers. https://www.thewatchersedge.ca/productivity-books-and-kindle-deals.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Adjustable book stand for desk reading"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Adjustable book stand for desk reading" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Adjustable book stand for desk reading</h4>
+          <h3>Adjustable book stand for desk reading</h3>
           <p class="muted">Supports research, annotation, and low-clutter reading without burying the work surface in books and papers.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0C3TSQ4VQ?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/productivity-books-and-kindle-deals.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="research-reading" data-search-text="Focused next-buy lane from existing guide pages Productivity book starter pick A small education-oriented add-on that fits readers building a better planning or review habit. https://www.thewatchersedge.ca/productivity-books-and-kindle-deals.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Productivity book starter pick"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Productivity book starter pick" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Productivity book starter pick</h4>
+          <h3>Productivity book starter pick</h3>
           <p class="muted">A small education-oriented add-on that fits readers building a better planning or review habit.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/0735211299?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/productivity-books-and-kindle-deals.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Portable folding table for check-in and event stations A practical church procurement pick for temporary welcome desks, registration tables, and portable room resets. https://www.thewatchersedge.ca/best-church-event-setup-queue-flow-and-portable-room-reset-tools.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Portable folding table for check-in and event stations"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Portable folding table for check-in and event stations" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Portable folding table for check-in and event stations</h4>
+          <h3>Portable folding table for check-in and event stations</h3>
           <p class="muted">A practical church procurement pick for temporary welcome desks, registration tables, and portable room resets.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0GD5KFR1H?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-event-setup-queue-flow-and-portable-room-reset-tools.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Queue-barrier set for event entry flow High-intent event-control category for sign-ins, food lines, kids check-in, and busy seasonal gatherings. https://www.thewatchersedge.ca/best-church-event-setup-queue-flow-and-portable-room-reset-tools.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Queue-barrier set for event entry flow"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Queue-barrier set for event entry flow" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Queue-barrier set for event entry flow</h4>
+          <h3>Queue-barrier set for event entry flow</h3>
           <p class="muted">High-intent event-control category for sign-ins, food lines, kids check-in, and busy seasonal gatherings.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0CNRB8XVC?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-event-setup-queue-flow-and-portable-room-reset-tools.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Temporary sign stand for directions Helps churches route visitors, classes, and event traffic without permanent signage changes. https://www.thewatchersedge.ca/best-church-event-setup-queue-flow-and-portable-room-reset-tools.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Temporary sign stand for directions"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Temporary sign stand for directions" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Temporary sign stand for directions</h4>
+          <h3>Temporary sign stand for directions</h3>
           <p class="muted">Helps churches route visitors, classes, and event traffic without permanent signage changes.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B07P8TXWYH?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-event-setup-queue-flow-and-portable-room-reset-tools.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Sanitizer dispenser stand for common areas Repeat-use facility item for entries, check-in tables, fellowship halls, and nursery/kids areas. https://www.thewatchersedge.ca/best-church-facilities-maintenance-janitorial-and-safety-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Sanitizer dispenser stand for common areas"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Sanitizer dispenser stand for common areas" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Sanitizer dispenser stand for common areas</h4>
+          <h3>Sanitizer dispenser stand for common areas</h3>
           <p class="muted">Repeat-use facility item for entries, check-in tables, fellowship halls, and nursery/kids areas.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B086ZLFG6N?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-facilities-maintenance-janitorial-and-safety-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Lockable donation box for giving stations Secure physical drop-flow pick for forms, envelopes, temporary giving stations, or event registration materials. https://www.thewatchersedge.ca/best-church-giving-offering-and-donation-station-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Lockable donation box for giving stations"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Lockable donation box for giving stations" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Lockable donation box for giving stations</h4>
+          <h3>Lockable donation box for giving stations</h3>
           <p class="muted">Secure physical drop-flow pick for forms, envelopes, temporary giving stations, or event registration materials.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B09BHPYTXK?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-giving-offering-and-donation-station-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Visitor badge sticker set Low-friction check-in support for guest identification, classroom pickup, and event flow. https://www.thewatchersedge.ca/best-church-security-check-in-and-facility-signage-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Visitor badge sticker set"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Visitor badge sticker set" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Visitor badge sticker set</h4>
+          <h3>Visitor badge sticker set</h3>
           <p class="muted">Low-friction check-in support for guest identification, classroom pickup, and event flow.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0B5RLWFWX?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-security-check-in-and-facility-signage-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Rechargeable radio set for volunteers Volunteer coordination pick for parking, security, kids ministry, events, and facility handoffs. https://www.thewatchersedge.ca/best-church-security-check-in-and-facility-signage-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Rechargeable radio set for volunteers"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Rechargeable radio set for volunteers" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Rechargeable radio set for volunteers</h4>
+          <h3>Rechargeable radio set for volunteers</h3>
           <p class="muted">Volunteer coordination pick for parking, security, kids ministry, events, and facility handoffs.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B00G9T7AEA?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-security-check-in-and-facility-signage-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Padded folding-chair set Flexible seating category for small groups, overflow rooms, classrooms, and temporary ministry spaces. https://www.thewatchersedge.ca/best-church-small-group-discussion-and-room-setup-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Padded folding-chair set"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Padded folding-chair set" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Padded folding-chair set</h4>
+          <h3>Padded folding-chair set</h3>
           <p class="muted">Flexible seating category for small groups, overflow rooms, classrooms, and temporary ministry spaces.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B09NCFPV8F?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-small-group-discussion-and-room-setup-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Portable whiteboard easel Useful for teaching rooms, volunteer briefings, small groups, prayer prompts, and training sessions. https://www.thewatchersedge.ca/best-church-small-group-discussion-and-room-setup-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Portable whiteboard easel"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Portable whiteboard easel" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Portable whiteboard easel</h4>
+          <h3>Portable whiteboard easel</h3>
           <p class="muted">Useful for teaching rooms, volunteer briefings, small groups, prayer prompts, and training sessions.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B09YTX18HH?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-small-group-discussion-and-room-setup-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Insulated casserole carrier for care meals Care-team and hospitality pick for meal-train drop-offs, bereavement support, and volunteer food transport. https://www.thewatchersedge.ca/best-church-prayer-team-hospitality-bereavement-and-care-meal-support-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Insulated casserole carrier for care meals"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Insulated casserole carrier for care meals" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Insulated casserole carrier for care meals</h4>
+          <h3>Insulated casserole carrier for care meals</h3>
           <p class="muted">Care-team and hospitality pick for meal-train drop-offs, bereavement support, and volunteer food transport.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0D9RN6TQX?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-prayer-team-hospitality-bereavement-and-care-meal-support-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Bulk food containers for meal portions Repeat-use care-meal support for organized leftovers, portioned drop-offs, and cleanup after ministry meals. https://www.thewatchersedge.ca/best-church-prayer-team-hospitality-bereavement-and-care-meal-support-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Bulk food containers for meal portions"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Bulk food containers for meal portions" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Bulk food containers for meal portions</h4>
+          <h3>Bulk food containers for meal portions</h3>
           <p class="muted">Repeat-use care-meal support for organized leftovers, portioned drop-offs, and cleanup after ministry meals.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B094X2F2NQ?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-prayer-team-hospitality-bereavement-and-care-meal-support-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Folding music stand for rehearsals Portable worship and choir support item for rehearsal rooms, flexible stages, and temporary music setups. https://www.thewatchersedge.ca/best-church-choir-worship-music-and-rehearsal-support-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Folding music stand for rehearsals"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Folding music stand for rehearsals" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Folding music stand for rehearsals</h4>
+          <h3>Folding music stand for rehearsals</h3>
           <p class="muted">Portable worship and choir support item for rehearsal rooms, flexible stages, and temporary music setups.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B07D5KK26W?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-choir-worship-music-and-rehearsal-support-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
         <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Choral folder for sheet handling Helps music teams keep sheets, lyrics, and rehearsal notes organized without overbuilding the workflow. https://www.thewatchersedge.ca/best-church-choir-worship-music-and-rehearsal-support-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-          <div class="resource-picture"><img src="" alt="Illustrated preview for Choral folder for sheet handling"></div>
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Choral folder for sheet handling" loading="lazy"></div>
           <div class="resource-card-badges">
             <span class="resource-chip"></span>
             <span class="resource-chip"></span>
           </div>
-          <h4 style="margin-bottom: 6px;">Choral folder for sheet handling</h4>
+          <h3>Choral folder for sheet handling</h3>
           <p class="muted">Helps music teams keep sheets, lyrics, and rehearsal notes organized without overbuilding the workflow.</p>
+          
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
             <a class="btn" href="https://www.amazon.ca/dp/B0CTQ5DZJK?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
             <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-choir-worship-music-and-rehearsal-support-supplies.html">Read buying guide</a>
           </div>
-          <p class="resource-card-disclaimer">Affiliate link. Live Amazon details stay on Amazon.ca; The Watchers Edge keeps the category context here.</p>
+          <p class="resource-card-disclaimer">Affiliate link. The Watchers Edge curates the recommendation here; Amazon handles the live product details and checkout.</p>
         </article>
         
       </div>
