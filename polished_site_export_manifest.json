@@ -13,6 +13,7 @@
     "/contact",
     "/support",
     "/resources",
+    "/updates/resources-startnow20-launch",
     "/command-center",
     "/store/the-watchers-edge-botops-toolkit",
     "/store/twe-solo-crm-follow-up-system",
@@ -93,5 +94,5 @@
     "twe-resources-traffic-tracker-promo-log"
   ],
   "redirects": [],
-  "exported_count": 29
+  "exported_count": 30
 }
