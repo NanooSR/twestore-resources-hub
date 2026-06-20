@@ -628,12 +628,52 @@
         background: rgba(255,255,255,0.92);
         box-shadow: var(--shadow-sm);
       }
+      .affiliate-tile h3,
+      .affiliate-tile h4 {
+        margin-bottom: 0;
+      }
+      .resource-card-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .resource-chip {
+        display: inline-flex;
+        align-items: center;
+        min-height: 32px;
+        padding: 6px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(9, 103, 114, 0.14);
+        background: rgba(9, 103, 114, 0.07);
+        color: var(--brand);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+      }
+      .resource-card-guide-note {
+        margin: 0;
+        color: var(--ink-soft);
+        font-size: 0.93rem;
+      }
+      .resource-card-guide-note strong {
+        color: var(--ink);
+      }
+      .resource-card-actions {
+        margin-top: auto;
+      }
+      .resource-card-disclaimer {
+        margin: 0;
+        color: #4b635f;
+        font-size: 0.82rem;
+        line-height: 1.45;
+      }
       .resource-picture {
         display: grid;
         place-items: center;
+        aspect-ratio: 16 / 9;
         min-height: 126px;
-        margin-bottom: 12px;
-        padding: 18px;
+        margin-bottom: 4px;
+        padding: 12px;
         border-radius: 18px;
         border: 1px solid rgba(239, 155, 19, 0.24);
         background:
