@@ -600,6 +600,62 @@
         border: 1px solid var(--line);
         background: var(--panel-soft);
       }
+      .affiliate-banner {
+        padding: 24px;
+        border-radius: 24px;
+        background: linear-gradient(135deg, rgba(255,253,249,0.98), rgba(220,238,237,0.88));
+        overflow: hidden;
+      }
+      .affiliate-scroll {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(250px, 310px);
+        gap: 16px;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: inline proximity;
+        padding: 4px 4px 14px;
+      }
+      .affiliate-tile {
+        scroll-snap-align: start;
+        display: grid;
+        gap: 10px;
+        align-content: start;
+        min-height: 390px;
+        padding: 18px;
+        border: 1px solid rgba(9, 103, 114, 0.18);
+        border-radius: 20px;
+        background: rgba(255,255,255,0.92);
+        box-shadow: var(--shadow-sm);
+      }
+      .resource-picture {
+        display: grid;
+        place-items: center;
+        min-height: 126px;
+        margin-bottom: 12px;
+        padding: 18px;
+        border-radius: 18px;
+        border: 1px solid rgba(239, 155, 19, 0.24);
+        background:
+          radial-gradient(circle at 20% 20%, rgba(239,155,19,0.22), transparent 28%),
+          radial-gradient(circle at 78% 28%, rgba(9,103,114,0.20), transparent 30%),
+          linear-gradient(145deg, #fff7e8 0%, #dceeed 100%);
+        color: var(--ink);
+        text-align: center;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+      }
+      .resource-picture.compact { min-height: 86px; padding: 14px; }
+      .resource-picture span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.72);
+        border: 1px solid rgba(255,255,255,0.92);
+      }
       @media (max-width: 1180px) {
         .nav {
           grid-template-columns: 1fr;
@@ -703,6 +759,30 @@
   </div>
 </section>
 
+<section class="section card" id="affiliate-categories" style="padding: 22px; border-radius: 22px;">
+  <div class="section-head" style="align-items: center; margin-bottom: 10px;">
+    <div>
+      <p class="eyebrow">Browse by category</p>
+      <h2 style="margin-bottom: 6px;">Simple Amazon affiliate categories</h2>
+      <p class="muted" style="margin-bottom: 0;">Choose the category that matches the buying problem first, then open individual Amazon.ca picks or the matching guide.</p>
+    </div>
+    <a class="pill is-accent" href="#expanded-picks">See all picks</a>
+  </div>
+  <div class="pill-row">
+    
+    <a class="pill" href="https://www.thewatchersedge.ca/home-office-deals-for-freelancers.html">Freelancer and solo-operator workspace</a>
+    
+    <a class="pill" href="https://www.thewatchersedge.ca/best-client-onboarding-desk-setup.html">Client onboarding, paperwork, and follow-up tools</a>
+    
+    <a class="pill" href="https://www.thewatchersedge.ca/creator-gear-deals.html">Calls, content, audio, video, and lighting</a>
+    
+    <a class="pill" href="https://www.thewatchersedge.ca/best-ai-research-desk-setup.html">AI research, reading, notes, and interview setup</a>
+    
+    <a class="pill" href="https://www.thewatchersedge.ca/church-supplies-buying-path-for-offices-services-and-events.html">Church offices, service flow, hospitality, facilities, and care rooms</a>
+    
+  </div>
+</section>
+
 <section class="section card strong-card" id="quick-picks" style="padding: 26px; border-radius: 24px;">
   <div class="section-head" style="align-items: center; margin-bottom: 16px;">
     <div>
@@ -715,6 +795,7 @@
   <div class="grid three">
     
     <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
+      <div class="resource-picture" aria-hidden="true"><span>Home office anchor</span></div>
       <p class="eyebrow">Home office anchor</p>
       <h3>Standing desk for daily operator work</h3>
       <p class="muted">A high-ticket, broad-demand desk upgrade for buyers rebuilding the surface they use every day.</p>
@@ -725,6 +806,7 @@
     </article>
     
     <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
+      <div class="resource-picture" aria-hidden="true"><span>Home office comfort</span></div>
       <p class="eyebrow">Home office comfort</p>
       <h3>Ergonomic chair value pick</h3>
       <p class="muted">A broad everyday-work category for buyers who sit through client delivery, planning, admin, and review blocks.</p>
@@ -735,6 +817,7 @@
     </article>
     
     <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
+      <div class="resource-picture" aria-hidden="true"><span>Admin paperwork</span></div>
       <p class="eyebrow">Admin paperwork</p>
       <h3>Portable document scanner for paperwork capture</h3>
       <p class="muted">Useful when invoices, intake forms, receipts, and client paperwork are slowing down admin flow.</p>
@@ -745,6 +828,7 @@
     </article>
     
     <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
+      <div class="resource-picture" aria-hidden="true"><span>Admin organization</span></div>
       <p class="eyebrow">Admin organization</p>
       <h3>Label maker for files, bins, and workflow reset</h3>
       <p class="muted">A repeat-use organizer that fits office, church, creator, and client-delivery setups.</p>
@@ -755,6 +839,7 @@
     </article>
     
     <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
+      <div class="resource-picture" aria-hidden="true"><span>Creator audio</span></div>
       <p class="eyebrow">Creator audio</p>
       <h3>USB microphone for calls and content</h3>
       <p class="muted">Audio is one of the fastest professionalism upgrades for creators, consultants, coaches, and service providers.</p>
@@ -765,6 +850,7 @@
     </article>
     
     <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
+      <div class="resource-picture" aria-hidden="true"><span>Creator video</span></div>
       <p class="eyebrow">Creator video</p>
       <h3>Webcam for meetings, tutorials, and interviews</h3>
       <p class="muted">A broad creator and remote-work category where better clarity can make buyer-facing work feel more trustworthy.</p>
@@ -775,6 +861,7 @@
     </article>
     
     <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
+      <div class="resource-picture" aria-hidden="true"><span>Creator lighting</span></div>
       <p class="eyebrow">Creator lighting</p>
       <h3>Ring light for calls and short-form content</h3>
       <p class="muted">A common low-friction creator upgrade for dim rooms, remote lessons, announcements, and lightweight video work.</p>
@@ -785,6 +872,7 @@
     </article>
     
     <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
+      <div class="resource-picture" aria-hidden="true"><span>Research desk</span></div>
       <p class="eyebrow">Research desk</p>
       <h3>Portable monitor for source comparison</h3>
       <p class="muted">Helpful when research, AI review, job-search work, or KPI sessions need notes and source material visible together.</p>
@@ -795,6 +883,7 @@
     </article>
     
     <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
+      <div class="resource-picture" aria-hidden="true"><span>Research storage</span></div>
       <p class="eyebrow">Research storage</p>
       <h3>External SSD or backup drive for research archives</h3>
       <p class="muted">A practical companion for buyers who collect downloads, recordings, screenshots, exports, and research references.</p>
@@ -805,6 +894,7 @@
     </article>
     
     <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
+      <div class="resource-picture" aria-hidden="true"><span>Church fellowship</span></div>
       <p class="eyebrow">Church fellowship</p>
       <h3>Coffee urn for fellowship and welcome-hour demand</h3>
       <p class="muted">A repeat-use church procurement category for lobbies, fellowship halls, volunteer rooms, and service-day hospitality.</p>
@@ -815,6 +905,7 @@
     </article>
     
     <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
+      <div class="resource-picture" aria-hidden="true"><span>Church audio</span></div>
       <p class="eyebrow">Church audio</p>
       <h3>Wireless microphone system for services and events</h3>
       <p class="muted">A higher-intent ministry gear category that can support services, classrooms, events, and volunteer-run recordings.</p>
@@ -825,6 +916,7 @@
     </article>
     
     <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
+      <div class="resource-picture" aria-hidden="true"><span>Church safety</span></div>
       <p class="eyebrow">Church safety</p>
       <h3>First-aid kit for office, facility, and event areas</h3>
       <p class="muted">A practical compliance-adjacent supply category with recurring relevance across church rooms and event setups.</p>
@@ -855,6 +947,7 @@
       <div class="mini-stack">
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Home office and solo-operator upgrades</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Standing desk for all-day laptop and monitor work</h4>
           <p class="muted" style="margin-bottom: 10px;">High-intent desk upgrade for posture, stability, and daily use.</p>
           <div class="cta-row">
@@ -864,6 +957,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Home office and solo-operator upgrades</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Compact standing desk for smaller rooms</h4>
           <p class="muted" style="margin-bottom: 10px;">For buyers who want the ergonomic win without rebuilding the whole room.</p>
           <div class="cta-row">
@@ -873,6 +967,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Home office and solo-operator upgrades</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Ergonomic chair value pick</h4>
           <p class="muted" style="margin-bottom: 10px;">Everyday comfort category for long client, admin, and review blocks.</p>
           <div class="cta-row">
@@ -882,6 +977,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Home office and solo-operator upgrades</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Anti-fatigue standing support add-on</h4>
           <p class="muted" style="margin-bottom: 10px;">A lower-ticket add-on that makes standing work feel more sustainable.</p>
           <div class="cta-row">
@@ -891,6 +987,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Home office and solo-operator upgrades</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Cable-management tray</h4>
           <p class="muted" style="margin-bottom: 10px;">Quick desk cleanup pick for power clutter and visible chaos.</p>
           <div class="cta-row">
@@ -900,6 +997,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Home office and solo-operator upgrades</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Monitor arm or riser</h4>
           <p class="muted" style="margin-bottom: 10px;">Strong fit for weekly reviews, scorecards, and clearer screen placement.</p>
           <div class="cta-row">
@@ -918,6 +1016,7 @@
       <div class="mini-stack">
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Admin, paperwork, and client-delivery tools</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Compact scanner or document-capture tool</h4>
           <p class="muted" style="margin-bottom: 10px;">Best fit when paper keeps delaying invoices, receipts, forms, and client intake.</p>
           <div class="cta-row">
@@ -927,6 +1026,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Admin, paperwork, and client-delivery tools</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Filing organizer or tray system</h4>
           <p class="muted" style="margin-bottom: 10px;">Keeps active paperwork visible without letting it take over the desk.</p>
           <div class="cta-row">
@@ -936,6 +1036,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Admin, paperwork, and client-delivery tools</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Label maker for files and bins</h4>
           <p class="muted" style="margin-bottom: 10px;">Helps buyers name, sort, and re-find admin materials faster.</p>
           <div class="cta-row">
@@ -945,6 +1046,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Admin, paperwork, and client-delivery tools</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Shredder or privacy-support tool</h4>
           <p class="muted" style="margin-bottom: 10px;">For offices that handle sensitive paper and need cleaner disposal habits.</p>
           <div class="cta-row">
@@ -954,6 +1056,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Admin, paperwork, and client-delivery tools</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Desk organizer bundle</h4>
           <p class="muted" style="margin-bottom: 10px;">A practical client-onboarding pick for notes, forms, and surface reset.</p>
           <div class="cta-row">
@@ -963,6 +1066,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Admin, paperwork, and client-delivery tools</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Webcam and call-light setup for kickoff calls</h4>
           <p class="muted" style="margin-bottom: 10px;">For operators who run client intake or onboarding calls from the same desk.</p>
           <div class="cta-row">
@@ -981,6 +1085,7 @@
       <div class="mini-stack">
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Creator, calls, and meeting gear</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Desk-ready USB microphone</h4>
           <p class="muted" style="margin-bottom: 10px;">Audio upgrade for meetings, Looms, tutorials, and client-facing content.</p>
           <div class="cta-row">
@@ -990,6 +1095,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Creator, calls, and meeting gear</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Compact USB microphone</h4>
           <p class="muted" style="margin-bottom: 10px;">For smaller desks where audio matters but space is limited.</p>
           <div class="cta-row">
@@ -999,6 +1105,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Creator, calls, and meeting gear</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Microphone arm or placement add-on</h4>
           <p class="muted" style="margin-bottom: 10px;">Useful when sound problems come from placement, not just microphone quality.</p>
           <div class="cta-row">
@@ -1008,6 +1115,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Creator, calls, and meeting gear</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Webcam for meetings and tutorials</h4>
           <p class="muted" style="margin-bottom: 10px;">Broad creator and remote-work pick for trust-building camera clarity.</p>
           <div class="cta-row">
@@ -1017,6 +1125,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Creator, calls, and meeting gear</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Light setup for calls and short-form content</h4>
           <p class="muted" style="margin-bottom: 10px;">Low-friction visual upgrade for dim rooms and lightweight content setups.</p>
           <div class="cta-row">
@@ -1026,6 +1135,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Creator, calls, and meeting gear</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Wireless microphone system for church or event speaking</h4>
           <p class="muted" style="margin-bottom: 10px;">A higher-ticket audio pick that also fits volunteer-run events and teaching rooms.</p>
           <div class="cta-row">
@@ -1044,6 +1154,7 @@
       <div class="mini-stack">
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Research, reading, and job-search setup</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Portable monitor or second-screen option</h4>
           <p class="muted" style="margin-bottom: 10px;">For comparing sources, notes, drafts, and AI output without tab shuffling.</p>
           <div class="cta-row">
@@ -1053,6 +1164,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Research, reading, and job-search setup</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">External SSD or backup drive</h4>
           <p class="muted" style="margin-bottom: 10px;">For local research archives, downloads, interview recordings, and exported work.</p>
           <div class="cta-row">
@@ -1062,6 +1174,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Research, reading, and job-search setup</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Desk lamp or monitor light</h4>
           <p class="muted" style="margin-bottom: 10px;">Helps longer research, review, and evening work feel less fatiguing.</p>
           <div class="cta-row">
@@ -1071,6 +1184,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Research, reading, and job-search setup</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Notebook or whiteboard companion</h4>
           <p class="muted" style="margin-bottom: 10px;">Turns review sessions into written decisions and next actions.</p>
           <div class="cta-row">
@@ -1080,6 +1194,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Research, reading, and job-search setup</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Headphones for focus and interview prep</h4>
           <p class="muted" style="margin-bottom: 10px;">Strong fit for job seekers or researchers working in shared/noisy environments.</p>
           <div class="cta-row">
@@ -1089,6 +1204,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Research, reading, and job-search setup</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Kindle or low-clutter reading setup</h4>
           <p class="muted" style="margin-bottom: 10px;">For buyers who want a lighter reading workflow instead of paper piles.</p>
           <div class="cta-row">
@@ -1107,6 +1223,7 @@
       <div class="mini-stack">
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Offering-envelope supply</h4>
           <p class="muted" style="margin-bottom: 10px;">For churches that still need a clean physical giving flow alongside digital options.</p>
           <div class="cta-row">
@@ -1116,6 +1233,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Visitor-card follow-up set</h4>
           <p class="muted" style="margin-bottom: 10px;">For first-time guest capture, prayer requests, and follow-up routines.</p>
           <div class="cta-row">
@@ -1125,6 +1243,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Dry-erase planner for weekly ministry visibility</h4>
           <p class="muted" style="margin-bottom: 10px;">For volunteers, rooms, announcements, and recurring weekly tasks.</p>
           <div class="cta-row">
@@ -1134,6 +1253,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Pre-filled communion cup supply</h4>
           <p class="muted" style="margin-bottom: 10px;">A recurring service-flow supply for simpler prep and cleanup on communion weeks.</p>
           <div class="cta-row">
@@ -1143,6 +1263,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Rolling ministry cart</h4>
           <p class="muted" style="margin-bottom: 10px;">For moving welcome, kids-ministry, and service-day supplies between rooms.</p>
           <div class="cta-row">
@@ -1152,6 +1273,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Coffee urn for fellowship and welcome hour</h4>
           <p class="muted" style="margin-bottom: 10px;">High-use hospitality item for lobbies, fellowship halls, and volunteer rooms.</p>
           <div class="cta-row">
@@ -1161,6 +1283,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Airpot for portable coffee refill flow</h4>
           <p class="muted" style="margin-bottom: 10px;">Keeps coffee service moving from prep rooms to welcome tables or overflow spaces.</p>
           <div class="cta-row">
@@ -1170,6 +1293,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Condiment organizer for coffee stations</h4>
           <p class="muted" style="margin-bottom: 10px;">Keeps cups, lids, stir sticks, sweeteners, and napkins reachable instead of scattered.</p>
           <div class="cta-row">
@@ -1179,6 +1303,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Bilingual wet-floor sign</h4>
           <p class="muted" style="margin-bottom: 10px;">Practical hallway, washroom, kitchen, and fellowship-area safety pick.</p>
           <div class="cta-row">
@@ -1188,6 +1313,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Janitorial cart for room resets</h4>
           <p class="muted" style="margin-bottom: 10px;">For churches carrying liners, sprays, paper products, and reset supplies across rooms.</p>
           <div class="cta-row">
@@ -1197,6 +1323,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Bulk disinfecting wipes for nursery touchpoints</h4>
           <p class="muted" style="margin-bottom: 10px;">Repeat-use nursery/kids ministry supply for check-in surfaces, toys, tables, and shared items.</p>
           <div class="cta-row">
@@ -1206,6 +1333,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Nursery gate for room separation</h4>
           <p class="muted" style="margin-bottom: 10px;">Helps separate nursery flow, hallway traffic, pickup boundaries, and toddler movement.</p>
           <div class="cta-row">
@@ -1224,6 +1352,7 @@
       <div class="mini-stack">
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Cable and docking cleanup bundle</h4>
           <p class="muted" style="margin-bottom: 10px;">A fast desk-reset pick for buyers whose monitors, laptop power, and peripherals create daily visual clutter.</p>
           <div class="cta-row">
@@ -1233,6 +1362,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Ergonomic foot-rest support</h4>
           <p class="muted" style="margin-bottom: 10px;">Lower-ticket comfort upgrade for buyers who already sit long hours and are not ready to replace the whole chair.</p>
           <div class="cta-row">
@@ -1242,6 +1372,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Adjustable book stand for desk reading</h4>
           <p class="muted" style="margin-bottom: 10px;">Supports research, annotation, and low-clutter reading without burying the work surface in books and papers.</p>
           <div class="cta-row">
@@ -1251,6 +1382,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Productivity book starter pick</h4>
           <p class="muted" style="margin-bottom: 10px;">A small education-oriented add-on that fits readers building a better planning or review habit.</p>
           <div class="cta-row">
@@ -1260,6 +1392,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Portable folding table for check-in and event stations</h4>
           <p class="muted" style="margin-bottom: 10px;">A practical church procurement pick for temporary welcome desks, registration tables, and portable room resets.</p>
           <div class="cta-row">
@@ -1269,6 +1402,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Queue-barrier set for event entry flow</h4>
           <p class="muted" style="margin-bottom: 10px;">High-intent event-control category for sign-ins, food lines, kids check-in, and busy seasonal gatherings.</p>
           <div class="cta-row">
@@ -1278,6 +1412,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Temporary sign stand for directions</h4>
           <p class="muted" style="margin-bottom: 10px;">Helps churches route visitors, classes, and event traffic without permanent signage changes.</p>
           <div class="cta-row">
@@ -1287,6 +1422,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Sanitizer dispenser stand for common areas</h4>
           <p class="muted" style="margin-bottom: 10px;">Repeat-use facility item for entries, check-in tables, fellowship halls, and nursery/kids areas.</p>
           <div class="cta-row">
@@ -1296,6 +1432,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Lockable donation box for giving stations</h4>
           <p class="muted" style="margin-bottom: 10px;">Secure physical drop-flow pick for forms, envelopes, temporary giving stations, or event registration materials.</p>
           <div class="cta-row">
@@ -1305,6 +1442,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Visitor badge sticker set</h4>
           <p class="muted" style="margin-bottom: 10px;">Low-friction check-in support for guest identification, classroom pickup, and event flow.</p>
           <div class="cta-row">
@@ -1314,6 +1452,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Rechargeable radio set for volunteers</h4>
           <p class="muted" style="margin-bottom: 10px;">Volunteer coordination pick for parking, security, kids ministry, events, and facility handoffs.</p>
           <div class="cta-row">
@@ -1323,6 +1462,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Padded folding-chair set</h4>
           <p class="muted" style="margin-bottom: 10px;">Flexible seating category for small groups, overflow rooms, classrooms, and temporary ministry spaces.</p>
           <div class="cta-row">
@@ -1332,6 +1472,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Portable whiteboard easel</h4>
           <p class="muted" style="margin-bottom: 10px;">Useful for teaching rooms, volunteer briefings, small groups, prayer prompts, and training sessions.</p>
           <div class="cta-row">
@@ -1341,6 +1482,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Insulated casserole carrier for care meals</h4>
           <p class="muted" style="margin-bottom: 10px;">Care-team and hospitality pick for meal-train drop-offs, bereavement support, and volunteer food transport.</p>
           <div class="cta-row">
@@ -1350,6 +1492,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Bulk food containers for meal portions</h4>
           <p class="muted" style="margin-bottom: 10px;">Repeat-use care-meal support for organized leftovers, portioned drop-offs, and cleanup after ministry meals.</p>
           <div class="cta-row">
@@ -1359,6 +1502,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Folding music stand for rehearsals</h4>
           <p class="muted" style="margin-bottom: 10px;">Portable worship and choir support item for rehearsal rooms, flexible stages, and temporary music setups.</p>
           <div class="cta-row">
@@ -1368,6 +1512,7 @@
         </div>
         
         <div class="mini-card" style="background: rgba(250,247,238,0.72);">
+          <div class="resource-picture compact" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
           <h4 style="margin-top: 0; margin-bottom: 6px;">Choral folder for sheet handling</h4>
           <p class="muted" style="margin-bottom: 10px;">Helps music teams keep sheets, lyrics, and rehearsal notes organized without overbuilding the workflow.</p>
           <div class="cta-row">

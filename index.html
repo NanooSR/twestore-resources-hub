@@ -600,6 +600,62 @@
         border: 1px solid var(--line);
         background: var(--panel-soft);
       }
+      .affiliate-banner {
+        padding: 24px;
+        border-radius: 24px;
+        background: linear-gradient(135deg, rgba(255,253,249,0.98), rgba(220,238,237,0.88));
+        overflow: hidden;
+      }
+      .affiliate-scroll {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(250px, 310px);
+        gap: 16px;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: inline proximity;
+        padding: 4px 4px 14px;
+      }
+      .affiliate-tile {
+        scroll-snap-align: start;
+        display: grid;
+        gap: 10px;
+        align-content: start;
+        min-height: 390px;
+        padding: 18px;
+        border: 1px solid rgba(9, 103, 114, 0.18);
+        border-radius: 20px;
+        background: rgba(255,255,255,0.92);
+        box-shadow: var(--shadow-sm);
+      }
+      .resource-picture {
+        display: grid;
+        place-items: center;
+        min-height: 126px;
+        margin-bottom: 12px;
+        padding: 18px;
+        border-radius: 18px;
+        border: 1px solid rgba(239, 155, 19, 0.24);
+        background:
+          radial-gradient(circle at 20% 20%, rgba(239,155,19,0.22), transparent 28%),
+          radial-gradient(circle at 78% 28%, rgba(9,103,114,0.20), transparent 30%),
+          linear-gradient(145deg, #fff7e8 0%, #dceeed 100%);
+        color: var(--ink);
+        text-align: center;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+      }
+      .resource-picture.compact { min-height: 86px; padding: 14px; }
+      .resource-picture span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.72);
+        border: 1px solid rgba(255,255,255,0.92);
+      }
       @media (max-width: 1180px) {
         .nav {
           grid-template-columns: 1fr;
@@ -713,6 +769,109 @@
       <h3>Clearer choices, calmer language, and a more useful next step.</h3>
       <p class="muted">The goal is not noise or hype. It is a trustworthy front door that helps visitors move from confusion to clarity faster.</p>
     </article>
+  </div>
+</section>
+
+<section class="section card affiliate-banner" id="amazon-affiliate-picks" aria-label="Featured Amazon affiliate resource picks">
+  <div class="section-head" style="align-items: center; margin-bottom: 14px;">
+    <div>
+      <p class="eyebrow">Amazon.ca affiliate resources</p>
+      <h2 style="margin-bottom: 6px;">Featured gear and resource picks</h2>
+      <p class="muted" style="margin-bottom: 0;">Browse practical Amazon.ca affiliate picks by category, then use the matching guide if you want more context before clicking through. Pricing, availability, delivery, and seller terms are shown on Amazon.ca.</p>
+    </div>
+    <a class="pill is-accent" href="/resources">Open full Resources & Gear Store</a>
+  </div>
+  <p class="muted"><strong>Affiliate disclosure:</strong> Some resource links are affiliate links. As an Amazon Associate I earn from qualifying purchases.</p>
+  <div class="affiliate-scroll" tabindex="0" aria-label="Scroll featured Amazon affiliate picks">
+    
+    <article class="affiliate-tile">
+      <div class="resource-picture" aria-hidden="true"><span>Home office anchor</span></div>
+      <p class="eyebrow">Quick pick</p>
+      <h3>Standing desk for daily operator work</h3>
+      <p class="muted">A high-ticket, broad-demand desk upgrade for buyers rebuilding the surface they use every day.</p>
+      <div class="cta-row" style="margin-top: 0;">
+        <a class="btn" href="https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+        <a class="btn ghost" href="https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html">Read guide</a>
+      </div>
+    </article>
+    
+    <article class="affiliate-tile">
+      <div class="resource-picture" aria-hidden="true"><span>Admin paperwork</span></div>
+      <p class="eyebrow">Quick pick</p>
+      <h3>Portable document scanner for paperwork capture</h3>
+      <p class="muted">Useful when invoices, intake forms, receipts, and client paperwork are slowing down admin flow.</p>
+      <div class="cta-row" style="margin-top: 0;">
+        <a class="btn" href="https://www.amazon.ca/dp/B07KQZWPYN?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+        <a class="btn ghost" href="https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html">Read guide</a>
+      </div>
+    </article>
+    
+    <article class="affiliate-tile">
+      <div class="resource-picture" aria-hidden="true"><span>Admin organization</span></div>
+      <p class="eyebrow">Quick pick</p>
+      <h3>Label maker for files, bins, and workflow reset</h3>
+      <p class="muted">A repeat-use organizer that fits office, church, creator, and client-delivery setups.</p>
+      <div class="cta-row" style="margin-top: 0;">
+        <a class="btn" href="https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+        <a class="btn ghost" href="https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html">Read guide</a>
+      </div>
+    </article>
+    
+    <article class="affiliate-tile">
+      <div class="resource-picture" aria-hidden="true"><span>Creator audio</span></div>
+      <p class="eyebrow">Quick pick</p>
+      <h3>USB microphone for calls and content</h3>
+      <p class="muted">Audio is one of the fastest professionalism upgrades for creators, consultants, coaches, and service providers.</p>
+      <div class="cta-row" style="margin-top: 0;">
+        <a class="btn" href="https://www.amazon.ca/dp/B0872CFTGK?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+        <a class="btn ghost" href="https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html">Read guide</a>
+      </div>
+    </article>
+    
+    <article class="affiliate-tile">
+      <div class="resource-picture" aria-hidden="true"><span>Creator video</span></div>
+      <p class="eyebrow">Quick pick</p>
+      <h3>Webcam for meetings, tutorials, and interviews</h3>
+      <p class="muted">A broad creator and remote-work category where better clarity can make buyer-facing work feel more trustworthy.</p>
+      <div class="cta-row" style="margin-top: 0;">
+        <a class="btn" href="https://www.amazon.ca/dp/B07M6Y7355?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+        <a class="btn ghost" href="https://www.thewatchersedge.ca/creator-gear-deals.html">Read guide</a>
+      </div>
+    </article>
+    
+    <article class="affiliate-tile">
+      <div class="resource-picture" aria-hidden="true"><span>Research desk</span></div>
+      <p class="eyebrow">Quick pick</p>
+      <h3>Portable monitor for source comparison</h3>
+      <p class="muted">Helpful when research, AI review, job-search work, or KPI sessions need notes and source material visible together.</p>
+      <div class="cta-row" style="margin-top: 0;">
+        <a class="btn" href="https://www.amazon.ca/dp/B0B9GLG86C?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+        <a class="btn ghost" href="https://www.thewatchersedge.ca/best-ai-research-desk-setup.html">Read guide</a>
+      </div>
+    </article>
+    
+    <article class="affiliate-tile">
+      <div class="resource-picture" aria-hidden="true"><span>Church fellowship</span></div>
+      <p class="eyebrow">Quick pick</p>
+      <h3>Coffee urn for fellowship and welcome-hour demand</h3>
+      <p class="muted">A repeat-use church procurement category for lobbies, fellowship halls, volunteer rooms, and service-day hospitality.</p>
+      <div class="cta-row" style="margin-top: 0;">
+        <a class="btn" href="https://www.amazon.ca/dp/B00006WNSN?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+        <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html">Read guide</a>
+      </div>
+    </article>
+    
+    <article class="affiliate-tile">
+      <div class="resource-picture" aria-hidden="true"><span>Church audio</span></div>
+      <p class="eyebrow">Quick pick</p>
+      <h3>Wireless microphone system for services and events</h3>
+      <p class="muted">A higher-intent ministry gear category that can support services, classrooms, events, and volunteer-run recordings.</p>
+      <div class="cta-row" style="margin-top: 0;">
+        <a class="btn" href="https://www.amazon.ca/dp/B07RKN9FF6?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+        <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-livestream-teaching-and-volunteer-coordination-tools.html">Read guide</a>
+      </div>
+    </article>
+    
   </div>
 </section>
 
