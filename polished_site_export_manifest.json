@@ -28,10 +28,11 @@
     "/store/twe-operator-systems-bundle",
     "/store/twe-client-portal-delivery-hub",
     "/store/twe-amazon-affiliate-store-quickstart-kit",
-    "/store/twetrade-bot-builder-workbook"
+    "/store/twetrade-bot-builder-workbook",
+    "/store/twe-resources-traffic-tracker-promo-log"
   ],
-  "product_count": 38,
-  "unique_product_route_count": 15,
+  "product_count": 39,
+  "unique_product_route_count": 16,
   "product_slugs": [
     "the-watchers-edge-botops-toolkit",
     "twe-solo-crm-follow-up-system",
@@ -70,7 +71,8 @@
     "twe-client-portal-delivery-hub",
     "twe-client-portal-delivery-hub",
     "twe-amazon-affiliate-store-quickstart-kit",
-    "twetrade-bot-builder-workbook"
+    "twetrade-bot-builder-workbook",
+    "twe-resources-traffic-tracker-promo-log"
   ],
   "unique_product_slugs": [
     "the-watchers-edge-botops-toolkit",
@@ -87,8 +89,9 @@
     "twe-operator-systems-bundle",
     "twe-client-portal-delivery-hub",
     "twe-amazon-affiliate-store-quickstart-kit",
-    "twetrade-bot-builder-workbook"
+    "twetrade-bot-builder-workbook",
+    "twe-resources-traffic-tracker-promo-log"
   ],
   "redirects": [],
-  "exported_count": 28
+  "exported_count": 29
 }
