@@ -786,13 +786,13 @@
   <div class="grid three">
     <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
       <p class="eyebrow">Bot planning path</p>
-      <h3>TWETrade Bot Builder Workbook</h3>
+      <h3>Save on TWETrade Workbook</h3>
       <p class="muted">Use the live 20% discount link for the premium project-planning workbook, prompt workflows, and safer review structure.</p>
       <a class="btn" href="https://nanoojr.gumroad.com/l/twetrade-bot-builder-workbook/STARTNOW20">Open discounted checkout path</a>
     </article>
     <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
       <p class="eyebrow">Affiliate setup path</p>
-      <h3>Amazon Affiliate Store Quickstart Kit</h3>
+      <h3>Save on Amazon Quickstart</h3>
       <p class="muted">Use the sale link for the affiliate/resource-page setup guide, tracker, disclosure checklist, and publishing workflow.</p>
       <a class="btn secondary" href="https://nanoojr.gumroad.com/l/amazon-affiliate-store-quickstart-kit/STARTNOW20">Open discounted checkout path</a>
     </article>
@@ -868,6 +868,23 @@
           
         </select>
       </label>
+      <label style="display: grid; gap: 6px;">
+        <span class="eyebrow">Amazon category</span>
+        <select name="resource_category">
+          <option value="">All Amazon categories</option>
+          
+          <option value="workspace" >Workspace</option>
+          
+          <option value="admin-paperwork" >Admin &amp; paperwork</option>
+          
+          <option value="creator-calls" >Creator &amp; calls</option>
+          
+          <option value="research-reading" >Research &amp; reading</option>
+          
+          <option value="church-ministry" >Church &amp; ministry</option>
+          
+        </select>
+      </label>
       <div class="cta-row" style="margin-top: 0; align-self: end;">
         <button class="btn" type="submit">Search store</button>
         <a class="btn secondary" href="/store">Reset</a>
@@ -881,30 +898,45 @@
     
     
     
+    
     <span class="pill">All product families</span>
     <span class="pill">39 total offers</span>
+    <span class="pill">5 Amazon browse lanes</span>
     
   </div>
   <article id="store-search-ran" class="mini-card" style="margin-top: 16px; padding: 16px 18px; border-radius: 16px; background: rgba(220,238,237,0.62); display:none;">
     <p class="eyebrow">Search ran</p>
-    <h3 style="margin-bottom: 6px;">Results for “”</h3>
+    <h3 style="margin-bottom: 6px;">Filtered results</h3>
     <p class="muted" style="margin-bottom: 0;">Showing 39 matching results: 39 product offers and 0 Amazon/resource results. If this is not what you meant, try a broader term like “Amazon”, “desk”, “scanner”, “church”, “bot”, or “workflow”.</p>
   </article>
 
-  <article id="store-resource-search-results" class="mini-card" style="margin-top: 16px; padding: 18px; border-radius: 18px; background: rgba(255,241,214,0.62); display:none;">
+  <article class="mini-card affiliate-banner" style="margin-top: 16px; padding: 18px; border-radius: 18px;">
     <div class="section-head" style="align-items: center; margin-bottom: 12px;">
       <div>
-        <p class="eyebrow">Amazon/resource results</p>
-        <h3 id="store-resource-search-title" style="margin-bottom: 6px;">Amazon affiliate picks matching “”</h3>
-        <p class="muted" style="margin-bottom: 0;">These results route through the approved Amazon.ca affiliate tag and keep disclosure visible. Final pricing, availability, shipping, and seller terms stay on Amazon.ca.</p>
+        <p class="eyebrow">Featured gear and resource picks</p>
+        <h3 style="margin-bottom: 6px;">Popular setup and gear guides for faster buying decisions</h3>
+        <p class="muted" style="margin-bottom: 0;">Use the category chips for broad buyer intent, or open the full Resources &amp; Gear Store for a dedicated browse/search view with disclosure kept visible.</p>
       </div>
-      <a class="pill is-accent" href="/resources">Browse all affiliate categories</a>
+      <a class="pill is-accent" href="/resources">Amazon.ca affiliate resources</a>
     </div>
-    <div class="affiliate-scroll" tabindex="0" aria-label="Scroll Amazon affiliate search results">
+    <div class="pill-row" style="margin-bottom: 12px;">
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Home office anchor Quick pick Standing desk for daily operator work A high-ticket, broad-demand desk upgrade for buyers rebuilding the surface they use every day. https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <a class="pill" href="/resources?category=workspace">Workspace · 5</a>
+      
+      <a class="pill" href="/resources?category=admin-paperwork">Admin &amp; paperwork · 7</a>
+      
+      <a class="pill" href="/resources?category=creator-calls">Creator &amp; calls · 10</a>
+      
+      <a class="pill" href="/resources?category=research-reading">Research &amp; reading · 13</a>
+      
+      <a class="pill" href="/resources?category=church-ministry">Church &amp; ministry · 30</a>
+      
+    </div>
+    <div class="affiliate-scroll" tabindex="0" aria-label="Scroll featured Amazon affiliate picks from the store page">
+      
+      <article class="affiliate-tile" data-featured-affiliate-card data-category="workspace" data-search-text="Home office anchor Quick pick Standing desk for daily operator work A high-ticket, broad-demand desk upgrade for buyers rebuilding the surface they use every day. https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html workspace Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20">
         <div class="resource-picture" aria-hidden="true"><span>Home office anchor</span></div>
-        <p class="eyebrow">Quick pick</p>
+        <p class="eyebrow">Quick pick · Workspace</p>
         <h3>Standing desk for daily operator work</h3>
         <p class="muted">A high-ticket, broad-demand desk upgrade for buyers rebuilding the surface they use every day.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -913,20 +945,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Home office comfort Quick pick Ergonomic chair value pick A broad everyday-work category for buyers who sit through client delivery, planning, admin, and review blocks. https://www.thewatchersedge.ca/best-home-office-setup-for-solo-operators.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
-        <div class="resource-picture" aria-hidden="true"><span>Home office comfort</span></div>
-        <p class="eyebrow">Quick pick</p>
-        <h3>Ergonomic chair value pick</h3>
-        <p class="muted">A broad everyday-work category for buyers who sit through client delivery, planning, admin, and review blocks.</p>
-        <div class="cta-row" style="margin-top: 0;">
-          <a class="btn" href="https://www.amazon.ca/dp/B09N93L2RQ?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
-          <a class="btn ghost" href="https://www.thewatchersedge.ca/best-home-office-setup-for-solo-operators.html">Read guide</a>
-        </div>
-      </article>
-      
-      <article class="affiliate-tile" data-resource-card data-search-text="Admin paperwork Quick pick Portable document scanner for paperwork capture Useful when invoices, intake forms, receipts, and client paperwork are slowing down admin flow. https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-featured-affiliate-card data-category="admin-paperwork" data-search-text="Admin paperwork Quick pick Portable document scanner for paperwork capture Useful when invoices, intake forms, receipts, and client paperwork are slowing down admin flow. https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html admin-paperwork Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20">
         <div class="resource-picture" aria-hidden="true"><span>Admin paperwork</span></div>
-        <p class="eyebrow">Quick pick</p>
+        <p class="eyebrow">Quick pick · Admin Paperwork</p>
         <h3>Portable document scanner for paperwork capture</h3>
         <p class="muted">Useful when invoices, intake forms, receipts, and client paperwork are slowing down admin flow.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -935,9 +956,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Admin organization Quick pick Label maker for files, bins, and workflow reset A repeat-use organizer that fits office, church, creator, and client-delivery setups. https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-featured-affiliate-card data-category="church-ministry" data-search-text="Admin organization Quick pick Label maker for files, bins, and workflow reset A repeat-use organizer that fits office, church, creator, and client-delivery setups. https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20">
         <div class="resource-picture" aria-hidden="true"><span>Admin organization</span></div>
-        <p class="eyebrow">Quick pick</p>
+        <p class="eyebrow">Quick pick · Church Ministry</p>
         <h3>Label maker for files, bins, and workflow reset</h3>
         <p class="muted">A repeat-use organizer that fits office, church, creator, and client-delivery setups.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -946,9 +967,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Creator audio Quick pick USB microphone for calls and content Audio is one of the fastest professionalism upgrades for creators, consultants, coaches, and service providers. https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-featured-affiliate-card data-category="creator-calls" data-search-text="Creator audio Quick pick USB microphone for calls and content Audio is one of the fastest professionalism upgrades for creators, consultants, coaches, and service providers. https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20">
         <div class="resource-picture" aria-hidden="true"><span>Creator audio</span></div>
-        <p class="eyebrow">Quick pick</p>
+        <p class="eyebrow">Quick pick · Creator Calls</p>
         <h3>USB microphone for calls and content</h3>
         <p class="muted">Audio is one of the fastest professionalism upgrades for creators, consultants, coaches, and service providers.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -957,9 +978,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Creator video Quick pick Webcam for meetings, tutorials, and interviews A broad creator and remote-work category where better clarity can make buyer-facing work feel more trustworthy. https://www.thewatchersedge.ca/creator-gear-deals.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-featured-affiliate-card data-category="creator-calls" data-search-text="Creator video Quick pick Webcam for meetings, tutorials, and interviews A broad creator and remote-work category where better clarity can make buyer-facing work feel more trustworthy. https://www.thewatchersedge.ca/creator-gear-deals.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20">
         <div class="resource-picture" aria-hidden="true"><span>Creator video</span></div>
-        <p class="eyebrow">Quick pick</p>
+        <p class="eyebrow">Quick pick · Creator Calls</p>
         <h3>Webcam for meetings, tutorials, and interviews</h3>
         <p class="muted">A broad creator and remote-work category where better clarity can make buyer-facing work feel more trustworthy.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -968,20 +989,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Creator lighting Quick pick Ring light for calls and short-form content A common low-friction creator upgrade for dim rooms, remote lessons, announcements, and lightweight video work. https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
-        <div class="resource-picture" aria-hidden="true"><span>Creator lighting</span></div>
-        <p class="eyebrow">Quick pick</p>
-        <h3>Ring light for calls and short-form content</h3>
-        <p class="muted">A common low-friction creator upgrade for dim rooms, remote lessons, announcements, and lightweight video work.</p>
-        <div class="cta-row" style="margin-top: 0;">
-          <a class="btn" href="https://www.amazon.ca/dp/B09K7F27SW?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
-          <a class="btn ghost" href="https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html">Read guide</a>
-        </div>
-      </article>
-      
-      <article class="affiliate-tile" data-resource-card data-search-text="Research desk Quick pick Portable monitor for source comparison Helpful when research, AI review, job-search work, or KPI sessions need notes and source material visible together. https://www.thewatchersedge.ca/best-ai-research-desk-setup.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-featured-affiliate-card data-category="research-reading" data-search-text="Research desk Quick pick Portable monitor for source comparison Helpful when research, AI review, job-search work, or KPI sessions need notes and source material visible together. https://www.thewatchersedge.ca/best-ai-research-desk-setup.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20">
         <div class="resource-picture" aria-hidden="true"><span>Research desk</span></div>
-        <p class="eyebrow">Quick pick</p>
+        <p class="eyebrow">Quick pick · Research Reading</p>
         <h3>Portable monitor for source comparison</h3>
         <p class="muted">Helpful when research, AI review, job-search work, or KPI sessions need notes and source material visible together.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -990,20 +1000,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Research storage Quick pick External SSD or backup drive for research archives A practical companion for buyers who collect downloads, recordings, screenshots, exports, and research references. https://www.thewatchersedge.ca/best-ai-research-desk-setup.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
-        <div class="resource-picture" aria-hidden="true"><span>Research storage</span></div>
-        <p class="eyebrow">Quick pick</p>
-        <h3>External SSD or backup drive for research archives</h3>
-        <p class="muted">A practical companion for buyers who collect downloads, recordings, screenshots, exports, and research references.</p>
-        <div class="cta-row" style="margin-top: 0;">
-          <a class="btn" href="https://www.amazon.ca/dp/B08GTYFC37?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
-          <a class="btn ghost" href="https://www.thewatchersedge.ca/best-ai-research-desk-setup.html">Read guide</a>
-        </div>
-      </article>
-      
-      <article class="affiliate-tile" data-resource-card data-search-text="Church fellowship Quick pick Coffee urn for fellowship and welcome-hour demand A repeat-use church procurement category for lobbies, fellowship halls, volunteer rooms, and service-day hospitality. https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-featured-affiliate-card data-category="church-ministry" data-search-text="Church fellowship Quick pick Coffee urn for fellowship and welcome-hour demand A repeat-use church procurement category for lobbies, fellowship halls, volunteer rooms, and service-day hospitality. https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20">
         <div class="resource-picture" aria-hidden="true"><span>Church fellowship</span></div>
-        <p class="eyebrow">Quick pick</p>
+        <p class="eyebrow">Quick pick · Church Ministry</p>
         <h3>Coffee urn for fellowship and welcome-hour demand</h3>
         <p class="muted">A repeat-use church procurement category for lobbies, fellowship halls, volunteer rooms, and service-day hospitality.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1012,9 +1011,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Church audio Quick pick Wireless microphone system for services and events A higher-intent ministry gear category that can support services, classrooms, events, and volunteer-run recordings. https://www.thewatchersedge.ca/best-church-livestream-teaching-and-volunteer-coordination-tools.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-featured-affiliate-card data-category="church-ministry" data-search-text="Church audio Quick pick Wireless microphone system for services and events A higher-intent ministry gear category that can support services, classrooms, events, and volunteer-run recordings. https://www.thewatchersedge.ca/best-church-livestream-teaching-and-volunteer-coordination-tools.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20">
         <div class="resource-picture" aria-hidden="true"><span>Church audio</span></div>
-        <p class="eyebrow">Quick pick</p>
+        <p class="eyebrow">Quick pick · Church Ministry</p>
         <h3>Wireless microphone system for services and events</h3>
         <p class="muted">A higher-intent ministry gear category that can support services, classrooms, events, and volunteer-run recordings.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1023,9 +1022,145 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Church safety Quick pick First-aid kit for office, facility, and event areas A practical compliance-adjacent supply category with recurring relevance across church rooms and event setups. https://www.thewatchersedge.ca/best-church-facilities-maintenance-janitorial-and-safety-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+    </div>
+    <p class="muted" style="margin-top: 10px; margin-bottom: 0;"><strong>Affiliate disclosure:</strong> Some resource links are affiliate links. As an Amazon Associate I earn from qualifying purchases.</p>
+  </article>
+
+  <article id="store-resource-search-results" class="mini-card" style="margin-top: 16px; padding: 18px; border-radius: 18px; background: rgba(255,241,214,0.62); display:none;">
+    <div class="section-head" style="align-items: center; margin-bottom: 12px;">
+      <div>
+        <p class="eyebrow">Amazon/resource results</p>
+        <h3 id="store-resource-search-title" style="margin-bottom: 6px;">Amazon affiliate picks</h3>
+        <p class="muted" style="margin-bottom: 0;">These results route through the approved Amazon.ca affiliate tag and keep disclosure visible. Final pricing, availability, shipping, and seller terms stay on Amazon.ca.</p>
+      </div>
+      <a class="pill is-accent" href="/resources">Browse all affiliate categories</a>
+    </div>
+    <div class="affiliate-scroll" tabindex="0" aria-label="Scroll Amazon affiliate search results">
+      
+      <article class="affiliate-tile" data-resource-card data-category="workspace" data-search-text="Home office anchor Quick pick Standing desk for daily operator work A high-ticket, broad-demand desk upgrade for buyers rebuilding the surface they use every day. https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html workspace Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+        <div class="resource-picture" aria-hidden="true"><span>Home office anchor</span></div>
+        <p class="eyebrow">Quick pick · Workspace</p>
+        <h3>Standing desk for daily operator work</h3>
+        <p class="muted">A high-ticket, broad-demand desk upgrade for buyers rebuilding the surface they use every day.</p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn" href="https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+          <a class="btn ghost" href="https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html">Read guide</a>
+        </div>
+      </article>
+      
+      <article class="affiliate-tile" data-resource-card data-category="admin-paperwork" data-search-text="Home office comfort Quick pick Ergonomic chair value pick A broad everyday-work category for buyers who sit through client delivery, planning, admin, and review blocks. https://www.thewatchersedge.ca/best-home-office-setup-for-solo-operators.html admin-paperwork Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+        <div class="resource-picture" aria-hidden="true"><span>Home office comfort</span></div>
+        <p class="eyebrow">Quick pick · Admin Paperwork</p>
+        <h3>Ergonomic chair value pick</h3>
+        <p class="muted">A broad everyday-work category for buyers who sit through client delivery, planning, admin, and review blocks.</p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn" href="https://www.amazon.ca/dp/B09N93L2RQ?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+          <a class="btn ghost" href="https://www.thewatchersedge.ca/best-home-office-setup-for-solo-operators.html">Read guide</a>
+        </div>
+      </article>
+      
+      <article class="affiliate-tile" data-resource-card data-category="admin-paperwork" data-search-text="Admin paperwork Quick pick Portable document scanner for paperwork capture Useful when invoices, intake forms, receipts, and client paperwork are slowing down admin flow. https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html admin-paperwork Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+        <div class="resource-picture" aria-hidden="true"><span>Admin paperwork</span></div>
+        <p class="eyebrow">Quick pick · Admin Paperwork</p>
+        <h3>Portable document scanner for paperwork capture</h3>
+        <p class="muted">Useful when invoices, intake forms, receipts, and client paperwork are slowing down admin flow.</p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn" href="https://www.amazon.ca/dp/B07KQZWPYN?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+          <a class="btn ghost" href="https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html">Read guide</a>
+        </div>
+      </article>
+      
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Admin organization Quick pick Label maker for files, bins, and workflow reset A repeat-use organizer that fits office, church, creator, and client-delivery setups. https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+        <div class="resource-picture" aria-hidden="true"><span>Admin organization</span></div>
+        <p class="eyebrow">Quick pick · Church Ministry</p>
+        <h3>Label maker for files, bins, and workflow reset</h3>
+        <p class="muted">A repeat-use organizer that fits office, church, creator, and client-delivery setups.</p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn" href="https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+          <a class="btn ghost" href="https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html">Read guide</a>
+        </div>
+      </article>
+      
+      <article class="affiliate-tile" data-resource-card data-category="creator-calls" data-search-text="Creator audio Quick pick USB microphone for calls and content Audio is one of the fastest professionalism upgrades for creators, consultants, coaches, and service providers. https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+        <div class="resource-picture" aria-hidden="true"><span>Creator audio</span></div>
+        <p class="eyebrow">Quick pick · Creator Calls</p>
+        <h3>USB microphone for calls and content</h3>
+        <p class="muted">Audio is one of the fastest professionalism upgrades for creators, consultants, coaches, and service providers.</p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn" href="https://www.amazon.ca/dp/B0872CFTGK?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+          <a class="btn ghost" href="https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html">Read guide</a>
+        </div>
+      </article>
+      
+      <article class="affiliate-tile" data-resource-card data-category="creator-calls" data-search-text="Creator video Quick pick Webcam for meetings, tutorials, and interviews A broad creator and remote-work category where better clarity can make buyer-facing work feel more trustworthy. https://www.thewatchersedge.ca/creator-gear-deals.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+        <div class="resource-picture" aria-hidden="true"><span>Creator video</span></div>
+        <p class="eyebrow">Quick pick · Creator Calls</p>
+        <h3>Webcam for meetings, tutorials, and interviews</h3>
+        <p class="muted">A broad creator and remote-work category where better clarity can make buyer-facing work feel more trustworthy.</p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn" href="https://www.amazon.ca/dp/B07M6Y7355?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+          <a class="btn ghost" href="https://www.thewatchersedge.ca/creator-gear-deals.html">Read guide</a>
+        </div>
+      </article>
+      
+      <article class="affiliate-tile" data-resource-card data-category="creator-calls" data-search-text="Creator lighting Quick pick Ring light for calls and short-form content A common low-friction creator upgrade for dim rooms, remote lessons, announcements, and lightweight video work. https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+        <div class="resource-picture" aria-hidden="true"><span>Creator lighting</span></div>
+        <p class="eyebrow">Quick pick · Creator Calls</p>
+        <h3>Ring light for calls and short-form content</h3>
+        <p class="muted">A common low-friction creator upgrade for dim rooms, remote lessons, announcements, and lightweight video work.</p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn" href="https://www.amazon.ca/dp/B09K7F27SW?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+          <a class="btn ghost" href="https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html">Read guide</a>
+        </div>
+      </article>
+      
+      <article class="affiliate-tile" data-resource-card data-category="research-reading" data-search-text="Research desk Quick pick Portable monitor for source comparison Helpful when research, AI review, job-search work, or KPI sessions need notes and source material visible together. https://www.thewatchersedge.ca/best-ai-research-desk-setup.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+        <div class="resource-picture" aria-hidden="true"><span>Research desk</span></div>
+        <p class="eyebrow">Quick pick · Research Reading</p>
+        <h3>Portable monitor for source comparison</h3>
+        <p class="muted">Helpful when research, AI review, job-search work, or KPI sessions need notes and source material visible together.</p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn" href="https://www.amazon.ca/dp/B0B9GLG86C?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+          <a class="btn ghost" href="https://www.thewatchersedge.ca/best-ai-research-desk-setup.html">Read guide</a>
+        </div>
+      </article>
+      
+      <article class="affiliate-tile" data-resource-card data-category="research-reading" data-search-text="Research storage Quick pick External SSD or backup drive for research archives A practical companion for buyers who collect downloads, recordings, screenshots, exports, and research references. https://www.thewatchersedge.ca/best-ai-research-desk-setup.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+        <div class="resource-picture" aria-hidden="true"><span>Research storage</span></div>
+        <p class="eyebrow">Quick pick · Research Reading</p>
+        <h3>External SSD or backup drive for research archives</h3>
+        <p class="muted">A practical companion for buyers who collect downloads, recordings, screenshots, exports, and research references.</p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn" href="https://www.amazon.ca/dp/B08GTYFC37?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+          <a class="btn ghost" href="https://www.thewatchersedge.ca/best-ai-research-desk-setup.html">Read guide</a>
+        </div>
+      </article>
+      
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Church fellowship Quick pick Coffee urn for fellowship and welcome-hour demand A repeat-use church procurement category for lobbies, fellowship halls, volunteer rooms, and service-day hospitality. https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+        <div class="resource-picture" aria-hidden="true"><span>Church fellowship</span></div>
+        <p class="eyebrow">Quick pick · Church Ministry</p>
+        <h3>Coffee urn for fellowship and welcome-hour demand</h3>
+        <p class="muted">A repeat-use church procurement category for lobbies, fellowship halls, volunteer rooms, and service-day hospitality.</p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn" href="https://www.amazon.ca/dp/B00006WNSN?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+          <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html">Read guide</a>
+        </div>
+      </article>
+      
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Church audio Quick pick Wireless microphone system for services and events A higher-intent ministry gear category that can support services, classrooms, events, and volunteer-run recordings. https://www.thewatchersedge.ca/best-church-livestream-teaching-and-volunteer-coordination-tools.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+        <div class="resource-picture" aria-hidden="true"><span>Church audio</span></div>
+        <p class="eyebrow">Quick pick · Church Ministry</p>
+        <h3>Wireless microphone system for services and events</h3>
+        <p class="muted">A higher-intent ministry gear category that can support services, classrooms, events, and volunteer-run recordings.</p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn" href="https://www.amazon.ca/dp/B07RKN9FF6?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
+          <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-livestream-teaching-and-volunteer-coordination-tools.html">Read guide</a>
+        </div>
+      </article>
+      
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Church safety Quick pick First-aid kit for office, facility, and event areas A practical compliance-adjacent supply category with recurring relevance across church rooms and event setups. https://www.thewatchersedge.ca/best-church-facilities-maintenance-janitorial-and-safety-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Church safety</span></div>
-        <p class="eyebrow">Quick pick</p>
+        <p class="eyebrow">Quick pick · Church Ministry</p>
         <h3>First-aid kit for office, facility, and event areas</h3>
         <p class="muted">A practical compliance-adjacent supply category with recurring relevance across church rooms and event setups.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1034,9 +1169,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Home office and solo-operator upgrades Home office and solo-operator upgrades Standing desk for all-day laptop and monitor work High-intent desk upgrade for posture, stability, and daily use. https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="research-reading" data-search-text="Home office and solo-operator upgrades Home office and solo-operator upgrades Standing desk for all-day laptop and monitor work High-intent desk upgrade for posture, stability, and daily use. https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Home office and solo-operator upgrades</span></div>
-        <p class="eyebrow">Home office and solo-operator upgrades</p>
+        <p class="eyebrow">Home office and solo-operator upgrades · Research Reading</p>
         <h3>Standing desk for all-day laptop and monitor work</h3>
         <p class="muted">High-intent desk upgrade for posture, stability, and daily use.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1045,9 +1180,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Home office and solo-operator upgrades Home office and solo-operator upgrades Compact standing desk for smaller rooms For buyers who want the ergonomic win without rebuilding the whole room. https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="workspace" data-search-text="Home office and solo-operator upgrades Home office and solo-operator upgrades Compact standing desk for smaller rooms For buyers who want the ergonomic win without rebuilding the whole room. https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html workspace Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Home office and solo-operator upgrades</span></div>
-        <p class="eyebrow">Home office and solo-operator upgrades</p>
+        <p class="eyebrow">Home office and solo-operator upgrades · Workspace</p>
         <h3>Compact standing desk for smaller rooms</h3>
         <p class="muted">For buyers who want the ergonomic win without rebuilding the whole room.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1056,9 +1191,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Home office and solo-operator upgrades Home office and solo-operator upgrades Ergonomic chair value pick Everyday comfort category for long client, admin, and review blocks. https://www.thewatchersedge.ca/best-home-office-setup-for-solo-operators.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="admin-paperwork" data-search-text="Home office and solo-operator upgrades Home office and solo-operator upgrades Ergonomic chair value pick Everyday comfort category for long client, admin, and review blocks. https://www.thewatchersedge.ca/best-home-office-setup-for-solo-operators.html admin-paperwork Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Home office and solo-operator upgrades</span></div>
-        <p class="eyebrow">Home office and solo-operator upgrades</p>
+        <p class="eyebrow">Home office and solo-operator upgrades · Admin Paperwork</p>
         <h3>Ergonomic chair value pick</h3>
         <p class="muted">Everyday comfort category for long client, admin, and review blocks.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1067,9 +1202,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Home office and solo-operator upgrades Home office and solo-operator upgrades Anti-fatigue standing support add-on A lower-ticket add-on that makes standing work feel more sustainable. https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="workspace" data-search-text="Home office and solo-operator upgrades Home office and solo-operator upgrades Anti-fatigue standing support add-on A lower-ticket add-on that makes standing work feel more sustainable. https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-operators.html workspace Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Home office and solo-operator upgrades</span></div>
-        <p class="eyebrow">Home office and solo-operator upgrades</p>
+        <p class="eyebrow">Home office and solo-operator upgrades · Workspace</p>
         <h3>Anti-fatigue standing support add-on</h3>
         <p class="muted">A lower-ticket add-on that makes standing work feel more sustainable.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1078,9 +1213,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Home office and solo-operator upgrades Home office and solo-operator upgrades Cable-management tray Quick desk cleanup pick for power clutter and visible chaos. https://www.thewatchersedge.ca/home-office-deals-for-freelancers.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="workspace" data-search-text="Home office and solo-operator upgrades Home office and solo-operator upgrades Cable-management tray Quick desk cleanup pick for power clutter and visible chaos. https://www.thewatchersedge.ca/home-office-deals-for-freelancers.html workspace Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Home office and solo-operator upgrades</span></div>
-        <p class="eyebrow">Home office and solo-operator upgrades</p>
+        <p class="eyebrow">Home office and solo-operator upgrades · Workspace</p>
         <h3>Cable-management tray</h3>
         <p class="muted">Quick desk cleanup pick for power clutter and visible chaos.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1089,9 +1224,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Home office and solo-operator upgrades Home office and solo-operator upgrades Monitor arm or riser Strong fit for weekly reviews, scorecards, and clearer screen placement. https://www.thewatchersedge.ca/best-weekly-kpi-review-workspace.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="research-reading" data-search-text="Home office and solo-operator upgrades Home office and solo-operator upgrades Monitor arm or riser Strong fit for weekly reviews, scorecards, and clearer screen placement. https://www.thewatchersedge.ca/best-weekly-kpi-review-workspace.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Home office and solo-operator upgrades</span></div>
-        <p class="eyebrow">Home office and solo-operator upgrades</p>
+        <p class="eyebrow">Home office and solo-operator upgrades · Research Reading</p>
         <h3>Monitor arm or riser</h3>
         <p class="muted">Strong fit for weekly reviews, scorecards, and clearer screen placement.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1100,9 +1235,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Admin, paperwork, and client-delivery tools Admin, paperwork, and client-delivery tools Compact scanner or document-capture tool Best fit when paper keeps delaying invoices, receipts, forms, and client intake. https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="admin-paperwork" data-search-text="Admin, paperwork, and client-delivery tools Admin, paperwork, and client-delivery tools Compact scanner or document-capture tool Best fit when paper keeps delaying invoices, receipts, forms, and client intake. https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html admin-paperwork Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Admin, paperwork, and client-delivery tools</span></div>
-        <p class="eyebrow">Admin, paperwork, and client-delivery tools</p>
+        <p class="eyebrow">Admin, paperwork, and client-delivery tools · Admin Paperwork</p>
         <h3>Compact scanner or document-capture tool</h3>
         <p class="muted">Best fit when paper keeps delaying invoices, receipts, forms, and client intake.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1111,9 +1246,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Admin, paperwork, and client-delivery tools Admin, paperwork, and client-delivery tools Filing organizer or tray system Keeps active paperwork visible without letting it take over the desk. https://www.thewatchersedge.ca/best-client-onboarding-desk-setup.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="admin-paperwork" data-search-text="Admin, paperwork, and client-delivery tools Admin, paperwork, and client-delivery tools Filing organizer or tray system Keeps active paperwork visible without letting it take over the desk. https://www.thewatchersedge.ca/best-client-onboarding-desk-setup.html admin-paperwork Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Admin, paperwork, and client-delivery tools</span></div>
-        <p class="eyebrow">Admin, paperwork, and client-delivery tools</p>
+        <p class="eyebrow">Admin, paperwork, and client-delivery tools · Admin Paperwork</p>
         <h3>Filing organizer or tray system</h3>
         <p class="muted">Keeps active paperwork visible without letting it take over the desk.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1122,9 +1257,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Admin, paperwork, and client-delivery tools Admin, paperwork, and client-delivery tools Label maker for files and bins Helps buyers name, sort, and re-find admin materials faster. https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="admin-paperwork" data-search-text="Admin, paperwork, and client-delivery tools Admin, paperwork, and client-delivery tools Label maker for files and bins Helps buyers name, sort, and re-find admin materials faster. https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html admin-paperwork Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Admin, paperwork, and client-delivery tools</span></div>
-        <p class="eyebrow">Admin, paperwork, and client-delivery tools</p>
+        <p class="eyebrow">Admin, paperwork, and client-delivery tools · Admin Paperwork</p>
         <h3>Label maker for files and bins</h3>
         <p class="muted">Helps buyers name, sort, and re-find admin materials faster.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1133,9 +1268,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Admin, paperwork, and client-delivery tools Admin, paperwork, and client-delivery tools Shredder or privacy-support tool For offices that handle sensitive paper and need cleaner disposal habits. https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="admin-paperwork" data-search-text="Admin, paperwork, and client-delivery tools Admin, paperwork, and client-delivery tools Shredder or privacy-support tool For offices that handle sensitive paper and need cleaner disposal habits. https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html admin-paperwork Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Admin, paperwork, and client-delivery tools</span></div>
-        <p class="eyebrow">Admin, paperwork, and client-delivery tools</p>
+        <p class="eyebrow">Admin, paperwork, and client-delivery tools · Admin Paperwork</p>
         <h3>Shredder or privacy-support tool</h3>
         <p class="muted">For offices that handle sensitive paper and need cleaner disposal habits.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1144,9 +1279,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Admin, paperwork, and client-delivery tools Admin, paperwork, and client-delivery tools Desk organizer bundle A practical client-onboarding pick for notes, forms, and surface reset. https://www.thewatchersedge.ca/best-client-onboarding-desk-setup.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="research-reading" data-search-text="Admin, paperwork, and client-delivery tools Admin, paperwork, and client-delivery tools Desk organizer bundle A practical client-onboarding pick for notes, forms, and surface reset. https://www.thewatchersedge.ca/best-client-onboarding-desk-setup.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Admin, paperwork, and client-delivery tools</span></div>
-        <p class="eyebrow">Admin, paperwork, and client-delivery tools</p>
+        <p class="eyebrow">Admin, paperwork, and client-delivery tools · Research Reading</p>
         <h3>Desk organizer bundle</h3>
         <p class="muted">A practical client-onboarding pick for notes, forms, and surface reset.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1155,9 +1290,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Admin, paperwork, and client-delivery tools Admin, paperwork, and client-delivery tools Webcam and call-light setup for kickoff calls For operators who run client intake or onboarding calls from the same desk. https://www.thewatchersedge.ca/best-client-onboarding-desk-setup.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="creator-calls" data-search-text="Admin, paperwork, and client-delivery tools Admin, paperwork, and client-delivery tools Webcam and call-light setup for kickoff calls For operators who run client intake or onboarding calls from the same desk. https://www.thewatchersedge.ca/best-client-onboarding-desk-setup.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Admin, paperwork, and client-delivery tools</span></div>
-        <p class="eyebrow">Admin, paperwork, and client-delivery tools</p>
+        <p class="eyebrow">Admin, paperwork, and client-delivery tools · Creator Calls</p>
         <h3>Webcam and call-light setup for kickoff calls</h3>
         <p class="muted">For operators who run client intake or onboarding calls from the same desk.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1166,9 +1301,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Creator, calls, and meeting gear Creator, calls, and meeting gear Desk-ready USB microphone Audio upgrade for meetings, Looms, tutorials, and client-facing content. https://www.thewatchersedge.ca/best-usb-microphone-upgrades-for-calls-and-content.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="creator-calls" data-search-text="Creator, calls, and meeting gear Creator, calls, and meeting gear Desk-ready USB microphone Audio upgrade for meetings, Looms, tutorials, and client-facing content. https://www.thewatchersedge.ca/best-usb-microphone-upgrades-for-calls-and-content.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Creator, calls, and meeting gear</span></div>
-        <p class="eyebrow">Creator, calls, and meeting gear</p>
+        <p class="eyebrow">Creator, calls, and meeting gear · Creator Calls</p>
         <h3>Desk-ready USB microphone</h3>
         <p class="muted">Audio upgrade for meetings, Looms, tutorials, and client-facing content.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1177,9 +1312,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Creator, calls, and meeting gear Creator, calls, and meeting gear Compact USB microphone For smaller desks where audio matters but space is limited. https://www.thewatchersedge.ca/best-usb-microphone-upgrades-for-calls-and-content.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="creator-calls" data-search-text="Creator, calls, and meeting gear Creator, calls, and meeting gear Compact USB microphone For smaller desks where audio matters but space is limited. https://www.thewatchersedge.ca/best-usb-microphone-upgrades-for-calls-and-content.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Creator, calls, and meeting gear</span></div>
-        <p class="eyebrow">Creator, calls, and meeting gear</p>
+        <p class="eyebrow">Creator, calls, and meeting gear · Creator Calls</p>
         <h3>Compact USB microphone</h3>
         <p class="muted">For smaller desks where audio matters but space is limited.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1188,9 +1323,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Creator, calls, and meeting gear Creator, calls, and meeting gear Microphone arm or placement add-on Useful when sound problems come from placement, not just microphone quality. https://www.thewatchersedge.ca/best-usb-microphone-upgrades-for-calls-and-content.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="creator-calls" data-search-text="Creator, calls, and meeting gear Creator, calls, and meeting gear Microphone arm or placement add-on Useful when sound problems come from placement, not just microphone quality. https://www.thewatchersedge.ca/best-usb-microphone-upgrades-for-calls-and-content.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Creator, calls, and meeting gear</span></div>
-        <p class="eyebrow">Creator, calls, and meeting gear</p>
+        <p class="eyebrow">Creator, calls, and meeting gear · Creator Calls</p>
         <h3>Microphone arm or placement add-on</h3>
         <p class="muted">Useful when sound problems come from placement, not just microphone quality.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1199,9 +1334,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Creator, calls, and meeting gear Creator, calls, and meeting gear Webcam for meetings and tutorials Broad creator and remote-work pick for trust-building camera clarity. https://www.thewatchersedge.ca/creator-gear-deals.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="creator-calls" data-search-text="Creator, calls, and meeting gear Creator, calls, and meeting gear Webcam for meetings and tutorials Broad creator and remote-work pick for trust-building camera clarity. https://www.thewatchersedge.ca/creator-gear-deals.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Creator, calls, and meeting gear</span></div>
-        <p class="eyebrow">Creator, calls, and meeting gear</p>
+        <p class="eyebrow">Creator, calls, and meeting gear · Creator Calls</p>
         <h3>Webcam for meetings and tutorials</h3>
         <p class="muted">Broad creator and remote-work pick for trust-building camera clarity.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1210,9 +1345,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Creator, calls, and meeting gear Creator, calls, and meeting gear Light setup for calls and short-form content Low-friction visual upgrade for dim rooms and lightweight content setups. https://www.thewatchersedge.ca/creator-gear-deals.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="creator-calls" data-search-text="Creator, calls, and meeting gear Creator, calls, and meeting gear Light setup for calls and short-form content Low-friction visual upgrade for dim rooms and lightweight content setups. https://www.thewatchersedge.ca/creator-gear-deals.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Creator, calls, and meeting gear</span></div>
-        <p class="eyebrow">Creator, calls, and meeting gear</p>
+        <p class="eyebrow">Creator, calls, and meeting gear · Creator Calls</p>
         <h3>Light setup for calls and short-form content</h3>
         <p class="muted">Low-friction visual upgrade for dim rooms and lightweight content setups.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1221,9 +1356,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Creator, calls, and meeting gear Creator, calls, and meeting gear Wireless microphone system for church or event speaking A higher-ticket audio pick that also fits volunteer-run events and teaching rooms. https://www.thewatchersedge.ca/best-church-livestream-teaching-and-volunteer-coordination-tools.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Creator, calls, and meeting gear Creator, calls, and meeting gear Wireless microphone system for church or event speaking A higher-ticket audio pick that also fits volunteer-run events and teaching rooms. https://www.thewatchersedge.ca/best-church-livestream-teaching-and-volunteer-coordination-tools.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Creator, calls, and meeting gear</span></div>
-        <p class="eyebrow">Creator, calls, and meeting gear</p>
+        <p class="eyebrow">Creator, calls, and meeting gear · Church Ministry</p>
         <h3>Wireless microphone system for church or event speaking</h3>
         <p class="muted">A higher-ticket audio pick that also fits volunteer-run events and teaching rooms.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1232,9 +1367,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Research, reading, and job-search setup Research, reading, and job-search setup Portable monitor or second-screen option For comparing sources, notes, drafts, and AI output without tab shuffling. https://www.thewatchersedge.ca/best-ai-research-desk-setup.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="research-reading" data-search-text="Research, reading, and job-search setup Research, reading, and job-search setup Portable monitor or second-screen option For comparing sources, notes, drafts, and AI output without tab shuffling. https://www.thewatchersedge.ca/best-ai-research-desk-setup.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Research, reading, and job-search setup</span></div>
-        <p class="eyebrow">Research, reading, and job-search setup</p>
+        <p class="eyebrow">Research, reading, and job-search setup · Research Reading</p>
         <h3>Portable monitor or second-screen option</h3>
         <p class="muted">For comparing sources, notes, drafts, and AI output without tab shuffling.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1243,9 +1378,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Research, reading, and job-search setup Research, reading, and job-search setup External SSD or backup drive For local research archives, downloads, interview recordings, and exported work. https://www.thewatchersedge.ca/best-ai-research-desk-setup.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="research-reading" data-search-text="Research, reading, and job-search setup Research, reading, and job-search setup External SSD or backup drive For local research archives, downloads, interview recordings, and exported work. https://www.thewatchersedge.ca/best-ai-research-desk-setup.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Research, reading, and job-search setup</span></div>
-        <p class="eyebrow">Research, reading, and job-search setup</p>
+        <p class="eyebrow">Research, reading, and job-search setup · Research Reading</p>
         <h3>External SSD or backup drive</h3>
         <p class="muted">For local research archives, downloads, interview recordings, and exported work.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1254,9 +1389,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Research, reading, and job-search setup Research, reading, and job-search setup Desk lamp or monitor light Helps longer research, review, and evening work feel less fatiguing. https://www.thewatchersedge.ca/best-review-desk-lighting-and-note-capture-tools.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="creator-calls" data-search-text="Research, reading, and job-search setup Research, reading, and job-search setup Desk lamp or monitor light Helps longer research, review, and evening work feel less fatiguing. https://www.thewatchersedge.ca/best-review-desk-lighting-and-note-capture-tools.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Research, reading, and job-search setup</span></div>
-        <p class="eyebrow">Research, reading, and job-search setup</p>
+        <p class="eyebrow">Research, reading, and job-search setup · Creator Calls</p>
         <h3>Desk lamp or monitor light</h3>
         <p class="muted">Helps longer research, review, and evening work feel less fatiguing.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1265,9 +1400,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Research, reading, and job-search setup Research, reading, and job-search setup Notebook or whiteboard companion Turns review sessions into written decisions and next actions. https://www.thewatchersedge.ca/best-weekly-kpi-review-workspace.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="research-reading" data-search-text="Research, reading, and job-search setup Research, reading, and job-search setup Notebook or whiteboard companion Turns review sessions into written decisions and next actions. https://www.thewatchersedge.ca/best-weekly-kpi-review-workspace.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Research, reading, and job-search setup</span></div>
-        <p class="eyebrow">Research, reading, and job-search setup</p>
+        <p class="eyebrow">Research, reading, and job-search setup · Research Reading</p>
         <h3>Notebook or whiteboard companion</h3>
         <p class="muted">Turns review sessions into written decisions and next actions.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1276,9 +1411,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Research, reading, and job-search setup Research, reading, and job-search setup Headphones for focus and interview prep Strong fit for job seekers or researchers working in shared/noisy environments. https://www.thewatchersedge.ca/best-resume-tailoring-and-interview-desk-setup.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="research-reading" data-search-text="Research, reading, and job-search setup Research, reading, and job-search setup Headphones for focus and interview prep Strong fit for job seekers or researchers working in shared/noisy environments. https://www.thewatchersedge.ca/best-resume-tailoring-and-interview-desk-setup.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Research, reading, and job-search setup</span></div>
-        <p class="eyebrow">Research, reading, and job-search setup</p>
+        <p class="eyebrow">Research, reading, and job-search setup · Research Reading</p>
         <h3>Headphones for focus and interview prep</h3>
         <p class="muted">Strong fit for job seekers or researchers working in shared/noisy environments.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1287,9 +1422,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Research, reading, and job-search setup Research, reading, and job-search setup Kindle or low-clutter reading setup For buyers who want a lighter reading workflow instead of paper piles. https://www.thewatchersedge.ca/productivity-books-and-kindle-deals.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="research-reading" data-search-text="Research, reading, and job-search setup Research, reading, and job-search setup Kindle or low-clutter reading setup For buyers who want a lighter reading workflow instead of paper piles. https://www.thewatchersedge.ca/productivity-books-and-kindle-deals.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Research, reading, and job-search setup</span></div>
-        <p class="eyebrow">Research, reading, and job-search setup</p>
+        <p class="eyebrow">Research, reading, and job-search setup · Research Reading</p>
         <h3>Kindle or low-clutter reading setup</h3>
         <p class="muted">For buyers who want a lighter reading workflow instead of paper piles.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1298,9 +1433,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Offering-envelope supply For churches that still need a clean physical giving flow alongside digital options. https://www.thewatchersedge.ca/best-church-office-and-record-keeping-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Offering-envelope supply For churches that still need a clean physical giving flow alongside digital options. https://www.thewatchersedge.ca/best-church-office-and-record-keeping-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
-        <p class="eyebrow">Church procurement, hospitality, safety, and service flow</p>
+        <p class="eyebrow">Church procurement, hospitality, safety, and service flow · Church Ministry</p>
         <h3>Offering-envelope supply</h3>
         <p class="muted">For churches that still need a clean physical giving flow alongside digital options.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1309,9 +1444,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Visitor-card follow-up set For first-time guest capture, prayer requests, and follow-up routines. https://www.thewatchersedge.ca/best-church-office-and-record-keeping-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Visitor-card follow-up set For first-time guest capture, prayer requests, and follow-up routines. https://www.thewatchersedge.ca/best-church-office-and-record-keeping-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
-        <p class="eyebrow">Church procurement, hospitality, safety, and service flow</p>
+        <p class="eyebrow">Church procurement, hospitality, safety, and service flow · Church Ministry</p>
         <h3>Visitor-card follow-up set</h3>
         <p class="muted">For first-time guest capture, prayer requests, and follow-up routines.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1320,9 +1455,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Dry-erase planner for weekly ministry visibility For volunteers, rooms, announcements, and recurring weekly tasks. https://www.thewatchersedge.ca/best-church-office-and-record-keeping-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Dry-erase planner for weekly ministry visibility For volunteers, rooms, announcements, and recurring weekly tasks. https://www.thewatchersedge.ca/best-church-office-and-record-keeping-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
-        <p class="eyebrow">Church procurement, hospitality, safety, and service flow</p>
+        <p class="eyebrow">Church procurement, hospitality, safety, and service flow · Church Ministry</p>
         <h3>Dry-erase planner for weekly ministry visibility</h3>
         <p class="muted">For volunteers, rooms, announcements, and recurring weekly tasks.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1331,9 +1466,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Pre-filled communion cup supply A recurring service-flow supply for simpler prep and cleanup on communion weeks. https://www.thewatchersedge.ca/best-church-service-welcome-and-classroom-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Pre-filled communion cup supply A recurring service-flow supply for simpler prep and cleanup on communion weeks. https://www.thewatchersedge.ca/best-church-service-welcome-and-classroom-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
-        <p class="eyebrow">Church procurement, hospitality, safety, and service flow</p>
+        <p class="eyebrow">Church procurement, hospitality, safety, and service flow · Church Ministry</p>
         <h3>Pre-filled communion cup supply</h3>
         <p class="muted">A recurring service-flow supply for simpler prep and cleanup on communion weeks.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1342,9 +1477,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Rolling ministry cart For moving welcome, kids-ministry, and service-day supplies between rooms. https://www.thewatchersedge.ca/best-church-service-welcome-and-classroom-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Rolling ministry cart For moving welcome, kids-ministry, and service-day supplies between rooms. https://www.thewatchersedge.ca/best-church-service-welcome-and-classroom-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
-        <p class="eyebrow">Church procurement, hospitality, safety, and service flow</p>
+        <p class="eyebrow">Church procurement, hospitality, safety, and service flow · Church Ministry</p>
         <h3>Rolling ministry cart</h3>
         <p class="muted">For moving welcome, kids-ministry, and service-day supplies between rooms.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1353,9 +1488,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Coffee urn for fellowship and welcome hour High-use hospitality item for lobbies, fellowship halls, and volunteer rooms. https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Coffee urn for fellowship and welcome hour High-use hospitality item for lobbies, fellowship halls, and volunteer rooms. https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
-        <p class="eyebrow">Church procurement, hospitality, safety, and service flow</p>
+        <p class="eyebrow">Church procurement, hospitality, safety, and service flow · Church Ministry</p>
         <h3>Coffee urn for fellowship and welcome hour</h3>
         <p class="muted">High-use hospitality item for lobbies, fellowship halls, and volunteer rooms.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1364,9 +1499,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Airpot for portable coffee refill flow Keeps coffee service moving from prep rooms to welcome tables or overflow spaces. https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Airpot for portable coffee refill flow Keeps coffee service moving from prep rooms to welcome tables or overflow spaces. https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
-        <p class="eyebrow">Church procurement, hospitality, safety, and service flow</p>
+        <p class="eyebrow">Church procurement, hospitality, safety, and service flow · Church Ministry</p>
         <h3>Airpot for portable coffee refill flow</h3>
         <p class="muted">Keeps coffee service moving from prep rooms to welcome tables or overflow spaces.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1375,9 +1510,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Condiment organizer for coffee stations Keeps cups, lids, stir sticks, sweeteners, and napkins reachable instead of scattered. https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Condiment organizer for coffee stations Keeps cups, lids, stir sticks, sweeteners, and napkins reachable instead of scattered. https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
-        <p class="eyebrow">Church procurement, hospitality, safety, and service flow</p>
+        <p class="eyebrow">Church procurement, hospitality, safety, and service flow · Church Ministry</p>
         <h3>Condiment organizer for coffee stations</h3>
         <p class="muted">Keeps cups, lids, stir sticks, sweeteners, and napkins reachable instead of scattered.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1386,9 +1521,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Bilingual wet-floor sign Practical hallway, washroom, kitchen, and fellowship-area safety pick. https://www.thewatchersedge.ca/best-church-facilities-maintenance-janitorial-and-safety-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Bilingual wet-floor sign Practical hallway, washroom, kitchen, and fellowship-area safety pick. https://www.thewatchersedge.ca/best-church-facilities-maintenance-janitorial-and-safety-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
-        <p class="eyebrow">Church procurement, hospitality, safety, and service flow</p>
+        <p class="eyebrow">Church procurement, hospitality, safety, and service flow · Church Ministry</p>
         <h3>Bilingual wet-floor sign</h3>
         <p class="muted">Practical hallway, washroom, kitchen, and fellowship-area safety pick.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1397,9 +1532,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Janitorial cart for room resets For churches carrying liners, sprays, paper products, and reset supplies across rooms. https://www.thewatchersedge.ca/best-church-facilities-maintenance-janitorial-and-safety-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Janitorial cart for room resets For churches carrying liners, sprays, paper products, and reset supplies across rooms. https://www.thewatchersedge.ca/best-church-facilities-maintenance-janitorial-and-safety-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
-        <p class="eyebrow">Church procurement, hospitality, safety, and service flow</p>
+        <p class="eyebrow">Church procurement, hospitality, safety, and service flow · Church Ministry</p>
         <h3>Janitorial cart for room resets</h3>
         <p class="muted">For churches carrying liners, sprays, paper products, and reset supplies across rooms.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1408,9 +1543,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Bulk disinfecting wipes for nursery touchpoints Repeat-use nursery/kids ministry supply for check-in surfaces, toys, tables, and shared items. https://www.thewatchersedge.ca/best-church-nursery-sanitation-and-child-safety-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Bulk disinfecting wipes for nursery touchpoints Repeat-use nursery/kids ministry supply for check-in surfaces, toys, tables, and shared items. https://www.thewatchersedge.ca/best-church-nursery-sanitation-and-child-safety-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
-        <p class="eyebrow">Church procurement, hospitality, safety, and service flow</p>
+        <p class="eyebrow">Church procurement, hospitality, safety, and service flow · Church Ministry</p>
         <h3>Bulk disinfecting wipes for nursery touchpoints</h3>
         <p class="muted">Repeat-use nursery/kids ministry supply for check-in surfaces, toys, tables, and shared items.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1419,9 +1554,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Nursery gate for room separation Helps separate nursery flow, hallway traffic, pickup boundaries, and toddler movement. https://www.thewatchersedge.ca/best-church-nursery-sanitation-and-child-safety-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Church procurement, hospitality, safety, and service flow Church procurement, hospitality, safety, and service flow Nursery gate for room separation Helps separate nursery flow, hallway traffic, pickup boundaries, and toddler movement. https://www.thewatchersedge.ca/best-church-nursery-sanitation-and-child-safety-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Church procurement, hospitality, safety, and service flow</span></div>
-        <p class="eyebrow">Church procurement, hospitality, safety, and service flow</p>
+        <p class="eyebrow">Church procurement, hospitality, safety, and service flow · Church Ministry</p>
         <h3>Nursery gate for room separation</h3>
         <p class="muted">Helps separate nursery flow, hallway traffic, pickup boundaries, and toddler movement.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1430,9 +1565,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Cable and docking cleanup bundle A fast desk-reset pick for buyers whose monitors, laptop power, and peripherals create daily visual clutter. https://www.thewatchersedge.ca/best-home-office-setup-for-solo-operators.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="research-reading" data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Cable and docking cleanup bundle A fast desk-reset pick for buyers whose monitors, laptop power, and peripherals create daily visual clutter. https://www.thewatchersedge.ca/best-home-office-setup-for-solo-operators.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
-        <p class="eyebrow">Focused next-buy lane from existing guide pages</p>
+        <p class="eyebrow">Focused next-buy lane from existing guide pages · Research Reading</p>
         <h3>Cable and docking cleanup bundle</h3>
         <p class="muted">A fast desk-reset pick for buyers whose monitors, laptop power, and peripherals create daily visual clutter.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1441,9 +1576,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Ergonomic foot-rest support Lower-ticket comfort upgrade for buyers who already sit long hours and are not ready to replace the whole chair. https://www.thewatchersedge.ca/home-office-deals-for-freelancers.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="workspace" data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Ergonomic foot-rest support Lower-ticket comfort upgrade for buyers who already sit long hours and are not ready to replace the whole chair. https://www.thewatchersedge.ca/home-office-deals-for-freelancers.html workspace Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
-        <p class="eyebrow">Focused next-buy lane from existing guide pages</p>
+        <p class="eyebrow">Focused next-buy lane from existing guide pages · Workspace</p>
         <h3>Ergonomic foot-rest support</h3>
         <p class="muted">Lower-ticket comfort upgrade for buyers who already sit long hours and are not ready to replace the whole chair.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1452,9 +1587,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Adjustable book stand for desk reading Supports research, annotation, and low-clutter reading without burying the work surface in books and papers. https://www.thewatchersedge.ca/productivity-books-and-kindle-deals.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="research-reading" data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Adjustable book stand for desk reading Supports research, annotation, and low-clutter reading without burying the work surface in books and papers. https://www.thewatchersedge.ca/productivity-books-and-kindle-deals.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
-        <p class="eyebrow">Focused next-buy lane from existing guide pages</p>
+        <p class="eyebrow">Focused next-buy lane from existing guide pages · Research Reading</p>
         <h3>Adjustable book stand for desk reading</h3>
         <p class="muted">Supports research, annotation, and low-clutter reading without burying the work surface in books and papers.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1463,9 +1598,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Productivity book starter pick A small education-oriented add-on that fits readers building a better planning or review habit. https://www.thewatchersedge.ca/productivity-books-and-kindle-deals.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="research-reading" data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Productivity book starter pick A small education-oriented add-on that fits readers building a better planning or review habit. https://www.thewatchersedge.ca/productivity-books-and-kindle-deals.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
-        <p class="eyebrow">Focused next-buy lane from existing guide pages</p>
+        <p class="eyebrow">Focused next-buy lane from existing guide pages · Research Reading</p>
         <h3>Productivity book starter pick</h3>
         <p class="muted">A small education-oriented add-on that fits readers building a better planning or review habit.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1474,9 +1609,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Portable folding table for check-in and event stations A practical church procurement pick for temporary welcome desks, registration tables, and portable room resets. https://www.thewatchersedge.ca/best-church-event-setup-queue-flow-and-portable-room-reset-tools.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Portable folding table for check-in and event stations A practical church procurement pick for temporary welcome desks, registration tables, and portable room resets. https://www.thewatchersedge.ca/best-church-event-setup-queue-flow-and-portable-room-reset-tools.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
-        <p class="eyebrow">Focused next-buy lane from existing guide pages</p>
+        <p class="eyebrow">Focused next-buy lane from existing guide pages · Church Ministry</p>
         <h3>Portable folding table for check-in and event stations</h3>
         <p class="muted">A practical church procurement pick for temporary welcome desks, registration tables, and portable room resets.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1485,9 +1620,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Queue-barrier set for event entry flow High-intent event-control category for sign-ins, food lines, kids check-in, and busy seasonal gatherings. https://www.thewatchersedge.ca/best-church-event-setup-queue-flow-and-portable-room-reset-tools.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Queue-barrier set for event entry flow High-intent event-control category for sign-ins, food lines, kids check-in, and busy seasonal gatherings. https://www.thewatchersedge.ca/best-church-event-setup-queue-flow-and-portable-room-reset-tools.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
-        <p class="eyebrow">Focused next-buy lane from existing guide pages</p>
+        <p class="eyebrow">Focused next-buy lane from existing guide pages · Church Ministry</p>
         <h3>Queue-barrier set for event entry flow</h3>
         <p class="muted">High-intent event-control category for sign-ins, food lines, kids check-in, and busy seasonal gatherings.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1496,9 +1631,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Temporary sign stand for directions Helps churches route visitors, classes, and event traffic without permanent signage changes. https://www.thewatchersedge.ca/best-church-event-setup-queue-flow-and-portable-room-reset-tools.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Temporary sign stand for directions Helps churches route visitors, classes, and event traffic without permanent signage changes. https://www.thewatchersedge.ca/best-church-event-setup-queue-flow-and-portable-room-reset-tools.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
-        <p class="eyebrow">Focused next-buy lane from existing guide pages</p>
+        <p class="eyebrow">Focused next-buy lane from existing guide pages · Church Ministry</p>
         <h3>Temporary sign stand for directions</h3>
         <p class="muted">Helps churches route visitors, classes, and event traffic without permanent signage changes.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1507,9 +1642,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Sanitizer dispenser stand for common areas Repeat-use facility item for entries, check-in tables, fellowship halls, and nursery/kids areas. https://www.thewatchersedge.ca/best-church-facilities-maintenance-janitorial-and-safety-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Sanitizer dispenser stand for common areas Repeat-use facility item for entries, check-in tables, fellowship halls, and nursery/kids areas. https://www.thewatchersedge.ca/best-church-facilities-maintenance-janitorial-and-safety-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
-        <p class="eyebrow">Focused next-buy lane from existing guide pages</p>
+        <p class="eyebrow">Focused next-buy lane from existing guide pages · Church Ministry</p>
         <h3>Sanitizer dispenser stand for common areas</h3>
         <p class="muted">Repeat-use facility item for entries, check-in tables, fellowship halls, and nursery/kids areas.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1518,9 +1653,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Lockable donation box for giving stations Secure physical drop-flow pick for forms, envelopes, temporary giving stations, or event registration materials. https://www.thewatchersedge.ca/best-church-giving-offering-and-donation-station-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Lockable donation box for giving stations Secure physical drop-flow pick for forms, envelopes, temporary giving stations, or event registration materials. https://www.thewatchersedge.ca/best-church-giving-offering-and-donation-station-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
-        <p class="eyebrow">Focused next-buy lane from existing guide pages</p>
+        <p class="eyebrow">Focused next-buy lane from existing guide pages · Church Ministry</p>
         <h3>Lockable donation box for giving stations</h3>
         <p class="muted">Secure physical drop-flow pick for forms, envelopes, temporary giving stations, or event registration materials.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1529,9 +1664,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Visitor badge sticker set Low-friction check-in support for guest identification, classroom pickup, and event flow. https://www.thewatchersedge.ca/best-church-security-check-in-and-facility-signage-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Visitor badge sticker set Low-friction check-in support for guest identification, classroom pickup, and event flow. https://www.thewatchersedge.ca/best-church-security-check-in-and-facility-signage-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
-        <p class="eyebrow">Focused next-buy lane from existing guide pages</p>
+        <p class="eyebrow">Focused next-buy lane from existing guide pages · Church Ministry</p>
         <h3>Visitor badge sticker set</h3>
         <p class="muted">Low-friction check-in support for guest identification, classroom pickup, and event flow.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1540,9 +1675,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Rechargeable radio set for volunteers Volunteer coordination pick for parking, security, kids ministry, events, and facility handoffs. https://www.thewatchersedge.ca/best-church-security-check-in-and-facility-signage-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Rechargeable radio set for volunteers Volunteer coordination pick for parking, security, kids ministry, events, and facility handoffs. https://www.thewatchersedge.ca/best-church-security-check-in-and-facility-signage-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
-        <p class="eyebrow">Focused next-buy lane from existing guide pages</p>
+        <p class="eyebrow">Focused next-buy lane from existing guide pages · Church Ministry</p>
         <h3>Rechargeable radio set for volunteers</h3>
         <p class="muted">Volunteer coordination pick for parking, security, kids ministry, events, and facility handoffs.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1551,9 +1686,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Padded folding-chair set Flexible seating category for small groups, overflow rooms, classrooms, and temporary ministry spaces. https://www.thewatchersedge.ca/best-church-small-group-discussion-and-room-setup-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Padded folding-chair set Flexible seating category for small groups, overflow rooms, classrooms, and temporary ministry spaces. https://www.thewatchersedge.ca/best-church-small-group-discussion-and-room-setup-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
-        <p class="eyebrow">Focused next-buy lane from existing guide pages</p>
+        <p class="eyebrow">Focused next-buy lane from existing guide pages · Church Ministry</p>
         <h3>Padded folding-chair set</h3>
         <p class="muted">Flexible seating category for small groups, overflow rooms, classrooms, and temporary ministry spaces.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1562,9 +1697,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Portable whiteboard easel Useful for teaching rooms, volunteer briefings, small groups, prayer prompts, and training sessions. https://www.thewatchersedge.ca/best-church-small-group-discussion-and-room-setup-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Portable whiteboard easel Useful for teaching rooms, volunteer briefings, small groups, prayer prompts, and training sessions. https://www.thewatchersedge.ca/best-church-small-group-discussion-and-room-setup-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
-        <p class="eyebrow">Focused next-buy lane from existing guide pages</p>
+        <p class="eyebrow">Focused next-buy lane from existing guide pages · Church Ministry</p>
         <h3>Portable whiteboard easel</h3>
         <p class="muted">Useful for teaching rooms, volunteer briefings, small groups, prayer prompts, and training sessions.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1573,9 +1708,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Insulated casserole carrier for care meals Care-team and hospitality pick for meal-train drop-offs, bereavement support, and volunteer food transport. https://www.thewatchersedge.ca/best-church-prayer-team-hospitality-bereavement-and-care-meal-support-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Insulated casserole carrier for care meals Care-team and hospitality pick for meal-train drop-offs, bereavement support, and volunteer food transport. https://www.thewatchersedge.ca/best-church-prayer-team-hospitality-bereavement-and-care-meal-support-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
-        <p class="eyebrow">Focused next-buy lane from existing guide pages</p>
+        <p class="eyebrow">Focused next-buy lane from existing guide pages · Church Ministry</p>
         <h3>Insulated casserole carrier for care meals</h3>
         <p class="muted">Care-team and hospitality pick for meal-train drop-offs, bereavement support, and volunteer food transport.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1584,9 +1719,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Bulk food containers for meal portions Repeat-use care-meal support for organized leftovers, portioned drop-offs, and cleanup after ministry meals. https://www.thewatchersedge.ca/best-church-prayer-team-hospitality-bereavement-and-care-meal-support-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Bulk food containers for meal portions Repeat-use care-meal support for organized leftovers, portioned drop-offs, and cleanup after ministry meals. https://www.thewatchersedge.ca/best-church-prayer-team-hospitality-bereavement-and-care-meal-support-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
-        <p class="eyebrow">Focused next-buy lane from existing guide pages</p>
+        <p class="eyebrow">Focused next-buy lane from existing guide pages · Church Ministry</p>
         <h3>Bulk food containers for meal portions</h3>
         <p class="muted">Repeat-use care-meal support for organized leftovers, portioned drop-offs, and cleanup after ministry meals.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1595,9 +1730,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Folding music stand for rehearsals Portable worship and choir support item for rehearsal rooms, flexible stages, and temporary music setups. https://www.thewatchersedge.ca/best-church-choir-worship-music-and-rehearsal-support-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Folding music stand for rehearsals Portable worship and choir support item for rehearsal rooms, flexible stages, and temporary music setups. https://www.thewatchersedge.ca/best-church-choir-worship-music-and-rehearsal-support-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
-        <p class="eyebrow">Focused next-buy lane from existing guide pages</p>
+        <p class="eyebrow">Focused next-buy lane from existing guide pages · Church Ministry</p>
         <h3>Folding music stand for rehearsals</h3>
         <p class="muted">Portable worship and choir support item for rehearsal rooms, flexible stages, and temporary music setups.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1606,9 +1741,9 @@
         </div>
       </article>
       
-      <article class="affiliate-tile" data-resource-card data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Choral folder for sheet handling Helps music teams keep sheets, lyrics, and rehearsal notes organized without overbuilding the workflow. https://www.thewatchersedge.ca/best-church-choir-worship-music-and-rehearsal-support-supplies.html Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
+      <article class="affiliate-tile" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Focused next-buy lane from existing guide pages Choral folder for sheet handling Helps music teams keep sheets, lyrics, and rehearsal notes organized without overbuilding the workflow. https://www.thewatchersedge.ca/best-church-choir-worship-music-and-rehearsal-support-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="">
         <div class="resource-picture" aria-hidden="true"><span>Focused next-buy lane from existing guide pages</span></div>
-        <p class="eyebrow">Focused next-buy lane from existing guide pages</p>
+        <p class="eyebrow">Focused next-buy lane from existing guide pages · Church Ministry</p>
         <h3>Choral folder for sheet handling</h3>
         <p class="muted">Helps music teams keep sheets, lyrics, and rehearsal notes organized without overbuilding the workflow.</p>
         <div class="cta-row" style="margin-top: 0;">
@@ -1636,49 +1771,34 @@
       
       <article class="mini-card" style="padding: 18px; border-radius: 18px; background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,241,233,0.88));">
         
-        <p class="eyebrow">Best next move</p>
-        <h3 style="margin-bottom: 6px;"><a href="/store/the-watchers-edge-botops-toolkit" style="text-decoration: none;">The Watchers Edge BotOps Toolkit</a></h3>
-        <p class="muted" style="margin-bottom: 10px;">USD $19.00 · v0.1</p>
-        
-        <div class="meta-row" style="margin-bottom: 10px;">
-          <span class="pill">Business systems and template kits</span>
-          <span class="pill">gumroad</span>
-        </div>
+        <p class="eyebrow">gumroad</p>
+        <h3><a href="/store/the-watchers-edge-botops-toolkit" style="text-decoration:none;">The Watchers Edge BotOps Toolkit</a></h3>
+        <p class="muted">Broader business-system kits for buyers who want one stronger reusable foundation instead of a single narrow fix.</p>
         <div class="cta-row" style="margin-top: 0;">
-          <a class="btn" href="https://nanoojr.gumroad.com/l/ltusy">Buy this now</a>
-          <a class="btn secondary" href="/store/the-watchers-edge-botops-toolkit">Review this pick</a>
+          <a class="btn" href="/store/the-watchers-edge-botops-toolkit">Review this pick</a>
+          <a class="btn secondary" href="https://nanoojr.gumroad.com/l/ltusy">Buy this now</a>
         </div>
       </article>
       
       <article class="mini-card" style="padding: 18px; border-radius: 18px; background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,241,233,0.88));">
         
-        <p class="eyebrow">Best next move</p>
-        <h3 style="margin-bottom: 6px;"><a href="/store/twe-solo-crm-follow-up-system" style="text-decoration: none;">TWE Solo CRM Follow-Up System</a></h3>
-        <p class="muted" style="margin-bottom: 10px;">USD $24.00 · v1</p>
+        <p class="eyebrow">gumroad</p>
+        <h3><a href="/store/twe-solo-crm-follow-up-system" style="text-decoration:none;">TWE Solo CRM Follow-Up System</a></h3>
         <p class="muted">Stay on top of every lead with a simple solo CRM built for weekly follow-up and revenue discipline.</p>
-        <div class="meta-row" style="margin-bottom: 10px;">
-          <span class="pill">Client delivery and admin systems</span>
-          <span class="pill">gumroad</span>
-        </div>
         <div class="cta-row" style="margin-top: 0;">
-          <a class="btn" href="https://nanoojr.gumroad.com/l/imjodh">Buy this now</a>
-          <a class="btn secondary" href="/store/twe-solo-crm-follow-up-system">Review this pick</a>
+          <a class="btn" href="/store/twe-solo-crm-follow-up-system">Review this pick</a>
+          <a class="btn secondary" href="https://nanoojr.gumroad.com/l/imjodh">Buy this now</a>
         </div>
       </article>
       
       <article class="mini-card" style="padding: 18px; border-radius: 18px; background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,241,233,0.88));">
         
-        <p class="eyebrow">Best next move</p>
-        <h3 style="margin-bottom: 6px;"><a href="/store/twe-client-onboarding-starter-kit" style="text-decoration: none;">TWE Client Onboarding Starter Kit</a></h3>
-        <p class="muted" style="margin-bottom: 10px;">USD $19.00 · v1</p>
+        <p class="eyebrow">gumroad</p>
+        <h3><a href="/store/twe-client-onboarding-starter-kit" style="text-decoration:none;">TWE Client Onboarding Starter Kit</a></h3>
         <p class="muted">Launch cleaner client projects with a repeatable intake, kickoff, and delivery flow buyers can set up fast.</p>
-        <div class="meta-row" style="margin-bottom: 10px;">
-          <span class="pill">Client delivery and admin systems</span>
-          <span class="pill">gumroad</span>
-        </div>
         <div class="cta-row" style="margin-top: 0;">
-          <a class="btn" href="https://nanoojr.gumroad.com/l/dbldih">Buy this now</a>
-          <a class="btn secondary" href="/store/twe-client-onboarding-starter-kit">Review this pick</a>
+          <a class="btn" href="/store/twe-client-onboarding-starter-kit">Review this pick</a>
+          <a class="btn secondary" href="https://nanoojr.gumroad.com/l/dbldih">Buy this now</a>
         </div>
       </article>
       
@@ -1775,75 +1895,6 @@
         </div>
         <p class="muted" style="margin-bottom: 0;"><strong>Affiliate disclosure:</strong> Some guide links may be affiliate links. As an Amazon Associate I earn from qualifying purchases.</p>
       </article>
-      <article class="mini-card" style="padding: 16px 18px; border-radius: 16px; background: rgba(255,255,255,0.92);">
-        <p class="eyebrow">Quick compare</p>
-        <h3>Compare a few strong options first</h3>
-        <p class="muted">Use the three featured offers below as a short list when you want to reduce hesitation and get to a better decision faster.</p>
-      </article>
-      
-      <article class="mini-card" style="padding: 16px 18px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-        <div class="store-compare-row">
-          <div>
-            <h3 style="margin-bottom: 4px; font-size: 1.1rem;"><a href="/store/the-watchers-edge-botops-toolkit" style="text-decoration: none;">The Watchers Edge BotOps Toolkit</a></h3>
-            <p class="muted" style="margin-bottom: 0;">Broader business-system kits for buyers who want one stronger reusable foundation instead of a single narrow fix.</p>
-          </div>
-          <div>
-            <p class="eyebrow" style="margin-bottom: 4px;">Family</p>
-            <p class="muted" style="margin-bottom: 0;">Business systems and template kits</p>
-          </div>
-          <div>
-            <p class="eyebrow" style="margin-bottom: 4px;">Outcome</p>
-            <p class="muted" style="margin-bottom: 0;">Build a stronger business system</p>
-          </div>
-          <div>
-            <p class="eyebrow" style="margin-bottom: 4px;">Price</p>
-            <p class="muted" style="margin-bottom: 0;">USD $19.00</p>
-          </div>
-        </div>
-      </article>
-      
-      <article class="mini-card" style="padding: 16px 18px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-        <div class="store-compare-row">
-          <div>
-            <h3 style="margin-bottom: 4px; font-size: 1.1rem;"><a href="/store/twe-solo-crm-follow-up-system" style="text-decoration: none;">TWE Solo CRM Follow-Up System</a></h3>
-            <p class="muted" style="margin-bottom: 0;">Stay on top of every lead with a simple solo CRM built for weekly follow-up and revenue discipline.</p>
-          </div>
-          <div>
-            <p class="eyebrow" style="margin-bottom: 4px;">Family</p>
-            <p class="muted" style="margin-bottom: 0;">Client delivery and admin systems</p>
-          </div>
-          <div>
-            <p class="eyebrow" style="margin-bottom: 4px;">Outcome</p>
-            <p class="muted" style="margin-bottom: 0;">Tighten client delivery and follow-through</p>
-          </div>
-          <div>
-            <p class="eyebrow" style="margin-bottom: 4px;">Price</p>
-            <p class="muted" style="margin-bottom: 0;">USD $24.00</p>
-          </div>
-        </div>
-      </article>
-      
-      <article class="mini-card" style="padding: 16px 18px; border-radius: 16px; background: rgba(255,255,255,0.9);">
-        <div class="store-compare-row">
-          <div>
-            <h3 style="margin-bottom: 4px; font-size: 1.1rem;"><a href="/store/twe-client-onboarding-starter-kit" style="text-decoration: none;">TWE Client Onboarding Starter Kit</a></h3>
-            <p class="muted" style="margin-bottom: 0;">Launch cleaner client projects with a repeatable intake, kickoff, and delivery flow buyers can set up fast.</p>
-          </div>
-          <div>
-            <p class="eyebrow" style="margin-bottom: 4px;">Family</p>
-            <p class="muted" style="margin-bottom: 0;">Client delivery and admin systems</p>
-          </div>
-          <div>
-            <p class="eyebrow" style="margin-bottom: 4px;">Outcome</p>
-            <p class="muted" style="margin-bottom: 0;">Tighten client delivery and follow-through</p>
-          </div>
-          <div>
-            <p class="eyebrow" style="margin-bottom: 4px;">Price</p>
-            <p class="muted" style="margin-bottom: 0;">USD $19.00</p>
-          </div>
-        </div>
-      </article>
-      
     </div>
   </article>
 </section>
@@ -3240,16 +3291,17 @@
   const selectedFamily = (params.get('family') || '').trim();
   const selectedPlatform = (params.get('platform') || '').trim();
   const selectedOutcome = (params.get('outcome') || '').trim();
+  const selectedResourceCategory = (params.get('resource_category') || '').trim();
   const serverResourceResultCount = Number('0') || 0;
   const input = document.querySelector('input[name="q"]');
   if (input && query) input.value = query;
-  for (const [name, value] of [['family', selectedFamily], ['platform', selectedPlatform], ['outcome', selectedOutcome]]) {
+  for (const [name, value] of [['family', selectedFamily], ['platform', selectedPlatform], ['outcome', selectedOutcome], ['resource_category', selectedResourceCategory]]) {
     const select = document.querySelector(`select[name="${name}"]`);
     if (select && value) select.value = value;
   }
   const normalize = value => (value || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
   const compact = value => (value || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
-  const escapeHtml = value => (value || '').replace(/[&<>"]/g, char => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[char]));
+  const escapeHtml = value => (value || '').replace(/[&<>\"]/g, char => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[char]));
   const productAliases = {
     amazon: ['affiliate', 'amazonca', 'resource', 'resources', 'guide', 'storefront'],
     affiliate: ['amazon', 'resources', 'resource', 'guide', 'storefront'],
@@ -3282,7 +3334,7 @@
   const cards = [...document.querySelectorAll('[data-product-card]')];
   const resourceCards = [...document.querySelectorAll('[data-resource-card]')];
   const words = normalize(query).split(/\s+/).filter(Boolean);
-  const filterActive = Boolean(selectedFamily || selectedPlatform || selectedOutcome || words.length);
+  const filterActive = Boolean(selectedFamily || selectedPlatform || selectedOutcome || selectedResourceCategory || words.length);
   const textMatchesWords = (text, aliases) => {
     const compactQuery = compact(query);
     if (compactQuery && text.includes(compactQuery)) return true;
@@ -3304,8 +3356,10 @@
   });
   let visibleResources = 0;
   resourceCards.forEach(card => {
+    const matchesCategory = !selectedResourceCategory || card.dataset.category === selectedResourceCategory;
     const text = `${normalize(card.dataset.searchText || '')} ${normalize(card.innerText)} ${compact(card.innerText)}`;
-    const show = Boolean(words.length) && textMatchesWords(text, resourceAliases);
+    const matchesWords = !words.length || textMatchesWords(text, resourceAliases);
+    const show = matchesCategory && matchesWords;
     card.style.display = show ? '' : 'none';
     if (show) visibleResources += 1;
   });
@@ -3313,6 +3367,10 @@
   if (resourceResults && filterActive) resourceResults.style.display = visibleResources ? '' : 'none';
   const resourceTitle = document.getElementById('store-resource-search-title');
   if (resourceTitle && query) resourceTitle.textContent = `Amazon affiliate picks matching “${query}”`;
+  if (resourceTitle && !query && selectedResourceCategory) {
+    const selected = document.querySelector(`select[name="resource_category"] option[value="${selectedResourceCategory}"]`);
+    resourceTitle.textContent = `Amazon affiliate picks in ${selected ? selected.textContent : selectedResourceCategory}`;
+  }
   const count = document.getElementById('store-visible-count');
   if (count && filterActive) count.textContent = String(visible);
   const currentViewCount = document.getElementById('store-current-view-count');
@@ -3324,10 +3382,10 @@
     const title = ran.querySelector('h3');
     const copy = ran.querySelector('.muted');
     const activeLabels = [];
-    for (const [name, value] of [['Family', selectedFamily], ['Platform', selectedPlatform], ['Outcome', selectedOutcome]]) {
+    for (const [label, name, value] of [['Family', 'family', selectedFamily], ['Platform', 'platform', selectedPlatform], ['Outcome', 'outcome', selectedOutcome], ['Amazon category', 'resource_category', selectedResourceCategory]]) {
       if (!value) continue;
-      const selected = document.querySelector(`select[name="${name.toLowerCase()}"] option[value="${value}"]`);
-      activeLabels.push(`${name}: ${selected ? selected.textContent : value}`);
+      const selected = document.querySelector(`select[name="${name}"] option[value="${value}"]`);
+      activeLabels.push(`${label}: ${selected ? selected.textContent : value}`);
     }
     if (query) activeLabels.push(`Search: ${query}`);
     if (activePills) {
