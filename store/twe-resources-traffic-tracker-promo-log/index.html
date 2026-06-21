@@ -527,6 +527,51 @@
         padding: 24px;
         background: linear-gradient(180deg, #fffdfa, #faf5ef);
       }
+      .product-card-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+        align-items: start;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+      }
+      .product-card-title { max-width: 680px; }
+      .product-card-lede {
+        margin-bottom: 14px;
+        font-size: 1.02rem;
+        color: var(--ink-soft);
+      }
+      .product-scan-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin: 14px 0;
+      }
+      .product-scan-card {
+        padding: 14px;
+        border: 1px solid rgba(196, 209, 203, 0.74);
+        border-radius: 16px;
+        background: rgba(255,255,255,0.82);
+      }
+      .product-scan-card h4 {
+        margin-bottom: 6px;
+        font-size: 0.92rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--brand);
+      }
+      .product-scan-card p { margin-bottom: 0; }
+      .product-card-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: 16px;
+        padding-top: 14px;
+        border-top: 1px solid rgba(196, 209, 203, 0.68);
+      }
+      .product-card-actions .cta-row { margin-top: 0; }
       .product h3 a,
       .text-link,
       .card-link { text-decoration: none; color: var(--ink); }
@@ -1457,6 +1502,7 @@
           max-height: calc(100vh - 96px);
         }
         .advanced-amazon-results { grid-template-columns: 1fr; }
+        .product-scan-grid { grid-template-columns: 1fr; }
         .advanced-amazon-chip { min-height: 44px; padding: 10px 14px; }
         .lightbox-panel { width: 100%; }
         .lightbox-close { top: 8px; right: 8px; }
