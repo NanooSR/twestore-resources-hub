@@ -2,6 +2,7 @@
   "canonical_url": "https://thewatchersedge.ca/",
   "routes": [
     "/",
+    "/home",
     "/start-here",
     "/collections",
     "/about",
@@ -94,5 +95,5 @@
     "twe-resources-traffic-tracker-promo-log"
   ],
   "redirects": [],
-  "exported_count": 30
+  "exported_count": 31
 }

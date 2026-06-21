@@ -838,6 +838,38 @@
       }
       .store-weather-card {
         background: linear-gradient(145deg, rgba(255,253,249,0.98), rgba(220,238,237,0.82));
+        display: grid;
+        align-content: start;
+        gap: 8px;
+        min-height: 226px;
+        max-height: 226px;
+        overflow: hidden;
+      }
+      .store-weather-visual {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        min-height: 46px;
+      }
+      .store-weather-icon {
+        width: 46px;
+        height: 46px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        border-radius: 16px;
+        background: rgba(255,255,255,0.86);
+        box-shadow: var(--shadow-sm);
+        font-size: 1.7rem;
+        overflow: hidden;
+      }
+      .store-weather-icon img { width: 42px; height: 42px; object-fit: contain; }
+      .store-weather-status {
+        min-height: 52px;
+        max-height: 52px;
+        overflow: hidden;
       }
       .store-weather-card button[disabled] {
         opacity: 0.72;
@@ -878,12 +910,14 @@
       }
       .support-chat-panel {
         display: none;
-        position: absolute;
-        top: calc(100% + 10px);
-        left: 50%;
-        transform: translateX(-50%);
+        position: fixed;
+        top: 148px;
+        right: max(18px, calc((100vw - var(--shell)) / 2));
+        transform: none;
         margin-top: 0;
         width: min(420px, calc(100vw - 48px));
+        max-height: min(620px, calc(100vh - 176px));
+        overflow: auto;
         padding: 14px;
         border: 1px solid rgba(9, 103, 114, 0.22);
         border-radius: 20px;
@@ -927,6 +961,105 @@
       }
       .store-weather-card.is-fallback .store-weather-city-form { display: grid; }
       .store-weather-city-form input { padding: 8px 10px; }
+      .advanced-amazon-shell {
+        position: relative;
+        overflow: hidden;
+        padding: clamp(22px, 3vw, 34px);
+        border-radius: 26px;
+        border: 1px solid rgba(9, 103, 114, 0.26);
+        background:
+          radial-gradient(circle at 90% 10%, rgba(239,155,19,0.18), transparent 28%),
+          radial-gradient(circle at 8% 92%, rgba(9,103,114,0.16), transparent 30%),
+          linear-gradient(135deg, rgba(255,253,249,0.98), rgba(220,238,237,0.88));
+        box-shadow: 0 24px 58px rgba(23, 52, 58, 0.13);
+      }
+      .advanced-amazon-title-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .advanced-amazon-tooltip {
+        width: 28px;
+        height: 28px;
+        border: 1px solid rgba(9,103,114,0.28);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--brand);
+        font-weight: 800;
+        cursor: help;
+      }
+      .advanced-amazon-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(270px, 0.85fr);
+        gap: 18px;
+        align-items: start;
+      }
+      .advanced-amazon-form {
+        display: grid;
+        gap: 12px;
+        padding: 16px;
+        border-radius: 20px;
+        border: 1px solid rgba(9,103,114,0.18);
+        background: rgba(255,255,255,0.82);
+      }
+      .advanced-amazon-form textarea {
+        width: 100%;
+        min-height: 112px;
+        resize: vertical;
+        padding: 14px;
+        border: 1px solid var(--line-strong);
+        border-radius: 18px;
+        background: rgba(255,255,255,0.96);
+        color: var(--ink);
+        font: inherit;
+      }
+      .advanced-amazon-chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+      .advanced-amazon-chip {
+        border: 1px solid rgba(9,103,114,0.22);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--brand);
+        min-height: 34px;
+        padding: 7px 10px;
+        font: inherit;
+        font-size: 0.9rem;
+        cursor: pointer;
+      }
+      .advanced-amazon-state {
+        min-height: 52px;
+        padding: 12px 14px;
+        border-radius: 16px;
+        background: rgba(255,255,255,0.78);
+        color: var(--ink-soft);
+      }
+      .advanced-amazon-results {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+        margin-top: 18px;
+      }
+      .advanced-amazon-card {
+        display: grid;
+        gap: 10px;
+        padding: 14px;
+        border-radius: 20px;
+        border: 1px solid rgba(9,103,114,0.18);
+        background: rgba(255,255,255,0.94);
+        box-shadow: var(--shadow-sm);
+      }
+      .advanced-amazon-card img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: contain;
+        border: 1px solid var(--line-strong);
+        border-radius: 16px;
+        background: #fff;
+        padding: 8px;
+      }
+      .advanced-amazon-card h3 { font-size: 1.05rem; margin-bottom: 0; }
+      .advanced-amazon-card p { margin-bottom: 0; }
+      .advanced-amazon-note-list { display: grid; gap: 8px; padding-left: 18px; }
       .store-sales-banner-grid {
         display: grid;
         grid-template-columns: clamp(260px, 15vw, 340px) minmax(0, calc(var(--shell) + clamp(260px, 15vw, 340px) + 72px));
@@ -1167,6 +1300,7 @@
         .store-filter-grid,
         .store-main-layout,
         .store-compare-row,
+        .advanced-amazon-grid,
         .email-capture-plan {
           grid-template-columns: 1fr;
         }
@@ -1245,6 +1379,14 @@
         }
         .support-chat-toggle { min-height: 40px; padding: 8px 12px; width: 100%; }
         .support-chat-panel { width: 100%; }
+        .support-chat-panel {
+          top: 76px;
+          right: 12px;
+          left: 12px;
+          width: auto;
+          max-height: calc(100vh - 96px);
+        }
+        .advanced-amazon-results { grid-template-columns: 1fr; }
         .lightbox-panel { width: 100%; }
         .lightbox-close { top: 8px; right: 8px; }
       }
@@ -1282,7 +1424,7 @@
           <button type="submit">Search</button>
         </form>
         <div class="nav-links">
-          <a href="/">Home</a>
+          <a href="/home">Home</a>
           <a href="/start-here">Start Here</a>
           <a href="/collections">Collections</a>
           <a href="/church">Church</a>
@@ -1315,8 +1457,14 @@
         </nav>
         <article class="store-corner-card store-weather-card" data-weather-widget>
           <p class="eyebrow">Local weather</p>
-          <h2><span aria-hidden="true">☀️</span> Quick check</h2>
-          <p class="muted" data-weather-status>Optional: use your device location once to show local temperature through Open-Meteo. Nothing is stored by this page.</p>
+          <div class="store-weather-visual">
+            <div>
+              <h2>Quick check</h2>
+              <p class="muted" style="margin-bottom: 0;">WeatherAPI.com preferred; no-secret Open-Meteo fallback.</p>
+            </div>
+            <span class="store-weather-icon" data-weather-icon aria-hidden="true">☀️</span>
+          </div>
+          <p class="muted store-weather-status" data-weather-status>Optional: use your device location once, try coarse auto-IP where available, or choose a city. Nothing is stored by this page.</p>
           <button class="pill is-accent" type="button" data-weather-button>Show my weather</button>
           <form class="store-weather-city-form" data-weather-city-form>
             <label class="eyebrow" for="weather-city">Choose city</label>
@@ -4885,13 +5033,14 @@
         const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'auto';
         const renderWeather = (status, data, suffix) => {
           const temp = Math.round(Number(data.temperatureC));
-          const label = weatherCodes[data.weatherCode] || 'Local weather';
+          const label = data.conditionText || weatherCodes[data.weatherCode] || 'Local weather';
           const wind = Number.isFinite(Number(data.windKmh)) ? ' · wind ' + Math.round(Number(data.windKmh)) + ' km/h' : '';
           status.textContent = Number.isFinite(temp) ? label + ' · ' + temp + '°C' + wind + (suffix || '') : (data.message || label);
         };
         widgets.forEach((widget) => {
           const button = widget.querySelector('[data-weather-button]');
           const status = widget.querySelector('[data-weather-status]');
+          const icon = widget.querySelector('[data-weather-icon]');
           const form = widget.querySelector('[data-weather-city-form]');
           const input = form?.querySelector('input[name="city"]');
           if (!button || !status) return;
@@ -4902,6 +5051,11 @@
             const data = await response.json();
             if (!response.ok) throw new Error(data.message || 'Weather lookup failed');
             renderWeather(status, data, suffix);
+            if (icon && data.conditionIcon) {
+              icon.innerHTML = '<img alt="" src="' + String(data.conditionIcon).replace(/^\/\//, 'https://') + '">';
+            } else if (icon) {
+              icon.textContent = data.weatherCode >= 51 ? '🌧️' : data.weatherCode >= 45 ? '🌫️' : data.weatherCode >= 2 ? '⛅' : '☀️';
+            }
             button.textContent = 'Updated';
             widget.classList.remove('is-fallback');
           };
@@ -4922,8 +5076,10 @@
                 .finally(() => { button.disabled = false; });
             }, () => {
               widget.classList.add('is-fallback');
-              status.textContent = 'Location was not shared. Choose a city for an approximate weather check; no precise location is stored.';
-              button.disabled = false;
+              status.textContent = 'Location was not shared. Trying coarse IP weather if the provider supports it, or choose a city below.';
+              lookup({}, ' near your region').catch(() => {
+                status.textContent = 'Location was not shared. Choose a city for an approximate weather check; no precise location is stored.';
+              }).finally(() => { button.disabled = false; });
             }, { enableHighAccuracy: false, maximumAge: 600000, timeout: 8000 });
           });
           form?.addEventListener('submit', (event) => {
