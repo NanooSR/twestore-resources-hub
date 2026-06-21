@@ -707,6 +707,56 @@
         border: 1px solid var(--line);
         background: var(--panel-soft);
       }
+      .store-filter-form { display: grid; gap: 14px; }
+      .store-filter-field { display: grid; gap: 6px; }
+      .store-filter-actions {
+        margin-top: 0;
+        align-self: end;
+      }
+      .store-results-summary {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+        gap: 16px;
+        align-items: center;
+        margin-top: 16px;
+        padding: 18px;
+        border-radius: 18px;
+        border: 1px solid rgba(9, 103, 114, 0.18);
+        background: linear-gradient(135deg, rgba(220,238,237,0.82), rgba(255,247,232,0.74));
+      }
+      .store-result-count-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+      .store-result-count {
+        display: grid;
+        gap: 2px;
+        min-height: 74px;
+        padding: 12px;
+        border-radius: 16px;
+        border: 1px solid rgba(9, 103, 114, 0.16);
+        background: rgba(255,255,255,0.84);
+        color: var(--ink);
+        text-decoration: none;
+      }
+      .store-result-count strong {
+        font-size: 1.55rem;
+        line-height: 1;
+        color: var(--brand);
+      }
+      .store-result-count span {
+        color: var(--ink-soft);
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+      .store-active-filter-pills .pill { min-height: 36px; }
+      .store-search-ran {
+        margin-top: 16px;
+        padding: 16px 18px;
+        border-radius: 16px;
+        background: rgba(220,238,237,0.62);
+      }
       .affiliate-banner {
         padding: 24px;
         border-radius: 24px;
@@ -1503,6 +1553,11 @@
         }
         .advanced-amazon-results { grid-template-columns: 1fr; }
         .product-scan-grid { grid-template-columns: 1fr; }
+        .store-results-summary { grid-template-columns: 1fr; padding: 14px; }
+        .store-result-count-grid { grid-template-columns: 1fr 1fr; }
+        .store-result-count { min-height: 66px; padding: 10px; }
+        .store-result-count strong { font-size: 1.35rem; }
+        .store-filter-actions .btn { min-height: 44px; }
         .advanced-amazon-chip { min-height: 44px; padding: 10px 14px; }
         .lightbox-panel { width: 100%; }
         .lightbox-close { top: 8px; right: 8px; }
@@ -5134,22 +5189,22 @@
   <p class="muted" style="margin: 14px 0 0;">Sale language is conversion-focused, but product boundaries still apply: these are digital planning resources, not guarantees of income, approval, traffic, trading results, or profit.</p>
 </section>
 
-<section class="section card" style="padding: 24px; border-radius: 22px; background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(249,247,242,0.94));">
+<section class="section card store-filter-panel" style="padding: 24px; border-radius: 22px; background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(249,247,242,0.94));">
   <div class="section-head" style="margin-bottom: 16px; align-items: center;">
     <div>
       <p class="eyebrow">Search the store</p>
-      <h2 style="margin-bottom: 6px;">Search the store</h2>
-      <p class="muted" style="margin-bottom: 0;">Use search if you already know what you need. Try product terms like <strong>TWETrade</strong> or <strong>bot build kit</strong>, or Amazon/resource terms like <strong>standing desk</strong>, <strong>scanner</strong>, <strong>creator microphone</strong>, <strong>church coffee</strong>, or <strong>Amazon affiliate</strong>.</p>
+      <h2 style="margin-bottom: 6px;">Search, filter, then jump to the right result type</h2>
+      <p class="muted" style="margin-bottom: 0;">Use product terms like <strong>TWETrade</strong> or <strong>bot build kit</strong>, or Amazon/resource terms like <strong>standing desk</strong>, <strong>scanner</strong>, <strong>creator microphone</strong>, <strong>church coffee</strong>, or <strong>Amazon affiliate</strong>. The result summary below separates products, Amazon picks, and guide pages so mobile shoppers know where to go next.</p>
     </div>
     <a class="pill is-accent" href="/command-center">Buying Guide</a>
   </div>
-  <form action="/store" method="get" style="display: grid; gap: 14px;">
+  <form action="/store" method="get" class="store-filter-form">
     <div class="store-filter-grid">
-      <label style="display: grid; gap: 6px;">
+      <label class="store-filter-field">
         <span class="eyebrow">Search</span>
         <input type="text" name="q" value="" placeholder="Search products, Amazon picks, categories, guides, support">
       </label>
-      <label style="display: grid; gap: 6px;">
+      <label class="store-filter-field">
         <span class="eyebrow">Family</span>
         <select name="family">
           <option value="">All families</option>
@@ -5162,7 +5217,7 @@
           
         </select>
       </label>
-      <label style="display: grid; gap: 6px;">
+      <label class="store-filter-field">
         <span class="eyebrow">Platform</span>
         <select name="platform">
           <option value="">All platforms</option>
@@ -5175,7 +5230,7 @@
           
         </select>
       </label>
-      <label style="display: grid; gap: 6px;">
+      <label class="store-filter-field">
         <span class="eyebrow">Outcome</span>
         <select name="outcome">
           <option value="">All outcomes</option>
@@ -5188,7 +5243,7 @@
           
         </select>
       </label>
-      <label style="display: grid; gap: 6px;">
+      <label class="store-filter-field">
         <span class="eyebrow">Amazon category</span>
         <select name="resource_category">
           <option value="">All Amazon categories</option>
@@ -5205,13 +5260,26 @@
           
         </select>
       </label>
-      <div class="cta-row" style="margin-top: 0; align-self: end;">
+      <div class="cta-row store-filter-actions">
         <button class="btn" type="submit">Search store</button>
         <a class="btn secondary" href="/store">Reset</a>
       </div>
     </div>
   </form>
-  <div id="store-active-filter-pills" class="pill-row" style="margin-top: 16px;">
+  <article id="store-filter-summary" class="store-results-summary" aria-live="polite">
+    <div>
+      <p class="eyebrow">Current result view</p>
+      <h3 id="store-filter-summary-title" style="margin-bottom: 6px;">Browse all live store paths</h3>
+      <p id="store-filter-summary-copy" class="muted" style="margin-bottom: 0;">Showing 39 product offers plus Amazon/resource browse lanes and guide pages. Search or filter when you want a narrower path.</p>
+    </div>
+    <div class="store-result-count-grid" aria-label="Store result counts">
+      <span class="store-result-count"><strong id="store-combined-result-count">47</strong><span>total matches</span></span>
+      <a class="store-result-count" href="#store-product-results"><strong id="store-product-result-count">39</strong><span>product offers</span></a>
+      <a class="store-result-count" href="#store-resource-search-results"><strong id="store-resource-result-count">0</strong><span>Amazon picks</span></a>
+      <a class="store-result-count" href="#store-guide-search-results"><strong id="store-guide-result-count">8</strong><span>guide pages</span></a>
+    </div>
+  </article>
+  <div id="store-active-filter-pills" class="pill-row store-active-filter-pills" style="margin-top: 16px;">
     <span class="pill">Current search scope</span>
     
     
@@ -5224,10 +5292,10 @@
     <span class="pill">5 Amazon browse lanes</span>
     
   </div>
-  <article id="store-search-ran" class="mini-card" style="margin-top: 16px; padding: 16px 18px; border-radius: 16px; background: rgba(220,238,237,0.62); display:none;">
+  <article id="store-search-ran" class="mini-card store-search-ran" style=" display:none;">
     <p class="eyebrow">Search ran</p>
     <h3 style="margin-bottom: 6px;">Filtered results</h3>
-    <p class="muted" style="margin-bottom: 0;">Showing 47 matching results: 39 product offers, 0 Amazon/resource results, and 8 guide pages. If this is not what you meant, try a broader term like “Amazon”, “desk”, “scanner”, “church”, “bot”, or “workflow”.</p>
+    <p class="muted" style="margin-bottom: 0;">Showing 47 matching results: 39 product offers, 0 Amazon/resource results, and 8 guide pages. Use the summary above to jump to the result type you want, or reset for a wider browse path.</p>
   </article>
 
   <article class="mini-card affiliate-banner" style="margin-top: 16px; padding: 18px; border-radius: 18px;">
@@ -7029,10 +7097,10 @@
       </div>
     </article>
 
-    <article class="card" style="padding: 24px; border-radius: 22px;">
+    <article id="store-product-results" class="card" style="padding: 24px; border-radius: 22px;">
       <div class="section-head" style="margin-bottom: 14px; align-items: center;">
         <div>
-          <p class="eyebrow">Results</p>
+          <p class="eyebrow">Product results</p>
           <h2>All live store offers</h2>
         </div>
         <span class="pill is-accent"><span id="store-visible-count">39</span> visible</span>
@@ -9075,12 +9143,29 @@
     }
     if (query) activeLabels.push(`Search: ${query}`);
     const totalVisible = visible + visibleResources + visibleGuides;
+    const combinedCount = document.getElementById('store-combined-result-count');
+    const productResultCount = document.getElementById('store-product-result-count');
+    const resourceResultCount = document.getElementById('store-resource-result-count');
+    const guideResultCount = document.getElementById('store-guide-result-count');
+    if (combinedCount) combinedCount.textContent = String(totalVisible);
+    if (productResultCount) productResultCount.textContent = String(visible);
+    if (resourceResultCount) resourceResultCount.textContent = String(visibleResources);
+    if (guideResultCount) guideResultCount.textContent = String(visibleGuides);
+    const summaryTitle = document.getElementById('store-filter-summary-title');
+    const summaryCopy = document.getElementById('store-filter-summary-copy');
     if (activePills) {
-      activePills.innerHTML = '<span class="pill">Current search scope</span>' + activeLabels.map(label => `<span class="pill">${escapeHtml(label)}</span>`).join('') + `<span class="pill">${totalVisible} matching result${totalVisible === 1 ? '' : 's'}</span>`;
+      activePills.innerHTML = '<span class="pill">Current search scope</span>' + activeLabels.map(label => `<span class="pill">${escapeHtml(label)}</span>`).join('') + `<span class="pill">${totalVisible} matching result${totalVisible === 1 ? '' : 's'}</span><a class="pill is-accent" href="/store">Clear all filters</a>`;
     }
-    if (title) title.textContent = activeLabels.length ? `Filtered results — ${activeLabels.join(' · ')}` : 'Filtered results';
+    const summaryLabel = activeLabels.length ? activeLabels.join(' · ') : 'Filtered results';
+    if (summaryTitle) summaryTitle.textContent = activeLabels.length ? `Filtered view: ${summaryLabel}` : 'Filtered results are ready';
+    if (summaryCopy) {
+      summaryCopy.textContent = totalVisible
+        ? `Showing ${totalVisible} matching result${totalVisible === 1 ? '' : 's'} across ${visible} product offer${visible === 1 ? '' : 's'}, ${visibleResources} Amazon pick${visibleResources === 1 ? '' : 's'}, and ${visibleGuides} guide page${visibleGuides === 1 ? '' : 's'}. Use the count cards to jump to the best section for this search.`
+        : 'No matching products, Amazon picks, or guide pages were found for these filters. Clear all filters or try a broader term like Amazon, desk, scanner, church, bot, or workflow.';
+    }
+    if (title) title.textContent = activeLabels.length ? `Filtered results — ${summaryLabel}` : 'Filtered results';
     if (copy) {
-      copy.textContent = `Showing ${totalVisible} matching result${totalVisible === 1 ? '' : 's'}: ${visible} product offer${visible === 1 ? '' : 's'}, ${visibleResources} Amazon/resource result${visibleResources === 1 ? '' : 's'}, and ${visibleGuides} guide page${visibleGuides === 1 ? '' : 's'}. Clear filters for a wider browse path.`;
+      copy.textContent = `Showing ${totalVisible} matching result${totalVisible === 1 ? '' : 's'}: ${visible} product offer${visible === 1 ? '' : 's'}, ${visibleResources} Amazon/resource result${visibleResources === 1 ? '' : 's'}, and ${visibleGuides} guide page${visibleGuides === 1 ? '' : 's'}. Use the summary above to jump to the result type you want, or clear filters for a wider browse path.`;
     }
   }
   const noResults = document.getElementById('client-no-results');
