@@ -53,10 +53,25 @@
       a { color: inherit; }
       img { display: block; max-width: 100%; }
       .shell { max-width: calc(var(--shell) + 48px); margin: 0 auto; padding: 24px; }
-      .nav {
+      .site-header-band {
         position: sticky;
         top: 12px;
-        z-index: 40;
+        z-index: 60;
+        display: grid;
+        grid-template-columns: clamp(260px, 15vw, 340px) minmax(0, calc(var(--shell) + 48px)) clamp(260px, 15vw, 340px);
+        justify-content: center;
+        gap: 24px;
+        align-items: stretch;
+        width: 100vw;
+        margin: 0 0 12px calc(50% - 50vw);
+        padding: 0 24px;
+        pointer-events: none;
+      }
+      .site-header-band > * {
+        pointer-events: auto;
+      }
+      .nav {
+        position: relative;
         display: grid;
         grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
         grid-template-areas:
@@ -71,13 +86,14 @@
         background: rgba(255, 252, 247, 0.94);
         backdrop-filter: blur(16px);
         box-shadow: 0 12px 34px rgba(23, 52, 58, 0.08);
-        margin-bottom: 28px;
+        margin-bottom: 0;
+        min-height: 100%;
       }
       @media (min-width: 1181px) {
         .nav {
-          margin-left: -24px;
-          margin-right: -24px;
-          margin-bottom: 18px;
+          margin-left: 0;
+          margin-right: 0;
+          margin-bottom: 0;
         }
       }
       .brand {
@@ -797,15 +813,8 @@
         box-shadow: none;
         background: rgba(255,255,255,0.78);
       }
-      .store-top-corner-grid {
-        display: grid;
-        grid-template-columns: clamp(260px, 15vw, 340px) minmax(0, calc(var(--shell) + 48px)) clamp(260px, 15vw, 340px);
-        justify-content: center;
-        gap: 24px;
-        align-items: stretch;
-        width: 100vw;
-        margin: -228px 0 12px calc(50% - 50vw);
-        padding: 0 24px;
+      .store-top-corner-grid:not(.site-header-band) {
+        display: contents;
       }
       .store-corner-card {
         padding: 14px;
@@ -813,6 +822,7 @@
         border-radius: 20px;
         background: rgba(255,253,249,0.97);
         box-shadow: 0 12px 32px rgba(23, 52, 58, 0.10);
+        min-height: 100%;
       }
       .store-corner-card h2 {
         margin-bottom: 6px;
@@ -930,8 +940,8 @@
       .store-sales-banner-main { min-width: 0; }
       .store-sales-side {
         position: sticky;
-        top: 150px;
-        max-height: calc(100vh - 174px);
+        top: 244px;
+        max-height: calc(100vh - 268px);
         min-height: 680px;
         padding: 14px;
         border: 1px solid rgba(9, 103, 114, 0.24);
@@ -1093,13 +1103,29 @@
         }
       }
       @media (max-width: 1500px) {
-        .store-top-corner-grid {
+        .site-header-band {
+          position: static;
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
           width: auto;
           margin: 0 0 16px;
           padding: 0;
+          gap: 12px;
         }
+        .nav {
+          position: sticky;
+          top: 12px;
+          z-index: 60;
+          order: 1;
+          grid-column: 1 / -1;
+        }
+        .site-header-band.store-top-corner-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          order: 2;
+          gap: 12px;
+        }
+        .site-header-band.store-top-corner-grid .store-corner-deal { order: 2; }
+        .site-header-band.store-top-corner-grid .store-weather-card { order: 3; }
         .store-corner-spacer { display: none; }
         .store-sales-banner-grid {
           display: block;
@@ -1204,7 +1230,7 @@
           font-size: 0.82rem;
           white-space: nowrap;
         }
-        .store-top-corner-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0 0 12px; }
+        .site-header-band.store-top-corner-grid { grid-template-columns: 1fr; gap: 10px; margin: 0 0 12px; }
         .store-corner-card { padding: 12px; border-radius: 16px; }
         .store-corner-card h2 { font-size: 0.94rem; }
         .store-corner-card .muted { display: none; }
@@ -1228,7 +1254,19 @@
     
     
     <div class="shell">
-      <nav class="nav">
+      
+      
+      <div class="site-header-band store-top-corner-grid" aria-label="Site quick tools">
+        <article class="store-corner-card store-corner-deal">
+          <p class="eyebrow">Fast-start deal</p>
+          <h2>Save 20% on Gumroad offers</h2>
+          <p class="muted">Use STARTNOW20 to start with a digital system, bundle, or promotion before opening checkout.</p>
+          <div class="pill-row">
+            <span class="pill">39 non-Amazon offers</span>
+            <a class="pill is-accent" href="/startnow20">Open deal</a>
+          </div>
+        </article>
+        <nav class="nav">
         <a class="brand" href="/">
           <img class="brand-mark" src="/static/public_site/the-watchers-edge-mark.png" alt="The Watchers Edge logo">
           <span class="brand-copy">
@@ -1273,20 +1311,7 @@
             <p class="support-chat-fineprint">Please do not paste passwords, payment details, tax/banking details, cookies, API keys, or private account data. AI replies are short guidance, not legal, tax, financial, investment, or trading advice.</p>
           </div>
         </aside>
-      </nav>
-      
-      
-      <div class="store-top-corner-grid" aria-label="Site quick tools">
-        <article class="store-corner-card store-corner-deal">
-          <p class="eyebrow">Fast-start deal</p>
-          <h2>Save 20% on Gumroad offers</h2>
-          <p class="muted">Use STARTNOW20 to start with a digital system, bundle, or promotion before opening checkout.</p>
-          <div class="pill-row">
-            <span class="pill">39 non-Amazon offers</span>
-            <a class="pill is-accent" href="/startnow20">Open deal</a>
-          </div>
-        </article>
-        <div class="store-corner-spacer" aria-hidden="true"></div>
+        </nav>
         <article class="store-corner-card store-weather-card" data-weather-widget>
           <p class="eyebrow">Local weather</p>
           <h2><span aria-hidden="true">☀️</span> Quick check</h2>
