@@ -1392,6 +1392,14 @@
         .lightbox-close { top: 8px; right: 8px; }
       }
     </style>
+    <script>
+      window.TWE_PUBLIC_API_BASE_URL = "";
+      window.tweApiUrl = function (path) {
+        const base = String(window.TWE_PUBLIC_API_BASE_URL || '').replace(/\/+$/, '');
+        const cleanPath = String(path || '').startsWith('/') ? String(path || '') : '/' + String(path || '');
+        return base ? base + cleanPath : cleanPath;
+      };
+    </script>
   </head>
   <body>
     
@@ -6624,14 +6632,6 @@
       </footer>
     </div>
     
-    <script>
-      window.TWE_PUBLIC_API_BASE_URL = "";
-      window.tweApiUrl = function (path) {
-        const base = String(window.TWE_PUBLIC_API_BASE_URL || '').replace(/\/+$/, '');
-        const cleanPath = String(path || '').startsWith('/') ? String(path || '') : '/' + String(path || '');
-        return base ? base + cleanPath : cleanPath;
-      };
-    </script>
     <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
       <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Expanded product image">
         <button class="lightbox-close" type="button" aria-label="Close expanded image">×</button>
