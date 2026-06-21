@@ -5303,6 +5303,14 @@
       </footer>
     </div>
     
+    <script>
+      window.TWE_PUBLIC_API_BASE_URL = "";
+      window.tweApiUrl = function (path) {
+        const base = String(window.TWE_PUBLIC_API_BASE_URL || '').replace(/\/+$/, '');
+        const cleanPath = String(path || '').startsWith('/') ? String(path || '') : '/' + String(path || '');
+        return base ? base + cleanPath : cleanPath;
+      };
+    </script>
     <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
       <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Expanded product image">
         <button class="lightbox-close" type="button" aria-label="Close expanded image">×</button>
@@ -5346,7 +5354,7 @@
           if (!message) return;
           responseBox.textContent = 'Thanks, I’m looking into that.';
           try {
-            const result = await fetch('/support-chat', {
+            const result = await fetch(window.tweApiUrl('/support-chat'), {
               method: 'POST',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({message, page: window.location.pathname})
@@ -5381,7 +5389,7 @@
           if (!button || !status) return;
           status.textContent = status.textContent + ' Time zone detected: ' + timezone + '.';
           const lookup = async (params, suffix) => {
-            const url = '/api/weather-current?' + new URLSearchParams({...params, timezone}).toString();
+            const url = window.tweApiUrl('/api/weather-current') + '?' + new URLSearchParams({...params, timezone}).toString();
             const response = await fetch(url);
             const data = await response.json();
             if (!response.ok) throw new Error(data.message || 'Weather lookup failed');
