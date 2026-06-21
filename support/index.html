@@ -1393,7 +1393,7 @@
       }
     </style>
     <script>
-      window.TWE_PUBLIC_API_BASE_URL = "";
+      window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
       window.tweApiUrl = function (path) {
         const base = String(window.TWE_PUBLIC_API_BASE_URL || '').replace(/\/+$/, '');
         const cleanPath = String(path || '').startsWith('/') ? String(path || '') : '/' + String(path || '');
