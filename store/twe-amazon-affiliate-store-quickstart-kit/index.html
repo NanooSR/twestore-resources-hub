@@ -822,11 +822,13 @@
         cursor: wait;
       }
       .support-chat-widget {
-        position: fixed;
-        top: 112px;
-        left: 16px;
-        z-index: 70;
-        width: min(350px, calc(100vw - 32px));
+        position: relative;
+        z-index: 45;
+        width: min(520px, 100%);
+        margin: -6px auto 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         pointer-events: none;
       }
       .support-chat-toggle,
@@ -836,6 +838,7 @@
       .support-chat-toggle {
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         gap: 8px;
         min-height: 44px;
         padding: 10px 14px;
@@ -847,10 +850,12 @@
         font: inherit;
         font-weight: 800;
         cursor: pointer;
+        width: max-content;
       }
       .support-chat-panel {
         display: none;
         margin-top: 10px;
+        width: min(420px, calc(100vw - 48px));
         padding: 14px;
         border: 1px solid rgba(9, 103, 114, 0.22);
         border-radius: 20px;
@@ -1191,13 +1196,11 @@
         .store-corner-card .pill,
         .store-weather-card button { font-size: 0.74rem; padding: 5px 7px; min-height: 30px; }
         .support-chat-widget {
-          top: auto;
-          bottom: 12px;
-          left: 10px;
-          right: 10px;
-          width: auto;
+          width: 100%;
+          margin: -2px auto 12px;
         }
-        .support-chat-toggle { min-height: 40px; padding: 8px 12px; }
+        .support-chat-toggle { min-height: 40px; padding: 8px 12px; width: 100%; }
+        .support-chat-panel { width: 100%; }
         .lightbox-panel { width: 100%; }
         .lightbox-close { top: 8px; right: 8px; }
       }
