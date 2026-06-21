@@ -901,7 +901,7 @@
       .store-weather-city-form input { padding: 8px 10px; }
       .store-sales-banner-grid {
         display: grid;
-        grid-template-columns: clamp(260px, 15vw, 340px) minmax(0, calc(var(--shell) + 48px)) clamp(260px, 15vw, 340px);
+        grid-template-columns: clamp(260px, 15vw, 340px) minmax(0, calc(var(--shell) + clamp(260px, 15vw, 340px) + 72px));
         justify-content: center;
         gap: 24px;
         align-items: start;
@@ -960,7 +960,7 @@
       .store-sales-track {
         display: grid;
         gap: 14px;
-        animation: storeBannerDrift 420s linear infinite;
+        animation: storeBannerDrift 840s linear infinite;
         will-change: transform;
       }
       .store-sales-side:hover .store-sales-track,
@@ -971,7 +971,7 @@
       }
       .store-sales-side.is-reverse .store-sales-track {
         animation-direction: reverse;
-        animation-duration: 480s;
+        animation-duration: 960s;
       }
       @keyframes storeBannerDrift {
         from { transform: translateY(0); }
@@ -1066,7 +1066,7 @@
         grid-auto-flow: column;
         grid-auto-columns: minmax(230px, 76vw);
         grid-template-columns: none;
-        animation: storeBannerSlide 360s linear infinite;
+        animation: storeBannerSlide 720s linear infinite;
       }
       @keyframes storeBannerSlide {
         from { transform: translateX(0); }
