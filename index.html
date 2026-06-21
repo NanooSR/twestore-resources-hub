@@ -6562,7 +6562,14 @@
     `).join('');
   };
   const localSearch = query => {
-    const words = normalize(query).split(/\s+/).filter(Boolean).filter(word => !['i','need','want','for','a','an','the','with','and','or','to','my','our','show','find','me'].includes(word));
+    const aliases = {
+      keyboard: ['workspace', 'desk', 'office', 'monitor', 'laptop', 'cable'],
+      mechanical: ['workspace', 'desk', 'office', 'laptop', 'setup'],
+      supplies: ['office', 'admin', 'paperwork', 'church', 'ministry', 'fellowship'],
+      chair: ['ergonomic', 'desk', 'office', 'workspace']
+    };
+    const baseWords = normalize(query).split(/\s+/).filter(Boolean).filter(word => !['i','need','want','for','a','an','the','with','and','or','to','my','our','show','find','me'].includes(word));
+    const words = Array.from(new Set(baseWords.flatMap(word => [word, ...(aliases[word] || [])])));
     const scored = seedItems.filter(item => item.amazon_url).map(item => {
       const text = normalize([item.title, item.reason, item.category_title, item.amazon_product_title, item.lane, item.category, item.guide_title].join(' '));
       const score = words.reduce((total, word) => total + (text.includes(word) ? 1 : 0), 0);
