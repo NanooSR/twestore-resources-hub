@@ -396,6 +396,45 @@
         margin-bottom: 14px;
         box-shadow: var(--shadow-sm);
       }
+      .checkout-handoff-card {
+        padding: 24px;
+        border-radius: 24px;
+        border-color: rgba(9, 103, 114, 0.20);
+        background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(220,238,237,0.62));
+      }
+      .checkout-handoff-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+        gap: 18px;
+        align-items: start;
+      }
+      .checkout-handoff-steps {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .checkout-handoff-steps article {
+        display: grid;
+        gap: 8px;
+        padding: 14px;
+        border-radius: 16px;
+        border: 1px solid rgba(9, 103, 114, 0.16);
+        background: rgba(255,255,255,0.86);
+      }
+      .checkout-step-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        background: var(--brand);
+        color: #fff;
+        font-weight: 800;
+      }
+      .checkout-handoff-steps strong { color: var(--ink); }
+      .checkout-handoff-steps .muted { margin-bottom: 0; }
+      .checkout-handoff-actions { margin-top: 16px; }
       .product-preview-copy-card {
         align-self: stretch;
         background: rgba(255,255,255,0.84);
@@ -1553,6 +1592,9 @@
         }
         .advanced-amazon-results { grid-template-columns: 1fr; }
         .product-scan-grid { grid-template-columns: 1fr; }
+        .checkout-handoff-grid,
+        .checkout-handoff-steps { grid-template-columns: 1fr; }
+        .checkout-handoff-card { padding: 16px; }
         .store-results-summary { grid-template-columns: 1fr; padding: 14px; }
         .store-result-count-grid { grid-template-columns: 1fr 1fr; }
         .store-result-count { min-height: 66px; padding: 10px; }
@@ -7140,10 +7182,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Turn messy bot-operation notes into clearer incident summaries, structured bug reports, postmortems, comparison checklists, and coding-agent task briefs without inventing facts or giving trading advice.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on gumroad for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/the-watchers-edge-botops-toolkit">View details</a>
-              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/ltusy">Buy now</a>
+              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/ltusy" target="_blank" rel="noopener">Buy on Gumroad</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7183,10 +7225,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Keep every lead moving with a simple solo CRM you can review in one weekly session.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on gumroad for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-solo-crm-follow-up-system">View details</a>
-              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/imjodh">Buy now</a>
+              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/imjodh" target="_blank" rel="noopener">Buy on Gumroad</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7226,10 +7268,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Onboard new clients in under 30 minutes with a repeatable welcome, kickoff, and delivery tracker.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on gumroad for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-client-onboarding-starter-kit">View details</a>
-              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/dbldih">Buy now</a>
+              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/dbldih" target="_blank" rel="noopener">Buy on Gumroad</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7265,10 +7307,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Review AI output with a repeatable rubric before it embarrasses your brand or team.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on gumroad for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-ai-output-qa-review-kit">View details</a>
-              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/ehnwj">Buy now</a>
+              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/ehnwj" target="_blank" rel="noopener">Buy on Gumroad</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7308,10 +7350,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Turn messy tribal knowledge into SOPs and runbooks your team can actually maintain.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on gumroad for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-sop-runbook-builder-pack">View details</a>
-              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/incyjw">Buy now</a>
+              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/incyjw" target="_blank" rel="noopener">Buy on Gumroad</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7347,10 +7389,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Track invoices, overdue payments, and weekly cash position from one simple dashboard.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on gumroad for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-invoice-cash-flow-toolkit">View details</a>
-              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/nrjgjj">Buy now</a>
+              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/nrjgjj" target="_blank" rel="noopener">Buy on Gumroad</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7386,10 +7428,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Run faster research sprints without losing the evidence trail.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on gumroad for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-ai-research-sprint-kit">View details</a>
-              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/wssar">Buy now</a>
+              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/wssar" target="_blank" rel="noopener">Buy on Gumroad</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7425,10 +7467,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Run a clean weekly metrics review without building a full analytics stack.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on gumroad for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-weekly-kpi-dashboard-scorecard">View details</a>
-              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/qnigp">Buy now</a>
+              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/qnigp" target="_blank" rel="noopener">Buy on Gumroad</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7464,10 +7506,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Turn one content idea into a repeatable multi-channel publishing system.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on gumroad for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-content-repurposing-calendar-kit">View details</a>
-              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/yxbfxe">Buy now</a>
+              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/yxbfxe" target="_blank" rel="noopener">Buy on Gumroad</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7503,10 +7545,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Run AI agents with a clearer logbook, change trail, and access view.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on gumroad for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-ai-agent-ops-logbook">View details</a>
-              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/danoh">Buy now</a>
+              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/danoh" target="_blank" rel="noopener">Buy on Gumroad</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7542,10 +7584,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Track applications, tailor your story, and follow up without losing the thread.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on etsy for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-resume-tailoring-job-tracker-kit">View details</a>
-              <a class="btn secondary" href="https://www.etsy.com/listing/4522004085/resume-tailoring-job-tracker-notion">Buy now</a>
+              <a class="btn secondary" href="https://www.etsy.com/listing/4522004085/resume-tailoring-job-tracker-notion" target="_blank" rel="noopener">Buy on Etsy</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7585,10 +7627,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Onboard new clients in under 30 minutes with a repeatable welcome, kickoff, and delivery tracker.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on etsy for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-client-onboarding-starter-kit">View details</a>
-              <a class="btn secondary" href="https://www.etsy.com/listing/4522011484/client-onboarding-template-notion-client">Buy now</a>
+              <a class="btn secondary" href="https://www.etsy.com/listing/4522011484/client-onboarding-template-notion-client" target="_blank" rel="noopener">Buy on Etsy</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7628,10 +7670,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Keep every lead moving with a simple solo CRM you can review in one weekly session.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on etsy for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-solo-crm-follow-up-system">View details</a>
-              <a class="btn secondary" href="https://www.etsy.com/listing/4522012472/solo-crm-notion-template-follow-up">Buy now</a>
+              <a class="btn secondary" href="https://www.etsy.com/listing/4522012472/solo-crm-notion-template-follow-up" target="_blank" rel="noopener">Buy on Etsy</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7667,10 +7709,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Track applications, tailor your story, and follow up without losing the thread.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on pinterest for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-resume-tailoring-job-tracker-kit">View details</a>
-              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858155035/">Buy now</a>
+              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858155035/" target="_blank" rel="noopener">Buy on Pinterest</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7710,10 +7752,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Onboard new clients in under 30 minutes with a repeatable welcome, kickoff, and delivery tracker.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on pinterest for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-client-onboarding-starter-kit">View details</a>
-              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858155286/">Buy now</a>
+              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858155286/" target="_blank" rel="noopener">Buy on Pinterest</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7753,10 +7795,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Keep every lead moving with a simple solo CRM you can review in one weekly session.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on pinterest for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-solo-crm-follow-up-system">View details</a>
-              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858155358/">Buy now</a>
+              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858155358/" target="_blank" rel="noopener">Buy on Pinterest</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7792,10 +7834,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Track applications, tailor your story, and follow up without losing the thread.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on gumroad for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-resume-tailoring-job-tracker-kit">View details</a>
-              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/nfuhde">Buy now</a>
+              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/nfuhde" target="_blank" rel="noopener">Buy on Gumroad</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7831,10 +7873,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Turn messy bot-operation notes into clearer incident summaries, structured bug reports, postmortems, comparison checklists, and coding-agent task briefs without inventing facts or giving trading advice.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on pinterest for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/the-watchers-edge-botops-toolkit">View details</a>
-              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858156839/">Buy now</a>
+              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858156839/" target="_blank" rel="noopener">Buy on Pinterest</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7870,10 +7912,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Review AI output with a repeatable rubric before it embarrasses your brand or team.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on pinterest for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-ai-output-qa-review-kit">View details</a>
-              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858157029/">Buy now</a>
+              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858157029/" target="_blank" rel="noopener">Buy on Pinterest</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7913,10 +7955,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Turn messy tribal knowledge into SOPs and runbooks your team can actually maintain.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on pinterest for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-sop-runbook-builder-pack">View details</a>
-              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858157065/">Buy now</a>
+              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858157065/" target="_blank" rel="noopener">Buy on Pinterest</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7952,10 +7994,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Track invoices, overdue payments, and weekly cash position from one simple dashboard.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on pinterest for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-invoice-cash-flow-toolkit">View details</a>
-              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858157101/">Buy now</a>
+              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858157101/" target="_blank" rel="noopener">Buy on Pinterest</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -7991,10 +8033,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Run faster research sprints without losing the evidence trail.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on pinterest for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-ai-research-sprint-kit">View details</a>
-              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858157997/">Buy now</a>
+              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858157997/" target="_blank" rel="noopener">Buy on Pinterest</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -8030,10 +8072,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Run a clean weekly metrics review without building a full analytics stack.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on pinterest for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-weekly-kpi-dashboard-scorecard">View details</a>
-              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858158331/">Buy now</a>
+              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858158331/" target="_blank" rel="noopener">Buy on Pinterest</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -8069,10 +8111,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Turn one content idea into a repeatable multi-channel publishing system.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on pinterest for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-content-repurposing-calendar-kit">View details</a>
-              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858166413/">Buy now</a>
+              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858166413/" target="_blank" rel="noopener">Buy on Pinterest</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -8108,10 +8150,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Run AI agents with a clearer logbook, change trail, and access view.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on pinterest for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-ai-agent-ops-logbook">View details</a>
-              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858170451/">Buy now</a>
+              <a class="btn secondary" href="https://ca.pinterest.com/pin/1111544751858170451/" target="_blank" rel="noopener">Buy on Pinterest</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -8151,10 +8193,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Set up a cleaner operator stack faster, with five practical systems that help you move from lead follow-up to delivery and review with less chaos.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on gumroad for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-operator-systems-bundle">View details</a>
-              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/operator-systems-bundle">Buy now</a>
+              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/operator-systems-bundle" target="_blank" rel="noopener">Buy on Gumroad</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -8190,10 +8232,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Review AI output with a repeatable rubric before it embarrasses your brand or team.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on etsy for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-ai-output-qa-review-kit">View details</a>
-              <a class="btn secondary" href="https://www.etsy.com/listing/4522444257/ai-content-qa-template-review-checklist">Buy now</a>
+              <a class="btn secondary" href="https://www.etsy.com/listing/4522444257/ai-content-qa-template-review-checklist" target="_blank" rel="noopener">Buy on Etsy</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -8233,10 +8275,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Turn messy tribal knowledge into SOPs and runbooks your team can actually maintain.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on etsy for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-sop-runbook-builder-pack">View details</a>
-              <a class="btn secondary" href="https://www.etsy.com/listing/4522436816/sop-template-runbook-builder-operations">Buy now</a>
+              <a class="btn secondary" href="https://www.etsy.com/listing/4522436816/sop-template-runbook-builder-operations" target="_blank" rel="noopener">Buy on Etsy</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -8272,10 +8314,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Track invoices, overdue payments, and weekly cash position from one simple dashboard.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on etsy for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-invoice-cash-flow-toolkit">View details</a>
-              <a class="btn secondary" href="https://www.etsy.com/listing/4522450760/invoice-tracker-template-cash-flow">Buy now</a>
+              <a class="btn secondary" href="https://www.etsy.com/listing/4522450760/invoice-tracker-template-cash-flow" target="_blank" rel="noopener">Buy on Etsy</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -8311,10 +8353,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Turn one content idea into a repeatable multi-channel publishing system.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on etsy for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-content-repurposing-calendar-kit">View details</a>
-              <a class="btn secondary" href="https://www.etsy.com/listing/4522464416/content-calendar-template-repurposing">Buy now</a>
+              <a class="btn secondary" href="https://www.etsy.com/listing/4522464416/content-calendar-template-repurposing" target="_blank" rel="noopener">Buy on Etsy</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -8350,10 +8392,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Run faster research sprints without losing the evidence trail.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on etsy for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-ai-research-sprint-kit">View details</a>
-              <a class="btn secondary" href="https://www.etsy.com/listing/4522468748/research-tracker-template-source-log">Buy now</a>
+              <a class="btn secondary" href="https://www.etsy.com/listing/4522468748/research-tracker-template-source-log" target="_blank" rel="noopener">Buy on Etsy</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -8389,10 +8431,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Run a clean weekly metrics review without building a full analytics stack.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on etsy for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-weekly-kpi-dashboard-scorecard">View details</a>
-              <a class="btn secondary" href="https://www.etsy.com/listing/4522464209/kpi-dashboard-template-weekly-scorecard">Buy now</a>
+              <a class="btn secondary" href="https://www.etsy.com/listing/4522464209/kpi-dashboard-template-weekly-scorecard" target="_blank" rel="noopener">Buy on Etsy</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -8428,10 +8470,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Run AI agents with a clearer logbook, change trail, and access view.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on etsy for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-ai-agent-ops-logbook">View details</a>
-              <a class="btn secondary" href="https://www.etsy.com/listing/4522467665/ai-ops-logbook-template-agent-run-log">Buy now</a>
+              <a class="btn secondary" href="https://www.etsy.com/listing/4522467665/ai-ops-logbook-template-agent-run-log" target="_blank" rel="noopener">Buy on Etsy</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -8471,10 +8513,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Use one repeatable workspace to see what is in progress, what is waiting, what needs client approval, and what needs a follow-up next.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on etsy for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-client-portal-delivery-hub">View details</a>
-              <a class="btn secondary" href="https://www.etsy.com/listing/4523022892/client-portal-template-client-onboarding">Buy now</a>
+              <a class="btn secondary" href="https://www.etsy.com/listing/4523022892/client-portal-template-client-onboarding" target="_blank" rel="noopener">Buy on Etsy</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -8514,7 +8556,7 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Use one repeatable workspace to see what is in progress, what is waiting, what needs client approval, and what needs a follow-up next.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on gumroad for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-client-portal-delivery-hub">View details</a>
               
@@ -8557,7 +8599,7 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Use one repeatable workspace to see what is in progress, what is waiting, what needs client approval, and what needs a follow-up next.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on pinterest for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-client-portal-delivery-hub">View details</a>
               
@@ -8600,10 +8642,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Move from vague affiliate ideas to a first organized affiliate-resource page plan with categories, disclosure placement, tracked links, launch steps, and a repeatable next-week publishing habit.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on gumroad for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-amazon-affiliate-store-quickstart-kit">View details</a>
-              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/amazon-affiliate-store-quickstart-kit">Buy now</a>
+              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/amazon-affiliate-store-quickstart-kit" target="_blank" rel="noopener">Buy on Gumroad</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -8643,10 +8685,10 @@
           </div>
           <p class="muted"><strong>Quick result:</strong> Move from a vague bot idea into a clearer project plan with worksheets, paper-testing boundaries, risk-review prompts, build notes, troubleshooting structure, staged AI prompt workflows, readable sanitized interface planning examples, and a decision log.</p>
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on gumroad for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twetrade-bot-builder-workbook">View details</a>
-              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/twetrade-bot-builder-workbook">Buy now</a>
+              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/twetrade-bot-builder-workbook" target="_blank" rel="noopener">Buy on Gumroad</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>
@@ -8682,10 +8724,10 @@
           </div>
           
           <div class="product-card-actions">
-            <div class="muted" style="font-size: 0.95rem; max-width: 360px;">Review fit first, or open checkout when this offer already matches the problem.</div>
+            <div class="muted" style="font-size: 0.95rem; max-width: 380px;">Review fit first. Checkout opens on gumroad for final price, taxes, currency, delivery, and seller terms.</div>
             <div class="cta-row">
               <a class="btn" href="/store/twe-resources-traffic-tracker-promo-log">View details</a>
-              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/twe-resources-traffic-tracker-promo-log">Buy now</a>
+              <a class="btn secondary" href="https://nanoojr.gumroad.com/l/twe-resources-traffic-tracker-promo-log" target="_blank" rel="noopener">Buy on Gumroad</a>
               <a class="btn ghost" href="/collections">Compare options</a>
             </div>
           </div>

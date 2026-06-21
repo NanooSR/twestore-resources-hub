@@ -396,6 +396,45 @@
         margin-bottom: 14px;
         box-shadow: var(--shadow-sm);
       }
+      .checkout-handoff-card {
+        padding: 24px;
+        border-radius: 24px;
+        border-color: rgba(9, 103, 114, 0.20);
+        background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(220,238,237,0.62));
+      }
+      .checkout-handoff-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+        gap: 18px;
+        align-items: start;
+      }
+      .checkout-handoff-steps {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .checkout-handoff-steps article {
+        display: grid;
+        gap: 8px;
+        padding: 14px;
+        border-radius: 16px;
+        border: 1px solid rgba(9, 103, 114, 0.16);
+        background: rgba(255,255,255,0.86);
+      }
+      .checkout-step-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        background: var(--brand);
+        color: #fff;
+        font-weight: 800;
+      }
+      .checkout-handoff-steps strong { color: var(--ink); }
+      .checkout-handoff-steps .muted { margin-bottom: 0; }
+      .checkout-handoff-actions { margin-top: 16px; }
       .product-preview-copy-card {
         align-self: stretch;
         background: rgba(255,255,255,0.84);
@@ -1553,6 +1592,9 @@
         }
         .advanced-amazon-results { grid-template-columns: 1fr; }
         .product-scan-grid { grid-template-columns: 1fr; }
+        .checkout-handoff-grid,
+        .checkout-handoff-steps { grid-template-columns: 1fr; }
+        .checkout-handoff-card { padding: 16px; }
         .store-results-summary { grid-template-columns: 1fr; padding: 14px; }
         .store-result-count-grid { grid-template-columns: 1fr 1fr; }
         .store-result-count { min-height: 66px; padding: 10px; }
@@ -5012,6 +5054,7 @@
     </section>
           
 
+
 <section class="panel hero split">
   <div>
     <p class="eyebrow">Offer details</p>
@@ -5022,7 +5065,7 @@
        · gumroad
     </p>
     <div class="cta-row">
-      <a class="btn" href="https://nanoojr.gumroad.com/l/twe-resources-traffic-tracker-promo-log">Open secure checkout</a>
+      <a class="btn" href="https://nanoojr.gumroad.com/l/twe-resources-traffic-tracker-promo-log" target="_blank" rel="noopener">Open secure checkout</a>
       <a class="btn secondary" href="/store">Back to store</a>
       <a class="btn ghost" href="/store?family=business-systems-and-template-kits">More in this product family</a>
     </div>
@@ -5036,7 +5079,7 @@
       <p class="muted">Review the fit, what is included, and the checkout path before paying. Previews are buyer-safe and do not expose private accounts, credentials, balances, API keys, or sensitive logs.</p>
       
       <div class="cta-row" style="margin-top: 12px;">
-        <a class="btn" href="https://nanoojr.gumroad.com/l/twe-resources-traffic-tracker-promo-log">Open secure checkout</a>
+        <a class="btn" href="https://nanoojr.gumroad.com/l/twe-resources-traffic-tracker-promo-log" target="_blank" rel="noopener">Open secure checkout</a>
       </div>
       
     </article>
@@ -5077,6 +5120,40 @@
 </section>
 
 
+<section class="section card checkout-handoff-card" id="checkout-handoff">
+  <div class="checkout-handoff-grid">
+    <div>
+      <p class="eyebrow">Checkout handoff</p>
+      <h2>Know where checkout happens before you leave this site</h2>
+      <p class="muted">The Watchers Edge product page helps you check fit, delivery, support, and product boundaries before paying. When you are ready, checkout opens on <strong>gumroad</strong> at <strong>nanoojr.gumroad.com</strong>.</p>
+    </div>
+    <div class="checkout-handoff-steps" aria-label="External checkout boundary for TWE Resources Traffic Tracker &amp; Promo Log — Share Kit, Link Log &amp; Weekly Review">
+      <article>
+        <span class="checkout-step-number">1</span>
+        <strong>Review fit here</strong>
+        <p class="muted">Confirm the product, format, support route, and no-guarantee boundaries on TheWatchersEdge.ca first.</p>
+      </article>
+      <article>
+        <span class="checkout-step-number">2</span>
+        <strong>Checkout on Gumroad</strong>
+        <p class="muted">Final price, taxes, currency, delivery mechanics, account login, seller terms, and payment are confirmed by the checkout platform.</p>
+      </article>
+      <article>
+        <span class="checkout-step-number">3</span>
+        <strong>Save your receipt</strong>
+        <p class="muted">For delivery or access help, include the product name, platform, and order or receipt reference when contacting support.</p>
+      </article>
+    </div>
+  </div>
+  <div class="cta-row checkout-handoff-actions">
+    <a class="btn" href="https://nanoojr.gumroad.com/l/twe-resources-traffic-tracker-promo-log" target="_blank" rel="noopener">Open Gumroad checkout</a>
+    <a class="btn secondary" href="/support">Read support guidance</a>
+    <a class="btn ghost" href="/store">Keep browsing Store offers</a>
+  </div>
+</section>
+
+
+
 <section class="section card strong-card" style="padding: 22px; border-radius: 22px;">
   <div class="section-head" style="align-items: center; margin-bottom: 12px;">
     <div>
@@ -5086,7 +5163,7 @@
     </div>
     <span class="pill is-accent">Code: STARTNOW20</span>
   </div>
-  <a class="btn" href="https://nanoojr.gumroad.com/l/twe-resources-traffic-tracker-promo-log/STARTNOW20">Open discounted Gumroad page</a>
+  <a class="btn" href="https://nanoojr.gumroad.com/l/twe-resources-traffic-tracker-promo-log/STARTNOW20" target="_blank" rel="noopener">Open discounted Gumroad page</a>
 </section>
 
 
@@ -5097,7 +5174,7 @@
       <h2>Quick visual summary before checkout</h2>
       <p class="muted" style="margin-bottom: 0;">This product does not need private screenshots to be clear. Use this safe Store preview plus the fit checklist below to confirm whether the offer matches your next job.</p>
     </div>
-    <a class="btn" href="https://nanoojr.gumroad.com/l/twe-resources-traffic-tracker-promo-log">Open secure checkout</a>
+    <a class="btn" href="https://nanoojr.gumroad.com/l/twe-resources-traffic-tracker-promo-log" target="_blank" rel="noopener">Open secure checkout</a>
   </div>
   <div class="grid two product-preview-grid">
     
@@ -5135,7 +5212,7 @@ The TWE Resources Traffic Tracker &amp; Promo Log gives buyers a simple way to r
     <p class="eyebrow">Where you buy</p>
     <h2>nanoojr.gumroad.com</h2>
     <p class="muted">You will complete your purchase on the verified checkout page for this offer.</p>
-    <p><a class="text-link" href="https://nanoojr.gumroad.com/l/twe-resources-traffic-tracker-promo-log">https://nanoojr.gumroad.com/l/twe-resources-traffic-tracker-promo-log</a></p>
+    <p><a class="text-link" href="https://nanoojr.gumroad.com/l/twe-resources-traffic-tracker-promo-log" target="_blank" rel="noopener">https://nanoojr.gumroad.com/l/twe-resources-traffic-tracker-promo-log</a></p>
   </article>
 </section>
 
@@ -5254,7 +5331,7 @@ The TWE Resources Traffic Tracker &amp; Promo Log gives buyers a simple way to r
     <div class="detail-list">
       <a class="text-link" href="#faq-section">Jump to full FAQ</a>
       <a class="text-link" href="/support">Open support guidance</a>
-      <a class="text-link" href="https://nanoojr.gumroad.com/l/twe-resources-traffic-tracker-promo-log">Open live checkout</a>
+      <a class="text-link" href="https://nanoojr.gumroad.com/l/twe-resources-traffic-tracker-promo-log" target="_blank" rel="noopener">Open live checkout</a>
     </div>
   </article>
 </section>
@@ -5413,7 +5490,7 @@ The TWE Resources Traffic Tracker &amp; Promo Log gives buyers a simple way to r
       <p class="muted">USD $19.00 · v0.1 · gumroad</p>
       <div class="cta-row">
         <a class="btn secondary" href="/store/the-watchers-edge-botops-toolkit">View details</a>
-        <a class="btn ghost" href="https://nanoojr.gumroad.com/l/ltusy">Open checkout</a>
+        <a class="btn ghost" href="https://nanoojr.gumroad.com/l/ltusy" target="_blank" rel="noopener">Open checkout</a>
       </div>
     </article>
     
@@ -5422,7 +5499,7 @@ The TWE Resources Traffic Tracker &amp; Promo Log gives buyers a simple way to r
       <p class="muted">USD $19.00 · v1 · gumroad</p>
       <div class="cta-row">
         <a class="btn secondary" href="/store/twe-sop-runbook-builder-pack">View details</a>
-        <a class="btn ghost" href="https://nanoojr.gumroad.com/l/incyjw">Open checkout</a>
+        <a class="btn ghost" href="https://nanoojr.gumroad.com/l/incyjw" target="_blank" rel="noopener">Open checkout</a>
       </div>
     </article>
     
@@ -5431,7 +5508,7 @@ The TWE Resources Traffic Tracker &amp; Promo Log gives buyers a simple way to r
       <p class="muted">USD $15.00 · v1 · gumroad</p>
       <div class="cta-row">
         <a class="btn secondary" href="/store/twe-weekly-kpi-dashboard-scorecard">View details</a>
-        <a class="btn ghost" href="https://nanoojr.gumroad.com/l/qnigp">Open checkout</a>
+        <a class="btn ghost" href="https://nanoojr.gumroad.com/l/qnigp" target="_blank" rel="noopener">Open checkout</a>
       </div>
     </article>
     

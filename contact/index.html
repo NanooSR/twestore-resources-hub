@@ -396,6 +396,45 @@
         margin-bottom: 14px;
         box-shadow: var(--shadow-sm);
       }
+      .checkout-handoff-card {
+        padding: 24px;
+        border-radius: 24px;
+        border-color: rgba(9, 103, 114, 0.20);
+        background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(220,238,237,0.62));
+      }
+      .checkout-handoff-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+        gap: 18px;
+        align-items: start;
+      }
+      .checkout-handoff-steps {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .checkout-handoff-steps article {
+        display: grid;
+        gap: 8px;
+        padding: 14px;
+        border-radius: 16px;
+        border: 1px solid rgba(9, 103, 114, 0.16);
+        background: rgba(255,255,255,0.86);
+      }
+      .checkout-step-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        background: var(--brand);
+        color: #fff;
+        font-weight: 800;
+      }
+      .checkout-handoff-steps strong { color: var(--ink); }
+      .checkout-handoff-steps .muted { margin-bottom: 0; }
+      .checkout-handoff-actions { margin-top: 16px; }
       .product-preview-copy-card {
         align-self: stretch;
         background: rgba(255,255,255,0.84);
@@ -1553,6 +1592,9 @@
         }
         .advanced-amazon-results { grid-template-columns: 1fr; }
         .product-scan-grid { grid-template-columns: 1fr; }
+        .checkout-handoff-grid,
+        .checkout-handoff-steps { grid-template-columns: 1fr; }
+        .checkout-handoff-card { padding: 16px; }
         .store-results-summary { grid-template-columns: 1fr; padding: 14px; }
         .store-result-count-grid { grid-template-columns: 1fr 1fr; }
         .store-result-count { min-height: 66px; padding: 10px; }
