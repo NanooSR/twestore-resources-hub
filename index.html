@@ -42,6 +42,7 @@
         --shell: 1180px;
       }
       * { box-sizing: border-box; }
+      *, *::before, *::after { min-width: 0; }
       html { scroll-behavior: smooth; }
       body {
         margin: 0;
@@ -55,6 +56,15 @@
         color: var(--ink);
       }
       a { color: inherit; }
+      h1, h2, h3, h4, h5, h6,
+      p, li, dt, dd, blockquote,
+      a, button, label, input, textarea,
+      .btn, .pill, .card, .mini-card, .feature-card,
+      .product-card-title, .product-card-lede, .product-scan-card,
+      .banner-card, .nav-links, .footer-links {
+        overflow-wrap: anywhere;
+        word-break: normal;
+      }
       img { display: block; max-width: 100%; }
       .shell { max-width: calc(var(--shell) + 48px); margin: 0 auto; padding: 24px; }
       .site-header-band {
@@ -106,6 +116,7 @@
         align-items: center;
         gap: 12px;
         min-width: 0;
+        min-height: 44px;
         text-decoration: none;
       }
       .brand-mark {
@@ -298,6 +309,9 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
+        white-space: normal;
+        line-height: 1.16;
         gap: 8px;
         min-height: 44px;
         padding: 10px 16px;
@@ -1022,8 +1036,7 @@
         align-content: start;
         gap: 10px;
         min-height: 226px;
-        max-height: 226px;
-        overflow: hidden;
+        overflow: visible;
       }
       .store-weather-visual {
         display: flex;
@@ -1048,8 +1061,7 @@
       .store-weather-icon img { width: 68px; height: 68px; object-fit: contain; }
       .store-weather-status {
         min-height: 44px;
-        max-height: 58px;
-        overflow: hidden;
+        overflow: visible;
         font-weight: 650;
         color: var(--ink-soft);
       }
@@ -1066,6 +1078,12 @@
       .store-weather-card button[disabled] {
         opacity: 0.72;
         cursor: wait;
+      }
+      .store-weather-card button.pill {
+        justify-content: center;
+        min-height: 44px;
+        padding: 9px 12px;
+        line-height: 1.12;
       }
       .support-chat-widget {
         grid-area: support;
@@ -1571,20 +1589,20 @@
           font-size: 0.86rem;
         }
         .nav-links {
-          display: flex;
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
           gap: 6px;
-          overflow-x: auto;
-          padding: 0 2px 2px;
-          justify-content: flex-start;
-          scrollbar-width: none;
+          overflow: visible;
+          padding: 0;
+          justify-content: stretch;
         }
-        .nav-links::-webkit-scrollbar { display: none; }
         .nav-links a {
-          flex: 0 0 auto;
+          width: 100%;
           min-height: 44px;
-          padding: 10px 12px;
-          font-size: 0.82rem;
-          white-space: nowrap;
+          padding: 9px 7px;
+          font-size: 0.79rem;
+          white-space: normal;
+          line-height: 1.08;
         }
         .site-header-band.store-top-corner-grid { grid-template-columns: 1fr; gap: 10px; margin: 0 0 12px; }
         .store-corner-card { padding: 12px; border-radius: 16px; }
@@ -1608,6 +1626,21 @@
           max-height: calc(100vh - 96px);
         }
         .advanced-amazon-results { grid-template-columns: 1fr; }
+        .affiliate-banner {
+          padding: 18px;
+          overflow: visible;
+        }
+        .affiliate-scroll {
+          grid-auto-flow: row;
+          grid-auto-columns: unset;
+          grid-template-columns: 1fr;
+          overflow-x: visible;
+          padding: 4px 0 0;
+        }
+        .affiliate-tile {
+          min-height: 0;
+          padding: 16px;
+        }
         .product-scan-grid { grid-template-columns: 1fr; }
         .checkout-handoff-grid,
         .checkout-handoff-steps { grid-template-columns: 1fr; }
