@@ -14,7 +14,7 @@ The note points visitors to:
 
 - the live The Watchers Edge Store: https://thewatchersedge.ca/store/
 - the STARTNOW20 launch-code page: https://thewatchersedge.ca/startnow20/
-- discounted Gumroad setup-kit paths:
+- discounted Gumroad setup-kit paths, with the Operator Systems Bundle positioned as the best-value direct paid route when a buyer needs more than one isolated template:
   - TWETrade Bot Builder Workbook: https://nanoojr.gumroad.com/l/twetrade-bot-builder-workbook/STARTNOW20
   - Amazon Affiliate Store Quickstart Kit: https://nanoojr.gumroad.com/l/amazon-affiliate-store-quickstart-kit/STARTNOW20
   - Operator Systems Bundle: https://nanoojr.gumroad.com/l/operator-systems-bundle/STARTNOW20
