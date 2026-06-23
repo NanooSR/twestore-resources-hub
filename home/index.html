@@ -1631,15 +1631,18 @@
           overflow: visible;
         }
         .affiliate-scroll {
-          grid-auto-flow: row;
-          grid-auto-columns: unset;
-          grid-template-columns: 1fr;
-          overflow-x: visible;
-          padding: 4px 0 0;
+          grid-auto-flow: column;
+          grid-auto-columns: minmax(260px, 82vw);
+          grid-template-columns: unset;
+          overflow-x: auto;
+          overscroll-behavior-x: contain;
+          scroll-snap-type: x proximity;
+          padding: 4px 2px 6px 0;
         }
         .affiliate-tile {
           min-height: 0;
           padding: 16px;
+          scroll-snap-align: start;
         }
         .product-scan-grid { grid-template-columns: 1fr; }
         .checkout-handoff-grid,
@@ -3599,55 +3602,8 @@
       </div>
     </article>
     
-    <article class="affiliate-tile">
-      <div class="resource-picture is-amazon-photo"><img src="https://m.media-amazon.com/images/I/61-K2lXmHQL._AC_SL1500_.jpg" alt="EMEET 1080P Webcam with Microphone, C960 Web Camera, 2 Mics Streaming Webcam, 90°FOV Computer Camera, Plug and Play USB Web Cam for Online Calling/Conferencing, Zoom/Teams/Facetime/YouTube, Laptop/PC" loading="lazy"></div>
-      <p class="eyebrow">Webcams</p>
-      <h3>Webcam for meetings, tutorials, and interviews</h3>
-      <p class="muted">A broad creator and remote-work category where better clarity can make buyer-facing work feel more trustworthy.</p>
-      <p class="resource-card-amazon-title"><strong>Amazon item:</strong> EMEET 1080P Webcam with Microphone, C960 Web Camera, 2 Mics Streaming Webcam, 90°FOV Computer Camera, Plug and Play USB Web Cam for Online Calling/Conferencing, Zoom/Teams/Facetime/YouTube, Laptop/PC</p>
-      <div class="cta-row" style="margin-top: 0;">
-        <a class="btn" href="https://www.amazon.ca/dp/B07M6Y7355?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
-        <a class="btn ghost" href="https://www.thewatchersedge.ca/creator-gear-deals.html">Read guide</a>
-      </div>
-    </article>
-    
-    <article class="affiliate-tile">
-      <div class="resource-picture is-amazon-photo"><img src="https://m.media-amazon.com/images/I/81zFeH-C0gL._AC_SL1500_.jpg" alt="InnoView Portable Monitor 15.6&amp;#34; 1080P Portable Monitor for Laptop with Protective Sleeve Built-in 90° Adjustable Stand USB C HDMI Ultra-Slim Laptop Screen Extender for MacBook Phone PS Xbox Switch" loading="lazy"></div>
-      <p class="eyebrow">Monitors</p>
-      <h3>Portable monitor for source comparison</h3>
-      <p class="muted">Helpful when research, AI review, job-search work, or KPI sessions need notes and source material visible together.</p>
-      <p class="resource-card-amazon-title"><strong>Amazon item:</strong> InnoView Portable Monitor 15.6&#34; 1080P Portable Monitor for Laptop with Protective Sleeve Built-in 90° Adjustable Stand USB C HDMI Ultra-Slim Laptop Screen Extender for MacBook Phone PS Xbox Switch</p>
-      <div class="cta-row" style="margin-top: 0;">
-        <a class="btn" href="https://www.amazon.ca/dp/B0B9GLG86C?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
-        <a class="btn ghost" href="https://www.thewatchersedge.ca/best-ai-research-desk-setup.html">Read guide</a>
-      </div>
-    </article>
-    
-    <article class="affiliate-tile">
-      <div class="resource-picture is-amazon-photo"><img src="https://m.media-amazon.com/images/I/61+QhB0YylL._AC_SL1500_.jpg" alt="West Bend 58002 Highly Polished Aluminum Commercial Coffee Urn Features Automatic Temperature Control Large Capacity with Quick Brewing Easy Prep and Clean Up, 42-Cup, Silver" loading="lazy"></div>
-      <p class="eyebrow">Coffee Urns</p>
-      <h3>Coffee urn for fellowship and welcome-hour demand</h3>
-      <p class="muted">A repeat-use church procurement category for lobbies, fellowship halls, volunteer rooms, and service-day hospitality.</p>
-      <p class="resource-card-amazon-title"><strong>Amazon item:</strong> West Bend 58002 Highly Polished Aluminum Commercial Coffee Urn Features Automatic Temperature Control Large Capacity with Quick Brewing Easy Prep and Clean Up, 42-Cup, Silver</p>
-      <div class="cta-row" style="margin-top: 0;">
-        <a class="btn" href="https://www.amazon.ca/dp/B00006WNSN?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
-        <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-kitchen-coffee-and-fellowship-supplies.html">Read guide</a>
-      </div>
-    </article>
-    
-    <article class="affiliate-tile">
-      <div class="resource-picture is-amazon-photo"><img src="https://m.media-amazon.com/images/I/718+0nDBFrL._AC_SL1500_.jpg" alt="TONOR Wireless Microphone,Metal Dual Professional UHF Cordless Dynamic Mic Handheld Microphone System for Home Karaoke, Meeting, Party, Church, DJ, Wedding, Home KTV Set, 200ft(TW820)" loading="lazy"></div>
-      <p class="eyebrow">Handheld</p>
-      <h3>Wireless microphone system for services and events</h3>
-      <p class="muted">A higher-intent ministry gear category that can support services, classrooms, events, and volunteer-run recordings.</p>
-      <p class="resource-card-amazon-title"><strong>Amazon item:</strong> TONOR Wireless Microphone,Metal Dual Professional UHF Cordless Dynamic Mic Handheld Microphone System for Home Karaoke, Meeting, Party, Church, DJ, Wedding, Home KTV Set, 200ft(TW820)</p>
-      <div class="cta-row" style="margin-top: 0;">
-        <a class="btn" href="https://www.amazon.ca/dp/B07RKN9FF6?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">Open on Amazon.ca</a>
-        <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-livestream-teaching-and-volunteer-coordination-tools.html">Read guide</a>
-      </div>
-    </article>
-    
   </div>
+  <p class="muted" style="margin-top: 12px;">The homepage keeps this lane short on smaller screens. Open Resources &amp; Gear Store for the full Amazon category list and every current pick.</p>
 </section>
 
 <section class="section card strong-card" id="fast-start-offer" style="padding: 24px; border-radius: 22px;">
