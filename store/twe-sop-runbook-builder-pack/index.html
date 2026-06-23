@@ -382,6 +382,21 @@
         border-radius: 24px;
         background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(220,238,237,0.54));
       }
+      .product-demo-video-section {
+        padding: 26px;
+        border-radius: 24px;
+        border-color: rgba(12, 74, 110, 0.22);
+        background: linear-gradient(135deg, rgba(248, 250, 252, 0.98), rgba(224, 242, 254, 0.58));
+      }
+      .product-demo-video {
+        display: block;
+        width: 100%;
+        max-height: min(68vh, 720px);
+        border-radius: 22px;
+        border: 1px solid rgba(12, 74, 110, 0.24);
+        background: #07111f;
+        box-shadow: var(--shadow);
+      }
       .product-hero-proof-card {
         background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(220,238,237,0.52));
         border-color: rgba(9, 103, 114, 0.22);
@@ -3490,6 +3505,23 @@
     <span class="pill is-accent">Code: STARTNOW20</span>
   </div>
   <a class="btn" href="https://nanoojr.gumroad.com/l/incyjw/STARTNOW20" target="_blank" rel="noopener">Open discounted Gumroad page</a>
+</section>
+
+
+
+<section class="section card product-demo-video-section" id="product-demo-video">
+  <div class="section-head" style="align-items: center; margin-bottom: 16px;">
+    <div>
+      <p class="eyebrow">Watch the product in use</p>
+      <h2>See, hear, and preview what this kit helps you build</h2>
+      <p class="muted" style="margin-bottom: 0;">This short buyer-safe demo uses public preview images only. It does not show private accounts, buyer data, sales metrics, credentials, balances, API keys, or sensitive logs.</p>
+    </div>
+    <a class="btn" href="https://nanoojr.gumroad.com/l/incyjw" target="_blank" rel="noopener">Buy on Gumroad</a>
+  </div>
+  <video class="product-demo-video" controls preload="metadata" poster="/static/public_site/product_previews/twe-sop-runbook-builder-pack/01_sop_runbook_hero.png" aria-label="Buyer-safe product demo video for TWE SOP &amp; Runbook Builder Pack">
+    <source src="/static/public_site/product_videos/twe-sop-runbook-builder-pack_demo.mp4" type="video/mp4">
+    Your browser does not support embedded video. You can still use the preview gallery and checkout links on this page.
+  </video>
 </section>
 
 
