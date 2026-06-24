@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Church blog launch art</title>
+  <desc id="desc">A warm church-themed illustration with a chapel, open book, and tea cup.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fcfb"/>
+      <stop offset="52%" stop-color="#dceeed"/>
+      <stop offset="100%" stop-color="#fff1d6"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f7efe3"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="34" fill="url(#bg)"/>
+  <circle cx="188" cy="54" r="26" fill="#fff7e8"/>
+  <circle cx="60" cy="52" r="18" fill="#f7ebe6"/>
+  <rect x="24" y="146" width="192" height="70" rx="22" fill="url(#card)" stroke="#d8ddd6"/>
+  <path d="M72 150h96v20H72z" fill="#e8f3f6"/>
+  <path d="M84 154h72v54H84z" rx="10" fill="#fffdf9" stroke="#c4d1cb"/>
+  <path d="M120 154v54" stroke="#d8ddd6" stroke-width="3"/>
+  <path d="M94 164c8-4 16-4 24 0v24c-8-4-16-4-24 0z" fill="#ffe8bf"/>
+  <path d="M122 164c8-4 16-4 24 0v24c-8-4-16-4-24 0z" fill="#dceeed"/>
+  <path d="M132 80l22 18v34h-44V98z" fill="#096772"/>
+  <path d="M104 102h56" stroke="#064c55" stroke-width="6" stroke-linecap="round"/>
+  <path d="M132 66v30" stroke="#ef9b13" stroke-width="8" stroke-linecap="round"/>
+  <path d="M118 80h28" stroke="#ef9b13" stroke-width="8" stroke-linecap="round"/>
+  <rect x="40" y="110" width="44" height="56" rx="18" fill="#fff8ee" stroke="#d4c4a7"/>
+  <path d="M48 126h22a10 10 0 0 1 10 10v8a10 10 0 0 1-10 10H48z" fill="#f4c98c"/>
+  <path d="M70 128c9 1 14 6 14 14s-5 13-14 14" fill="none" stroke="#c98736" stroke-width="5" stroke-linecap="round"/>
+  <path d="M166 130c10-16 32-16 42 0" fill="none" stroke="#8c5b53" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="176" cy="126" r="6" fill="#8c5b53"/>
+  <circle cx="198" cy="126" r="6" fill="#8c5b53"/>
+  <text x="120" y="205" text-anchor="middle" font-family="'Source Sans 3', Arial, sans-serif" font-size="18" font-weight="700" fill="#17343a">Church Reads</text>
+</svg>

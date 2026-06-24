@@ -241,6 +241,79 @@
         box-shadow: 0 12px 26px rgba(9, 103, 114, 0.18);
         transform: translateY(-1px);
       }
+      .blog-launch-card {
+        display: grid;
+        align-content: start;
+        gap: 14px;
+        min-height: 100%;
+        padding: 16px;
+        border-radius: 18px;
+        border: 1px solid rgba(196, 209, 203, 0.92);
+        background: linear-gradient(160deg, rgba(255, 252, 247, 0.96), rgba(232, 243, 246, 0.92));
+        box-shadow: 0 12px 34px rgba(23, 52, 58, 0.08);
+      }
+      .blog-launch-card > p { margin-bottom: 0; }
+      .blog-launch-grid {
+        display: grid;
+        gap: 10px;
+      }
+      .blog-launch-tile {
+        display: grid;
+        grid-template-columns: 92px minmax(0, 1fr);
+        gap: 12px;
+        align-items: center;
+        padding: 10px;
+        border-radius: 16px;
+        border: 1px solid rgba(9, 103, 114, 0.16);
+        background: rgba(255, 255, 255, 0.84);
+        text-decoration: none;
+        color: inherit;
+        transition: 180ms ease;
+      }
+      .blog-launch-tile:hover,
+      .blog-launch-tile:focus-visible {
+        transform: translateY(-1px);
+        border-color: rgba(9, 103, 114, 0.4);
+        box-shadow: 0 14px 28px rgba(23, 52, 58, 0.12);
+      }
+      .blog-launch-tile.pet-blog-tile {
+        background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(255,241,214,0.64));
+      }
+      .blog-launch-tile.church-blog-tile {
+        background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(220,238,237,0.72));
+      }
+      .blog-launch-art {
+        width: 92px;
+        height: 92px;
+        border-radius: 16px;
+        border: 1px solid rgba(9, 103, 114, 0.12);
+        object-fit: cover;
+        box-shadow: 0 10px 22px rgba(23, 52, 58, 0.10);
+      }
+      .blog-launch-copy {
+        display: grid;
+        gap: 4px;
+      }
+      .blog-launch-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--brand);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .blog-launch-copy strong {
+        font-size: 1rem;
+        line-height: 1.12;
+        color: var(--ink);
+      }
+      .blog-launch-copy span:last-child {
+        color: var(--muted);
+        font-size: 0.88rem;
+        line-height: 1.35;
+      }
       .panel,
       .card,
       .feature-card,
@@ -1614,6 +1687,29 @@
           line-height: 1.08;
         }
         .site-header-band.store-top-corner-grid { grid-template-columns: 1fr; gap: 10px; margin: 0 0 12px; }
+        .blog-launch-card {
+          padding: 12px;
+          gap: 10px;
+        }
+        .blog-launch-grid {
+          grid-template-columns: 1fr;
+        }
+        .blog-launch-tile {
+          grid-template-columns: 74px minmax(0, 1fr);
+          gap: 10px;
+          padding: 8px;
+        }
+        .blog-launch-art {
+          width: 74px;
+          height: 74px;
+          border-radius: 14px;
+        }
+        .blog-launch-copy strong {
+          font-size: 0.92rem;
+        }
+        .blog-launch-copy span:last-child {
+          font-size: 0.82rem;
+        }
         .store-corner-card { padding: 12px; border-radius: 16px; }
         .store-corner-card h2 { font-size: 0.94rem; }
         .store-corner-card .muted { display: none; }
@@ -1683,7 +1779,31 @@
     <div class="shell">
       
       <div class="site-header-band store-top-corner-grid" aria-label="Site quick tools">
-        <div class="store-corner-spacer" aria-hidden="true"></div>
+        <aside class="blog-launch-card" aria-label="Featured resource blogs">
+          <div>
+            <p class="eyebrow">Featured blogs</p>
+            <h2 style="font-size: 1.08rem; margin-bottom: 6px;">Jump straight into the fun stuff</h2>
+            <p class="muted">Two faster reading lanes: one for church teams and one for pet lovers.</p>
+          </div>
+          <div class="blog-launch-grid">
+            <a class="blog-launch-tile church-blog-tile" href="https://thewatchersedgechurchsupplies.blogspot.com/" target="_blank" rel="noopener sponsored nofollow">
+              <img class="blog-launch-art" src="/static/public_site/church-blog-launch-art.svg" alt="Illustrated preview for the Church Supplies blog">
+              <span class="blog-launch-copy">
+                <span class="blog-launch-label">⛪ Church blog</span>
+                <strong>Church Supplies & devotionals</strong>
+                <span>Fun, practical reads for ministry teams, events, classrooms, and everyday church life.</span>
+              </span>
+            </a>
+            <a class="blog-launch-tile pet-blog-tile" href="https://pawsomepetgearhub.blogspot.com/" target="_blank" rel="noopener sponsored nofollow">
+              <img class="blog-launch-art" src="/static/public_site/pet-blog-launch-art.svg" alt="Illustrated preview for the Pet Gear blog">
+              <span class="blog-launch-copy">
+                <span class="blog-launch-label">🐾 Pet blog</span>
+                <strong>Pawsome Pet Gear Hub</strong>
+                <span>Buyer-friendly gear ideas for playful homes, comfort upgrades, and happy pet routines.</span>
+              </span>
+            </a>
+          </div>
+        </aside>
         <nav class="nav">
         <a class="brand" href="/">
           <img class="brand-mark" src="/static/public_site/the-watchers-edge-mark.png" alt="The Watchers Edge logo">
@@ -1706,6 +1826,8 @@
           <a href="/store">Store</a>
           <a href="/about">About</a>
           <a href="/resources">Resources</a>
+          <a href="https://thewatchersedgechurchsupplies.blogspot.com/" target="_blank" rel="noopener sponsored nofollow">Church Blog</a>
+          <a href="https://pawsomepetgearhub.blogspot.com/" target="_blank" rel="noopener sponsored nofollow">Pet Blog</a>
           <a href="/support">Support</a>
           <a href="/command-center">Buying Guide</a>
         </div>
@@ -7514,7 +7636,7 @@
       <h3>More pet resource trails</h3>
       <p class="muted">Pet content is kept as a secondary affiliate/resource stream and routes shoppers back to the main Store and support path.</p>
       <ul class="muted" style="padding-left: 20px; display: grid; gap: 7px;">
-        <li><a href="https://pawsomepetgearhub.blogspot.com/2025/07/welcome-to-pawsome-pet-gear-hub.html" target="_blank" rel="noopener sponsored nofollow">Welcome to Pawsome Pet Gear Hub</a></li>
+        <li><a href="https://pawsomepetgearhub.blogspot.com/2026/06/best-pet-cameras-for-home-check-ins.html" target="_blank" rel="noopener sponsored nofollow">Pet cameras and home check-in gear</a></li>
         <li><a href="https://pawsomepetgearhub.blogspot.com/2025/07/top-gps-dog-fences-of-2025-keep-your.html" target="_blank" rel="noopener sponsored nofollow">GPS dog fences</a></li>
         <li><a href="https://pawsomepetgearhub.blogspot.com/2025/07/best-dog-probiotics-and-digestive.html" target="_blank" rel="noopener sponsored nofollow">Dog probiotics and digestive supplements</a></li>
         <li><a href="https://pawsomepetgearhub.blogspot.com/2025/07/collagen-dog-chews-benefits-and-top.html" target="_blank" rel="noopener sponsored nofollow">Collagen dog chews</a></li>
