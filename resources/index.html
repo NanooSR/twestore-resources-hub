@@ -181,12 +181,14 @@
         font-weight: 700;
         color: var(--brand);
         white-space: nowrap;
+        flex: 0 0 auto;
       }
       .nav-search input {
         border: 0;
         background: transparent;
         padding: 0;
         min-width: 0;
+        flex: 1 1 auto;
       }
       .nav-search input:focus { outline: none; }
       .nav-search button {
@@ -1912,8 +1914,8 @@
           </span>
         </a>
         <form class="nav-search" action="/store" method="get">
-          <label for="global-search">Global search</label>
-          <input id="global-search" type="text" name="q" placeholder="Products, guides, FAQs, policies, church workflows">
+          <label for="global-search">Search</label>
+          <input id="global-search" type="text" name="q" placeholder="Products, guides, FAQs">
           <button type="submit">Search</button>
         </form>
         <div class="nav-links nav-links-primary">
