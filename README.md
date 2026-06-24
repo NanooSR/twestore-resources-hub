@@ -10,6 +10,14 @@ Read and share the current launch note here:
 
 https://thewatchersedge.ca/updates/resources-startnow20-launch/
 
+## Fastest direct paid path right now
+
+If someone wants the clearest paid route instead of browsing everything first, send them here:
+
+- **Operator Systems Bundle (STARTNOW20):** https://nanoojr.gumroad.com/l/operator-systems-bundle/STARTNOW20
+
+That is the current best-value direct paid path for buyers who need more than one isolated template or system.
+
 The note points visitors to:
 
 - the live The Watchers Edge Store: https://thewatchersedge.ca/store/
