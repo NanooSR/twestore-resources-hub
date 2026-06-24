@@ -861,17 +861,33 @@
       .strong-card .muted,
       .strong-card .stat-label { color: rgba(255,255,255,0.90); }
       .strong-card .eyebrow { color: #ffe4b5; }
+      .store-hero-panel {
+        position: relative;
+        display: grid;
+        gap: 20px;
+      }
+      .store-hero-intro {
+        display: grid;
+        gap: 16px;
+        align-items: start;
+      }
+      .store-hero-copy {
+        display: grid;
+        gap: 0;
+      }
+      .store-hero-actions {
+        margin-top: 0;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 12px;
+      }
+      .store-hero-actions .btn {
+        min-height: 48px;
+        padding: 11px 18px;
+      }
       .store-hero-cards {
         gap: 16px;
         align-items: stretch;
-      }
-      .store-hero-panel { position: relative; }
-      .store-hero-panel > .section-head { display: block; }
-      .store-hero-actions {
-        position: absolute;
-        top: 40px;
-        right: clamp(300px, 16vw, 360px);
-        max-width: 540px;
       }
       .store-hero-cards > article {
         min-height: 178px;
@@ -891,6 +907,7 @@
         pointer-events: none;
       }
       .store-hero-cards > article > * { position: relative; z-index: 1; }
+
       .store-hero-cards .strong-card::after { background: rgba(255,255,255,0.12); }
       .dock-card {
         background: linear-gradient(180deg, #fffdf9, #f6efe6);

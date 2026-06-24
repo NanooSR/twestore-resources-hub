@@ -861,17 +861,33 @@
       .strong-card .muted,
       .strong-card .stat-label { color: rgba(255,255,255,0.90); }
       .strong-card .eyebrow { color: #ffe4b5; }
+      .store-hero-panel {
+        position: relative;
+        display: grid;
+        gap: 20px;
+      }
+      .store-hero-intro {
+        display: grid;
+        gap: 16px;
+        align-items: start;
+      }
+      .store-hero-copy {
+        display: grid;
+        gap: 0;
+      }
+      .store-hero-actions {
+        margin-top: 0;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 12px;
+      }
+      .store-hero-actions .btn {
+        min-height: 48px;
+        padding: 11px 18px;
+      }
       .store-hero-cards {
         gap: 16px;
         align-items: stretch;
-      }
-      .store-hero-panel { position: relative; }
-      .store-hero-panel > .section-head { display: block; }
-      .store-hero-actions {
-        position: absolute;
-        top: 40px;
-        right: clamp(300px, 16vw, 360px);
-        max-width: 540px;
       }
       .store-hero-cards > article {
         min-height: 178px;
@@ -891,6 +907,7 @@
         pointer-events: none;
       }
       .store-hero-cards > article > * { position: relative; z-index: 1; }
+
       .store-hero-cards .strong-card::after { background: rgba(255,255,255,0.12); }
       .dock-card {
         background: linear-gradient(180deg, #fffdf9, #f6efe6);
@@ -3661,14 +3678,14 @@
         <div class="store-sales-banner-main">
           
 <section class="panel hero store-hero-panel" style="padding-bottom: 22px;">
-  <div class="section-head" style="align-items: flex-start; gap: 24px; margin-bottom: 20px;">
-    <div>
+  <div class="store-hero-intro">
+    <div class="store-hero-copy">
       <div class="hero-kicker mono">Clear offers · practical guidance · easier buying decisions</div>
       <p class="eyebrow">Storefront</p>
       <h1>The Watchers Edge Store</h1>
       <p class="lede" style="max-width: 860px;">A clearer storefront designed to help buyers search, compare, and move from first question to best-fit offer without wading through a cluttered catalog.</p>
     </div>
-    <div class="cta-row store-hero-actions" style="margin-top: 0; justify-content: flex-end;">
+    <div class="cta-row store-hero-actions" aria-label="Store quick paths">
       <a class="btn" href="#store-front-product-picks">Browse offers</a>
       <a class="btn secondary" href="/start-here">Start with your needs</a>
       <a class="btn ghost" href="/church">Church buyer path</a>
