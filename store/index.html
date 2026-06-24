@@ -3,7 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The Watchers Edge helps practical buyers find digital tools, buyer guides, church resources, and support paths with clearer next steps.">
+    
+    
+    <meta name="description" content="Browse The Watchers Edge Store for live digital offers, guided buyer paths, clearer product-fit notes, and trusted checkout handoffs across Gumroad, Etsy, Amazon.ca, and support pages.">
+    <meta property="og:title" content="TheWatchersEdge.ca | Store">
+    <meta property="og:description" content="Browse The Watchers Edge Store for live digital offers, guided buyer paths, clearer product-fit notes, and trusted checkout handoffs across Gumroad, Etsy, Amazon.ca, and support pages.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TheWatchersEdge.ca">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="TheWatchersEdge.ca | Store">
+    <meta name="twitter:description" content="Browse The Watchers Edge Store for live digital offers, guided buyer paths, clearer product-fit notes, and trusted checkout handoffs across Gumroad, Etsy, Amazon.ca, and support pages.">
     <title>TheWatchersEdge.ca | Store</title>
     
     
@@ -50,7 +59,7 @@
         overflow-x: hidden;
         background:
           radial-gradient(circle at top left, rgba(9, 103, 114, 0.10), transparent 28%),
-          radial-gradient(circle at 92% 2%, rgba(239, 155, 19, 0.10), transparent 20%),
+
           radial-gradient(circle at 85% 48%, rgba(140, 91, 83, 0.06), transparent 22%),
           linear-gradient(180deg, #fffefc 0%, #f8f3eb 34%, #efe8de 100%);
         color: var(--ink);
@@ -1713,7 +1722,7 @@
               <textarea id="support-chat-message" name="message" maxlength="1200" placeholder="Example: Which product helps with bot project planning?" required></textarea>
               <div class="cta-row" style="margin-top: 10px;">
                 <button class="btn" type="submit">Ask assistant</button>
-                <a class="btn secondary" href="mailto:support@thewatchersedge.ca">Email support</a>
+                <a class="btn secondary" href="mailto:support@thewatchersedge.ca?subject=Watchers%20Edge%20support%20chat%20follow-up&amp;body=Page%20or%20route%3A%0AProduct%20or%20topic%3A%0AOrder%20ID%20or%20receipt%20reference%2C%20if%20relevant%3A%0AQuestion%20or%20issue%20from%20chat%3A">Email support</a>
               </div>
             </form>
             <div class="support-chat-response" data-support-chat-response></div>
@@ -3778,7 +3787,7 @@
     <div>
       <p class="eyebrow">Current result view</p>
       <h3 id="store-filter-summary-title" style="margin-bottom: 6px;">Browse all live store paths</h3>
-      <p id="store-filter-summary-copy" class="muted" style="margin-bottom: 0;">Showing 39 product offers plus Amazon/resource browse lanes and guide pages. Search or filter when you want a narrower path.</p>
+      <p id="store-filter-summary-copy" class="muted" style="margin-bottom: 0;">Showing 39 product offers plus Amazon picks and guide pages. Use the summary above to jump to the path you want, or start with the quick buyer paths below.</p>
     </div>
     <div class="store-result-count-grid" aria-label="Store result counts">
       <span class="store-result-count"><strong id="store-combined-result-count">47</strong><span>total matches</span></span>
@@ -3789,11 +3798,6 @@
   </article>
   <div id="store-active-filter-pills" class="pill-row store-active-filter-pills" style="margin-top: 16px;">
     <span class="pill">Current search scope</span>
-    
-    
-    
-    
-    
     
     <span class="pill">All product families</span>
     <span class="pill">39 total offers</span>
@@ -7761,6 +7765,10 @@
     if (guideResultCount) guideResultCount.textContent = String(visibleGuides);
     const summaryTitle = document.getElementById('store-filter-summary-title');
     const summaryCopy = document.getElementById('store-filter-summary-copy');
+    const setMetaContent = (selector, value) => {
+      const element = document.querySelector(selector);
+      if (element) element.setAttribute('content', value);
+    };
     if (activePills) {
       activePills.innerHTML = '<span class="pill">Current search scope</span>' + activeLabels.map(label => `<span class="pill">${escapeHtml(label)}</span>`).join('') + `<span class="pill">${totalVisible} matching result${totalVisible === 1 ? '' : 's'}</span><a class="pill is-accent" href="/store">Clear all filters</a>`;
     }
@@ -7775,6 +7783,17 @@
     if (copy) {
       copy.textContent = `Showing ${totalVisible} matching result${totalVisible === 1 ? '' : 's'}: ${visible} product offer${visible === 1 ? '' : 's'}, ${visibleResources} Amazon/resource result${visibleResources === 1 ? '' : 's'}, and ${visibleGuides} guide page${visibleGuides === 1 ? '' : 's'}. Use the summary above to jump to the result type you want, or clear filters for a wider browse path.`;
     }
+    const siteDomain = "TheWatchersEdge.ca";
+    const metaTitle = `${siteDomain} | Store results — ${summaryLabel}`;
+    const metaDescription = totalVisible
+      ? `View ${totalVisible} matching The Watchers Edge Store result${totalVisible === 1 ? '' : 's'} for ${summaryLabel}. Compare ${visible} product offer${visible === 1 ? '' : 's'}, ${visibleResources} Amazon pick${visibleResources === 1 ? '' : 's'}, and ${visibleGuides} guide page${visibleGuides === 1 ? '' : 's'} before leaving for Gumroad, Etsy, or Amazon.ca.`
+      : `No current The Watchers Edge Store matches were found for ${summaryLabel}. Clear filters or broaden the search to compare products, Amazon picks, and guide pages.`;
+    document.title = metaTitle;
+    setMetaContent('meta[name="description"]', metaDescription);
+    setMetaContent('meta[property="og:title"]', metaTitle);
+    setMetaContent('meta[property="og:description"]', metaDescription);
+    setMetaContent('meta[name="twitter:title"]', metaTitle);
+    setMetaContent('meta[name="twitter:description"]', metaDescription);
   }
   const noResults = document.getElementById('client-no-results');
   if (noResults && filterActive) noResults.style.display = (visible || visibleResources || visibleGuides || serverResourceResultCount) ? 'none' : '';
@@ -9501,7 +9520,7 @@
       <footer class="footer">
         <p><strong>TheWatchersEdge.ca</strong> helps buyers quickly understand what The Watchers Edge offers, who each product is for, and where to go next for support, resources, or checkout.</p>
         <p>Church and ministry resource links may include affiliate links. As an Amazon Associate I earn from qualifying purchases.</p>
-        <p>Buyer support and contact: <a class="text-link" href="mailto:support@thewatchersedge.ca">support@thewatchersedge.ca</a></p>
+        <p>Buyer support and contact: <a class="text-link" href="mailto:support@thewatchersedge.ca?subject=The%20Watchers%20Edge%20support%20question&amp;body=Order%20ID%20or%20receipt%20reference%2C%20if%20you%20have%20one%3A%0AProduct%20or%20page%3A%0ACheckout%2Faccess%20platform%2C%20if%20relevant%3A%0AQuestion%20or%20issue%3A">support@thewatchersedge.ca</a></p>
         <div class="footer-links">
           <a class="text-link" href="/privacy">Privacy</a>
           <a class="text-link" href="/terms">Terms</a>
@@ -9533,7 +9552,7 @@
         });
         const localSupportFallback = (message) => {
           const text = message.toLowerCase();
-          const emailLink = '<a class="text-link" href="mailto:support@thewatchersedge.ca?subject=Watchers%20Edge%20support%20chat%20follow-up">support@thewatchersedge.ca</a>';
+          const emailLink = '<a class="text-link" href="mailto:support@thewatchersedge.ca?subject=Watchers%20Edge%20support%20chat%20follow-up&amp;body=Page%20or%20route%3A%0AProduct%20or%20topic%3A%0AOrder%20ID%20or%20receipt%20reference%2C%20if%20relevant%3A%0AQuestion%20or%20issue%20from%20chat%3A">support@thewatchersedge.ca</a>';
           if (/(human|live person|refund|payment|billing|account|login|password|paypal|bank|tax|legal|lawyer)/.test(text)) {
             return 'Thanks, I’m looking into that. This needs human or sensitive support, so please email ' + emailLink + ' and do not include passwords, payment, tax, banking, API key, or private account details.';
           }

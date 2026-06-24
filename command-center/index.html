@@ -3,7 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The Watchers Edge helps practical buyers find digital tools, buyer guides, church resources, and support paths with clearer next steps.">
+    
+    
+    <meta name="description" content="Use this page when you want a calmer front door into the right store page, resource guide, church path, or support route.">
+    <meta property="og:title" content="TheWatchersEdge.ca | Buying guide and support hub">
+    <meta property="og:description" content="Use this page when you want a calmer front door into the right store page, resource guide, church path, or support route.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TheWatchersEdge.ca">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="TheWatchersEdge.ca | Buying guide and support hub">
+    <meta name="twitter:description" content="Use this page when you want a calmer front door into the right store page, resource guide, church path, or support route.">
     <title>TheWatchersEdge.ca | Buying guide and support hub</title>
     
     
@@ -50,7 +59,7 @@
         overflow-x: hidden;
         background:
           radial-gradient(circle at top left, rgba(9, 103, 114, 0.10), transparent 28%),
-          radial-gradient(circle at 92% 2%, rgba(239, 155, 19, 0.10), transparent 20%),
+
           radial-gradient(circle at 85% 48%, rgba(140, 91, 83, 0.06), transparent 22%),
           linear-gradient(180deg, #fffefc 0%, #f8f3eb 34%, #efe8de 100%);
         color: var(--ink);
@@ -1713,7 +1722,7 @@
               <textarea id="support-chat-message" name="message" maxlength="1200" placeholder="Example: Which product helps with bot project planning?" required></textarea>
               <div class="cta-row" style="margin-top: 10px;">
                 <button class="btn" type="submit">Ask assistant</button>
-                <a class="btn secondary" href="mailto:support@thewatchersedge.ca">Email support</a>
+                <a class="btn secondary" href="mailto:support@thewatchersedge.ca?subject=Watchers%20Edge%20support%20chat%20follow-up&amp;body=Page%20or%20route%3A%0AProduct%20or%20topic%3A%0AOrder%20ID%20or%20receipt%20reference%2C%20if%20relevant%3A%0AQuestion%20or%20issue%20from%20chat%3A">Email support</a>
               </div>
             </form>
             <div class="support-chat-response" data-support-chat-response></div>
@@ -3435,7 +3444,7 @@
   <div class="mini-stack">
     <article class="mini-card">
       <p class="eyebrow">Primary support contact</p>
-      <h3><a class="text-link" href="mailto:support@thewatchersedge.ca">support@thewatchersedge.ca</a></h3>
+      <h3><a class="text-link" href="mailto:support@thewatchersedge.ca?subject=The%20Watchers%20Edge%20support%20question&amp;body=Order%20ID%20or%20receipt%20reference%2C%20if%20you%20have%20one%3A%0AProduct%20or%20page%3A%0ACheckout%2Faccess%20platform%2C%20if%20relevant%3A%0AQuestion%20or%20issue%3A">support@thewatchersedge.ca</a></h3>
       <p class="muted">Use this address for buyer-support questions, access issues, and product clarification.</p>
       <div class="cta-row" style="margin-top: 12px;">
         <a class="btn secondary" href="mailto:support@thewatchersedge.ca?subject=The%20Watchers%20Edge%20support%20question&amp;body=Order%20ID%20or%20receipt%20reference%2C%20if%20you%20have%20one%3A%0AProduct%20or%20page%3A%0ACheckout%2Faccess%20platform%2C%20if%20relevant%3A%0AQuestion%20or%20issue%3A">Email support with details</a>
@@ -3478,6 +3487,12 @@
   <div class="grid three">
     
     <article class="mini-card">
+      <h3>Open guided start</h3>
+      <p class="muted">Use Start Here when you want the quickest calm path into the right buyer lane before comparing products or categories.</p>
+      <a class="card-link" href="/start-here">Open guided start →</a>
+    </article>
+    
+    <article class="mini-card">
       <h3>Browse the store</h3>
       <p class="muted">Use Store when you already know the kind of product, kit, or workflow help you want to open next.</p>
       <a class="card-link" href="/store">Browse the store →</a>
@@ -3487,6 +3502,12 @@
       <h3>Review collections</h3>
       <p class="muted">Use Collections when you want to compare offer families and paired paths before choosing a product page.</p>
       <a class="card-link" href="/collections">Review collections →</a>
+    </article>
+    
+    <article class="mini-card">
+      <h3>Open church buyer path</h3>
+      <p class="muted">Use Church when the next question is ministry, hospitality, classroom, service-day, or volunteer workflow buying guidance.</p>
+      <a class="card-link" href="/church">Open church buyer path →</a>
     </article>
     
     <article class="mini-card">
@@ -5274,7 +5295,7 @@
       <footer class="footer">
         <p><strong>TheWatchersEdge.ca</strong> helps buyers quickly understand what The Watchers Edge offers, who each product is for, and where to go next for support, resources, or checkout.</p>
         <p>Church and ministry resource links may include affiliate links. As an Amazon Associate I earn from qualifying purchases.</p>
-        <p>Buyer support and contact: <a class="text-link" href="mailto:support@thewatchersedge.ca">support@thewatchersedge.ca</a></p>
+        <p>Buyer support and contact: <a class="text-link" href="mailto:support@thewatchersedge.ca?subject=The%20Watchers%20Edge%20support%20question&amp;body=Order%20ID%20or%20receipt%20reference%2C%20if%20you%20have%20one%3A%0AProduct%20or%20page%3A%0ACheckout%2Faccess%20platform%2C%20if%20relevant%3A%0AQuestion%20or%20issue%3A">support@thewatchersedge.ca</a></p>
         <div class="footer-links">
           <a class="text-link" href="/privacy">Privacy</a>
           <a class="text-link" href="/terms">Terms</a>
@@ -5306,7 +5327,7 @@
         });
         const localSupportFallback = (message) => {
           const text = message.toLowerCase();
-          const emailLink = '<a class="text-link" href="mailto:support@thewatchersedge.ca?subject=Watchers%20Edge%20support%20chat%20follow-up">support@thewatchersedge.ca</a>';
+          const emailLink = '<a class="text-link" href="mailto:support@thewatchersedge.ca?subject=Watchers%20Edge%20support%20chat%20follow-up&amp;body=Page%20or%20route%3A%0AProduct%20or%20topic%3A%0AOrder%20ID%20or%20receipt%20reference%2C%20if%20relevant%3A%0AQuestion%20or%20issue%20from%20chat%3A">support@thewatchersedge.ca</a>';
           if (/(human|live person|refund|payment|billing|account|login|password|paypal|bank|tax|legal|lawyer)/.test(text)) {
             return 'Thanks, I’m looking into that. This needs human or sensitive support, so please email ' + emailLink + ' and do not include passwords, payment, tax, banking, API key, or private account details.';
           }

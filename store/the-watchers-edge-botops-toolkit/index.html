@@ -3,7 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The Watchers Edge helps practical buyers find digital tools, buyer guides, church resources, and support paths with clearer next steps.">
+    
+    
+    <meta name="description" content="The Watchers Edge BotOps Toolkit on The Watchers Edge: Organize bot-operation notes, incident reviews, and AI-assisted debugging prompts without turning messy logs into risky guesswork. Review fit, support, and checkout handoff before you leave for nanoojr.gumroad.com.">
+    <meta property="og:title" content="TheWatchersEdge.ca | The Watchers Edge BotOps Toolkit">
+    <meta property="og:description" content="The Watchers Edge BotOps Toolkit on The Watchers Edge: Organize bot-operation notes, incident reviews, and AI-assisted debugging prompts without turning messy logs into risky guesswork. Review fit, support, and checkout handoff before you leave for nanoojr.gumroad.com.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TheWatchersEdge.ca">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="TheWatchersEdge.ca | The Watchers Edge BotOps Toolkit">
+    <meta name="twitter:description" content="The Watchers Edge BotOps Toolkit on The Watchers Edge: Organize bot-operation notes, incident reviews, and AI-assisted debugging prompts without turning messy logs into risky guesswork. Review fit, support, and checkout handoff before you leave for nanoojr.gumroad.com.">
     <title>TheWatchersEdge.ca | The Watchers Edge BotOps Toolkit</title>
     
     
@@ -50,7 +59,7 @@
         overflow-x: hidden;
         background:
           radial-gradient(circle at top left, rgba(9, 103, 114, 0.10), transparent 28%),
-          radial-gradient(circle at 92% 2%, rgba(239, 155, 19, 0.10), transparent 20%),
+
           radial-gradient(circle at 85% 48%, rgba(140, 91, 83, 0.06), transparent 22%),
           linear-gradient(180deg, #fffefc 0%, #f8f3eb 34%, #efe8de 100%);
         color: var(--ink);
@@ -1713,7 +1722,7 @@
               <textarea id="support-chat-message" name="message" maxlength="1200" placeholder="Example: Which product helps with bot project planning?" required></textarea>
               <div class="cta-row" style="margin-top: 10px;">
                 <button class="btn" type="submit">Ask assistant</button>
-                <a class="btn secondary" href="mailto:support@thewatchersedge.ca">Email support</a>
+                <a class="btn secondary" href="mailto:support@thewatchersedge.ca?subject=Watchers%20Edge%20support%20chat%20follow-up&amp;body=Page%20or%20route%3A%0AProduct%20or%20topic%3A%0AOrder%20ID%20or%20receipt%20reference%2C%20if%20relevant%3A%0AQuestion%20or%20issue%20from%20chat%3A">Email support</a>
               </div>
             </form>
             <div class="support-chat-response" data-support-chat-response></div>
@@ -3813,7 +3822,7 @@ Use it when the immediate problem is not “find a magic bot,” but “get the 
       <li>Describe the issue briefly and include any delivery or access detail already visible on the checkout page.</li>
       
     </ul>
-    <p class="muted">Support route: <a class="text-link" href="mailto:support@thewatchersedge.ca">support@thewatchersedge.ca</a></p>
+    <p class="muted">Support email: <a class="text-link" href="mailto:support@thewatchersedge.ca?subject=Support%20request%3A%20The%20Watchers%20Edge%20BotOps%20Toolkit&amp;body=Product%3A%20The%20Watchers%20Edge%20BotOps%20Toolkit%0ACheckout%2Faccess%20platform%3A%20gumroad%0AOrder%20ID%20or%20receipt%20reference%3A%0AQuestion%20or%20issue%3A">support@thewatchersedge.ca</a></p>
     <div class="cta-row" style="margin-top: 12px;">
       <a class="btn secondary" href="mailto:support@thewatchersedge.ca?subject=Support%20request%3A%20The%20Watchers%20Edge%20BotOps%20Toolkit&amp;body=Product%3A%20The%20Watchers%20Edge%20BotOps%20Toolkit%0ACheckout%2Faccess%20platform%3A%20gumroad%0AOrder%20ID%20or%20receipt%20reference%3A%0AQuestion%20or%20issue%3A">Email support about this product</a>
       <a class="btn ghost" href="/support">Read support guidance</a>
@@ -3823,8 +3832,8 @@ Use it when the immediate problem is not “find a magic bot,” but “get the 
 
 <section class="section split">
   <article class="card">
-    <p class="eyebrow">Outcome fit</p>
-    <h2>What this outcome lane is for</h2>
+    <p class="eyebrow">Best use case</p>
+    <h2>What this product helps you do</h2>
     <p class="muted">Best for buyers who need one clearer repeatable business system instead of another one-off file or disconnected quick fix.</p>
   </article>
   <article class="card">
@@ -5677,7 +5686,7 @@ Use it when the immediate problem is not “find a magic bot,” but “get the 
       <footer class="footer">
         <p><strong>TheWatchersEdge.ca</strong> helps buyers quickly understand what The Watchers Edge offers, who each product is for, and where to go next for support, resources, or checkout.</p>
         <p>Church and ministry resource links may include affiliate links. As an Amazon Associate I earn from qualifying purchases.</p>
-        <p>Buyer support and contact: <a class="text-link" href="mailto:support@thewatchersedge.ca">support@thewatchersedge.ca</a></p>
+        <p>Buyer support and contact: <a class="text-link" href="mailto:support@thewatchersedge.ca?subject=The%20Watchers%20Edge%20support%20question&amp;body=Order%20ID%20or%20receipt%20reference%2C%20if%20you%20have%20one%3A%0AProduct%20or%20page%3A%0ACheckout%2Faccess%20platform%2C%20if%20relevant%3A%0AQuestion%20or%20issue%3A">support@thewatchersedge.ca</a></p>
         <div class="footer-links">
           <a class="text-link" href="/privacy">Privacy</a>
           <a class="text-link" href="/terms">Terms</a>
@@ -5709,7 +5718,7 @@ Use it when the immediate problem is not “find a magic bot,” but “get the 
         });
         const localSupportFallback = (message) => {
           const text = message.toLowerCase();
-          const emailLink = '<a class="text-link" href="mailto:support@thewatchersedge.ca?subject=Watchers%20Edge%20support%20chat%20follow-up">support@thewatchersedge.ca</a>';
+          const emailLink = '<a class="text-link" href="mailto:support@thewatchersedge.ca?subject=Watchers%20Edge%20support%20chat%20follow-up&amp;body=Page%20or%20route%3A%0AProduct%20or%20topic%3A%0AOrder%20ID%20or%20receipt%20reference%2C%20if%20relevant%3A%0AQuestion%20or%20issue%20from%20chat%3A">support@thewatchersedge.ca</a>';
           if (/(human|live person|refund|payment|billing|account|login|password|paypal|bank|tax|legal|lawyer)/.test(text)) {
             return 'Thanks, I’m looking into that. This needs human or sensitive support, so please email ' + emailLink + ' and do not include passwords, payment, tax, banking, API key, or private account details.';
           }
