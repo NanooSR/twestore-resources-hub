@@ -83,10 +83,10 @@
         display: grid;
         grid-template-columns: clamp(260px, 15vw, 340px) minmax(0, calc(var(--shell) + 48px)) clamp(260px, 15vw, 340px);
         justify-content: center;
-        gap: 18px;
-        align-items: start;
+        gap: 16px;
+        align-items: stretch;
         width: 100vw;
-        margin: 0 0 6px calc(50% - 50vw);
+        margin: 0 0 12px calc(50% - 50vw);
         padding: 0 24px;
         pointer-events: none;
       }
@@ -102,15 +102,17 @@
           "links links"
           "utility utility";
         align-items: center;
+        align-self: stretch;
         gap: 10px 16px;
         padding: 12px 14px;
         border: 1px solid rgba(196, 209, 203, 0.92);
         border-radius: 18px;
-        background: rgba(255, 252, 247, 0.94);
+        background: rgba(255, 252, 247, 0.96);
         backdrop-filter: blur(16px);
         box-shadow: 0 12px 34px rgba(23, 52, 58, 0.08);
         margin-bottom: 0;
-        min-height: auto;
+        min-height: 168px;
+        height: 100%;
       }
       @media (min-width: 1181px) {
         .nav {
@@ -357,6 +359,7 @@
       }
       .header-side-widget {
         min-height: 168px;
+        height: 100%;
         align-self: stretch;
       }
       .nav-utility-row {
@@ -373,28 +376,39 @@
         align-items: center;
         justify-content: center;
         gap: 8px;
-        min-height: 44px;
-        padding: 10px 14px;
+        min-height: 46px;
+        padding: 10px 16px;
         border-radius: 999px;
         border: 1px solid rgba(9, 103, 114, 0.24);
-        background: rgba(255,255,255,0.94);
-        color: var(--ink);
+        color: #15353b;
         text-decoration: none;
-        font-size: 0.9rem;
+        font-size: 0.92rem;
         font-weight: 800;
-        box-shadow: 0 10px 24px rgba(23, 52, 58, 0.10);
-        transition: 160ms ease;
+        box-shadow: 0 12px 26px rgba(23, 52, 58, 0.12);
+        transition: 180ms ease;
       }
       .nav-blog-link:hover,
       .nav-blog-link:focus-visible {
         transform: translateY(-1px);
-        border-color: rgba(9, 103, 114, 0.42);
+        box-shadow: 0 16px 30px rgba(23, 52, 58, 0.16);
       }
       .nav-blog-link.is-church {
-        background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(220,238,237,0.76));
+        border-color: rgba(10, 116, 124, 0.34);
+        background: linear-gradient(135deg, #dff6f7 0%, #bfeef0 52%, #fff2cf 100%);
+      }
+      .nav-blog-link.is-church:hover,
+      .nav-blog-link.is-church:focus-visible {
+        border-color: rgba(10, 116, 124, 0.5);
+        background: linear-gradient(135deg, #cceff2 0%, #abe7ea 52%, #ffe8b1 100%);
       }
       .nav-blog-link.is-pet {
-        background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(255,241,214,0.78));
+        border-color: rgba(239, 155, 19, 0.34);
+        background: linear-gradient(135deg, #fff1f7 0%, #ffe0ef 45%, #ffe5b9 100%);
+      }
+      .nav-blog-link.is-pet:hover,
+      .nav-blog-link.is-pet:focus-visible {
+        border-color: rgba(239, 155, 19, 0.5);
+        background: linear-gradient(135deg, #ffe8f2 0%, #ffd5e8 45%, #ffdca2 100%);
       }
       .panel,
       .card,
@@ -1236,10 +1250,12 @@
       }
       .store-weather-icon img { width: 68px; height: 68px; object-fit: contain; }
       .store-weather-status {
-        min-height: 44px;
+        min-height: 0;
+        margin: 0;
         overflow: visible;
         font-weight: 650;
         color: var(--ink-soft);
+        line-height: 1.42;
       }
       .store-weather-location {
         display: none;
@@ -1452,7 +1468,6 @@
       .advanced-amazon-card p { margin-bottom: 0; }
       .advanced-amazon-note-list { display: grid; gap: 8px; padding-left: 18px; }
       .store-sales-banner-grid {
-        --rail-header-overlap: clamp(176px, 11vw, 210px);
         display: grid;
         grid-template-columns: clamp(260px, 15vw, 340px) minmax(0, calc(var(--shell) + clamp(260px, 15vw, 340px) + 72px));
         justify-content: center;
@@ -1460,12 +1475,12 @@
         align-items: start;
         width: 100vw;
         margin-left: calc(50% - 50vw);
-        margin-top: calc(-1 * var(--rail-header-overlap));
+        margin-top: 0;
         padding: 0 24px;
       }
       .store-sales-banner-main {
         min-width: 0;
-        padding-top: clamp(8px, 1vw, 16px);
+        padding-top: 0;
       }
       .store-sales-side {
         position: relative;
@@ -1894,14 +1909,7 @@
           <div>
             <p class="eyebrow">Featured blogs</p>
             <h2 style="font-size: 1.02rem; margin-bottom: 6px;">Two faster reading lanes</h2>
-            <p class="muted">Church readers and pet lovers now have cleaner direct buttons centered under the main header.</p>
-          </div>
-          <div class="blog-launch-grid compact">
-            <div class="blog-launch-mini-row" aria-label="Blog quick labels">
-              <span class="blog-launch-pill">⛪ Church Blog</span>
-              <span class="blog-launch-pill">🐾 Pet Blog</span>
-            </div>
-            <p class="muted" style="margin-bottom: 0;">The side widgets stay aligned with the header while the main blog buttons live in the centered utility row below the main navigation.</p>
+            <p class="muted" style="margin-bottom: 0;">Church readers and pet lovers now have cleaner direct buttons centered under the main header.</p>
           </div>
         </aside>
         <nav class="nav">
@@ -1959,18 +1967,11 @@
           <div class="store-weather-visual">
             <div>
               <h2>Local forecast</h2>
-              <p class="muted" style="margin-bottom: 0;">Auto-updates from your browser region where available, with city fallback if needed.</p>
             </div>
             <span class="store-weather-icon" data-weather-icon aria-hidden="true">☀️</span>
           </div>
           <p class="store-weather-location" data-weather-location></p>
           <p class="muted store-weather-status" data-weather-status>Loading local weather automatically…</p>
-          <button class="pill is-accent" type="button" data-weather-button>Refresh weather</button>
-          <form class="store-weather-city-form" data-weather-city-form>
-            <label class="eyebrow" for="weather-city">Choose city</label>
-            <input id="weather-city" name="city" type="search" placeholder="City, province/state, country" autocomplete="address-level2">
-            <button class="pill is-accent" type="submit">Use city</button>
-          </form>
         </article>
       </div>
       <div class="store-sales-banner-grid">
@@ -5969,7 +5970,7 @@ The TWE Resources Traffic Tracker &amp; Promo Log gives buyers a simple way to r
           const location = widget.querySelector('[data-weather-location]');
           const form = widget.querySelector('[data-weather-city-form]');
           const input = form?.querySelector('input[name="city"]');
-          if (!button || !status) return;
+          if (!status) return;
           let preciseLocationTried = false;
           const lookup = async (params, suffix) => {
             const url = window.tweApiUrl('/api/weather-current') + '?' + new URLSearchParams({...params, timezone}).toString();
@@ -5983,31 +5984,31 @@ The TWE Resources Traffic Tracker &amp; Promo Log gives buyers a simple way to r
             } else if (icon) {
               icon.textContent = data.weatherCode >= 51 ? '🌧️' : data.weatherCode >= 45 ? '🌫️' : data.weatherCode >= 2 ? '⛅' : '☀️';
             }
-            button.textContent = 'Updated';
+            if (button) button.textContent = 'Updated';
             widget.classList.add('has-weather');
             widget.classList.remove('is-fallback');
           };
           const requestPreciseWeather = function () {
             preciseLocationTried = true;
-            button.disabled = true;
+            if (button) button.disabled = true;
             status.textContent = 'Requesting one-time location permission. Nothing is stored by this page.';
             if (!navigator.geolocation) {
               widget.classList.add('is-fallback');
-              status.textContent = 'Exact weather needs location permission, but this browser does not support it. Choose a city instead.';
-              button.disabled = false;
+              status.textContent = 'Exact weather needs location permission, but this browser does not support it.';
+              if (button) button.disabled = false;
               return;
             }
             navigator.geolocation.getCurrentPosition((position) => {
               lookup({latitude: position.coords.latitude.toFixed(3), longitude: position.coords.longitude.toFixed(3)}, ' near you')
                 .catch(() => {
                   widget.classList.add('is-fallback');
-                  status.textContent = 'Weather could not load from device location. Choose a city instead.';
+                  status.textContent = 'Weather could not load from device location.';
                 })
-                .finally(() => { button.disabled = false; });
+                .finally(() => { if (button) button.disabled = false; });
             }, () => {
               widget.classList.add('is-fallback');
-              status.textContent = 'Location was not shared. Choose a city for an approximate local forecast; no precise location is stored.';
-              button.disabled = false;
+              status.textContent = 'Location was not shared, so exact local weather could not load.';
+              if (button) button.disabled = false;
             }, { enableHighAccuracy: false, maximumAge: 600000, timeout: 8000 });
           };
           const loadAutomaticWeather = () => {
@@ -6016,9 +6017,9 @@ The TWE Resources Traffic Tracker &amp; Promo Log gives buyers a simple way to r
               return;
             }
             widget.classList.add('is-fallback');
-            status.textContent = 'Automatic local weather needs browser location support. Choose a city for an approximate forecast; nothing is stored by this page.';
+            status.textContent = 'Automatic local weather needs browser location support.';
           };
-          button.addEventListener('click', function () {
+          button?.addEventListener('click', function () {
             button.textContent = preciseLocationTried ? 'Refreshing…' : 'Use device location';
             requestPreciseWeather();
           });
