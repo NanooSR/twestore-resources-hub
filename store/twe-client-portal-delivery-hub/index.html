@@ -1770,21 +1770,39 @@
       @media (max-width: 640px) {
         .shell { padding: 16px; }
         .hero, .card, .feature-card, .stat-card, .mini-card, .faq-item, .path-card, .timeline-step, .quote-card, .editorial-card, .product, .dock-card { padding: 20px; }
+        .site-header-band,
+        .site-header-band.store-top-corner-grid {
+          grid-template-columns: 1fr;
+          gap: 10px;
+          margin: 0 0 12px;
+        }
+        .site-header-band > .nav {
+          order: 0;
+          grid-column: 1;
+        }
+        .site-header-band > .blog-launch-card { order: 1; }
+        .site-header-band > .store-weather-card { order: 2; }
         .nav {
           position: static;
-          grid-template-columns: minmax(104px, 0.7fr) minmax(0, 1.3fr);
+          grid-template-columns: 1fr;
           grid-template-areas:
-            "brand search"
-            "links links"
-            "utility utility";
-          align-items: center;
-          padding: 8px;
-          gap: 7px;
+            "brand"
+            "search"
+            "links"
+            "utility";
+          align-items: stretch;
+          padding: 10px;
+          gap: 10px;
           border-radius: 14px;
-          margin-bottom: 10px;
+          margin-bottom: 0;
           backdrop-filter: none;
+          min-height: 0;
+          height: auto;
         }
-        .brand { gap: 8px; }
+        .brand {
+          gap: 8px;
+          align-items: flex-start;
+        }
         .brand-mark {
           width: 30px;
           height: 30px;
@@ -1795,18 +1813,25 @@
         .brand span:last-child { display: none; }
         .brand strong {
           font-size: 0.96rem;
-          line-height: 1;
+          line-height: 1.05;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 100%;
         }
         .nav-search {
-          padding: 6px 7px;
-          gap: 6px;
+          max-width: none;
+          width: 100%;
+          justify-self: stretch;
+          padding: 8px 9px;
+          gap: 7px;
           border-radius: 14px;
         }
         .nav-search label { display: none; }
         .nav-search input { font-size: 0.9rem; }
         .nav-search button {
-          min-height: 34px;
-          padding: 6px 9px;
+          min-height: 40px;
+          padding: 8px 10px;
           font-size: 0.86rem;
         }
         .nav-links {
@@ -1825,7 +1850,6 @@
           white-space: normal;
           line-height: 1.08;
         }
-        .site-header-band.store-top-corner-grid { grid-template-columns: 1fr; gap: 10px; margin: 0 0 12px; }
         .blog-launch-card {
           padding: 12px;
           gap: 10px;
@@ -1850,12 +1874,46 @@
         .blog-launch-copy span:last-child {
           font-size: 0.82rem;
         }
-        .store-corner-card { padding: 12px; border-radius: 16px; }
+        .header-side-widget {
+          min-height: 0;
+          height: auto;
+        }
+        .store-corner-card {
+          padding: 12px;
+          border-radius: 16px;
+        }
         .store-corner-card h2 { font-size: 0.94rem; }
-        .store-corner-card .muted { display: none; }
+        .store-corner-card .muted {
+          display: block;
+          font-size: 0.84rem;
+          line-height: 1.4;
+          margin-bottom: 0;
+        }
         .store-corner-card .pill-row { gap: 5px; }
         .store-corner-card .pill,
         .store-weather-card button { font-size: 0.8rem; padding: 8px 10px; min-height: 44px; }
+        .store-weather-card {
+          gap: 8px;
+          min-height: 0;
+        }
+        .store-weather-visual {
+          min-height: 0;
+          gap: 10px;
+        }
+        .store-weather-icon {
+          width: 56px;
+          height: 56px;
+          border-radius: 18px;
+          font-size: 1.8rem;
+        }
+        .store-weather-icon img {
+          width: 52px;
+          height: 52px;
+        }
+        .store-weather-status,
+        .store-weather-location {
+          font-size: 0.84rem;
+        }
         .support-chat-widget {
           width: 100%;
           margin: 0 auto;
