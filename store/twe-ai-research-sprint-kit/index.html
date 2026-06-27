@@ -1932,10 +1932,18 @@
           min-height: 0;
           height: auto;
         }
-        .grid.four.store-hero-cards,
-        .grid.three.store-front-product-grid,
-        .grid.five.store-quick-path-grid {
+        .grid.four.store-hero-cards {
           grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .store-front-product-grid,
+        .store-quick-path-grid {
+          align-items: start;
+        }
+        .grid.three.store-front-product-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .grid.five.store-quick-path-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
         }
         .store-filter-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
