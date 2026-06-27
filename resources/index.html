@@ -81,12 +81,13 @@
         top: 12px;
         z-index: 60;
         display: grid;
-        grid-template-columns: clamp(250px, 19vw, 310px) minmax(0, 1fr) clamp(250px, 19vw, 310px);
+        grid-template-columns: clamp(188px, 14vw, 224px) minmax(0, 1fr) clamp(188px, 14vw, 224px);
         justify-content: stretch;
-        gap: 16px;
+        gap: 14px;
         align-items: stretch;
-        width: 100%;
-        margin: 0 0 12px;
+
+        max-width: 100%;
+        margin: 0 0 14px;
         padding: 0;
         pointer-events: none;
       }
@@ -111,7 +112,7 @@
         backdrop-filter: blur(16px);
         box-shadow: 0 12px 34px rgba(23, 52, 58, 0.08);
         margin-bottom: 0;
-        min-height: 168px;
+        min-height: 136px;
         height: 100%;
       }
       @media (min-width: 1181px) {
@@ -358,7 +359,7 @@
         line-height: 1.34;
       }
       .header-side-widget {
-        min-height: 168px;
+        min-height: 136px;
         height: 100%;
         align-self: stretch;
       }
@@ -1497,15 +1498,15 @@
       .advanced-amazon-note-list { display: grid; gap: 8px; padding-left: 18px; }
       .store-sales-banner-grid {
         display: grid;
-        grid-template-columns: clamp(260px, 15vw, 340px) minmax(0, calc(var(--shell) + clamp(260px, 15vw, 340px) + 72px));
+        grid-template-columns: minmax(240px, 296px) minmax(0, 1fr);
         grid-template-areas: "rail main";
-        justify-content: center;
-        gap: 24px;
+        justify-content: stretch;
+        gap: 18px;
         align-items: start;
-        width: 100vw;
-        margin-left: calc(50% - 50vw);
-        margin-top: 0;
-        padding: 0 24px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
       }
       .store-sales-banner-main {
         grid-area: main;
@@ -1516,10 +1517,10 @@
         grid-area: rail;
         position: relative;
         top: auto;
-        height: min(1180px, calc(100vh - 96px));
-        max-height: 1180px;
+        height: min(980px, calc(100vh - 116px));
+        max-height: 980px;
         min-height: 0;
-        padding: 14px;
+        padding: 12px;
         border: 1px solid rgba(9, 103, 114, 0.24);
         border-radius: 24px;
         background:
@@ -1700,11 +1701,11 @@
       }
       @media (max-width: 1500px) {
         .site-header-band {
-          grid-template-columns: minmax(220px, 0.82fr) minmax(0, 1fr) minmax(220px, 0.82fr);
+          grid-template-columns: minmax(188px, 0.68fr) minmax(0, 1fr) minmax(188px, 0.68fr);
           width: 100%;
           margin: 0 0 12px;
           padding: 0;
-          gap: 12px;
+
         }
         .store-sales-banner-grid {
           display: block;
@@ -2153,13 +2154,13 @@
     
     <span class="pill">All Amazon categories</span>
     <span class="pill">6 browse lanes</span>
-    <span class="pill">436 total linked picks</span>
+    <span class="pill">451 total linked picks</span>
     
   </div>
   <article id="resource-search-ran" class="mini-card" style="margin-top: 16px; padding: 16px 18px; border-radius: 16px; background: rgba(220,238,237,0.62); display:none;">
     <p class="eyebrow">In this view</p>
     <h3 id="resource-search-title" style="margin-bottom: 6px;">Browse Amazon picks and buyer guides</h3>
-    <p id="resource-search-copy" class="muted" style="margin-bottom: 0;">Showing 436 Amazon/resource picks and 8 guide pages. Search by category, workflow, or gear name to narrow the next click.</p>
+    <p id="resource-search-copy" class="muted" style="margin-bottom: 0;">Showing 451 Amazon/resource picks and 8 guide pages. Search by category, workflow, or gear name to narrow the next click.</p>
   </article>
 </section>
 
@@ -2175,17 +2176,17 @@
   <div class="pill-row">
     <a class="pill" href="/resources">See all picks</a>
     
-    <a class="pill" href="/resources?category=workspace">Workspace · 49</a>
+    <a class="pill" href="/resources?category=workspace">Workspace · 50</a>
     
-    <a class="pill" href="/resources?category=admin-paperwork">Admin &amp; paperwork · 13</a>
+    <a class="pill" href="/resources?category=admin-paperwork">Admin &amp; paperwork · 14</a>
     
-    <a class="pill" href="/resources?category=creator-calls">Creator &amp; calls · 45</a>
+    <a class="pill" href="/resources?category=creator-calls">Creator &amp; calls · 46</a>
     
-    <a class="pill" href="/resources?category=research-reading">Research &amp; reading · 52</a>
+    <a class="pill" href="/resources?category=research-reading">Research &amp; reading · 53</a>
     
-    <a class="pill" href="/resources?category=church-ministry">Church &amp; ministry · 152</a>
+    <a class="pill" href="/resources?category=church-ministry">Church &amp; ministry · 157</a>
     
-    <a class="pill" href="/resources?category=practical-picks">More practical picks · 1</a>
+    <a class="pill" href="/resources?category=practical-picks">More practical picks · 2</a>
     
   </div>
   <div class="affiliate-category-grid" style="margin-top: 14px;">
@@ -2194,7 +2195,7 @@
       <p class="eyebrow">Workspace</p>
       <p class="muted">Standing desks, office comfort, cable cleanup, and daily operator setup picks.</p>
       <div class="pill-row">
-        <span class="pill">49 picks</span>
+        <span class="pill">50 picks</span>
         <a class="pill is-accent" href="/resources?category=workspace">Browse Workspace</a>
       </div>
     </article>
@@ -2203,7 +2204,7 @@
       <p class="eyebrow">Admin &amp; paperwork</p>
       <p class="muted">Scanner, filing, labeling, privacy, and client-delivery support picks.</p>
       <div class="pill-row">
-        <span class="pill">13 picks</span>
+        <span class="pill">14 picks</span>
         <a class="pill is-accent" href="/resources?category=admin-paperwork">Browse Admin &amp; paperwork</a>
       </div>
     </article>
@@ -2212,7 +2213,7 @@
       <p class="eyebrow">Creator &amp; calls</p>
       <p class="muted">Microphones, webcams, lighting, and meeting-ready gear for calls or content.</p>
       <div class="pill-row">
-        <span class="pill">45 picks</span>
+        <span class="pill">46 picks</span>
         <a class="pill is-accent" href="/resources?category=creator-calls">Browse Creator &amp; calls</a>
       </div>
     </article>
@@ -2221,7 +2222,7 @@
       <p class="eyebrow">Research &amp; reading</p>
       <p class="muted">Monitors, storage, reading, notes, and interview/review setup picks.</p>
       <div class="pill-row">
-        <span class="pill">52 picks</span>
+        <span class="pill">53 picks</span>
         <a class="pill is-accent" href="/resources?category=research-reading">Browse Research &amp; reading</a>
       </div>
     </article>
@@ -2230,7 +2231,7 @@
       <p class="eyebrow">Church &amp; ministry</p>
       <p class="muted">Hospitality, worship, classroom, safety, and service-flow supply picks.</p>
       <div class="pill-row">
-        <span class="pill">152 picks</span>
+        <span class="pill">157 picks</span>
         <a class="pill is-accent" href="/resources?category=church-ministry">Browse Church &amp; ministry</a>
       </div>
     </article>
@@ -2239,7 +2240,7 @@
       <p class="eyebrow">More practical picks</p>
       <p class="muted">Extra broad-demand Amazon.ca picks that do not fit only one buyer lane.</p>
       <div class="pill-row">
-        <span class="pill">1 picks</span>
+        <span class="pill">2 picks</span>
         <a class="pill is-accent" href="/resources?category=practical-picks">Browse More practical picks</a>
       </div>
     </article>
@@ -2257,6 +2258,16 @@
     <a class="pill is-accent" href="/store">See matching store offers</a>
   </div>
   <div class="guide-result-grid">
+    
+    <article class="guide-result-card" data-guide-card data-category="admin-paperwork" data-search-text="Best Sop And Operations Desk Setup Helps buyers keep repeat delivery deadlines, review windows, and weekly operating rhythms visible when client work starts slipping behind inbox noise and open tabs. Admin &amp; paperwork Focused next-buy lane from existing guide pages https://www.thewatchersedge.ca/best-sop-and-operations-desk-setup.html Amazon affiliate resources buyer guide shopping shop categories" style="">
+      <p class="eyebrow">Admin &amp; paperwork · Focused next-buy lane from existing guide pages</p>
+      <h3 style="margin-bottom: 6px;">Best Sop And Operations Desk Setup</h3>
+      <p class="muted">Helps buyers keep repeat delivery deadlines, review windows, and weekly operating rhythms visible when client work starts slipping behind inbox noise and open tabs.</p>
+      <div class="cta-row" style="margin-top: 0;">
+        <a class="btn" href="https://www.thewatchersedge.ca/best-sop-and-operations-desk-setup.html">Open guide</a>
+        <a class="btn ghost" href="/resources?category=admin-paperwork">Browse category</a>
+      </div>
+    </article>
     
     <article class="guide-result-card" data-guide-card data-category="admin-paperwork" data-search-text="Best admin desk tools for invoices and paperwork A repeat-use organizer that fits office, church, creator, and client-delivery setups. Admin &amp; paperwork Client onboarding, paperwork, and follow-up tools https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html Amazon affiliate resources buyer guide shopping shop categories" style="">
       <p class="eyebrow">Admin &amp; paperwork · Client onboarding, paperwork, and follow-up tools</p>
@@ -2368,10 +2379,10 @@
       </div>
     </article>
     
-    <article class="guide-result-card" data-guide-card data-category="church-ministry" data-search-text="Best Church Prayer Team Hospitality Bereavement And Care Meal Support Supplies A practical hospitality support pick when care teams need steadier transport for soup, sandwiches, casseroles, and volunteer meal handoffs across multiple homes. Church &amp; ministry Focused next-buy lane from existing guide pages https://www.thewatchersedge.ca/best-church-prayer-team-hospitality-bereavement-and-care-meal-support-supplies.html Amazon affiliate resources buyer guide shopping shop categories" style="">
+    <article class="guide-result-card" data-guide-card data-category="church-ministry" data-search-text="Best Church Prayer Team Hospitality Bereavement And Care Meal Support Supplies A practical hospitality support pick when care teams need steadier transport for casserole pans, soup containers, desserts, and volunteer meal handoffs across multiple homes. Church &amp; ministry Focused next-buy lane from existing guide pages https://www.thewatchersedge.ca/best-church-prayer-team-hospitality-bereavement-and-care-meal-support-supplies.html Amazon affiliate resources buyer guide shopping shop categories" style="">
       <p class="eyebrow">Church &amp; ministry · Focused next-buy lane from existing guide pages</p>
       <h3 style="margin-bottom: 6px;">Best Church Prayer Team Hospitality Bereavement And Care Meal Support Supplies</h3>
-      <p class="muted">A practical hospitality support pick when care teams need steadier transport for soup, sandwiches, casseroles, and volunteer meal handoffs across multiple homes.</p>
+      <p class="muted">A practical hospitality support pick when care teams need steadier transport for casserole pans, soup containers, desserts, and volunteer meal handoffs across multiple homes.</p>
       <div class="cta-row" style="margin-top: 0;">
         <a class="btn" href="https://www.thewatchersedge.ca/best-church-prayer-team-hospitality-bereavement-and-care-meal-support-supplies.html">Open guide</a>
         <a class="btn ghost" href="/resources?category=church-ministry">Browse category</a>
@@ -2535,16 +2546,6 @@
       <div class="cta-row" style="margin-top: 0;">
         <a class="btn" href="https://www.thewatchersedge.ca/productivity-books-and-kindle-deals.html">Open guide</a>
         <a class="btn ghost" href="/resources?category=research-reading">Browse category</a>
-      </div>
-    </article>
-    
-    <article class="guide-result-card" data-guide-card data-category="workspace" data-search-text="Best Sop And Operations Desk Setup Helps buyers keep repeat delivery deadlines, review windows, and weekly operating rhythms visible when client work starts slipping behind inbox noise and open tabs. Workspace Focused next-buy lane from existing guide pages https://www.thewatchersedge.ca/best-sop-and-operations-desk-setup.html Amazon affiliate resources buyer guide shopping shop categories" style="">
-      <p class="eyebrow">Workspace · Focused next-buy lane from existing guide pages</p>
-      <h3 style="margin-bottom: 6px;">Best Sop And Operations Desk Setup</h3>
-      <p class="muted">Helps buyers keep repeat delivery deadlines, review windows, and weekly operating rhythms visible when client work starts slipping behind inbox noise and open tabs.</p>
-      <div class="cta-row" style="margin-top: 0;">
-        <a class="btn" href="https://www.thewatchersedge.ca/best-sop-and-operations-desk-setup.html">Open guide</a>
-        <a class="btn ghost" href="/resources?category=workspace">Browse category</a>
       </div>
     </article>
     
@@ -10053,6 +10054,261 @@
           </div>
           <h3>Meal-delivery carrier for casserole and dessert routes</h3>
           <p class="muted">A practical hospitality support pick when care teams need steadier transport for casseroles, desserts, soup, and volunteer meal handoffs across multiple homes.</p>
+          
+          <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
+          <div class="cta-row resource-card-actions" style="margin-top: 0;">
+            <a class="btn" href="https://www.amazon.ca/dp/B0D9RN6TQX?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
+            <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-prayer-team-hospitality-bereavement-and-care-meal-support-supplies.html">Read buying guide</a>
+          </div>
+          <p class="resource-card-disclaimer">Guide first here, then check the live product details on Amazon.ca when the fit looks right.</p>
+        </article>
+        
+        <article class="mini-card" data-resource-card data-category="workspace" data-search-text="Focused next-buy lane from existing guide pages Cable tray rack for dock-cable and charger resets A practical workspace reset pick for buyers who want dock cables, wall chargers, and adapter clutter tucked away before the next review block starts. https://www.thewatchersedge.ca/home-office-deals-for-freelancers.html workspace Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Cable tray rack for dock-cable and charger resets" loading="lazy"></div>
+          <div class="resource-card-badges">
+            <span class="resource-chip"></span>
+            <span class="resource-chip"></span>
+          </div>
+          <h3>Cable tray rack for dock-cable and charger resets</h3>
+          <p class="muted">A practical workspace reset pick for buyers who want dock cables, wall chargers, and adapter clutter tucked away before the next review block starts.</p>
+          
+          <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
+          <div class="cta-row resource-card-actions" style="margin-top: 0;">
+            <a class="btn" href="https://www.amazon.ca/dp/B0BPLRX32S?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
+            <a class="btn ghost" href="https://www.thewatchersedge.ca/home-office-deals-for-freelancers.html">Read buying guide</a>
+          </div>
+          <p class="resource-card-disclaimer">Guide first here, then check the live product details on Amazon.ca when the fit looks right.</p>
+        </article>
+        
+        <article class="mini-card" data-resource-card data-category="practical-picks" data-search-text="Focused next-buy lane from existing guide pages Upright laptop cradle for cleaner second-screen sessions Useful when buyers want the laptop parked upright beside the main screen so note-taking, exports, and between-call resets feel less crowded. https://www.thewatchersedge.ca/best-home-office-setup-for-solo-operators.html practical-picks Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Upright laptop cradle for cleaner second-screen sessions" loading="lazy"></div>
+          <div class="resource-card-badges">
+            <span class="resource-chip"></span>
+            <span class="resource-chip"></span>
+          </div>
+          <h3>Upright laptop cradle for cleaner second-screen sessions</h3>
+          <p class="muted">Useful when buyers want the laptop parked upright beside the main screen so note-taking, exports, and between-call resets feel less crowded.</p>
+          
+          <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
+          <div class="cta-row resource-card-actions" style="margin-top: 0;">
+            <a class="btn" href="https://www.amazon.ca/dp/B08JQC7FQ1?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
+            <a class="btn ghost" href="https://www.thewatchersedge.ca/best-home-office-setup-for-solo-operators.html">Read buying guide</a>
+          </div>
+          <p class="resource-card-disclaimer">Guide first here, then check the live product details on Amazon.ca when the fit looks right.</p>
+        </article>
+        
+        <article class="mini-card" data-resource-card data-category="creator-calls" data-search-text="Focused next-buy lane from existing guide pages Clip light for dim kickoff calls and walkthroughs A low-friction lighting pick for buyers whose kickoff calls, walkthroughs, or screen-share check-ins still look dim without a full creator rebuild. https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html creator-calls Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Clip light for dim kickoff calls and walkthroughs" loading="lazy"></div>
+          <div class="resource-card-badges">
+            <span class="resource-chip"></span>
+            <span class="resource-chip"></span>
+          </div>
+          <h3>Clip light for dim kickoff calls and walkthroughs</h3>
+          <p class="muted">A low-friction lighting pick for buyers whose kickoff calls, walkthroughs, or screen-share check-ins still look dim without a full creator rebuild.</p>
+          
+          <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
+          <div class="cta-row resource-card-actions" style="margin-top: 0;">
+            <a class="btn" href="https://www.amazon.ca/dp/B08LL2R32Q?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
+            <a class="btn ghost" href="https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html">Read buying guide</a>
+          </div>
+          <p class="resource-card-disclaimer">Guide first here, then check the live product details on Amazon.ca when the fit looks right.</p>
+        </article>
+        
+        <article class="mini-card" data-resource-card data-category="admin-paperwork" data-search-text="Focused next-buy lane from existing guide pages Planner pad for invoice and follow-up blocks Helps buyers keep invoice windows, follow-up blocks, and recurring admin checkpoints visible when those tasks keep slipping behind tabs and inboxes. https://www.thewatchersedge.ca/best-sop-and-operations-desk-setup.html admin-paperwork Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Planner pad for invoice and follow-up blocks" loading="lazy"></div>
+          <div class="resource-card-badges">
+            <span class="resource-chip"></span>
+            <span class="resource-chip"></span>
+          </div>
+          <h3>Planner pad for invoice and follow-up blocks</h3>
+          <p class="muted">Helps buyers keep invoice windows, follow-up blocks, and recurring admin checkpoints visible when those tasks keep slipping behind tabs and inboxes.</p>
+          
+          <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
+          <div class="cta-row resource-card-actions" style="margin-top: 0;">
+            <a class="btn" href="https://www.amazon.ca/dp/B07K67RL18?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
+            <a class="btn ghost" href="https://www.thewatchersedge.ca/best-sop-and-operations-desk-setup.html">Read buying guide</a>
+          </div>
+          <p class="resource-card-disclaimer">Guide first here, then check the live product details on Amazon.ca when the fit looks right.</p>
+        </article>
+        
+        <article class="mini-card" data-resource-card data-category="research-reading" data-search-text="Focused next-buy lane from existing guide pages Book stand for printed SOP pages and review checklists A practical reading-support pick for buyers who want SOP pages, printed checklists, or workbook notes upright during slower review sessions. https://www.thewatchersedge.ca/productivity-books-and-kindle-deals.html research-reading Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Book stand for printed SOP pages and review checklists" loading="lazy"></div>
+          <div class="resource-card-badges">
+            <span class="resource-chip"></span>
+            <span class="resource-chip"></span>
+          </div>
+          <h3>Book stand for printed SOP pages and review checklists</h3>
+          <p class="muted">A practical reading-support pick for buyers who want SOP pages, printed checklists, or workbook notes upright during slower review sessions.</p>
+          
+          <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
+          <div class="cta-row resource-card-actions" style="margin-top: 0;">
+            <a class="btn" href="https://www.amazon.ca/dp/B0C3TSQ4VQ?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
+            <a class="btn ghost" href="https://www.thewatchersedge.ca/productivity-books-and-kindle-deals.html">Read buying guide</a>
+          </div>
+          <p class="resource-card-disclaimer">Guide first here, then check the live product details on Amazon.ca when the fit looks right.</p>
+        </article>
+        
+        <article class="mini-card" data-resource-card data-category="pet-home" data-search-text="Focused next-buy lane from existing guide pages Pet camera for sofa corner and feeding-mat check-ins Useful when owners mostly want one quick reassurance view covering the sofa corner, feeding mat, and the small comfort loop pets repeat through the day. https://www.thewatchersedge.ca/best-pet-cameras-for-home-check-ins-and-peace-of-mind.html pet-home Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Pet camera for sofa corner and feeding-mat check-ins" loading="lazy"></div>
+          <div class="resource-card-badges">
+            <span class="resource-chip"></span>
+            <span class="resource-chip"></span>
+          </div>
+          <h3>Pet camera for sofa corner and feeding-mat check-ins</h3>
+          <p class="muted">Useful when owners mostly want one quick reassurance view covering the sofa corner, feeding mat, and the small comfort loop pets repeat through the day.</p>
+          
+          <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
+          <div class="cta-row resource-card-actions" style="margin-top: 0;">
+            <a class="btn" href="https://www.amazon.ca/dp/B08XXKJGKH?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
+            <a class="btn ghost" href="https://www.thewatchersedge.ca/best-pet-cameras-for-home-check-ins-and-peace-of-mind.html">Read buying guide</a>
+          </div>
+          <p class="resource-card-disclaimer">Guide first here, then check the live product details on Amazon.ca when the fit looks right.</p>
+        </article>
+        
+        <article class="mini-card" data-resource-card data-category="pet-home" data-search-text="Focused next-buy lane from existing guide pages Pet camera for entry rug and window perch peeks A calmer fit for owners who mostly want a quick app view of the entry rug, window perch, or nearby comfort spots pets revisit through the day. https://www.thewatchersedge.ca/best-pet-cameras-for-home-check-ins-and-peace-of-mind.html pet-home Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Pet camera for entry rug and window perch peeks" loading="lazy"></div>
+          <div class="resource-card-badges">
+            <span class="resource-chip"></span>
+            <span class="resource-chip"></span>
+          </div>
+          <h3>Pet camera for entry rug and window perch peeks</h3>
+          <p class="muted">A calmer fit for owners who mostly want a quick app view of the entry rug, window perch, or nearby comfort spots pets revisit through the day.</p>
+          
+          <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
+          <div class="cta-row resource-card-actions" style="margin-top: 0;">
+            <a class="btn" href="https://www.amazon.ca/dp/B0G1S9MDM2?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
+            <a class="btn ghost" href="https://www.thewatchersedge.ca/best-pet-cameras-for-home-check-ins-and-peace-of-mind.html">Read buying guide</a>
+          </div>
+          <p class="resource-card-disclaimer">Guide first here, then check the live product details on Amazon.ca when the fit looks right.</p>
+        </article>
+        
+        <article class="mini-card" data-resource-card data-category="pet-home" data-search-text="Focused next-buy lane from existing guide pages Cat dental wipes for quick after-dinner cleanup A lower-friction repeat-buy angle for households that can follow through on short wipe-based mouth-care passes more easily than longer brushing sessions after dinner. https://www.thewatchersedge.ca/best-cat-dental-care-basics-for-gentle-home-routines.html pet-home Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Cat dental wipes for quick after-dinner cleanup" loading="lazy"></div>
+          <div class="resource-card-badges">
+            <span class="resource-chip"></span>
+            <span class="resource-chip"></span>
+          </div>
+          <h3>Cat dental wipes for quick after-dinner cleanup</h3>
+          <p class="muted">A lower-friction repeat-buy angle for households that can follow through on short wipe-based mouth-care passes more easily than longer brushing sessions after dinner.</p>
+          
+          <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
+          <div class="cta-row resource-card-actions" style="margin-top: 0;">
+            <a class="btn" href="https://www.amazon.ca/dp/B07NP5S3N4?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
+            <a class="btn ghost" href="https://www.thewatchersedge.ca/best-cat-dental-care-basics-for-gentle-home-routines.html">Read buying guide</a>
+          </div>
+          <p class="resource-card-disclaimer">Guide first here, then check the live product details on Amazon.ca when the fit looks right.</p>
+        </article>
+        
+        <article class="mini-card" data-resource-card data-category="pet-home" data-search-text="Focused next-buy lane from existing guide pages Cat finger brush set for shorter first-brush tryouts Helpful when owners want softer first-contact brushing in short tryout sessions before moving into longer cat dental routines. https://www.thewatchersedge.ca/best-cat-dental-care-basics-for-gentle-home-routines.html pet-home Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Cat finger brush set for shorter first-brush tryouts" loading="lazy"></div>
+          <div class="resource-card-badges">
+            <span class="resource-chip"></span>
+            <span class="resource-chip"></span>
+          </div>
+          <h3>Cat finger brush set for shorter first-brush tryouts</h3>
+          <p class="muted">Helpful when owners want softer first-contact brushing in short tryout sessions before moving into longer cat dental routines.</p>
+          
+          <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
+          <div class="cta-row resource-card-actions" style="margin-top: 0;">
+            <a class="btn" href="https://www.amazon.ca/dp/B07SHRVBPH?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
+            <a class="btn ghost" href="https://www.thewatchersedge.ca/best-cat-dental-care-basics-for-gentle-home-routines.html">Read buying guide</a>
+          </div>
+          <p class="resource-card-disclaimer">Guide first here, then check the live product details on Amazon.ca when the fit looks right.</p>
+        </article>
+        
+        <article class="mini-card" data-resource-card data-category="pet-home" data-search-text="Focused next-buy lane from existing guide pages Cat oral gel for no-rush couch-side support A simpler first-step option for owners who want steadier mouth-care support on low-energy evenings when full brushing still feels too ambitious. https://www.thewatchersedge.ca/best-cat-dental-care-basics-for-gentle-home-routines.html pet-home Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Cat oral gel for no-rush couch-side support" loading="lazy"></div>
+          <div class="resource-card-badges">
+            <span class="resource-chip"></span>
+            <span class="resource-chip"></span>
+          </div>
+          <h3>Cat oral gel for no-rush couch-side support</h3>
+          <p class="muted">A simpler first-step option for owners who want steadier mouth-care support on low-energy evenings when full brushing still feels too ambitious.</p>
+          
+          <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
+          <div class="cta-row resource-card-actions" style="margin-top: 0;">
+            <a class="btn" href="https://www.amazon.ca/dp/B0CLQ2LZP9?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
+            <a class="btn ghost" href="https://www.thewatchersedge.ca/best-cat-dental-care-basics-for-gentle-home-routines.html">Read buying guide</a>
+          </div>
+          <p class="resource-card-disclaimer">Guide first here, then check the live product details on Amazon.ca when the fit looks right.</p>
+        </article>
+        
+        <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Queue rope barrier for foyer and overflow-room turns A practical event-flow pick when churches need calmer direction at foyer bottlenecks, overflow-room turns, or same-day family check-in pivots. https://www.thewatchersedge.ca/best-church-event-setup-queue-flow-and-portable-room-reset-tools.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Queue rope barrier for foyer and overflow-room turns" loading="lazy"></div>
+          <div class="resource-card-badges">
+            <span class="resource-chip"></span>
+            <span class="resource-chip"></span>
+          </div>
+          <h3>Queue rope barrier for foyer and overflow-room turns</h3>
+          <p class="muted">A practical event-flow pick when churches need calmer direction at foyer bottlenecks, overflow-room turns, or same-day family check-in pivots.</p>
+          
+          <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
+          <div class="cta-row resource-card-actions" style="margin-top: 0;">
+            <a class="btn" href="https://www.amazon.ca/dp/B0CNRB8XVC?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
+            <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-event-setup-queue-flow-and-portable-room-reset-tools.html">Read buying guide</a>
+          </div>
+          <p class="resource-card-disclaimer">Guide first here, then check the live product details on Amazon.ca when the fit looks right.</p>
+        </article>
+        
+        <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Volunteer radio dock for parking-team handoff resets Helpful when parking, foyer, and welcome teams need the same radios charged, staged, and easier to hand off before the next volunteer block starts. https://www.thewatchersedge.ca/best-church-security-check-in-and-facility-signage-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Volunteer radio dock for parking-team handoff resets" loading="lazy"></div>
+          <div class="resource-card-badges">
+            <span class="resource-chip"></span>
+            <span class="resource-chip"></span>
+          </div>
+          <h3>Volunteer radio dock for parking-team handoff resets</h3>
+          <p class="muted">Helpful when parking, foyer, and welcome teams need the same radios charged, staged, and easier to hand off before the next volunteer block starts.</p>
+          
+          <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
+          <div class="cta-row resource-card-actions" style="margin-top: 0;">
+            <a class="btn" href="https://www.amazon.ca/dp/B00G9T7AEA?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
+            <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-security-check-in-and-facility-signage-supplies.html">Read buying guide</a>
+          </div>
+          <p class="resource-card-disclaimer">Guide first here, then check the live product details on Amazon.ca when the fit looks right.</p>
+        </article>
+        
+        <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Portable sign frame for class pickup and coffee-hour reroutes Useful when guests need clearer same-day direction changes for class pickup, coffee-hour tables, overflow rooms, or temporary ministry-space reroutes. https://www.thewatchersedge.ca/best-church-hospitality-signage-and-welcome-table-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Portable sign frame for class pickup and coffee-hour reroutes" loading="lazy"></div>
+          <div class="resource-card-badges">
+            <span class="resource-chip"></span>
+            <span class="resource-chip"></span>
+          </div>
+          <h3>Portable sign frame for class pickup and coffee-hour reroutes</h3>
+          <p class="muted">Useful when guests need clearer same-day direction changes for class pickup, coffee-hour tables, overflow rooms, or temporary ministry-space reroutes.</p>
+          
+          <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
+          <div class="cta-row resource-card-actions" style="margin-top: 0;">
+            <a class="btn" href="https://www.amazon.ca/dp/B07P8TXWYH?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
+            <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-hospitality-signage-and-welcome-table-supplies.html">Read buying guide</a>
+          </div>
+          <p class="resource-card-disclaimer">Guide first here, then check the live product details on Amazon.ca when the fit looks right.</p>
+        </article>
+        
+        <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Nursery wipes tub for toy shelf and snack-table touchpoints A repeat-use cleanup pick for volunteers who need faster wipe-down passes between toy shelves, snack tables, nursery counters, and shared touchpoints. https://www.thewatchersedge.ca/best-church-nursery-sanitation-and-child-safety-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Nursery wipes tub for toy shelf and snack-table touchpoints" loading="lazy"></div>
+          <div class="resource-card-badges">
+            <span class="resource-chip"></span>
+            <span class="resource-chip"></span>
+          </div>
+          <h3>Nursery wipes tub for toy shelf and snack-table touchpoints</h3>
+          <p class="muted">A repeat-use cleanup pick for volunteers who need faster wipe-down passes between toy shelves, snack tables, nursery counters, and shared touchpoints.</p>
+          
+          <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
+          <div class="cta-row resource-card-actions" style="margin-top: 0;">
+            <a class="btn" href="https://www.amazon.ca/dp/B09XJC428L?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a>
+            <a class="btn ghost" href="https://www.thewatchersedge.ca/best-church-nursery-sanitation-and-child-safety-supplies.html">Read buying guide</a>
+          </div>
+          <p class="resource-card-disclaimer">Guide first here, then check the live product details on Amazon.ca when the fit looks right.</p>
+        </article>
+        
+        <article class="mini-card" data-resource-card data-category="church-ministry" data-search-text="Focused next-buy lane from existing guide pages Meal-delivery carrier for casserole-pan and soup drop-offs A practical hospitality support pick when care teams need steadier transport for casserole pans, soup containers, desserts, and volunteer meal handoffs across multiple homes. https://www.thewatchersedge.ca/best-church-prayer-team-hospitality-bereavement-and-care-meal-support-supplies.html church-ministry Amazon Amazon.ca affiliate resources gear guide shopping shop categories resourceshubca-20" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.9);">
+          <div class="resource-picture"><img src="" alt="Illustrated preview for Meal-delivery carrier for casserole-pan and soup drop-offs" loading="lazy"></div>
+          <div class="resource-card-badges">
+            <span class="resource-chip"></span>
+            <span class="resource-chip"></span>
+          </div>
+          <h3>Meal-delivery carrier for casserole-pan and soup drop-offs</h3>
+          <p class="muted">A practical hospitality support pick when care teams need steadier transport for casserole pans, soup containers, desserts, and volunteer meal handoffs across multiple homes.</p>
           
           <p class="resource-card-guide-note"><strong>Buyer guide:</strong> </p>
           <div class="cta-row resource-card-actions" style="margin-top: 0;">
