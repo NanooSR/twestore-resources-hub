@@ -31,10 +31,14 @@
     "/store/twe-client-portal-delivery-hub",
     "/store/twe-amazon-affiliate-store-quickstart-kit",
     "/store/twetrade-bot-builder-workbook",
-    "/store/twe-resources-traffic-tracker-promo-log"
+    "/store/twe-resources-traffic-tracker-promo-log",
+    "/store/twe-meeting-notes-action-tracker",
+    "/store/twe-local-service-quote-calculator",
+    "/store/twe-lead-value-roi-calculator",
+    "/store/twe-website-audit-scorecard"
   ],
-  "product_count": 39,
-  "unique_product_route_count": 16,
+  "product_count": 43,
+  "unique_product_route_count": 20,
   "product_slugs": [
     "the-watchers-edge-botops-toolkit",
     "twe-solo-crm-follow-up-system",
@@ -74,7 +78,11 @@
     "twe-client-portal-delivery-hub",
     "twe-amazon-affiliate-store-quickstart-kit",
     "twetrade-bot-builder-workbook",
-    "twe-resources-traffic-tracker-promo-log"
+    "twe-resources-traffic-tracker-promo-log",
+    "twe-meeting-notes-action-tracker",
+    "twe-local-service-quote-calculator",
+    "twe-lead-value-roi-calculator",
+    "twe-website-audit-scorecard"
   ],
   "unique_product_slugs": [
     "the-watchers-edge-botops-toolkit",
@@ -92,8 +100,12 @@
     "twe-client-portal-delivery-hub",
     "twe-amazon-affiliate-store-quickstart-kit",
     "twetrade-bot-builder-workbook",
-    "twe-resources-traffic-tracker-promo-log"
+    "twe-resources-traffic-tracker-promo-log",
+    "twe-meeting-notes-action-tracker",
+    "twe-local-service-quote-calculator",
+    "twe-lead-value-roi-calculator",
+    "twe-website-audit-scorecard"
   ],
   "redirects": [],
-  "exported_count": 31
+  "exported_count": 35
 }
