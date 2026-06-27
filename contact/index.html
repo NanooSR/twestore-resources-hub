@@ -1044,9 +1044,9 @@
         align-items: start;
       }
       .store-main-primary {
-        display: contents;
-      }
-      .store-main-layout > .card:first-child {
+        display: grid;
+        gap: 22px;
+        align-content: start;
         grid-column: 1;
         grid-row: 1;
       }
@@ -1058,8 +1058,8 @@
         grid-row: 1;
       }
       #store-product-results {
-        grid-column: 1 / -1;
-        grid-row: 2;
+        grid-column: auto;
+        grid-row: auto;
       }
       .store-compare-row {
         display: grid;
