@@ -834,6 +834,31 @@
         color: #9a5d00;
       }
       .product-list { display: grid; gap: 18px; }
+      .store-offer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 18px;
+        grid-auto-flow: dense;
+        align-content: start;
+      }
+      .store-offer-grid .product {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .store-offer-grid .product-card-actions {
+        margin-top: auto;
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .store-offer-grid .product-card-actions .muted {
+        max-width: none !important;
+      }
+      .store-offer-grid .product-card-actions .cta-row {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
       .product {
         border-radius: var(--radius-lg);
         padding: 24px;
@@ -981,9 +1006,27 @@
       }
       .store-main-layout {
         display: grid;
-        grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.82fr);
+        grid-template-columns: minmax(0, 1.75fr) minmax(320px, 0.9fr);
         gap: 22px;
         align-items: start;
+      }
+      .store-main-primary {
+        display: contents;
+      }
+      .store-main-layout > .card:first-child {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .store-main-secondary {
+        display: grid;
+        gap: 18px;
+        align-content: start;
+        grid-column: 2;
+        grid-row: 1;
+      }
+      #store-product-results {
+        grid-column: 1 / -1;
+        grid-row: 2;
       }
       .store-compare-row {
         display: grid;
@@ -1859,6 +1902,15 @@
         .advanced-amazon-grid,
         .email-capture-plan {
           grid-template-columns: 1fr;
+        }
+        .store-main-primary {
+          display: block;
+        }
+        .store-main-layout > .card:first-child,
+        .store-main-secondary,
+        #store-product-results {
+          grid-column: auto;
+          grid-row: auto;
         }
         .store-filter-grid .cta-row {
           justify-content: flex-start;
