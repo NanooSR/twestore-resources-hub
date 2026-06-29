@@ -434,6 +434,31 @@ main.wrap {
   padding: 24px;
 }
 
+.quick-shop-section {
+  border: 1px solid rgba(115, 183, 255, 0.22);
+  background: linear-gradient(180deg, rgba(115, 183, 255, 0.12), rgba(255, 255, 255, 0.03));
+}
+
+.quick-shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.quick-shop-card {
+  border-radius: var(--radius-md);
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.quick-shop-card h4 {
+  margin: 0 0 0.55rem;
+  color: var(--heading);
+  font-size: 1.12rem;
+}
+
 .recommendation-link-row {
   margin-top: 0.75rem;
 }
