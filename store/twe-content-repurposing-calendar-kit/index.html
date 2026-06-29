@@ -5053,6 +5053,14 @@
       
       <li>Suggested price: $15 USD</li>
       
+      <li>Etsy support source: `marketing/content_repurposing_calendar_kit_etsy_listing.md`</li>
+      
+      <li>Machine-readable field map: `products/content_repurposing_calendar_kit/v1/marketing/MARKETPLACE_DRAFT_FIELDS.json`</li>
+      
+      <li>Support checklist: `products/content_repurposing_calendar_kit/v1/marketing/STAGING_ACCEPTANCE_CHECKLIST.md`</li>
+      
+      <li>Buyer ZIP: `exports/product_delivery/content_repurposing_calendar_kit_v1.zip`</li>
+      
     </ul>
     
   </article>
@@ -5135,7 +5143,7 @@
     
     <article class="feature-card">
       <h3>What is already mapped?</h3>
-      <p class="muted">4 included pieces are clearly listed. 5 common buyer questions are already answered. 2 related offers are suggested for pairing.</p>
+      <p class="muted">8 included pieces are clearly listed. 5 common buyer questions are already answered. 2 related offers are suggested for pairing.</p>
     </article>
     
     <article class="feature-card">
@@ -8007,6 +8015,62 @@
           });
           loadAutomaticWeather();
         });
+      }());
+
+      (function () {
+        const isAmazonHref = (href) => /https?:\/\/(www\.)?amazon\./i.test(String(href || ''));
+        const sendAffiliateClick = (payload) => {
+          const url = window.tweApiUrl('/api/affiliate-click');
+          const body = JSON.stringify(payload);
+          if (navigator.sendBeacon) {
+            try {
+              const blob = new Blob([body], {type: 'application/json'});
+              navigator.sendBeacon(url, blob);
+              return;
+            } catch (error) {}
+          }
+          try {
+            fetch(url, {
+              method: 'POST',
+              headers: {'Content-Type': 'application/json'},
+              body,
+              keepalive: true,
+            }).catch(() => {});
+          } catch (error) {}
+        };
+        document.addEventListener('click', (event) => {
+          const link = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+          if (!link) return;
+          const href = link.getAttribute('href') || '';
+          const rel = link.getAttribute('rel') || '';
+          const flaggedAffiliate = link.hasAttribute('data-affiliate-click') || /sponsored/i.test(rel);
+          if (!flaggedAffiliate || !isAmazonHref(href)) return;
+
+          const payload = {
+            href,
+            page: window.location.pathname + window.location.search,
+            pageTitle: document.title || '',
+            title: link.getAttribute('data-affiliate-title') || link.textContent.trim() || '',
+            category: link.getAttribute('data-affiliate-category') || '',
+            guideUrl: link.getAttribute('data-affiliate-guide-url') || '',
+            placement: link.getAttribute('data-affiliate-placement') || window.location.pathname || '',
+          };
+
+          if (window.gtag) {
+            try {
+              window.gtag('event', 'affiliate_click', {
+                merchant: 'amazon',
+                event_category: 'affiliate',
+                event_label: payload.title || payload.category || href,
+                destination_url: href,
+                page_path: payload.page,
+                category_slug: payload.category,
+              });
+            } catch (error) {}
+          }
+
+          sendAffiliateClick(payload);
+        }, {capture: true});
       }());
 
       (function () {

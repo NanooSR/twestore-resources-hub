@@ -4834,7 +4834,7 @@
   <div class="mini-stack">
     <article class="mini-card product-hero-proof-card">
       <p class="eyebrow">Quick buyer view</p>
-      <img class="product-hero-preview" src="/static/public_site/product_previews/twe-sop-runbook-builder-pack/01_sop_runbook_hero.png" alt="Preview for TWE SOP &amp; Runbook Builder Pack">
+      <img class="product-hero-preview" src="/static/public_site/product_previews/twe-sop-runbook-builder-pack/01_twe_sop_runbook_builder_pack_hero.png" alt="Preview for TWE SOP &amp; Runbook Builder Pack">
       <h3>Turn messy tribal knowledge into SOPs and runbooks your team can actually maintain.</h3>
       <p class="muted">Review the fit, what is included, and where checkout happens before you buy. These previews stay focused on the product and avoid private account details.</p>
       
@@ -4941,7 +4941,7 @@
     </div>
     <a class="btn" href="https://nanoojr.gumroad.com/l/incyjw" target="_blank" rel="noopener">Buy on Gumroad</a>
   </div>
-  <video class="product-demo-video" controls preload="metadata" poster="/static/public_site/product_previews/twe-sop-runbook-builder-pack/01_sop_runbook_hero.png" aria-label="Buyer-safe product demo video for TWE SOP &amp; Runbook Builder Pack">
+  <video class="product-demo-video" controls preload="metadata" poster="/static/public_site/product_previews/twe-sop-runbook-builder-pack/01_twe_sop_runbook_builder_pack_hero.png" aria-label="Buyer-safe product demo video for TWE SOP &amp; Runbook Builder Pack">
     <source src="/static/public_site/product_videos/twe-sop-runbook-builder-pack_demo.mp4" type="video/mp4">
     Your browser does not support embedded video. You can still use the preview gallery and checkout links on this page.
   </video>
@@ -4961,8 +4961,8 @@
     
     
     <figure class="preview-card">
-      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twe-sop-runbook-builder-pack/01_sop_runbook_hero.png" data-lightbox-alt="Buyer-safe product preview for TWE SOP &amp; Runbook Builder Pack" data-lightbox-caption="TWE SOP &amp; Runbook Builder Pack preview 1">
-        <img src="/static/public_site/product_previews/twe-sop-runbook-builder-pack/01_sop_runbook_hero.png" alt="Buyer-safe product preview for TWE SOP &amp; Runbook Builder Pack">
+      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twe-sop-runbook-builder-pack/01_twe_sop_runbook_builder_pack_hero.png" data-lightbox-alt="Buyer-safe product preview for TWE SOP &amp; Runbook Builder Pack" data-lightbox-caption="TWE SOP &amp; Runbook Builder Pack preview 1">
+        <img src="/static/public_site/product_previews/twe-sop-runbook-builder-pack/01_twe_sop_runbook_builder_pack_hero.png" alt="Buyer-safe product preview for TWE SOP &amp; Runbook Builder Pack">
       </button>
       <figcaption>
         <span>Preview 1</span>
@@ -4971,8 +4971,8 @@
     </figure>
     
     <figure class="preview-card">
-      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twe-sop-runbook-builder-pack/02_sop_runbook_dashboard.png" data-lightbox-alt="Buyer-safe product preview for TWE SOP &amp; Runbook Builder Pack" data-lightbox-caption="TWE SOP &amp; Runbook Builder Pack preview 2">
-        <img src="/static/public_site/product_previews/twe-sop-runbook-builder-pack/02_sop_runbook_dashboard.png" alt="Buyer-safe product preview for TWE SOP &amp; Runbook Builder Pack">
+      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twe-sop-runbook-builder-pack/02_twe_sop_runbook_builder_pack_inside.png" data-lightbox-alt="Buyer-safe product preview for TWE SOP &amp; Runbook Builder Pack" data-lightbox-caption="TWE SOP &amp; Runbook Builder Pack preview 2">
+        <img src="/static/public_site/product_previews/twe-sop-runbook-builder-pack/02_twe_sop_runbook_builder_pack_inside.png" alt="Buyer-safe product preview for TWE SOP &amp; Runbook Builder Pack">
       </button>
       <figcaption>
         <span>Preview 2</span>
@@ -4981,8 +4981,8 @@
     </figure>
     
     <figure class="preview-card">
-      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twe-sop-runbook-builder-pack/03_sop_runbook_whats_included.png" data-lightbox-alt="Buyer-safe product preview for TWE SOP &amp; Runbook Builder Pack" data-lightbox-caption="TWE SOP &amp; Runbook Builder Pack preview 3">
-        <img src="/static/public_site/product_previews/twe-sop-runbook-builder-pack/03_sop_runbook_whats_included.png" alt="Buyer-safe product preview for TWE SOP &amp; Runbook Builder Pack">
+      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twe-sop-runbook-builder-pack/03_twe_sop_runbook_builder_pack_buyer_checklist.png" data-lightbox-alt="Buyer-safe product preview for TWE SOP &amp; Runbook Builder Pack" data-lightbox-caption="TWE SOP &amp; Runbook Builder Pack preview 3">
+        <img src="/static/public_site/product_previews/twe-sop-runbook-builder-pack/03_twe_sop_runbook_builder_pack_buyer_checklist.png" alt="Buyer-safe product preview for TWE SOP &amp; Runbook Builder Pack">
       </button>
       <figcaption>
         <span>Preview 3</span>
@@ -8009,6 +8009,62 @@
           });
           loadAutomaticWeather();
         });
+      }());
+
+      (function () {
+        const isAmazonHref = (href) => /https?:\/\/(www\.)?amazon\./i.test(String(href || ''));
+        const sendAffiliateClick = (payload) => {
+          const url = window.tweApiUrl('/api/affiliate-click');
+          const body = JSON.stringify(payload);
+          if (navigator.sendBeacon) {
+            try {
+              const blob = new Blob([body], {type: 'application/json'});
+              navigator.sendBeacon(url, blob);
+              return;
+            } catch (error) {}
+          }
+          try {
+            fetch(url, {
+              method: 'POST',
+              headers: {'Content-Type': 'application/json'},
+              body,
+              keepalive: true,
+            }).catch(() => {});
+          } catch (error) {}
+        };
+        document.addEventListener('click', (event) => {
+          const link = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+          if (!link) return;
+          const href = link.getAttribute('href') || '';
+          const rel = link.getAttribute('rel') || '';
+          const flaggedAffiliate = link.hasAttribute('data-affiliate-click') || /sponsored/i.test(rel);
+          if (!flaggedAffiliate || !isAmazonHref(href)) return;
+
+          const payload = {
+            href,
+            page: window.location.pathname + window.location.search,
+            pageTitle: document.title || '',
+            title: link.getAttribute('data-affiliate-title') || link.textContent.trim() || '',
+            category: link.getAttribute('data-affiliate-category') || '',
+            guideUrl: link.getAttribute('data-affiliate-guide-url') || '',
+            placement: link.getAttribute('data-affiliate-placement') || window.location.pathname || '',
+          };
+
+          if (window.gtag) {
+            try {
+              window.gtag('event', 'affiliate_click', {
+                merchant: 'amazon',
+                event_category: 'affiliate',
+                event_label: payload.title || payload.category || href,
+                destination_url: href,
+                page_path: payload.page,
+                category_slug: payload.category,
+              });
+            } catch (error) {}
+          }
+
+          sendAffiliateClick(payload);
+        }, {capture: true});
       }());
 
       (function () {

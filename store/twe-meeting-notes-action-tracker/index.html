@@ -4834,7 +4834,7 @@
   <div class="mini-stack">
     <article class="mini-card product-hero-proof-card">
       <p class="eyebrow">Quick buyer view</p>
-      <img class="product-hero-preview" src="products/meeting_notes_action_tracker/v1/assets/cover_concept.svg" alt="Preview for TWE Meeting Notes &amp; Action Tracker">
+      <img class="product-hero-preview" src="/static/public_site/product_previews/twe-meeting-notes-action-tracker/01_twe_meeting_notes_action_tracker_hero.png" alt="Preview for TWE Meeting Notes &amp; Action Tracker">
       <h3>Use one simple system to capture what happened, assign the work, preserve the decisions, and start the next agenda before momentum disappears.</h3>
       <p class="muted">Review the fit, what is included, and where checkout happens before you buy. These previews stay focused on the product and avoid private account details.</p>
       
@@ -4942,8 +4942,8 @@
     
     
     <figure class="preview-card">
-      <button class="lightbox-trigger" type="button" data-lightbox-src="products/meeting_notes_action_tracker/v1/assets/cover_concept.svg" data-lightbox-alt="Buyer-safe product preview for TWE Meeting Notes &amp; Action Tracker" data-lightbox-caption="TWE Meeting Notes &amp; Action Tracker preview 1">
-        <img src="products/meeting_notes_action_tracker/v1/assets/cover_concept.svg" alt="Buyer-safe product preview for TWE Meeting Notes &amp; Action Tracker">
+      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twe-meeting-notes-action-tracker/01_twe_meeting_notes_action_tracker_hero.png" data-lightbox-alt="Buyer-safe product preview for TWE Meeting Notes &amp; Action Tracker" data-lightbox-caption="TWE Meeting Notes &amp; Action Tracker preview 1">
+        <img src="/static/public_site/product_previews/twe-meeting-notes-action-tracker/01_twe_meeting_notes_action_tracker_hero.png" alt="Buyer-safe product preview for TWE Meeting Notes &amp; Action Tracker">
       </button>
       <figcaption>
         <span>Preview 1</span>
@@ -4952,8 +4952,8 @@
     </figure>
     
     <figure class="preview-card">
-      <button class="lightbox-trigger" type="button" data-lightbox-src="products/meeting_notes_action_tracker/v1/assets/workflow_closeup_concept.svg" data-lightbox-alt="Buyer-safe product preview for TWE Meeting Notes &amp; Action Tracker" data-lightbox-caption="TWE Meeting Notes &amp; Action Tracker preview 2">
-        <img src="products/meeting_notes_action_tracker/v1/assets/workflow_closeup_concept.svg" alt="Buyer-safe product preview for TWE Meeting Notes &amp; Action Tracker">
+      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twe-meeting-notes-action-tracker/02_twe_meeting_notes_action_tracker_inside.png" data-lightbox-alt="Buyer-safe product preview for TWE Meeting Notes &amp; Action Tracker" data-lightbox-caption="TWE Meeting Notes &amp; Action Tracker preview 2">
+        <img src="/static/public_site/product_previews/twe-meeting-notes-action-tracker/02_twe_meeting_notes_action_tracker_inside.png" alt="Buyer-safe product preview for TWE Meeting Notes &amp; Action Tracker">
       </button>
       <figcaption>
         <span>Preview 2</span>
@@ -4962,21 +4962,11 @@
     </figure>
     
     <figure class="preview-card">
-      <button class="lightbox-trigger" type="button" data-lightbox-src="products/meeting_notes_action_tracker/v1/assets/whats_included_concept.svg" data-lightbox-alt="Buyer-safe product preview for TWE Meeting Notes &amp; Action Tracker" data-lightbox-caption="TWE Meeting Notes &amp; Action Tracker preview 3">
-        <img src="products/meeting_notes_action_tracker/v1/assets/whats_included_concept.svg" alt="Buyer-safe product preview for TWE Meeting Notes &amp; Action Tracker">
+      <button class="lightbox-trigger" type="button" data-lightbox-src="/static/public_site/product_previews/twe-meeting-notes-action-tracker/03_twe_meeting_notes_action_tracker_buyer_checklist.png" data-lightbox-alt="Buyer-safe product preview for TWE Meeting Notes &amp; Action Tracker" data-lightbox-caption="TWE Meeting Notes &amp; Action Tracker preview 3">
+        <img src="/static/public_site/product_previews/twe-meeting-notes-action-tracker/03_twe_meeting_notes_action_tracker_buyer_checklist.png" alt="Buyer-safe product preview for TWE Meeting Notes &amp; Action Tracker">
       </button>
       <figcaption>
         <span>Preview 3</span>
-        <span class="zoom-hint">Click to enlarge</span>
-      </figcaption>
-    </figure>
-    
-    <figure class="preview-card">
-      <button class="lightbox-trigger" type="button" data-lightbox-src="products/meeting_notes_action_tracker/v1/assets/dashboard_mockup_concept.svg" data-lightbox-alt="Buyer-safe product preview for TWE Meeting Notes &amp; Action Tracker" data-lightbox-caption="TWE Meeting Notes &amp; Action Tracker preview 4">
-        <img src="products/meeting_notes_action_tracker/v1/assets/dashboard_mockup_concept.svg" alt="Buyer-safe product preview for TWE Meeting Notes &amp; Action Tracker">
-      </button>
-      <figcaption>
-        <span>Preview 4</span>
         <span class="zoom-hint">Click to enlarge</span>
       </figcaption>
     </figure>
@@ -7985,6 +7975,62 @@
           });
           loadAutomaticWeather();
         });
+      }());
+
+      (function () {
+        const isAmazonHref = (href) => /https?:\/\/(www\.)?amazon\./i.test(String(href || ''));
+        const sendAffiliateClick = (payload) => {
+          const url = window.tweApiUrl('/api/affiliate-click');
+          const body = JSON.stringify(payload);
+          if (navigator.sendBeacon) {
+            try {
+              const blob = new Blob([body], {type: 'application/json'});
+              navigator.sendBeacon(url, blob);
+              return;
+            } catch (error) {}
+          }
+          try {
+            fetch(url, {
+              method: 'POST',
+              headers: {'Content-Type': 'application/json'},
+              body,
+              keepalive: true,
+            }).catch(() => {});
+          } catch (error) {}
+        };
+        document.addEventListener('click', (event) => {
+          const link = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+          if (!link) return;
+          const href = link.getAttribute('href') || '';
+          const rel = link.getAttribute('rel') || '';
+          const flaggedAffiliate = link.hasAttribute('data-affiliate-click') || /sponsored/i.test(rel);
+          if (!flaggedAffiliate || !isAmazonHref(href)) return;
+
+          const payload = {
+            href,
+            page: window.location.pathname + window.location.search,
+            pageTitle: document.title || '',
+            title: link.getAttribute('data-affiliate-title') || link.textContent.trim() || '',
+            category: link.getAttribute('data-affiliate-category') || '',
+            guideUrl: link.getAttribute('data-affiliate-guide-url') || '',
+            placement: link.getAttribute('data-affiliate-placement') || window.location.pathname || '',
+          };
+
+          if (window.gtag) {
+            try {
+              window.gtag('event', 'affiliate_click', {
+                merchant: 'amazon',
+                event_category: 'affiliate',
+                event_label: payload.title || payload.category || href,
+                destination_url: href,
+                page_path: payload.page,
+                category_slug: payload.category,
+              });
+            } catch (error) {}
+          }
+
+          sendAffiliateClick(payload);
+        }, {capture: true});
       }());
 
       (function () {
