@@ -4820,11 +4820,11 @@
     <h1>Choose the path that fits your situation</h1>
     <p class="lede">Use this page when you know you need help but do not yet know whether to begin with store products, buyer resources, broader gear guides, church buying guides, or support.</p>
     <div class="cta-row">
-      <a class="btn" href="/store">Browse Store</a>
-      <a class="btn secondary" href="/resources">Open resources</a>
-      <a class="btn ghost" href="/command-center">Open buying guide</a>
+      <a class="btn" href="/best-review-desk-lighting-and-note-capture-tools.html">Start with a small Amazon quick win</a>
+      <a class="btn secondary" href="/church-supplies-buying-path-for-offices-services-and-events.html">Open church Amazon route</a>
+      <a class="btn ghost" href="/resources">Open resources</a>
+      <a class="btn ghost" href="/store">Browse Store</a>
       <a class="btn ghost" href="/support">Open support guidance</a>
-      <a class="btn ghost" href="/church">Church buyer path</a>
     </div>
   </div>
   <div class="mini-stack hero-aside-grid">
@@ -4905,6 +4905,49 @@
         <p class="muted">Use the Church buyer path to move from office needs to service-day flow, kids ministry, facilities, events, and volunteer support without losing context.</p>
       </article>
     </div>
+  </article>
+  <article class="card">
+    <p class="eyebrow">New fast-buying routes</p>
+    <h2>Start Here can now send Amazon-guide shoppers straight into the tightest lane</h2>
+    <p class="muted">Use these when someone says what kind of setup they need, but does not want to search or browse a full catalog first. Right now the strongest first-buy lanes are small quick wins, church/event supply paths, workspace fixes, creator-call upgrades, admin cleanup, and research desk comfort.</p>
+    <div class="grid three" style="margin-top: 14px;">
+      <article class="mini-card">
+        <p class="eyebrow">Small quick wins</p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn secondary" href="/best-review-desk-lighting-and-note-capture-tools.html">Quick-win route</a>
+          <a class="btn ghost" href="/resources?q=label">Small-buy picks</a>
+        </div>
+      </article>
+      <article class="mini-card">
+        <p class="eyebrow">Church + events</p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn secondary" href="/church-supplies-buying-path-for-offices-services-and-events.html">Church route</a>
+          <a class="btn ghost" href="/resources?category=church-ministry">Church supply picks</a>
+        </div>
+      </article>
+      <article class="mini-card">
+        <p class="eyebrow">Workspace + admin</p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn secondary" href="/best-standing-desk-upgrades-for-solo-operators.html">Workspace route</a>
+          <a class="btn ghost" href="/best-admin-desk-tools-for-invoices-and-paperwork.html">Admin route</a>
+        </div>
+      </article>
+      <article class="mini-card">
+        <p class="eyebrow">Creator + research</p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn secondary" href="/best-usb-microphone-upgrades-for-calls-and-content.html">Creator route</a>
+          <a class="btn ghost" href="/best-ai-research-desk-setup.html">Research route</a>
+        </div>
+      </article>
+      <article class="mini-card">
+        <p class="eyebrow">Full Amazon lane</p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn secondary" href="/resources">Open Resources & Gear Store</a>
+          <a class="btn ghost" href="/resources#quick-picks">Top picks</a>
+        </div>
+      </article>
+    </div>
+    <p class="muted" style="margin: 14px 0 0;"><strong>Shortest explanation:</strong> quick wins = easier first buys, church = event/service/office supplies, workspace = desk upgrades, admin = paperwork cleanup, creator = better calls/content gear, research = longer reading and monitor setups.</p>
   </article>
   <article class="card">
     <p class="eyebrow">Church buyer path</p>
@@ -7623,6 +7666,62 @@
           });
           loadAutomaticWeather();
         });
+      }());
+
+      (function () {
+        const isAmazonHref = (href) => /https?:\/\/(www\.)?amazon\./i.test(String(href || ''));
+        const sendAffiliateClick = (payload) => {
+          const url = window.tweApiUrl('/api/affiliate-click');
+          const body = JSON.stringify(payload);
+          if (navigator.sendBeacon) {
+            try {
+              const blob = new Blob([body], {type: 'application/json'});
+              navigator.sendBeacon(url, blob);
+              return;
+            } catch (error) {}
+          }
+          try {
+            fetch(url, {
+              method: 'POST',
+              headers: {'Content-Type': 'application/json'},
+              body,
+              keepalive: true,
+            }).catch(() => {});
+          } catch (error) {}
+        };
+        document.addEventListener('click', (event) => {
+          const link = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+          if (!link) return;
+          const href = link.getAttribute('href') || '';
+          const rel = link.getAttribute('rel') || '';
+          const flaggedAffiliate = link.hasAttribute('data-affiliate-click') || /sponsored/i.test(rel);
+          if (!flaggedAffiliate || !isAmazonHref(href)) return;
+
+          const payload = {
+            href,
+            page: window.location.pathname + window.location.search,
+            pageTitle: document.title || '',
+            title: link.getAttribute('data-affiliate-title') || link.textContent.trim() || '',
+            category: link.getAttribute('data-affiliate-category') || '',
+            guideUrl: link.getAttribute('data-affiliate-guide-url') || '',
+            placement: link.getAttribute('data-affiliate-placement') || window.location.pathname || '',
+          };
+
+          if (window.gtag) {
+            try {
+              window.gtag('event', 'affiliate_click', {
+                merchant: 'amazon',
+                event_category: 'affiliate',
+                event_label: payload.title || payload.category || href,
+                destination_url: href,
+                page_path: payload.page,
+                category_slug: payload.category,
+              });
+            } catch (error) {}
+          }
+
+          sendAffiliateClick(payload);
+        }, {capture: true});
       }());
 
       (function () {
