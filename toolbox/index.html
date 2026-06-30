@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     
-    <meta name="description" content="Use the TWE Toolbox for quick practical utilities like What&#39;s my IP, Unscrambler, password generation, text cleanup, quick calculations, and a light game to keep visitors coming back.">
+    <meta name="description" content="Use the free TWE Toolbox for quick practical utilities like What&#39;s my IP, Unscrambler, QR codes, Pomodoro timing, browser diagnostics, unit conversion, password generation, text cleanup, quick calculations, and a light game.">
     <meta property="og:title" content="TheWatchersEdge.ca | TWE Toolbox">
-    <meta property="og:description" content="Use the TWE Toolbox for quick practical utilities like What&#39;s my IP, Unscrambler, password generation, text cleanup, quick calculations, and a light game to keep visitors coming back.">
+    <meta property="og:description" content="Use the free TWE Toolbox for quick practical utilities like What&#39;s my IP, Unscrambler, QR codes, Pomodoro timing, browser diagnostics, unit conversion, password generation, text cleanup, quick calculations, and a light game.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="TheWatchersEdge.ca">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="TheWatchersEdge.ca | TWE Toolbox">
-    <meta name="twitter:description" content="Use the TWE Toolbox for quick practical utilities like What&#39;s my IP, Unscrambler, password generation, text cleanup, quick calculations, and a light game to keep visitors coming back.">
+    <meta name="twitter:description" content="Use the free TWE Toolbox for quick practical utilities like What&#39;s my IP, Unscrambler, QR codes, Pomodoro timing, browser diagnostics, unit conversion, password generation, text cleanup, quick calculations, and a light game.">
     <title>TheWatchersEdge.ca | TWE Toolbox</title>
     
     
@@ -2261,7 +2261,7 @@
       }
     </style>
     <script>
-      window.TWE_PUBLIC_API_BASE_URL = "";
+      window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
       window.tweApiUrl = function (path) {
         const base = String(window.TWE_PUBLIC_API_BASE_URL || '').replace(/\/+$/, '');
         const cleanPath = String(path || '').startsWith('/') ? String(path || '') : '/' + String(path || '');
@@ -2299,7 +2299,7 @@
               <span>Practical digital tools, buyer guides, and trusted resources in one place.</span>
             </span>
           </a>
-          <form class="nav-search" action="/store" method="get">
+          <form class="nav-search" action="/store#store-top-matches" method="get">
             <label for="global-search">Search</label>
             <input id="global-search" type="text" name="q" placeholder="Products, guides, FAQs">
             <button type="submit">Search</button>
@@ -2319,13 +2319,12 @@
             <a href="/store">Store</a>
             <a href="/about">About</a>
             <a href="/resources?src=toolbox-nav-route">Resources &amp; Amazon Picks</a>
-            <a href="/toolbox">TWE Toolbox</a>
             <a href="/support">Support</a>
             <a href="/command-center?src=toolbox-nav-route">Buying Guide</a>
           </div>
           <div class="nav-utility-row">
             <a class="nav-blog-link is-church" href="https://thewatchersedgechurchsupplies.blogspot.com/" target="_blank" rel="noopener sponsored nofollow">⛪ Church Blog</a>
-            <a class="nav-utility-link is-toolbox" href="/toolbox">🧰 TWE Toolbox</a>
+            <a class="nav-utility-link is-toolbox" href="/toolbox" target="_blank" rel="noopener">🧰 TWE Toolbox</a>
             <a class="nav-blog-link is-pet" href="https://pawsomepetgearhub.blogspot.com/" target="_blank" rel="noopener sponsored nofollow">🐾 Pet Blog</a>
           </div>
         </nav>
@@ -4829,271 +4828,655 @@
     </aside>
         <div class="store-sales-banner-main">
           
-<section class="panel hero split">
-  <div>
-    <div class="hero-kicker mono">Useful tools · quick answers · a little fun</div>
-    <p class="eyebrow">TWE Toolbox</p>
-    <h1>TWE Toolbox</h1>
-    <p class="lede">A return-visit utility hub with genuinely handy tools people can use even when they are not shopping yet. Start with network info, word helpers, text tools, quick math, stronger passwords, and a light game.</p>
-    <div class="cta-row" style="margin-top: 16px;">
-      <a class="btn" href="#toolbox-grid">Open tools</a>
-      <a class="btn secondary" href="/resources?src=toolbox-hero-route">Browse Amazon picks too</a>
+<style>
+  .toolbox-shell { display: grid; gap: 28px; }
+  .toolbox-hero-grid { display: grid; gap: 18px; align-items: stretch; }
+  .toolbox-overview-grid,
+  .toolbox-sections,
+  .toolbox-help-grid,
+  .toolbox-rail-grid { display: grid; gap: 18px; }
+  .toolbox-overview-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .toolbox-sections { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .toolbox-help-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .toolbox-rail-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .tool-overview-card,
+  .tool-panel,
+  .tool-rail-card,
+  .tool-pick-card,
+  .tool-ad-card { border: 1px solid var(--line); border-radius: 22px; background: var(--panel); padding: 20px; box-shadow: var(--shadow-soft); }
+  .tool-overview-card { display: grid; gap: 14px; }
+  .tool-thumb {
+    border-radius: 18px;
+    min-height: 112px;
+    padding: 18px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 14px;
+    color: #122033;
+    overflow: hidden;
+    position: relative;
+  }
+  .tool-thumb::after {
+    content: "";
+    position: absolute;
+    inset: auto -22px -22px auto;
+    width: 88px;
+    height: 88px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.45);
+  }
+  .tool-thumb-icon {
+    font-size: 2rem;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+  }
+  .tool-thumb-label {
+    font-size: .92rem;
+    font-weight: 700;
+    max-width: 10rem;
+    text-align: right;
+    position: relative;
+    z-index: 1;
+  }
+  .tool-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+  .tool-kpi { border: 1px solid var(--line); border-radius: 18px; padding: 14px 16px; background: rgba(255,255,255,.72); }
+  .tool-panel { display: grid; gap: 14px; }
+  .tool-panel textarea,
+  .tool-panel input,
+  .tool-panel select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: inherit;
+  }
+  .tool-panel textarea { min-height: 132px; resize: vertical; }
+  .tool-row,
+  .tool-actions,
+  .tool-inline-grid { display: grid; gap: 12px; }
+  .tool-inline-grid.two { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+  .tool-inline-grid.three { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+  .tool-result,
+  .tool-note,
+  .tool-mini-list,
+  .tool-chip-row,
+  .tool-badge,
+  .tool-disclosure { border-radius: 16px; }
+  .tool-result,
+  .tool-note,
+  .tool-mini-list {
+    border: 1px solid var(--line);
+    padding: 14px 16px;
+    background: rgba(255,255,255,.72);
+  }
+  .tool-chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tool-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(39,113,255,.09);
+    border: 1px solid rgba(39,113,255,.14);
+    font-size: .92rem;
+  }
+  .tool-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    padding: 8px 12px;
+    font-size: .92rem;
+    font-weight: 700;
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,.72);
+  }
+  .tool-rail-card h3,
+  .tool-pick-card h3,
+  .tool-panel h2,
+  .tool-overview-card h3 { margin-bottom: 0; }
+  .tool-ad-card {
+    background: linear-gradient(135deg, rgba(39,113,255,.08), rgba(16,185,129,.08));
+  }
+  .tool-ad-slot {
+    min-height: 132px;
+    border: 1.5px dashed rgba(18,32,51,.25);
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    padding: 18px;
+    text-align: center;
+    background: rgba(255,255,255,.56);
+  }
+  .tool-disclosure {
+    padding: 12px 14px;
+    background: rgba(255,244,221,.72);
+    border: 1px solid rgba(187,122,0,.18);
+    font-size: .94rem;
+  }
+  .tool-pick-card .cta-row,
+  .tool-panel .cta-row { margin-top: 4px; }
+  .tool-focus-time {
+    font-size: clamp(2.25rem, 6vw, 4rem);
+    font-weight: 800;
+    letter-spacing: .04em;
+    margin: 0;
+  }
+  .tool-canvas-wrap {
+    display: grid;
+    place-items: center;
+    min-height: 220px;
+    border: 1px dashed rgba(18,32,51,.2);
+    border-radius: 18px;
+    background: #fff;
+    padding: 18px;
+  }
+  .tool-canvas-wrap canvas,
+  .tool-canvas-wrap img { max-width: 100%; height: auto; }
+  .tool-grid-game {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(68px, 1fr));
+    gap: 8px;
+    max-width: 260px;
+  }
+  .tool-grid-game button {
+    min-height: 72px;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    background: #fff;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .tool-mini-list ul { margin: 10px 0 0; padding-left: 18px; }
+  .tool-stat-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+  .tool-stat { border: 1px solid var(--line); border-radius: 16px; padding: 12px; background: #fff; }
+  @media (min-width: 900px) {
+    .toolbox-hero-grid { grid-template-columns: 1.4fr .9fr; }
+  }
+</style>
+
+<section class="toolbox-shell">
+  <section class="panel hero toolbox-hero-grid">
+    <div>
+      <div class="hero-kicker mono">Free tools · practical helpers · return-visit value</div>
+      <p class="eyebrow">TWE Toolbox</p>
+      <h1>TWE Toolbox</h1>
+      <p class="lede">A free, customer-friendly utility hub built to be genuinely useful first. Use it for quick answers, cleaner copy, faster sharing, small focus blocks, and lightweight problem-solving without clutter or spam.</p>
+      <div class="cta-row" style="margin-top:16px;">
+        <a class="btn" href="#toolbox-grid">Open tools</a>
+        <a class="btn secondary" href="/store?q=toolbox#store-top-matches">Find it from search</a>
+      </div>
+      <p class="muted" style="margin: 12px 0 0; max-width: 780px;"><strong>Bookmarkable on purpose:</strong> the main Watchers Edge site can open this toolbox in a new tab so visitors can keep shopping or reading in one tab and keep these free tools handy in another.</p>
+      <div class="tool-chip-row" style="margin-top:14px;">
+        <span class="tool-chip">🌐 Free to use</span>
+        <span class="tool-chip">📱 Mobile-friendly</span>
+        <span class="tool-chip">🔖 Bookmark-friendly</span>
+        <span class="tool-chip">🛍 Helpful affiliate suggestions only where natural</span>
+      </div>
     </div>
-  </div>
-  <div class="mini-stack">
-    <article class="quote-card">
-      <p class="eyebrow">Why this page exists</p>
-      <h3>Useful first, sticky second.</h3>
-      <p class="muted">The best retention tools solve a quick problem immediately, feel fun to use, and make it easy to come back later without friction.</p>
-    </article>
-    <article class="mini-card">
-      <p class="eyebrow">Included now</p>
-      <ul class="muted bullet-list">
-        <li>What’s my IP</li>
-        <li>Unscrambler</li>
-        <li>Password generator</li>
-        <li>Text helper</li>
-        <li>Quick calculator</li>
-        <li>Random chooser</li>
-        <li>Tic-Tac-Toe</li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-<section class="section card" id="toolbox-grid">
-  <p class="eyebrow">Toolbox overview</p>
-  <h2>Start with whichever tool solves today’s problem fastest</h2>
-  <div class="grid three">
-    
-    <article class="feature-card">
-      <p class="eyebrow">Useful right away</p>
-      <h3>What&#39;s my IP</h3>
-      <p class="muted">See the current public-facing connection IP your browser is presenting right now.</p>
-      <a class="card-link" href="#ip-checker">Check my IP →</a>
-    </article>
-    
-    <article class="feature-card">
-      <p class="eyebrow">Popular helper</p>
-      <h3>Unscrambler</h3>
-      <p class="muted">Type scrambled letters and get a cleaner list of likely English words made from them.</p>
-      <a class="card-link" href="#unscrambler">Unscramble letters →</a>
-    </article>
-    
-    <article class="feature-card">
-      <p class="eyebrow">Practical utility</p>
-      <h3>Password generator</h3>
-      <p class="muted">Generate a stronger random password locally in your browser without leaving the page.</p>
-      <a class="card-link" href="#password-generator">Generate password →</a>
-    </article>
-    
-    <article class="feature-card">
-      <p class="eyebrow">Useful for work</p>
-      <h3>Text helper</h3>
-      <p class="muted">Quickly switch case, count words, and estimate reading time for a pasted block of text.</p>
-      <a class="card-link" href="#text-helper">Open text helper →</a>
-    </article>
-    
-    <article class="feature-card">
-      <p class="eyebrow">Small but handy</p>
-      <h3>Quick calculator</h3>
-      <p class="muted">Use a simple percentage and tip helper when you need a quick answer without opening another tab.</p>
-      <a class="card-link" href="#quick-calculator">Open calculator →</a>
-    </article>
-    
-    <article class="feature-card">
-      <p class="eyebrow">Decision helper</p>
-      <h3>Random chooser</h3>
-      <p class="muted">Paste a short list of options and let the toolbox pick one fairly when you are stuck deciding.</p>
-      <a class="card-link" href="#random-chooser">Pick for me →</a>
-    </article>
-    
-    <article class="feature-card">
-      <p class="eyebrow">Fun break</p>
-      <h3>Mini game</h3>
-      <p class="muted">Play a lightweight Tic-Tac-Toe game while you wait, think, or pass a minute.</p>
-      <a class="card-link" href="#mini-game">Play game →</a>
-    </article>
-    
-  </div>
-</section>
-
-<section class="section split">
-  <article class="card" id="ip-checker">
-    <p class="eyebrow">What’s my IP</p>
-    <h2>Check the connection IP your browser is presenting</h2>
-    <p class="muted">Useful when you need to confirm what IP a website or service is likely seeing from your current connection.</p>
     <div class="mini-stack">
-      <button class="btn" type="button" id="ip-check-button">Check my IP</button>
-      <div class="mini-card" id="ip-result-card" aria-live="polite">
+      <article class="tool-rail-card">
+        <p class="eyebrow">Included now</p>
+        <h3>11 practical tools and mini helpers</h3>
+        <p class="muted">The toolbox now includes everyday utilities, focus helpers, quick diagnostics, and one light game for short breaks.</p>
+        <div class="tool-kpis">
+          <div class="tool-kpi"><strong>4</strong><br><span class="muted">new additions</span></div>
+          <div class="tool-kpi"><strong>11</strong><br><span class="muted">free tools live in the page</span></div>
+          <div class="tool-kpi"><strong>2</strong><br><span class="muted">future Google AdSense opportunity zones</span></div>
+        </div>
+      </article>
+      <article class="tool-rail-card">
+        <p class="eyebrow">Built for trust</p>
+        <h3>Useful first, monetized carefully second</h3>
+        <p class="muted">Any sponsored or affiliate placement is meant to support the experience, not interrupt it. No income claims, no misleading promises, and no spammy popups.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section card" id="toolbox-grid">
+    <p class="eyebrow">Toolbox overview</p>
+    <h2>Start with the tool that solves today’s problem fastest</h2>
+    <div class="toolbox-overview-grid">
+      
+      <article class="tool-overview-card">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #d7f3ff, #e7fff8);">
+          <span class="tool-thumb-icon" aria-hidden="true">🌐</span>
+          <span class="tool-thumb-label">Connection view</span>
+        </div>
+        <div>
+          <p class="eyebrow">Useful right away</p>
+          <h3>What&#39;s my IP</h3>
+          <p class="muted">See the current public-facing connection IP your browser is presenting right now.</p>
+        </div>
+        <a class="card-link" href="#ip-checker">Check my IP →</a>
+      </article>
+      
+      <article class="tool-overview-card">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe1fb, #eef0ff);">
+          <span class="tool-thumb-icon" aria-hidden="true">🔤</span>
+          <span class="tool-thumb-label">Word finder</span>
+        </div>
+        <div>
+          <p class="eyebrow">Popular helper</p>
+          <h3>Unscrambler</h3>
+          <p class="muted">Type scrambled letters and get a cleaner list of likely English words made from them.</p>
+        </div>
+        <a class="card-link" href="#unscrambler">Unscramble letters →</a>
+      </article>
+      
+      <article class="tool-overview-card">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #fdf0cf, #e8fff6);">
+          <span class="tool-thumb-icon" aria-hidden="true">🔐</span>
+          <span class="tool-thumb-label">Secure login helper</span>
+        </div>
+        <div>
+          <p class="eyebrow">Practical utility</p>
+          <h3>Password generator</h3>
+          <p class="muted">Generate a stronger random password locally in your browser without leaving the page.</p>
+        </div>
+        <a class="card-link" href="#password-generator">Generate password →</a>
+      </article>
+      
+      <article class="tool-overview-card">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #fff0de, #e5f5ff);">
+          <span class="tool-thumb-icon" aria-hidden="true">📝</span>
+          <span class="tool-thumb-label">Copy cleanup</span>
+        </div>
+        <div>
+          <p class="eyebrow">Useful for work</p>
+          <h3>Text helper</h3>
+          <p class="muted">Quickly switch case, count words, and estimate reading time for a pasted block of text.</p>
+        </div>
+        <a class="card-link" href="#text-helper">Open text helper →</a>
+      </article>
+      
+      <article class="tool-overview-card">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #e9f8d8, #fff7dd);">
+          <span class="tool-thumb-icon" aria-hidden="true">🧮</span>
+          <span class="tool-thumb-label">Fast math</span>
+        </div>
+        <div>
+          <p class="eyebrow">Small but handy</p>
+          <h3>Quick calculator</h3>
+          <p class="muted">Use a simple percentage and tip helper when you need a quick answer without opening another tab.</p>
+        </div>
+        <a class="card-link" href="#quick-calculator">Open calculator →</a>
+      </article>
+      
+      <article class="tool-overview-card">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe4dd, #fff6d9);">
+          <span class="tool-thumb-icon" aria-hidden="true">🎯</span>
+          <span class="tool-thumb-label">Fair pick</span>
+        </div>
+        <div>
+          <p class="eyebrow">Decision helper</p>
+          <h3>Random chooser</h3>
+          <p class="muted">Paste a short list of options and let the toolbox pick one fairly when you are stuck deciding.</p>
+        </div>
+        <a class="card-link" href="#random-chooser">Pick for me →</a>
+      </article>
+      
+      <article class="tool-overview-card">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #ddefff, #f1f3ff);">
+          <span class="tool-thumb-icon" aria-hidden="true">▦</span>
+          <span class="tool-thumb-label">Scan-ready</span>
+        </div>
+        <div>
+          <p class="eyebrow">Share faster</p>
+          <h3>QR code generator</h3>
+          <p class="muted">Turn a link, note, Wi-Fi string, or simple contact detail into a scannable QR code right on the page.</p>
+        </div>
+        <a class="card-link" href="#qr-generator">Create QR code →</a>
+      </article>
+      
+      <article class="tool-overview-card">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe3e3, #fff4dc);">
+          <span class="tool-thumb-icon" aria-hidden="true">⏳</span>
+          <span class="tool-thumb-label">Focus block</span>
+        </div>
+        <div>
+          <p class="eyebrow">Focus helper</p>
+          <h3>Pomodoro timer</h3>
+          <p class="muted">Run a simple work-and-break timer when you want a cleaner focus block without another app.</p>
+        </div>
+        <a class="card-link" href="#pomodoro-timer">Start focus timer →</a>
+      </article>
+      
+      <article class="tool-overview-card">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #dff5ff, #e8ffe8);">
+          <span class="tool-thumb-icon" aria-hidden="true">📶</span>
+          <span class="tool-thumb-label">Device snapshot</span>
+        </div>
+        <div>
+          <p class="eyebrow">Quick diagnostics</p>
+          <h3>Browser + network info</h3>
+          <p class="muted">See useful browser, screen, language, timezone, and connection details for quick troubleshooting.</p>
+        </div>
+        <a class="card-link" href="#browser-network-info">Check device info →</a>
+      </article>
+      
+      <article class="tool-overview-card">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #f1e5ff, #fff4e5);">
+          <span class="tool-thumb-icon" aria-hidden="true">📏</span>
+          <span class="tool-thumb-label">Quick convert</span>
+        </div>
+        <div>
+          <p class="eyebrow">Daily utility</p>
+          <h3>Unit converter</h3>
+          <p class="muted">Convert common length, temperature, and storage values without opening a cluttered converter site.</p>
+        </div>
+        <a class="card-link" href="#unit-converter">Convert units →</a>
+      </article>
+      
+      <article class="tool-overview-card">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #dff7ff, #eef6ff);">
+          <span class="tool-thumb-icon" aria-hidden="true">🎮</span>
+          <span class="tool-thumb-label">Tiny break</span>
+        </div>
+        <div>
+          <p class="eyebrow">Fun break</p>
+          <h3>Mini game</h3>
+          <p class="muted">Play a lightweight Tic-Tac-Toe game while you wait, think, or pass a minute.</p>
+        </div>
+        <a class="card-link" href="#mini-game">Play game →</a>
+      </article>
+      
+    </div>
+  </section>
+
+  <section class="tool-ad-card">
+    <p class="eyebrow">Google AdSense opportunity</p>
+    <h2>Hero-level ad placement reserved for an approved future responsive unit</h2>
+    <div class="tool-ad-slot">
+      <div>
+        <strong>Reserved ad placement</strong>
+        <p class="muted" style="margin:8px 0 0;">Keep this slot for one clean, responsive Google AdSense unit after approval. No account settings, payout data, or publisher setup changes are made here.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="toolbox-sections">
+    <article class="tool-panel" id="ip-checker">
+      <span class="tool-badge">🌐 What’s my IP</span>
+      <h2>Check the public-facing connection IP your browser is presenting</h2>
+      <p class="muted">Useful when you need to confirm what IP a service is likely seeing from this connection right now.</p>
+      <div class="tool-actions"><button class="btn" type="button" id="ip-check-button">Check my IP</button></div>
+      <div class="tool-result" aria-live="polite">
         <strong id="ip-result-value">Not checked yet</strong>
         <p class="muted" id="ip-result-note">Click the button to detect the current connection IP.</p>
       </div>
-    </div>
-  </article>
-  <article class="card" id="unscrambler">
-    <p class="eyebrow">Unscrambler</p>
-    <h2>Turn scrambled letters into likely words</h2>
-    <p class="muted">Type letters only. The tool returns a cleaner list of common English matches instead of a giant junky dictionary dump.</p>
-    <form id="unscrambler-form" class="mini-stack">
-      <label for="unscrambler-letters"><strong>Scrambled letters</strong></label>
-      <input id="unscrambler-letters" name="letters" type="text" inputmode="text" autocomplete="off" placeholder="example: listen" maxlength="18" style="padding: 12px 14px; border-radius: 14px; border: 1px solid var(--line);" required>
-      <div class="cta-row">
-        <button class="btn" type="submit">Unscramble</button>
-        <span class="muted" id="unscrambler-status">Enter at least 3 letters.</span>
-      </div>
-    </form>
-    <div class="mini-card" id="unscrambler-results" aria-live="polite">
-      <strong>Results will appear here.</strong>
-      <p class="muted">Try a scramble like <code>listen</code>, <code>finder</code>, or <code>stream</code>.</p>
-    </div>
-  </article>
-</section>
+    </article>
 
-<section class="section split">
-  <article class="card" id="password-generator">
-    <p class="eyebrow">Password generator</p>
-    <h2>Generate a stronger password locally in your browser</h2>
-    <div class="mini-stack">
-      <label for="password-length"><strong>Password length</strong></label>
-      <input id="password-length" type="range" min="12" max="32" value="18">
-      <p class="muted">Length: <span id="password-length-value">18</span> characters</p>
-      <div class="cta-row">
+    <article class="tool-panel" id="unscrambler">
+      <span class="tool-badge">🔤 Unscrambler</span>
+      <h2>Turn scrambled letters into likely words</h2>
+      <p class="muted">Type letters only. This helper returns a shorter, cleaner list of likely matches instead of a cluttered dump.</p>
+      <form id="unscrambler-form" class="tool-row">
+        <label for="unscrambler-letters"><strong>Scrambled letters</strong></label>
+        <input id="unscrambler-letters" name="letters" type="text" inputmode="text" autocomplete="off" placeholder="example: listen" maxlength="18" required>
+        <div class="cta-row">
+          <button class="btn" type="submit">Unscramble</button>
+          <span class="muted" id="unscrambler-status">Enter at least 3 letters.</span>
+        </div>
+      </form>
+      <div class="tool-result" id="unscrambler-results" aria-live="polite">
+        <strong>Results will appear here.</strong>
+        <p class="muted">Try <code>listen</code>, <code>finder</code>, or <code>stream</code>.</p>
+      </div>
+    </article>
+
+    <article class="tool-panel" id="password-generator">
+      <span class="tool-badge">🔐 Password generator</span>
+      <h2>Generate a stronger random password locally in your browser</h2>
+      <p class="muted">Use this for a fresh password draft, then save it in your preferred password manager.</p>
+      <div class="tool-inline-grid two">
+        <label><strong>Password length</strong><input id="password-length" type="range" min="12" max="40" value="20"></label>
+        <div class="tool-result"><strong id="password-length-value">20</strong><br><span class="muted">characters</span></div>
+      </div>
+      <div class="tool-actions cta-row">
         <button class="btn" type="button" id="password-generate-button">Generate password</button>
         <button class="btn secondary" type="button" id="password-copy-button">Copy</button>
       </div>
-      <div class="mini-card">
-        <strong id="password-output">Press generate</strong>
-        <p class="muted">Generated in your browser. No password is sent to the server.</p>
-      </div>
-    </div>
-  </article>
-  <article class="card" id="text-helper">
-    <p class="eyebrow">Text helper</p>
-    <h2>Count words, estimate reading time, and switch text case</h2>
-    <div class="mini-stack">
-      <textarea id="text-helper-input" rows="8" placeholder="Paste or type text here..." style="padding: 12px 14px; border-radius: 14px; border: 1px solid var(--line);"></textarea>
-      <div class="pill-row">
-        <button class="pill" type="button" data-case-action="upper">UPPERCASE</button>
-        <button class="pill" type="button" data-case-action="lower">lowercase</button>
-        <button class="pill" type="button" data-case-action="title">Title Case</button>
-      </div>
-      <div class="grid three">
-        <article class="mini-card"><strong id="text-word-count">0</strong><p class="muted">Words</p></article>
-        <article class="mini-card"><strong id="text-char-count">0</strong><p class="muted">Characters</p></article>
-        <article class="mini-card"><strong id="text-read-time">0 min</strong><p class="muted">Reading time</p></article>
-      </div>
-    </div>
-  </article>
-</section>
+      <div class="tool-result"><strong id="password-output">Press generate</strong></div>
+    </article>
 
-<section class="section split">
-  <article class="card" id="quick-calculator">
-    <p class="eyebrow">Quick calculator</p>
-    <h2>Fast percent and tip math</h2>
-    <div class="grid two" style="display:grid; gap:12px; grid-template-columns:repeat(2, minmax(0, 1fr));">
-      <label>
-        <strong>Amount</strong>
-        <input id="calc-amount" type="number" min="0" step="0.01" value="100" style="width:100%; margin-top:6px; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--line);">
-      </label>
-      <label>
-        <strong>Percent</strong>
-        <input id="calc-percent" type="number" min="0" step="0.1" value="15" style="width:100%; margin-top:6px; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--line);">
-      </label>
-    </div>
-    <div class="cta-row" style="margin-top: 14px;">
+    <article class="tool-panel" id="text-helper">
+      <span class="tool-badge">📝 Text helper</span>
+      <h2>Clean up text, switch case, and check quick stats</h2>
+      <p class="muted">Helpful for captions, messages, product notes, short drafts, and quick readability checks.</p>
+      <textarea id="text-helper-input" placeholder="Paste or type text here."></textarea>
+      <div class="cta-row">
+        <button class="btn secondary" type="button" data-case-action="upper">UPPERCASE</button>
+        <button class="btn secondary" type="button" data-case-action="lower">lowercase</button>
+        <button class="btn secondary" type="button" data-case-action="title">Title Case</button>
+      </div>
+      <div class="tool-stat-grid">
+        <div class="tool-stat"><strong id="text-word-count">0</strong><br><span class="muted">words</span></div>
+        <div class="tool-stat"><strong id="text-char-count">0</strong><br><span class="muted">characters</span></div>
+        <div class="tool-stat"><strong id="text-read-time">0 min</strong><br><span class="muted">read time</span></div>
+      </div>
+    </article>
+
+    <article class="tool-panel" id="quick-calculator">
+      <span class="tool-badge">🧮 Quick calculator</span>
+      <h2>Work out a quick percentage without leaving the page</h2>
+      <p class="muted">Simple enough for tips, taxes, discounts, markups, or quick sanity checks.</p>
+      <div class="tool-inline-grid two">
+        <label><strong>Base amount</strong><input id="calc-amount" type="number" min="0" step="0.01" value="100"></label>
+        <label><strong>Percent</strong><input id="calc-percent" type="number" min="0" step="0.1" value="13"></label>
+      </div>
       <button class="btn" type="button" id="calc-button">Calculate</button>
-    </div>
-    <div class="grid three" style="margin-top: 14px;">
-      <article class="mini-card"><strong id="calc-percent-value">$15.00</strong><p class="muted">Percent amount</p></article>
-      <article class="mini-card"><strong id="calc-total-value">$115.00</strong><p class="muted">Amount + percent</p></article>
-      <article class="mini-card"><strong id="calc-plain-value">15%</strong><p class="muted">Plain percent</p></article>
-    </div>
-  </article>
-  <article class="card" id="random-chooser">
-    <p class="eyebrow">Random chooser</p>
-    <h2>Paste a short list and let the toolbox pick one</h2>
-    <p class="muted">Useful when you have a few reasonable options and just want a fair nudge instead of opening another app.</p>
-    <div class="mini-stack">
-      <label for="chooser-options"><strong>One option per line</strong></label>
-      <textarea id="chooser-options" rows="7" placeholder="Example:
-Solo CRM
-Client Portal
-AI Agent Ops Logbook" style="padding: 12px 14px; border-radius: 14px; border: 1px solid var(--line);"></textarea>
+      <div class="tool-stat-grid">
+        <div class="tool-stat"><strong id="calc-percent-value">$0.00</strong><br><span class="muted">percent value</span></div>
+        <div class="tool-stat"><strong id="calc-total-value">$0.00</strong><br><span class="muted">total</span></div>
+        <div class="tool-stat"><strong id="calc-plain-value">0%</strong><br><span class="muted">plain percent</span></div>
+      </div>
+    </article>
+
+    <article class="tool-panel" id="random-chooser">
+      <span class="tool-badge">🎯 Random chooser</span>
+      <h2>Let the toolbox pick one option fairly when you are stuck</h2>
+      <p class="muted">Paste one option per line, then let the chooser select from the cleaned list.</p>
+      <textarea id="chooser-options" placeholder="Option 1&#10;Option 2&#10;Option 3"></textarea>
       <div class="cta-row">
         <button class="btn" type="button" id="chooser-button">Pick for me</button>
         <span class="muted" id="chooser-count-note">Add at least 2 options.</span>
       </div>
-      <div class="mini-card" id="chooser-result-card" aria-live="polite">
-        <strong id="chooser-result-value">No pick yet</strong>
-        <p class="muted" id="chooser-result-note">The toolbox will choose one item from your cleaned list.</p>
+      <div class="tool-result">
+        <strong id="chooser-result-value">Waiting for options</strong>
+        <p class="muted" id="chooser-result-note">Add at least 2 non-empty lines.</p>
       </div>
-    </div>
-  </article>
-</section>
+    </article>
 
-<section class="section split">
-  <article class="card" id="mini-game">
-    <p class="eyebrow">Mini game</p>
-    <h2>Tic-Tac-Toe</h2>
-    <p class="muted">A tiny break while you wait, think, or hang out on the site.</p>
-    <div class="mini-stack">
-      <p><strong id="ttt-status">Player X starts.</strong></p>
-      <div id="ttt-board" style="display:grid; grid-template-columns:repeat(3, minmax(0, 82px)); gap:8px;">
-        
-        <button class="btn secondary ttt-cell" type="button" data-ttt-cell style="min-height:82px; font-size:1.5rem; padding:0;"></button>
-        
-        <button class="btn secondary ttt-cell" type="button" data-ttt-cell style="min-height:82px; font-size:1.5rem; padding:0;"></button>
-        
-        <button class="btn secondary ttt-cell" type="button" data-ttt-cell style="min-height:82px; font-size:1.5rem; padding:0;"></button>
-        
-        <button class="btn secondary ttt-cell" type="button" data-ttt-cell style="min-height:82px; font-size:1.5rem; padding:0;"></button>
-        
-        <button class="btn secondary ttt-cell" type="button" data-ttt-cell style="min-height:82px; font-size:1.5rem; padding:0;"></button>
-        
-        <button class="btn secondary ttt-cell" type="button" data-ttt-cell style="min-height:82px; font-size:1.5rem; padding:0;"></button>
-        
-        <button class="btn secondary ttt-cell" type="button" data-ttt-cell style="min-height:82px; font-size:1.5rem; padding:0;"></button>
-        
-        <button class="btn secondary ttt-cell" type="button" data-ttt-cell style="min-height:82px; font-size:1.5rem; padding:0;"></button>
-        
-        <button class="btn secondary ttt-cell" type="button" data-ttt-cell style="min-height:82px; font-size:1.5rem; padding:0;"></button>
-        
+    <article class="tool-panel" id="qr-generator">
+      <span class="tool-badge">▦ QR code generator</span>
+      <h2>Create a clean QR code for a link, note, or Wi-Fi handoff</h2>
+      <p class="muted">Useful for simple sharing. Keep sensitive data out of QR text unless you are comfortable with it being scannable.</p>
+      <label for="qr-input"><strong>Text or URL</strong></label>
+      <textarea id="qr-input" placeholder="https://www.thewatchersedge.ca/toolbox or WIFI:T:WPA;S:NetworkName;P:password;;">https://www.thewatchersedge.ca/toolbox</textarea>
+      <div class="tool-inline-grid two">
+        <label><strong>Size</strong><select id="qr-size"><option value="180">Small</option><option value="240" selected>Medium</option><option value="320">Large</option></select></label>
+        <div class="tool-result"><strong id="qr-status">Ready to generate</strong><br><span class="muted">Creates a canvas and download link in-browser.</span></div>
       </div>
       <div class="cta-row">
-        <button class="btn" type="button" id="ttt-reset">Reset game</button>
+        <button class="btn" type="button" id="qr-generate-button">Generate QR code</button>
+        <a class="btn secondary" id="qr-download-link" href="#" download="twe-toolbox-qr.png" style="pointer-events:none;opacity:.55;">Download PNG</a>
       </div>
+      <div class="tool-canvas-wrap" id="qr-preview-wrap">
+        <canvas id="qr-canvas" width="240" height="240" aria-label="Generated QR code preview"></canvas>
+      </div>
+    </article>
+
+    <article class="tool-panel" id="pomodoro-timer">
+      <span class="tool-badge">⏳ Pomodoro timer</span>
+      <h2>Run a simple focus block without opening another app</h2>
+      <p class="muted">Great for short work sprints, reading blocks, or a quick reset between tasks.</p>
+      <div class="tool-chip-row">
+        <button class="btn secondary" type="button" data-pomodoro-preset="25">25 min focus</button>
+        <button class="btn secondary" type="button" data-pomodoro-preset="15">15 min focus</button>
+        <button class="btn secondary" type="button" data-pomodoro-preset="5">5 min break</button>
+      </div>
+      <p class="tool-focus-time" id="pomodoro-display">25:00</p>
+      <div class="tool-result"><strong id="pomodoro-state">Ready</strong><br><span class="muted">Choose a preset or keep the default 25-minute focus block.</span></div>
+      <div class="cta-row">
+        <button class="btn" type="button" id="pomodoro-start">Start</button>
+        <button class="btn secondary" type="button" id="pomodoro-pause">Pause</button>
+        <button class="btn secondary" type="button" id="pomodoro-reset">Reset</button>
+      </div>
+    </article>
+
+    <article class="tool-panel" id="browser-network-info">
+      <span class="tool-badge">📶 Browser + network info</span>
+      <h2>See quick browser, screen, language, timezone, and connection details</h2>
+      <p class="muted">Useful for simple troubleshooting or when you want a quick snapshot to paste into a support message.</p>
+      <div class="cta-row">
+        <button class="btn" type="button" id="browser-info-button">Check device info</button>
+        <button class="btn secondary" type="button" id="browser-info-copy">Copy summary</button>
+      </div>
+      <div class="tool-mini-list" id="browser-info-results" aria-live="polite">
+        <strong>Nothing loaded yet.</strong>
+        <p class="muted">Click the button to read this browser's current snapshot.</p>
+      </div>
+    </article>
+
+    <article class="tool-panel" id="unit-converter">
+      <span class="tool-badge">📏 Unit converter</span>
+      <h2>Convert common daily values quickly</h2>
+      <p class="muted">Start with length, temperature, or storage without dealing with a bloated converter page.</p>
+      <div class="tool-inline-grid three">
+        <label><strong>Category</strong><select id="converter-category"><option value="length">Length</option><option value="temperature">Temperature</option><option value="storage">Storage</option></select></label>
+        <label><strong>From</strong><select id="converter-from"></select></label>
+        <label><strong>To</strong><select id="converter-to"></select></label>
+      </div>
+      <label for="converter-input"><strong>Value</strong></label>
+      <input id="converter-input" type="number" step="any" value="1">
+      <button class="btn" type="button" id="converter-button">Convert</button>
+      <div class="tool-result">
+        <strong id="converter-output">1 meter = 100 centimeters</strong>
+        <p class="muted" id="converter-note">Switch categories for quick conversions.</p>
+      </div>
+    </article>
+
+    <article class="tool-panel" id="mini-game">
+      <span class="tool-badge">🎮 Mini game</span>
+      <h2>Take a one-minute breather with Tic-Tac-Toe</h2>
+      <p class="muted">A small break can help reset attention before heading back to the practical tools.</p>
+      <div class="tool-grid-game">
+        <button type="button" data-ttt-cell></button>
+        <button type="button" data-ttt-cell></button>
+        <button type="button" data-ttt-cell></button>
+        <button type="button" data-ttt-cell></button>
+        <button type="button" data-ttt-cell></button>
+        <button type="button" data-ttt-cell></button>
+        <button type="button" data-ttt-cell></button>
+        <button type="button" data-ttt-cell></button>
+        <button type="button" data-ttt-cell></button>
+      </div>
+      <div class="tool-result"><strong id="ttt-status">Player X starts.</strong></div>
+      <button class="btn secondary" type="button" id="ttt-reset">Reset game</button>
+    </article>
+  </section>
+
+  <section class="tool-ad-card">
+    <p class="eyebrow">Helpful next picks</p>
+    <h2>Helpful next picks, kept relevant and non-spammy</h2>
+    <p class="muted">These suggestions fit naturally beside workday, desk, and organization tools. They are optional, clearly disclosed, and meant to help when the match is genuinely useful.</p>
+    <div class="tool-disclosure"><strong>Disclosure:</strong> Some links below are Amazon affiliate links and may earn a commission at no extra cost to the customer. They are shown only where they fit the tool hub naturally.</div>
+    <div class="toolbox-help-grid" style="margin-top:14px;">
+      
+      <article class="tool-pick-card">
+        <p class="eyebrow">Amazon-friendly next step</p>
+        <h3>Monitor arm for steadier weekly review screen height</h3>
+        <p class="muted">A natural fit for people using the Pomodoro timer, browser diagnostics, and workflow helpers at a desk for longer sessions.</p>
+        <div class="cta-row">
+          <a class="btn secondary" href="https://www.thewatchersedge.ca/best-weekly-kpi-review-workspace.html" target="_blank" rel="noopener">See the desk-setup guide</a>
+          <a class="btn" href="https://www.amazon.ca/dp/B07T3KCQ94?tag=resourceshubca-20" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+        </div>
+      </article>
+      
+      <article class="tool-pick-card">
+        <p class="eyebrow">Amazon-friendly next step</p>
+        <h3>Portable SSD for calmer archive and export handoffs</h3>
+        <p class="muted">Helpful when QR files, exported notes, screenshots, and downloads need one tidy place instead of getting lost across tabs and folders.</p>
+        <div class="cta-row">
+          <a class="btn secondary" href="https://www.thewatchersedge.ca/best-ai-agent-ops-run-review-desk-setup.html" target="_blank" rel="noopener">See the ops desk guide</a>
+          <a class="btn" href="https://www.amazon.ca/dp/B08GTYFC37?tag=resourceshubca-20" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+        </div>
+      </article>
+      
+      <article class="tool-pick-card">
+        <p class="eyebrow">Amazon-friendly next step</p>
+        <h3>Foot-rest cushion for longer billing and admin blocks</h3>
+        <p class="muted">A natural comfort add-on for people using the converter, calculator, text helper, and other workday tools during longer desk blocks.</p>
+        <div class="cta-row">
+          <a class="btn secondary" href="https://www.thewatchersedge.ca/home-office-deals-for-freelancers.html" target="_blank" rel="noopener">See the home office roundup</a>
+          <a class="btn" href="https://www.amazon.ca/dp/B07L3RVF7C?tag=resourceshubca-20" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+        </div>
+      </article>
+      
     </div>
-  </article>
+  </section>
+
+  <section class="toolbox-rail-grid">
+    <article class="tool-rail-card">
+      <p class="eyebrow">Easy to find later</p>
+      <h3>Use main-site search too</h3>
+      <p class="muted">Search terms like <code>qr</code>, <code>pomodoro</code>, <code>converter</code>, or <code>browser info</code> now surface toolbox shortcuts from the store search experience.</p>
+      <a class="card-link" href="/store?q=qr#store-top-matches">Try a toolbox search shortcut →</a>
+    </article>
+    <article class="tool-rail-card">
+      <p class="eyebrow">Future growth</p>
+      <h3>Nice additions that could earn repeat visits later</h3>
+      <div class="tool-mini-list">
+        <ul>
+          
+          <li>Habit streak tracker</li>
+          
+          <li>Simple checklist builder</li>
+          
+          <li>Meeting agenda helper</li>
+          
+          <li>Word Search or 2048-style game</li>
+          
+        </ul>
+      </div>
+    </article>
+    <article class="tool-ad-card">
+      <p class="eyebrow">Google AdSense opportunity</p>
+      <h3>Secondary in-content ad slot for longer sessions</h3>
+      <div class="tool-ad-slot">
+        <div>
+          <strong>Reserved in-content ad lane</strong>
+          <p class="muted" style="margin:8px 0 0;">Suitable for one future responsive unit placed below the primary tools so the customer experience stays helpful first.</p>
+        </div>
+      </div>
+    </article>
+  </section>
 </section>
 
-<section class="section split">
-  <article class="card">
-    <p class="eyebrow">Future additions</p>
-    <h2>Other useful and sticky tools worth adding next</h2>
-    <div class="pill-row" style="margin-top: 12px;">
-      
-      <span class="pill">Browser + network info</span>
-      
-      <span class="pill">QR code generator</span>
-      
-      <span class="pill">Pomodoro timer</span>
-      
-      <span class="pill">Unit converter</span>
-      
-      <span class="pill">Word Search or 2048-style game</span>
-      
-    </div>
-  </article>
-  <article class="quote-card">
-    <p class="eyebrow">Return-visit logic</p>
-    <h2>Useful + fun + low friction wins.</h2>
-    <p class="muted">The strongest repeat-use toolbox usually mixes one quick technical utility, one word/text helper, one work helper, one calculator, and one simple game.</p>
-  </article>
-</section>
-
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
 <script>
 (() => {
+  const readJsonResponse = async (response, fallbackMessage) => {
+    const contentType = (response.headers.get('content-type') || '').toLowerCase();
+    if (!contentType.includes('application/json')) {
+      throw new Error(fallbackMessage);
+    }
+    let payload;
+    try {
+      payload = await response.json();
+    } catch (_) {
+      throw new Error(fallbackMessage);
+    }
+    if (!response.ok) {
+      throw new Error(payload.message || fallbackMessage);
+    }
+    return payload;
+  };
+
   const ipButton = document.getElementById('ip-check-button');
   const ipValue = document.getElementById('ip-result-value');
   const ipNote = document.getElementById('ip-result-note');
@@ -5102,69 +5485,73 @@ AI Agent Ops Logbook" style="padding: 12px 14px; border-radius: 14px; border: 1p
     ipNote.textContent = 'Looking up the current connection IP.';
     try {
       const response = await fetch('/api/toolbox/ip', { headers: { 'Accept': 'application/json' } });
-      const data = await response.json();
-      if (!response.ok || data.status !== 'ok') throw new Error(data.message || 'Unable to check IP right now.');
-      ipValue.textContent = data.ip || 'Unavailable';
-      ipNote.textContent = data.note || 'Detected from your current connection.';
+      const payload = await readJsonResponse(response, 'This toolbox copy cannot reach the live IP service right now.');
+      if (payload.status === 'ok' && payload.ip) {
+        ipValue.textContent = payload.ip;
+        ipNote.textContent = payload.source ? `Source: ${payload.source}` : (payload.note || 'Detected from the current request.');
+      } else {
+        ipValue.textContent = 'Unavailable';
+        ipNote.textContent = payload.message || 'Could not detect the IP right now.';
+      }
     } catch (error) {
-      ipValue.textContent = 'Unavailable right now';
-      ipNote.textContent = error.message || 'Could not check IP right now.';
+      ipValue.textContent = 'Unavailable';
+      ipNote.textContent = error?.message || 'Could not detect the IP right now.';
     }
   });
 
   const unscramblerForm = document.getElementById('unscrambler-form');
+  const unscramblerLetters = document.getElementById('unscrambler-letters');
   const unscramblerStatus = document.getElementById('unscrambler-status');
   const unscramblerResults = document.getElementById('unscrambler-results');
   unscramblerForm?.addEventListener('submit', async (event) => {
     event.preventDefault();
-    const letters = (document.getElementById('unscrambler-letters')?.value || '').trim();
-    unscramblerStatus.textContent = 'Searching…';
-    unscramblerResults.innerHTML = '<strong>Searching for matches…</strong>';
+    const letters = (unscramblerLetters?.value || '').trim();
+    if (letters.length < 3) {
+      unscramblerStatus.textContent = 'Enter at least 3 letters.';
+      return;
+    }
+    unscramblerStatus.textContent = 'Checking likely words…';
+    unscramblerResults.innerHTML = '<strong>Working…</strong><p class="muted">Looking for likely matches.</p>';
     try {
       const response = await fetch('/api/toolbox/unscramble', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ letters }),
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ letters })
       });
-      const data = await response.json();
-      if (!response.ok || data.status !== 'ok') throw new Error(data.message || 'No results right now.');
-      unscramblerStatus.textContent = `${data.count} matches found.`;
-      const words = (data.words || []).slice(0, 80);
-      unscramblerResults.innerHTML = `
-        <strong>${data.count} likely words for “${data.letters}”</strong>
-        <p class="muted">${data.note || ''}</p>
-        <div class="pill-row" style="margin-top: 12px;">${words.map((word) => `<span class="pill">${word}</span>`).join('')}</div>
-      `;
+      const payload = await readJsonResponse(response, 'This toolbox copy cannot reach the live word-check service right now.');
+      const matches = Array.isArray(payload.matches)
+        ? payload.matches
+        : (Array.isArray(payload.words) ? payload.words : []);
+      if (payload.status !== 'ok' || !matches.length) {
+        unscramblerStatus.textContent = 'No clear matches found.';
+        unscramblerResults.innerHTML = '<strong>No likely matches</strong><p class="muted">Try a more common letter mix like listen or finder.</p>';
+        return;
+      }
+      unscramblerStatus.textContent = `${matches.length} likely matches found.`;
+      unscramblerResults.innerHTML = `<strong>${matches.join(', ')}</strong><p class="muted">${payload.note || 'Cleaned to likely English matches.'}</p>`;
     } catch (error) {
-      unscramblerStatus.textContent = 'Try another scramble.';
-      unscramblerResults.innerHTML = `<strong>Could not unscramble that right now.</strong><p class="muted">${error.message || 'Please try again.'}</p>`;
+      unscramblerStatus.textContent = 'Try again.';
+      unscramblerResults.innerHTML = `<strong>Could not check words right now.</strong><p class="muted">${error?.message || 'Please try again in a moment.'}</p>`;
     }
   });
 
+  const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%^&*';
   const lengthInput = document.getElementById('password-length');
   const lengthValue = document.getElementById('password-length-value');
   const passwordOutput = document.getElementById('password-output');
-  const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%^&*()_+-={}[]?';
   const generatePassword = () => {
-    const length = Number(lengthInput?.value || 18);
+    const length = Number(lengthInput?.value || 20);
     lengthValue.textContent = String(length);
-    const bytes = new Uint32Array(length);
+    const bytes = new Uint8Array(length);
     window.crypto.getRandomValues(bytes);
-    const password = Array.from(bytes, (value) => alphabet[value % alphabet.length]).join('');
-    passwordOutput.textContent = password;
+    passwordOutput.textContent = Array.from(bytes, (value) => alphabet[value % alphabet.length]).join('');
   };
-  lengthInput?.addEventListener('input', () => {
-    lengthValue.textContent = String(lengthInput.value);
-  });
+  lengthInput?.addEventListener('input', generatePassword);
   document.getElementById('password-generate-button')?.addEventListener('click', generatePassword);
   document.getElementById('password-copy-button')?.addEventListener('click', async () => {
     const value = passwordOutput.textContent || '';
     if (!value || value === 'Press generate') return;
-    try {
-      await navigator.clipboard.writeText(value);
-    } catch (_) {
-      // Clipboard support can fail silently in some browsers.
-    }
+    try { await navigator.clipboard.writeText(value); } catch (_) {}
   });
 
   const textInput = document.getElementById('text-helper-input');
@@ -5174,9 +5561,8 @@ AI Agent Ops Logbook" style="padding: 12px 14px; border-radius: 14px; border: 1p
   const updateTextStats = () => {
     const value = textInput?.value || '';
     const words = value.trim() ? value.trim().split(/\s+/).filter(Boolean).length : 0;
-    const chars = value.length;
     wordCount.textContent = String(words);
-    charCount.textContent = String(chars);
+    charCount.textContent = String(value.length);
     readTime.textContent = `${Math.max(0, Math.ceil(words / 200))} min`;
   };
   textInput?.addEventListener('input', updateTextStats);
@@ -5186,9 +5572,7 @@ AI Agent Ops Logbook" style="padding: 12px 14px; border-radius: 14px; border: 1p
       const action = button.getAttribute('data-case-action');
       if (action === 'upper') textInput.value = textInput.value.toUpperCase();
       if (action === 'lower') textInput.value = textInput.value.toLowerCase();
-      if (action === 'title') {
-        textInput.value = textInput.value.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
-      }
+      if (action === 'title') textInput.value = textInput.value.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
       updateTextStats();
     });
   });
@@ -5211,10 +5595,7 @@ AI Agent Ops Logbook" style="padding: 12px 14px; border-radius: 14px; border: 1p
   const chooserCountNote = document.getElementById('chooser-count-note');
   const chooserResultValue = document.getElementById('chooser-result-value');
   const chooserResultNote = document.getElementById('chooser-result-note');
-  const chooserCleanOptions = () => (chooserInput?.value || '')
-    .split(/\r?\n/)
-    .map((value) => value.trim())
-    .filter(Boolean);
+  const chooserCleanOptions = () => (chooserInput?.value || '').split(/\r?\n/).map((value) => value.trim()).filter(Boolean);
   const chooserUpdateCount = () => {
     const options = chooserCleanOptions();
     chooserCountNote.textContent = options.length >= 2 ? `${options.length} options ready.` : 'Add at least 2 options.';
@@ -5225,7 +5606,7 @@ AI Agent Ops Logbook" style="padding: 12px 14px; border-radius: 14px; border: 1p
     const options = chooserUpdateCount();
     if (options.length < 2) {
       chooserResultValue.textContent = 'Need more options';
-      chooserResultNote.textContent = 'Add at least 2 non-empty lines so the chooser has something fair to pick from.';
+      chooserResultNote.textContent = 'Add at least 2 non-empty lines.';
       return;
     }
     const randomValues = new Uint32Array(1);
@@ -5236,29 +5617,200 @@ AI Agent Ops Logbook" style="padding: 12px 14px; border-radius: 14px; border: 1p
   });
   chooserUpdateCount();
 
+  const qrInput = document.getElementById('qr-input');
+  const qrSize = document.getElementById('qr-size');
+  const qrCanvas = document.getElementById('qr-canvas');
+  const qrStatus = document.getElementById('qr-status');
+  const qrDownloadLink = document.getElementById('qr-download-link');
+  const qrPreviewWrap = document.getElementById('qr-preview-wrap');
+  const renderQrFallback = (value, size) => {
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${encodeURIComponent(value)}`;
+    qrPreviewWrap.innerHTML = `<img src="${qrUrl}" alt="Generated QR code preview" width="${size}" height="${size}">`;
+    qrStatus.textContent = 'QR code ready';
+    qrDownloadLink.href = qrUrl;
+  };
+  const renderQr = async () => {
+    const value = (qrInput?.value || '').trim();
+    if (!value) {
+      qrStatus.textContent = 'Enter some text or a URL first';
+      return;
+    }
+    const size = Number(qrSize?.value || 240);
+    try {
+      if (window.QRCode?.toCanvas && qrCanvas) {
+        try {
+          qrPreviewWrap.innerHTML = `<canvas id="qr-canvas" width="${size}" height="${size}" aria-label="Generated QR code preview"></canvas>`;
+          const activeCanvas = document.getElementById('qr-canvas');
+          await window.QRCode.toCanvas(activeCanvas, value, {
+            width: size,
+            margin: 1,
+            color: { dark: '#122033', light: '#ffffff' }
+          });
+          qrStatus.textContent = 'QR code ready';
+          qrDownloadLink.href = activeCanvas.toDataURL('image/png');
+        } catch (_) {
+          renderQrFallback(value, size);
+        }
+      } else {
+        renderQrFallback(value, size);
+      }
+      qrDownloadLink.style.pointerEvents = '';
+      qrDownloadLink.style.opacity = '1';
+    } catch (_) {
+      qrStatus.textContent = 'Could not generate that QR code';
+    }
+  };
+  document.getElementById('qr-generate-button')?.addEventListener('click', renderQr);
+  qrSize?.addEventListener('change', renderQr);
+
+  const pomodoroDisplay = document.getElementById('pomodoro-display');
+  const pomodoroState = document.getElementById('pomodoro-state');
+  let pomodoroSeconds = 25 * 60;
+  let pomodoroDefault = 25 * 60;
+  let pomodoroTimer = null;
+  const formatSeconds = (value) => {
+    const minutes = Math.floor(value / 60).toString().padStart(2, '0');
+    const seconds = Math.floor(value % 60).toString().padStart(2, '0');
+    return `${minutes}:${seconds}`;
+  };
+  const renderPomodoro = () => { pomodoroDisplay.textContent = formatSeconds(pomodoroSeconds); };
+  const stopPomodoro = () => { if (pomodoroTimer) clearInterval(pomodoroTimer); pomodoroTimer = null; };
+  document.querySelectorAll('[data-pomodoro-preset]').forEach((button) => {
+    button.addEventListener('click', () => {
+      pomodoroDefault = Number(button.getAttribute('data-pomodoro-preset')) * 60;
+      pomodoroSeconds = pomodoroDefault;
+      stopPomodoro();
+      pomodoroState.textContent = `Preset loaded: ${formatSeconds(pomodoroDefault)}`;
+      renderPomodoro();
+    });
+  });
+  document.getElementById('pomodoro-start')?.addEventListener('click', () => {
+    if (pomodoroTimer) return;
+    pomodoroState.textContent = 'Running';
+    pomodoroTimer = window.setInterval(() => {
+      pomodoroSeconds = Math.max(0, pomodoroSeconds - 1);
+      renderPomodoro();
+      if (!pomodoroSeconds) {
+        stopPomodoro();
+        pomodoroState.textContent = 'Finished — nice work.';
+      }
+    }, 1000);
+  });
+  document.getElementById('pomodoro-pause')?.addEventListener('click', () => {
+    stopPomodoro();
+    pomodoroState.textContent = 'Paused';
+  });
+  document.getElementById('pomodoro-reset')?.addEventListener('click', () => {
+    stopPomodoro();
+    pomodoroSeconds = pomodoroDefault;
+    pomodoroState.textContent = 'Reset';
+    renderPomodoro();
+  });
+  renderPomodoro();
+
+  const browserInfoResults = document.getElementById('browser-info-results');
+  const readBrowserInfo = () => {
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const rows = [
+      ['User agent', navigator.userAgent || 'Unavailable'],
+      ['Language', navigator.language || 'Unavailable'],
+      ['Timezone', Intl.DateTimeFormat().resolvedOptions().timeZone || 'Unavailable'],
+      ['Screen', `${window.screen?.width || '?'} × ${window.screen?.height || '?'}`],
+      ['Viewport', `${window.innerWidth} × ${window.innerHeight}`],
+      ['Cookies enabled', navigator.cookieEnabled ? 'Yes' : 'No'],
+      ['Online', navigator.onLine ? 'Yes' : 'No'],
+      ['Connection type', connection?.effectiveType || 'Unavailable'],
+      ['Downlink', connection?.downlink ? `${connection.downlink} Mb/s` : 'Unavailable'],
+      ['Device memory', navigator.deviceMemory ? `${navigator.deviceMemory} GB` : 'Unavailable'],
+    ];
+    browserInfoResults.innerHTML = `<strong>Current browser snapshot</strong><ul>${rows.map(([label, value]) => `<li><strong>${label}:</strong> ${value}</li>`).join('')}</ul>`;
+    return rows.map(([label, value]) => `${label}: ${value}`).join('\n');
+  };
+  let lastBrowserInfoSummary = '';
+  document.getElementById('browser-info-button')?.addEventListener('click', () => {
+    lastBrowserInfoSummary = readBrowserInfo();
+  });
+  document.getElementById('browser-info-copy')?.addEventListener('click', async () => {
+    if (!lastBrowserInfoSummary) lastBrowserInfoSummary = readBrowserInfo();
+    try { await navigator.clipboard.writeText(lastBrowserInfoSummary); } catch (_) {}
+  });
+
+  const converterCategory = document.getElementById('converter-category');
+  const converterFrom = document.getElementById('converter-from');
+  const converterTo = document.getElementById('converter-to');
+  const converterInput = document.getElementById('converter-input');
+  const converterOutput = document.getElementById('converter-output');
+  const converterNote = document.getElementById('converter-note');
+  const converterSets = {
+    length: {
+      note: 'Length conversions use meters as the base unit.',
+      units: { meter: 1, kilometer: 1000, centimeter: 0.01, inch: 0.0254, foot: 0.3048, yard: 0.9144, mile: 1609.344 }
+    },
+    storage: {
+      note: 'Storage conversions use bytes as the base unit.',
+      units: { byte: 1, kilobyte: 1000, megabyte: 1000000, gigabyte: 1000000000, terabyte: 1000000000000 }
+    },
+    temperature: {
+      note: 'Temperature uses direct formulas between Celsius, Fahrenheit, and Kelvin.',
+      units: { celsius: 'celsius', fahrenheit: 'fahrenheit', kelvin: 'kelvin' }
+    }
+  };
+  const titleize = (value) => value.replace(/(^|\s)\w/g, (char) => char.toUpperCase());
+  const fillConverterUnits = () => {
+    const category = converterCategory.value;
+    const units = Object.keys(converterSets[category].units);
+    const options = units.map((unit) => `<option value="${unit}">${titleize(unit)}</option>`).join('');
+    converterFrom.innerHTML = options;
+    converterTo.innerHTML = options;
+    converterTo.value = units[Math.min(1, units.length - 1)];
+    converterNote.textContent = converterSets[category].note;
+  };
+  const convertTemperature = (value, from, to) => {
+    let celsius = value;
+    if (from === 'fahrenheit') celsius = (value - 32) * (5 / 9);
+    if (from === 'kelvin') celsius = value - 273.15;
+    if (to === 'fahrenheit') return (celsius * (9 / 5)) + 32;
+    if (to === 'kelvin') return celsius + 273.15;
+    return celsius;
+  };
+  const runConverter = () => {
+    const category = converterCategory.value;
+    const from = converterFrom.value;
+    const to = converterTo.value;
+    const rawValue = Number(converterInput.value || 0);
+    let converted = rawValue;
+    if (category === 'temperature') {
+      converted = convertTemperature(rawValue, from, to);
+    } else {
+      const units = converterSets[category].units;
+      converted = rawValue * units[from] / units[to];
+    }
+    const formatter = Math.abs(converted) >= 100 ? converted.toFixed(2) : converted.toFixed(4).replace(/0+$/, '').replace(/\.$/, '');
+    converterOutput.textContent = `${rawValue} ${from}${rawValue === 1 ? '' : 's'} = ${formatter} ${to}${Number(formatter) === 1 ? '' : 's'}`;
+    converterNote.textContent = converterSets[category].note;
+  };
+  converterCategory?.addEventListener('change', () => { fillConverterUnits(); runConverter(); });
+  converterFrom?.addEventListener('change', runConverter);
+  converterTo?.addEventListener('change', runConverter);
+  converterInput?.addEventListener('input', runConverter);
+  document.getElementById('converter-button')?.addEventListener('click', runConverter);
+  fillConverterUnits();
+  runConverter();
+
   const cells = Array.from(document.querySelectorAll('[data-ttt-cell]'));
   const status = document.getElementById('ttt-status');
   let board = Array(9).fill('');
   let player = 'X';
   let gameOver = false;
-  const lines = [
-    [0, 1, 2], [3, 4, 5], [6, 7, 8],
-    [0, 3, 6], [1, 4, 7], [2, 5, 8],
-    [0, 4, 8], [2, 4, 6],
-  ];
-  const updateBoard = () => {
-    cells.forEach((cell, index) => {
-      cell.textContent = board[index];
-    });
-  };
+  const lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+  const updateBoard = () => cells.forEach((cell, index) => { cell.textContent = board[index]; });
   const winner = () => lines.find(([a, b, c]) => board[a] && board[a] === board[b] && board[a] === board[c]);
   cells.forEach((cell, index) => {
     cell.addEventListener('click', () => {
       if (gameOver || board[index]) return;
       board[index] = player;
       updateBoard();
-      const winningLine = winner();
-      if (winningLine) {
+      if (winner()) {
         status.textContent = `Player ${player} wins!`;
         gameOver = true;
         return;
@@ -5281,6 +5833,7 @@ AI Agent Ops Logbook" style="padding: 12px 14px; border-radius: 14px; border: 1p
   });
   updateBoard();
   generatePassword();
+  renderQr();
 })();
 </script>
 
@@ -7822,12 +8375,12 @@ AI Agent Ops Logbook" style="padding: 12px 14px; border-radius: 14px; border: 1p
     </div>
     <script>
       (function () {
-        const widget = document.querySelector('[data-support-chat-widget]');
+        const widget = document.querySelector('[data-buyer-support-widget]');
         if (!widget) return;
-        const toggle = widget.querySelector('[data-support-chat-toggle]');
-        const form = widget.querySelector('[data-support-chat-form]');
+        const toggle = widget.querySelector('[data-buyer-support-toggle]');
+        const form = widget.querySelector('[data-buyer-support-form]');
         const textarea = widget.querySelector('textarea[name="message"]');
-        const responseBox = widget.querySelector('[data-support-chat-response]');
+        const responseBox = widget.querySelector('[data-buyer-support-response]');
         toggle?.addEventListener('click', () => {
           const open = widget.classList.toggle('is-open');
           toggle.setAttribute('aria-expanded', open ? 'true' : 'false');

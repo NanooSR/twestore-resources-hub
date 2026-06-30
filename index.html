@@ -2261,7 +2261,7 @@
       }
     </style>
     <script>
-      window.TWE_PUBLIC_API_BASE_URL = "";
+      window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
       window.tweApiUrl = function (path) {
         const base = String(window.TWE_PUBLIC_API_BASE_URL || '').replace(/\/+$/, '');
         const cleanPath = String(path || '').startsWith('/') ? String(path || '') : '/' + String(path || '');
@@ -2299,7 +2299,7 @@
               <span>Practical digital tools, buyer guides, and trusted resources in one place.</span>
             </span>
           </a>
-          <form class="nav-search" action="/store" method="get">
+          <form class="nav-search" action="/store#store-top-matches" method="get">
             <label for="global-search">Search</label>
             <input id="global-search" type="text" name="q" placeholder="Products, guides, FAQs">
             <button type="submit">Search</button>
@@ -2319,13 +2319,12 @@
             <a href="/store">Store</a>
             <a href="/about">About</a>
             <a href="/resources?src=store-nav-route">Resources &amp; Amazon Picks</a>
-            <a href="/toolbox">TWE Toolbox</a>
             <a href="/support">Support</a>
             <a href="/command-center?src=store-nav-route">Buying Guide</a>
           </div>
           <div class="nav-utility-row">
             <a class="nav-blog-link is-church" href="https://thewatchersedgechurchsupplies.blogspot.com/" target="_blank" rel="noopener sponsored nofollow">⛪ Church Blog</a>
-            <a class="nav-utility-link is-toolbox" href="/toolbox">🧰 TWE Toolbox</a>
+            <a class="nav-utility-link is-toolbox" href="/toolbox" target="_blank" rel="noopener">🧰 TWE Toolbox</a>
             <a class="nav-blog-link is-pet" href="https://pawsomepetgearhub.blogspot.com/" target="_blank" rel="noopener sponsored nofollow">🐾 Pet Blog</a>
           </div>
         </nav>
@@ -4829,6 +4828,66 @@
     </aside>
         <div class="store-sales-banner-main">
           
+<section class="section card" id="store-top-matches" data-store-search-top-match-panel style="padding: 24px; border-radius: 22px; background: linear-gradient(180deg, rgba(255,255,255,0.99), rgba(220,238,237,0.38)); display:none;">
+  <div class="section-head" style="align-items: center; margin-bottom: 14px;">
+    <div>
+      <p class="eyebrow">Top matches first</p>
+      <h2 style="margin-bottom: 6px;">Take buyers straight to the best matching next step</h2>
+      <p class="muted" style="margin-bottom: 0;">Search results first. Put the most relevant items in front right away so the strongest matching product, Amazon pick, and buyer guide show up before the filter tools.</p>
+    </div>
+    <a class="pill is-accent" href="#store-filter-summary">Jump to result counts</a>
+  </div>
+  <div class="grid three" id="store-top-match-grid">
+    <article class="mini-card" id="store-top-match-product" style="padding: 18px; border-radius: 18px;">
+      <p class="eyebrow">Top store product</p>
+      <div data-top-match-body>
+        
+        
+        <a href="/store/the-watchers-edge-botops-toolkit" style="display:block; margin-bottom: 14px; border-radius: 14px; overflow:hidden; border: 1px solid var(--line-strong); background: #0b1628;">
+          <img src="/static/public_site/product_previews/the-watchers-edge-botops-toolkit/01_the_watchers_edge_botops_toolkit_hero.png" alt="Preview image for The Watchers Edge BotOps Toolkit" loading="lazy">
+        </a>
+        
+        <h3 style="margin-bottom: 6px;"><a href="/store/the-watchers-edge-botops-toolkit" style="text-decoration:none;">The Watchers Edge BotOps Toolkit</a></h3>
+        <p class="muted">Organize bot-operation notes, incident reviews, and AI-assisted debugging prompts without turning messy logs into risky guesswork.</p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn" href="/store/the-watchers-edge-botops-toolkit">View details</a>
+          <a class="btn secondary" href="https://nanoojr.gumroad.com/l/ltusy" target="_blank" rel="noopener">Buy on Gumroad</a>
+        </div>
+        
+      </div>
+    </article>
+    <article class="mini-card" id="store-top-match-resource" style="padding: 18px; border-radius: 18px; background: rgba(255,241,214,0.50); display:none;">
+      <p class="eyebrow">Top Amazon pick</p>
+      <div data-top-match-body>
+        
+      </div>
+    </article>
+    <article class="mini-card" id="store-top-match-guide" style="padding: 18px; border-radius: 18px; background: rgba(246,243,238,0.92);">
+      <p class="eyebrow">Top buyer guide</p>
+      <div data-top-match-body>
+        
+        
+        <h3 style="margin-bottom: 6px;">Best admin desk tools for invoices and paperwork</h3>
+        <p class="muted">A repeat-use organizer that fits office, church, creator, and client-delivery setups.</p>
+        <div class="cta-row" style="margin-top: 0;">
+          <a class="btn" href="https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html">Open guide</a>
+          <a class="btn ghost" href="/resources?category=admin-paperwork">Browse category</a>
+        </div>
+        
+      </div>
+    </article>
+  </div>
+  <article class="mini-card" id="store-top-match-empty" style="margin-top: 16px; padding: 18px; border-radius: 18px; display:none;">
+    <p class="eyebrow">No exact match yet</p>
+    <h3>Try the closest buyer path instead of starting over</h3>
+    <p class="muted">No strong result is showing yet. Try a broader phrase, open the closest Amazon lane, browse live digital offers, or use Collections for a wider path.</p>
+    <div class="cta-row">
+      <a class="btn secondary" href="/resources?src=store-search-empty-state">Browse Amazon picks</a>
+      <a class="btn ghost" href="/collections?src=store-search-empty-state">Browse collections</a>
+    </div>
+  </article>
+</section>
+
 <section class="panel hero store-hero-panel" style="padding-bottom: 22px;">
   <div class="store-hero-intro">
     <div class="store-hero-copy">
@@ -4878,6 +4937,7 @@
   </div>
 </section>
 
+<div data-store-browse-only style="">
 <section class="section card" id="store-front-amazon-picks" style="padding: 24px; border-radius: 22px; background: linear-gradient(180deg, rgba(255,255,255,0.99), rgba(255,241,214,0.46));">
   <div class="section-head" style="align-items: center; margin-bottom: 16px;">
     <div>
@@ -5251,7 +5311,7 @@
   <p class="muted" style="margin: 14px 0 0;">These are planning resources designed to help you get organized. They are not promises of income, approval, traffic, trading results, or profit.</p>
 </section>
 
-
+</div>
 
 <section class="section card store-filter-panel" style="padding: 24px; border-radius: 22px; background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(249,247,242,0.94));">
   <div class="section-head" style="margin-bottom: 16px; align-items: center;">
@@ -5262,7 +5322,7 @@
     </div>
     <a class="pill is-accent" href="/command-center">Buying Guide</a>
   </div>
-  <form action="/store" method="get" class="store-filter-form">
+  <form action="/store#store-top-matches" method="get" class="store-filter-form">
     <div class="store-filter-grid">
       <label class="store-filter-field">
         <span class="eyebrow">Search</span>
@@ -5332,7 +5392,7 @@
       </div>
     </div>
   </form>
-  <article id="store-filter-summary" class="store-results-summary" aria-live="polite">
+  <article id="store-filter-summary" class="store-results-summary" aria-live="polite" data-store-search-summary>
     <div>
       <p class="eyebrow">Current result view</p>
       <h3 id="store-filter-summary-title" style="margin-bottom: 6px;">Browse all live store paths</h3>
@@ -5360,7 +5420,7 @@
   </article>
   
 
-  <article class="mini-card affiliate-banner" style="margin-top: 16px; padding: 18px; border-radius: 18px;">
+  <article class="mini-card affiliate-banner" data-store-browse-only style="margin-top: 16px; padding: 18px; border-radius: 18px;">
     <div class="section-head" style="align-items: center; margin-bottom: 12px;">
       <div>
         <p class="eyebrow">Featured gear and resource picks</p>
@@ -16731,6 +16791,22 @@
   const guideCards = [...document.querySelectorAll('[data-guide-card]')];
   const words = normalize(query).split(/\s+/).filter(Boolean);
   const filterActive = Boolean(selectedFamily || selectedPlatform || selectedOutcome || selectedResourceCategory || words.length);
+  if (filterActive) {
+    document.querySelectorAll('[data-store-browse-only]').forEach(section => {
+      section.style.display = 'none';
+    });
+    const topPanel = document.getElementById('store-top-matches');
+    if (topPanel) {
+      topPanel.style.display = '';
+      requestAnimationFrame(() => {
+        topPanel.scrollIntoView({block: 'start', behavior: 'auto'});
+        if (window.location.hash !== '#store-top-matches') {
+          history.replaceState(null, '', `${window.location.pathname}${window.location.search}#store-top-matches`);
+        }
+      });
+    }
+    return;
+  }
   const textMatchesWords = (text, aliases) => {
     const compactQuery = compact(query);
     if (compactQuery && text.includes(compactQuery)) return true;
@@ -16744,12 +16820,14 @@
     const text = `${card.dataset.searchText || ''} ${normalize(card.innerText)} ${compact(card.innerText)}`;
     return textMatchesWords(text, productAliases);
   };
+
   let visible = 0;
   cards.forEach(card => {
     const show = matches(card);
     card.style.display = show ? '' : 'none';
     if (show) visible += 1;
   });
+
   let visibleResources = 0;
   resourceCards.forEach(card => {
     const matchesCategory = !selectedResourceCategory || card.dataset.category === selectedResourceCategory;
@@ -16759,6 +16837,7 @@
     card.style.display = show ? '' : 'none';
     if (show) visibleResources += 1;
   });
+
   let visibleGuides = 0;
   guideCards.forEach(card => {
     const matchesCategory = !selectedResourceCategory || card.dataset.category === selectedResourceCategory;
@@ -16768,6 +16847,7 @@
     card.style.display = show ? '' : 'none';
     if (show) visibleGuides += 1;
   });
+
   const resourceResults = document.getElementById('store-resource-search-results');
   if (resourceResults && filterActive) resourceResults.style.display = visibleResources ? '' : 'none';
   const guideResults = document.getElementById('store-guide-search-results');
@@ -16838,6 +16918,109 @@
   }
   const noResults = document.getElementById('client-no-results');
   if (noResults && filterActive) noResults.style.display = (visible || visibleResources || visibleGuides || serverResourceResultCount) ? 'none' : '';
+
+  const editDistance = (a, b) => {
+    const rows = Array.from({length: a.length + 1}, () => new Array(b.length + 1).fill(0));
+    for (let i = 0; i <= a.length; i += 1) rows[i][0] = i;
+    for (let j = 0; j <= b.length; j += 1) rows[0][j] = j;
+    for (let i = 1; i <= a.length; i += 1) {
+      for (let j = 1; j <= b.length; j += 1) {
+        const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+        rows[i][j] = Math.min(rows[i - 1][j] + 1, rows[i][j - 1] + 1, rows[i - 1][j - 1] + cost);
+      }
+    }
+    return rows[a.length][b.length];
+  };
+  const tokenMatchScore = (word, tokens, aliases) => {
+    if (!word || !tokens.length) return 0;
+    if (tokens.includes(word)) return 28;
+    if ((aliases[word] || []).some(alias => tokens.includes(alias))) return 22;
+    if (tokens.some(token => token.startsWith(word) || word.startsWith(token))) return 16;
+    if (word.length >= 4 && tokens.some(token => token.includes(word) || word.includes(token))) return 12;
+    if (word.length >= 4 && tokens.some(token => editDistance(word, token) <= 1)) return 10;
+    return 0;
+  };
+  const expandedWords = (list, aliases) => {
+    const seen = new Set();
+    const result = [];
+    list.forEach(word => {
+      [word, ...(aliases[word] || [])].forEach(candidate => {
+        if (candidate && !seen.has(candidate)) {
+          seen.add(candidate);
+          result.push(candidate);
+        }
+      });
+    });
+    return result;
+  };
+  const scoreCard = (card, aliases) => {
+    const queryWords = words.filter(Boolean);
+    if (!queryWords.length) return 0;
+    const primaryText = [card.dataset.searchPrimary || '', card.querySelector('h3')?.innerText || ''].join(' ');
+    const secondaryText = [card.dataset.searchText || '', card.innerText || ''].join(' ');
+    const primary = normalize(primaryText).split(/\s+/).filter(Boolean);
+    const secondary = normalize(secondaryText).split(/\s+/).filter(Boolean);
+    let score = 0;
+    const compactQuery = compact(query);
+    if (compactQuery && compact(primaryText).includes(compactQuery)) score += 160;
+    else if (compactQuery && compact(secondaryText).includes(compactQuery)) score += 90;
+    let matchedAll = true;
+    queryWords.forEach(word => {
+      const wordScore = Math.max(tokenMatchScore(word, primary, aliases), tokenMatchScore(word, secondary, aliases));
+      if (!wordScore) matchedAll = false;
+      score += wordScore;
+    });
+    expandedWords(queryWords, aliases).forEach(word => {
+      score += Math.max(tokenMatchScore(word, primary, aliases) / 4, tokenMatchScore(word, secondary, aliases) / 5);
+    });
+    if (matchedAll) score += 36;
+    return score;
+  };
+  const sortCardsByScore = (list, aliases) => {
+    list
+      .map(card => ({card, score: scoreCard(card, aliases)}))
+      .sort((a, b) => b.score - a.score)
+      .forEach(({card}) => card.parentElement?.appendChild(card));
+  };
+  sortCardsByScore(cards.filter(card => card.style.display !== 'none'), productAliases);
+  sortCardsByScore(resourceCards.filter(card => card.style.display !== 'none'), resourceAliases);
+  sortCardsByScore(guideCards.filter(card => card.style.display !== 'none'), resourceAliases);
+
+  document.querySelectorAll('[data-store-browse-only]').forEach(section => {
+    section.style.display = filterActive ? 'none' : '';
+  });
+
+  const topPanel = document.getElementById('store-top-matches');
+  const topProduct = document.getElementById('store-top-match-product');
+  const topResource = document.getElementById('store-top-match-resource');
+  const topGuide = document.getElementById('store-top-match-guide');
+  const topEmpty = document.getElementById('store-top-match-empty');
+  const injectTopMatch = (container, sourceCard) => {
+    if (!container) return;
+    const body = container.querySelector('[data-top-match-body]');
+    if (!sourceCard || !body) {
+      container.style.display = 'none';
+      return;
+    }
+    body.innerHTML = sourceCard.innerHTML;
+    container.style.display = '';
+  };
+  const firstVisible = list => list.find(card => card.style.display !== 'none');
+  if (topPanel) {
+    topPanel.style.display = filterActive ? '' : 'none';
+    injectTopMatch(topProduct, firstVisible(cards));
+    injectTopMatch(topResource, firstVisible(resourceCards));
+    injectTopMatch(topGuide, firstVisible(guideCards));
+    if (topEmpty) topEmpty.style.display = (visible || visibleResources || visibleGuides) ? 'none' : '';
+    if (filterActive) {
+      requestAnimationFrame(() => {
+        topPanel.scrollIntoView({block: 'start', behavior: 'auto'});
+        if (window.location.hash !== '#store-top-matches') {
+          history.replaceState(null, '', `${window.location.pathname}${window.location.search}#store-top-matches`);
+        }
+      });
+    }
+  }
 })();
 </script>
 
@@ -19380,12 +19563,12 @@
     </div>
     <script>
       (function () {
-        const widget = document.querySelector('[data-support-chat-widget]');
+        const widget = document.querySelector('[data-buyer-support-widget]');
         if (!widget) return;
-        const toggle = widget.querySelector('[data-support-chat-toggle]');
-        const form = widget.querySelector('[data-support-chat-form]');
+        const toggle = widget.querySelector('[data-buyer-support-toggle]');
+        const form = widget.querySelector('[data-buyer-support-form]');
         const textarea = widget.querySelector('textarea[name="message"]');
-        const responseBox = widget.querySelector('[data-support-chat-response]');
+        const responseBox = widget.querySelector('[data-buyer-support-response]');
         toggle?.addEventListener('click', () => {
           const open = widget.classList.toggle('is-open');
           toggle.setAttribute('aria-expanded', open ? 'true' : 'false');

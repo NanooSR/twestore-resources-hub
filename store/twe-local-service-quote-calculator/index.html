@@ -2261,7 +2261,7 @@
       }
     </style>
     <script>
-      window.TWE_PUBLIC_API_BASE_URL = "";
+      window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
       window.tweApiUrl = function (path) {
         const base = String(window.TWE_PUBLIC_API_BASE_URL || '').replace(/\/+$/, '');
         const cleanPath = String(path || '').startsWith('/') ? String(path || '') : '/' + String(path || '');
@@ -2299,7 +2299,7 @@
               <span>Practical digital tools, buyer guides, and trusted resources in one place.</span>
             </span>
           </a>
-          <form class="nav-search" action="/store" method="get">
+          <form class="nav-search" action="/store#store-top-matches" method="get">
             <label for="global-search">Search</label>
             <input id="global-search" type="text" name="q" placeholder="Products, guides, FAQs">
             <button type="submit">Search</button>
@@ -2320,13 +2320,12 @@
             <a href="/store">Store</a>
             <a href="/about">About</a>
             <a href="/resources?src=product-nav-route&amp;from=twe-local-service-quote-calculator">Resources &amp; Amazon Picks</a>
-            <a href="/toolbox">TWE Toolbox</a>
             <a href="/support">Support</a>
             <a href="/command-center?src=product-nav-route&amp;from=twe-local-service-quote-calculator">Buying Guide</a>
           </div>
           <div class="nav-utility-row">
             <a class="nav-blog-link is-church" href="https://thewatchersedgechurchsupplies.blogspot.com/" target="_blank" rel="noopener sponsored nofollow">⛪ Church Blog</a>
-            <a class="nav-utility-link is-toolbox" href="/toolbox">🧰 TWE Toolbox</a>
+            <a class="nav-utility-link is-toolbox" href="/toolbox" target="_blank" rel="noopener">🧰 TWE Toolbox</a>
             <a class="nav-blog-link is-pet" href="https://pawsomepetgearhub.blogspot.com/" target="_blank" rel="noopener sponsored nofollow">🐾 Pet Blog</a>
           </div>
         </nav>
@@ -7891,12 +7890,12 @@ This is not a hosted SaaS. Buyers receive a downloadable package (`index.html`, 
     </div>
     <script>
       (function () {
-        const widget = document.querySelector('[data-support-chat-widget]');
+        const widget = document.querySelector('[data-buyer-support-widget]');
         if (!widget) return;
-        const toggle = widget.querySelector('[data-support-chat-toggle]');
-        const form = widget.querySelector('[data-support-chat-form]');
+        const toggle = widget.querySelector('[data-buyer-support-toggle]');
+        const form = widget.querySelector('[data-buyer-support-form]');
         const textarea = widget.querySelector('textarea[name="message"]');
-        const responseBox = widget.querySelector('[data-support-chat-response]');
+        const responseBox = widget.querySelector('[data-buyer-support-response]');
         toggle?.addEventListener('click', () => {
           const open = widget.classList.toggle('is-open');
           toggle.setAttribute('aria-expanded', open ? 'true' : 'false');

@@ -16,6 +16,7 @@
     "/support",
     "/resources",
     "/updates/resources-startnow20-launch",
+    "/updates/retainer-guide-and-toolbox",
     "/command-center",
     "/store/the-watchers-edge-botops-toolkit",
     "/store/twe-solo-crm-follow-up-system",
@@ -108,5 +109,5 @@
     "twe-website-audit-scorecard"
   ],
   "redirects": [],
-  "exported_count": 36
+  "exported_count": 37
 }
