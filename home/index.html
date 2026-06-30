@@ -76,6 +76,14 @@
       }
       img { display: block; max-width: 100%; }
       .shell { max-width: calc(var(--shell) + 48px); margin: 0 auto; padding: 24px; }
+      body[data-standalone-page="true"] .shell {
+        max-width: 1220px;
+        padding-top: 32px;
+        padding-bottom: 40px;
+      }
+      body[data-standalone-page="true"] .shell-standalone {
+        max-width: 1220px;
+      }
       .site-header-band {
         position: sticky;
         top: 12px;
@@ -2270,6 +2278,8 @@
     </script>
   </head>
   <body>
+    
+    
     
     
     
@@ -7986,6 +7996,7 @@
         </div>
       </div>
     </div>
+    
     
     <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
       <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Expanded product image">
