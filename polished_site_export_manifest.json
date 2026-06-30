@@ -6,6 +6,7 @@
     "/start-here",
     "/collections",
     "/about",
+    "/toolbox",
     "/church",
     "/store",
     "/startnow20",
@@ -107,5 +108,5 @@
     "twe-website-audit-scorecard"
   ],
   "redirects": [],
-  "exported_count": 35
+  "exported_count": 36
 }
