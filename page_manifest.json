@@ -1514,6 +1514,46 @@
     "url_slug": "best-invoice-filing-and-admin-office-setup"
   },
   {
+    "page_key": "best-meeting-notes-and-action-tracking-desk-setup",
+    "page_title": "Best Meeting Notes and Action Tracking Desk Setup",
+    "page_type": "starter_setup",
+    "content_pillar": "client_onboarding_delivery_setup",
+    "related_twestore_product": "TWE Meeting Notes & Action Tracker",
+    "cross_sell_cta": "Use the Meeting Notes & Action Tracker to turn this physical setup into a repeatable capture-and-follow-through system with one place for meeting notes, owners, deadlines, decisions, and the next-call agenda instead of loose notebooks and forgotten promises.",
+    "helper_summary": "This page helps freelancers, consultants, managers, and small teams choose practical desk gear that makes meeting capture, action ownership, and follow-up easier to reopen after the call ends.",
+    "bounty_fit": "No separate bounty lane is needed here unless a later client-delivery or solo-CRM page clearly overlaps the same buyer without diluting the meeting follow-through angle.",
+    "comparison_points": [
+      "The best meeting-notes setup makes follow-up easier to reopen, not just prettier on the desk.",
+      "A practical capture and visibility upgrade usually beats another app when the real problem is missed owners and scattered notes.",
+      "Buy the gear that reduces action-dropoff after the call, not the gear that only looks organized for one day."
+    ],
+    "recommendation_slots": [
+      {
+        "name": "Best portable monitor for side-by-side meeting capture",
+        "reason": "For buyers who need the call window, agenda, and notes sheet visible at the same time without constantly minimizing one to see the other.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0B9GLG86C?tag=resourceshubca-20",
+        "cta_label": "See portable-monitor option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca portable monitor option."
+      },
+      {
+        "name": "Best active project tray or desk organizer for current meeting materials",
+        "reason": "For buyers who still use printed agendas, handwritten pages, follow-up sheets, or client packets and need one visible action zone instead of paper drift.",
+        "affiliate_url": "https://www.amazon.ca/dp/B07RX17FKL?tag=resourceshubca-20",
+        "cta_label": "See desk-organizer option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca desk organizer option."
+      },
+      {
+        "name": "Best dry-erase planner or visible follow-up board",
+        "reason": "For buyers who need decisions, owners, and next-call promises to stay visible after the meeting tab closes.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0CGLP5LQD?tag=resourceshubca-20",
+        "cta_label": "See dry-erase-planner option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca dry-erase planner option."
+      }
+    ],
+    "body": "### Why meeting notes need their own desk logic\nA meeting can feel productive while the follow-through quietly falls apart. Notes end up in one notebook, action items live in a different app, decisions stay trapped in memory, and the next meeting starts with another recap instead of real progress.\n\nA better desk setup does not fix bad leadership or unclear goals. What it can do is make capture, ownership, and follow-up much easier to reopen after the call ends.\n\n### Start with the follow-through bottleneck, not the gadget list\nAsk what keeps breaking right now:\n- notes are captured but never turned into owner/deadline tasks\n- the agenda disappears once the meeting window is open\n- handwritten pages, printouts, and follow-up sheets pile up with no active zone\n- decisions get mentioned on the call but never logged clearly\n- next steps depend on memory instead of one visible review surface\n\nThe right first purchase should reduce that exact friction instead of adding more things to manage.\n\n### What matters most\n#### 1. Easier side-by-side capture during the meeting\nIf the buyer keeps switching between the call, the agenda, and the notes sheet on one cramped screen, important details get lost. A cleaner second-screen setup can help more than another software experiment.\n\n#### 2. One active zone for current meeting material\nMany buyers still use printed agendas, sticky notes, intake sheets, or handwritten follow-up pages. One visible organizer zone can stop those active materials from blending into general desk clutter.\n\n#### 3. Visible next actions after the meeting ends\nA strong call still creates weak execution when owners, deadlines, and decisions disappear the minute the browser closes. A visible planner or board helps buyers keep the true next actions in sight.\n\n### Best setup by user type\n#### Freelancer or consultant juggling several client calls\nPrioritize easier side-by-side viewing first. The biggest win is seeing the call, the note sheet, and the action list without rebuilding context every few minutes.\n\n#### Manager or team lead running recurring internal meetings\nVisibility matters most. Choose a setup that makes owner assignments, deadlines, and decisions easier to scan between calls.\n\n#### Hybrid digital plus paper workflow buyer\nIf the buyer still prints agendas or captures handwritten notes before final entry, one active organizer zone can matter more than another subscription or accessory.\n\n### Category-by-category guidance\n#### Portable monitors and second-screen helpers\nUseful when meeting capture keeps breaking because the buyer has to hide the agenda to see the call or hide the notes to see the action list. The value is calmer capture flow, not a more complicated workstation.\n\n#### Desk organizers and active project trays\nHelpful when current call materials keep getting buried under unrelated paperwork. The goal is one visible meeting-action zone that stays easy to reset before the next conversation.\n\n#### Dry-erase planners and visible follow-up boards\nBest when the buyer already knows the meeting itself is fine but the follow-through disappears afterward. A visible board can keep owner/deadline commitments alive until they are actually completed.\n\n### Common mistakes\n- Treating meeting chaos like a motivation problem when the real issue is that notes, actions, and decisions live in too many places.\n- Buying more gear before deciding what actually needs to stay visible between meetings.\n- Letting current meeting pages blend into general paperwork instead of keeping one active zone.\n- Assuming a good meeting automatically creates good follow-through.\n\n### Best first upgrade\nFor most buyers, the best first upgrade is the one that makes the meeting easier to capture and the next actions easier to review in one short session. That usually means easier side-by-side viewing first, then one visible organizer or follow-up board.\n\n### Final decision rule\nThe best meeting notes and action tracking desk setup is the one that helps a buyer capture the conversation, log the decisions, assign the owners, and reopen the next step without rebuilding the whole meeting from memory. If the setup makes follow-through calmer and easier to repeat, it is doing its job.",
+    "url_slug": "best-meeting-notes-and-action-tracking-desk-setup"
+  },
+  {
     "page_key": "best-pet-cameras-for-home-check-ins-and-peace-of-mind",
     "page_title": "Best Pet Cameras for Home Check-Ins and Peace of Mind",
     "page_type": "evergreen_best_tools",
