@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     
-    <meta name="description" content="Quickly switch case, count words, and estimate reading time for a pasted block of text. Use this bookmarkable TWE Toolbox page for Text helper in a focused single-tool layout with a clear path back to the main toolbox hub.">
-    <meta property="og:title" content="TheWatchersEdge.ca | Text helper">
-    <meta property="og:description" content="Quickly switch case, count words, and estimate reading time for a pasted block of text. Use this bookmarkable TWE Toolbox page for Text helper in a focused single-tool layout with a clear path back to the main toolbox hub.">
+    <meta name="description" content="Use TWE Toolbox to Clean up short copy, captions, notes, and pasted text while checking simple writing stats. Free, mobile-friendly, and easy to bookmark.">
+    <meta property="og:title" content="Text helper | Free Online Tool | TWE Toolbox">
+    <meta property="og:description" content="Use TWE Toolbox to Clean up short copy, captions, notes, and pasted text while checking simple writing stats. Free, mobile-friendly, and easy to bookmark.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="TheWatchersEdge.ca">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="TheWatchersEdge.ca | Text helper">
-    <meta name="twitter:description" content="Quickly switch case, count words, and estimate reading time for a pasted block of text. Use this bookmarkable TWE Toolbox page for Text helper in a focused single-tool layout with a clear path back to the main toolbox hub.">
-    <title>TheWatchersEdge.ca | Text helper</title>
+    <meta name="twitter:title" content="Text helper | Free Online Tool | TWE Toolbox">
+    <meta name="twitter:description" content="Use TWE Toolbox to Clean up short copy, captions, notes, and pasted text while checking simple writing stats. Free, mobile-friendly, and easy to bookmark.">
+    
+    <link rel="canonical" href="https://TheWatchersEdge.ca/toolbox/text-helper/">
+    <meta property="og:url" content="https://TheWatchersEdge.ca/toolbox/text-helper/">
+    <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebPage", "name": "Text helper", "url": "https://TheWatchersEdge.ca/toolbox/text-helper/", "description": "Use TWE Toolbox to Clean up short copy, captions, notes, and pasted text while checking simple writing stats. Free, mobile-friendly, and easy to bookmark.", "inLanguage": "en-CA", "isPartOf": {"@type": "WebSite", "name": "TheWatchersEdge.ca", "url": "https://TheWatchersEdge.ca/"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://TheWatchersEdge.ca/"}, {"@type": "ListItem", "position": 2, "name": "TWE Toolbox", "item": "https://TheWatchersEdge.ca/toolbox"}, {"@type": "ListItem", "position": 3, "name": "Text helper", "item": "https://TheWatchersEdge.ca/toolbox/text-helper/"}]}, {"@context": "https://schema.org", "@type": "WebApplication", "name": "Text helper", "applicationCategory": "Writing + words", "operatingSystem": "Any", "browserRequirements": "Requires a modern web browser with JavaScript enabled.", "description": "Clean up short copy, captions, notes, and pasted text while checking simple writing stats.", "url": "https://TheWatchersEdge.ca/toolbox/text-helper/", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CAD"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What can the text helper do?", "acceptedAnswer": {"@type": "Answer", "text": "It can switch case, count words, count characters, and estimate reading time for pasted text."}}, {"@type": "Question", "name": "Is the text helper useful for short work copy?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is meant for quick captions, messages, notes, product snippets, and other short blocks of text."}}, {"@type": "Question", "name": "Can I bookmark this text cleanup page?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Each TWE Toolbox utility has its own direct page so you can come back to the exact tool you use most."}}]}]</script>
+
+    <title>Text helper | Free Online Tool | TWE Toolbox</title>
     
     
     
@@ -2508,8 +2513,6 @@
   }
   
   .toolbox-hub-only { display: none; }
-  .toolbox-sections > .tool-panel { display: none; }
-  .toolbox-sections > #text-helper { display: grid; }
   .toolbox-sections { gap: 0; }
   
   @media (min-width: 900px) {
@@ -2575,49 +2578,12 @@
 
   
   <section class="toolbox-sections" aria-label="Focused single-tool panel">
-    <article class="tool-panel" id="ip-checker">
-      <span class="tool-badge">🌐 What’s my IP</span>
-      <h2>Check the public-facing connection IP your browser is presenting</h2>
-      <p class="muted">Useful when you need to confirm what IP a service is likely seeing from this connection right now.</p>
-      <div class="tool-actions"><button class="btn" type="button" id="ip-check-button">Check my IP</button></div>
-      <div class="tool-result" aria-live="polite">
-        <strong id="ip-result-value">Not checked yet</strong>
-        <p class="muted" id="ip-result-note">Click the button to detect the current connection IP.</p>
-      </div>
-    </article>
 
-    <article class="tool-panel" id="unscrambler">
-      <span class="tool-badge">🔤 Unscrambler</span>
-      <h2>Turn scrambled letters into likely words</h2>
-      <p class="muted">Type letters only. This helper returns a shorter, cleaner list of likely matches instead of a cluttered dump.</p>
-      <form id="unscrambler-form" class="tool-row">
-        <label for="unscrambler-letters"><strong>Scrambled letters</strong></label>
-        <input id="unscrambler-letters" name="letters" type="text" inputmode="text" autocomplete="off" placeholder="example: listen" maxlength="18" required>
-        <div class="cta-row">
-          <button class="btn" type="submit">Unscramble</button>
-          <span class="muted" id="unscrambler-status">Enter at least 3 letters.</span>
-        </div>
-      </form>
-      <div class="tool-result" id="unscrambler-results" aria-live="polite">
-        <strong>Results will appear here.</strong>
-        <p class="muted">Try <code>listen</code>, <code>finder</code>, or <code>stream</code>.</p>
-      </div>
-    </article>
 
-    <article class="tool-panel" id="password-generator">
-      <span class="tool-badge">🔐 Password generator</span>
-      <h2>Generate a stronger random password locally in your browser</h2>
-      <p class="muted">Use this for a fresh password draft, then save it in your preferred password manager.</p>
-      <div class="tool-inline-grid two">
-        <label><strong>Password length</strong><input id="password-length" type="range" min="12" max="40" value="20"></label>
-        <div class="tool-result"><strong id="password-length-value">20</strong><br><span class="muted">characters</span></div>
-      </div>
-      <div class="tool-actions cta-row">
-        <button class="btn" type="button" id="password-generate-button">Generate password</button>
-        <button class="btn secondary" type="button" id="password-copy-button">Copy</button>
-      </div>
-      <div class="tool-result"><strong id="password-output">Press generate</strong></div>
-    </article>
+
+
+
+
 
     <article class="tool-panel" id="text-helper">
       <span class="tool-badge">📝 Text helper</span>
@@ -2636,123 +2602,48 @@
       </div>
     </article>
 
-    <article class="tool-panel" id="quick-calculator">
-      <span class="tool-badge">🧮 Quick calculator</span>
-      <h2>Work out a quick percentage without leaving the page</h2>
-      <p class="muted">Simple enough for tips, taxes, discounts, markups, or quick sanity checks.</p>
-      <div class="tool-inline-grid two">
-        <label><strong>Base amount</strong><input id="calc-amount" type="number" min="0" step="0.01" value="100"></label>
-        <label><strong>Percent</strong><input id="calc-percent" type="number" min="0" step="0.1" value="13"></label>
-      </div>
-      <button class="btn" type="button" id="calc-button">Calculate</button>
-      <div class="tool-stat-grid">
-        <div class="tool-stat"><strong id="calc-percent-value">$0.00</strong><br><span class="muted">percent value</span></div>
-        <div class="tool-stat"><strong id="calc-total-value">$0.00</strong><br><span class="muted">total</span></div>
-        <div class="tool-stat"><strong id="calc-plain-value">0%</strong><br><span class="muted">plain percent</span></div>
-      </div>
-    </article>
 
-    <article class="tool-panel" id="random-chooser">
-      <span class="tool-badge">🎯 Random chooser</span>
-      <h2>Let the toolbox pick one option fairly when you are stuck</h2>
-      <p class="muted">Paste one option per line, then let the chooser select from the cleaned list.</p>
-      <textarea id="chooser-options" placeholder="Option 1&#10;Option 2&#10;Option 3"></textarea>
-      <div class="cta-row">
-        <button class="btn" type="button" id="chooser-button">Pick for me</button>
-        <span class="muted" id="chooser-count-note">Add at least 2 options.</span>
-      </div>
-      <div class="tool-result">
-        <strong id="chooser-result-value">Waiting for options</strong>
-        <p class="muted" id="chooser-result-note">Add at least 2 non-empty lines.</p>
-      </div>
-    </article>
 
-    <article class="tool-panel" id="qr-generator">
-      <span class="tool-badge">▦ QR code generator</span>
-      <h2>Create a clean QR code for a link, note, or Wi-Fi handoff</h2>
-      <p class="muted">Useful for simple sharing. Keep sensitive data out of QR text unless you are comfortable with it being scannable.</p>
-      <label for="qr-input"><strong>Text or URL</strong></label>
-      <textarea id="qr-input" placeholder="https://www.thewatchersedge.ca/toolbox or WIFI:T:WPA;S:NetworkName;P:password;;">https://www.thewatchersedge.ca/toolbox</textarea>
-      <div class="tool-inline-grid two">
-        <label><strong>Size</strong><select id="qr-size"><option value="180">Small</option><option value="240" selected>Medium</option><option value="320">Large</option></select></label>
-        <div class="tool-result"><strong id="qr-status">Ready to generate</strong><br><span class="muted">Creates a canvas and download link in-browser.</span></div>
-      </div>
-      <div class="cta-row">
-        <button class="btn" type="button" id="qr-generate-button">Generate QR code</button>
-        <a class="btn secondary" id="qr-download-link" href="#" download="twe-toolbox-qr.png" style="pointer-events:none;opacity:.55;">Download PNG</a>
-      </div>
-      <div class="tool-canvas-wrap" id="qr-preview-wrap">
-        <canvas id="qr-canvas" width="240" height="240" aria-label="Generated QR code preview"></canvas>
-      </div>
-    </article>
 
-    <article class="tool-panel" id="pomodoro-timer">
-      <span class="tool-badge">⏳ Pomodoro timer</span>
-      <h2>Run a simple focus block without opening another app</h2>
-      <p class="muted">Great for short work sprints, reading blocks, or a quick reset between tasks.</p>
-      <div class="tool-chip-row">
-        <button class="btn secondary" type="button" data-pomodoro-preset="25">25 min focus</button>
-        <button class="btn secondary" type="button" data-pomodoro-preset="15">15 min focus</button>
-        <button class="btn secondary" type="button" data-pomodoro-preset="5">5 min break</button>
-      </div>
-      <p class="tool-focus-time" id="pomodoro-display">25:00</p>
-      <div class="tool-result"><strong id="pomodoro-state">Ready</strong><br><span class="muted">Choose a preset or keep the default 25-minute focus block.</span></div>
-      <div class="cta-row">
-        <button class="btn" type="button" id="pomodoro-start">Start</button>
-        <button class="btn secondary" type="button" id="pomodoro-pause">Pause</button>
-        <button class="btn secondary" type="button" id="pomodoro-reset">Reset</button>
-      </div>
-    </article>
 
-    <article class="tool-panel" id="browser-network-info">
-      <span class="tool-badge">📶 Browser + network info</span>
-      <h2>See quick browser, screen, language, timezone, and connection details</h2>
-      <p class="muted">Useful for simple troubleshooting or when you want a quick snapshot to paste into a support message.</p>
-      <div class="cta-row">
-        <button class="btn" type="button" id="browser-info-button">Check device info</button>
-        <button class="btn secondary" type="button" id="browser-info-copy">Copy summary</button>
-      </div>
-      <div class="tool-mini-list" id="browser-info-results" aria-live="polite">
-        <strong>Nothing loaded yet.</strong>
-        <p class="muted">Click the button to read this browser's current snapshot.</p>
-      </div>
-    </article>
 
-    <article class="tool-panel" id="unit-converter">
-      <span class="tool-badge">📏 Unit converter</span>
-      <h2>Convert common daily values quickly</h2>
-      <p class="muted">Start with length, temperature, or storage without dealing with a bloated converter page.</p>
-      <div class="tool-inline-grid three">
-        <label><strong>Category</strong><select id="converter-category"><option value="length">Length</option><option value="temperature">Temperature</option><option value="storage">Storage</option></select></label>
-        <label><strong>From</strong><select id="converter-from"></select></label>
-        <label><strong>To</strong><select id="converter-to"></select></label>
-      </div>
-      <label for="converter-input"><strong>Value</strong></label>
-      <input id="converter-input" type="number" step="any" value="1">
-      <button class="btn" type="button" id="converter-button">Convert</button>
-      <div class="tool-result">
-        <strong id="converter-output">1 meter = 100 centimeters</strong>
-        <p class="muted" id="converter-note">Switch categories for quick conversions.</p>
-      </div>
-    </article>
 
-    <article class="tool-panel" id="mini-game">
-      <span class="tool-badge">🎮 Mini game</span>
-      <h2>Take a one-minute breather with Tic-Tac-Toe</h2>
-      <p class="muted">A small break can help reset attention before heading back to the practical tools.</p>
-      <div class="tool-grid-game">
-        <button type="button" data-ttt-cell></button>
-        <button type="button" data-ttt-cell></button>
-        <button type="button" data-ttt-cell></button>
-        <button type="button" data-ttt-cell></button>
-        <button type="button" data-ttt-cell></button>
-        <button type="button" data-ttt-cell></button>
-        <button type="button" data-ttt-cell></button>
-        <button type="button" data-ttt-cell></button>
-        <button type="button" data-ttt-cell></button>
+
+
+
+
+
+
+
+
+  </section>
+
+  <section class="toolbox-rail-grid">
+    <article class="tool-rail-card">
+      <p class="eyebrow">How to use Text helper</p>
+      <h2>Run the tool first, then use the extras only if they help</h2>
+      <ol class="tool-instruction-list">
+        
+        <li>Paste or type your text.</li>
+        
+        <li>Use the case buttons if needed.</li>
+        
+        <li>Watch the live word count, character count, and read-time estimate.</li>
+        
+      </ol>
+    </article>
+    <article class="tool-rail-card">
+      <p class="eyebrow">Visible FAQ</p>
+      <h2>Questions people often ask about Text helper</h2>
+      <div class="tool-mini-list">
+        
+        <p><strong>What can the text helper do?</strong><br><span class="muted">It can switch case, count words, count characters, and estimate reading time for pasted text.</span></p>
+        
+        <p><strong>Is the text helper useful for short work copy?</strong><br><span class="muted">Yes. It is meant for quick captions, messages, notes, product snippets, and other short blocks of text.</span></p>
+        
+        <p><strong>Can I bookmark this text cleanup page?</strong><br><span class="muted">Yes. Each TWE Toolbox utility has its own direct page so you can come back to the exact tool you use most.</span></p>
+        
       </div>
-      <div class="tool-result"><strong id="ttt-status">Player X starts.</strong></div>
-      <button class="btn secondary" type="button" id="ttt-reset">Reset game</button>
     </article>
   </section>
   
