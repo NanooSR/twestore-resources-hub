@@ -2299,7 +2299,9 @@
   .tool-rail-card,
   .tool-pick-card,
   .tool-ad-card { border: 1px solid var(--line); border-radius: 22px; background: var(--panel); padding: 20px; box-shadow: var(--shadow-soft); }
-  .tool-overview-card { display: grid; gap: 14px; }
+  .tool-overview-card { display: grid; gap: 16px; padding: 18px; }
+  .tool-overview-card-copy,
+  .tool-overview-card-footer { padding: 0 8px; }
   .tool-overview-card-link {
     color: inherit;
     text-decoration: none;
@@ -2353,7 +2355,6 @@
     z-index: 1;
   }
   .tool-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
-  .tool-kpi { border: 1px solid var(--line); border-radius: 18px; padding: 14px 16px; background: rgba(255,255,255,.72); }
   .tool-panel { display: grid; gap: 14px; }
   .tool-panel textarea,
   .tool-panel input,
@@ -2570,52 +2571,9 @@
     </div>
   </section>
 
-  <section class="section card toolbox-hub-only">
-    <p class="eyebrow">Control panel layout</p>
-    <h2>Browse by category before you open a tool</h2>
-    <div class="tool-category-grid">
-      
-      <article class="tool-category-card">
-        <div class="tool-link-pill">2 tools</div>
-        <h3>Quick diagnostics</h3>
-        <p class="muted">What&#39;s my IP · Browser + network info</p>
-      </article>
-      
-      <article class="tool-category-card">
-        <div class="tool-link-pill">2 tools</div>
-        <h3>Writing + words</h3>
-        <p class="muted">Unscrambler · Text helper</p>
-      </article>
-      
-      <article class="tool-category-card">
-        <div class="tool-link-pill">1 tools</div>
-        <h3>Privacy + security</h3>
-        <p class="muted">Password generator</p>
-      </article>
-      
-      <article class="tool-category-card">
-        <div class="tool-link-pill">3 tools</div>
-        <h3>Daily work helpers</h3>
-        <p class="muted">Quick calculator · Random chooser · Unit converter</p>
-      </article>
-      
-      <article class="tool-category-card">
-        <div class="tool-link-pill">1 tools</div>
-        <h3>Sharing + handoff</h3>
-        <p class="muted">QR code generator</p>
-      </article>
-      
-      <article class="tool-category-card">
-        <div class="tool-link-pill">2 tools</div>
-        <h3>Focus + flow</h3>
-        <p class="muted">Pomodoro timer · Mini game</p>
-      </article>
-      
-    </div>
-  </section>
-
   
 
+  
   <section class="toolbox-sections" aria-label="Focused single-tool panel">
     <article class="tool-panel" id="ip-checker">
       <span class="tool-badge">🌐 What’s my IP</span>
@@ -2797,11 +2755,13 @@
       <button class="btn secondary" type="button" id="ttt-reset">Reset game</button>
     </article>
   </section>
+  
 
   
 
   
 </section>
+
 
 <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
 <script>
@@ -2809,6 +2769,7 @@
   const toolboxApiUrl = (path) => (typeof window.tweApiUrl === 'function' ? window.tweApiUrl(path) : path);
   const readJsonResponse = async (response, fallbackMessage) => {
     const contentType = (response.headers.get('content-type') || '').toLowerCase();
+
     if (!contentType.includes('application/json')) {
       throw new Error(fallbackMessage);
     }
@@ -3202,6 +3163,7 @@
   renderQr();
 })();
 </script>
+
 
     </div>
     

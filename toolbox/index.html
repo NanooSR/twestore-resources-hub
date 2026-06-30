@@ -2299,7 +2299,9 @@
   .tool-rail-card,
   .tool-pick-card,
   .tool-ad-card { border: 1px solid var(--line); border-radius: 22px; background: var(--panel); padding: 20px; box-shadow: var(--shadow-soft); }
-  .tool-overview-card { display: grid; gap: 14px; }
+  .tool-overview-card { display: grid; gap: 16px; padding: 18px; }
+  .tool-overview-card-copy,
+  .tool-overview-card-footer { padding: 0 8px; }
   .tool-overview-card-link {
     color: inherit;
     text-decoration: none;
@@ -2353,7 +2355,6 @@
     z-index: 1;
   }
   .tool-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
-  .tool-kpi { border: 1px solid var(--line); border-radius: 18px; padding: 14px 16px; background: rgba(255,255,255,.72); }
   .tool-panel { display: grid; gap: 14px; }
   .tool-panel textarea,
   .tool-panel input,
@@ -2549,6 +2550,225 @@
     </div>
   </section>
 
+  
+  <section class="section card" id="toolbox-grid">
+    <p class="eyebrow">Toolbox overview</p>
+    <h2>Start with the tool that solves today’s problem fastest</h2>
+    <p class="muted" style="max-width: 780px;">This page is the TWE Toolbox control panel. Each card opens a dedicated tool page in a new tab with its own direct bookmarkable URL.</p>
+    <div class="toolbox-overview-grid">
+      
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="whats-my-ip" href="/toolbox/whats-my-ip/" target="_blank" rel="noopener" aria-label="Open What&#39;s my IP in its own page">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #d7f3ff, #e7fff8);">
+          <span class="tool-thumb-icon" aria-hidden="true">🌐</span>
+          <span class="tool-thumb-label">Connection view</span>
+        </div>
+        <div class="tool-overview-card-copy">
+          <p class="eyebrow">Useful right away</p>
+          <h3>What&#39;s my IP</h3>
+          <p class="muted">See the current public-facing connection IP your browser is presenting right now.</p>
+        </div>
+        <div class="tool-overview-card-footer">
+          <div class="tool-chip-row">
+            <span class="tool-chip">Quick diagnostics</span>
+            
+          </div>
+          <span class="card-link">Open IP checker →</span>
+        </div>
+      </a>
+      
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="unscrambler" href="/toolbox/unscrambler/" target="_blank" rel="noopener" aria-label="Open Unscrambler in its own page">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe1fb, #eef0ff);">
+          <span class="tool-thumb-icon" aria-hidden="true">🔤</span>
+          <span class="tool-thumb-label">Word finder</span>
+        </div>
+        <div class="tool-overview-card-copy">
+          <p class="eyebrow">Popular helper</p>
+          <h3>Unscrambler</h3>
+          <p class="muted">Type scrambled letters and get a cleaner list of likely English words made from them.</p>
+        </div>
+        <div class="tool-overview-card-footer">
+          <div class="tool-chip-row">
+            <span class="tool-chip">Writing + words</span>
+            
+          </div>
+          <span class="card-link">Open unscrambler →</span>
+        </div>
+      </a>
+      
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="password-generator" href="/toolbox/password-generator/" target="_blank" rel="noopener" aria-label="Open Password generator in its own page">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #fdf0cf, #e8fff6);">
+          <span class="tool-thumb-icon" aria-hidden="true">🔐</span>
+          <span class="tool-thumb-label">Secure login helper</span>
+        </div>
+        <div class="tool-overview-card-copy">
+          <p class="eyebrow">Practical utility</p>
+          <h3>Password generator</h3>
+          <p class="muted">Generate a stronger random password locally in your browser without leaving the page.</p>
+        </div>
+        <div class="tool-overview-card-footer">
+          <div class="tool-chip-row">
+            <span class="tool-chip">Privacy + security</span>
+            
+          </div>
+          <span class="card-link">Open password generator →</span>
+        </div>
+      </a>
+      
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="text-helper" href="/toolbox/text-helper/" target="_blank" rel="noopener" aria-label="Open Text helper in its own page">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #fff0de, #e5f5ff);">
+          <span class="tool-thumb-icon" aria-hidden="true">📝</span>
+          <span class="tool-thumb-label">Copy cleanup</span>
+        </div>
+        <div class="tool-overview-card-copy">
+          <p class="eyebrow">Useful for work</p>
+          <h3>Text helper</h3>
+          <p class="muted">Quickly switch case, count words, and estimate reading time for a pasted block of text.</p>
+        </div>
+        <div class="tool-overview-card-footer">
+          <div class="tool-chip-row">
+            <span class="tool-chip">Writing + words</span>
+            
+          </div>
+          <span class="card-link">Open text helper →</span>
+        </div>
+      </a>
+      
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="quick-calculator" href="/toolbox/quick-calculator/" target="_blank" rel="noopener" aria-label="Open Quick calculator in its own page">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #e9f8d8, #fff7dd);">
+          <span class="tool-thumb-icon" aria-hidden="true">🧮</span>
+          <span class="tool-thumb-label">Fast math</span>
+        </div>
+        <div class="tool-overview-card-copy">
+          <p class="eyebrow">Small but handy</p>
+          <h3>Quick calculator</h3>
+          <p class="muted">Use a simple percentage and tip helper when you need a quick answer without opening another tab.</p>
+        </div>
+        <div class="tool-overview-card-footer">
+          <div class="tool-chip-row">
+            <span class="tool-chip">Daily work helpers</span>
+            
+          </div>
+          <span class="card-link">Open calculator →</span>
+        </div>
+      </a>
+      
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="random-chooser" href="/toolbox/random-chooser/" target="_blank" rel="noopener" aria-label="Open Random chooser in its own page">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe4dd, #fff6d9);">
+          <span class="tool-thumb-icon" aria-hidden="true">🎯</span>
+          <span class="tool-thumb-label">Fair pick</span>
+        </div>
+        <div class="tool-overview-card-copy">
+          <p class="eyebrow">Decision helper</p>
+          <h3>Random chooser</h3>
+          <p class="muted">Paste a short list of options and let the toolbox pick one fairly when you are stuck deciding.</p>
+        </div>
+        <div class="tool-overview-card-footer">
+          <div class="tool-chip-row">
+            <span class="tool-chip">Daily work helpers</span>
+            
+          </div>
+          <span class="card-link">Open random chooser →</span>
+        </div>
+      </a>
+      
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="qr-code-generator" href="/toolbox/qr-code-generator/" target="_blank" rel="noopener" aria-label="Open QR code generator in its own page">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #ddefff, #f1f3ff);">
+          <span class="tool-thumb-icon" aria-hidden="true">▦</span>
+          <span class="tool-thumb-label">Scan-ready</span>
+        </div>
+        <div class="tool-overview-card-copy">
+          <p class="eyebrow">Share faster</p>
+          <h3>QR code generator</h3>
+          <p class="muted">Turn a link, note, Wi-Fi string, or simple contact detail into a scannable QR code right on the page.</p>
+        </div>
+        <div class="tool-overview-card-footer">
+          <div class="tool-chip-row">
+            <span class="tool-chip">Sharing + handoff</span>
+            
+          </div>
+          <span class="card-link">Open QR code generator →</span>
+        </div>
+      </a>
+      
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="pomodoro-timer" href="/toolbox/pomodoro-timer/" target="_blank" rel="noopener" aria-label="Open Pomodoro timer in its own page">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe3e3, #fff4dc);">
+          <span class="tool-thumb-icon" aria-hidden="true">⏳</span>
+          <span class="tool-thumb-label">Focus block</span>
+        </div>
+        <div class="tool-overview-card-copy">
+          <p class="eyebrow">Focus helper</p>
+          <h3>Pomodoro timer</h3>
+          <p class="muted">Run a simple work-and-break timer when you want a cleaner focus block without another app.</p>
+        </div>
+        <div class="tool-overview-card-footer">
+          <div class="tool-chip-row">
+            <span class="tool-chip">Focus + flow</span>
+            <span class="tool-chip">Newer addition</span>
+          </div>
+          <span class="card-link">Open Pomodoro timer →</span>
+        </div>
+      </a>
+      
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="browser-network-info" href="/toolbox/browser-network-info/" target="_blank" rel="noopener" aria-label="Open Browser + network info in its own page">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #dff5ff, #e8ffe8);">
+          <span class="tool-thumb-icon" aria-hidden="true">📶</span>
+          <span class="tool-thumb-label">Device snapshot</span>
+        </div>
+        <div class="tool-overview-card-copy">
+          <p class="eyebrow">Quick diagnostics</p>
+          <h3>Browser + network info</h3>
+          <p class="muted">See useful browser, screen, language, timezone, and connection details for quick troubleshooting.</p>
+        </div>
+        <div class="tool-overview-card-footer">
+          <div class="tool-chip-row">
+            <span class="tool-chip">Quick diagnostics</span>
+            <span class="tool-chip">Newer addition</span>
+          </div>
+          <span class="card-link">Open browser info →</span>
+        </div>
+      </a>
+      
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="unit-converter" href="/toolbox/unit-converter/" target="_blank" rel="noopener" aria-label="Open Unit converter in its own page">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #f1e5ff, #fff4e5);">
+          <span class="tool-thumb-icon" aria-hidden="true">📏</span>
+          <span class="tool-thumb-label">Quick convert</span>
+        </div>
+        <div class="tool-overview-card-copy">
+          <p class="eyebrow">Daily utility</p>
+          <h3>Unit converter</h3>
+          <p class="muted">Convert common length, temperature, and storage values without opening a cluttered converter site.</p>
+        </div>
+        <div class="tool-overview-card-footer">
+          <div class="tool-chip-row">
+            <span class="tool-chip">Daily work helpers</span>
+            <span class="tool-chip">Newer addition</span>
+          </div>
+          <span class="card-link">Open unit converter →</span>
+        </div>
+      </a>
+      
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="mini-game" href="/toolbox/mini-game/" target="_blank" rel="noopener" aria-label="Open Mini game in its own page">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #dff7ff, #eef6ff);">
+          <span class="tool-thumb-icon" aria-hidden="true">🎮</span>
+          <span class="tool-thumb-label">Tiny break</span>
+        </div>
+        <div class="tool-overview-card-copy">
+          <p class="eyebrow">Fun break</p>
+          <h3>Mini game</h3>
+          <p class="muted">Play a lightweight Tic-Tac-Toe game while you wait, think, or pass a minute.</p>
+        </div>
+        <div class="tool-overview-card-footer">
+          <div class="tool-chip-row">
+            <span class="tool-chip">Focus + flow</span>
+            <span class="tool-chip">Newer addition</span>
+          </div>
+          <span class="card-link">Open mini game →</span>
+        </div>
+      </a>
+      
+    </div>
+  </section>
+
   <section class="section card toolbox-hub-only">
     <p class="eyebrow">Control panel layout</p>
     <h2>Browse by category before you open a tool</h2>
@@ -2594,386 +2814,9 @@
   </section>
 
   
-  <section class="section card" id="toolbox-grid">
-    <p class="eyebrow">Toolbox overview</p>
-    <h2>Start with the tool that solves today’s problem fastest</h2>
-    <p class="muted" style="max-width: 780px;">This page is the TWE Toolbox control panel. Each card opens a dedicated tool page in a new tab with its own direct bookmarkable URL.</p>
-    <div class="toolbox-overview-grid">
-      
-      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="whats-my-ip" href="/toolbox/whats-my-ip/" target="_blank" rel="noopener" aria-label="Open What&#39;s my IP in its own page">
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #d7f3ff, #e7fff8);">
-          <span class="tool-thumb-icon" aria-hidden="true">🌐</span>
-          <span class="tool-thumb-label">Connection view</span>
-        </div>
-        <div>
-          <p class="eyebrow">Useful right away</p>
-          <h3>What&#39;s my IP</h3>
-          <p class="muted">See the current public-facing connection IP your browser is presenting right now.</p>
-        </div>
-        <div class="tool-chip-row">
-          <span class="tool-chip">Quick diagnostics</span>
-          
-        </div>
-        <span class="card-link">Open IP checker →</span>
-      </a>
-      
-      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="unscrambler" href="/toolbox/unscrambler/" target="_blank" rel="noopener" aria-label="Open Unscrambler in its own page">
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe1fb, #eef0ff);">
-          <span class="tool-thumb-icon" aria-hidden="true">🔤</span>
-          <span class="tool-thumb-label">Word finder</span>
-        </div>
-        <div>
-          <p class="eyebrow">Popular helper</p>
-          <h3>Unscrambler</h3>
-          <p class="muted">Type scrambled letters and get a cleaner list of likely English words made from them.</p>
-        </div>
-        <div class="tool-chip-row">
-          <span class="tool-chip">Writing + words</span>
-          
-        </div>
-        <span class="card-link">Open unscrambler →</span>
-      </a>
-      
-      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="password-generator" href="/toolbox/password-generator/" target="_blank" rel="noopener" aria-label="Open Password generator in its own page">
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #fdf0cf, #e8fff6);">
-          <span class="tool-thumb-icon" aria-hidden="true">🔐</span>
-          <span class="tool-thumb-label">Secure login helper</span>
-        </div>
-        <div>
-          <p class="eyebrow">Practical utility</p>
-          <h3>Password generator</h3>
-          <p class="muted">Generate a stronger random password locally in your browser without leaving the page.</p>
-        </div>
-        <div class="tool-chip-row">
-          <span class="tool-chip">Privacy + security</span>
-          
-        </div>
-        <span class="card-link">Open password generator →</span>
-      </a>
-      
-      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="text-helper" href="/toolbox/text-helper/" target="_blank" rel="noopener" aria-label="Open Text helper in its own page">
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #fff0de, #e5f5ff);">
-          <span class="tool-thumb-icon" aria-hidden="true">📝</span>
-          <span class="tool-thumb-label">Copy cleanup</span>
-        </div>
-        <div>
-          <p class="eyebrow">Useful for work</p>
-          <h3>Text helper</h3>
-          <p class="muted">Quickly switch case, count words, and estimate reading time for a pasted block of text.</p>
-        </div>
-        <div class="tool-chip-row">
-          <span class="tool-chip">Writing + words</span>
-          
-        </div>
-        <span class="card-link">Open text helper →</span>
-      </a>
-      
-      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="quick-calculator" href="/toolbox/quick-calculator/" target="_blank" rel="noopener" aria-label="Open Quick calculator in its own page">
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #e9f8d8, #fff7dd);">
-          <span class="tool-thumb-icon" aria-hidden="true">🧮</span>
-          <span class="tool-thumb-label">Fast math</span>
-        </div>
-        <div>
-          <p class="eyebrow">Small but handy</p>
-          <h3>Quick calculator</h3>
-          <p class="muted">Use a simple percentage and tip helper when you need a quick answer without opening another tab.</p>
-        </div>
-        <div class="tool-chip-row">
-          <span class="tool-chip">Daily work helpers</span>
-          
-        </div>
-        <span class="card-link">Open calculator →</span>
-      </a>
-      
-      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="random-chooser" href="/toolbox/random-chooser/" target="_blank" rel="noopener" aria-label="Open Random chooser in its own page">
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe4dd, #fff6d9);">
-          <span class="tool-thumb-icon" aria-hidden="true">🎯</span>
-          <span class="tool-thumb-label">Fair pick</span>
-        </div>
-        <div>
-          <p class="eyebrow">Decision helper</p>
-          <h3>Random chooser</h3>
-          <p class="muted">Paste a short list of options and let the toolbox pick one fairly when you are stuck deciding.</p>
-        </div>
-        <div class="tool-chip-row">
-          <span class="tool-chip">Daily work helpers</span>
-          
-        </div>
-        <span class="card-link">Open random chooser →</span>
-      </a>
-      
-      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="qr-code-generator" href="/toolbox/qr-code-generator/" target="_blank" rel="noopener" aria-label="Open QR code generator in its own page">
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #ddefff, #f1f3ff);">
-          <span class="tool-thumb-icon" aria-hidden="true">▦</span>
-          <span class="tool-thumb-label">Scan-ready</span>
-        </div>
-        <div>
-          <p class="eyebrow">Share faster</p>
-          <h3>QR code generator</h3>
-          <p class="muted">Turn a link, note, Wi-Fi string, or simple contact detail into a scannable QR code right on the page.</p>
-        </div>
-        <div class="tool-chip-row">
-          <span class="tool-chip">Sharing + handoff</span>
-          
-        </div>
-        <span class="card-link">Open QR code generator →</span>
-      </a>
-      
-      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="pomodoro-timer" href="/toolbox/pomodoro-timer/" target="_blank" rel="noopener" aria-label="Open Pomodoro timer in its own page">
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe3e3, #fff4dc);">
-          <span class="tool-thumb-icon" aria-hidden="true">⏳</span>
-          <span class="tool-thumb-label">Focus block</span>
-        </div>
-        <div>
-          <p class="eyebrow">Focus helper</p>
-          <h3>Pomodoro timer</h3>
-          <p class="muted">Run a simple work-and-break timer when you want a cleaner focus block without another app.</p>
-        </div>
-        <div class="tool-chip-row">
-          <span class="tool-chip">Focus + flow</span>
-          <span class="tool-chip">Newer addition</span>
-        </div>
-        <span class="card-link">Open Pomodoro timer →</span>
-      </a>
-      
-      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="browser-network-info" href="/toolbox/browser-network-info/" target="_blank" rel="noopener" aria-label="Open Browser + network info in its own page">
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #dff5ff, #e8ffe8);">
-          <span class="tool-thumb-icon" aria-hidden="true">📶</span>
-          <span class="tool-thumb-label">Device snapshot</span>
-        </div>
-        <div>
-          <p class="eyebrow">Quick diagnostics</p>
-          <h3>Browser + network info</h3>
-          <p class="muted">See useful browser, screen, language, timezone, and connection details for quick troubleshooting.</p>
-        </div>
-        <div class="tool-chip-row">
-          <span class="tool-chip">Quick diagnostics</span>
-          <span class="tool-chip">Newer addition</span>
-        </div>
-        <span class="card-link">Open browser info →</span>
-      </a>
-      
-      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="unit-converter" href="/toolbox/unit-converter/" target="_blank" rel="noopener" aria-label="Open Unit converter in its own page">
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #f1e5ff, #fff4e5);">
-          <span class="tool-thumb-icon" aria-hidden="true">📏</span>
-          <span class="tool-thumb-label">Quick convert</span>
-        </div>
-        <div>
-          <p class="eyebrow">Daily utility</p>
-          <h3>Unit converter</h3>
-          <p class="muted">Convert common length, temperature, and storage values without opening a cluttered converter site.</p>
-        </div>
-        <div class="tool-chip-row">
-          <span class="tool-chip">Daily work helpers</span>
-          <span class="tool-chip">Newer addition</span>
-        </div>
-        <span class="card-link">Open unit converter →</span>
-      </a>
-      
-      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="mini-game" href="/toolbox/mini-game/" target="_blank" rel="noopener" aria-label="Open Mini game in its own page">
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #dff7ff, #eef6ff);">
-          <span class="tool-thumb-icon" aria-hidden="true">🎮</span>
-          <span class="tool-thumb-label">Tiny break</span>
-        </div>
-        <div>
-          <p class="eyebrow">Fun break</p>
-          <h3>Mini game</h3>
-          <p class="muted">Play a lightweight Tic-Tac-Toe game while you wait, think, or pass a minute.</p>
-        </div>
-        <div class="tool-chip-row">
-          <span class="tool-chip">Focus + flow</span>
-          <span class="tool-chip">Newer addition</span>
-        </div>
-        <span class="card-link">Open mini game →</span>
-      </a>
-      
-    </div>
-  </section>
-
-  
   
 
-  <section class="toolbox-sections">
-    <article class="tool-panel" id="ip-checker">
-      <span class="tool-badge">🌐 What’s my IP</span>
-      <h2>Check the public-facing connection IP your browser is presenting</h2>
-      <p class="muted">Useful when you need to confirm what IP a service is likely seeing from this connection right now.</p>
-      <div class="tool-actions"><button class="btn" type="button" id="ip-check-button">Check my IP</button></div>
-      <div class="tool-result" aria-live="polite">
-        <strong id="ip-result-value">Not checked yet</strong>
-        <p class="muted" id="ip-result-note">Click the button to detect the current connection IP.</p>
-      </div>
-    </article>
-
-    <article class="tool-panel" id="unscrambler">
-      <span class="tool-badge">🔤 Unscrambler</span>
-      <h2>Turn scrambled letters into likely words</h2>
-      <p class="muted">Type letters only. This helper returns a shorter, cleaner list of likely matches instead of a cluttered dump.</p>
-      <form id="unscrambler-form" class="tool-row">
-        <label for="unscrambler-letters"><strong>Scrambled letters</strong></label>
-        <input id="unscrambler-letters" name="letters" type="text" inputmode="text" autocomplete="off" placeholder="example: listen" maxlength="18" required>
-        <div class="cta-row">
-          <button class="btn" type="submit">Unscramble</button>
-          <span class="muted" id="unscrambler-status">Enter at least 3 letters.</span>
-        </div>
-      </form>
-      <div class="tool-result" id="unscrambler-results" aria-live="polite">
-        <strong>Results will appear here.</strong>
-        <p class="muted">Try <code>listen</code>, <code>finder</code>, or <code>stream</code>.</p>
-      </div>
-    </article>
-
-    <article class="tool-panel" id="password-generator">
-      <span class="tool-badge">🔐 Password generator</span>
-      <h2>Generate a stronger random password locally in your browser</h2>
-      <p class="muted">Use this for a fresh password draft, then save it in your preferred password manager.</p>
-      <div class="tool-inline-grid two">
-        <label><strong>Password length</strong><input id="password-length" type="range" min="12" max="40" value="20"></label>
-        <div class="tool-result"><strong id="password-length-value">20</strong><br><span class="muted">characters</span></div>
-      </div>
-      <div class="tool-actions cta-row">
-        <button class="btn" type="button" id="password-generate-button">Generate password</button>
-        <button class="btn secondary" type="button" id="password-copy-button">Copy</button>
-      </div>
-      <div class="tool-result"><strong id="password-output">Press generate</strong></div>
-    </article>
-
-    <article class="tool-panel" id="text-helper">
-      <span class="tool-badge">📝 Text helper</span>
-      <h2>Clean up text, switch case, and check quick stats</h2>
-      <p class="muted">Helpful for captions, messages, product notes, short drafts, and quick readability checks.</p>
-      <textarea id="text-helper-input" placeholder="Paste or type text here."></textarea>
-      <div class="cta-row">
-        <button class="btn secondary" type="button" data-case-action="upper">UPPERCASE</button>
-        <button class="btn secondary" type="button" data-case-action="lower">lowercase</button>
-        <button class="btn secondary" type="button" data-case-action="title">Title Case</button>
-      </div>
-      <div class="tool-stat-grid">
-        <div class="tool-stat"><strong id="text-word-count">0</strong><br><span class="muted">words</span></div>
-        <div class="tool-stat"><strong id="text-char-count">0</strong><br><span class="muted">characters</span></div>
-        <div class="tool-stat"><strong id="text-read-time">0 min</strong><br><span class="muted">read time</span></div>
-      </div>
-    </article>
-
-    <article class="tool-panel" id="quick-calculator">
-      <span class="tool-badge">🧮 Quick calculator</span>
-      <h2>Work out a quick percentage without leaving the page</h2>
-      <p class="muted">Simple enough for tips, taxes, discounts, markups, or quick sanity checks.</p>
-      <div class="tool-inline-grid two">
-        <label><strong>Base amount</strong><input id="calc-amount" type="number" min="0" step="0.01" value="100"></label>
-        <label><strong>Percent</strong><input id="calc-percent" type="number" min="0" step="0.1" value="13"></label>
-      </div>
-      <button class="btn" type="button" id="calc-button">Calculate</button>
-      <div class="tool-stat-grid">
-        <div class="tool-stat"><strong id="calc-percent-value">$0.00</strong><br><span class="muted">percent value</span></div>
-        <div class="tool-stat"><strong id="calc-total-value">$0.00</strong><br><span class="muted">total</span></div>
-        <div class="tool-stat"><strong id="calc-plain-value">0%</strong><br><span class="muted">plain percent</span></div>
-      </div>
-    </article>
-
-    <article class="tool-panel" id="random-chooser">
-      <span class="tool-badge">🎯 Random chooser</span>
-      <h2>Let the toolbox pick one option fairly when you are stuck</h2>
-      <p class="muted">Paste one option per line, then let the chooser select from the cleaned list.</p>
-      <textarea id="chooser-options" placeholder="Option 1&#10;Option 2&#10;Option 3"></textarea>
-      <div class="cta-row">
-        <button class="btn" type="button" id="chooser-button">Pick for me</button>
-        <span class="muted" id="chooser-count-note">Add at least 2 options.</span>
-      </div>
-      <div class="tool-result">
-        <strong id="chooser-result-value">Waiting for options</strong>
-        <p class="muted" id="chooser-result-note">Add at least 2 non-empty lines.</p>
-      </div>
-    </article>
-
-    <article class="tool-panel" id="qr-generator">
-      <span class="tool-badge">▦ QR code generator</span>
-      <h2>Create a clean QR code for a link, note, or Wi-Fi handoff</h2>
-      <p class="muted">Useful for simple sharing. Keep sensitive data out of QR text unless you are comfortable with it being scannable.</p>
-      <label for="qr-input"><strong>Text or URL</strong></label>
-      <textarea id="qr-input" placeholder="https://www.thewatchersedge.ca/toolbox or WIFI:T:WPA;S:NetworkName;P:password;;">https://www.thewatchersedge.ca/toolbox</textarea>
-      <div class="tool-inline-grid two">
-        <label><strong>Size</strong><select id="qr-size"><option value="180">Small</option><option value="240" selected>Medium</option><option value="320">Large</option></select></label>
-        <div class="tool-result"><strong id="qr-status">Ready to generate</strong><br><span class="muted">Creates a canvas and download link in-browser.</span></div>
-      </div>
-      <div class="cta-row">
-        <button class="btn" type="button" id="qr-generate-button">Generate QR code</button>
-        <a class="btn secondary" id="qr-download-link" href="#" download="twe-toolbox-qr.png" style="pointer-events:none;opacity:.55;">Download PNG</a>
-      </div>
-      <div class="tool-canvas-wrap" id="qr-preview-wrap">
-        <canvas id="qr-canvas" width="240" height="240" aria-label="Generated QR code preview"></canvas>
-      </div>
-    </article>
-
-    <article class="tool-panel" id="pomodoro-timer">
-      <span class="tool-badge">⏳ Pomodoro timer</span>
-      <h2>Run a simple focus block without opening another app</h2>
-      <p class="muted">Great for short work sprints, reading blocks, or a quick reset between tasks.</p>
-      <div class="tool-chip-row">
-        <button class="btn secondary" type="button" data-pomodoro-preset="25">25 min focus</button>
-        <button class="btn secondary" type="button" data-pomodoro-preset="15">15 min focus</button>
-        <button class="btn secondary" type="button" data-pomodoro-preset="5">5 min break</button>
-      </div>
-      <p class="tool-focus-time" id="pomodoro-display">25:00</p>
-      <div class="tool-result"><strong id="pomodoro-state">Ready</strong><br><span class="muted">Choose a preset or keep the default 25-minute focus block.</span></div>
-      <div class="cta-row">
-        <button class="btn" type="button" id="pomodoro-start">Start</button>
-        <button class="btn secondary" type="button" id="pomodoro-pause">Pause</button>
-        <button class="btn secondary" type="button" id="pomodoro-reset">Reset</button>
-      </div>
-    </article>
-
-    <article class="tool-panel" id="browser-network-info">
-      <span class="tool-badge">📶 Browser + network info</span>
-      <h2>See quick browser, screen, language, timezone, and connection details</h2>
-      <p class="muted">Useful for simple troubleshooting or when you want a quick snapshot to paste into a support message.</p>
-      <div class="cta-row">
-        <button class="btn" type="button" id="browser-info-button">Check device info</button>
-        <button class="btn secondary" type="button" id="browser-info-copy">Copy summary</button>
-      </div>
-      <div class="tool-mini-list" id="browser-info-results" aria-live="polite">
-        <strong>Nothing loaded yet.</strong>
-        <p class="muted">Click the button to read this browser's current snapshot.</p>
-      </div>
-    </article>
-
-    <article class="tool-panel" id="unit-converter">
-      <span class="tool-badge">📏 Unit converter</span>
-      <h2>Convert common daily values quickly</h2>
-      <p class="muted">Start with length, temperature, or storage without dealing with a bloated converter page.</p>
-      <div class="tool-inline-grid three">
-        <label><strong>Category</strong><select id="converter-category"><option value="length">Length</option><option value="temperature">Temperature</option><option value="storage">Storage</option></select></label>
-        <label><strong>From</strong><select id="converter-from"></select></label>
-        <label><strong>To</strong><select id="converter-to"></select></label>
-      </div>
-      <label for="converter-input"><strong>Value</strong></label>
-      <input id="converter-input" type="number" step="any" value="1">
-      <button class="btn" type="button" id="converter-button">Convert</button>
-      <div class="tool-result">
-        <strong id="converter-output">1 meter = 100 centimeters</strong>
-        <p class="muted" id="converter-note">Switch categories for quick conversions.</p>
-      </div>
-    </article>
-
-    <article class="tool-panel" id="mini-game">
-      <span class="tool-badge">🎮 Mini game</span>
-      <h2>Take a one-minute breather with Tic-Tac-Toe</h2>
-      <p class="muted">A small break can help reset attention before heading back to the practical tools.</p>
-      <div class="tool-grid-game">
-        <button type="button" data-ttt-cell></button>
-        <button type="button" data-ttt-cell></button>
-        <button type="button" data-ttt-cell></button>
-        <button type="button" data-ttt-cell></button>
-        <button type="button" data-ttt-cell></button>
-        <button type="button" data-ttt-cell></button>
-        <button type="button" data-ttt-cell></button>
-        <button type="button" data-ttt-cell></button>
-        <button type="button" data-ttt-cell></button>
-      </div>
-      <div class="tool-result"><strong id="ttt-status">Player X starts.</strong></div>
-      <button class="btn secondary" type="button" id="ttt-reset">Reset game</button>
-    </article>
-  </section>
+  
 
   
 
@@ -3047,405 +2890,7 @@
   
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
-<script>
-(() => {
-  const toolboxApiUrl = (path) => (typeof window.tweApiUrl === 'function' ? window.tweApiUrl(path) : path);
-  const readJsonResponse = async (response, fallbackMessage) => {
-    const contentType = (response.headers.get('content-type') || '').toLowerCase();
-    if (!contentType.includes('application/json')) {
-      throw new Error(fallbackMessage);
-    }
-    let payload;
-    try {
-      payload = await response.json();
-    } catch (_) {
-      throw new Error(fallbackMessage);
-    }
-    if (!response.ok) {
-      throw new Error(payload.message || fallbackMessage);
-    }
-    return payload;
-  };
 
-  const ipButton = document.getElementById('ip-check-button');
-  const ipValue = document.getElementById('ip-result-value');
-  const ipNote = document.getElementById('ip-result-note');
-  ipButton?.addEventListener('click', async () => {
-    ipValue.textContent = 'Checking…';
-    ipNote.textContent = 'Looking up the current connection IP.';
-    try {
-      const response = await fetch(toolboxApiUrl('/api/toolbox/ip'), { headers: { 'Accept': 'application/json' } });
-      const payload = await readJsonResponse(response, 'This toolbox copy cannot reach the live IP service right now.');
-      if (payload.status === 'ok' && payload.ip) {
-        ipValue.textContent = payload.ip;
-        ipNote.textContent = payload.source ? `Source: ${payload.source}` : (payload.note || 'Detected from the current request.');
-      } else {
-        ipValue.textContent = 'Unavailable';
-        ipNote.textContent = payload.message || 'Could not detect the IP right now.';
-      }
-    } catch (error) {
-      ipValue.textContent = 'Unavailable';
-      ipNote.textContent = error?.message || 'Could not detect the IP right now.';
-    }
-  });
-
-  const unscramblerForm = document.getElementById('unscrambler-form');
-  const unscramblerLetters = document.getElementById('unscrambler-letters');
-  const unscramblerStatus = document.getElementById('unscrambler-status');
-  const unscramblerResults = document.getElementById('unscrambler-results');
-  unscramblerForm?.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    const letters = (unscramblerLetters?.value || '').trim();
-    if (letters.length < 3) {
-      unscramblerStatus.textContent = 'Enter at least 3 letters.';
-      return;
-    }
-    unscramblerStatus.textContent = 'Checking likely words…';
-    unscramblerResults.innerHTML = '<strong>Working…</strong><p class="muted">Looking for likely matches.</p>';
-    try {
-      const response = await fetch(toolboxApiUrl('/api/toolbox/unscramble'), {
-        method: 'POST',
-        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({ letters })
-      });
-      const payload = await readJsonResponse(response, 'This toolbox copy cannot reach the live word-check service right now.');
-      const matches = Array.isArray(payload.matches)
-        ? payload.matches
-        : (Array.isArray(payload.words) ? payload.words : []);
-      if (payload.status !== 'ok' || !matches.length) {
-        unscramblerStatus.textContent = 'No clear matches found.';
-        unscramblerResults.innerHTML = '<strong>No likely matches</strong><p class="muted">Try a more common letter mix like listen or finder.</p>';
-        return;
-      }
-      unscramblerStatus.textContent = `${matches.length} likely matches found.`;
-      unscramblerResults.innerHTML = `<strong>${matches.join(', ')}</strong><p class="muted">${payload.note || 'Cleaned to likely English matches.'}</p>`;
-    } catch (error) {
-      unscramblerStatus.textContent = 'Try again.';
-      unscramblerResults.innerHTML = `<strong>Could not check words right now.</strong><p class="muted">${error?.message || 'Please try again in a moment.'}</p>`;
-    }
-  });
-
-  const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%^&*';
-  const lengthInput = document.getElementById('password-length');
-  const lengthValue = document.getElementById('password-length-value');
-  const passwordOutput = document.getElementById('password-output');
-  const generatePassword = () => {
-    const length = Number(lengthInput?.value || 20);
-    lengthValue.textContent = String(length);
-    const bytes = new Uint8Array(length);
-    window.crypto.getRandomValues(bytes);
-    passwordOutput.textContent = Array.from(bytes, (value) => alphabet[value % alphabet.length]).join('');
-  };
-  lengthInput?.addEventListener('input', generatePassword);
-  document.getElementById('password-generate-button')?.addEventListener('click', generatePassword);
-  document.getElementById('password-copy-button')?.addEventListener('click', async () => {
-    const value = passwordOutput.textContent || '';
-    if (!value || value === 'Press generate') return;
-    try { await navigator.clipboard.writeText(value); } catch (_) {}
-  });
-
-  const textInput = document.getElementById('text-helper-input');
-  const wordCount = document.getElementById('text-word-count');
-  const charCount = document.getElementById('text-char-count');
-  const readTime = document.getElementById('text-read-time');
-  const updateTextStats = () => {
-    const value = textInput?.value || '';
-    const words = value.trim() ? value.trim().split(/\s+/).filter(Boolean).length : 0;
-    wordCount.textContent = String(words);
-    charCount.textContent = String(value.length);
-    readTime.textContent = `${Math.max(0, Math.ceil(words / 200))} min`;
-  };
-  textInput?.addEventListener('input', updateTextStats);
-  document.querySelectorAll('[data-case-action]').forEach((button) => {
-    button.addEventListener('click', () => {
-      if (!textInput) return;
-      const action = button.getAttribute('data-case-action');
-      if (action === 'upper') textInput.value = textInput.value.toUpperCase();
-      if (action === 'lower') textInput.value = textInput.value.toLowerCase();
-      if (action === 'title') textInput.value = textInput.value.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
-      updateTextStats();
-    });
-  });
-  updateTextStats();
-
-  const formatCurrency = (value) => new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD' }).format(value);
-  const runCalc = () => {
-    const amount = Number(document.getElementById('calc-amount')?.value || 0);
-    const percent = Number(document.getElementById('calc-percent')?.value || 0);
-    const percentValue = amount * (percent / 100);
-    document.getElementById('calc-percent-value').textContent = formatCurrency(percentValue);
-    document.getElementById('calc-total-value').textContent = formatCurrency(amount + percentValue);
-    document.getElementById('calc-plain-value').textContent = `${percent}%`;
-  };
-  document.getElementById('calc-button')?.addEventListener('click', runCalc);
-  runCalc();
-
-  const chooserInput = document.getElementById('chooser-options');
-  const chooserButton = document.getElementById('chooser-button');
-  const chooserCountNote = document.getElementById('chooser-count-note');
-  const chooserResultValue = document.getElementById('chooser-result-value');
-  const chooserResultNote = document.getElementById('chooser-result-note');
-  const chooserCleanOptions = () => (chooserInput?.value || '').split(/\r?\n/).map((value) => value.trim()).filter(Boolean);
-  const chooserUpdateCount = () => {
-    const options = chooserCleanOptions();
-    chooserCountNote.textContent = options.length >= 2 ? `${options.length} options ready.` : 'Add at least 2 options.';
-    return options;
-  };
-  chooserInput?.addEventListener('input', chooserUpdateCount);
-  chooserButton?.addEventListener('click', () => {
-    const options = chooserUpdateCount();
-    if (options.length < 2) {
-      chooserResultValue.textContent = 'Need more options';
-      chooserResultNote.textContent = 'Add at least 2 non-empty lines.';
-      return;
-    }
-    const randomValues = new Uint32Array(1);
-    window.crypto.getRandomValues(randomValues);
-    const index = randomValues[0] % options.length;
-    chooserResultValue.textContent = options[index];
-    chooserResultNote.textContent = `Picked from ${options.length} cleaned options.`;
-  });
-  chooserUpdateCount();
-
-  const qrInput = document.getElementById('qr-input');
-  const qrSize = document.getElementById('qr-size');
-  const qrCanvas = document.getElementById('qr-canvas');
-  const qrStatus = document.getElementById('qr-status');
-  const qrDownloadLink = document.getElementById('qr-download-link');
-  const qrPreviewWrap = document.getElementById('qr-preview-wrap');
-  const renderQrFallback = (value, size) => {
-    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${encodeURIComponent(value)}`;
-    qrPreviewWrap.innerHTML = `<img src="${qrUrl}" alt="Generated QR code preview" width="${size}" height="${size}">`;
-    qrStatus.textContent = 'QR code ready';
-    qrDownloadLink.href = qrUrl;
-  };
-  const renderQr = async () => {
-    const value = (qrInput?.value || '').trim();
-    if (!value) {
-      qrStatus.textContent = 'Enter some text or a URL first';
-      return;
-    }
-    const size = Number(qrSize?.value || 240);
-    try {
-      if (window.QRCode?.toCanvas && qrCanvas) {
-        try {
-          qrPreviewWrap.innerHTML = `<canvas id="qr-canvas" width="${size}" height="${size}" aria-label="Generated QR code preview"></canvas>`;
-          const activeCanvas = document.getElementById('qr-canvas');
-          await window.QRCode.toCanvas(activeCanvas, value, {
-            width: size,
-            margin: 1,
-            color: { dark: '#122033', light: '#ffffff' }
-          });
-          qrStatus.textContent = 'QR code ready';
-          qrDownloadLink.href = activeCanvas.toDataURL('image/png');
-        } catch (_) {
-          renderQrFallback(value, size);
-        }
-      } else {
-        renderQrFallback(value, size);
-      }
-      qrDownloadLink.style.pointerEvents = '';
-      qrDownloadLink.style.opacity = '1';
-    } catch (_) {
-      qrStatus.textContent = 'Could not generate that QR code';
-    }
-  };
-  document.getElementById('qr-generate-button')?.addEventListener('click', renderQr);
-  qrSize?.addEventListener('change', renderQr);
-
-  const pomodoroDisplay = document.getElementById('pomodoro-display');
-  const pomodoroState = document.getElementById('pomodoro-state');
-  let pomodoroSeconds = 25 * 60;
-  let pomodoroDefault = 25 * 60;
-  let pomodoroTimer = null;
-  const formatSeconds = (value) => {
-    const minutes = Math.floor(value / 60).toString().padStart(2, '0');
-    const seconds = Math.floor(value % 60).toString().padStart(2, '0');
-    return `${minutes}:${seconds}`;
-  };
-  const renderPomodoro = () => { pomodoroDisplay.textContent = formatSeconds(pomodoroSeconds); };
-  const stopPomodoro = () => { if (pomodoroTimer) clearInterval(pomodoroTimer); pomodoroTimer = null; };
-  document.querySelectorAll('[data-pomodoro-preset]').forEach((button) => {
-    button.addEventListener('click', () => {
-      pomodoroDefault = Number(button.getAttribute('data-pomodoro-preset')) * 60;
-      pomodoroSeconds = pomodoroDefault;
-      stopPomodoro();
-      pomodoroState.textContent = `Preset loaded: ${formatSeconds(pomodoroDefault)}`;
-      renderPomodoro();
-    });
-  });
-  document.getElementById('pomodoro-start')?.addEventListener('click', () => {
-    if (pomodoroTimer) return;
-    pomodoroState.textContent = 'Running';
-    pomodoroTimer = window.setInterval(() => {
-      pomodoroSeconds = Math.max(0, pomodoroSeconds - 1);
-      renderPomodoro();
-      if (!pomodoroSeconds) {
-        stopPomodoro();
-        pomodoroState.textContent = 'Finished — nice work.';
-      }
-    }, 1000);
-  });
-  document.getElementById('pomodoro-pause')?.addEventListener('click', () => {
-    stopPomodoro();
-    pomodoroState.textContent = 'Paused';
-  });
-  document.getElementById('pomodoro-reset')?.addEventListener('click', () => {
-    stopPomodoro();
-    pomodoroSeconds = pomodoroDefault;
-    pomodoroState.textContent = 'Reset';
-    renderPomodoro();
-  });
-  renderPomodoro();
-
-  const browserInfoResults = document.getElementById('browser-info-results');
-  const readBrowserInfo = () => {
-    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-    const rows = [
-      ['User agent', navigator.userAgent || 'Unavailable'],
-      ['Language', navigator.language || 'Unavailable'],
-      ['Timezone', Intl.DateTimeFormat().resolvedOptions().timeZone || 'Unavailable'],
-      ['Screen', `${window.screen?.width || '?'} × ${window.screen?.height || '?'}`],
-      ['Viewport', `${window.innerWidth} × ${window.innerHeight}`],
-      ['Cookies enabled', navigator.cookieEnabled ? 'Yes' : 'No'],
-      ['Online', navigator.onLine ? 'Yes' : 'No'],
-      ['Connection type', connection?.effectiveType || 'Unavailable'],
-      ['Downlink', connection?.downlink ? `${connection.downlink} Mb/s` : 'Unavailable'],
-      ['Device memory', navigator.deviceMemory ? `${navigator.deviceMemory} GB` : 'Unavailable'],
-    ];
-    browserInfoResults.innerHTML = `<strong>Current browser snapshot</strong><ul>${rows.map(([label, value]) => `<li><strong>${label}:</strong> ${value}</li>`).join('')}</ul>`;
-    return rows.map(([label, value]) => `${label}: ${value}`).join('\n');
-  };
-  let lastBrowserInfoSummary = '';
-  document.getElementById('browser-info-button')?.addEventListener('click', () => {
-    lastBrowserInfoSummary = readBrowserInfo();
-  });
-  document.getElementById('browser-info-copy')?.addEventListener('click', async () => {
-    if (!lastBrowserInfoSummary) lastBrowserInfoSummary = readBrowserInfo();
-    try { await navigator.clipboard.writeText(lastBrowserInfoSummary); } catch (_) {}
-  });
-
-  const converterCategory = document.getElementById('converter-category');
-  const converterFrom = document.getElementById('converter-from');
-  const converterTo = document.getElementById('converter-to');
-  const converterInput = document.getElementById('converter-input');
-  const converterOutput = document.getElementById('converter-output');
-  const converterNote = document.getElementById('converter-note');
-  const converterSets = {
-    length: {
-      note: 'Length conversions use meters as the base unit.',
-      units: { meter: 1, kilometer: 1000, centimeter: 0.01, inch: 0.0254, foot: 0.3048, yard: 0.9144, mile: 1609.344 }
-    },
-    storage: {
-      note: 'Storage conversions use bytes as the base unit.',
-      units: { byte: 1, kilobyte: 1000, megabyte: 1000000, gigabyte: 1000000000, terabyte: 1000000000000 }
-    },
-    temperature: {
-      note: 'Temperature uses direct formulas between Celsius, Fahrenheit, and Kelvin.',
-      units: { celsius: 'celsius', fahrenheit: 'fahrenheit', kelvin: 'kelvin' }
-    }
-  };
-  const titleize = (value) => value.replace(/(^|\s)\w/g, (char) => char.toUpperCase());
-  const converterUnitLabels = {
-    meter: ['meter', 'meters'],
-    kilometer: ['kilometer', 'kilometers'],
-    foot: ['foot', 'feet'],
-    mile: ['mile', 'miles'],
-    byte: ['byte', 'bytes'],
-    kilobyte: ['kilobyte', 'kilobytes'],
-    megabyte: ['megabyte', 'megabytes'],
-    gigabyte: ['gigabyte', 'gigabytes'],
-    terabyte: ['terabyte', 'terabytes'],
-    celsius: ['°C', '°C'],
-    fahrenheit: ['°F', '°F'],
-    kelvin: ['K', 'K']
-  };
-  const formatUnitLabel = (unit, value) => {
-    const labels = converterUnitLabels[unit];
-    if (!labels) return `${unit}${value === 1 ? '' : 's'}`;
-    return Math.abs(value) === 1 ? labels[0] : labels[1];
-  };
-  const fillConverterUnits = () => {
-    const category = converterCategory.value;
-    const units = Object.keys(converterSets[category].units);
-    const options = units.map((unit) => `<option value="${unit}">${titleize(unit)}</option>`).join('');
-    converterFrom.innerHTML = options;
-    converterTo.innerHTML = options;
-    converterTo.value = units[Math.min(1, units.length - 1)];
-    converterNote.textContent = converterSets[category].note;
-  };
-  const convertTemperature = (value, from, to) => {
-    let celsius = value;
-    if (from === 'fahrenheit') celsius = (value - 32) * (5 / 9);
-    if (from === 'kelvin') celsius = value - 273.15;
-    if (to === 'fahrenheit') return (celsius * (9 / 5)) + 32;
-    if (to === 'kelvin') return celsius + 273.15;
-    return celsius;
-  };
-  const runConverter = () => {
-    const category = converterCategory.value;
-    const from = converterFrom.value;
-    const to = converterTo.value;
-    const rawValue = Number(converterInput.value || 0);
-    let converted = rawValue;
-    if (category === 'temperature') {
-      converted = convertTemperature(rawValue, from, to);
-    } else {
-      const units = converterSets[category].units;
-      converted = rawValue * units[from] / units[to];
-    }
-    const formatter = Math.abs(converted) >= 100 ? converted.toFixed(2) : converted.toFixed(4).replace(/0+$/, '').replace(/\.$/, '');
-    converterOutput.textContent = `${rawValue} ${formatUnitLabel(from, rawValue)} = ${formatter} ${formatUnitLabel(to, Number(formatter))}`;
-    converterNote.textContent = converterSets[category].note;
-  };
-  converterCategory?.addEventListener('change', () => { fillConverterUnits(); runConverter(); });
-  converterFrom?.addEventListener('change', runConverter);
-  converterTo?.addEventListener('change', runConverter);
-  converterInput?.addEventListener('input', runConverter);
-  document.getElementById('converter-button')?.addEventListener('click', runConverter);
-  fillConverterUnits();
-  runConverter();
-
-  const cells = Array.from(document.querySelectorAll('[data-ttt-cell]'));
-  const status = document.getElementById('ttt-status');
-  let board = Array(9).fill('');
-  let player = 'X';
-  let gameOver = false;
-  const lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
-  const updateBoard = () => cells.forEach((cell, index) => { cell.textContent = board[index]; });
-  const winner = () => lines.find(([a, b, c]) => board[a] && board[a] === board[b] && board[a] === board[c]);
-  cells.forEach((cell, index) => {
-    cell.addEventListener('click', () => {
-      if (gameOver || board[index]) return;
-      board[index] = player;
-      updateBoard();
-      if (winner()) {
-        status.textContent = `Player ${player} wins!`;
-        gameOver = true;
-        return;
-      }
-      if (board.every(Boolean)) {
-        status.textContent = 'Draw game.';
-        gameOver = true;
-        return;
-      }
-      player = player === 'X' ? 'O' : 'X';
-      status.textContent = `Player ${player} turn.`;
-    });
-  });
-  document.getElementById('ttt-reset')?.addEventListener('click', () => {
-    board = Array(9).fill('');
-    player = 'X';
-    gameOver = false;
-    status.textContent = 'Player X starts.';
-    updateBoard();
-  });
-  updateBoard();
-  generatePassword();
-  renderQr();
-})();
-</script>
 
     </div>
     
