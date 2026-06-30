@@ -3213,6 +3213,25 @@
     }
   };
   const titleize = (value) => value.replace(/(^|\s)\w/g, (char) => char.toUpperCase());
+  const converterUnitLabels = {
+    meter: ['meter', 'meters'],
+    kilometer: ['kilometer', 'kilometers'],
+    foot: ['foot', 'feet'],
+    mile: ['mile', 'miles'],
+    byte: ['byte', 'bytes'],
+    kilobyte: ['kilobyte', 'kilobytes'],
+    megabyte: ['megabyte', 'megabytes'],
+    gigabyte: ['gigabyte', 'gigabytes'],
+    terabyte: ['terabyte', 'terabytes'],
+    celsius: ['°C', '°C'],
+    fahrenheit: ['°F', '°F'],
+    kelvin: ['K', 'K']
+  };
+  const formatUnitLabel = (unit, value) => {
+    const labels = converterUnitLabels[unit];
+    if (!labels) return `${unit}${value === 1 ? '' : 's'}`;
+    return Math.abs(value) === 1 ? labels[0] : labels[1];
+  };
   const fillConverterUnits = () => {
     const category = converterCategory.value;
     const units = Object.keys(converterSets[category].units);
@@ -3243,7 +3262,7 @@
       converted = rawValue * units[from] / units[to];
     }
     const formatter = Math.abs(converted) >= 100 ? converted.toFixed(2) : converted.toFixed(4).replace(/0+$/, '').replace(/\.$/, '');
-    converterOutput.textContent = `${rawValue} ${from}${rawValue === 1 ? '' : 's'} = ${formatter} ${to}${Number(formatter) === 1 ? '' : 's'}`;
+    converterOutput.textContent = `${rawValue} ${formatUnitLabel(from, rawValue)} = ${formatter} ${formatUnitLabel(to, Number(formatter))}`;
     converterNote.textContent = converterSets[category].note;
   };
   converterCategory?.addEventListener('change', () => { fillConverterUnits(); runConverter(); });
