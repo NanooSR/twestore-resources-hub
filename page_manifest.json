@@ -1314,6 +1314,46 @@
     "url_slug": "best-client-onboarding-desk-setup"
   },
   {
+    "page_key": "best-client-portal-delivery-dashboard-setup",
+    "page_title": "Best Client Portal Delivery Dashboard Setup",
+    "page_type": "starter_setup",
+    "content_pillar": "client_onboarding_delivery_setup",
+    "related_twestore_product": "TWE Client Portal & Delivery Hub",
+    "cross_sell_cta": "Use the Client Portal & Delivery Hub to turn this physical setup into a repeatable client-delivery system with one place for project status, approvals, updates, deadlines, and next steps instead of scattered email threads and loose notes.",
+    "helper_summary": "This page helps freelancers, consultants, and small agencies choose practical desk gear that supports cleaner client updates, delivery tracking, and approval follow-through without turning the workspace into more clutter.",
+    "bounty_fit": "No separate bounty lane is needed here unless a later broader admin-ops page clearly benefits from it; keep this page focused on delivery visibility and approval follow-through.",
+    "comparison_points": [
+      "A client portal setup should make project status and approvals easier to see before it tries to look impressive.",
+      "The best desk upgrade is usually the one that reduces update friction and missed follow-up, not the flashiest gadget.",
+      "Small practical workflow helpers beat more software complexity when the real problem is scattered delivery visibility."
+    ],
+    "recommendation_slots": [
+      {
+        "name": "Best docking station or screen-switching hub",
+        "reason": "For buyers who keep bouncing between the portal dashboard, file folders, client messages, and approval notes across too many disconnected windows.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0BY8QNV1C?tag=resourceshubca-20",
+        "cta_label": "See docking-station option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca USB-C docking-station option."
+      },
+      {
+        "name": "Best active project tray or desk organizer",
+        "reason": "For agencies or freelancers who still handle printed briefs, handwritten notes, contracts, or checklist pages and need one active delivery zone instead of desk sprawl.",
+        "affiliate_url": "https://www.amazon.ca/dp/B07RX17FKL?tag=resourceshubca-20",
+        "cta_label": "See project-organizer option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca desk organizer option."
+      },
+      {
+        "name": "Best label-maker support tool for client handoff clarity",
+        "reason": "For buyers who want a faster way to label folders, bins, asset packs, or approval stages so delivery materials stay easier to track.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20",
+        "cta_label": "See label-maker option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca label-maker option."
+      }
+    ],
+    "body": "### Why a client portal setup needs its own desk logic\nA client portal only feels helpful when the operator can actually see what is waiting, what has been approved, what still needs delivery, and what update has to go out next. When those pieces stay scattered across tabs, folders, sticky notes, and half-finished email drafts, the tool stack feels heavier instead of calmer.\n\nThe goal is not to build a flashy control room. The goal is to make client delivery easier to re-open, easier to scan, and easier to keep moving.\n\n### What this setup should help with\n#### 1. Faster status visibility\nIf project status, pending approvals, deliverables, and update notes keep living in different windows, the buyer needs a cleaner viewing setup before another workflow tweak.\n\n#### 2. Cleaner handoff and approval follow-through\nA delivery workflow slips when files, notes, approval requests, and next actions blend together. The desk should make those handoff steps easier to separate and revisit.\n\n#### 3. Less friction sending updates\nThe best setup should help the buyer move from internal review to client-ready update without a long context rebuild every time.\n\n### Start with the delivery bottleneck, not the gear list\nAsk what keeps breaking right now:\n- project updates take too long to assemble\n- approval notes disappear into random tabs or notebooks\n- files for active work blend together with completed work\n- client next steps sit in memory instead of somewhere visible\n- the desk keeps turning into general clutter instead of a delivery station\n\nThe right first purchase should reduce that exact friction.\n\n### Best setup by workflow style\n#### Mostly digital client work\nPrioritize cleaner screen switching and easier side-by-side viewing first. The main win is faster status review and quicker update prep.\n\n#### Hybrid digital plus paper workflow\nIf the buyer still prints scopes, keeps handwritten notes, or carries physical review sheets, one active organizer zone can matter more than another subscription.\n\n#### Agency or freelancer juggling several active clients\nVisibility matters most. Pick tools that make it easier to separate current approvals, delivery materials, and next actions without re-sorting everything every session.\n\n### Category-by-category guidance\n#### Docking stations and switching hubs\nUseful when the delivery review keeps slowing down because screens, ports, and device switching create friction. The value is calmer status review, not more hardware for its own sake.\n\n#### Desk organizers and active project trays\nHelpful when current client materials keep getting buried under general desk clutter. A simple active zone can make approvals, status notes, and supporting docs easier to re-find.\n\n#### Label makers and category markers\nBest when the buyer already uses folders, bins, printed checklists, or client packets and needs them sorted by project, stage, or handoff status. Skip this if the workflow is already fully digital and tidy.\n\n### Common mistakes\n- Treating client delivery confusion like a motivation issue when the real problem is scattered visibility.\n- Keeping update notes, file locations, and approval status in too many places to scan quickly.\n- Buying more gear before deciding what actually needs to stay visible during a delivery review.\n- Letting active client materials blend into general desk clutter instead of keeping one clear delivery zone.\n\n### Best first upgrade\nFor most buyers, the best first upgrade is the one that makes project status and next actions easier to review in one short session. That usually means better screen switching first, then one organizer or labeling layer for the physical materials that still matter.\n\n### Final decision rule\nThe best client portal delivery dashboard setup is the one that helps a buyer reopen the work, see what is pending, and move the next client update or approval step forward without rebuilding context from scratch. If the setup makes client delivery calmer and easier to repeat, it is doing its job.",
+    "url_slug": "best-client-portal-delivery-dashboard-setup"
+  },
+  {
     "page_key": "best-creator-recording-setup-for-calls-content-and-client-work",
     "page_title": "Best Creator Recording Setup for Calls, Content, and Client Work",
     "page_type": "starter_setup",
