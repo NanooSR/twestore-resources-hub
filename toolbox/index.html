@@ -2916,6 +2916,7 @@
 <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
 <script>
 (() => {
+  const toolboxApiUrl = (path) => (typeof window.tweApiUrl === 'function' ? window.tweApiUrl(path) : path);
   const readJsonResponse = async (response, fallbackMessage) => {
     const contentType = (response.headers.get('content-type') || '').toLowerCase();
     if (!contentType.includes('application/json')) {
@@ -2940,7 +2941,7 @@
     ipValue.textContent = 'Checking…';
     ipNote.textContent = 'Looking up the current connection IP.';
     try {
-      const response = await fetch('/api/toolbox/ip', { headers: { 'Accept': 'application/json' } });
+      const response = await fetch(toolboxApiUrl('/api/toolbox/ip'), { headers: { 'Accept': 'application/json' } });
       const payload = await readJsonResponse(response, 'This toolbox copy cannot reach the live IP service right now.');
       if (payload.status === 'ok' && payload.ip) {
         ipValue.textContent = payload.ip;
@@ -2969,7 +2970,7 @@
     unscramblerStatus.textContent = 'Checking likely words…';
     unscramblerResults.innerHTML = '<strong>Working…</strong><p class="muted">Looking for likely matches.</p>';
     try {
-      const response = await fetch('/api/toolbox/unscramble', {
+      const response = await fetch(toolboxApiUrl('/api/toolbox/unscramble'), {
         method: 'POST',
         headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
         body: JSON.stringify({ letters })
