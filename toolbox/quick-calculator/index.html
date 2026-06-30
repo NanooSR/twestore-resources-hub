@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     
-    <meta name="description" content="Use a simple percentage and tip helper when you need a quick answer without opening another tab. Use the bookmarkable TWE Toolbox tool page for Quick calculator plus links back to the main toolbox hub and related tools.">
+    <meta name="description" content="Use a simple percentage and tip helper when you need a quick answer without opening another tab. Use this bookmarkable TWE Toolbox page for Quick calculator in a focused single-tool layout with a clear path back to the main toolbox hub.">
     <meta property="og:title" content="TheWatchersEdge.ca | Quick calculator">
-    <meta property="og:description" content="Use a simple percentage and tip helper when you need a quick answer without opening another tab. Use the bookmarkable TWE Toolbox tool page for Quick calculator plus links back to the main toolbox hub and related tools.">
+    <meta property="og:description" content="Use a simple percentage and tip helper when you need a quick answer without opening another tab. Use this bookmarkable TWE Toolbox page for Quick calculator in a focused single-tool layout with a clear path back to the main toolbox hub.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="TheWatchersEdge.ca">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="TheWatchersEdge.ca | Quick calculator">
-    <meta name="twitter:description" content="Use a simple percentage and tip helper when you need a quick answer without opening another tab. Use the bookmarkable TWE Toolbox tool page for Quick calculator plus links back to the main toolbox hub and related tools.">
+    <meta name="twitter:description" content="Use a simple percentage and tip helper when you need a quick answer without opening another tab. Use this bookmarkable TWE Toolbox page for Quick calculator in a focused single-tool layout with a clear path back to the main toolbox hub.">
     <title>TheWatchersEdge.ca | Quick calculator</title>
     
     
@@ -2300,6 +2300,23 @@
   .tool-pick-card,
   .tool-ad-card { border: 1px solid var(--line); border-radius: 22px; background: var(--panel); padding: 20px; box-shadow: var(--shadow-soft); }
   .tool-overview-card { display: grid; gap: 14px; }
+  .tool-overview-card-link {
+    color: inherit;
+    text-decoration: none;
+    transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    cursor: pointer;
+    height: 100%;
+  }
+  .tool-overview-card-link:hover,
+  .tool-overview-card-link:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(18,32,51,.14);
+    border-color: rgba(39,113,255,.35);
+  }
+  .tool-overview-card-link:focus-visible {
+    outline: 3px solid rgba(39,113,255,.22);
+    outline-offset: 3px;
+  }
   .tool-thumb {
     border-radius: 18px;
     min-height: 112px;
@@ -2492,6 +2509,7 @@
   .toolbox-hub-only { display: none; }
   .toolbox-sections > .tool-panel { display: none; }
   .toolbox-sections > #quick-calculator { display: grid; }
+  .toolbox-sections { gap: 0; }
   
   @media (min-width: 900px) {
     .toolbox-hero-grid { grid-template-columns: 1.4fr .9fr; }
@@ -2501,32 +2519,18 @@
 <section class="toolbox-shell">
   
   <section class="panel hero tool-focus-hero">
+    <div class="cta-row">
+      <a class="btn" href="/toolbox">← Back to TWE Toolbox</a>
+    </div>
     <div class="tool-link-pill">Daily work helpers · direct tool page</div>
     <div>
-      <p class="eyebrow">TWE Toolbox tool page</p>
+      <p class="eyebrow">Focused single-tool page</p>
       <h1>Quick calculator</h1>
       <p class="lede">Work out a fast percentage, markup, tax, discount, or tip without leaving the toolbox.</p>
+      <p class="muted" style="margin-top:10px;">Use the tool immediately below. This page keeps the experience clean, bookmarkable, and focused on just one job.</p>
     </div>
     <div class="tool-focus-meta">
       <div class="tool-url-box"><strong>Bookmarkable URL:</strong> <code>https://TheWatchersEdge.ca/toolbox/quick-calculator/</code></div>
-      <ol class="tool-instruction-list">
-        
-        <li>Enter the base amount.</li>
-        
-        <li>Enter the percent.</li>
-        
-        <li>Press calculate to refresh the values.</li>
-        
-      </ol>
-    </div>
-    <div class="cta-row">
-      <a class="btn" href="/toolbox">Back to TWE Toolbox</a>
-      <a class="btn secondary" href="#quick-calculator">Jump to this tool</a>
-    </div>
-    <div class="tool-chip-row">
-      <span class="tool-chip">🔖 Direct bookmarkable tool page</span>
-      <span class="tool-chip">🧭 Clear path back to the main toolbox hub</span>
-      <span class="tool-chip">🧩 Related tools listed lower on the page</span>
     </div>
   </section>
   
@@ -2611,69 +2615,8 @@
   </section>
 
   
-  <section class="section card" id="toolbox-grid">
-    <p class="eyebrow">Related tools</p>
-    <h2>Keep going with another bookmarkable tool page</h2>
-    <p class="muted" style="max-width: 780px;">Each related card below opens its own direct tool URL so customers can bookmark that tool separately and come back later.</p>
-    <div class="toolbox-overview-grid">
-      
-      <article class="tool-overview-card" data-tool-slug="text-helper">
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #fff0de, #e5f5ff);">
-          <span class="tool-thumb-icon" aria-hidden="true">📝</span>
-          <span class="tool-thumb-label">Copy cleanup</span>
-        </div>
-        <div>
-          <p class="eyebrow">Useful for work</p>
-          <h3>Text helper</h3>
-          <p class="muted">Quickly switch case, count words, and estimate reading time for a pasted block of text.</p>
-        </div>
-        <div class="tool-chip-row">
-          <span class="tool-chip">Writing + words</span>
-          
-        </div>
-        <a class="card-link" href="/toolbox/text-helper/" target="_blank" rel="noopener">Open text helper →</a>
-      </article>
-      
-      <article class="tool-overview-card" data-tool-slug="random-chooser">
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe4dd, #fff6d9);">
-          <span class="tool-thumb-icon" aria-hidden="true">🎯</span>
-          <span class="tool-thumb-label">Fair pick</span>
-        </div>
-        <div>
-          <p class="eyebrow">Decision helper</p>
-          <h3>Random chooser</h3>
-          <p class="muted">Paste a short list of options and let the toolbox pick one fairly when you are stuck deciding.</p>
-        </div>
-        <div class="tool-chip-row">
-          <span class="tool-chip">Daily work helpers</span>
-          
-        </div>
-        <a class="card-link" href="/toolbox/random-chooser/" target="_blank" rel="noopener">Open random chooser →</a>
-      </article>
-      
-      <article class="tool-overview-card" data-tool-slug="unit-converter">
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #f1e5ff, #fff4e5);">
-          <span class="tool-thumb-icon" aria-hidden="true">📏</span>
-          <span class="tool-thumb-label">Quick convert</span>
-        </div>
-        <div>
-          <p class="eyebrow">Daily utility</p>
-          <h3>Unit converter</h3>
-          <p class="muted">Convert common length, temperature, and storage values without opening a cluttered converter site.</p>
-        </div>
-        <div class="tool-chip-row">
-          <span class="tool-chip">Daily work helpers</span>
-          <span class="tool-chip">Newer addition</span>
-        </div>
-        <a class="card-link" href="/toolbox/unit-converter/" target="_blank" rel="noopener">Open unit converter →</a>
-      </article>
-      
-    </div>
-  </section>
 
-  
-
-  <section class="toolbox-sections">
+  <section class="toolbox-sections" aria-label="Focused single-tool panel">
     <article class="tool-panel" id="ip-checker">
       <span class="tool-badge">🌐 What’s my IP</span>
       <h2>Check the public-facing connection IP your browser is presenting</h2>
@@ -2855,72 +2798,9 @@
     </article>
   </section>
 
-  <section class="tool-ad-card">
-    <p class="eyebrow">Helpful next picks</p>
-    <h2>Helpful next picks, kept relevant and non-spammy</h2>
-    <p class="muted">These suggestions fit naturally beside workday, desk, and organization tools. They are optional, clearly disclosed, and meant to help when the match is genuinely useful.</p>
-    <div class="tool-disclosure"><strong>Disclosure:</strong> Some links below are Amazon affiliate links and may earn a commission at no extra cost to the customer. They are shown only where they fit the tool hub naturally.</div>
-    <div class="toolbox-help-grid" style="margin-top:14px;">
-      
-      <article class="tool-pick-card">
-        <p class="eyebrow">Amazon-friendly next step</p>
-        <h3>Monitor arm for steadier weekly review screen height</h3>
-        <p class="muted">A natural fit for people using the Pomodoro timer, browser diagnostics, and workflow helpers at a desk for longer sessions.</p>
-        <div class="cta-row">
-          <a class="btn secondary" href="https://www.thewatchersedge.ca/best-weekly-kpi-review-workspace.html" target="_blank" rel="noopener">See the desk-setup guide</a>
-          <a class="btn" href="https://www.amazon.ca/dp/B07T3KCQ94?tag=resourceshubca-20" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-        </div>
-      </article>
-      
-      <article class="tool-pick-card">
-        <p class="eyebrow">Amazon-friendly next step</p>
-        <h3>Portable SSD for calmer archive and export handoffs</h3>
-        <p class="muted">Helpful when QR files, exported notes, screenshots, and downloads need one tidy place instead of getting lost across tabs and folders.</p>
-        <div class="cta-row">
-          <a class="btn secondary" href="https://www.thewatchersedge.ca/best-ai-agent-ops-run-review-desk-setup.html" target="_blank" rel="noopener">See the ops desk guide</a>
-          <a class="btn" href="https://www.amazon.ca/dp/B08GTYFC37?tag=resourceshubca-20" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-        </div>
-      </article>
-      
-      <article class="tool-pick-card">
-        <p class="eyebrow">Amazon-friendly next step</p>
-        <h3>Foot-rest cushion for longer billing and admin blocks</h3>
-        <p class="muted">A natural comfort add-on for people using the converter, calculator, text helper, and other workday tools during longer desk blocks.</p>
-        <div class="cta-row">
-          <a class="btn secondary" href="https://www.thewatchersedge.ca/home-office-deals-for-freelancers.html" target="_blank" rel="noopener">See the home office roundup</a>
-          <a class="btn" href="https://www.amazon.ca/dp/B07L3RVF7C?tag=resourceshubca-20" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-        </div>
-      </article>
-      
-    </div>
-  </section>
+  
 
-  <section class="toolbox-rail-grid">
-    <article class="tool-rail-card">
-      <p class="eyebrow">Easy to find later</p>
-      <h3>Use main-site search too</h3>
-      <p class="muted">Search terms like <code>qr</code>, <code>pomodoro</code>, <code>converter</code>, or <code>browser info</code> now surface toolbox shortcuts from the store search experience.</p>
-      <a class="card-link" href="/store?q=qr#store-top-matches">Try a toolbox search shortcut →</a>
-    </article>
-    <article class="tool-rail-card">
-      <p class="eyebrow">Future growth</p>
-      <h3>Nice additions that could earn repeat visits later</h3>
-      <div class="tool-mini-list">
-        <ul>
-          
-          <li>Habit streak tracker</li>
-          
-          <li>Simple checklist builder</li>
-          
-          <li>Meeting agenda helper</li>
-          
-          <li>Word Search or 2048-style game</li>
-          
-        </ul>
-      </div>
-    </article>
-    
-  </section>
+  
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>

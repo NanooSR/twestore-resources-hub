@@ -2300,6 +2300,23 @@
   .tool-pick-card,
   .tool-ad-card { border: 1px solid var(--line); border-radius: 22px; background: var(--panel); padding: 20px; box-shadow: var(--shadow-soft); }
   .tool-overview-card { display: grid; gap: 14px; }
+  .tool-overview-card-link {
+    color: inherit;
+    text-decoration: none;
+    transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    cursor: pointer;
+    height: 100%;
+  }
+  .tool-overview-card-link:hover,
+  .tool-overview-card-link:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(18,32,51,.14);
+    border-color: rgba(39,113,255,.35);
+  }
+  .tool-overview-card-link:focus-visible {
+    outline: 3px solid rgba(39,113,255,.22);
+    outline-offset: 3px;
+  }
   .tool-thumb {
     border-radius: 18px;
     min-height: 112px;
@@ -2580,10 +2597,10 @@
   <section class="section card" id="toolbox-grid">
     <p class="eyebrow">Toolbox overview</p>
     <h2>Start with the tool that solves today’s problem fastest</h2>
-    <p class="muted" style="max-width: 780px;">This page is the TWE Toolbox control panel. Each card opens a dedicated tool page with its own direct bookmarkable URL.</p>
+    <p class="muted" style="max-width: 780px;">This page is the TWE Toolbox control panel. Each card opens a dedicated tool page in a new tab with its own direct bookmarkable URL.</p>
     <div class="toolbox-overview-grid">
       
-      <article class="tool-overview-card" data-tool-slug="whats-my-ip">
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="whats-my-ip" href="/toolbox/whats-my-ip/" target="_blank" rel="noopener" aria-label="Open What&#39;s my IP in its own page">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #d7f3ff, #e7fff8);">
           <span class="tool-thumb-icon" aria-hidden="true">🌐</span>
           <span class="tool-thumb-label">Connection view</span>
@@ -2597,10 +2614,10 @@
           <span class="tool-chip">Quick diagnostics</span>
           
         </div>
-        <a class="card-link" href="/toolbox/whats-my-ip/" target="_blank" rel="noopener">Open IP checker →</a>
-      </article>
+        <span class="card-link">Open IP checker →</span>
+      </a>
       
-      <article class="tool-overview-card" data-tool-slug="unscrambler">
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="unscrambler" href="/toolbox/unscrambler/" target="_blank" rel="noopener" aria-label="Open Unscrambler in its own page">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe1fb, #eef0ff);">
           <span class="tool-thumb-icon" aria-hidden="true">🔤</span>
           <span class="tool-thumb-label">Word finder</span>
@@ -2614,10 +2631,10 @@
           <span class="tool-chip">Writing + words</span>
           
         </div>
-        <a class="card-link" href="/toolbox/unscrambler/" target="_blank" rel="noopener">Open unscrambler →</a>
-      </article>
+        <span class="card-link">Open unscrambler →</span>
+      </a>
       
-      <article class="tool-overview-card" data-tool-slug="password-generator">
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="password-generator" href="/toolbox/password-generator/" target="_blank" rel="noopener" aria-label="Open Password generator in its own page">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #fdf0cf, #e8fff6);">
           <span class="tool-thumb-icon" aria-hidden="true">🔐</span>
           <span class="tool-thumb-label">Secure login helper</span>
@@ -2631,10 +2648,10 @@
           <span class="tool-chip">Privacy + security</span>
           
         </div>
-        <a class="card-link" href="/toolbox/password-generator/" target="_blank" rel="noopener">Open password generator →</a>
-      </article>
+        <span class="card-link">Open password generator →</span>
+      </a>
       
-      <article class="tool-overview-card" data-tool-slug="text-helper">
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="text-helper" href="/toolbox/text-helper/" target="_blank" rel="noopener" aria-label="Open Text helper in its own page">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #fff0de, #e5f5ff);">
           <span class="tool-thumb-icon" aria-hidden="true">📝</span>
           <span class="tool-thumb-label">Copy cleanup</span>
@@ -2648,10 +2665,10 @@
           <span class="tool-chip">Writing + words</span>
           
         </div>
-        <a class="card-link" href="/toolbox/text-helper/" target="_blank" rel="noopener">Open text helper →</a>
-      </article>
+        <span class="card-link">Open text helper →</span>
+      </a>
       
-      <article class="tool-overview-card" data-tool-slug="quick-calculator">
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="quick-calculator" href="/toolbox/quick-calculator/" target="_blank" rel="noopener" aria-label="Open Quick calculator in its own page">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #e9f8d8, #fff7dd);">
           <span class="tool-thumb-icon" aria-hidden="true">🧮</span>
           <span class="tool-thumb-label">Fast math</span>
@@ -2665,10 +2682,10 @@
           <span class="tool-chip">Daily work helpers</span>
           
         </div>
-        <a class="card-link" href="/toolbox/quick-calculator/" target="_blank" rel="noopener">Open calculator →</a>
-      </article>
+        <span class="card-link">Open calculator →</span>
+      </a>
       
-      <article class="tool-overview-card" data-tool-slug="random-chooser">
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="random-chooser" href="/toolbox/random-chooser/" target="_blank" rel="noopener" aria-label="Open Random chooser in its own page">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe4dd, #fff6d9);">
           <span class="tool-thumb-icon" aria-hidden="true">🎯</span>
           <span class="tool-thumb-label">Fair pick</span>
@@ -2682,10 +2699,10 @@
           <span class="tool-chip">Daily work helpers</span>
           
         </div>
-        <a class="card-link" href="/toolbox/random-chooser/" target="_blank" rel="noopener">Open random chooser →</a>
-      </article>
+        <span class="card-link">Open random chooser →</span>
+      </a>
       
-      <article class="tool-overview-card" data-tool-slug="qr-code-generator">
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="qr-code-generator" href="/toolbox/qr-code-generator/" target="_blank" rel="noopener" aria-label="Open QR code generator in its own page">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #ddefff, #f1f3ff);">
           <span class="tool-thumb-icon" aria-hidden="true">▦</span>
           <span class="tool-thumb-label">Scan-ready</span>
@@ -2699,10 +2716,10 @@
           <span class="tool-chip">Sharing + handoff</span>
           
         </div>
-        <a class="card-link" href="/toolbox/qr-code-generator/" target="_blank" rel="noopener">Open QR code generator →</a>
-      </article>
+        <span class="card-link">Open QR code generator →</span>
+      </a>
       
-      <article class="tool-overview-card" data-tool-slug="pomodoro-timer">
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="pomodoro-timer" href="/toolbox/pomodoro-timer/" target="_blank" rel="noopener" aria-label="Open Pomodoro timer in its own page">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe3e3, #fff4dc);">
           <span class="tool-thumb-icon" aria-hidden="true">⏳</span>
           <span class="tool-thumb-label">Focus block</span>
@@ -2716,10 +2733,10 @@
           <span class="tool-chip">Focus + flow</span>
           <span class="tool-chip">Newer addition</span>
         </div>
-        <a class="card-link" href="/toolbox/pomodoro-timer/" target="_blank" rel="noopener">Open Pomodoro timer →</a>
-      </article>
+        <span class="card-link">Open Pomodoro timer →</span>
+      </a>
       
-      <article class="tool-overview-card" data-tool-slug="browser-network-info">
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="browser-network-info" href="/toolbox/browser-network-info/" target="_blank" rel="noopener" aria-label="Open Browser + network info in its own page">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #dff5ff, #e8ffe8);">
           <span class="tool-thumb-icon" aria-hidden="true">📶</span>
           <span class="tool-thumb-label">Device snapshot</span>
@@ -2733,10 +2750,10 @@
           <span class="tool-chip">Quick diagnostics</span>
           <span class="tool-chip">Newer addition</span>
         </div>
-        <a class="card-link" href="/toolbox/browser-network-info/" target="_blank" rel="noopener">Open browser info →</a>
-      </article>
+        <span class="card-link">Open browser info →</span>
+      </a>
       
-      <article class="tool-overview-card" data-tool-slug="unit-converter">
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="unit-converter" href="/toolbox/unit-converter/" target="_blank" rel="noopener" aria-label="Open Unit converter in its own page">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #f1e5ff, #fff4e5);">
           <span class="tool-thumb-icon" aria-hidden="true">📏</span>
           <span class="tool-thumb-label">Quick convert</span>
@@ -2750,10 +2767,10 @@
           <span class="tool-chip">Daily work helpers</span>
           <span class="tool-chip">Newer addition</span>
         </div>
-        <a class="card-link" href="/toolbox/unit-converter/" target="_blank" rel="noopener">Open unit converter →</a>
-      </article>
+        <span class="card-link">Open unit converter →</span>
+      </a>
       
-      <article class="tool-overview-card" data-tool-slug="mini-game">
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="mini-game" href="/toolbox/mini-game/" target="_blank" rel="noopener" aria-label="Open Mini game in its own page">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #dff7ff, #eef6ff);">
           <span class="tool-thumb-icon" aria-hidden="true">🎮</span>
           <span class="tool-thumb-label">Tiny break</span>
@@ -2767,12 +2784,13 @@
           <span class="tool-chip">Focus + flow</span>
           <span class="tool-chip">Newer addition</span>
         </div>
-        <a class="card-link" href="/toolbox/mini-game/" target="_blank" rel="noopener">Open mini game →</a>
-      </article>
+        <span class="card-link">Open mini game →</span>
+      </a>
       
     </div>
   </section>
 
+  
   
 
   <section class="toolbox-sections">
@@ -2957,6 +2975,9 @@
     </article>
   </section>
 
+  
+
+  
   <section class="tool-ad-card">
     <p class="eyebrow">Helpful next picks</p>
     <h2>Helpful next picks, kept relevant and non-spammy</h2>
@@ -3023,6 +3044,7 @@
     </article>
     
   </section>
+  
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>

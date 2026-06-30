@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     
-    <meta name="description" content="Turn a link, note, Wi-Fi string, or simple contact detail into a scannable QR code right on the page. Use the bookmarkable TWE Toolbox tool page for QR code generator plus links back to the main toolbox hub and related tools.">
+    <meta name="description" content="Turn a link, note, Wi-Fi string, or simple contact detail into a scannable QR code right on the page. Use this bookmarkable TWE Toolbox page for QR code generator in a focused single-tool layout with a clear path back to the main toolbox hub.">
     <meta property="og:title" content="TheWatchersEdge.ca | QR code generator">
-    <meta property="og:description" content="Turn a link, note, Wi-Fi string, or simple contact detail into a scannable QR code right on the page. Use the bookmarkable TWE Toolbox tool page for QR code generator plus links back to the main toolbox hub and related tools.">
+    <meta property="og:description" content="Turn a link, note, Wi-Fi string, or simple contact detail into a scannable QR code right on the page. Use this bookmarkable TWE Toolbox page for QR code generator in a focused single-tool layout with a clear path back to the main toolbox hub.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="TheWatchersEdge.ca">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="TheWatchersEdge.ca | QR code generator">
-    <meta name="twitter:description" content="Turn a link, note, Wi-Fi string, or simple contact detail into a scannable QR code right on the page. Use the bookmarkable TWE Toolbox tool page for QR code generator plus links back to the main toolbox hub and related tools.">
+    <meta name="twitter:description" content="Turn a link, note, Wi-Fi string, or simple contact detail into a scannable QR code right on the page. Use this bookmarkable TWE Toolbox page for QR code generator in a focused single-tool layout with a clear path back to the main toolbox hub.">
     <title>TheWatchersEdge.ca | QR code generator</title>
     
     
@@ -2300,6 +2300,23 @@
   .tool-pick-card,
   .tool-ad-card { border: 1px solid var(--line); border-radius: 22px; background: var(--panel); padding: 20px; box-shadow: var(--shadow-soft); }
   .tool-overview-card { display: grid; gap: 14px; }
+  .tool-overview-card-link {
+    color: inherit;
+    text-decoration: none;
+    transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    cursor: pointer;
+    height: 100%;
+  }
+  .tool-overview-card-link:hover,
+  .tool-overview-card-link:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(18,32,51,.14);
+    border-color: rgba(39,113,255,.35);
+  }
+  .tool-overview-card-link:focus-visible {
+    outline: 3px solid rgba(39,113,255,.22);
+    outline-offset: 3px;
+  }
   .tool-thumb {
     border-radius: 18px;
     min-height: 112px;
@@ -2492,6 +2509,7 @@
   .toolbox-hub-only { display: none; }
   .toolbox-sections > .tool-panel { display: none; }
   .toolbox-sections > #qr-generator { display: grid; }
+  .toolbox-sections { gap: 0; }
   
   @media (min-width: 900px) {
     .toolbox-hero-grid { grid-template-columns: 1.4fr .9fr; }
@@ -2501,32 +2519,18 @@
 <section class="toolbox-shell">
   
   <section class="panel hero tool-focus-hero">
+    <div class="cta-row">
+      <a class="btn" href="/toolbox">← Back to TWE Toolbox</a>
+    </div>
     <div class="tool-link-pill">Sharing + handoff · direct tool page</div>
     <div>
-      <p class="eyebrow">TWE Toolbox tool page</p>
+      <p class="eyebrow">Focused single-tool page</p>
       <h1>QR code generator</h1>
       <p class="lede">Generate a simple scannable QR code for a link, note, or Wi-Fi handoff without leaving the browser.</p>
+      <p class="muted" style="margin-top:10px;">Use the tool immediately below. This page keeps the experience clean, bookmarkable, and focused on just one job.</p>
     </div>
     <div class="tool-focus-meta">
       <div class="tool-url-box"><strong>Bookmarkable URL:</strong> <code>https://TheWatchersEdge.ca/toolbox/qr-code-generator/</code></div>
-      <ol class="tool-instruction-list">
-        
-        <li>Paste a link or plain text.</li>
-        
-        <li>Choose a size if needed.</li>
-        
-        <li>Generate the QR code, then preview or download it.</li>
-        
-      </ol>
-    </div>
-    <div class="cta-row">
-      <a class="btn" href="/toolbox">Back to TWE Toolbox</a>
-      <a class="btn secondary" href="#qr-generator">Jump to this tool</a>
-    </div>
-    <div class="tool-chip-row">
-      <span class="tool-chip">🔖 Direct bookmarkable tool page</span>
-      <span class="tool-chip">🧭 Clear path back to the main toolbox hub</span>
-      <span class="tool-chip">🧩 Related tools listed lower on the page</span>
     </div>
   </section>
   
@@ -2611,69 +2615,8 @@
   </section>
 
   
-  <section class="section card" id="toolbox-grid">
-    <p class="eyebrow">Related tools</p>
-    <h2>Keep going with another bookmarkable tool page</h2>
-    <p class="muted" style="max-width: 780px;">Each related card below opens its own direct tool URL so customers can bookmark that tool separately and come back later.</p>
-    <div class="toolbox-overview-grid">
-      
-      <article class="tool-overview-card" data-tool-slug="whats-my-ip">
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #d7f3ff, #e7fff8);">
-          <span class="tool-thumb-icon" aria-hidden="true">🌐</span>
-          <span class="tool-thumb-label">Connection view</span>
-        </div>
-        <div>
-          <p class="eyebrow">Useful right away</p>
-          <h3>What&#39;s my IP</h3>
-          <p class="muted">See the current public-facing connection IP your browser is presenting right now.</p>
-        </div>
-        <div class="tool-chip-row">
-          <span class="tool-chip">Quick diagnostics</span>
-          
-        </div>
-        <a class="card-link" href="/toolbox/whats-my-ip/" target="_blank" rel="noopener">Open IP checker →</a>
-      </article>
-      
-      <article class="tool-overview-card" data-tool-slug="pomodoro-timer">
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe3e3, #fff4dc);">
-          <span class="tool-thumb-icon" aria-hidden="true">⏳</span>
-          <span class="tool-thumb-label">Focus block</span>
-        </div>
-        <div>
-          <p class="eyebrow">Focus helper</p>
-          <h3>Pomodoro timer</h3>
-          <p class="muted">Run a simple work-and-break timer when you want a cleaner focus block without another app.</p>
-        </div>
-        <div class="tool-chip-row">
-          <span class="tool-chip">Focus + flow</span>
-          <span class="tool-chip">Newer addition</span>
-        </div>
-        <a class="card-link" href="/toolbox/pomodoro-timer/" target="_blank" rel="noopener">Open Pomodoro timer →</a>
-      </article>
-      
-      <article class="tool-overview-card" data-tool-slug="browser-network-info">
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #dff5ff, #e8ffe8);">
-          <span class="tool-thumb-icon" aria-hidden="true">📶</span>
-          <span class="tool-thumb-label">Device snapshot</span>
-        </div>
-        <div>
-          <p class="eyebrow">Quick diagnostics</p>
-          <h3>Browser + network info</h3>
-          <p class="muted">See useful browser, screen, language, timezone, and connection details for quick troubleshooting.</p>
-        </div>
-        <div class="tool-chip-row">
-          <span class="tool-chip">Quick diagnostics</span>
-          <span class="tool-chip">Newer addition</span>
-        </div>
-        <a class="card-link" href="/toolbox/browser-network-info/" target="_blank" rel="noopener">Open browser info →</a>
-      </article>
-      
-    </div>
-  </section>
 
-  
-
-  <section class="toolbox-sections">
+  <section class="toolbox-sections" aria-label="Focused single-tool panel">
     <article class="tool-panel" id="ip-checker">
       <span class="tool-badge">🌐 What’s my IP</span>
       <h2>Check the public-facing connection IP your browser is presenting</h2>
@@ -2855,72 +2798,9 @@
     </article>
   </section>
 
-  <section class="tool-ad-card">
-    <p class="eyebrow">Helpful next picks</p>
-    <h2>Helpful next picks, kept relevant and non-spammy</h2>
-    <p class="muted">These suggestions fit naturally beside workday, desk, and organization tools. They are optional, clearly disclosed, and meant to help when the match is genuinely useful.</p>
-    <div class="tool-disclosure"><strong>Disclosure:</strong> Some links below are Amazon affiliate links and may earn a commission at no extra cost to the customer. They are shown only where they fit the tool hub naturally.</div>
-    <div class="toolbox-help-grid" style="margin-top:14px;">
-      
-      <article class="tool-pick-card">
-        <p class="eyebrow">Amazon-friendly next step</p>
-        <h3>Monitor arm for steadier weekly review screen height</h3>
-        <p class="muted">A natural fit for people using the Pomodoro timer, browser diagnostics, and workflow helpers at a desk for longer sessions.</p>
-        <div class="cta-row">
-          <a class="btn secondary" href="https://www.thewatchersedge.ca/best-weekly-kpi-review-workspace.html" target="_blank" rel="noopener">See the desk-setup guide</a>
-          <a class="btn" href="https://www.amazon.ca/dp/B07T3KCQ94?tag=resourceshubca-20" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-        </div>
-      </article>
-      
-      <article class="tool-pick-card">
-        <p class="eyebrow">Amazon-friendly next step</p>
-        <h3>Portable SSD for calmer archive and export handoffs</h3>
-        <p class="muted">Helpful when QR files, exported notes, screenshots, and downloads need one tidy place instead of getting lost across tabs and folders.</p>
-        <div class="cta-row">
-          <a class="btn secondary" href="https://www.thewatchersedge.ca/best-ai-agent-ops-run-review-desk-setup.html" target="_blank" rel="noopener">See the ops desk guide</a>
-          <a class="btn" href="https://www.amazon.ca/dp/B08GTYFC37?tag=resourceshubca-20" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-        </div>
-      </article>
-      
-      <article class="tool-pick-card">
-        <p class="eyebrow">Amazon-friendly next step</p>
-        <h3>Foot-rest cushion for longer billing and admin blocks</h3>
-        <p class="muted">A natural comfort add-on for people using the converter, calculator, text helper, and other workday tools during longer desk blocks.</p>
-        <div class="cta-row">
-          <a class="btn secondary" href="https://www.thewatchersedge.ca/home-office-deals-for-freelancers.html" target="_blank" rel="noopener">See the home office roundup</a>
-          <a class="btn" href="https://www.amazon.ca/dp/B07L3RVF7C?tag=resourceshubca-20" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
-        </div>
-      </article>
-      
-    </div>
-  </section>
+  
 
-  <section class="toolbox-rail-grid">
-    <article class="tool-rail-card">
-      <p class="eyebrow">Easy to find later</p>
-      <h3>Use main-site search too</h3>
-      <p class="muted">Search terms like <code>qr</code>, <code>pomodoro</code>, <code>converter</code>, or <code>browser info</code> now surface toolbox shortcuts from the store search experience.</p>
-      <a class="card-link" href="/store?q=qr#store-top-matches">Try a toolbox search shortcut →</a>
-    </article>
-    <article class="tool-rail-card">
-      <p class="eyebrow">Future growth</p>
-      <h3>Nice additions that could earn repeat visits later</h3>
-      <div class="tool-mini-list">
-        <ul>
-          
-          <li>Habit streak tracker</li>
-          
-          <li>Simple checklist builder</li>
-          
-          <li>Meeting agenda helper</li>
-          
-          <li>Word Search or 2048-style game</li>
-          
-        </ul>
-      </div>
-    </article>
-    
-  </section>
+  
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
