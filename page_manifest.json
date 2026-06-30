@@ -40,6 +40,46 @@
     "url_slug": "best-admin-desk-tools-for-invoices-and-paperwork"
   },
   {
+    "page_key": "best-ai-agent-ops-run-review-desk-setup",
+    "page_title": "Best AI Agent Ops Run-Review Desk Setup",
+    "page_type": "starter_setup",
+    "content_pillar": "solo_operator_workspace",
+    "related_twestore_product": "TWE AI Agent Ops Logbook",
+    "cross_sell_cta": "Use the AI Agent Ops Logbook to turn this setup into a real operating layer with one calmer place for run logs, change notes, access tracking, incidents, and weekly reviews instead of scattered agent history.",
+    "helper_summary": "This page helps operators choose practical desk gear for AI run reviews, incident notes, and access/change tracking without turning the setup into more clutter.",
+    "bounty_fit": "No special bounty fit is needed here unless a later business-learning offer clearly supports AI-ops oversight without distracting from the main buying path.",
+    "comparison_points": [
+      "AI ops desks work best when screen switching, note capture, and follow-up visibility stay simple.",
+      "The right setup should reduce context loss between run logs, access notes, incidents, and next actions.",
+      "A calmer review desk usually beats another flashy gadget when the real problem is scattered oversight."
+    ],
+    "recommendation_slots": [
+      {
+        "name": "Best docking station or device-switching hub",
+        "reason": "For operators who keep bouncing between laptops, browser tabs, docs, and admin tools during run reviews.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0BY8QNV1C?tag=resourceshubca-20",
+        "cta_label": "See docking-station option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca USB-C docking-station option."
+      },
+      {
+        "name": "Best external SSD or local archive drive",
+        "reason": "For buyers who want a cleaner place for exports, transcripts, screenshots, incident notes, or offline backup files.",
+        "affiliate_url": "https://www.amazon.ca/dp/B08GTYFC37?tag=resourceshubca-20",
+        "cta_label": "See external-SSD option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca portable external SSD option."
+      },
+      {
+        "name": "Best dry-erase planner or visible review board",
+        "reason": "For buyers who need agent follow-ups, review checkpoints, and incident next steps to stay visible after the screen closes.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0CGLP5LQD?tag=resourceshubca-20",
+        "cta_label": "See dry-erase planner option on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca dry-erase planner option."
+      }
+    ],
+    "body": "### Why AI agent ops deserves its own desk logic\nAn AI agent workflow can look productive while the oversight layer stays messy. The operator ends up with run notes in one place, access changes in another, incident follow-up in a chat, and no calm review surface that shows what changed and what still needs action.\n\nA better desk setup does not solve governance by itself. What it can do is make reviews, logging, and follow-through much easier to repeat.\n\n### Start with the review rhythm, not the gadgets\nAsk what keeps getting lost right now:\n- run history that is hard to compare\n- access changes that never get reviewed again\n- incidents that get discussed but not closed out\n- screenshots, exports, or transcripts scattered across random folders\n- weekly reviews that feel too annoying to start\n\nThe right setup should reduce those exact pain points instead of adding more things to manage.\n\n### What matters most\n#### 1. Fewer device-switching interruptions\nIf the operator keeps unplugging screens, swapping adapters, or juggling windows on one cramped laptop layout, review quality drops fast. A cleaner dock or hub setup helps more than another novelty accessory.\n\n#### 2. Cleaner archive and export handling\nAI ops work usually creates support files: screenshots, exports, notes, prompts, transcripts, or small evidence bundles. A practical archive drive can keep that material easier to review later.\n\n#### 3. Visible next actions after the review ends\nA run review without a visible follow-up layer turns into passive reading. A dry-erase board, planner, or other visible capture surface helps operators keep incidents, access reviews, and next checks in sight.\n\n### Best setup by user type\n#### Solo operator managing several agents alone\nPrioritize easier screen/device switching first, then one simple visible review surface. The goal is less friction starting the review block.\n\n#### Founder reviewing AI helpers alongside normal business work\nKeep the setup lean. Better switching and one calm archive path matter more than building an overcomplicated command center.\n\n#### Small team lead tracking access and incidents\nVisibility matters most. Use a setup that makes it easy to compare the run log, change trail, and the current action list without losing context.\n\n### Category-by-category guidance\n#### Docking stations and switching hubs\nThese are useful when the review process keeps breaking because devices, ports, screens, or power cables create friction. The point is faster context recovery, not more hardware complexity.\n\n#### External SSDs and archive drives\nGood for buyers who want one cleaner archive path for exports, screenshots, incident evidence, and rebuild notes. The value is reviewable organization, not file hoarding.\n\n#### Dry-erase planners and visible boards\nHelpful when the operator needs incidents, approvals, or next actions to stay visible after closing the browser. A visible board can stop follow-up drift.\n\n### Common mistakes\n- Treating AI ops like a pure software problem when the review environment itself keeps adding friction.\n- Saving evidence and follow-up notes everywhere with no clear archive habit.\n- Buying more screens or accessories before fixing switching, logging, and review discipline.\n- Assuming agent oversight stays clear without a visible action layer once the session ends.\n\n### Best first upgrade\nFor most buyers, the best first upgrade is whatever makes run reviews easier to start and finish without context loss. That usually means smoother device switching or a clearer visible review surface before anything else.\n\n### Final decision rule\nThe best AI agent ops desk setup is the one that helps the operator review runs, document changes, and leave the session with clear next actions. If the setup makes oversight calmer and easier to repeat, it is doing its job.",
+    "url_slug": "best-ai-agent-ops-run-review-desk-setup"
+  },
+  {
     "page_key": "best-ai-research-desk-setup",
     "page_title": "Best AI Research Desk Setup",
     "page_type": "evergreen_best_tools",
