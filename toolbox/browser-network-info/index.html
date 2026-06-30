@@ -1,0 +1,3584 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <meta name="description" content="See useful browser, screen, language, timezone, and connection details for quick troubleshooting. Use the bookmarkable TWE Toolbox tool page for Browser + network info plus links back to the main toolbox hub and related tools.">
+    <meta property="og:title" content="TheWatchersEdge.ca | Browser + network info">
+    <meta property="og:description" content="See useful browser, screen, language, timezone, and connection details for quick troubleshooting. Use the bookmarkable TWE Toolbox tool page for Browser + network info plus links back to the main toolbox hub and related tools.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TheWatchersEdge.ca">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="TheWatchersEdge.ca | Browser + network info">
+    <meta name="twitter:description" content="See useful browser, screen, language, timezone, and connection details for quick troubleshooting. Use the bookmarkable TWE Toolbox tool page for Browser + network info plus links back to the main toolbox hub and related tools.">
+    <title>TheWatchersEdge.ca | Browser + network info</title>
+    
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7415941379471134" crossorigin="anonymous"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f3eee6;
+        --bg-2: #fffdf9;
+        --panel: rgba(255, 252, 247, 0.96);
+        --panel-soft: rgba(248, 241, 233, 0.92);
+        --ink: #17343a;
+        --ink-soft: #35545a;
+        --muted: #667b80;
+        --line: #d8ddd6;
+        --line-strong: #c4d1cb;
+        --brand: #096772;
+        --brand-deep: #064c55;
+        --brand-soft: #dceeed;
+        --gold: #ef9b13;
+        --gold-soft: #fff1d6;
+        --berry: #8c5b53;
+        --sage: #e9f3ee;
+        --sky: #e8f3f6;
+        --cream: #fff7e8;
+        --rose: #f7ebe6;
+        --shadow-sm: 0 10px 26px rgba(23, 52, 58, 0.07);
+        --shadow-md: 0 24px 56px rgba(23, 52, 58, 0.10);
+        --radius-sm: 8px;
+        --radius-md: 12px;
+        --radius-lg: 18px;
+        --radius-xl: 28px;
+        --shell: 1460px;
+      }
+      * { box-sizing: border-box; }
+      *, *::before, *::after { min-width: 0; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        overflow-x: hidden;
+        background:
+          radial-gradient(circle at top left, rgba(9, 103, 114, 0.10), transparent 28%),
+
+          radial-gradient(circle at 85% 48%, rgba(140, 91, 83, 0.06), transparent 22%),
+          linear-gradient(180deg, #fffefc 0%, #f8f3eb 34%, #efe8de 100%);
+        color: var(--ink);
+      }
+      a { color: inherit; }
+      h1, h2, h3, h4, h5, h6,
+      p, li, dt, dd, blockquote,
+      a, button, label, input, textarea,
+      .btn, .pill, .card, .mini-card, .feature-card,
+      .product-card-title, .product-card-lede, .product-scan-card,
+      .banner-card, .nav-links, .footer-links {
+        overflow-wrap: anywhere;
+        word-break: normal;
+      }
+      img { display: block; max-width: 100%; }
+      .shell { max-width: calc(var(--shell) + 48px); margin: 0 auto; padding: 24px; }
+      body[data-standalone-page="true"] .shell {
+        max-width: 1220px;
+        padding-top: 32px;
+        padding-bottom: 40px;
+      }
+      body[data-standalone-page="true"] .shell-standalone {
+        max-width: 1220px;
+      }
+      .site-header-band {
+        position: sticky;
+        top: 12px;
+        z-index: 60;
+        display: flex;
+        align-items: stretch;
+        gap: 16px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 16px;
+        padding: 0;
+        pointer-events: none;
+      }
+      .site-header-band > * {
+        pointer-events: auto;
+      }
+      .site-header-band > .nav {
+        min-width: 0;
+        flex: 1 1 0;
+      }
+      .site-header-band > .header-band-side-left {
+        min-width: 0;
+        flex: 0 0 270px;
+      }
+      .site-header-band > .header-band-side-right {
+        min-width: 0;
+        flex: 0 0 236px;
+      }
+      @media (min-width: 1181px) {
+        .site-header-band > .nav,
+        .site-header-band > .header-band-side-left,
+        .site-header-band > .header-band-side-right {
+          min-height: 248px;
+        }
+      }
+      .nav {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(236px, 330px);
+        grid-template-areas:
+          "brand search"
+          "links links"
+          "utility utility";
+        align-items: center;
+        align-self: stretch;
+        gap: 8px 14px;
+        padding: 12px 14px;
+        border: 1px solid rgba(196, 209, 203, 0.92);
+        border-radius: 18px;
+        background: rgba(255, 252, 247, 0.97);
+        backdrop-filter: blur(16px);
+        box-shadow: 0 12px 34px rgba(23, 52, 58, 0.08);
+        margin-bottom: 0;
+        min-height: 124px;
+        height: auto;
+      }
+      @media (min-width: 1181px) {
+        .nav {
+          margin-left: 0;
+          margin-right: 0;
+          margin-bottom: 0;
+          min-height: 248px;
+        }
+      }
+      .brand {
+        grid-area: brand;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+        min-height: 44px;
+        text-decoration: none;
+      }
+      .brand-mark {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        border: 1px solid rgba(239, 155, 19, 0.2);
+        background: rgba(255, 248, 235, 0.92);
+        box-shadow: 0 10px 24px rgba(23, 52, 58, 0.08);
+        object-fit: contain;
+        padding: 3px;
+        flex: 0 0 auto;
+      }
+      .brand-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        min-width: 0;
+      }
+      .brand strong {
+        font-size: 1.04rem;
+        font-weight: 700;
+        color: var(--ink);
+        letter-spacing: 0.01em;
+        line-height: 1.05;
+      }
+      .brand span {
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+      .brand-copy span:last-child {
+        display: block;
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .brand-kicker {
+        color: var(--brand);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .nav-search {
+        grid-area: search;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 10px;
+        border: 1px solid var(--line-strong);
+        border-radius: 999px;
+        background: rgba(255,255,255,0.9);
+        width: 100%;
+        max-width: 340px;
+        justify-self: end;
+      }
+      .nav-search label {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--brand);
+        white-space: nowrap;
+        flex: 0 0 auto;
+      }
+      .nav-search input {
+        border: 0;
+        background: transparent;
+        padding: 0;
+        min-width: 0;
+        flex: 1 1 auto;
+      }
+      .nav-search input:focus { outline: none; }
+      .nav-search button {
+        border: 0;
+        border-radius: 999px;
+        background: var(--brand);
+        color: #fff;
+        padding: 9px 14px;
+        min-width: 68px;
+        min-height: 44px;
+        font: inherit;
+        font-weight: 600;
+        cursor: pointer;
+        white-space: nowrap;
+        overflow-wrap: normal;
+      }
+      .nav-links {
+        grid-area: links;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 5px;
+        min-width: 0;
+        padding-top: 2px;
+      }
+      .nav-links.nav-links-primary {
+        overflow-x: auto;
+        overflow-y: visible;
+        scrollbar-width: thin;
+      }
+      .nav-links a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 auto;
+        padding: 8px 10px;
+        min-height: 40px;
+        border-radius: 999px;
+        border: 1px solid rgba(9, 103, 114, 0.18);
+        background: linear-gradient(135deg, rgba(255,253,249,0.96), rgba(220,238,237,0.82));
+        box-shadow: 0 8px 20px rgba(23, 52, 58, 0.07);
+        text-decoration: none;
+        color: #123f46;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        text-align: center;
+        overflow-wrap: normal;
+        word-break: keep-all;
+        white-space: nowrap;
+        transition: 160ms ease;
+      }
+      .nav-links a:nth-child(3n+2) {
+        background: linear-gradient(135deg, rgba(255,253,249,0.98), rgba(255,241,214,0.86));
+        border-color: rgba(239, 155, 19, 0.22);
+      }
+      .nav-links a:nth-child(3n) {
+        background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(232,244,241,0.9));
+      }
+      .nav-links a:hover,
+      .nav-links a:focus-visible {
+        color: #ffffff;
+        border-color: rgba(9, 103, 114, 0.55);
+        background: linear-gradient(135deg, #096772, #0f7f86);
+        box-shadow: 0 12px 26px rgba(9, 103, 114, 0.18);
+        transform: translateY(-1px);
+      }
+      .blog-launch-card {
+        display: grid;
+        align-content: start;
+        gap: 10px;
+        min-height: 0;
+        padding: 14px;
+        border-radius: 18px;
+        border: 1px solid rgba(196, 209, 203, 0.92);
+        background: linear-gradient(160deg, rgba(255, 252, 247, 0.96), rgba(232, 243, 246, 0.92));
+        box-shadow: 0 12px 34px rgba(23, 52, 58, 0.08);
+      }
+      .blog-launch-card.compact {
+        gap: 8px;
+        padding: 12px 14px;
+      }
+      .blog-launch-card > p { margin-bottom: 0; }
+      .blog-launch-grid {
+        display: grid;
+        gap: 10px;
+      }
+      .blog-launch-grid.compact {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .blog-launch-mini-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .blog-launch-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        min-height: 34px;
+        padding: 7px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(9, 103, 114, 0.16);
+        background: rgba(255,255,255,0.84);
+        color: var(--ink);
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+      .blog-launch-tile {
+        display: grid;
+        grid-template-columns: 78px minmax(0, 1fr);
+        gap: 10px;
+        align-items: center;
+        padding: 8px;
+        border-radius: 16px;
+        border: 1px solid rgba(9, 103, 114, 0.16);
+        background: rgba(255, 255, 255, 0.84);
+        text-decoration: none;
+        color: inherit;
+        transition: 180ms ease;
+      }
+      .blog-launch-tile:hover,
+      .blog-launch-tile:focus-visible {
+        transform: translateY(-1px);
+        border-color: rgba(9, 103, 114, 0.4);
+        box-shadow: 0 14px 28px rgba(23, 52, 58, 0.12);
+      }
+      .blog-launch-tile.pet-blog-tile {
+        background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(255,241,214,0.64));
+      }
+      .blog-launch-tile.church-blog-tile {
+        background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(220,238,237,0.72));
+      }
+      .blog-launch-art {
+        width: 78px;
+        height: 78px;
+        border-radius: 16px;
+        border: 1px solid rgba(9, 103, 114, 0.12);
+        object-fit: cover;
+        box-shadow: 0 10px 22px rgba(23, 52, 58, 0.10);
+      }
+      .blog-launch-copy {
+        display: grid;
+        gap: 4px;
+      }
+      .blog-launch-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--brand);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .blog-launch-copy strong {
+        font-size: 0.94rem;
+        line-height: 1.12;
+        color: var(--ink);
+      }
+      .blog-launch-copy span:last-child {
+        color: var(--muted);
+        font-size: 0.82rem;
+        line-height: 1.34;
+      }
+      .header-side-widget {
+        min-height: 124px;
+        height: 100%;
+        align-self: stretch;
+      }
+      @media (min-width: 1181px) {
+        .header-side-widget {
+          min-height: 248px;
+        }
+      }
+      .header-band-side {
+        display: flex;
+        align-self: stretch;
+        min-width: 0;
+      }
+      .header-band-side-left {
+        justify-self: stretch;
+      }
+      .header-band-side-right {
+        justify-self: stretch;
+      }
+      .nav-utility-row {
+        grid-area: utility;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-width: 0;
+      }
+      .nav-blog-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 42px;
+        padding: 9px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(9, 103, 114, 0.24);
+        color: #15353b;
+        text-decoration: none;
+        font-size: 0.86rem;
+        font-weight: 800;
+        box-shadow: 0 12px 26px rgba(23, 52, 58, 0.12);
+        transition: 180ms ease;
+      }
+      .nav-blog-link:hover,
+      .nav-blog-link:focus-visible {
+        transform: translateY(-1px);
+        box-shadow: 0 16px 30px rgba(23, 52, 58, 0.16);
+      }
+      .nav-blog-link.is-church {
+        border-color: rgba(10, 116, 124, 0.34);
+        background: linear-gradient(135deg, #dff6f7 0%, #bfeef0 52%, #fff2cf 100%);
+      }
+      .nav-blog-link.is-church:hover,
+      .nav-blog-link.is-church:focus-visible {
+        border-color: rgba(10, 116, 124, 0.5);
+        background: linear-gradient(135deg, #cceff2 0%, #abe7ea 52%, #ffe8b1 100%);
+      }
+      .nav-blog-link.is-pet {
+        border-color: rgba(239, 155, 19, 0.34);
+        background: linear-gradient(135deg, #fff1f7 0%, #ffe0ef 45%, #ffe5b9 100%);
+      }
+      .nav-blog-link.is-pet:hover,
+      .nav-blog-link.is-pet:focus-visible {
+        border-color: rgba(239, 155, 19, 0.5);
+        background: linear-gradient(135deg, #ffe8f2 0%, #ffd5e8 45%, #ffdca2 100%);
+      }
+      .nav-utility-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 42px;
+        padding: 9px 14px;
+        border: 1px solid rgba(9, 103, 114, 0.34);
+        border-radius: 999px;
+        background: linear-gradient(135deg, #fffdf9 0%, #dceeed 48%, #ffe9bd 100%);
+        color: var(--ink);
+        box-shadow: 0 14px 34px rgba(23, 52, 58, 0.16), inset 0 1px 0 rgba(255,255,255,0.9);
+        font-size: 0.88rem;
+        font-weight: 800;
+        text-decoration: none;
+        white-space: nowrap;
+        overflow-wrap: normal;
+        transition: 180ms ease;
+      }
+      .nav-utility-link:hover,
+      .nav-utility-link:focus-visible {
+        transform: translateY(-1px);
+        box-shadow: 0 16px 30px rgba(23, 52, 58, 0.18), inset 0 1px 0 rgba(255,255,255,0.92);
+      }
+      .nav-utility-link.is-toolbox {
+        min-width: 196px;
+      }
+      .panel,
+      .card,
+      .feature-card,
+      .stat-card,
+      .mini-card,
+      .faq-item,
+      .path-card,
+      .timeline-step,
+      .quote-card,
+      .editorial-card,
+      .product,
+      .dock-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-md);
+      }
+      .hero {
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--radius-xl);
+        padding: 40px;
+        margin-bottom: 22px;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 6px;
+        background: linear-gradient(90deg, var(--brand), var(--gold));
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto -90px -120px auto;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(9, 103, 114, 0.11), transparent 70%);
+        pointer-events: none;
+      }
+      .eyebrow {
+        color: var(--brand);
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        font-size: 0.78rem;
+        font-weight: 700;
+        margin: 0 0 10px;
+      }
+      h1, h2, h3, h4 {
+        margin: 0 0 12px;
+        color: var(--ink);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+      }
+      h1 { font-size: clamp(2.8rem, 5vw, 4.4rem); font-weight: 400; }
+      h2 { font-size: clamp(1.95rem, 3vw, 3rem); font-weight: 500; }
+      h3 { font-size: 1.35rem; font-weight: 600; }
+      h4 { font-size: 1.02rem; font-weight: 700; }
+      p, li { margin: 0 0 14px; line-height: 1.65; }
+      ul { margin: 0; padding-left: 18px; }
+      .muted { color: #52696e; }
+      .lede {
+        max-width: 780px;
+        font-size: 1.12rem;
+        font-weight: 400;
+        color: var(--ink-soft);
+      }
+      .home-explainer-strip {
+        display: grid;
+        gap: 8px;
+        max-width: 860px;
+        margin: 18px 0 0;
+        padding: 16px 18px;
+        border-radius: 20px;
+        border: 1px solid rgba(9, 103, 114, 0.18);
+        background: linear-gradient(135deg, rgba(255,255,255,0.94), rgba(255,241,214,0.56));
+        box-shadow: var(--shadow-sm);
+      }
+      .home-explainer-strip p {
+        margin: 0;
+        color: var(--ink-soft);
+        line-height: 1.55;
+      }
+      .home-explainer-strip strong {
+        color: var(--ink);
+      }
+      .mono {
+        font-family: 'Source Code Pro', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        letter-spacing: -0.01em;
+      }
+      .cta-row, .pill-row, .meta-row, .detail-list, .footer-links { display: flex; flex-wrap: wrap; gap: 10px; }
+      .cta-row { margin-top: 20px; }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        white-space: normal;
+        overflow-wrap: normal;
+        word-break: keep-all;
+        line-height: 1.16;
+        gap: 8px;
+        min-height: 44px;
+        padding: 10px 16px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        text-decoration: none;
+        background: var(--brand);
+        color: #fff;
+        font-weight: 700;
+        transition: 160ms ease;
+      }
+      .btn:hover,
+      .btn:focus-visible,
+      .text-link:hover,
+      .text-link:focus-visible,
+      .card-link:hover,
+      .card-link:focus-visible {
+        transform: translateY(-1px);
+      }
+      .btn:hover,
+      .btn:focus-visible { background: var(--brand-deep); }
+      .btn.secondary {
+        background: #fff;
+        color: var(--ink);
+        border-color: var(--line-strong);
+      }
+      .btn.secondary:hover,
+      .btn.secondary:focus-visible { background: #f9f7f2; }
+      .btn.ghost {
+        background: transparent;
+        color: var(--brand);
+        border-color: rgba(9, 103, 114, 0.24);
+      }
+      .section { margin-top: 24px; }
+      .section-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 16px; }
+      .grid {
+        display: grid;
+        gap: 18px;
+        align-items: start;
+      }
+      .grid.two { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+      .grid.three { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+      .grid.four { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+      .grid.five { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+      .guided-path-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+      .split {
+        display: grid;
+        grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.95fr);
+        gap: 18px;
+        align-items: start;
+      }
+      .hero-copy {
+        display: grid;
+        align-content: start;
+        gap: 14px;
+      }
+      .hero-copy > * { margin-bottom: 0; }
+      .hero-aside-grid {
+        display: grid;
+        gap: 14px;
+        align-content: start;
+      }
+      .hero-aside-grid.compact-highlights {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .hero-aside-grid.compact-highlights > :first-child {
+        grid-column: 1 / -1;
+      }
+      .hero-summary-list {
+        display: grid;
+        gap: 10px;
+        margin: 4px 0 0;
+        padding-left: 18px;
+      }
+      .hero-summary-list li {
+        margin: 0;
+        color: var(--ink-soft);
+      }
+
+      .feature-card,
+      .stat-card,
+      .mini-card,
+      .faq-item,
+      .path-card,
+      .timeline-step,
+      .quote-card,
+      .editorial-card,
+      .dock-card {
+        border-radius: var(--radius-lg);
+        padding: 24px;
+      }
+      .quote-card {
+        background: linear-gradient(160deg, #0f5f68, #1a4b4c);
+        color: #fff;
+        border-color: rgba(9, 103, 114, 0.5);
+      }
+      .quote-card h2,
+      .quote-card h3,
+      .quote-card h4,
+      .quote-card p:not(.eyebrow) { color: #fff; }
+      .quote-card .muted { color: rgba(255,255,255,0.88); }
+      .quote-card .eyebrow { color: #ffe4b5; }
+      .stat-card strong,
+      .stat-number {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 2.15rem;
+        line-height: 1;
+        color: var(--brand);
+        font-weight: 700;
+      }
+      .stat-label { color: var(--muted); }
+      .product-preview-section {
+        padding: 26px;
+        border-radius: 24px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(220,238,237,0.54));
+      }
+      .product-demo-video-section {
+        padding: 26px;
+        border-radius: 24px;
+        border-color: rgba(12, 74, 110, 0.22);
+        background: linear-gradient(135deg, rgba(248, 250, 252, 0.98), rgba(224, 242, 254, 0.58));
+      }
+      .product-demo-video {
+        display: block;
+        width: 100%;
+        max-height: min(68vh, 720px);
+        border-radius: 22px;
+        border: 1px solid rgba(12, 74, 110, 0.24);
+        background: #07111f;
+        box-shadow: var(--shadow);
+      }
+      .product-hero-proof-card {
+        background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(220,238,237,0.52));
+        border-color: rgba(9, 103, 114, 0.22);
+      }
+      .product-hero-preview {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: contain;
+        border-radius: 18px;
+        border: 1px solid rgba(196, 209, 203, 0.78);
+        background: #fffdf9;
+        margin-bottom: 14px;
+        box-shadow: var(--shadow-sm);
+      }
+      .checkout-handoff-card {
+        padding: 24px;
+        border-radius: 24px;
+        border-color: rgba(9, 103, 114, 0.20);
+        background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(220,238,237,0.62));
+      }
+      .checkout-handoff-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+        gap: 18px;
+        align-items: start;
+      }
+      .checkout-handoff-steps {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .checkout-handoff-steps article {
+        display: grid;
+        gap: 8px;
+        padding: 14px;
+        border-radius: 16px;
+        border: 1px solid rgba(9, 103, 114, 0.16);
+        background: rgba(255,255,255,0.86);
+      }
+      .checkout-step-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        background: var(--brand);
+        color: #fff;
+        font-weight: 800;
+      }
+      .checkout-handoff-steps strong { color: var(--ink); }
+      .checkout-handoff-steps .muted { margin-bottom: 0; }
+      .checkout-handoff-actions { margin-top: 16px; }
+      .product-preview-copy-card {
+        align-self: stretch;
+        background: rgba(255,255,255,0.84);
+      }
+      .preview-card {
+        margin: 0;
+        padding: 10px;
+        border: 1px solid var(--line-strong);
+        border-radius: 22px;
+        background: rgba(255,255,255,0.88);
+        box-shadow: var(--shadow-sm);
+      }
+      .preview-card img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: contain;
+        background: #fffdf9;
+        border-radius: 16px;
+        border: 1px solid rgba(196, 209, 203, 0.72);
+      }
+      .lightbox-trigger {
+        display: block;
+        width: 100%;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        cursor: zoom-in;
+        text-align: left;
+      }
+      .lightbox-trigger:focus-visible {
+        outline: 3px solid rgba(9, 103, 114, 0.55);
+        outline-offset: 4px;
+        border-radius: 18px;
+      }
+      .preview-card figcaption {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        color: var(--ink-soft);
+        font-size: 0.95rem;
+        font-weight: 700;
+      }
+      .zoom-hint {
+        color: var(--brand);
+        white-space: nowrap;
+      }
+      .image-lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(14px, 3vw, 36px);
+        background: rgba(5, 13, 22, 0.88);
+        backdrop-filter: blur(8px);
+      }
+      .image-lightbox.is-open { display: flex; }
+      .lightbox-panel {
+        position: relative;
+        width: min(1400px, 96vw);
+        max-height: 94vh;
+        display: grid;
+        gap: 12px;
+        padding: clamp(10px, 1.6vw, 18px);
+        border: 1px solid rgba(255,255,255,0.22);
+        border-radius: 22px;
+        background: rgba(255,255,255,0.96);
+        box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+      }
+      .lightbox-panel img {
+        width: 100%;
+        max-height: calc(94vh - 96px);
+        object-fit: contain;
+        border-radius: 16px;
+        background: #07111f;
+      }
+      .lightbox-caption {
+        margin: 0;
+        color: var(--ink-soft);
+        font-weight: 700;
+      }
+      .lightbox-close {
+        position: absolute;
+        top: -14px;
+        right: -14px;
+        min-width: 42px;
+        min-height: 42px;
+        border: 0;
+        border-radius: 999px;
+        background: var(--brand);
+        color: #fff;
+        font: inherit;
+        font-weight: 800;
+        cursor: pointer;
+        box-shadow: var(--shadow-md);
+      }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        min-height: 30px;
+        padding: 5px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--ink-soft);
+        text-decoration: none;
+        font-size: 0.92rem;
+        transition: 160ms ease;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+      .pill:hover,
+      .pill:focus-visible {
+        border-color: rgba(9, 103, 114, 0.22);
+        color: var(--brand);
+        transform: translateY(-1px);
+      }
+      .pill.is-accent {
+        border-color: transparent;
+        background: var(--gold-soft);
+        color: #9a5d00;
+      }
+      .product-list { display: grid; gap: 18px; }
+      .store-offer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 18px;
+        grid-auto-flow: dense;
+        align-content: start;
+      }
+      .store-offer-grid .product {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .store-offer-grid .product-card-actions {
+        margin-top: auto;
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .store-offer-grid .product-card-actions .muted {
+        max-width: none !important;
+      }
+      .store-offer-grid .product-card-actions .cta-row {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+      .product {
+        border-radius: var(--radius-lg);
+        padding: 24px;
+        background: linear-gradient(180deg, #fffdfa, #faf5ef);
+      }
+      .product-card-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+        align-items: start;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+      }
+      .product-card-title { max-width: 680px; }
+      .product-card-lede {
+        margin-bottom: 14px;
+        font-size: 1.02rem;
+        color: var(--ink-soft);
+      }
+      .product-scan-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin: 14px 0;
+      }
+      .product-scan-card {
+        padding: 14px;
+        border: 1px solid rgba(196, 209, 203, 0.74);
+        border-radius: 16px;
+        background: rgba(255,255,255,0.82);
+      }
+      .product-scan-card h4 {
+        margin-bottom: 6px;
+        font-size: 0.92rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--brand);
+      }
+      .product-scan-card p { margin-bottom: 0; }
+      .product-card-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: 16px;
+        padding-top: 14px;
+        border-top: 1px solid rgba(196, 209, 203, 0.68);
+      }
+      .product-card-actions .cta-row { margin-top: 0; }
+      .product h3 a,
+      .text-link,
+      .card-link { text-decoration: none; color: var(--ink); }
+      .text-link { color: var(--brand); }
+      .bullet-list { display: grid; gap: 8px; }
+      .bullet-list li { color: var(--ink-soft); }
+      .mini-stack { display: grid; gap: 14px; align-content: start; }
+      .icon-line {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #b46a00;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .editorial-card {
+        background: linear-gradient(180deg, #fffefa, #f8f3ea);
+      }
+      .accent-card {
+        border-color: rgba(9, 103, 114, 0.24);
+        background: linear-gradient(145deg, #fffefa 0%, var(--sky) 100%);
+      }
+      .warm-card {
+        border-color: rgba(239, 155, 19, 0.30);
+        background: linear-gradient(145deg, #fffdfa 0%, var(--cream) 100%);
+      }
+      .strong-card {
+        border-color: rgba(9, 103, 114, 0.42);
+        background: linear-gradient(145deg, #0d6570 0%, #17343a 100%);
+        color: #fff;
+      }
+      .strong-card h2,
+      .strong-card h3,
+      .strong-card h4,
+      .strong-card p:not(.eyebrow),
+      .strong-card .muted,
+      .strong-card .stat-label { color: rgba(255,255,255,0.90); }
+      .strong-card .eyebrow { color: #ffe4b5; }
+      .store-hero-panel {
+        position: relative;
+        display: grid;
+        gap: 20px;
+      }
+      .store-hero-intro {
+        display: grid;
+        gap: 16px;
+        align-items: start;
+      }
+      .store-hero-copy {
+        display: grid;
+        gap: 0;
+      }
+      .store-hero-actions {
+        margin-top: 0;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 12px;
+      }
+      .store-hero-actions .btn {
+        min-height: 48px;
+        padding: 11px 18px;
+      }
+      .store-hero-cards {
+        gap: 16px;
+        align-items: stretch;
+      }
+      .store-hero-cards > article {
+        min-height: 178px;
+        position: relative;
+        overflow: hidden;
+      }
+      .store-hero-cards > article::after {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        right: -34px;
+        bottom: -42px;
+        width: 120px;
+        height: 120px;
+        border-radius: 999px;
+        background: rgba(9, 103, 114, 0.08);
+        pointer-events: none;
+      }
+      .store-hero-cards > article > * { position: relative; z-index: 1; }
+
+      .store-hero-cards .strong-card::after { background: rgba(255,255,255,0.12); }
+      .dock-card {
+        background: linear-gradient(180deg, #fffdf9, #f6efe6);
+      }
+      .store-filter-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 2.2fr) repeat(3, minmax(150px, 1fr)) auto;
+        gap: 12px;
+        align-items: end;
+      }
+      .store-featured-guidance-stack {
+        display: grid;
+        gap: 22px;
+        align-items: start;
+      }
+      .start-here-first-clicks-stack {
+        display: grid;
+        gap: 18px;
+        align-items: start;
+      }
+      .store-main-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.75fr) minmax(320px, 0.9fr);
+        gap: 22px;
+        align-items: start;
+      }
+      .store-main-primary {
+        display: grid;
+        gap: 22px;
+        align-content: start;
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .store-main-secondary {
+        display: grid;
+        gap: 18px;
+        align-content: start;
+        grid-column: 2;
+        grid-row: 1;
+      }
+      #store-product-results {
+        grid-column: auto;
+        grid-row: auto;
+      }
+      .store-compare-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) repeat(3, minmax(90px, 0.5fr));
+        gap: 12px;
+        align-items: start;
+      }
+      .hero-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 16px;
+        padding: 6px 10px;
+        border: 1px solid rgba(9, 103, 114, 0.16);
+        border-radius: 999px;
+        background: rgba(9, 103, 114, 0.05);
+        color: var(--ink-soft);
+        font-size: 0.92rem;
+      }
+      .footer {
+        margin: 32px 0 10px;
+        padding: 24px;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--line);
+        background: rgba(255, 252, 247, 0.92);
+        color: var(--muted);
+        box-shadow: var(--shadow-sm);
+      }
+      .product:hover,
+      .feature-card:hover,
+      .path-card:hover,
+      .editorial-card:hover,
+      .dock-card:hover,
+      .mini-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 26px 54px rgba(23, 52, 58, 0.12);
+        border-color: rgba(9, 103, 114, 0.18);
+      }
+      .footer-links a { color: var(--brand); text-decoration: none; }
+      input[type="text"],
+      textarea,
+      select {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--line-strong);
+        background: #fff;
+        color: var(--ink);
+        font: inherit;
+      }
+      input[type="text"]::placeholder,
+      textarea::placeholder { color: #8a9b9f; }
+      .search-panel {
+        display: grid;
+        gap: 12px;
+        padding: 18px;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--line);
+        background: var(--panel-soft);
+      }
+      .store-filter-form { display: grid; gap: 14px; }
+      .store-filter-field { display: grid; gap: 6px; }
+      .store-filter-actions {
+        margin-top: 0;
+        align-self: end;
+      }
+      .store-results-summary {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+        gap: 16px;
+        align-items: center;
+        margin-top: 16px;
+        padding: 18px;
+        border-radius: 18px;
+        border: 1px solid rgba(9, 103, 114, 0.18);
+        background: linear-gradient(135deg, rgba(220,238,237,0.82), rgba(255,247,232,0.74));
+      }
+      .store-result-count-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+      .store-result-count {
+        display: grid;
+        gap: 2px;
+        min-height: 74px;
+        padding: 12px;
+        border-radius: 16px;
+        border: 1px solid rgba(9, 103, 114, 0.16);
+        background: rgba(255,255,255,0.84);
+        color: var(--ink);
+        text-decoration: none;
+      }
+      .store-result-count strong {
+        font-size: 1.55rem;
+        line-height: 1;
+        color: var(--brand);
+      }
+      .store-result-count span {
+        color: var(--ink-soft);
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+      .store-active-filter-pills .pill { min-height: 36px; }
+      .store-search-ran {
+        margin-top: 16px;
+        padding: 16px 18px;
+        border-radius: 16px;
+        background: rgba(220,238,237,0.62);
+      }
+      .affiliate-banner {
+        padding: 24px;
+        border-radius: 24px;
+        background: linear-gradient(135deg, rgba(255,253,249,0.98), rgba(220,238,237,0.88));
+        overflow: hidden;
+      }
+      .affiliate-scroll {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(250px, 310px);
+        gap: 16px;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: inline proximity;
+        padding: 4px 4px 14px;
+      }
+      .affiliate-tile {
+        scroll-snap-align: start;
+        display: grid;
+        gap: 10px;
+        align-content: start;
+        min-height: 390px;
+        padding: 18px;
+        border: 1px solid rgba(9, 103, 114, 0.18);
+        border-radius: 20px;
+        background: rgba(255,255,255,0.92);
+        box-shadow: var(--shadow-sm);
+      }
+      .affiliate-tile h3,
+      .affiliate-tile h4 {
+        margin-bottom: 0;
+      }
+      .resource-card-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .resource-chip {
+        display: inline-flex;
+        align-items: center;
+        min-height: 32px;
+        padding: 6px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(9, 103, 114, 0.14);
+        background: rgba(9, 103, 114, 0.07);
+        color: var(--brand);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+      }
+      .resource-card-guide-note {
+        margin: 0;
+        color: var(--ink-soft);
+        font-size: 0.93rem;
+      }
+      .resource-card-guide-note strong {
+        color: var(--ink);
+      }
+      .resource-card-actions {
+        margin-top: auto;
+      }
+      .resource-card-disclaimer {
+        margin: 0;
+        color: #4b635f;
+        font-size: 0.82rem;
+        line-height: 1.45;
+      }
+      .resource-picture {
+        display: grid;
+        place-items: center;
+        aspect-ratio: 16 / 9;
+        min-height: 126px;
+        margin-bottom: 4px;
+        padding: 12px;
+        border-radius: 18px;
+        border: 1px solid rgba(239, 155, 19, 0.24);
+        background:
+          radial-gradient(circle at 20% 20%, rgba(239,155,19,0.22), transparent 28%),
+          radial-gradient(circle at 78% 28%, rgba(9,103,114,0.20), transparent 30%),
+          linear-gradient(145deg, #fff7e8 0%, #dceeed 100%);
+        color: var(--ink);
+        text-align: center;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+      }
+      .resource-picture img {
+        width: 100%;
+        height: 100%;
+        min-height: 126px;
+        object-fit: cover;
+        border-radius: 18px;
+        border: 1px solid rgba(255,255,255,0.92);
+        box-shadow: inset 0 0 0 1px rgba(9, 103, 114, 0.06);
+      }
+      .resource-picture.is-amazon-photo {
+        padding: 16px;
+        background:
+          radial-gradient(circle at 20% 20%, rgba(239,155,19,0.14), transparent 30%),
+          radial-gradient(circle at 82% 24%, rgba(9,103,114,0.12), transparent 32%),
+          linear-gradient(180deg, rgba(255,255,255,0.99), rgba(246,243,238,0.92));
+      }
+      .resource-picture.is-amazon-photo img {
+        object-fit: contain;
+        border: 0;
+        box-shadow: none;
+        background: transparent;
+      }
+      .resource-card-amazon-title {
+        margin-top: -2px;
+        font-size: 0.9rem;
+        color: var(--ink-soft);
+      }
+      .resource-picture.compact { min-height: 86px; padding: 14px; }
+      .resource-picture.compact img {
+        min-height: 86px;
+        border-radius: 14px;
+      }
+      .resource-picture span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.72);
+        border: 1px solid rgba(255,255,255,0.92);
+      }
+      .affiliate-category-grid,
+      .guide-result-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+      }
+      .affiliate-category-card,
+      .guide-result-card {
+        display: grid;
+        gap: 10px;
+        padding: 16px;
+        border-radius: 18px;
+        border: 1px solid rgba(9, 103, 114, 0.14);
+        background: rgba(255,255,255,0.9);
+        box-shadow: var(--shadow-sm);
+      }
+      .guide-result-card {
+        background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,243,238,0.92));
+      }
+      .affiliate-category-card p,
+      .guide-result-card p {
+        margin-bottom: 0;
+      }
+      .email-capture-shell {
+        margin-top: 32px;
+        padding: 24px;
+        border-radius: 24px;
+        border: 1px solid rgba(9, 103, 114, 0.16);
+        background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(220,238,237,0.62));
+        box-shadow: var(--shadow-sm);
+      }
+      .email-capture-shell iframe {
+        width: 100%;
+        min-height: 440px;
+        border: 0;
+        border-radius: 18px;
+        background: rgba(255,255,255,0.92);
+      }
+      .email-capture-plan {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin: 16px 0;
+      }
+      .email-capture-plan .mini-card {
+        padding: 16px;
+        box-shadow: none;
+        background: rgba(255,255,255,0.78);
+      }
+      .store-top-corner-grid:not(.site-header-band) {
+        display: contents;
+      }
+      .store-corner-card {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        height: 100%;
+        padding: 14px 15px;
+        border: 1px solid rgba(9, 103, 114, 0.2);
+        border-radius: 20px;
+        background: rgba(255,253,249,0.97);
+        box-shadow: 0 12px 32px rgba(23, 52, 58, 0.10);
+        min-height: 0;
+        min-width: 0;
+      }
+      .store-corner-card h2 {
+        margin-bottom: 4px;
+        font-size: clamp(0.98rem, 0.95vw, 1.16rem);
+      }
+      .store-corner-card .muted {
+        margin-bottom: 8px;
+        font-size: 0.88rem;
+        line-height: 1.38;
+        overflow-wrap: anywhere;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+      .store-corner-deal {
+        background: linear-gradient(145deg, rgba(255,253,249,0.98), rgba(255,241,214,0.88));
+      }
+      .store-corner-deal .pill-row {
+        margin-top: auto;
+      }
+      .store-corner-spacer {
+        min-height: 1px;
+      }
+      .store-weather-card {
+        background:
+          radial-gradient(circle at 88% 18%, rgba(255, 225, 150, 0.62), transparent 28%),
+          linear-gradient(145deg, rgba(255,253,249,0.99), rgba(220,238,237,0.90));
+        display: grid;
+        align-content: start;
+        gap: 10px;
+        min-height: 0;
+        overflow: visible;
+      }
+      .store-weather-visual {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 60px;
+      }
+      .store-weather-icon {
+        width: 58px;
+        height: 58px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        border-radius: 18px;
+        background: rgba(255,255,255,0.86);
+        box-shadow: 0 14px 34px rgba(23, 52, 58, 0.14);
+        font-size: 1.95rem;
+        overflow: hidden;
+      }
+      .store-weather-icon img { width: 54px; height: 54px; object-fit: contain; }
+      .store-weather-status {
+        min-height: 0;
+        margin: 0;
+        overflow: hidden;
+        font-weight: 650;
+        color: var(--ink-soft);
+        line-height: 1.42;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+      .store-weather-location {
+        display: none;
+        margin: 0;
+        color: var(--brand);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .store-weather-card.has-weather .store-weather-location { display: block; }
+      .store-weather-card button[disabled] {
+        opacity: 0.72;
+        cursor: wait;
+      }
+      .store-weather-card button.pill {
+        justify-content: center;
+        min-height: 44px;
+        padding: 9px 12px;
+        line-height: 1.12;
+      }
+      .support-chat-widget {
+        position: relative;
+        z-index: 45;
+        width: auto;
+        margin: 0;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        pointer-events: none;
+      }
+      .support-chat-toggle,
+      .support-chat-panel {
+        pointer-events: auto;
+      }
+      .support-chat-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 42px;
+        padding: 9px 14px;
+        border: 1px solid rgba(9, 103, 114, 0.34);
+        border-radius: 999px;
+        background: linear-gradient(135deg, #fffdf9 0%, #dceeed 48%, #ffe9bd 100%);
+        color: var(--ink);
+        box-shadow: 0 14px 34px rgba(23, 52, 58, 0.16), inset 0 1px 0 rgba(255,255,255,0.9);
+        font: inherit;
+        font-size: 0.88rem;
+        font-weight: 800;
+        cursor: pointer;
+        width: max-content;
+        white-space: nowrap;
+        overflow-wrap: normal;
+      }
+      .support-chat-toggle-centered {
+        min-width: 196px;
+      }
+      .support-chat-panel {
+        display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        margin-top: 0;
+        width: min(420px, calc(100vw - 48px));
+        max-height: min(620px, calc(100vh - 176px));
+        overflow: auto;
+        padding: 14px;
+        border: 1px solid rgba(9, 103, 114, 0.22);
+        border-radius: 20px;
+        background: rgba(255, 253, 249, 0.98);
+        box-shadow: 0 24px 56px rgba(23, 52, 58, 0.18);
+      }
+      .support-chat-widget.is-open .support-chat-panel { display: block; }
+      .support-chat-panel textarea,
+      .store-weather-city-form input {
+        width: 100%;
+        border: 1px solid var(--line-strong);
+        border-radius: 14px;
+        background: rgba(255,255,255,0.94);
+        color: var(--ink);
+        font: inherit;
+      }
+      .support-chat-panel textarea {
+        min-height: 98px;
+        resize: vertical;
+        padding: 10px 12px;
+      }
+      .support-chat-response {
+        margin-top: 10px;
+        padding: 10px 12px;
+        border-radius: 14px;
+        background: rgba(220,238,237,0.64);
+        color: var(--ink-soft);
+        font-size: 0.94rem;
+      }
+      .support-chat-response:empty { display: none; }
+      .support-chat-fineprint {
+        margin-top: 8px;
+        font-size: 0.78rem;
+        line-height: 1.35;
+        color: var(--muted);
+      }
+      .store-weather-city-form {
+        display: none;
+        gap: 7px;
+        margin-top: 8px;
+      }
+      .store-weather-card.is-fallback .store-weather-city-form { display: grid; }
+      .store-weather-city-form input { padding: 8px 10px; }
+      .advanced-amazon-shell {
+        position: relative;
+        overflow: hidden;
+        padding: clamp(22px, 3vw, 34px);
+        border-radius: 26px;
+        border: 1px solid rgba(9, 103, 114, 0.26);
+        background:
+          radial-gradient(circle at 90% 10%, rgba(239,155,19,0.18), transparent 28%),
+          radial-gradient(circle at 8% 92%, rgba(9,103,114,0.16), transparent 30%),
+          linear-gradient(135deg, rgba(255,253,249,0.98), rgba(220,238,237,0.88));
+        box-shadow: 0 24px 58px rgba(23, 52, 58, 0.13);
+      }
+      .advanced-amazon-title-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .advanced-amazon-tooltip {
+        width: 28px;
+        height: 28px;
+        border: 1px solid rgba(9,103,114,0.28);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--brand);
+        font-weight: 800;
+        cursor: help;
+      }
+      .advanced-amazon-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(270px, 0.85fr);
+        gap: 18px;
+        align-items: start;
+      }
+      .advanced-amazon-form {
+        display: grid;
+        gap: 12px;
+        padding: 16px;
+        border-radius: 20px;
+        border: 1px solid rgba(9,103,114,0.18);
+        background: rgba(255,255,255,0.82);
+      }
+      .advanced-amazon-form textarea {
+        width: 100%;
+        min-height: 112px;
+        resize: vertical;
+        padding: 14px;
+        border: 1px solid var(--line-strong);
+        border-radius: 18px;
+        background: rgba(255,255,255,0.96);
+        color: var(--ink);
+        font: inherit;
+      }
+      .advanced-amazon-chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+      .advanced-amazon-chip {
+        border: 1px solid rgba(9,103,114,0.22);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--brand);
+        min-height: 34px;
+        padding: 7px 10px;
+        font: inherit;
+        font-size: 0.9rem;
+        cursor: pointer;
+      }
+      .advanced-amazon-state {
+        min-height: 52px;
+        padding: 12px 14px;
+        border-radius: 16px;
+        background: rgba(255,255,255,0.78);
+        color: var(--ink-soft);
+      }
+      .advanced-amazon-results {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+        margin-top: 18px;
+      }
+      .advanced-amazon-card {
+        display: grid;
+        gap: 10px;
+        padding: 14px;
+        border-radius: 20px;
+        border: 1px solid rgba(9,103,114,0.18);
+        background: rgba(255,255,255,0.94);
+        box-shadow: var(--shadow-sm);
+      }
+      .advanced-amazon-card img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: contain;
+        border: 1px solid var(--line-strong);
+        border-radius: 16px;
+        background: #fff;
+        padding: 8px;
+      }
+      .advanced-amazon-card h3 { font-size: 1.05rem; margin-bottom: 0; }
+      .advanced-amazon-card p { margin-bottom: 0; }
+      .advanced-amazon-note-list { display: grid; gap: 8px; padding-left: 18px; }
+      .store-sales-banner-grid {
+        display: grid;
+        grid-template-columns: minmax(296px, 340px) minmax(0, 1fr);
+        grid-template-areas: "rail main";
+        justify-content: stretch;
+        gap: 22px;
+        align-items: start;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .store-sales-banner-main {
+        grid-area: main;
+        min-width: 0;
+        padding-top: 0;
+      }
+      .store-sales-side {
+        grid-area: rail;
+        position: relative;
+        top: auto;
+        height: min(1120px, calc(100vh - 104px));
+        max-height: 1120px;
+        min-height: 0;
+        padding: 12px;
+        border: 1px solid rgba(9, 103, 114, 0.24);
+        border-radius: 24px;
+        background:
+          radial-gradient(circle at 12% 8%, rgba(239,155,19,0.22), transparent 30%),
+          radial-gradient(circle at 82% 92%, rgba(9,103,114,0.18), transparent 30%),
+          linear-gradient(180deg, rgba(255,253,249,0.98), rgba(246,243,238,0.9));
+        box-shadow: 0 22px 52px rgba(23, 52, 58, 0.14);
+        overflow: hidden;
+      }
+      .store-sales-side::before,
+      .store-sales-side::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 34px;
+        z-index: 2;
+        pointer-events: none;
+      }
+      .store-sales-side::before { top: 0; background: linear-gradient(180deg, rgba(255,253,249,0.94), transparent); }
+      .store-sales-side::after { bottom: 0; background: linear-gradient(0deg, rgba(246,243,238,0.94), transparent); }
+      .store-sales-side-head {
+        position: relative;
+        z-index: 3;
+        margin-bottom: 10px;
+        padding: 12px;
+        border-radius: 18px;
+        border: 1px solid rgba(9, 103, 114, 0.2);
+        background: rgba(255,255,255,0.98);
+        box-shadow: var(--shadow-sm);
+      }
+      .store-sales-side-head h2 {
+        margin-bottom: 4px;
+        font-size: clamp(1.15rem, 1.2vw, 1.42rem);
+      }
+      .store-sales-viewport {
+        height: calc(100% - 168px);
+        min-height: 520px;
+        overflow: hidden;
+        mask-image: linear-gradient(180deg, transparent 0, #000 26px, #000 calc(100% - 26px), transparent 100%);
+      }
+      .store-sales-track {
+        display: grid;
+        gap: 14px;
+        animation: storeBannerDrift 840s linear infinite;
+        will-change: transform;
+      }
+      .store-sales-side:hover .store-sales-track,
+      .store-sales-side:focus-within .store-sales-track,
+      .store-sales-mobile:hover .store-sales-track,
+      .store-sales-mobile:focus-within .store-sales-track {
+        animation-play-state: paused;
+      }
+      @keyframes storeBannerDrift {
+        from { transform: translateY(0); }
+        to { transform: translateY(-50%); }
+      }
+      .store-sales-card {
+        display: grid;
+        gap: 10px;
+        padding: 12px;
+        border: 1px solid rgba(9, 103, 114, 0.24);
+        border-radius: 20px;
+        background: #fffdf9;
+        box-shadow: 0 14px 34px rgba(23, 52, 58, 0.13);
+      }
+      .store-sales-image-link {
+        display: block;
+        border-radius: 14px;
+        overflow: hidden;
+        text-decoration: none;
+        background: #fffdf9;
+      }
+      .store-sales-card img {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        border-radius: 14px;
+        border: 1px solid var(--line-strong);
+        background: #fffdf9;
+      }
+      .store-sales-card.is-amazon img {
+        object-fit: contain;
+        padding: 8px;
+      }
+      .store-sales-card h3 {
+        margin-bottom: 0;
+        font-size: 1.08rem;
+      }
+      .store-sales-card.is-amazon {
+        border-color: rgba(239, 155, 19, 0.32);
+      }
+      .store-sales-card p { margin-bottom: 0; }
+      .store-sales-card .muted {
+        font-size: 0.94rem;
+        line-height: 1.5;
+      }
+      .store-sales-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
+      .store-sales-meta .pill {
+        min-height: 30px;
+        padding: 5px 9px;
+        font-size: 0.78rem;
+      }
+      .store-sales-actions {
+        display: grid;
+        gap: 8px;
+        margin-top: 2px;
+      }
+      .store-sales-actions .btn {
+        width: 100%;
+        min-height: 38px;
+        justify-content: center;
+        padding: 8px 10px;
+        font-size: 0.9rem;
+      }
+      .store-sales-disclosure {
+        font-size: 0.78rem;
+        line-height: 1.35;
+        color: var(--muted);
+        padding-top: 2px;
+      }
+      .store-sales-ad-slot {
+        display: grid;
+        gap: 8px;
+        margin-top: 14px;
+        padding: 12px;
+        border: 1px dashed rgba(9, 103, 114, 0.30);
+        border-radius: 18px;
+        background: rgba(255,255,255,0.82);
+      }
+      .store-sales-ad-placeholder {
+        display: grid;
+        place-items: center;
+        min-height: 180px;
+        padding: 14px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, rgba(220,238,237,0.68), rgba(255,241,214,0.52));
+        color: var(--ink-soft);
+        text-align: center;
+        font-size: 0.92rem;
+      }
+      .store-sales-mobile {
+        display: none;
+        margin-bottom: 22px;
+        padding: 18px;
+        border-radius: 22px;
+        border: 1px solid rgba(9, 103, 114, 0.24);
+        background: linear-gradient(135deg, rgba(255,253,249,0.98), rgba(220,238,237,0.75));
+        box-shadow: 0 18px 42px rgba(23, 52, 58, 0.12);
+        overflow: hidden;
+      }
+      .store-sales-mobile .store-sales-viewport {
+        height: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
+        mask-image: none;
+        padding-bottom: 10px;
+      }
+      .store-sales-mobile .store-sales-track {
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(230px, 76vw);
+        grid-template-columns: none;
+        animation: storeBannerSlide 720s linear infinite;
+      }
+      @keyframes storeBannerSlide {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .store-sales-track {
+          animation: none !important;
+          transform: none !important;
+        }
+      }
+      @media (max-width: 1500px) {
+        .site-header-band,
+        .site-header-band.store-top-corner-grid {
+          gap: 12px;
+          margin: 0 0 12px;
+          padding: 0;
+        }
+        .site-header-band > .header-band-side-left { flex-basis: 248px; }
+        .site-header-band > .header-band-side-right { flex-basis: 220px; }
+      }
+      @media (max-width: 1180px) {
+        .site-header-band,
+        .site-header-band.store-top-corner-grid {
+          position: static;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: stretch;
+          gap: 12px;
+          margin: 0 0 12px;
+        }
+        .site-header-band > .nav {
+          order: 0;
+          flex: 1 1 100%;
+          width: 100%;
+          justify-self: stretch;
+        }
+        .site-header-band > .header-band-side-left {
+          order: 1;
+        }
+        .site-header-band > .header-band-side-right {
+          order: 2;
+        }
+        .site-header-band > .header-band-side-left,
+        .site-header-band > .header-band-side-right {
+          flex: 1 1 calc(50% - 6px);
+          min-width: min(280px, 100%);
+          width: auto;
+          justify-self: stretch;
+        }
+        .site-header-band .nav,
+        .header-band-side-left,
+        .header-band-side-right {
+          grid-column-start: 1;
+          grid-column-end: -1;
+        }
+        .nav {
+          position: static;
+          min-height: 0;
+          height: auto;
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "brand"
+            "search"
+            "links"
+            "utility";
+          align-items: stretch;
+          gap: 12px;
+        }
+        .nav-search {
+          max-width: none;
+          justify-self: stretch;
+        }
+        .nav-links {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          justify-content: stretch;
+          gap: 8px;
+          overflow: visible;
+          padding: 0;
+        }
+        .nav-links a {
+          width: 100%;
+          min-height: 44px;
+          padding: 9px 10px;
+          font-size: 0.9rem;
+          white-space: normal;
+          line-height: 1.14;
+        }
+        .nav-utility-row {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          align-items: stretch;
+        }
+        .nav-blog-link,
+        .support-chat-toggle {
+          width: 100%;
+        }
+        .header-side-widget {
+          min-height: 0;
+          height: auto;
+        }
+        .grid.four.store-hero-cards {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .store-front-product-grid,
+        .store-quick-path-grid {
+          align-items: start;
+        }
+        .grid.three.store-front-product-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .grid.five.store-quick-path-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .store-filter-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .store-filter-grid .cta-row {
+          grid-column: 1 / -1;
+          justify-content: flex-start;
+        }
+        .store-results-summary {
+          grid-template-columns: 1fr;
+        }
+        .store-sales-banner-grid {
+          display: block;
+          width: auto;
+          margin-left: 0;
+          margin-top: 0;
+          padding: 0;
+        }
+        .store-sales-side { display: none; }
+        .store-sales-mobile { display: block; }
+        .store-hero-actions {
+          position: static;
+          margin-right: 0;
+          max-width: none;
+        }
+      }
+      @media (max-width: 900px) {
+        .split { grid-template-columns: 1fr; }
+        .guided-path-grid {
+          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        }
+        .hero-aside-grid.compact-highlights {
+          grid-template-columns: 1fr;
+        }
+        .hero-aside-grid.compact-highlights > :first-child {
+          grid-column: auto;
+        }
+        .store-filter-grid,
+        .store-main-layout,
+        .store-compare-row,
+        .advanced-amazon-grid,
+        .email-capture-plan {
+          grid-template-columns: 1fr;
+        }
+        .store-main-primary {
+          display: block;
+        }
+        .store-main-layout > .card:first-child,
+        .store-main-secondary,
+        #store-product-results {
+          grid-column: auto;
+          grid-row: auto;
+        }
+        .store-filter-grid .cta-row {
+          justify-content: flex-start;
+        }
+      }
+      @media (max-width: 640px) {
+        .shell { padding: 16px; }
+        .hero, .card, .feature-card, .stat-card, .mini-card, .faq-item, .path-card, .timeline-step, .quote-card, .editorial-card, .product, .dock-card { padding: 20px; }
+        .site-header-band,
+        .site-header-band.store-top-corner-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin: 0 0 12px;
+        }
+        .site-header-band > .nav {
+          order: 0;
+          grid-column-start: 1;
+          grid-column-end: -1;
+        }
+        .site-header-band > .header-band-side-left {
+          order: 1;
+          grid-column-start: 1;
+          grid-column-end: -1;
+        }
+        .site-header-band > .header-band-side-right {
+          order: 2;
+          grid-column-start: 1;
+          grid-column-end: -1;
+        }
+        .site-header-band > .header-band-side-left,
+        .site-header-band > .header-band-side-right,
+        .site-header-band > .nav {
+          width: 100%;
+          justify-self: stretch;
+        }
+        .site-header-band .nav,
+        .header-band-side-left,
+        .header-band-side-right {
+          grid-column-start: 1;
+          grid-column-end: -1;
+        }
+        .nav {
+          position: static;
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "brand"
+            "search"
+            "links"
+            "utility";
+          align-items: stretch;
+          padding: 10px;
+          gap: 10px;
+          border-radius: 14px;
+          margin-bottom: 0;
+          backdrop-filter: none;
+          min-height: 0;
+          height: auto;
+        }
+        .brand {
+          gap: 8px;
+          align-items: flex-start;
+        }
+        .brand-mark {
+          width: 30px;
+          height: 30px;
+          border-radius: 10px;
+          padding: 2px;
+        }
+        .brand-kicker,
+        .brand span:last-child { display: none; }
+        .brand strong {
+          font-size: 0.96rem;
+          line-height: 1.05;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 100%;
+        }
+        .nav-search {
+          max-width: none;
+          width: 100%;
+          justify-self: stretch;
+          padding: 8px 9px;
+          gap: 7px;
+          border-radius: 14px;
+        }
+        .nav-search label { display: none; }
+        .nav-search input { font-size: 0.9rem; }
+        .nav-search button {
+          min-height: 40px;
+          padding: 8px 10px;
+          font-size: 0.86rem;
+        }
+        .nav-links {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 6px;
+          overflow: visible;
+          padding: 0;
+          justify-content: stretch;
+        }
+        .nav-links a {
+          width: 100%;
+          min-height: 44px;
+          padding: 9px 7px;
+          font-size: 0.79rem;
+          white-space: normal;
+          line-height: 1.08;
+        }
+        .blog-launch-card {
+          padding: 12px;
+          gap: 10px;
+        }
+        .blog-launch-grid,
+        .blog-launch-grid.compact {
+          grid-template-columns: 1fr;
+        }
+        .blog-launch-tile {
+          grid-template-columns: 74px minmax(0, 1fr);
+          gap: 10px;
+          padding: 8px;
+        }
+        .blog-launch-art {
+          width: 74px;
+          height: 74px;
+          border-radius: 14px;
+        }
+        .blog-launch-copy strong {
+          font-size: 0.92rem;
+        }
+        .blog-launch-copy span:last-child {
+          font-size: 0.82rem;
+        }
+        .header-side-widget {
+          min-height: 0;
+          height: auto;
+        }
+        .store-corner-card {
+          padding: 12px;
+          border-radius: 16px;
+        }
+        .store-corner-card h2 { font-size: 0.94rem; }
+        .store-corner-card .muted {
+          display: block;
+          font-size: 0.84rem;
+          line-height: 1.4;
+          margin-bottom: 0;
+        }
+        .store-corner-card .pill-row { gap: 5px; }
+        .store-corner-card .pill,
+        .store-weather-card button { font-size: 0.8rem; padding: 8px 10px; min-height: 44px; }
+        .store-weather-card {
+          gap: 8px;
+          min-height: 0;
+        }
+        .store-weather-visual {
+          min-height: 0;
+          gap: 10px;
+        }
+        .store-weather-icon {
+          width: 56px;
+          height: 56px;
+          border-radius: 18px;
+          font-size: 1.8rem;
+        }
+        .store-weather-icon img {
+          width: 52px;
+          height: 52px;
+        }
+        .store-weather-status,
+        .store-weather-location {
+          font-size: 0.84rem;
+        }
+        .support-chat-widget {
+          width: 100%;
+          margin: 0 auto;
+          justify-self: stretch;
+        }
+        .nav-utility-row {
+          display: grid;
+          grid-template-columns: 1fr;
+          justify-items: stretch;
+        }
+        .nav-blog-link,
+        .support-chat-toggle { min-height: 44px; padding: 10px 12px; width: 100%; }
+        .support-chat-panel {
+          top: calc(100% + 8px);
+          left: 0;
+          right: 0;
+          transform: none;
+          width: 100%;
+          max-height: calc(100vh - 96px);
+        }
+        .advanced-amazon-results { grid-template-columns: 1fr; }
+        .affiliate-banner {
+          padding: 18px;
+          overflow: visible;
+        }
+        .affiliate-scroll {
+          grid-auto-flow: column;
+          grid-auto-columns: minmax(260px, 82vw);
+          grid-template-columns: unset;
+          overflow-x: auto;
+          overscroll-behavior-x: contain;
+          scroll-snap-type: x proximity;
+          padding: 4px 2px 6px 0;
+        }
+        .affiliate-tile {
+          min-height: 0;
+          padding: 16px;
+          scroll-snap-align: start;
+        }
+        .product-scan-grid { grid-template-columns: 1fr; }
+        .checkout-handoff-grid,
+        .checkout-handoff-steps { grid-template-columns: 1fr; }
+        .checkout-handoff-card { padding: 16px; }
+        .store-results-summary { grid-template-columns: 1fr; padding: 14px; }
+        .store-result-count-grid { grid-template-columns: 1fr 1fr; }
+        .store-result-count { min-height: 66px; padding: 10px; }
+        .store-result-count strong { font-size: 1.35rem; }
+        .store-filter-actions .btn { min-height: 44px; }
+        .advanced-amazon-chip { min-height: 44px; padding: 10px 14px; }
+        .lightbox-panel { width: 100%; }
+        .lightbox-close { top: 8px; right: 8px; }
+      }
+    </style>
+    <script>
+      window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
+      window.tweApiUrl = function (path) {
+        const base = String(window.TWE_PUBLIC_API_BASE_URL || '').replace(/\/+$/, '');
+        const cleanPath = String(path || '').startsWith('/') ? String(path || '') : '/' + String(path || '');
+        return base ? base + cleanPath : cleanPath;
+      };
+    </script>
+  </head>
+  <body data-standalone-page="true">
+    
+    
+    
+    
+    
+    <div class="shell shell-standalone">
+      
+<style>
+  .toolbox-shell { display: grid; gap: 28px; }
+  .toolbox-hero-grid { display: grid; gap: 18px; align-items: stretch; }
+  .toolbox-overview-grid,
+  .toolbox-sections,
+  .toolbox-help-grid,
+  .toolbox-rail-grid { display: grid; gap: 18px; }
+  .toolbox-overview-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .toolbox-sections { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .toolbox-help-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .toolbox-rail-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .tool-overview-card,
+  .tool-panel,
+  .tool-rail-card,
+  .tool-pick-card,
+  .tool-ad-card { border: 1px solid var(--line); border-radius: 22px; background: var(--panel); padding: 20px; box-shadow: var(--shadow-soft); }
+  .tool-overview-card { display: grid; gap: 14px; }
+  .tool-thumb {
+    border-radius: 18px;
+    min-height: 112px;
+    padding: 18px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 14px;
+    color: #122033;
+    overflow: hidden;
+    position: relative;
+  }
+  .tool-thumb::after {
+    content: "";
+    position: absolute;
+    inset: auto -22px -22px auto;
+    width: 88px;
+    height: 88px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.45);
+  }
+  .tool-thumb-icon {
+    font-size: 2rem;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+  }
+  .tool-thumb-label {
+    font-size: .92rem;
+    font-weight: 700;
+    max-width: 10rem;
+    text-align: right;
+    position: relative;
+    z-index: 1;
+  }
+  .tool-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+  .tool-kpi { border: 1px solid var(--line); border-radius: 18px; padding: 14px 16px; background: rgba(255,255,255,.72); }
+  .tool-panel { display: grid; gap: 14px; }
+  .tool-panel textarea,
+  .tool-panel input,
+  .tool-panel select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: inherit;
+  }
+  .tool-panel textarea { min-height: 132px; resize: vertical; }
+  .tool-row,
+  .tool-actions,
+  .tool-inline-grid { display: grid; gap: 12px; }
+  .tool-inline-grid.two { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+  .tool-inline-grid.three { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+  .tool-result,
+  .tool-note,
+  .tool-mini-list,
+  .tool-chip-row,
+  .tool-badge,
+  .tool-disclosure { border-radius: 16px; }
+  .tool-result,
+  .tool-note,
+  .tool-mini-list {
+    border: 1px solid var(--line);
+    padding: 14px 16px;
+    background: rgba(255,255,255,.72);
+  }
+  .tool-chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tool-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(39,113,255,.09);
+    border: 1px solid rgba(39,113,255,.14);
+    font-size: .92rem;
+  }
+  .tool-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    padding: 8px 12px;
+    font-size: .92rem;
+    font-weight: 700;
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,.72);
+  }
+  .tool-rail-card h3,
+  .tool-pick-card h3,
+  .tool-panel h2,
+  .tool-overview-card h3 { margin-bottom: 0; }
+  .tool-ad-card {
+    background: linear-gradient(135deg, rgba(39,113,255,.08), rgba(16,185,129,.08));
+  }
+  .tool-ad-slot {
+    min-height: 132px;
+    border: 1.5px dashed rgba(18,32,51,.25);
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    padding: 18px;
+    text-align: center;
+    background: rgba(255,255,255,.56);
+  }
+  .tool-disclosure {
+    padding: 12px 14px;
+    background: rgba(255,244,221,.72);
+    border: 1px solid rgba(187,122,0,.18);
+    font-size: .94rem;
+  }
+  .tool-pick-card .cta-row,
+  .tool-panel .cta-row { margin-top: 4px; }
+  .tool-focus-time {
+    font-size: clamp(2.25rem, 6vw, 4rem);
+    font-weight: 800;
+    letter-spacing: .04em;
+    margin: 0;
+  }
+  .tool-canvas-wrap {
+    display: grid;
+    place-items: center;
+    min-height: 220px;
+    border: 1px dashed rgba(18,32,51,.2);
+    border-radius: 18px;
+    background: #fff;
+    padding: 18px;
+  }
+  .tool-canvas-wrap canvas,
+  .tool-canvas-wrap img { max-width: 100%; height: auto; }
+  .tool-grid-game {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(68px, 1fr));
+    gap: 8px;
+    max-width: 260px;
+  }
+  .tool-grid-game button {
+    min-height: 72px;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    background: #fff;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  .tool-mini-list ul { margin: 10px 0 0; padding-left: 18px; }
+  .tool-stat-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+  .tool-stat { border: 1px solid var(--line); border-radius: 16px; padding: 12px; background: #fff; }
+  .tool-focus-hero { display: grid; gap: 18px; }
+  .tool-link-row,
+  .tool-category-grid,
+  .tool-focus-meta { display: grid; gap: 14px; }
+  .tool-link-row { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+  .tool-category-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .tool-category-card {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: rgba(255,255,255,.78);
+    padding: 18px;
+    box-shadow: var(--shadow-soft);
+    display: grid;
+    gap: 10px;
+  }
+  .tool-link-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,.74);
+    font-size: .92rem;
+    font-weight: 700;
+    width: fit-content;
+  }
+  .tool-instruction-list {
+    margin: 0;
+    padding-left: 18px;
+    display: grid;
+    gap: 8px;
+  }
+  .tool-url-box {
+    border: 1px dashed rgba(18,32,51,.24);
+    border-radius: 16px;
+    padding: 12px 14px;
+    background: rgba(255,255,255,.72);
+    overflow-wrap: anywhere;
+  }
+  
+  .toolbox-hub-only { display: none; }
+  .toolbox-sections > .tool-panel { display: none; }
+  .toolbox-sections > #browser-network-info { display: grid; }
+  
+  @media (min-width: 900px) {
+    .toolbox-hero-grid { grid-template-columns: 1.4fr .9fr; }
+  }
+</style>
+
+<section class="toolbox-shell">
+  
+  <section class="panel hero tool-focus-hero">
+    <div class="tool-link-pill">Quick diagnostics · direct tool page</div>
+    <div>
+      <p class="eyebrow">TWE Toolbox tool page</p>
+      <h1>Browser + network info</h1>
+      <p class="lede">Read a quick browser and connection snapshot you can copy into a support note or troubleshooting message.</p>
+    </div>
+    <div class="tool-focus-meta">
+      <div class="tool-url-box"><strong>Bookmarkable URL:</strong> <code>https://TheWatchersEdge.ca/toolbox/browser-network-info</code></div>
+      <ol class="tool-instruction-list">
+        
+        <li>Click the device info button.</li>
+        
+        <li>Review the current browser snapshot.</li>
+        
+        <li>Use copy if you want to paste the summary elsewhere.</li>
+        
+      </ol>
+    </div>
+    <div class="cta-row">
+      <a class="btn" href="/toolbox">Back to TWE Toolbox</a>
+      <a class="btn secondary" href="#browser-network-info">Jump to this tool</a>
+    </div>
+    <div class="tool-chip-row">
+      <span class="tool-chip">🔖 Direct bookmarkable tool page</span>
+      <span class="tool-chip">🧭 Clear path back to the main toolbox hub</span>
+      <span class="tool-chip">🧩 Related tools listed lower on the page</span>
+    </div>
+  </section>
+  
+  <section class="panel hero toolbox-hero-grid toolbox-hub-only">
+    <div>
+      <div class="hero-kicker mono">Free tools · practical helpers · return-visit value</div>
+      <p class="eyebrow">TWE Toolbox</p>
+      <h1>TWE Toolbox</h1>
+      <p class="lede">A free, customer-friendly utility hub built to be genuinely useful first. Use it for quick answers, cleaner copy, faster sharing, small focus blocks, and lightweight problem-solving without clutter or spam.</p>
+      <div class="cta-row" style="margin-top:16px;">
+        <a class="btn" href="#toolbox-grid">Open tools</a>
+      </div>
+      <p class="muted" style="margin: 12px 0 0; max-width: 780px;"><strong>Standalone on purpose:</strong> this page is meant to open as its own bookmarkable tool window with only the TWE Toolbox experience plus ad placements.</p>
+      <div class="tool-chip-row" style="margin-top:14px;">
+        <span class="tool-chip">🌐 Free to use</span>
+        <span class="tool-chip">📱 Mobile-friendly</span>
+        <span class="tool-chip">🔖 Bookmark-friendly</span>
+        <span class="tool-chip">🛍 Helpful affiliate suggestions only where natural</span>
+      </div>
+    </div>
+    <div class="mini-stack">
+      <article class="tool-rail-card">
+        <p class="eyebrow">Included now</p>
+        <h3>11 practical tools and mini helpers</h3>
+        <p class="muted">The toolbox now includes everyday utilities, focus helpers, quick diagnostics, and one light game for short breaks.</p>
+        <div class="tool-kpis">
+          <div class="tool-kpi"><strong>4</strong><br><span class="muted">new additions</span></div>
+          <div class="tool-kpi"><strong>11</strong><br><span class="muted">free tools live in the page</span></div>
+          <div class="tool-kpi"><strong>2</strong><br><span class="muted">future Google AdSense opportunity zones</span></div>
+        </div>
+      </article>
+      <article class="tool-rail-card">
+        <p class="eyebrow">Built for trust</p>
+        <h3>Useful first, monetized carefully second</h3>
+        <p class="muted">Any sponsored or affiliate placement is meant to support the experience, not interrupt it. No income claims, no misleading promises, and no spammy popups.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section card toolbox-hub-only">
+    <p class="eyebrow">Control panel layout</p>
+    <h2>Browse by category before you open a tool</h2>
+    <div class="tool-category-grid">
+      
+      <article class="tool-category-card">
+        <div class="tool-link-pill">2 tools</div>
+        <h3>Quick diagnostics</h3>
+        <p class="muted">What&#39;s my IP · Browser + network info</p>
+      </article>
+      
+      <article class="tool-category-card">
+        <div class="tool-link-pill">2 tools</div>
+        <h3>Writing + words</h3>
+        <p class="muted">Unscrambler · Text helper</p>
+      </article>
+      
+      <article class="tool-category-card">
+        <div class="tool-link-pill">1 tools</div>
+        <h3>Privacy + security</h3>
+        <p class="muted">Password generator</p>
+      </article>
+      
+      <article class="tool-category-card">
+        <div class="tool-link-pill">3 tools</div>
+        <h3>Daily work helpers</h3>
+        <p class="muted">Quick calculator · Random chooser · Unit converter</p>
+      </article>
+      
+      <article class="tool-category-card">
+        <div class="tool-link-pill">1 tools</div>
+        <h3>Sharing + handoff</h3>
+        <p class="muted">QR code generator</p>
+      </article>
+      
+      <article class="tool-category-card">
+        <div class="tool-link-pill">2 tools</div>
+        <h3>Focus + flow</h3>
+        <p class="muted">Pomodoro timer · Mini game</p>
+      </article>
+      
+    </div>
+  </section>
+
+  
+  <section class="section card" id="toolbox-grid">
+    <p class="eyebrow">Related tools</p>
+    <h2>Keep going with another bookmarkable tool page</h2>
+    <p class="muted" style="max-width: 780px;">Each related card below opens its own direct tool URL so customers can bookmark that tool separately and come back later.</p>
+    <div class="toolbox-overview-grid">
+      
+      <article class="tool-overview-card" data-tool-slug="whats-my-ip">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #d7f3ff, #e7fff8);">
+          <span class="tool-thumb-icon" aria-hidden="true">🌐</span>
+          <span class="tool-thumb-label">Connection view</span>
+        </div>
+        <div>
+          <p class="eyebrow">Useful right away</p>
+          <h3>What&#39;s my IP</h3>
+          <p class="muted">See the current public-facing connection IP your browser is presenting right now.</p>
+        </div>
+        <div class="tool-chip-row">
+          <span class="tool-chip">Quick diagnostics</span>
+          
+        </div>
+        <a class="card-link" href="/toolbox/whats-my-ip" target="_blank" rel="noopener">Open IP checker →</a>
+      </article>
+      
+      <article class="tool-overview-card" data-tool-slug="qr-code-generator">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #ddefff, #f1f3ff);">
+          <span class="tool-thumb-icon" aria-hidden="true">▦</span>
+          <span class="tool-thumb-label">Scan-ready</span>
+        </div>
+        <div>
+          <p class="eyebrow">Share faster</p>
+          <h3>QR code generator</h3>
+          <p class="muted">Turn a link, note, Wi-Fi string, or simple contact detail into a scannable QR code right on the page.</p>
+        </div>
+        <div class="tool-chip-row">
+          <span class="tool-chip">Sharing + handoff</span>
+          
+        </div>
+        <a class="card-link" href="/toolbox/qr-code-generator" target="_blank" rel="noopener">Open QR code generator →</a>
+      </article>
+      
+      <article class="tool-overview-card" data-tool-slug="unit-converter">
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #f1e5ff, #fff4e5);">
+          <span class="tool-thumb-icon" aria-hidden="true">📏</span>
+          <span class="tool-thumb-label">Quick convert</span>
+        </div>
+        <div>
+          <p class="eyebrow">Daily utility</p>
+          <h3>Unit converter</h3>
+          <p class="muted">Convert common length, temperature, and storage values without opening a cluttered converter site.</p>
+        </div>
+        <div class="tool-chip-row">
+          <span class="tool-chip">Daily work helpers</span>
+          <span class="tool-chip">Newer addition</span>
+        </div>
+        <a class="card-link" href="/toolbox/unit-converter" target="_blank" rel="noopener">Open unit converter →</a>
+      </article>
+      
+    </div>
+  </section>
+
+  <section class="tool-ad-card">
+    <p class="eyebrow">Google AdSense opportunity</p>
+    <h2>In-content ad lane reserved for Browser + network info</h2>
+    <div class="tool-ad-slot">
+      <div>
+        <strong>Reserved tool-page ad placement</strong>
+        <p class="muted" style="margin:8px 0 0;">Keep this slot visually separate from the tool input, primary action, and results so future AdSense stays professional and never feels like part of the tool itself.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="toolbox-sections">
+    <article class="tool-panel" id="ip-checker">
+      <span class="tool-badge">🌐 What’s my IP</span>
+      <h2>Check the public-facing connection IP your browser is presenting</h2>
+      <p class="muted">Useful when you need to confirm what IP a service is likely seeing from this connection right now.</p>
+      <div class="tool-actions"><button class="btn" type="button" id="ip-check-button">Check my IP</button></div>
+      <div class="tool-result" aria-live="polite">
+        <strong id="ip-result-value">Not checked yet</strong>
+        <p class="muted" id="ip-result-note">Click the button to detect the current connection IP.</p>
+      </div>
+    </article>
+
+    <article class="tool-panel" id="unscrambler">
+      <span class="tool-badge">🔤 Unscrambler</span>
+      <h2>Turn scrambled letters into likely words</h2>
+      <p class="muted">Type letters only. This helper returns a shorter, cleaner list of likely matches instead of a cluttered dump.</p>
+      <form id="unscrambler-form" class="tool-row">
+        <label for="unscrambler-letters"><strong>Scrambled letters</strong></label>
+        <input id="unscrambler-letters" name="letters" type="text" inputmode="text" autocomplete="off" placeholder="example: listen" maxlength="18" required>
+        <div class="cta-row">
+          <button class="btn" type="submit">Unscramble</button>
+          <span class="muted" id="unscrambler-status">Enter at least 3 letters.</span>
+        </div>
+      </form>
+      <div class="tool-result" id="unscrambler-results" aria-live="polite">
+        <strong>Results will appear here.</strong>
+        <p class="muted">Try <code>listen</code>, <code>finder</code>, or <code>stream</code>.</p>
+      </div>
+    </article>
+
+    <article class="tool-panel" id="password-generator">
+      <span class="tool-badge">🔐 Password generator</span>
+      <h2>Generate a stronger random password locally in your browser</h2>
+      <p class="muted">Use this for a fresh password draft, then save it in your preferred password manager.</p>
+      <div class="tool-inline-grid two">
+        <label><strong>Password length</strong><input id="password-length" type="range" min="12" max="40" value="20"></label>
+        <div class="tool-result"><strong id="password-length-value">20</strong><br><span class="muted">characters</span></div>
+      </div>
+      <div class="tool-actions cta-row">
+        <button class="btn" type="button" id="password-generate-button">Generate password</button>
+        <button class="btn secondary" type="button" id="password-copy-button">Copy</button>
+      </div>
+      <div class="tool-result"><strong id="password-output">Press generate</strong></div>
+    </article>
+
+    <article class="tool-panel" id="text-helper">
+      <span class="tool-badge">📝 Text helper</span>
+      <h2>Clean up text, switch case, and check quick stats</h2>
+      <p class="muted">Helpful for captions, messages, product notes, short drafts, and quick readability checks.</p>
+      <textarea id="text-helper-input" placeholder="Paste or type text here."></textarea>
+      <div class="cta-row">
+        <button class="btn secondary" type="button" data-case-action="upper">UPPERCASE</button>
+        <button class="btn secondary" type="button" data-case-action="lower">lowercase</button>
+        <button class="btn secondary" type="button" data-case-action="title">Title Case</button>
+      </div>
+      <div class="tool-stat-grid">
+        <div class="tool-stat"><strong id="text-word-count">0</strong><br><span class="muted">words</span></div>
+        <div class="tool-stat"><strong id="text-char-count">0</strong><br><span class="muted">characters</span></div>
+        <div class="tool-stat"><strong id="text-read-time">0 min</strong><br><span class="muted">read time</span></div>
+      </div>
+    </article>
+
+    <article class="tool-panel" id="quick-calculator">
+      <span class="tool-badge">🧮 Quick calculator</span>
+      <h2>Work out a quick percentage without leaving the page</h2>
+      <p class="muted">Simple enough for tips, taxes, discounts, markups, or quick sanity checks.</p>
+      <div class="tool-inline-grid two">
+        <label><strong>Base amount</strong><input id="calc-amount" type="number" min="0" step="0.01" value="100"></label>
+        <label><strong>Percent</strong><input id="calc-percent" type="number" min="0" step="0.1" value="13"></label>
+      </div>
+      <button class="btn" type="button" id="calc-button">Calculate</button>
+      <div class="tool-stat-grid">
+        <div class="tool-stat"><strong id="calc-percent-value">$0.00</strong><br><span class="muted">percent value</span></div>
+        <div class="tool-stat"><strong id="calc-total-value">$0.00</strong><br><span class="muted">total</span></div>
+        <div class="tool-stat"><strong id="calc-plain-value">0%</strong><br><span class="muted">plain percent</span></div>
+      </div>
+    </article>
+
+    <article class="tool-panel" id="random-chooser">
+      <span class="tool-badge">🎯 Random chooser</span>
+      <h2>Let the toolbox pick one option fairly when you are stuck</h2>
+      <p class="muted">Paste one option per line, then let the chooser select from the cleaned list.</p>
+      <textarea id="chooser-options" placeholder="Option 1&#10;Option 2&#10;Option 3"></textarea>
+      <div class="cta-row">
+        <button class="btn" type="button" id="chooser-button">Pick for me</button>
+        <span class="muted" id="chooser-count-note">Add at least 2 options.</span>
+      </div>
+      <div class="tool-result">
+        <strong id="chooser-result-value">Waiting for options</strong>
+        <p class="muted" id="chooser-result-note">Add at least 2 non-empty lines.</p>
+      </div>
+    </article>
+
+    <article class="tool-panel" id="qr-generator">
+      <span class="tool-badge">▦ QR code generator</span>
+      <h2>Create a clean QR code for a link, note, or Wi-Fi handoff</h2>
+      <p class="muted">Useful for simple sharing. Keep sensitive data out of QR text unless you are comfortable with it being scannable.</p>
+      <label for="qr-input"><strong>Text or URL</strong></label>
+      <textarea id="qr-input" placeholder="https://www.thewatchersedge.ca/toolbox or WIFI:T:WPA;S:NetworkName;P:password;;">https://www.thewatchersedge.ca/toolbox</textarea>
+      <div class="tool-inline-grid two">
+        <label><strong>Size</strong><select id="qr-size"><option value="180">Small</option><option value="240" selected>Medium</option><option value="320">Large</option></select></label>
+        <div class="tool-result"><strong id="qr-status">Ready to generate</strong><br><span class="muted">Creates a canvas and download link in-browser.</span></div>
+      </div>
+      <div class="cta-row">
+        <button class="btn" type="button" id="qr-generate-button">Generate QR code</button>
+        <a class="btn secondary" id="qr-download-link" href="#" download="twe-toolbox-qr.png" style="pointer-events:none;opacity:.55;">Download PNG</a>
+      </div>
+      <div class="tool-canvas-wrap" id="qr-preview-wrap">
+        <canvas id="qr-canvas" width="240" height="240" aria-label="Generated QR code preview"></canvas>
+      </div>
+    </article>
+
+    <article class="tool-panel" id="pomodoro-timer">
+      <span class="tool-badge">⏳ Pomodoro timer</span>
+      <h2>Run a simple focus block without opening another app</h2>
+      <p class="muted">Great for short work sprints, reading blocks, or a quick reset between tasks.</p>
+      <div class="tool-chip-row">
+        <button class="btn secondary" type="button" data-pomodoro-preset="25">25 min focus</button>
+        <button class="btn secondary" type="button" data-pomodoro-preset="15">15 min focus</button>
+        <button class="btn secondary" type="button" data-pomodoro-preset="5">5 min break</button>
+      </div>
+      <p class="tool-focus-time" id="pomodoro-display">25:00</p>
+      <div class="tool-result"><strong id="pomodoro-state">Ready</strong><br><span class="muted">Choose a preset or keep the default 25-minute focus block.</span></div>
+      <div class="cta-row">
+        <button class="btn" type="button" id="pomodoro-start">Start</button>
+        <button class="btn secondary" type="button" id="pomodoro-pause">Pause</button>
+        <button class="btn secondary" type="button" id="pomodoro-reset">Reset</button>
+      </div>
+    </article>
+
+    <article class="tool-panel" id="browser-network-info">
+      <span class="tool-badge">📶 Browser + network info</span>
+      <h2>See quick browser, screen, language, timezone, and connection details</h2>
+      <p class="muted">Useful for simple troubleshooting or when you want a quick snapshot to paste into a support message.</p>
+      <div class="cta-row">
+        <button class="btn" type="button" id="browser-info-button">Check device info</button>
+        <button class="btn secondary" type="button" id="browser-info-copy">Copy summary</button>
+      </div>
+      <div class="tool-mini-list" id="browser-info-results" aria-live="polite">
+        <strong>Nothing loaded yet.</strong>
+        <p class="muted">Click the button to read this browser's current snapshot.</p>
+      </div>
+    </article>
+
+    <article class="tool-panel" id="unit-converter">
+      <span class="tool-badge">📏 Unit converter</span>
+      <h2>Convert common daily values quickly</h2>
+      <p class="muted">Start with length, temperature, or storage without dealing with a bloated converter page.</p>
+      <div class="tool-inline-grid three">
+        <label><strong>Category</strong><select id="converter-category"><option value="length">Length</option><option value="temperature">Temperature</option><option value="storage">Storage</option></select></label>
+        <label><strong>From</strong><select id="converter-from"></select></label>
+        <label><strong>To</strong><select id="converter-to"></select></label>
+      </div>
+      <label for="converter-input"><strong>Value</strong></label>
+      <input id="converter-input" type="number" step="any" value="1">
+      <button class="btn" type="button" id="converter-button">Convert</button>
+      <div class="tool-result">
+        <strong id="converter-output">1 meter = 100 centimeters</strong>
+        <p class="muted" id="converter-note">Switch categories for quick conversions.</p>
+      </div>
+    </article>
+
+    <article class="tool-panel" id="mini-game">
+      <span class="tool-badge">🎮 Mini game</span>
+      <h2>Take a one-minute breather with Tic-Tac-Toe</h2>
+      <p class="muted">A small break can help reset attention before heading back to the practical tools.</p>
+      <div class="tool-grid-game">
+        <button type="button" data-ttt-cell></button>
+        <button type="button" data-ttt-cell></button>
+        <button type="button" data-ttt-cell></button>
+        <button type="button" data-ttt-cell></button>
+        <button type="button" data-ttt-cell></button>
+        <button type="button" data-ttt-cell></button>
+        <button type="button" data-ttt-cell></button>
+        <button type="button" data-ttt-cell></button>
+        <button type="button" data-ttt-cell></button>
+      </div>
+      <div class="tool-result"><strong id="ttt-status">Player X starts.</strong></div>
+      <button class="btn secondary" type="button" id="ttt-reset">Reset game</button>
+    </article>
+  </section>
+
+  <section class="tool-ad-card">
+    <p class="eyebrow">Helpful next picks</p>
+    <h2>Helpful next picks, kept relevant and non-spammy</h2>
+    <p class="muted">These suggestions fit naturally beside workday, desk, and organization tools. They are optional, clearly disclosed, and meant to help when the match is genuinely useful.</p>
+    <div class="tool-disclosure"><strong>Disclosure:</strong> Some links below are Amazon affiliate links and may earn a commission at no extra cost to the customer. They are shown only where they fit the tool hub naturally.</div>
+    <div class="toolbox-help-grid" style="margin-top:14px;">
+      
+      <article class="tool-pick-card">
+        <p class="eyebrow">Amazon-friendly next step</p>
+        <h3>Monitor arm for steadier weekly review screen height</h3>
+        <p class="muted">A natural fit for people using the Pomodoro timer, browser diagnostics, and workflow helpers at a desk for longer sessions.</p>
+        <div class="cta-row">
+          <a class="btn secondary" href="https://www.thewatchersedge.ca/best-weekly-kpi-review-workspace.html" target="_blank" rel="noopener">See the desk-setup guide</a>
+          <a class="btn" href="https://www.amazon.ca/dp/B07T3KCQ94?tag=resourceshubca-20" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+        </div>
+      </article>
+      
+      <article class="tool-pick-card">
+        <p class="eyebrow">Amazon-friendly next step</p>
+        <h3>Portable SSD for calmer archive and export handoffs</h3>
+        <p class="muted">Helpful when QR files, exported notes, screenshots, and downloads need one tidy place instead of getting lost across tabs and folders.</p>
+        <div class="cta-row">
+          <a class="btn secondary" href="https://www.thewatchersedge.ca/best-ai-agent-ops-run-review-desk-setup.html" target="_blank" rel="noopener">See the ops desk guide</a>
+          <a class="btn" href="https://www.amazon.ca/dp/B08GTYFC37?tag=resourceshubca-20" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+        </div>
+      </article>
+      
+      <article class="tool-pick-card">
+        <p class="eyebrow">Amazon-friendly next step</p>
+        <h3>Foot-rest cushion for longer billing and admin blocks</h3>
+        <p class="muted">A natural comfort add-on for people using the converter, calculator, text helper, and other workday tools during longer desk blocks.</p>
+        <div class="cta-row">
+          <a class="btn secondary" href="https://www.thewatchersedge.ca/home-office-deals-for-freelancers.html" target="_blank" rel="noopener">See the home office roundup</a>
+          <a class="btn" href="https://www.amazon.ca/dp/B07L3RVF7C?tag=resourceshubca-20" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+        </div>
+      </article>
+      
+    </div>
+  </section>
+
+  <section class="toolbox-rail-grid">
+    <article class="tool-rail-card">
+      <p class="eyebrow">Easy to find later</p>
+      <h3>Use main-site search too</h3>
+      <p class="muted">Search terms like <code>qr</code>, <code>pomodoro</code>, <code>converter</code>, or <code>browser info</code> now surface toolbox shortcuts from the store search experience.</p>
+      <a class="card-link" href="/store?q=qr#store-top-matches">Try a toolbox search shortcut →</a>
+    </article>
+    <article class="tool-rail-card">
+      <p class="eyebrow">Future growth</p>
+      <h3>Nice additions that could earn repeat visits later</h3>
+      <div class="tool-mini-list">
+        <ul>
+          
+          <li>Habit streak tracker</li>
+          
+          <li>Simple checklist builder</li>
+          
+          <li>Meeting agenda helper</li>
+          
+          <li>Word Search or 2048-style game</li>
+          
+        </ul>
+      </div>
+    </article>
+    <article class="tool-ad-card">
+      <p class="eyebrow">Google AdSense opportunity</p>
+      <h3>Secondary in-content ad slot for longer sessions</h3>
+      <div class="tool-ad-slot">
+        <div>
+          <strong>Reserved in-content ad lane</strong>
+          <p class="muted" style="margin:8px 0 0;">Suitable for one future responsive unit placed below the primary tools so the customer experience stays helpful first.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
+<script>
+(() => {
+  const toolboxApiUrl = (path) => (typeof window.tweApiUrl === 'function' ? window.tweApiUrl(path) : path);
+  const readJsonResponse = async (response, fallbackMessage) => {
+    const contentType = (response.headers.get('content-type') || '').toLowerCase();
+    if (!contentType.includes('application/json')) {
+      throw new Error(fallbackMessage);
+    }
+    let payload;
+    try {
+      payload = await response.json();
+    } catch (_) {
+      throw new Error(fallbackMessage);
+    }
+    if (!response.ok) {
+      throw new Error(payload.message || fallbackMessage);
+    }
+    return payload;
+  };
+
+  const ipButton = document.getElementById('ip-check-button');
+  const ipValue = document.getElementById('ip-result-value');
+  const ipNote = document.getElementById('ip-result-note');
+  ipButton?.addEventListener('click', async () => {
+    ipValue.textContent = 'Checking…';
+    ipNote.textContent = 'Looking up the current connection IP.';
+    try {
+      const response = await fetch(toolboxApiUrl('/api/toolbox/ip'), { headers: { 'Accept': 'application/json' } });
+      const payload = await readJsonResponse(response, 'This toolbox copy cannot reach the live IP service right now.');
+      if (payload.status === 'ok' && payload.ip) {
+        ipValue.textContent = payload.ip;
+        ipNote.textContent = payload.source ? `Source: ${payload.source}` : (payload.note || 'Detected from the current request.');
+      } else {
+        ipValue.textContent = 'Unavailable';
+        ipNote.textContent = payload.message || 'Could not detect the IP right now.';
+      }
+    } catch (error) {
+      ipValue.textContent = 'Unavailable';
+      ipNote.textContent = error?.message || 'Could not detect the IP right now.';
+    }
+  });
+
+  const unscramblerForm = document.getElementById('unscrambler-form');
+  const unscramblerLetters = document.getElementById('unscrambler-letters');
+  const unscramblerStatus = document.getElementById('unscrambler-status');
+  const unscramblerResults = document.getElementById('unscrambler-results');
+  unscramblerForm?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const letters = (unscramblerLetters?.value || '').trim();
+    if (letters.length < 3) {
+      unscramblerStatus.textContent = 'Enter at least 3 letters.';
+      return;
+    }
+    unscramblerStatus.textContent = 'Checking likely words…';
+    unscramblerResults.innerHTML = '<strong>Working…</strong><p class="muted">Looking for likely matches.</p>';
+    try {
+      const response = await fetch(toolboxApiUrl('/api/toolbox/unscramble'), {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ letters })
+      });
+      const payload = await readJsonResponse(response, 'This toolbox copy cannot reach the live word-check service right now.');
+      const matches = Array.isArray(payload.matches)
+        ? payload.matches
+        : (Array.isArray(payload.words) ? payload.words : []);
+      if (payload.status !== 'ok' || !matches.length) {
+        unscramblerStatus.textContent = 'No clear matches found.';
+        unscramblerResults.innerHTML = '<strong>No likely matches</strong><p class="muted">Try a more common letter mix like listen or finder.</p>';
+        return;
+      }
+      unscramblerStatus.textContent = `${matches.length} likely matches found.`;
+      unscramblerResults.innerHTML = `<strong>${matches.join(', ')}</strong><p class="muted">${payload.note || 'Cleaned to likely English matches.'}</p>`;
+    } catch (error) {
+      unscramblerStatus.textContent = 'Try again.';
+      unscramblerResults.innerHTML = `<strong>Could not check words right now.</strong><p class="muted">${error?.message || 'Please try again in a moment.'}</p>`;
+    }
+  });
+
+  const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%^&*';
+  const lengthInput = document.getElementById('password-length');
+  const lengthValue = document.getElementById('password-length-value');
+  const passwordOutput = document.getElementById('password-output');
+  const generatePassword = () => {
+    const length = Number(lengthInput?.value || 20);
+    lengthValue.textContent = String(length);
+    const bytes = new Uint8Array(length);
+    window.crypto.getRandomValues(bytes);
+    passwordOutput.textContent = Array.from(bytes, (value) => alphabet[value % alphabet.length]).join('');
+  };
+  lengthInput?.addEventListener('input', generatePassword);
+  document.getElementById('password-generate-button')?.addEventListener('click', generatePassword);
+  document.getElementById('password-copy-button')?.addEventListener('click', async () => {
+    const value = passwordOutput.textContent || '';
+    if (!value || value === 'Press generate') return;
+    try { await navigator.clipboard.writeText(value); } catch (_) {}
+  });
+
+  const textInput = document.getElementById('text-helper-input');
+  const wordCount = document.getElementById('text-word-count');
+  const charCount = document.getElementById('text-char-count');
+  const readTime = document.getElementById('text-read-time');
+  const updateTextStats = () => {
+    const value = textInput?.value || '';
+    const words = value.trim() ? value.trim().split(/\s+/).filter(Boolean).length : 0;
+    wordCount.textContent = String(words);
+    charCount.textContent = String(value.length);
+    readTime.textContent = `${Math.max(0, Math.ceil(words / 200))} min`;
+  };
+  textInput?.addEventListener('input', updateTextStats);
+  document.querySelectorAll('[data-case-action]').forEach((button) => {
+    button.addEventListener('click', () => {
+      if (!textInput) return;
+      const action = button.getAttribute('data-case-action');
+      if (action === 'upper') textInput.value = textInput.value.toUpperCase();
+      if (action === 'lower') textInput.value = textInput.value.toLowerCase();
+      if (action === 'title') textInput.value = textInput.value.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
+      updateTextStats();
+    });
+  });
+  updateTextStats();
+
+  const formatCurrency = (value) => new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD' }).format(value);
+  const runCalc = () => {
+    const amount = Number(document.getElementById('calc-amount')?.value || 0);
+    const percent = Number(document.getElementById('calc-percent')?.value || 0);
+    const percentValue = amount * (percent / 100);
+    document.getElementById('calc-percent-value').textContent = formatCurrency(percentValue);
+    document.getElementById('calc-total-value').textContent = formatCurrency(amount + percentValue);
+    document.getElementById('calc-plain-value').textContent = `${percent}%`;
+  };
+  document.getElementById('calc-button')?.addEventListener('click', runCalc);
+  runCalc();
+
+  const chooserInput = document.getElementById('chooser-options');
+  const chooserButton = document.getElementById('chooser-button');
+  const chooserCountNote = document.getElementById('chooser-count-note');
+  const chooserResultValue = document.getElementById('chooser-result-value');
+  const chooserResultNote = document.getElementById('chooser-result-note');
+  const chooserCleanOptions = () => (chooserInput?.value || '').split(/\r?\n/).map((value) => value.trim()).filter(Boolean);
+  const chooserUpdateCount = () => {
+    const options = chooserCleanOptions();
+    chooserCountNote.textContent = options.length >= 2 ? `${options.length} options ready.` : 'Add at least 2 options.';
+    return options;
+  };
+  chooserInput?.addEventListener('input', chooserUpdateCount);
+  chooserButton?.addEventListener('click', () => {
+    const options = chooserUpdateCount();
+    if (options.length < 2) {
+      chooserResultValue.textContent = 'Need more options';
+      chooserResultNote.textContent = 'Add at least 2 non-empty lines.';
+      return;
+    }
+    const randomValues = new Uint32Array(1);
+    window.crypto.getRandomValues(randomValues);
+    const index = randomValues[0] % options.length;
+    chooserResultValue.textContent = options[index];
+    chooserResultNote.textContent = `Picked from ${options.length} cleaned options.`;
+  });
+  chooserUpdateCount();
+
+  const qrInput = document.getElementById('qr-input');
+  const qrSize = document.getElementById('qr-size');
+  const qrCanvas = document.getElementById('qr-canvas');
+  const qrStatus = document.getElementById('qr-status');
+  const qrDownloadLink = document.getElementById('qr-download-link');
+  const qrPreviewWrap = document.getElementById('qr-preview-wrap');
+  const renderQrFallback = (value, size) => {
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${encodeURIComponent(value)}`;
+    qrPreviewWrap.innerHTML = `<img src="${qrUrl}" alt="Generated QR code preview" width="${size}" height="${size}">`;
+    qrStatus.textContent = 'QR code ready';
+    qrDownloadLink.href = qrUrl;
+  };
+  const renderQr = async () => {
+    const value = (qrInput?.value || '').trim();
+    if (!value) {
+      qrStatus.textContent = 'Enter some text or a URL first';
+      return;
+    }
+    const size = Number(qrSize?.value || 240);
+    try {
+      if (window.QRCode?.toCanvas && qrCanvas) {
+        try {
+          qrPreviewWrap.innerHTML = `<canvas id="qr-canvas" width="${size}" height="${size}" aria-label="Generated QR code preview"></canvas>`;
+          const activeCanvas = document.getElementById('qr-canvas');
+          await window.QRCode.toCanvas(activeCanvas, value, {
+            width: size,
+            margin: 1,
+            color: { dark: '#122033', light: '#ffffff' }
+          });
+          qrStatus.textContent = 'QR code ready';
+          qrDownloadLink.href = activeCanvas.toDataURL('image/png');
+        } catch (_) {
+          renderQrFallback(value, size);
+        }
+      } else {
+        renderQrFallback(value, size);
+      }
+      qrDownloadLink.style.pointerEvents = '';
+      qrDownloadLink.style.opacity = '1';
+    } catch (_) {
+      qrStatus.textContent = 'Could not generate that QR code';
+    }
+  };
+  document.getElementById('qr-generate-button')?.addEventListener('click', renderQr);
+  qrSize?.addEventListener('change', renderQr);
+
+  const pomodoroDisplay = document.getElementById('pomodoro-display');
+  const pomodoroState = document.getElementById('pomodoro-state');
+  let pomodoroSeconds = 25 * 60;
+  let pomodoroDefault = 25 * 60;
+  let pomodoroTimer = null;
+  const formatSeconds = (value) => {
+    const minutes = Math.floor(value / 60).toString().padStart(2, '0');
+    const seconds = Math.floor(value % 60).toString().padStart(2, '0');
+    return `${minutes}:${seconds}`;
+  };
+  const renderPomodoro = () => { pomodoroDisplay.textContent = formatSeconds(pomodoroSeconds); };
+  const stopPomodoro = () => { if (pomodoroTimer) clearInterval(pomodoroTimer); pomodoroTimer = null; };
+  document.querySelectorAll('[data-pomodoro-preset]').forEach((button) => {
+    button.addEventListener('click', () => {
+      pomodoroDefault = Number(button.getAttribute('data-pomodoro-preset')) * 60;
+      pomodoroSeconds = pomodoroDefault;
+      stopPomodoro();
+      pomodoroState.textContent = `Preset loaded: ${formatSeconds(pomodoroDefault)}`;
+      renderPomodoro();
+    });
+  });
+  document.getElementById('pomodoro-start')?.addEventListener('click', () => {
+    if (pomodoroTimer) return;
+    pomodoroState.textContent = 'Running';
+    pomodoroTimer = window.setInterval(() => {
+      pomodoroSeconds = Math.max(0, pomodoroSeconds - 1);
+      renderPomodoro();
+      if (!pomodoroSeconds) {
+        stopPomodoro();
+        pomodoroState.textContent = 'Finished — nice work.';
+      }
+    }, 1000);
+  });
+  document.getElementById('pomodoro-pause')?.addEventListener('click', () => {
+    stopPomodoro();
+    pomodoroState.textContent = 'Paused';
+  });
+  document.getElementById('pomodoro-reset')?.addEventListener('click', () => {
+    stopPomodoro();
+    pomodoroSeconds = pomodoroDefault;
+    pomodoroState.textContent = 'Reset';
+    renderPomodoro();
+  });
+  renderPomodoro();
+
+  const browserInfoResults = document.getElementById('browser-info-results');
+  const readBrowserInfo = () => {
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const rows = [
+      ['User agent', navigator.userAgent || 'Unavailable'],
+      ['Language', navigator.language || 'Unavailable'],
+      ['Timezone', Intl.DateTimeFormat().resolvedOptions().timeZone || 'Unavailable'],
+      ['Screen', `${window.screen?.width || '?'} × ${window.screen?.height || '?'}`],
+      ['Viewport', `${window.innerWidth} × ${window.innerHeight}`],
+      ['Cookies enabled', navigator.cookieEnabled ? 'Yes' : 'No'],
+      ['Online', navigator.onLine ? 'Yes' : 'No'],
+      ['Connection type', connection?.effectiveType || 'Unavailable'],
+      ['Downlink', connection?.downlink ? `${connection.downlink} Mb/s` : 'Unavailable'],
+      ['Device memory', navigator.deviceMemory ? `${navigator.deviceMemory} GB` : 'Unavailable'],
+    ];
+    browserInfoResults.innerHTML = `<strong>Current browser snapshot</strong><ul>${rows.map(([label, value]) => `<li><strong>${label}:</strong> ${value}</li>`).join('')}</ul>`;
+    return rows.map(([label, value]) => `${label}: ${value}`).join('\n');
+  };
+  let lastBrowserInfoSummary = '';
+  document.getElementById('browser-info-button')?.addEventListener('click', () => {
+    lastBrowserInfoSummary = readBrowserInfo();
+  });
+  document.getElementById('browser-info-copy')?.addEventListener('click', async () => {
+    if (!lastBrowserInfoSummary) lastBrowserInfoSummary = readBrowserInfo();
+    try { await navigator.clipboard.writeText(lastBrowserInfoSummary); } catch (_) {}
+  });
+
+  const converterCategory = document.getElementById('converter-category');
+  const converterFrom = document.getElementById('converter-from');
+  const converterTo = document.getElementById('converter-to');
+  const converterInput = document.getElementById('converter-input');
+  const converterOutput = document.getElementById('converter-output');
+  const converterNote = document.getElementById('converter-note');
+  const converterSets = {
+    length: {
+      note: 'Length conversions use meters as the base unit.',
+      units: { meter: 1, kilometer: 1000, centimeter: 0.01, inch: 0.0254, foot: 0.3048, yard: 0.9144, mile: 1609.344 }
+    },
+    storage: {
+      note: 'Storage conversions use bytes as the base unit.',
+      units: { byte: 1, kilobyte: 1000, megabyte: 1000000, gigabyte: 1000000000, terabyte: 1000000000000 }
+    },
+    temperature: {
+      note: 'Temperature uses direct formulas between Celsius, Fahrenheit, and Kelvin.',
+      units: { celsius: 'celsius', fahrenheit: 'fahrenheit', kelvin: 'kelvin' }
+    }
+  };
+  const titleize = (value) => value.replace(/(^|\s)\w/g, (char) => char.toUpperCase());
+  const converterUnitLabels = {
+    meter: ['meter', 'meters'],
+    kilometer: ['kilometer', 'kilometers'],
+    foot: ['foot', 'feet'],
+    mile: ['mile', 'miles'],
+    byte: ['byte', 'bytes'],
+    kilobyte: ['kilobyte', 'kilobytes'],
+    megabyte: ['megabyte', 'megabytes'],
+    gigabyte: ['gigabyte', 'gigabytes'],
+    terabyte: ['terabyte', 'terabytes'],
+    celsius: ['°C', '°C'],
+    fahrenheit: ['°F', '°F'],
+    kelvin: ['K', 'K']
+  };
+  const formatUnitLabel = (unit, value) => {
+    const labels = converterUnitLabels[unit];
+    if (!labels) return `${unit}${value === 1 ? '' : 's'}`;
+    return Math.abs(value) === 1 ? labels[0] : labels[1];
+  };
+  const fillConverterUnits = () => {
+    const category = converterCategory.value;
+    const units = Object.keys(converterSets[category].units);
+    const options = units.map((unit) => `<option value="${unit}">${titleize(unit)}</option>`).join('');
+    converterFrom.innerHTML = options;
+    converterTo.innerHTML = options;
+    converterTo.value = units[Math.min(1, units.length - 1)];
+    converterNote.textContent = converterSets[category].note;
+  };
+  const convertTemperature = (value, from, to) => {
+    let celsius = value;
+    if (from === 'fahrenheit') celsius = (value - 32) * (5 / 9);
+    if (from === 'kelvin') celsius = value - 273.15;
+    if (to === 'fahrenheit') return (celsius * (9 / 5)) + 32;
+    if (to === 'kelvin') return celsius + 273.15;
+    return celsius;
+  };
+  const runConverter = () => {
+    const category = converterCategory.value;
+    const from = converterFrom.value;
+    const to = converterTo.value;
+    const rawValue = Number(converterInput.value || 0);
+    let converted = rawValue;
+    if (category === 'temperature') {
+      converted = convertTemperature(rawValue, from, to);
+    } else {
+      const units = converterSets[category].units;
+      converted = rawValue * units[from] / units[to];
+    }
+    const formatter = Math.abs(converted) >= 100 ? converted.toFixed(2) : converted.toFixed(4).replace(/0+$/, '').replace(/\.$/, '');
+    converterOutput.textContent = `${rawValue} ${formatUnitLabel(from, rawValue)} = ${formatter} ${formatUnitLabel(to, Number(formatter))}`;
+    converterNote.textContent = converterSets[category].note;
+  };
+  converterCategory?.addEventListener('change', () => { fillConverterUnits(); runConverter(); });
+  converterFrom?.addEventListener('change', runConverter);
+  converterTo?.addEventListener('change', runConverter);
+  converterInput?.addEventListener('input', runConverter);
+  document.getElementById('converter-button')?.addEventListener('click', runConverter);
+  fillConverterUnits();
+  runConverter();
+
+  const cells = Array.from(document.querySelectorAll('[data-ttt-cell]'));
+  const status = document.getElementById('ttt-status');
+  let board = Array(9).fill('');
+  let player = 'X';
+  let gameOver = false;
+  const lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+  const updateBoard = () => cells.forEach((cell, index) => { cell.textContent = board[index]; });
+  const winner = () => lines.find(([a, b, c]) => board[a] && board[a] === board[b] && board[a] === board[c]);
+  cells.forEach((cell, index) => {
+    cell.addEventListener('click', () => {
+      if (gameOver || board[index]) return;
+      board[index] = player;
+      updateBoard();
+      if (winner()) {
+        status.textContent = `Player ${player} wins!`;
+        gameOver = true;
+        return;
+      }
+      if (board.every(Boolean)) {
+        status.textContent = 'Draw game.';
+        gameOver = true;
+        return;
+      }
+      player = player === 'X' ? 'O' : 'X';
+      status.textContent = `Player ${player} turn.`;
+    });
+  });
+  document.getElementById('ttt-reset')?.addEventListener('click', () => {
+    board = Array(9).fill('');
+    player = 'X';
+    gameOver = false;
+    status.textContent = 'Player X starts.';
+    updateBoard();
+  });
+  updateBoard();
+  generatePassword();
+  renderQr();
+})();
+</script>
+
+    </div>
+    
+    
+    <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
+      <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Expanded product image">
+        <button class="lightbox-close" type="button" aria-label="Close expanded image">×</button>
+        <img src="" alt="">
+        <p class="lightbox-caption"></p>
+      </div>
+    </div>
+    <script>
+      (function () {
+        const widget = document.querySelector('[data-buyer-support-widget]');
+        if (!widget) return;
+        const toggle = widget.querySelector('[data-buyer-support-toggle]');
+        const form = widget.querySelector('[data-buyer-support-form]');
+        const textarea = widget.querySelector('textarea[name="message"]');
+        const responseBox = widget.querySelector('[data-buyer-support-response]');
+        toggle?.addEventListener('click', () => {
+          const open = widget.classList.toggle('is-open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          if (open) textarea?.focus();
+        });
+        const localSupportFallback = (message) => {
+          const text = message.toLowerCase();
+          const emailLink = '<a class="text-link" href="mailto:support@thewatchersedge.ca?subject=Watchers%20Edge%20support%20chat%20follow-up&amp;body=Page%20or%20route%3A%0AProduct%20or%20topic%3A%0AOrder%20ID%20or%20receipt%20reference%2C%20if%20relevant%3A%0AQuestion%20or%20issue%20from%20chat%3A">support@thewatchersedge.ca</a>';
+          if (/(human|live person|refund|payment|billing|account|login|password|paypal|bank|tax|legal|lawyer)/.test(text)) {
+            return 'Thanks for asking. This one needs personal support, so please email ' + emailLink + ' and leave out passwords, payment details, tax or banking details, API keys, and private account information.';
+          }
+          if (/(suggest|recommendation|idea|bug|broken|issue|feedback|feature request)/.test(text)) {
+            return 'Thanks for flagging that. Please send it to ' + emailLink + ' so it can be reviewed and followed up properly.';
+          }
+          if (/(financial advice|investment advice|trading signal|guaranteed profit|guaranteed income|tax advice|legal advice|make money|profit guarantee)/.test(text)) {
+            return 'Thanks for asking. I can’t give legal, tax, financial, investment, trading, or guaranteed-income advice. Please email support if you need a person to follow up.';
+          }
+          if (/(checkout|download|access|receipt|order|support|delivery)/.test(text)) {
+            return 'Thanks for asking. For delivery, downloads, checkout, or receipt questions, please check the product page and keep your order or receipt reference handy. If you still need help, email ' + emailLink + ' with the product name and platform.';
+          }
+          return 'A good place to start is the Store for digital offers, Resources for Amazon.ca guides, or Start Here if you want the easiest route. You will see the latest price, tax, and delivery details on the checkout page before you buy.';
+        };
+        form?.addEventListener('submit', async (event) => {
+          event.preventDefault();
+          const message = (textarea?.value || '').trim();
+          if (!message) return;
+          responseBox.textContent = 'One moment while I check that.';
+          try {
+            const result = await fetch(window.tweApiUrl('/support-chat'), {
+              method: 'POST',
+              headers: {'Content-Type': 'application/json'},
+              body: JSON.stringify({message, page: window.location.pathname})
+            });
+            const data = await result.json().catch(() => ({}));
+            if (!result.ok || !data.reply) throw new Error('support backend unavailable');
+            responseBox.textContent = data.reply;
+            if (textarea) textarea.value = '';
+          } catch (error) {
+            responseBox.innerHTML = localSupportFallback(message);
+          }
+        });
+      }());
+
+      (function () {
+        const widgets = document.querySelectorAll('[data-weather-widget]');
+        if (!widgets.length) return;
+        const weatherCodes = {0:'Clear',1:'Mainly clear',2:'Partly cloudy',3:'Cloudy',45:'Foggy',48:'Rime fog',51:'Light drizzle',53:'Drizzle',55:'Heavy drizzle',61:'Light rain',63:'Rain',65:'Heavy rain',71:'Light snow',73:'Snow',75:'Heavy snow',80:'Light showers',81:'Showers',82:'Heavy showers',95:'Thunderstorm'};
+        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'auto';
+        const renderWeather = (status, data, suffix) => {
+          const temp = Math.round(Number(data.temperatureC));
+          const label = data.conditionText || weatherCodes[data.weatherCode] || 'Local weather';
+          const wind = Number.isFinite(Number(data.windKmh)) ? ' · wind ' + Math.round(Number(data.windKmh)) + ' km/h' : '';
+          status.textContent = Number.isFinite(temp) ? label + ' · ' + temp + '°C' + wind + (suffix || '') : (data.message || label);
+        };
+        widgets.forEach((widget) => {
+          const button = widget.querySelector('[data-weather-button]');
+          const status = widget.querySelector('[data-weather-status]');
+          const icon = widget.querySelector('[data-weather-icon]');
+          const location = widget.querySelector('[data-weather-location]');
+          const form = widget.querySelector('[data-weather-city-form]');
+          const input = form?.querySelector('input[name="city"]');
+          if (!status) return;
+          let preciseLocationTried = false;
+          const lookup = async (params, suffix) => {
+            const url = window.tweApiUrl('/api/weather-current') + '?' + new URLSearchParams({...params, timezone}).toString();
+            const response = await fetch(url);
+            const data = await response.json();
+            if (!response.ok) throw new Error(data.message || 'Weather lookup failed');
+            renderWeather(status, data, suffix);
+            if (location) location.textContent = data.locationLabel ? data.locationLabel : (data.timezone || timezone);
+            if (icon && data.conditionIcon) {
+              icon.innerHTML = '<img alt="" src="' + String(data.conditionIcon).replace(/^\/\//, 'https://') + '">';
+            } else if (icon) {
+              icon.textContent = data.weatherCode >= 51 ? '🌧️' : data.weatherCode >= 45 ? '🌫️' : data.weatherCode >= 2 ? '⛅' : '☀️';
+            }
+            if (button) button.textContent = 'Updated';
+            widget.classList.add('has-weather');
+            widget.classList.remove('is-fallback');
+          };
+          const requestPreciseWeather = function () {
+            preciseLocationTried = true;
+            if (button) button.disabled = true;
+            status.textContent = 'Checking your location once so I can show local weather here.';
+            if (!navigator.geolocation) {
+              widget.classList.add('is-fallback');
+              status.textContent = 'This browser cannot share location, so local weather is unavailable here.';
+              if (button) button.disabled = false;
+              return;
+            }
+            navigator.geolocation.getCurrentPosition((position) => {
+              lookup({latitude: position.coords.latitude.toFixed(3), longitude: position.coords.longitude.toFixed(3)}, ' near you')
+                .catch(() => {
+                  widget.classList.add('is-fallback');
+                  status.textContent = 'I could not load the weather from your device location.';
+                })
+                .finally(() => { if (button) button.disabled = false; });
+            }, () => {
+              widget.classList.add('is-fallback');
+              status.textContent = 'Location was not shared, so I could not load the exact local weather.';
+              if (button) button.disabled = false;
+            }, { enableHighAccuracy: false, maximumAge: 600000, timeout: 8000 });
+          };
+          const loadAutomaticWeather = () => {
+            if (navigator.geolocation) {
+              requestPreciseWeather();
+              return;
+            }
+            widget.classList.add('is-fallback');
+            status.textContent = 'This browser does not support automatic local weather.';
+          };
+          button?.addEventListener('click', function () {
+            button.textContent = preciseLocationTried ? 'Refreshing…' : 'Use my location';
+            requestPreciseWeather();
+          });
+          form?.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const city = (input?.value || '').trim();
+            if (!city) return;
+            status.textContent = 'Checking the weather for ' + city + '…';
+            lookup({city}, ' for ' + city).catch((error) => { status.textContent = error.message || 'I could not load the weather for that city.'; });
+          });
+          loadAutomaticWeather();
+        });
+      }());
+
+      (function () {
+        const isAmazonHref = (href) => /https?:\/\/(www\.)?amazon\./i.test(String(href || ''));
+        const sendAffiliateClick = (payload) => {
+          const url = window.tweApiUrl('/api/affiliate-click');
+          const body = JSON.stringify(payload);
+          if (navigator.sendBeacon) {
+            try {
+              const blob = new Blob([body], {type: 'application/json'});
+              navigator.sendBeacon(url, blob);
+              return;
+            } catch (error) {}
+          }
+          try {
+            fetch(url, {
+              method: 'POST',
+              headers: {'Content-Type': 'application/json'},
+              body,
+              keepalive: true,
+            }).catch(() => {});
+          } catch (error) {}
+        };
+        document.addEventListener('click', (event) => {
+          const link = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+          if (!link) return;
+          const href = link.getAttribute('href') || '';
+          const rel = link.getAttribute('rel') || '';
+          const flaggedAffiliate = link.hasAttribute('data-affiliate-click') || /sponsored/i.test(rel);
+          if (!flaggedAffiliate || !isAmazonHref(href)) return;
+
+          const payload = {
+            href,
+            page: window.location.pathname + window.location.search,
+            pageTitle: document.title || '',
+            title: link.getAttribute('data-affiliate-title') || link.textContent.trim() || '',
+            category: link.getAttribute('data-affiliate-category') || '',
+            guideUrl: link.getAttribute('data-affiliate-guide-url') || '',
+            placement: link.getAttribute('data-affiliate-placement') || window.location.pathname || '',
+          };
+
+          if (window.gtag) {
+            try {
+              window.gtag('event', 'affiliate_click', {
+                merchant: 'amazon',
+                event_category: 'affiliate',
+                event_label: payload.title || payload.category || href,
+                destination_url: href,
+                page_path: payload.page,
+                category_slug: payload.category,
+              });
+            } catch (error) {}
+          }
+
+          sendAffiliateClick(payload);
+        }, {capture: true});
+      }());
+
+      (function () {
+        const lightbox = document.getElementById('image-lightbox');
+        if (!lightbox) return;
+        const image = lightbox.querySelector('img');
+        const caption = lightbox.querySelector('.lightbox-caption');
+        const closeButton = lightbox.querySelector('.lightbox-close');
+        let lastFocus = null;
+
+        function closeLightbox() {
+          lightbox.classList.remove('is-open');
+          lightbox.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+          if (lastFocus) lastFocus.focus();
+        }
+
+        document.querySelectorAll('[data-lightbox-src]').forEach((trigger) => {
+          trigger.addEventListener('click', () => {
+            lastFocus = trigger;
+            image.src = trigger.getAttribute('data-lightbox-src');
+            image.alt = trigger.getAttribute('data-lightbox-alt') || trigger.querySelector('img')?.alt || 'Expanded product image';
+            caption.textContent = trigger.getAttribute('data-lightbox-caption') || 'Expanded product image preview';
+            lightbox.classList.add('is-open');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            closeButton.focus();
+          });
+        });
+
+        closeButton.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (event) => {
+          if (event.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+        });
+      })();
+    </script>
+
+  </body>
+</html>

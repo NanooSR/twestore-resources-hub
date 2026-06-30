@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     
-    <meta name="description" content="Use the free TWE Toolbox for quick practical utilities like What&#39;s my IP, Unscrambler, QR codes, Pomodoro timing, browser diagnostics, unit conversion, password generation, text cleanup, quick calculations, and a light game.">
+    <meta name="description" content="Use the free TWE Toolbox for quick practical utilities like What&#39;s my IP, Unscrambler, QR codes, Pomodoro timing, browser diagnostics, unit conversion, password generation, text cleanup, quick calculations, and a light game. Every tool opens from this bookmarkable control panel into its own direct URL.">
     <meta property="og:title" content="TheWatchersEdge.ca | TWE Toolbox">
-    <meta property="og:description" content="Use the free TWE Toolbox for quick practical utilities like What&#39;s my IP, Unscrambler, QR codes, Pomodoro timing, browser diagnostics, unit conversion, password generation, text cleanup, quick calculations, and a light game.">
+    <meta property="og:description" content="Use the free TWE Toolbox for quick practical utilities like What&#39;s my IP, Unscrambler, QR codes, Pomodoro timing, browser diagnostics, unit conversion, password generation, text cleanup, quick calculations, and a light game. Every tool opens from this bookmarkable control panel into its own direct URL.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="TheWatchersEdge.ca">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="TheWatchersEdge.ca | TWE Toolbox">
-    <meta name="twitter:description" content="Use the free TWE Toolbox for quick practical utilities like What&#39;s my IP, Unscrambler, QR codes, Pomodoro timing, browser diagnostics, unit conversion, password generation, text cleanup, quick calculations, and a light game.">
+    <meta name="twitter:description" content="Use the free TWE Toolbox for quick practical utilities like What&#39;s my IP, Unscrambler, QR codes, Pomodoro timing, browser diagnostics, unit conversion, password generation, text cleanup, quick calculations, and a light game. Every tool opens from this bookmarkable control panel into its own direct URL.">
     <title>TheWatchersEdge.ca | TWE Toolbox</title>
     
     
@@ -2450,13 +2450,55 @@
   .tool-mini-list ul { margin: 10px 0 0; padding-left: 18px; }
   .tool-stat-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
   .tool-stat { border: 1px solid var(--line); border-radius: 16px; padding: 12px; background: #fff; }
+  .tool-focus-hero { display: grid; gap: 18px; }
+  .tool-link-row,
+  .tool-category-grid,
+  .tool-focus-meta { display: grid; gap: 14px; }
+  .tool-link-row { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+  .tool-category-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .tool-category-card {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: rgba(255,255,255,.78);
+    padding: 18px;
+    box-shadow: var(--shadow-soft);
+    display: grid;
+    gap: 10px;
+  }
+  .tool-link-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,.74);
+    font-size: .92rem;
+    font-weight: 700;
+    width: fit-content;
+  }
+  .tool-instruction-list {
+    margin: 0;
+    padding-left: 18px;
+    display: grid;
+    gap: 8px;
+  }
+  .tool-url-box {
+    border: 1px dashed rgba(18,32,51,.24);
+    border-radius: 16px;
+    padding: 12px 14px;
+    background: rgba(255,255,255,.72);
+    overflow-wrap: anywhere;
+  }
+  
   @media (min-width: 900px) {
     .toolbox-hero-grid { grid-template-columns: 1.4fr .9fr; }
   }
 </style>
 
 <section class="toolbox-shell">
-  <section class="panel hero toolbox-hero-grid">
+  
+  <section class="panel hero toolbox-hero-grid toolbox-hub-only">
     <div>
       <div class="hero-kicker mono">Free tools · practical helpers · return-visit value</div>
       <p class="eyebrow">TWE Toolbox</p>
@@ -2492,12 +2534,58 @@
     </div>
   </section>
 
+  <section class="section card toolbox-hub-only">
+    <p class="eyebrow">Control panel layout</p>
+    <h2>Browse by category before you open a tool</h2>
+    <div class="tool-category-grid">
+      
+      <article class="tool-category-card">
+        <div class="tool-link-pill">2 tools</div>
+        <h3>Quick diagnostics</h3>
+        <p class="muted">What&#39;s my IP · Browser + network info</p>
+      </article>
+      
+      <article class="tool-category-card">
+        <div class="tool-link-pill">2 tools</div>
+        <h3>Writing + words</h3>
+        <p class="muted">Unscrambler · Text helper</p>
+      </article>
+      
+      <article class="tool-category-card">
+        <div class="tool-link-pill">1 tools</div>
+        <h3>Privacy + security</h3>
+        <p class="muted">Password generator</p>
+      </article>
+      
+      <article class="tool-category-card">
+        <div class="tool-link-pill">3 tools</div>
+        <h3>Daily work helpers</h3>
+        <p class="muted">Quick calculator · Random chooser · Unit converter</p>
+      </article>
+      
+      <article class="tool-category-card">
+        <div class="tool-link-pill">1 tools</div>
+        <h3>Sharing + handoff</h3>
+        <p class="muted">QR code generator</p>
+      </article>
+      
+      <article class="tool-category-card">
+        <div class="tool-link-pill">2 tools</div>
+        <h3>Focus + flow</h3>
+        <p class="muted">Pomodoro timer · Mini game</p>
+      </article>
+      
+    </div>
+  </section>
+
+  
   <section class="section card" id="toolbox-grid">
     <p class="eyebrow">Toolbox overview</p>
     <h2>Start with the tool that solves today’s problem fastest</h2>
+    <p class="muted" style="max-width: 780px;">This page is the TWE Toolbox control panel. Each card opens a dedicated tool page with its own direct bookmarkable URL.</p>
     <div class="toolbox-overview-grid">
       
-      <article class="tool-overview-card">
+      <article class="tool-overview-card" data-tool-slug="whats-my-ip">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #d7f3ff, #e7fff8);">
           <span class="tool-thumb-icon" aria-hidden="true">🌐</span>
           <span class="tool-thumb-label">Connection view</span>
@@ -2507,10 +2595,14 @@
           <h3>What&#39;s my IP</h3>
           <p class="muted">See the current public-facing connection IP your browser is presenting right now.</p>
         </div>
-        <a class="card-link" href="#ip-checker">Check my IP →</a>
+        <div class="tool-chip-row">
+          <span class="tool-chip">Quick diagnostics</span>
+          
+        </div>
+        <a class="card-link" href="/toolbox/whats-my-ip" target="_blank" rel="noopener">Open IP checker →</a>
       </article>
       
-      <article class="tool-overview-card">
+      <article class="tool-overview-card" data-tool-slug="unscrambler">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe1fb, #eef0ff);">
           <span class="tool-thumb-icon" aria-hidden="true">🔤</span>
           <span class="tool-thumb-label">Word finder</span>
@@ -2520,10 +2612,14 @@
           <h3>Unscrambler</h3>
           <p class="muted">Type scrambled letters and get a cleaner list of likely English words made from them.</p>
         </div>
-        <a class="card-link" href="#unscrambler">Unscramble letters →</a>
+        <div class="tool-chip-row">
+          <span class="tool-chip">Writing + words</span>
+          
+        </div>
+        <a class="card-link" href="/toolbox/unscrambler" target="_blank" rel="noopener">Open unscrambler →</a>
       </article>
       
-      <article class="tool-overview-card">
+      <article class="tool-overview-card" data-tool-slug="password-generator">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #fdf0cf, #e8fff6);">
           <span class="tool-thumb-icon" aria-hidden="true">🔐</span>
           <span class="tool-thumb-label">Secure login helper</span>
@@ -2533,10 +2629,14 @@
           <h3>Password generator</h3>
           <p class="muted">Generate a stronger random password locally in your browser without leaving the page.</p>
         </div>
-        <a class="card-link" href="#password-generator">Generate password →</a>
+        <div class="tool-chip-row">
+          <span class="tool-chip">Privacy + security</span>
+          
+        </div>
+        <a class="card-link" href="/toolbox/password-generator" target="_blank" rel="noopener">Open password generator →</a>
       </article>
       
-      <article class="tool-overview-card">
+      <article class="tool-overview-card" data-tool-slug="text-helper">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #fff0de, #e5f5ff);">
           <span class="tool-thumb-icon" aria-hidden="true">📝</span>
           <span class="tool-thumb-label">Copy cleanup</span>
@@ -2546,10 +2646,14 @@
           <h3>Text helper</h3>
           <p class="muted">Quickly switch case, count words, and estimate reading time for a pasted block of text.</p>
         </div>
-        <a class="card-link" href="#text-helper">Open text helper →</a>
+        <div class="tool-chip-row">
+          <span class="tool-chip">Writing + words</span>
+          
+        </div>
+        <a class="card-link" href="/toolbox/text-helper" target="_blank" rel="noopener">Open text helper →</a>
       </article>
       
-      <article class="tool-overview-card">
+      <article class="tool-overview-card" data-tool-slug="quick-calculator">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #e9f8d8, #fff7dd);">
           <span class="tool-thumb-icon" aria-hidden="true">🧮</span>
           <span class="tool-thumb-label">Fast math</span>
@@ -2559,10 +2663,14 @@
           <h3>Quick calculator</h3>
           <p class="muted">Use a simple percentage and tip helper when you need a quick answer without opening another tab.</p>
         </div>
-        <a class="card-link" href="#quick-calculator">Open calculator →</a>
+        <div class="tool-chip-row">
+          <span class="tool-chip">Daily work helpers</span>
+          
+        </div>
+        <a class="card-link" href="/toolbox/quick-calculator" target="_blank" rel="noopener">Open calculator →</a>
       </article>
       
-      <article class="tool-overview-card">
+      <article class="tool-overview-card" data-tool-slug="random-chooser">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe4dd, #fff6d9);">
           <span class="tool-thumb-icon" aria-hidden="true">🎯</span>
           <span class="tool-thumb-label">Fair pick</span>
@@ -2572,10 +2680,14 @@
           <h3>Random chooser</h3>
           <p class="muted">Paste a short list of options and let the toolbox pick one fairly when you are stuck deciding.</p>
         </div>
-        <a class="card-link" href="#random-chooser">Pick for me →</a>
+        <div class="tool-chip-row">
+          <span class="tool-chip">Daily work helpers</span>
+          
+        </div>
+        <a class="card-link" href="/toolbox/random-chooser" target="_blank" rel="noopener">Open random chooser →</a>
       </article>
       
-      <article class="tool-overview-card">
+      <article class="tool-overview-card" data-tool-slug="qr-code-generator">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #ddefff, #f1f3ff);">
           <span class="tool-thumb-icon" aria-hidden="true">▦</span>
           <span class="tool-thumb-label">Scan-ready</span>
@@ -2585,10 +2697,14 @@
           <h3>QR code generator</h3>
           <p class="muted">Turn a link, note, Wi-Fi string, or simple contact detail into a scannable QR code right on the page.</p>
         </div>
-        <a class="card-link" href="#qr-generator">Create QR code →</a>
+        <div class="tool-chip-row">
+          <span class="tool-chip">Sharing + handoff</span>
+          
+        </div>
+        <a class="card-link" href="/toolbox/qr-code-generator" target="_blank" rel="noopener">Open QR code generator →</a>
       </article>
       
-      <article class="tool-overview-card">
+      <article class="tool-overview-card" data-tool-slug="pomodoro-timer">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe3e3, #fff4dc);">
           <span class="tool-thumb-icon" aria-hidden="true">⏳</span>
           <span class="tool-thumb-label">Focus block</span>
@@ -2598,10 +2714,14 @@
           <h3>Pomodoro timer</h3>
           <p class="muted">Run a simple work-and-break timer when you want a cleaner focus block without another app.</p>
         </div>
-        <a class="card-link" href="#pomodoro-timer">Start focus timer →</a>
+        <div class="tool-chip-row">
+          <span class="tool-chip">Focus + flow</span>
+          <span class="tool-chip">Newer addition</span>
+        </div>
+        <a class="card-link" href="/toolbox/pomodoro-timer" target="_blank" rel="noopener">Open Pomodoro timer →</a>
       </article>
       
-      <article class="tool-overview-card">
+      <article class="tool-overview-card" data-tool-slug="browser-network-info">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #dff5ff, #e8ffe8);">
           <span class="tool-thumb-icon" aria-hidden="true">📶</span>
           <span class="tool-thumb-label">Device snapshot</span>
@@ -2611,10 +2731,14 @@
           <h3>Browser + network info</h3>
           <p class="muted">See useful browser, screen, language, timezone, and connection details for quick troubleshooting.</p>
         </div>
-        <a class="card-link" href="#browser-network-info">Check device info →</a>
+        <div class="tool-chip-row">
+          <span class="tool-chip">Quick diagnostics</span>
+          <span class="tool-chip">Newer addition</span>
+        </div>
+        <a class="card-link" href="/toolbox/browser-network-info" target="_blank" rel="noopener">Open browser info →</a>
       </article>
       
-      <article class="tool-overview-card">
+      <article class="tool-overview-card" data-tool-slug="unit-converter">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #f1e5ff, #fff4e5);">
           <span class="tool-thumb-icon" aria-hidden="true">📏</span>
           <span class="tool-thumb-label">Quick convert</span>
@@ -2624,10 +2748,14 @@
           <h3>Unit converter</h3>
           <p class="muted">Convert common length, temperature, and storage values without opening a cluttered converter site.</p>
         </div>
-        <a class="card-link" href="#unit-converter">Convert units →</a>
+        <div class="tool-chip-row">
+          <span class="tool-chip">Daily work helpers</span>
+          <span class="tool-chip">Newer addition</span>
+        </div>
+        <a class="card-link" href="/toolbox/unit-converter" target="_blank" rel="noopener">Open unit converter →</a>
       </article>
       
-      <article class="tool-overview-card">
+      <article class="tool-overview-card" data-tool-slug="mini-game">
         <div class="tool-thumb" style="background: linear-gradient(135deg, #dff7ff, #eef6ff);">
           <span class="tool-thumb-icon" aria-hidden="true">🎮</span>
           <span class="tool-thumb-label">Tiny break</span>
@@ -2637,7 +2765,11 @@
           <h3>Mini game</h3>
           <p class="muted">Play a lightweight Tic-Tac-Toe game while you wait, think, or pass a minute.</p>
         </div>
-        <a class="card-link" href="#mini-game">Play game →</a>
+        <div class="tool-chip-row">
+          <span class="tool-chip">Focus + flow</span>
+          <span class="tool-chip">Newer addition</span>
+        </div>
+        <a class="card-link" href="/toolbox/mini-game" target="_blank" rel="noopener">Open mini game →</a>
       </article>
       
     </div>

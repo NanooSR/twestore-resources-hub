@@ -18,6 +18,17 @@
     "/updates/resources-startnow20-launch",
     "/updates/retainer-guide-and-toolbox",
     "/command-center",
+    "/toolbox/whats-my-ip",
+    "/toolbox/unscrambler",
+    "/toolbox/password-generator",
+    "/toolbox/text-helper",
+    "/toolbox/quick-calculator",
+    "/toolbox/random-chooser",
+    "/toolbox/qr-code-generator",
+    "/toolbox/pomodoro-timer",
+    "/toolbox/browser-network-info",
+    "/toolbox/unit-converter",
+    "/toolbox/mini-game",
     "/store/the-watchers-edge-botops-toolkit",
     "/store/twe-solo-crm-follow-up-system",
     "/store/twe-client-onboarding-starter-kit",
@@ -109,5 +120,5 @@
     "twe-website-audit-scorecard"
   ],
   "redirects": [],
-  "exported_count": 37
+  "exported_count": 48
 }
