@@ -88,6 +88,7 @@
         top: 12px;
         z-index: 60;
         display: flex;
+        flex-wrap: wrap;
         align-items: stretch;
         gap: 16px;
         width: 100%;
@@ -100,22 +101,27 @@
         pointer-events: auto;
       }
       .site-header-band > .nav {
+        order: 0;
         min-width: 0;
-        flex: 1 1 0;
+        flex: 1 1 100%;
+        width: 100%;
+      }
+      .site-header-band > .header-band-side-left,
+      .site-header-band > .header-band-side-right {
+        min-width: min(280px, 100%);
+        flex: 1 1 calc(50% - 8px);
       }
       .site-header-band > .header-band-side-left {
-        min-width: 0;
-        flex: 0 0 270px;
+        order: 1;
       }
       .site-header-band > .header-band-side-right {
-        min-width: 0;
-        flex: 0 0 236px;
+        order: 2;
       }
       @media (min-width: 1181px) {
         .site-header-band > .nav,
         .site-header-band > .header-band-side-left,
         .site-header-band > .header-band-side-right {
-          min-height: 248px;
+          min-height: 0;
         }
       }
       .nav {
@@ -397,7 +403,8 @@
       }
       @media (min-width: 1181px) {
         .header-side-widget {
-          min-height: 248px;
+          min-height: 0;
+          height: auto;
         }
       }
       .header-band-side {
@@ -2350,7 +2357,7 @@
             <p class="store-weather-location" data-weather-location></p>
             <p class="muted store-weather-status" data-weather-status>Checking your local weather…</p>
           </article>
-
+        </div>
       </div>
       <div class="store-sales-banner-grid">
         <aside class="store-sales-side" data-store-sales-banner data-banner-lane="amazon" aria-label="Popular Amazon.ca picks">
