@@ -2857,24 +2857,26 @@
   const ipButton = document.getElementById('ip-check-button');
   const ipValue = document.getElementById('ip-result-value');
   const ipNote = document.getElementById('ip-result-note');
-  ipButton?.addEventListener('click', async () => {
-    ipValue.textContent = 'Checking…';
-    ipNote.textContent = 'Looking up the current connection IP.';
-    try {
-      const response = await fetch(toolboxApiUrl('/api/toolbox/ip'), { headers: { 'Accept': 'application/json' } });
-      const payload = await readJsonResponse(response, 'This toolbox copy cannot reach the live IP service right now.');
-      if (payload.status === 'ok' && payload.ip) {
-        ipValue.textContent = payload.ip;
-        ipNote.textContent = payload.source ? `Source: ${payload.source}` : (payload.note || 'Detected from the current request.');
-      } else {
+  if (ipButton && ipValue && ipNote) {
+    ipButton.addEventListener('click', async () => {
+      ipValue.textContent = 'Checking…';
+      ipNote.textContent = 'Looking up the current connection IP.';
+      try {
+        const response = await fetch(toolboxApiUrl('/api/toolbox/ip'), { headers: { 'Accept': 'application/json' } });
+        const payload = await readJsonResponse(response, 'This toolbox copy cannot reach the live IP service right now.');
+        if (payload.status === 'ok' && payload.ip) {
+          ipValue.textContent = payload.ip;
+          ipNote.textContent = payload.source ? `Source: ${payload.source}` : (payload.note || 'Detected from the current request.');
+        } else {
+          ipValue.textContent = 'Unavailable';
+          ipNote.textContent = payload.message || 'Could not detect the IP right now.';
+        }
+      } catch (error) {
         ipValue.textContent = 'Unavailable';
-        ipNote.textContent = payload.message || 'Could not detect the IP right now.';
+        ipNote.textContent = error?.message || 'Could not detect the IP right now.';
       }
-    } catch (error) {
-      ipValue.textContent = 'Unavailable';
-      ipNote.textContent = error?.message || 'Could not detect the IP right now.';
-    }
-  });
+    });
+  }
 
   const unscramblerForm = document.getElementById('unscrambler-form');
   const unscramblerLetters = document.getElementById('unscrambler-letters');
@@ -2917,82 +2919,99 @@
   const lengthValue = document.getElementById('password-length-value');
   const passwordOutput = document.getElementById('password-output');
   const generatePassword = () => {
-    const length = Number(lengthInput?.value || 20);
+    if (!lengthInput || !lengthValue || !passwordOutput || !window.crypto?.getRandomValues) return;
+    const length = Number(lengthInput.value || 20);
     lengthValue.textContent = String(length);
     const bytes = new Uint8Array(length);
     window.crypto.getRandomValues(bytes);
     passwordOutput.textContent = Array.from(bytes, (value) => alphabet[value % alphabet.length]).join('');
   };
-  lengthInput?.addEventListener('input', generatePassword);
-  document.getElementById('password-generate-button')?.addEventListener('click', generatePassword);
-  document.getElementById('password-copy-button')?.addEventListener('click', async () => {
-    const value = passwordOutput.textContent || '';
-    if (!value || value === 'Press generate') return;
-    try { await navigator.clipboard.writeText(value); } catch (_) {}
-  });
+  if (lengthInput && lengthValue && passwordOutput) {
+    lengthInput.addEventListener('input', generatePassword);
+    document.getElementById('password-generate-button')?.addEventListener('click', generatePassword);
+    document.getElementById('password-copy-button')?.addEventListener('click', async () => {
+      const value = passwordOutput.textContent || '';
+      if (!value || value === 'Press generate') return;
+      try { await navigator.clipboard.writeText(value); } catch (_) {}
+    });
+  }
 
   const textInput = document.getElementById('text-helper-input');
   const wordCount = document.getElementById('text-word-count');
   const charCount = document.getElementById('text-char-count');
   const readTime = document.getElementById('text-read-time');
   const updateTextStats = () => {
-    const value = textInput?.value || '';
+    if (!textInput || !wordCount || !charCount || !readTime) return;
+    const value = textInput.value || '';
     const words = value.trim() ? value.trim().split(/\s+/).filter(Boolean).length : 0;
     wordCount.textContent = String(words);
     charCount.textContent = String(value.length);
     readTime.textContent = `${Math.max(0, Math.ceil(words / 200))} min`;
   };
-  textInput?.addEventListener('input', updateTextStats);
-  document.querySelectorAll('[data-case-action]').forEach((button) => {
-    button.addEventListener('click', () => {
-      if (!textInput) return;
-      const action = button.getAttribute('data-case-action');
-      if (action === 'upper') textInput.value = textInput.value.toUpperCase();
-      if (action === 'lower') textInput.value = textInput.value.toLowerCase();
-      if (action === 'title') textInput.value = textInput.value.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
-      updateTextStats();
+  if (textInput && wordCount && charCount && readTime) {
+    textInput.addEventListener('input', updateTextStats);
+    document.querySelectorAll('[data-case-action]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const action = button.getAttribute('data-case-action');
+        if (action === 'upper') textInput.value = textInput.value.toUpperCase();
+        if (action === 'lower') textInput.value = textInput.value.toLowerCase();
+        if (action === 'title') textInput.value = textInput.value.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
+        updateTextStats();
+      });
     });
-  });
-  updateTextStats();
+    updateTextStats();
+  }
 
   const formatCurrency = (value) => new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD' }).format(value);
   const runCalc = () => {
-    const amount = Number(document.getElementById('calc-amount')?.value || 0);
-    const percent = Number(document.getElementById('calc-percent')?.value || 0);
+    const amountEl = document.getElementById('calc-amount');
+    const percentEl = document.getElementById('calc-percent');
+    const percentValueEl = document.getElementById('calc-percent-value');
+    const totalValueEl = document.getElementById('calc-total-value');
+    const plainValueEl = document.getElementById('calc-plain-value');
+    if (!amountEl || !percentEl || !percentValueEl || !totalValueEl || !plainValueEl) return;
+    const amount = Number(amountEl.value || 0);
+    const percent = Number(percentEl.value || 0);
     const percentValue = amount * (percent / 100);
-    document.getElementById('calc-percent-value').textContent = formatCurrency(percentValue);
-    document.getElementById('calc-total-value').textContent = formatCurrency(amount + percentValue);
-    document.getElementById('calc-plain-value').textContent = `${percent}%`;
+    percentValueEl.textContent = formatCurrency(percentValue);
+    totalValueEl.textContent = formatCurrency(amount + percentValue);
+    plainValueEl.textContent = `${percent}%`;
   };
-  document.getElementById('calc-button')?.addEventListener('click', runCalc);
-  runCalc();
+  const calcButton = document.getElementById('calc-button');
+  if (calcButton) {
+    calcButton.addEventListener('click', runCalc);
+    runCalc();
+  }
 
   const chooserInput = document.getElementById('chooser-options');
   const chooserButton = document.getElementById('chooser-button');
   const chooserCountNote = document.getElementById('chooser-count-note');
   const chooserResultValue = document.getElementById('chooser-result-value');
   const chooserResultNote = document.getElementById('chooser-result-note');
-  const chooserCleanOptions = () => (chooserInput?.value || '').split(/\r?\n/).map((value) => value.trim()).filter(Boolean);
-  const chooserUpdateCount = () => {
+    const chooserCleanOptions = () => (chooserInput?.value || '').split(/\r?\n/).map((value) => value.trim()).filter(Boolean);
+const chooserUpdateCount = () => {
     const options = chooserCleanOptions();
+    if (!chooserCountNote) return options;
     chooserCountNote.textContent = options.length >= 2 ? `${options.length} options ready.` : 'Add at least 2 options.';
     return options;
   };
-  chooserInput?.addEventListener('input', chooserUpdateCount);
-  chooserButton?.addEventListener('click', () => {
-    const options = chooserUpdateCount();
-    if (options.length < 2) {
-      chooserResultValue.textContent = 'Need more options';
-      chooserResultNote.textContent = 'Add at least 2 non-empty lines.';
-      return;
-    }
-    const randomValues = new Uint32Array(1);
-    window.crypto.getRandomValues(randomValues);
-    const index = randomValues[0] % options.length;
-    chooserResultValue.textContent = options[index];
-    chooserResultNote.textContent = `Picked from ${options.length} cleaned options.`;
-  });
-  chooserUpdateCount();
+  if (chooserInput && chooserButton && chooserCountNote && chooserResultValue && chooserResultNote) {
+    chooserInput.addEventListener('input', chooserUpdateCount);
+    chooserButton.addEventListener('click', () => {
+      const options = chooserUpdateCount();
+      if (options.length < 2) {
+        chooserResultValue.textContent = 'Need more options';
+        chooserResultNote.textContent = 'Add at least 2 non-empty lines.';
+        return;
+      }
+      const randomValues = new Uint32Array(1);
+      window.crypto.getRandomValues(randomValues);
+      const index = randomValues[0] % options.length;
+      chooserResultValue.textContent = options[index];
+      chooserResultNote.textContent = `Picked from ${options.length} cleaned options.`;
+    });
+    chooserUpdateCount();
+  }
 
   const qrInput = document.getElementById('qr-input');
   const qrSize = document.getElementById('qr-size');
@@ -3001,18 +3020,20 @@
   const qrDownloadLink = document.getElementById('qr-download-link');
   const qrPreviewWrap = document.getElementById('qr-preview-wrap');
   const renderQrFallback = (value, size) => {
+    if (!qrPreviewWrap || !qrStatus || !qrDownloadLink) return;
     const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${encodeURIComponent(value)}`;
     qrPreviewWrap.innerHTML = `<img src="${qrUrl}" alt="Generated QR code preview" width="${size}" height="${size}">`;
     qrStatus.textContent = 'QR code ready';
     qrDownloadLink.href = qrUrl;
   };
   const renderQr = async () => {
-    const value = (qrInput?.value || '').trim();
+    if (!qrInput || !qrSize || !qrPreviewWrap || !qrStatus || !qrDownloadLink) return;
+    const value = (qrInput.value || '').trim();
     if (!value) {
       qrStatus.textContent = 'Enter some text or a URL first';
       return;
     }
-    const size = Number(qrSize?.value || 240);
+    const size = Number(qrSize.value || 240);
     try {
       if (window.QRCode?.toCanvas && qrCanvas) {
         try {
@@ -3037,8 +3058,10 @@
       qrStatus.textContent = 'Could not generate that QR code';
     }
   };
-  document.getElementById('qr-generate-button')?.addEventListener('click', renderQr);
-  qrSize?.addEventListener('change', renderQr);
+  if (qrInput && qrSize && qrPreviewWrap && qrStatus && qrDownloadLink) {
+    document.getElementById('qr-generate-button')?.addEventListener('click', renderQr);
+    qrSize.addEventListener('change', renderQr);
+  }
 
   const pomodoroDisplay = document.getElementById('pomodoro-display');
   const pomodoroState = document.getElementById('pomodoro-state');
@@ -3050,43 +3073,49 @@
     const seconds = Math.floor(value % 60).toString().padStart(2, '0');
     return `${minutes}:${seconds}`;
   };
-  const renderPomodoro = () => { pomodoroDisplay.textContent = formatSeconds(pomodoroSeconds); };
+  const renderPomodoro = () => {
+    if (!pomodoroDisplay) return;
+    pomodoroDisplay.textContent = formatSeconds(pomodoroSeconds);
+  };
   const stopPomodoro = () => { if (pomodoroTimer) clearInterval(pomodoroTimer); pomodoroTimer = null; };
-  document.querySelectorAll('[data-pomodoro-preset]').forEach((button) => {
-    button.addEventListener('click', () => {
-      pomodoroDefault = Number(button.getAttribute('data-pomodoro-preset')) * 60;
-      pomodoroSeconds = pomodoroDefault;
+  if (pomodoroDisplay && pomodoroState) {
+    document.querySelectorAll('[data-pomodoro-preset]').forEach((button) => {
+      button.addEventListener('click', () => {
+        pomodoroDefault = Number(button.getAttribute('data-pomodoro-preset')) * 60;
+        pomodoroSeconds = pomodoroDefault;
+        stopPomodoro();
+        pomodoroState.textContent = `Preset loaded: ${formatSeconds(pomodoroDefault)}`;
+        renderPomodoro();
+      });
+    });
+    document.getElementById('pomodoro-start')?.addEventListener('click', () => {
+      if (pomodoroTimer) return;
+      pomodoroState.textContent = 'Running';
+      pomodoroTimer = window.setInterval(() => {
+        pomodoroSeconds = Math.max(0, pomodoroSeconds - 1);
+        renderPomodoro();
+        if (!pomodoroSeconds) {
+          stopPomodoro();
+          pomodoroState.textContent = 'Finished — nice work.';
+        }
+      }, 1000);
+    });
+    document.getElementById('pomodoro-pause')?.addEventListener('click', () => {
       stopPomodoro();
-      pomodoroState.textContent = `Preset loaded: ${formatSeconds(pomodoroDefault)}`;
+      pomodoroState.textContent = 'Paused';
+    });
+    document.getElementById('pomodoro-reset')?.addEventListener('click', () => {
+      stopPomodoro();
+      pomodoroSeconds = pomodoroDefault;
+      pomodoroState.textContent = 'Reset';
       renderPomodoro();
     });
-  });
-  document.getElementById('pomodoro-start')?.addEventListener('click', () => {
-    if (pomodoroTimer) return;
-    pomodoroState.textContent = 'Running';
-    pomodoroTimer = window.setInterval(() => {
-      pomodoroSeconds = Math.max(0, pomodoroSeconds - 1);
-      renderPomodoro();
-      if (!pomodoroSeconds) {
-        stopPomodoro();
-        pomodoroState.textContent = 'Finished — nice work.';
-      }
-    }, 1000);
-  });
-  document.getElementById('pomodoro-pause')?.addEventListener('click', () => {
-    stopPomodoro();
-    pomodoroState.textContent = 'Paused';
-  });
-  document.getElementById('pomodoro-reset')?.addEventListener('click', () => {
-    stopPomodoro();
-    pomodoroSeconds = pomodoroDefault;
-    pomodoroState.textContent = 'Reset';
     renderPomodoro();
-  });
-  renderPomodoro();
+  }
 
   const browserInfoResults = document.getElementById('browser-info-results');
   const readBrowserInfo = () => {
+    if (!browserInfoResults) return '';
     const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
     const rows = [
       ['User agent', navigator.userAgent || 'Unavailable'],
@@ -3104,13 +3133,15 @@
     return rows.map(([label, value]) => `${label}: ${value}`).join('\n');
   };
   let lastBrowserInfoSummary = '';
-  document.getElementById('browser-info-button')?.addEventListener('click', () => {
-    lastBrowserInfoSummary = readBrowserInfo();
-  });
-  document.getElementById('browser-info-copy')?.addEventListener('click', async () => {
-    if (!lastBrowserInfoSummary) lastBrowserInfoSummary = readBrowserInfo();
-    try { await navigator.clipboard.writeText(lastBrowserInfoSummary); } catch (_) {}
-  });
+  if (browserInfoResults) {
+    document.getElementById('browser-info-button')?.addEventListener('click', () => {
+      lastBrowserInfoSummary = readBrowserInfo();
+    });
+    document.getElementById('browser-info-copy')?.addEventListener('click', async () => {
+      if (!lastBrowserInfoSummary) lastBrowserInfoSummary = readBrowserInfo();
+      try { await navigator.clipboard.writeText(lastBrowserInfoSummary); } catch (_) {}
+    });
+  }
 
   const converterCategory = document.getElementById('converter-category');
   const converterFrom = document.getElementById('converter-from');
@@ -3153,6 +3184,7 @@
     return Math.abs(value) === 1 ? labels[0] : labels[1];
   };
   const fillConverterUnits = () => {
+    if (!converterCategory || !converterFrom || !converterTo || !converterNote) return;
     const category = converterCategory.value;
     const units = Object.keys(converterSets[category].units);
     const options = units.map((unit) => `<option value="${unit}">${titleize(unit)}</option>`).join('');
@@ -3170,6 +3202,7 @@
     return celsius;
   };
   const runConverter = () => {
+    if (!converterCategory || !converterFrom || !converterTo || !converterInput || !converterOutput || !converterNote) return;
     const category = converterCategory.value;
     const from = converterFrom.value;
     const to = converterTo.value;
@@ -3185,13 +3218,15 @@
     converterOutput.textContent = `${rawValue} ${formatUnitLabel(from, rawValue)} = ${formatter} ${formatUnitLabel(to, Number(formatter))}`;
     converterNote.textContent = converterSets[category].note;
   };
-  converterCategory?.addEventListener('change', () => { fillConverterUnits(); runConverter(); });
-  converterFrom?.addEventListener('change', runConverter);
-  converterTo?.addEventListener('change', runConverter);
-  converterInput?.addEventListener('input', runConverter);
-  document.getElementById('converter-button')?.addEventListener('click', runConverter);
-  fillConverterUnits();
-  runConverter();
+  if (converterCategory && converterFrom && converterTo && converterInput && converterOutput && converterNote) {
+    converterCategory.addEventListener('change', () => { fillConverterUnits(); runConverter(); });
+    converterFrom.addEventListener('change', runConverter);
+    converterTo.addEventListener('change', runConverter);
+    converterInput.addEventListener('input', runConverter);
+    document.getElementById('converter-button')?.addEventListener('click', runConverter);
+    fillConverterUnits();
+    runConverter();
+  }
 
   const cells = Array.from(document.querySelectorAll('[data-ttt-cell]'));
   const status = document.getElementById('ttt-status');
@@ -3201,33 +3236,35 @@
   const lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
   const updateBoard = () => cells.forEach((cell, index) => { cell.textContent = board[index]; });
   const winner = () => lines.find(([a, b, c]) => board[a] && board[a] === board[b] && board[a] === board[c]);
-  cells.forEach((cell, index) => {
-    cell.addEventListener('click', () => {
-      if (gameOver || board[index]) return;
-      board[index] = player;
-      updateBoard();
-      if (winner()) {
-        status.textContent = `Player ${player} wins!`;
-        gameOver = true;
-        return;
-      }
-      if (board.every(Boolean)) {
-        status.textContent = 'Draw game.';
-        gameOver = true;
-        return;
-      }
-      player = player === 'X' ? 'O' : 'X';
-      status.textContent = `Player ${player} turn.`;
+  if (cells.length && status) {
+    cells.forEach((cell, index) => {
+      cell.addEventListener('click', () => {
+        if (gameOver || board[index]) return;
+        board[index] = player;
+        updateBoard();
+        if (winner()) {
+          status.textContent = `Player ${player} wins!`;
+          gameOver = true;
+          return;
+        }
+        if (board.every(Boolean)) {
+          status.textContent = 'Draw game.';
+          gameOver = true;
+          return;
+        }
+        player = player === 'X' ? 'O' : 'X';
+        status.textContent = `Player ${player} turn.`;
+      });
     });
-  });
-  document.getElementById('ttt-reset')?.addEventListener('click', () => {
-    board = Array(9).fill('');
-    player = 'X';
-    gameOver = false;
-    status.textContent = 'Player X starts.';
+    document.getElementById('ttt-reset')?.addEventListener('click', () => {
+      board = Array(9).fill('');
+      player = 'X';
+      gameOver = false;
+      status.textContent = 'Player X starts.';
+      updateBoard();
+    });
     updateBoard();
-  });
-  updateBoard();
+  }
   generatePassword();
   renderQr();
 })();
