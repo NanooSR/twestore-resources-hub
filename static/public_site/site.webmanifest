@@ -1,0 +1,25 @@
+{
+  "name": "The Watchers Edge",
+  "short_name": "TWE",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/public_site/the-watchers-edge-mark.png",
+      "sizes": "68x84",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "theme_color": "#096772",
+  "background_color": "#fffdf9",
+  "display": "standalone"
+}
