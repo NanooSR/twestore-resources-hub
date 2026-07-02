@@ -92,14 +92,14 @@
         top: 12px;
         z-index: 60;
         display: grid;
-        grid-template-columns: minmax(240px, 0.84fr) minmax(660px, 2.3fr) minmax(180px, 0.56fr);
+        grid-template-columns: minmax(196px, 0.58fr) minmax(700px, 2.9fr) minmax(164px, 0.48fr);
         grid-template-areas: "left nav right";
-        align-items: stretch;
-        gap: 14px;
+        align-items: start;
+        gap: 10px;
         width: 100%;
         max-width: 100%;
-        margin: 0 0 16px;
-        padding: 14px;
+        margin: 0 0 14px;
+        padding: 12px;
         border: 1px solid rgba(196, 209, 203, 0.92);
         border-radius: 26px;
         background: linear-gradient(180deg, rgba(255, 252, 247, 0.985), rgba(247, 243, 236, 0.965));
@@ -122,7 +122,7 @@
       .site-header-band > .header-band-side-right {
         min-width: 0;
         width: 100%;
-        align-self: stretch;
+        align-self: start;
       }
       .site-header-band > .header-band-side-left {
         grid-area: left;
@@ -133,10 +133,12 @@
         order: 2;
       }
       @media (min-width: 1181px) {
-        .site-header-band > .nav,
+        .site-header-band > .nav {
+          min-height: 100%;
+        }
         .site-header-band > .header-band-side-left,
         .site-header-band > .header-band-side-right {
-          min-height: 100%;
+          height: auto;
         }
       }
       .nav {
@@ -150,14 +152,14 @@
         align-items: center;
         align-self: stretch;
         gap: 10px 14px;
-        padding: 14px 18px;
+        padding: 13px 17px;
         border: 1px solid rgba(196, 209, 203, 0.72);
         border-radius: 20px;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 252, 247, 0.48));
         backdrop-filter: blur(8px);
         box-shadow: inset 0 1px 0 rgba(255,255,255,0.72);
         margin-bottom: 0;
-        min-height: 124px;
+        min-height: 116px;
         height: 100%;
       }
       @media (min-width: 1181px) {
@@ -412,10 +414,10 @@
         line-height: 1.34;
       }
       .header-side-widget {
-        min-height: 108px;
-        height: 100%;
+        min-height: 0;
+        height: auto;
         width: 100%;
-        align-self: stretch;
+        align-self: start;
       }
       @media (min-width: 1181px) {
         .header-side-widget {
@@ -425,15 +427,15 @@
       }
       .header-band-side {
         display: flex;
-        align-self: stretch;
+        align-self: start;
         min-width: 0;
-        height: 100%;
+        height: auto;
       }
       .header-band-side-left {
-        justify-self: stretch;
+        justify-self: start;
       }
       .header-band-side-right {
-        justify-self: stretch;
+        justify-self: end;
       }
       .nav-utility-row {
         grid-area: utility;
@@ -1420,9 +1422,9 @@
       .store-corner-card {
         display: flex;
         flex-direction: column;
-        gap: 7px;
-        height: 100%;
-        padding: 12px 13px;
+        gap: 6px;
+        height: auto;
+        padding: 11px 12px;
         border: 1px solid rgba(9, 103, 114, 0.2);
         border-radius: 18px;
         background: rgba(255,253,249,0.97);
@@ -1431,24 +1433,43 @@
         min-width: 0;
       }
       .store-corner-card h2 {
-        margin-bottom: 2px;
-        font-size: clamp(0.92rem, 0.82vw, 1.05rem);
+        margin-bottom: 1px;
+        font-size: clamp(0.84rem, 0.7vw, 0.98rem);
+        line-height: 1.16;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
       }
       .store-corner-card .muted {
-        margin-bottom: 6px;
-        font-size: 0.82rem;
-        line-height: 1.3;
+        margin-bottom: 4px;
+        font-size: 0.76rem;
+        line-height: 1.26;
         overflow-wrap: anywhere;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         overflow: hidden;
       }
+      .store-corner-card .eyebrow {
+        margin-bottom: 0;
+        font-size: 0.64rem;
+        letter-spacing: 0.11em;
+      }
       .store-corner-deal {
         background: linear-gradient(145deg, rgba(255,253,249,0.98), rgba(255,241,214,0.88));
       }
       .store-corner-deal .pill-row {
         margin-top: auto;
+        gap: 6px;
+      }
+      .store-corner-deal .pill,
+      .store-weather-card .pill {
+        max-width: 100%;
+        min-height: 40px;
+        padding: 7px 10px;
+        font-size: 0.74rem;
+        line-height: 1.08;
       }
       .store-corner-spacer {
         min-height: 1px;
@@ -1467,31 +1488,35 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 10px;
-        min-height: 48px;
+        gap: 8px;
+        min-height: 0;
+      }
+      .store-weather-visual h2 {
+        font-size: 0.92rem;
+        line-height: 1.1;
       }
       .store-weather-icon {
-        width: 48px;
-        height: 48px;
+        width: 40px;
+        height: 40px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         flex: 0 0 auto;
-        border-radius: 16px;
+        border-radius: 14px;
         background: rgba(255,255,255,0.86);
         box-shadow: 0 10px 24px rgba(23, 52, 58, 0.12);
-        font-size: 1.65rem;
+        font-size: 1.38rem;
         overflow: hidden;
       }
-      .store-weather-icon img { width: 44px; height: 44px; object-fit: contain; }
+      .store-weather-icon img { width: 36px; height: 36px; object-fit: contain; }
       .store-weather-status {
         min-height: 0;
         margin: 0;
         overflow: hidden;
         font-weight: 650;
         color: var(--ink-soft);
-        line-height: 1.32;
-        font-size: 0.9rem;
+        line-height: 1.24;
+        font-size: 0.8rem;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
@@ -1500,10 +1525,13 @@
         display: none;
         margin: 0;
         color: var(--brand);
-        font-size: 0.76rem;
+        font-size: 0.68rem;
         font-weight: 800;
-        letter-spacing: 0.07em;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .store-weather-card.has-weather .store-weather-location { display: block; }
       .store-weather-card button[disabled] {
@@ -1913,10 +1941,10 @@
       @media (max-width: 1500px) {
         .site-header-band,
         .site-header-band.store-top-corner-grid {
-          grid-template-columns: minmax(220px, 0.78fr) minmax(440px, 2.08fr) minmax(176px, 0.54fr);
-          gap: 12px;
+          grid-template-columns: minmax(188px, 0.54fr) minmax(460px, 2.7fr) minmax(156px, 0.44fr);
+          gap: 10px;
           margin: 0 0 12px;
-          padding: 13px;
+          padding: 12px;
         }
       }
       @media (max-width: 1180px) {
@@ -3372,10 +3400,10 @@ const chooserUpdateCount = () => {
           const requestPreciseWeather = function () {
             preciseLocationTried = true;
             if (button) button.disabled = true;
-            status.textContent = 'Checking your location once so I can show local weather here.';
+            status.textContent = 'Checking location for local weather…';
             if (!navigator.geolocation) {
               widget.classList.add('is-fallback');
-              status.textContent = 'This browser cannot share location, so local weather is unavailable here.';
+              status.textContent = 'Local weather is unavailable in this browser.';
               if (button) button.disabled = false;
               return;
             }
@@ -3383,12 +3411,12 @@ const chooserUpdateCount = () => {
               lookup({latitude: position.coords.latitude.toFixed(3), longitude: position.coords.longitude.toFixed(3)}, ' near you')
                 .catch(() => {
                   widget.classList.add('is-fallback');
-                  status.textContent = 'I could not load the weather from your device location.';
+                  status.textContent = 'Local weather is unavailable right now.';
                 })
                 .finally(() => { if (button) button.disabled = false; });
             }, () => {
               widget.classList.add('is-fallback');
-              status.textContent = 'Location was not shared, so I could not load the exact local weather.';
+              status.textContent = 'Share location to see local weather here.';
               if (button) button.disabled = false;
             }, { enableHighAccuracy: false, maximumAge: 600000, timeout: 8000 });
           };
@@ -3398,7 +3426,7 @@ const chooserUpdateCount = () => {
               return;
             }
             widget.classList.add('is-fallback');
-            status.textContent = 'This browser does not support automatic local weather.';
+            status.textContent = 'Local weather is unavailable in this browser.';
           };
           button?.addEventListener('click', function () {
             button.textContent = preciseLocationTried ? 'Refreshing…' : 'Use my location';
