@@ -77,7 +77,10 @@
       }
       * { box-sizing: border-box; }
       *, *::before, *::after { min-width: 0; }
-      html { scroll-behavior: smooth; }
+      html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
       body {
         margin: 0;
         font-family: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -2423,10 +2426,10 @@
   <div class="mini-stack hero-aside-grid">
     <article class="mini-card">
       <p class="eyebrow">Support inbox</p>
-      <h3><a class="text-link" href="mailto:support@thewatchersedge.ca?subject=The%20Watchers%20Edge%20support%20request%20%E2%80%94%20General%20support%20request&amp;body=Name%3A%20Not%20provided%0AEmail%3A%20Not%20provided%0ACategory%3A%20General%20support%20request%0ASubject%3A%20General%20support%20request%0AMessage%3A%20%0APage%3A%20%2Fsupport%0ASource%3A%20public-site-support-page%0ATimestamp%3A%202026-07-02%2021%3A55%3A16%20EDT" data-support-fallback-link>support@thewatchersedge.ca</a></h3>
+      <h3><a class="text-link" href="mailto:support@thewatchersedge.ca?subject=The%20Watchers%20Edge%20support%20request%20%E2%80%94%20General%20support%20request&amp;body=Name%3A%20Not%20provided%0AEmail%3A%20Not%20provided%0ACategory%3A%20General%20support%20request%0ASubject%3A%20General%20support%20request%0AMessage%3A%20%0APage%3A%20%2Fsupport%0ASource%3A%20public-site-support-page%0ATimestamp%3A%202026-07-02%2022%3A12%3A46%20EDT" data-support-fallback-link>support@thewatchersedge.ca</a></h3>
       <p class="muted">Direct website sending is not live yet because a secure mail-delivery backend has not been configured. Use the fallback email link below for now so no secrets are exposed in public code.</p>
       <div class="cta-row" style="margin-top: 12px;">
-        <a class="btn secondary" href="mailto:support@thewatchersedge.ca?subject=The%20Watchers%20Edge%20support%20request%20%E2%80%94%20General%20support%20request&amp;body=Name%3A%20Not%20provided%0AEmail%3A%20Not%20provided%0ACategory%3A%20General%20support%20request%0ASubject%3A%20General%20support%20request%0AMessage%3A%20%0APage%3A%20%2Fsupport%0ASource%3A%20public-site-support-page%0ATimestamp%3A%202026-07-02%2021%3A55%3A16%20EDT" data-support-fallback-link>Open fallback support email</a>
+        <a class="btn secondary" href="mailto:support@thewatchersedge.ca?subject=The%20Watchers%20Edge%20support%20request%20%E2%80%94%20General%20support%20request&amp;body=Name%3A%20Not%20provided%0AEmail%3A%20Not%20provided%0ACategory%3A%20General%20support%20request%0ASubject%3A%20General%20support%20request%0AMessage%3A%20%0APage%3A%20%2Fsupport%0ASource%3A%20public-site-support-page%0ATimestamp%3A%202026-07-02%2022%3A12%3A46%20EDT" data-support-fallback-link>Open fallback support email</a>
       </div>
     </article>
   </div>
@@ -2478,7 +2481,7 @@
       </div>
       <div class="cta-row" style="margin-top: 0;">
         <button class="btn" type="submit" disabled aria-disabled="true">Submit support request</button>
-        <a class="btn ghost" href="mailto:support@thewatchersedge.ca?subject=The%20Watchers%20Edge%20support%20request%20%E2%80%94%20General%20support%20request&amp;body=Name%3A%20Not%20provided%0AEmail%3A%20Not%20provided%0ACategory%3A%20General%20support%20request%0ASubject%3A%20General%20support%20request%0AMessage%3A%20%0APage%3A%20%2Fsupport%0ASource%3A%20public-site-support-page%0ATimestamp%3A%202026-07-02%2021%3A55%3A16%20EDT" data-support-fallback-link>Use fallback support email</a>
+        <a class="btn ghost" href="mailto:support@thewatchersedge.ca?subject=The%20Watchers%20Edge%20support%20request%20%E2%80%94%20General%20support%20request&amp;body=Name%3A%20Not%20provided%0AEmail%3A%20Not%20provided%0ACategory%3A%20General%20support%20request%0ASubject%3A%20General%20support%20request%0AMessage%3A%20%0APage%3A%20%2Fsupport%0ASource%3A%20public-site-support-page%0ATimestamp%3A%202026-07-02%2022%3A12%3A46%20EDT" data-support-fallback-link>Use fallback support email</a>
       </div>
       <div class="card" data-support-success hidden style="padding: 16px 18px; background: linear-gradient(135deg, rgba(232,244,241,0.92), rgba(255,255,255,0.96)); box-shadow: none;">
         <strong>Support request sent.</strong>
