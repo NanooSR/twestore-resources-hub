@@ -3320,12 +3320,8 @@
             }, { enableHighAccuracy: false, maximumAge: 600000, timeout: 8000 });
           };
           const loadAutomaticWeather = () => {
-            if (navigator.geolocation) {
-              requestPreciseWeather();
-              return;
-            }
             widget.classList.add('is-fallback');
-            status.textContent = 'Local weather is unavailable in this browser.';
+            status.textContent = 'Choose Use my location or type a city to check weather.';
           };
           button?.addEventListener('click', function () {
             button.textContent = preciseLocationTried ? 'Refreshing…' : 'Use my location';
