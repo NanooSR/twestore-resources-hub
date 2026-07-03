@@ -2140,8 +2140,36 @@
       "This guide works best when each page points the reader to the next helpful topic instead of forcing them back to a generic category grid.",
       "Church teams buy better when they connect supplies to weekly repeatability, not just one event or one room."
     ],
-    "skip_recommendation_section": true,
-    "recommendation_slots": [],
+    "recommendation_slots": [
+      {
+        "name": "Best first office-admin pick for forms, labels, and weekly visibility",
+        "reason": "For churches whose biggest weekly drag is still paperwork, visitor follow-up, and keeping recurring admin visible enough for the next volunteer to pick up cleanly.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20",
+        "cta_label": "See the church-office label-maker pick on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca label-maker option already used on the church office guide."
+      },
+      {
+        "name": "Best first welcome-flow pick for signs and guest direction",
+        "reason": "For churches whose next fastest win is helping guests, classes, and first-time visitors understand where to go without volunteer guesswork at the front door.",
+        "affiliate_url": "https://www.amazon.ca/dp/B07P8TXWYH?tag=resourceshubca-20",
+        "cta_label": "See the church sign-stand pick on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca sign-stand option already used on the church hospitality guide."
+      },
+      {
+        "name": "Best first nursery-reset pick for sanitation and child-flow basics",
+        "reason": "For churches whose most fragile handoff is still diaper-area cleanup, shared touchpoint sanitation, or keeping nursery and toddler pickup flow calmer week to week.",
+        "affiliate_url": "https://www.amazon.ca/dp/B09XJC428L?tag=resourceshubca-20",
+        "cta_label": "See the nursery disinfecting-wipes pick on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca disinfecting-wipes option already used on the nursery sanitation guide."
+      },
+      {
+        "name": "Best first portable-event pick for room setup and queue flow",
+        "reason": "For churches whose biggest stress point is still event setup, hallway bottlenecks, mobile check-in, or carrying supplies between rooms before and after ministry events.",
+        "affiliate_url": "https://www.amazon.ca/dp/B0BW8LZK4Y?tag=resourceshubca-20",
+        "cta_label": "See the rolling-cart event-reset pick on Amazon.ca",
+        "link_disclaimer": "Affiliate link to an Amazon.ca rolling utility cart already used on the church event-setup guide."
+      }
+    ],
     "url_slug": "church-supplies-buying-path-for-offices-services-and-events"
   },
   {
@@ -2221,7 +2249,7 @@
         "link_disclaimer": "Affiliate link to an Amazon.ca cable-management tray option."
       }
     ],
-    "body": "### Timing note\nLocal project time is mid-June 2026, and current public Amazon sources indicate Prime Day 2026 is scheduled for June 23 through June 26. That means a Prime Day angle is valid if this page is refreshed close to that window. If the window passes, this page should stay alive as an evergreen deal-watch resource for freelancers.\n\n### How to use a deals page without wasting money\nThe best deal is not always the lowest price. For freelancers, the smartest deal is the one that removes a real work bottleneck. That usually means focusing on a few high-impact categories instead of impulse buying ten smaller gadgets.\n\n### Best deal categories to prioritize\n#### Standing desks and ergonomic chairs\nThese can be worth waiting on because the savings can be meaningful and the daily impact is high. But only buy if the desk or chair is actually the real bottleneck.\n\n#### Lighting and monitor-support gear\nThese are strong mid-ticket upgrades that can improve comfort and review quality without a huge rebuild.\n\n#### Docks, hubs, power strips, and cable management\nThese often get overlooked during sale events even though they can immediately make the workspace calmer and easier to use.\n\n### How freelancers should decide fast\nAsk three questions:\n1. Will this item improve my workday every week?\n2. Am I buying it because I need it, or because it is discounted?\n3. Does it support a process I already know I use?\n\nIf the answer to the third question is no, the deal is probably not urgent.\n\n### What not to do\n- Do not treat sale pricing as proof that a product fits your process.\n- Do not blow the budget on aesthetics while ignoring posture, power, or device friction.\n- Do not let a deals page turn into random gadget accumulation.\n\n### Final decision rule\nUse this page to decide which categories are worth watching, not to justify every sale-day purchase. The best home office deal for a freelancer is the one that keeps paying off in the next hundred work sessions.",
+    "body": "### Timing note\nThis page should stay evergreen by default. If a specific Amazon sale window is active, refresh the copy with the current verified date range before leaning on a Prime Day angle. Otherwise use this page as a year-round deal-watch resource for freelancers.\n\n### How to use a deals page without wasting money\nThe best deal is not always the lowest price. For freelancers, the smartest deal is the one that removes a real work bottleneck. That usually means focusing on a few high-impact categories instead of impulse buying ten smaller gadgets.\n\n### Best deal categories to prioritize\n#### Standing desks and ergonomic chairs\nThese can be worth waiting on because the savings can be meaningful and the daily impact is high. But only buy if the desk or chair is actually the real bottleneck.\n\n#### Lighting and monitor-support gear\nThese are strong mid-ticket upgrades that can improve comfort and review quality without a huge rebuild.\n\n#### Docks, hubs, power strips, and cable management\nThese often get overlooked during sale events even though they can immediately make the workspace calmer and easier to use.\n\n### How freelancers should decide fast\nAsk three questions:\n1. Will this item improve my workday every week?\n2. Am I buying it because I need it, or because it is discounted?\n3. Does it support a process I already know I use?\n\nIf the answer to the third question is no, the deal is probably not urgent.\n\n### What not to do\n- Do not treat sale pricing as proof that a product fits your process.\n- Do not blow the budget on aesthetics while ignoring posture, power, or device friction.\n- Do not let a deals page turn into random gadget accumulation.\n\n### Final decision rule\nUse this page to decide which categories are worth watching, not to justify every sale-day purchase. The best home office deal for a freelancer is the one that keeps paying off in the next hundred work sessions.",
     "url_slug": "home-office-deals-for-freelancers"
   },
   {
