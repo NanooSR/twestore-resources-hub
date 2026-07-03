@@ -153,8 +153,8 @@
         order: 0;
         min-width: 0;
         width: 100%;
-        height: 100%;
-        align-self: stretch;
+        height: auto;
+        align-self: start;
       }
       .site-header-band > .header-band-side-left,
       .site-header-band > .header-band-side-right {
@@ -172,7 +172,7 @@
       }
       @media (min-width: 1181px) {
         .site-header-band > .nav {
-          min-height: 100%;
+          min-height: 0;
         }
         .site-header-band > .header-band-side-left,
         .site-header-band > .header-band-side-right {
@@ -188,24 +188,24 @@
           "links links"
           "utility utility";
         align-items: center;
-        align-self: stretch;
-        gap: 10px 14px;
-        padding: 13px 17px;
+        align-self: start;
+        gap: 8px 14px;
+        padding: 12px 16px 13px;
         border: 1px solid rgba(196, 209, 203, 0.72);
         border-radius: 20px;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 252, 247, 0.48));
         backdrop-filter: blur(8px);
         box-shadow: inset 0 1px 0 rgba(255,255,255,0.72);
         margin-bottom: 0;
-        min-height: 116px;
-        height: 100%;
+        min-height: 0;
+        height: auto;
       }
       @media (min-width: 1181px) {
         .nav {
           margin-left: 0;
           margin-right: 0;
           margin-bottom: 0;
-          min-height: 100%;
+          min-height: 0;
         }
       }
       .brand {
@@ -305,10 +305,10 @@
         grid-area: links;
         display: flex;
         flex-wrap: nowrap;
-        justify-content: center;
+        justify-content: flex-end;
         gap: 5px;
         min-width: 0;
-        padding-top: 2px;
+        padding-top: 0;
       }
       .nav-links.nav-links-primary {
         overflow-x: auto;
@@ -320,8 +320,9 @@
         justify-content: center;
         align-items: center;
         flex: 0 0 auto;
-        padding: 8px 10px;
-        min-height: 40px;
+        gap: 6px;
+        padding: 8px 11px;
+        min-height: 38px;
         border-radius: 999px;
         border: 1px solid rgba(9, 103, 114, 0.18);
         background: linear-gradient(135deg, rgba(255,253,249,0.96), rgba(220,238,237,0.82));
@@ -337,6 +338,25 @@
         white-space: nowrap;
         transition: 160ms ease;
       }
+      .nav-links a::before,
+      .nav-blog-link::before,
+      .nav-utility-link::before {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.15em;
+        min-width: 1.15em;
+        font-size: 1.02em;
+        line-height: 1;
+        filter: drop-shadow(0 1px 0 rgba(255,255,255,0.7));
+      }
+      .nav-links a.is-home::before { content: "⌂"; }
+      .nav-links a.is-amazon::before { content: "★"; color: #b26700; }
+      .nav-links a.is-kits::before { content: "▣"; color: #096772; }
+      .nav-links a.is-church::before { content: "✚"; color: #0b7277; }
+      .nav-links a.is-pets::before { content: "🐾"; }
+      .nav-links a.is-support::before { content: "?"; color: #096772; font-weight: 900; }
+      .nav-links a.is-about::before { content: "i"; color: #9a5f00; font-weight: 900; }
       .nav-links a:nth-child(3n+2) {
         background: linear-gradient(135deg, rgba(255,253,249,0.98), rgba(255,241,214,0.86));
         border-color: rgba(239, 155, 19, 0.22);
@@ -481,16 +501,17 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        gap: 10px;
+        gap: 8px;
         min-width: 0;
+        padding-top: 2px;
       }
       .nav-blog-link {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         gap: 8px;
-        min-height: 42px;
-        padding: 9px 12px;
+        min-height: 40px;
+        padding: 8px 14px;
         border-radius: 999px;
         border: 1px solid rgba(9, 103, 114, 0.24);
         color: #15353b;
@@ -500,6 +521,8 @@
         box-shadow: 0 12px 26px rgba(23, 52, 58, 0.12);
         transition: 180ms ease;
       }
+      .nav-blog-link.is-church::before { content: "⛪"; }
+      .nav-blog-link.is-pet::before { content: "🐶"; }
       .nav-blog-link:hover,
       .nav-blog-link:focus-visible {
         transform: translateY(-1px);
@@ -528,8 +551,8 @@
         align-items: center;
         justify-content: center;
         gap: 8px;
-        min-height: 42px;
-        padding: 9px 14px;
+        min-height: 40px;
+        padding: 8px 15px;
         border: 1px solid rgba(9, 103, 114, 0.34);
         border-radius: 999px;
         background: linear-gradient(135deg, #fffdf9 0%, #dceeed 48%, #ffe9bd 100%);
@@ -548,7 +571,17 @@
         box-shadow: 0 16px 30px rgba(23, 52, 58, 0.18), inset 0 1px 0 rgba(255,255,255,0.92);
       }
       .nav-utility-link.is-toolbox {
-        min-width: 196px;
+        min-width: 172px;
+        border-color: rgba(9, 103, 114, 0.42);
+        background: linear-gradient(135deg, #e9fbfb 0%, #bfeef0 46%, #fff0bd 100%);
+        box-shadow: 0 14px 32px rgba(9, 103, 114, 0.17), inset 0 1px 0 rgba(255,255,255,0.9);
+      }
+      .nav-utility-link.is-toolbox::before { content: "🧰"; }
+      .nav-utility-link.is-toolbox:hover,
+      .nav-utility-link.is-toolbox:focus-visible {
+        background: linear-gradient(135deg, #096772 0%, #0f7f86 58%, #ef9b13 140%);
+        color: #fff;
+        border-color: rgba(9, 103, 114, 0.62);
       }
       .panel,
       .card,
@@ -1518,7 +1551,7 @@
           linear-gradient(145deg, rgba(255,253,249,0.99), rgba(220,238,237,0.90));
         display: grid;
         align-content: start;
-        gap: 8px;
+        gap: 5px;
         min-height: 0;
         overflow: visible;
       }
@@ -1534,8 +1567,8 @@
         line-height: 1.1;
       }
       .store-weather-icon {
-        width: 40px;
-        height: 40px;
+        width: 34px;
+        height: 34px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -1543,21 +1576,21 @@
         border-radius: 14px;
         background: rgba(255,255,255,0.86);
         box-shadow: 0 10px 24px rgba(23, 52, 58, 0.12);
-        font-size: 1.38rem;
+        font-size: 1.2rem;
         overflow: hidden;
       }
-      .store-weather-icon img { width: 36px; height: 36px; object-fit: contain; }
+      .store-weather-icon img { width: 31px; height: 31px; object-fit: contain; }
       .store-weather-status {
         min-height: 0;
         margin: 0;
         overflow: hidden;
         font-weight: 650;
         color: var(--ink-soft);
-        line-height: 1.24;
-        font-size: 0.8rem;
+        line-height: 1.18;
+        font-size: 0.76rem;
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
       }
       .store-weather-location {
         display: none;
@@ -1578,9 +1611,24 @@
       }
       .store-weather-card button.pill {
         justify-content: center;
-        min-height: 44px;
-        padding: 9px 12px;
-        line-height: 1.12;
+        min-height: 34px;
+        padding: 6px 10px;
+        line-height: 1.08;
+      }
+      .store-weather-card .store-weather-city-form {
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 6px;
+        margin-top: 4px;
+      }
+      .store-weather-card .store-weather-city-form input {
+        min-height: 34px;
+        padding: 6px 8px;
+      }
+      .store-weather-card .store-weather-city-form button {
+        min-height: 34px;
+        padding: 6px 9px;
+        white-space: nowrap;
       }
       .support-chat-widget {
         position: relative;
@@ -3414,7 +3462,7 @@ const chooserUpdateCount = () => {
             const form = document.createElement('form');
             form.className = 'store-weather-city-form';
             form.setAttribute('data-weather-city-form', '');
-            form.innerHTML = '<label class="sr-only" for="weather-city">City for local weather</label><input id="weather-city" type="text" name="city" placeholder="City, province/state"><button class="pill" type="submit">Check city</button>';
+            form.innerHTML = '<label class="sr-only" for="weather-city">City for local weather</label><input id="weather-city" type="text" name="city" placeholder="City"><button class="pill" type="submit">Go</button>';
             widget.appendChild(form);
           }
         };
@@ -3475,7 +3523,7 @@ const chooserUpdateCount = () => {
           };
           const loadAutomaticWeather = () => {
             widget.classList.add('is-fallback');
-            status.textContent = 'Choose Use my location or type a city to check weather.';
+            status.textContent = 'Use location or enter a city.';
           };
           button?.addEventListener('click', function () {
             button.textContent = preciseLocationTried ? 'Refreshing…' : 'Use my location';
