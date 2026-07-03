@@ -105,6 +105,17 @@
         word-break: normal;
       }
       img { display: block; max-width: 100%; }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
       .shell { max-width: calc(var(--shell) + 48px); margin: 0 auto; padding: 24px; }
       body[data-standalone-page="true"] .shell {
         max-width: 1220px;
@@ -3458,7 +3469,10 @@ const chooserUpdateCount = () => {
             const city = (input?.value || '').trim();
             if (!city) return;
             status.textContent = 'Checking the weather for ' + city + '…';
-            lookup({city}, ' for ' + city).catch((error) => { status.textContent = error.message || 'I could not load the weather for that city.'; });
+            lookup({city}, ' for ' + city).catch((error) => {
+              widget.classList.add('is-fallback');
+              status.textContent = /Failed to fetch|NetworkError/i.test(String(error && error.message || error)) ? 'Weather is unavailable right now. Try again in a moment.' : (error.message || 'I could not load the weather for that city.');
+            });
           });
           loadAutomaticWeather();
         });
