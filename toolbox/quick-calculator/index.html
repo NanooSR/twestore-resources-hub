@@ -2713,6 +2713,22 @@
     font-size: .9rem;
     font-weight: 700;
   }
+  .toolbox-quality-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .toolbox-quality-pill {
+    border: 1px solid rgba(126,152,190,.2);
+    border-radius: 18px;
+    padding: 12px 14px;
+    background: linear-gradient(145deg, rgba(255,255,255,.9), rgba(244,248,255,.76));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.85), 0 12px 26px rgba(15,23,42,.06);
+    font-size: .92rem;
+    font-weight: 800;
+  }
+  .toolbox-quality-pill span { display:block; margin-top: 3px; font-size: .82rem; font-weight: 650; color: rgba(34,52,74,.68); }
   .tool-badge {
     display: inline-flex;
     align-items: center;
@@ -2766,20 +2782,35 @@
   }
   .tool-canvas-wrap canvas,
   .tool-canvas-wrap img { max-width: 100%; height: auto; }
-  .tool-grid-game {
+  .tool-reaction-arena {
     display: grid;
-    grid-template-columns: repeat(3, minmax(68px, 1fr));
-    gap: 8px;
-    max-width: 260px;
+    gap: 14px;
+    justify-items: start;
   }
-  .tool-grid-game button {
-    min-height: 72px;
-    border-radius: 16px;
-    border: 1px solid var(--line);
-    background: #fff;
-    font-size: 1.5rem;
-    font-weight: 800;
+  .tool-reaction-target {
+    width: min(100%, 420px);
+    min-height: 178px;
+    border: 1px solid color-mix(in srgb, var(--active-accent, #2771ff) 26%, white);
+    border-radius: 28px;
+    display: grid;
+    place-items: center;
+    padding: 22px;
+    text-align: center;
+    color: var(--active-ink, #122033);
+    background:
+      radial-gradient(circle at 22% 18%, rgba(255,255,255,.72), transparent 30%),
+      linear-gradient(135deg, color-mix(in srgb, var(--active-accent, #2771ff) 12%, white), color-mix(in srgb, var(--active-accent-2, #10b981) 16%, white));
+    box-shadow: inset 0 2px 0 rgba(255,255,255,.78), 0 24px 54px color-mix(in srgb, var(--active-accent, #2771ff) 20%, rgba(15,23,42,.13));
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform .16s ease, background .16s ease, box-shadow .16s ease;
   }
+  .tool-reaction-target:hover,
+  .tool-reaction-target:focus-visible { transform: translateY(-3px) scale(1.01); }
+  .tool-reaction-target.is-waiting { background: linear-gradient(135deg, #fff7d6, #ffe8d6); }
+  .tool-reaction-target.is-ready { background: linear-gradient(135deg, #dcfce7, #bbf7d0); box-shadow: 0 0 0 6px rgba(34,197,94,.14), 0 24px 54px rgba(34,197,94,.18); }
+  .tool-reaction-target.is-too-soon { background: linear-gradient(135deg, #fee2e2, #fff1f2); }
   .tool-mini-list ul { margin: 10px 0 0; padding-left: 18px; }
   .tool-stat-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
   .tool-stat { border: 1px solid rgba(126,152,190,.2); border-radius: 16px; padding: 12px; background: #fff; }
@@ -3010,6 +3041,11 @@
         <div class="tool-return-card">
           <strong>Why you’ll come back:</strong>
           <p class="muted" style="margin: 6px 0 0;">Open it for tips, tax, discounts, and quick markup checks.</p>
+        </div>
+        <div class="toolbox-quality-strip" aria-label="Tool quality cues">
+          <div class="toolbox-quality-pill">Fast feedback<span>Controls respond in-page without accounts or checkout friction.</span></div>
+          <div class="toolbox-quality-pill">Touch friendly<span>Designed for quick desktop and mobile use.</span></div>
+          <div class="toolbox-quality-pill">TWE branded<span>Each tool has its own color story and repeat-use cue.</span></div>
         </div>
       </div>
       <div class="active-tool-stage" data-pattern="stacked number blocks" aria-hidden="true">
@@ -3571,50 +3607,87 @@ const chooserUpdateCount = () => {
     runConverter();
   }
 
-  const cells = Array.from(document.querySelectorAll('[data-ttt-cell]'));
-  const status = document.getElementById('ttt-status');
-  const scoreEls = { X: document.getElementById('ttt-x-score'), O: document.getElementById('ttt-o-score'), draw: document.getElementById('ttt-draw-score') };
-  const scores = { X: 0, O: 0, draw: 0 };
-  const renderScores = () => { Object.entries(scoreEls).forEach(([key, el]) => { if (el) el.textContent = String(scores[key] || 0); }); };
-  let board = Array(9).fill('');
-  let player = 'X';
-  let gameOver = false;
-  const lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
-  const updateBoard = () => cells.forEach((cell, index) => { cell.textContent = board[index]; });
-  const winner = () => lines.find(([a, b, c]) => board[a] && board[a] === board[b] && board[a] === board[c]);
-  if (cells.length && status) {
-    cells.forEach((cell, index) => {
-      cell.addEventListener('click', () => {
-        if (gameOver || board[index]) return;
-        board[index] = player;
-        updateBoard();
-        if (winner()) {
-          status.textContent = `Player ${player} wins! Scoreboard updated.`;
-          scores[player] += 1;
-          renderScores();
-          gameOver = true;
-          return;
-        }
-        if (board.every(Boolean)) {
-          status.textContent = 'Draw game. Scoreboard updated.';
-          scores.draw += 1;
-          renderScores();
-          gameOver = true;
-          return;
-        }
-        player = player === 'X' ? 'O' : 'X';
-        status.textContent = `Player ${player} turn.`;
-      });
+  const reactionTarget = document.getElementById('reaction-target');
+  const reactionStart = document.getElementById('reaction-start');
+  const reactionReset = document.getElementById('reaction-reset');
+  const reactionStatus = document.getElementById('reaction-status');
+  const reactionLast = document.getElementById('reaction-last');
+  const reactionBest = document.getElementById('reaction-best');
+  const reactionAttempts = document.getElementById('reaction-attempts');
+  const reactionStorageKey = 'tweReactionBestMs';
+  let reactionTimer = null;
+  let reactionReadyAt = 0;
+  let reactionState = 'idle';
+  let reactionAttemptCount = 0;
+  const readReactionBest = () => Number(window.localStorage?.getItem(reactionStorageKey) || 0);
+  const renderReactionBest = () => {
+    const best = readReactionBest();
+    if (reactionBest) reactionBest.textContent = best ? `${best} ms` : '—';
+  };
+  const setReactionTarget = (text, state = 'idle') => {
+    if (!reactionTarget) return;
+    reactionTarget.textContent = text;
+    reactionTarget.classList.toggle('is-waiting', state === 'waiting');
+    reactionTarget.classList.toggle('is-ready', state === 'ready');
+    reactionTarget.classList.toggle('is-too-soon', state === 'too-soon');
+  };
+  const startReactionRound = () => {
+    if (!reactionTarget || !reactionStatus) return;
+    window.clearTimeout(reactionTimer);
+    reactionState = 'waiting';
+    reactionReadyAt = 0;
+    reactionStatus.textContent = 'Wait for green — tapping early restarts the round.';
+    setReactionTarget('Wait for green…', 'waiting');
+    const delay = 1200 + Math.floor(Math.random() * 2600);
+    reactionTimer = window.setTimeout(() => {
+      reactionState = 'ready';
+      reactionReadyAt = performance.now();
+      reactionStatus.textContent = 'Go! Tap the green target.';
+      setReactionTarget('GO — tap now!', 'ready');
+    }, delay);
+  };
+  const finishReactionRound = () => {
+    if (!reactionStatus || !reactionLast || !reactionAttempts) return;
+    if (reactionState === 'waiting') {
+      window.clearTimeout(reactionTimer);
+      reactionState = 'idle';
+      reactionStatus.textContent = 'Too soon — wait for green before tapping.';
+      setReactionTarget('Too soon. Start again.', 'too-soon');
+      return;
+    }
+    if (reactionState !== 'ready' || !reactionReadyAt) return;
+    const elapsed = Math.max(0, Math.round(performance.now() - reactionReadyAt));
+    reactionAttemptCount += 1;
+    reactionLast.textContent = `${elapsed} ms`;
+    reactionAttempts.textContent = String(reactionAttemptCount);
+    const previousBest = readReactionBest();
+    if (!previousBest || elapsed < previousBest) {
+      window.localStorage?.setItem(reactionStorageKey, String(elapsed));
+      reactionStatus.textContent = `New best: ${elapsed} ms. Nice reflex sprint.`;
+    } else {
+      reactionStatus.textContent = `${elapsed} ms. Best stays ${previousBest} ms — try another round.`;
+    }
+    renderReactionBest();
+    reactionState = 'idle';
+    reactionReadyAt = 0;
+    setReactionTarget('Round saved. Start again?', 'idle');
+  };
+  if (reactionTarget && reactionStart && reactionReset) {
+    reactionStart.addEventListener('click', startReactionRound);
+    reactionTarget.addEventListener('click', finishReactionRound);
+    reactionReset.addEventListener('click', () => {
+      window.clearTimeout(reactionTimer);
+      window.localStorage?.removeItem(reactionStorageKey);
+      reactionAttemptCount = 0;
+      reactionState = 'idle';
+      reactionReadyAt = 0;
+      if (reactionLast) reactionLast.textContent = '—';
+      if (reactionAttempts) reactionAttempts.textContent = '0';
+      if (reactionStatus) reactionStatus.textContent = 'Local best cleared. Ready for a clean reflex sprint.';
+      renderReactionBest();
+      setReactionTarget('Press Start, then wait for green.', 'idle');
     });
-    document.getElementById('ttt-reset')?.addEventListener('click', () => {
-      board = Array(9).fill('');
-      player = 'X';
-      gameOver = false;
-      status.textContent = 'Player X starts.';
-      updateBoard();
-    });
-    updateBoard();
-    renderScores();
+    renderReactionBest();
   }
   generatePassword();
   renderQr();

@@ -2713,6 +2713,22 @@
     font-size: .9rem;
     font-weight: 700;
   }
+  .toolbox-quality-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .toolbox-quality-pill {
+    border: 1px solid rgba(126,152,190,.2);
+    border-radius: 18px;
+    padding: 12px 14px;
+    background: linear-gradient(145deg, rgba(255,255,255,.9), rgba(244,248,255,.76));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.85), 0 12px 26px rgba(15,23,42,.06);
+    font-size: .92rem;
+    font-weight: 800;
+  }
+  .toolbox-quality-pill span { display:block; margin-top: 3px; font-size: .82rem; font-weight: 650; color: rgba(34,52,74,.68); }
   .tool-badge {
     display: inline-flex;
     align-items: center;
@@ -2766,20 +2782,35 @@
   }
   .tool-canvas-wrap canvas,
   .tool-canvas-wrap img { max-width: 100%; height: auto; }
-  .tool-grid-game {
+  .tool-reaction-arena {
     display: grid;
-    grid-template-columns: repeat(3, minmax(68px, 1fr));
-    gap: 8px;
-    max-width: 260px;
+    gap: 14px;
+    justify-items: start;
   }
-  .tool-grid-game button {
-    min-height: 72px;
-    border-radius: 16px;
-    border: 1px solid var(--line);
-    background: #fff;
-    font-size: 1.5rem;
-    font-weight: 800;
+  .tool-reaction-target {
+    width: min(100%, 420px);
+    min-height: 178px;
+    border: 1px solid color-mix(in srgb, var(--active-accent, #2771ff) 26%, white);
+    border-radius: 28px;
+    display: grid;
+    place-items: center;
+    padding: 22px;
+    text-align: center;
+    color: var(--active-ink, #122033);
+    background:
+      radial-gradient(circle at 22% 18%, rgba(255,255,255,.72), transparent 30%),
+      linear-gradient(135deg, color-mix(in srgb, var(--active-accent, #2771ff) 12%, white), color-mix(in srgb, var(--active-accent-2, #10b981) 16%, white));
+    box-shadow: inset 0 2px 0 rgba(255,255,255,.78), 0 24px 54px color-mix(in srgb, var(--active-accent, #2771ff) 20%, rgba(15,23,42,.13));
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform .16s ease, background .16s ease, box-shadow .16s ease;
   }
+  .tool-reaction-target:hover,
+  .tool-reaction-target:focus-visible { transform: translateY(-3px) scale(1.01); }
+  .tool-reaction-target.is-waiting { background: linear-gradient(135deg, #fff7d6, #ffe8d6); }
+  .tool-reaction-target.is-ready { background: linear-gradient(135deg, #dcfce7, #bbf7d0); box-shadow: 0 0 0 6px rgba(34,197,94,.14), 0 24px 54px rgba(34,197,94,.18); }
+  .tool-reaction-target.is-too-soon { background: linear-gradient(135deg, #fee2e2, #fff1f2); }
   .tool-mini-list ul { margin: 10px 0 0; padding-left: 18px; }
   .tool-stat-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
   .tool-stat { border: 1px solid rgba(126,152,190,.2); border-radius: 16px; padding: 12px; background: #fff; }
@@ -2991,6 +3022,11 @@
     <p class="eyebrow">Toolbox overview</p>
     <h2>Start with the tool that solves today’s problem fastest</h2>
     <p class="muted" style="max-width: 780px;">Free, fast, no sign-up. Every tool has its own page, so bookmark the ones you use most.</p>
+    <div class="toolbox-quality-strip" aria-label="TWE Toolbox quality promises">
+      <div class="toolbox-quality-pill">App-like feel<span>Focused one-task pages with premium cards and fast feedback.</span></div>
+      <div class="toolbox-quality-pill">Mobile-ready<span>Touch-friendly controls and no-account quick utility.</span></div>
+      <div class="toolbox-quality-pill">Privacy-aware<span>Browser-local first, with live checks clearly labeled.</span></div>
+    </div>
     <div class="cta-row" style="margin-top: 12px;">
       <a class="btn secondary toolbox-home-link" href="/">Back to TWEStore</a>
     </div>
@@ -3236,19 +3272,19 @@
         </div>
       </a>
       
-      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="mini-game" href="/toolbox/mini-game/?cb=toolbox20260704premium" aria-label="Open Mini game in this Toolbox tab">
+      <a class="tool-overview-card tool-overview-card-link" data-tool-slug="mini-game" href="/toolbox/mini-game/?cb=toolbox20260704premium" aria-label="Open Reaction timer in this Toolbox tab">
         <div class="tool-card-signal-row">
-          <span class="tool-card-signal is-accent">Fun break</span>
+          <span class="tool-card-signal is-accent">Daily break</span>
           <span class="tool-card-signal">Free tool</span>
           <span class="tool-card-signal">Newer addition</span>
         </div>
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #dff7ff, #eef6ff);">
-          <span class="tool-thumb-icon" aria-hidden="true">🎮</span>
-          <span class="tool-thumb-label">Tiny break</span>
+        <div class="tool-thumb" style="background: linear-gradient(135deg, #dff7ff, #fff0fa);">
+          <span class="tool-thumb-icon" aria-hidden="true">⚡</span>
+          <span class="tool-thumb-label">Reflex sprint</span>
         </div>
         <div class="tool-overview-card-copy">
-          <h3>Mini game</h3>
-          <p class="muted">Play a lightweight Tic-Tac-Toe game while you wait, think, or pass a minute.</p>
+          <h3>Reaction timer</h3>
+          <p class="muted">Wait for the signal, tap as fast as you can, and try to beat your best local reaction time.</p>
         </div>
         <div class="tool-overview-card-footer">
           <div class="tool-chip-row">
@@ -3256,7 +3292,7 @@
             <span class="tool-chip">Bookmarkable page</span>
           </div>
           <p class="tool-card-utility-note">Fast to open, easy to bookmark, and built to do one job clearly.</p>
-          <span class="tool-card-action">Open mini game →</span>
+          <span class="tool-card-action">Open reaction timer →</span>
         </div>
       </a>
       
@@ -3301,7 +3337,7 @@
       <article class="tool-category-card">
         <div class="tool-link-pill">2 tools</div>
         <h3>Focus + flow</h3>
-        <p class="muted">Pomodoro timer · Mini game</p>
+        <p class="muted">Pomodoro timer · Reaction timer</p>
       </article>
       
     </div>
@@ -3397,7 +3433,7 @@
           
           <li>Meeting agenda helper</li>
           
-          <li>Word Search or 2048-style game</li>
+          <li>Reaction timer daily challenge</li>
           
         </ul>
       </div>
