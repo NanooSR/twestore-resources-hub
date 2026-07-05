@@ -2927,17 +2927,19 @@
     background: radial-gradient(circle, color-mix(in srgb, var(--active-accent-2) 24%, transparent), transparent 70%);
     filter: blur(1px);
   }
-  .active-tool-hero-grid { display: grid; gap: 20px; align-items: center; position: relative; z-index: 1; }
+  .active-tool-hero-grid { display: grid; gap: 20px; align-items: start; position: relative; z-index: 1; }
   .active-tool-copy { display: grid; gap: 12px; }
-  .active-tool-copy h2 { font-size: clamp(1.9rem, 4vw, 3.45rem); letter-spacing: -.045em; margin: 0; }
+  .active-tool-copy h1 { font-size: clamp(1.75rem, 3.3vw, 3.05rem); letter-spacing: -.045em; margin: 0; }
   .active-tool-copy .muted { color: color-mix(in srgb, var(--active-ink) 74%, white); font-size: 1.03rem; }
   .active-tool-stage {
-    min-height: 230px;
+    min-height: 190px;
     border-radius: 28px;
     display: grid;
-    place-items: center;
+    place-items: start end;
+    align-self: start;
     position: relative;
     overflow: hidden;
+    padding: clamp(18px, 3vw, 28px);
     background:
       linear-gradient(145deg, rgba(255,255,255,.72), rgba(255,255,255,.22)),
       radial-gradient(circle at 30% 24%, rgba(255,255,255,.85), transparent 24%),
@@ -2967,6 +2969,35 @@
     box-shadow: inset 0 2px 0 rgba(255,255,255,.88), 0 24px 40px color-mix(in srgb, var(--active-accent) 26%, rgba(15,23,42,.16));
     animation: tool-float 4.8s ease-in-out infinite;
   }
+  .toolbox-hub-link {
+    border-color: color-mix(in srgb, var(--active-accent) 24%, white);
+    background: rgba(255,255,255,.72);
+    color: var(--active-ink);
+  }
+  .active-tool-workbench-zone {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 14px;
+    margin-top: clamp(16px, 3vw, 24px);
+    padding-top: clamp(14px, 2vw, 18px);
+    border-top: 1px solid color-mix(in srgb, var(--active-accent) 20%, white);
+  }
+  .active-tool-workbench-zone > .tool-panel {
+    border-color: color-mix(in srgb, var(--active-accent) 30%, white);
+    background: rgba(255,255,255,.78);
+    backdrop-filter: blur(8px);
+  }
+  .active-tool-privacy-row {
+    position: relative;
+    z-index: 1;
+    margin-top: 14px;
+    border: 1px solid color-mix(in srgb, var(--active-accent) 20%, white);
+    border-radius: 18px;
+    padding: 13px 15px;
+    background: rgba(255,255,255,.66);
+  }
+  .active-tool-privacy-row p { margin: 0; }
   .active-tool-proof-row { display: flex; flex-wrap: wrap; gap: 9px; }
   .active-tool-proof {
     display: inline-flex;
@@ -3018,6 +3049,7 @@
   
   @media (min-width: 900px) {
     .toolbox-hero-grid { grid-template-columns: 1.4fr .9fr; }
+    .active-tool-hero-grid { grid-template-columns: minmax(0, 1.35fr) minmax(240px, .65fr); }
   }
   @media (max-width: 680px) {
     .tool-overview-card {
@@ -3037,6 +3069,40 @@
     .toolbox-home-link {
       width: 100%;
       justify-content: center;
+    }
+    .active-tool-hero {
+      padding-top: 18px;
+    }
+    .active-tool-proof-row {
+      padding-right: 88px;
+      min-height: 70px;
+    }
+    .active-tool-stage {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 74px;
+      height: 74px;
+      min-height: 74px;
+      padding: 10px;
+      border-radius: 22px;
+      z-index: 2;
+    }
+    .active-tool-stage::before {
+      display: none;
+    }
+    .active-tool-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      font-size: 2rem;
+    }
+    .active-tool-copy h1 {
+      font-size: clamp(1.9rem, 10vw, 2.55rem);
+      line-height: 1.04;
+    }
+    .active-tool-workbench-zone {
+      margin-top: 14px;
     }
   }
 </style>

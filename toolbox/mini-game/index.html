@@ -2927,17 +2927,19 @@
     background: radial-gradient(circle, color-mix(in srgb, var(--active-accent-2) 24%, transparent), transparent 70%);
     filter: blur(1px);
   }
-  .active-tool-hero-grid { display: grid; gap: 20px; align-items: center; position: relative; z-index: 1; }
+  .active-tool-hero-grid { display: grid; gap: 20px; align-items: start; position: relative; z-index: 1; }
   .active-tool-copy { display: grid; gap: 12px; }
-  .active-tool-copy h2 { font-size: clamp(1.9rem, 4vw, 3.45rem); letter-spacing: -.045em; margin: 0; }
+  .active-tool-copy h1 { font-size: clamp(1.75rem, 3.3vw, 3.05rem); letter-spacing: -.045em; margin: 0; }
   .active-tool-copy .muted { color: color-mix(in srgb, var(--active-ink) 74%, white); font-size: 1.03rem; }
   .active-tool-stage {
-    min-height: 230px;
+    min-height: 190px;
     border-radius: 28px;
     display: grid;
-    place-items: center;
+    place-items: start end;
+    align-self: start;
     position: relative;
     overflow: hidden;
+    padding: clamp(18px, 3vw, 28px);
     background:
       linear-gradient(145deg, rgba(255,255,255,.72), rgba(255,255,255,.22)),
       radial-gradient(circle at 30% 24%, rgba(255,255,255,.85), transparent 24%),
@@ -2967,6 +2969,35 @@
     box-shadow: inset 0 2px 0 rgba(255,255,255,.88), 0 24px 40px color-mix(in srgb, var(--active-accent) 26%, rgba(15,23,42,.16));
     animation: tool-float 4.8s ease-in-out infinite;
   }
+  .toolbox-hub-link {
+    border-color: color-mix(in srgb, var(--active-accent) 24%, white);
+    background: rgba(255,255,255,.72);
+    color: var(--active-ink);
+  }
+  .active-tool-workbench-zone {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 14px;
+    margin-top: clamp(16px, 3vw, 24px);
+    padding-top: clamp(14px, 2vw, 18px);
+    border-top: 1px solid color-mix(in srgb, var(--active-accent) 20%, white);
+  }
+  .active-tool-workbench-zone > .tool-panel {
+    border-color: color-mix(in srgb, var(--active-accent) 30%, white);
+    background: rgba(255,255,255,.78);
+    backdrop-filter: blur(8px);
+  }
+  .active-tool-privacy-row {
+    position: relative;
+    z-index: 1;
+    margin-top: 14px;
+    border: 1px solid color-mix(in srgb, var(--active-accent) 20%, white);
+    border-radius: 18px;
+    padding: 13px 15px;
+    background: rgba(255,255,255,.66);
+  }
+  .active-tool-privacy-row p { margin: 0; }
   .active-tool-proof-row { display: flex; flex-wrap: wrap; gap: 9px; }
   .active-tool-proof {
     display: inline-flex;
@@ -3021,6 +3052,7 @@
   
   @media (min-width: 900px) {
     .toolbox-hero-grid { grid-template-columns: 1.4fr .9fr; }
+    .active-tool-hero-grid { grid-template-columns: minmax(0, 1.35fr) minmax(240px, .65fr); }
   }
   @media (max-width: 680px) {
     .tool-overview-card {
@@ -3041,6 +3073,40 @@
       width: 100%;
       justify-content: center;
     }
+    .active-tool-hero {
+      padding-top: 18px;
+    }
+    .active-tool-proof-row {
+      padding-right: 88px;
+      min-height: 70px;
+    }
+    .active-tool-stage {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 74px;
+      height: 74px;
+      min-height: 74px;
+      padding: 10px;
+      border-radius: 22px;
+      z-index: 2;
+    }
+    .active-tool-stage::before {
+      display: none;
+    }
+    .active-tool-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      font-size: 2rem;
+    }
+    .active-tool-copy h1 {
+      font-size: clamp(1.9rem, 10vw, 2.55rem);
+      line-height: 1.04;
+    }
+    .active-tool-workbench-zone {
+      margin-top: 14px;
+    }
   }
 </style>
 
@@ -3048,7 +3114,7 @@
   
 
   
-  <article class="active-tool-hero" aria-label="Premium Reaction timer tool identity">
+  <section class="active-tool-hero" aria-label="Premium Reaction timer tool identity">
     <div class="active-tool-hero-grid">
       <div class="active-tool-copy">
         <div class="active-tool-proof-row" aria-label="Tool highlights">
@@ -3058,23 +3124,16 @@
         </div>
         <h1>Reaction timer that feels built for premium 3-round reflex sprint</h1>
         <p class="muted">Take a quick operator reset that feels replayable, premium, privacy-safe, keyboard-friendly, and touch-ready. This page now has its own visual identity, color story, dimensional controls, and repeat-use cues instead of feeling like a generic utility screen.</p>
-        <div class="tool-return-card">
-          <strong>Why you’ll come back:</strong>
-          <p class="muted" style="margin: 6px 0 0;">Use it as a tiny operator reset and try to beat your best local single time or 3-round average.</p>
-        </div>
-        <div class="toolbox-quality-strip" aria-label="Tool quality cues">
-          <div class="toolbox-quality-pill">Fast feedback<span>Controls respond in-page without accounts or checkout friction.</span></div>
-          <div class="toolbox-quality-pill">Touch friendly<span>Designed for quick desktop and mobile use.</span></div>
-          <div class="toolbox-quality-pill">TWE branded<span>Each tool has its own color story and repeat-use cue.</span></div>
+        <div class="cta-row">
+          <a class="btn secondary toolbox-hub-link" href="/toolbox?cb=toolbox20260705gamepremium">← Go back to TWE Tools</a>
+          <a class="btn secondary toolbox-home-link" href="/">Back to TWEStore</a>
         </div>
       </div>
       <div class="active-tool-stage" data-pattern="signal lights + daily best glow" aria-hidden="true">
         <span class="active-tool-icon">⚡</span>
       </div>
     </div>
-  </article>
-
-  <section class="toolbox-sections" aria-label="Focused single-tool panel">
+  <div class="active-tool-workbench-zone" aria-label="Focused single-tool panel inside the premium top card">
 
 
 
@@ -3096,7 +3155,7 @@
 
 
 
-    <article class="tool-panel active-tool-workbench" id="mini-game" data-active-tool-slug="mini-game">
+    <section class="tool-panel active-tool-workbench" id="mini-game" data-active-tool-slug="mini-game">
       <span class="tool-badge">⚡ Reaction timer · 3-round sprint</span>
       <h2>Run a 60-second operator reset and sharpen your next click</h2>
       <p class="muted">A premium, local-only reflex sprint: complete three quick rounds, watch the signal lights, then compare your average and best time without creating an account or sending personal data.</p>
@@ -3126,17 +3185,23 @@
         </div>
       </div>
       <div class="tool-result"><strong id="reaction-status">Ready for a clean three-round reflex sprint.</strong><p class="muted">Mobile friendly, keyboard friendly, and privacy-safe: scores stay in this browser's local storage only. For context, large public reaction-test datasets often place typical adult reaction times around the 200–300 ms range; device latency can affect every score.</p></div>
-    </article>
+    </section>
 
-  </section>
+  </div>
 
-  <section class="tool-panel" aria-label="Focused tool navigation">
-    <div class="tool-link-pill">Focus + flow · direct tool page</div>
-    <div class="cta-row" style="margin-top:12px;">
-      <a class="btn" href="/toolbox?cb=toolbox20260705gamepremium">← Back to TWE Toolbox</a>
-      <a class="btn secondary toolbox-home-link" href="/">Back to TWEStore</a>
-    </div>
-    <p class="muted" style="margin-top:12px;"><strong>Privacy note:</strong> Most TWE Toolbox helpers run in your browser. Tools that need a live check, such as IP lookup, word unscrambling, or browser diagnostics, only contact the site service when you click the tool button.</p>
+  <div class="tool-return-card active-tool-after-panel">
+    <strong>Why you’ll come back:</strong>
+    <p class="muted" style="margin: 6px 0 0;">Use it as a tiny operator reset and try to beat your best local single time or 3-round average.</p>
+  </div>
+  <div class="toolbox-quality-strip active-tool-after-panel" aria-label="Tool quality cues">
+    <div class="toolbox-quality-pill">Fast feedback<span>Controls respond in-page without accounts or checkout friction.</span></div>
+    <div class="toolbox-quality-pill">Touch friendly<span>Designed for quick desktop and mobile use.</span></div>
+    <div class="toolbox-quality-pill">TWE branded<span>Each tool has its own color story and repeat-use cue.</span></div>
+  </div>
+
+  <div class="active-tool-privacy-row">
+    <p class="muted"><strong>Privacy note:</strong> Most TWE Toolbox helpers run in your browser. Tools that need a live check, such as IP lookup, word unscrambling, or browser diagnostics, only contact the site service when you click the tool button.</p>
+  </div>
   </section>
 
   <section class="toolbox-rail-grid">
