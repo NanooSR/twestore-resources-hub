@@ -2886,7 +2886,7 @@
     --active-glow: rgba(39,113,255,.24);
     isolation: isolate;
   }
-  .active-tool-hero {
+  .active-tool-top-card {
     position: relative;
     overflow: hidden;
     display: grid;
@@ -2902,14 +2902,14 @@
     box-shadow: 0 30px 80px rgba(15, 23, 42, .14), inset 0 1px 0 rgba(255,255,255,.9);
     transform: translateZ(0);
   }
-  .active-tool-hero::before,
-  .active-tool-hero::after {
+  .active-tool-top-card::before,
+  .active-tool-top-card::after {
     content: "";
     position: absolute;
     pointer-events: none;
     border-radius: 999px;
   }
-  .active-tool-hero::before {
+  .active-tool-top-card::before {
     width: 220px;
     height: 220px;
     right: -58px;
@@ -2919,7 +2919,7 @@
       radial-gradient(circle, rgba(255,255,255,.62), transparent 68%);
     animation: tool-orbit 14s linear infinite;
   }
-  .active-tool-hero::after {
+  .active-tool-top-card::after {
     width: 180px;
     height: 180px;
     left: -54px;
@@ -2927,11 +2927,11 @@
     background: radial-gradient(circle, color-mix(in srgb, var(--active-accent-2) 24%, transparent), transparent 70%);
     filter: blur(1px);
   }
-  .active-tool-hero-grid { display: grid; gap: 20px; align-items: start; position: relative; z-index: 1; }
-  .active-tool-copy { display: grid; gap: 12px; }
-  .active-tool-copy h1 { font-size: clamp(1.75rem, 3.3vw, 3.05rem); letter-spacing: -.045em; margin: 0; }
-  .active-tool-copy .muted { color: color-mix(in srgb, var(--active-ink) 74%, white); font-size: 1.03rem; }
-  .active-tool-stage {
+  .active-tool-top-card-grid { display: grid; gap: 20px; align-items: start; position: relative; z-index: 1; }
+  .active-tool-card-copy { display: grid; gap: 12px; }
+  .active-tool-card-copy h1 { font-size: clamp(1.75rem, 3.3vw, 3.05rem); letter-spacing: -.045em; margin: 0; }
+  .active-tool-card-copy .muted { color: color-mix(in srgb, var(--active-ink) 74%, white); font-size: 1.03rem; }
+  .active-tool-card-art {
     min-height: 190px;
     border-radius: 28px;
     display: grid;
@@ -2946,7 +2946,7 @@
       linear-gradient(135deg, color-mix(in srgb, var(--active-accent) 20%, white), color-mix(in srgb, var(--active-accent-2) 18%, white));
     box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 24px 54px color-mix(in srgb, var(--active-accent) 22%, rgba(15,23,42,.12));
   }
-  .active-tool-stage::before {
+  .active-tool-card-art::before {
     content: attr(data-pattern);
     position: absolute;
     inset: auto 18px 18px auto;
@@ -2974,7 +2974,7 @@
     background: rgba(255,255,255,.72);
     color: var(--active-ink);
   }
-  .active-tool-workbench-zone {
+  .active-tool-card-body {
     position: relative;
     z-index: 1;
     display: grid;
@@ -2983,7 +2983,7 @@
     padding-top: clamp(14px, 2vw, 18px);
     border-top: 1px solid color-mix(in srgb, var(--active-accent) 20%, white);
   }
-  .active-tool-workbench-zone > .tool-panel {
+  .active-tool-card-body > .tool-panel {
     border-color: color-mix(in srgb, var(--active-accent) 30%, white);
     background: rgba(255,255,255,.78);
     backdrop-filter: blur(8px);
@@ -3040,8 +3040,42 @@
   }
   @keyframes tool-float { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-10px) rotate(1.5deg); } }
   @keyframes tool-orbit { to { transform: rotate(360deg); } }
+
+  .active-tool-top-card {
+    margin: 0;
+  }
+  .active-tool-card-header {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 12px;
+    margin-bottom: clamp(12px, 2vw, 18px);
+  }
+  .active-tool-card-identity {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: clamp(12px, 2vw, 18px);
+    align-items: start;
+  }
+  .active-tool-card-copy { display: grid; gap: 8px; }
+  .active-tool-card-copy h1 { font-size: clamp(1.65rem, 3vw, 2.65rem); letter-spacing: -.04em; margin: 0; }
+  .active-tool-card-copy p { margin: 0; }
+  .active-tool-card-nav { margin-top: 0; }
+  .active-tool-card-footer {
+    display: grid;
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .active-tool-privacy-note {
+    margin: 0;
+    border: 1px solid color-mix(in srgb, var(--active-accent) 18%, white);
+    border-radius: 16px;
+    padding: 11px 13px;
+    background: rgba(255,255,255,.62);
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    .active-tool-hero::before,
+    .active-tool-top-card::before,
     .active-tool-icon { animation: none; }
     .toolbox-shell[data-active-tool-slug] .btn:hover,
     .toolbox-shell[data-active-tool-slug] .btn:focus-visible { transform: none; }
@@ -3052,7 +3086,7 @@
   
   @media (min-width: 900px) {
     .toolbox-hero-grid { grid-template-columns: 1.4fr .9fr; }
-    .active-tool-hero-grid { grid-template-columns: minmax(0, 1.35fr) minmax(240px, .65fr); }
+    .active-tool-top-card-grid { grid-template-columns: minmax(0, 1.35fr) minmax(240px, .65fr); }
   }
   @media (max-width: 680px) {
     .tool-overview-card {
@@ -3073,40 +3107,59 @@
       width: 100%;
       justify-content: center;
     }
-    .active-tool-hero {
-      padding-top: 18px;
+    .active-tool-top-card {
+      padding: 14px;
+      border-radius: 22px;
+      gap: 10px;
+    }
+    .active-tool-top-card .tool-badge,
+    .active-tool-top-card > h2,
+    .active-tool-top-card > p.muted,
+    .active-tool-card-copy p,
+    .active-tool-card-footer {
+      display: none;
     }
     .active-tool-proof-row {
-      padding-right: 88px;
-      min-height: 70px;
-    }
-    .active-tool-stage {
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      width: 74px;
-      height: 74px;
-      min-height: 74px;
-      padding: 10px;
-      border-radius: 22px;
-      z-index: 2;
-    }
-    .active-tool-stage::before {
       display: none;
     }
     .active-tool-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 18px;
-      font-size: 2rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 16px;
+      font-size: 1.65rem;
     }
-    .active-tool-copy h1 {
-      font-size: clamp(1.9rem, 10vw, 2.55rem);
+    .active-tool-card-copy h1 {
+      font-size: clamp(1.35rem, 7vw, 1.9rem);
       line-height: 1.04;
     }
-    .active-tool-workbench-zone {
-      margin-top: 14px;
+    .active-tool-card-identity {
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 9px;
+      align-items: center;
     }
+    .active-tool-card-header {
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .active-tool-card-nav {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .active-tool-card-nav .btn { width: 100%; justify-content: center; }
+    .active-tool-card-nav .toolbox-home-link { display: none; }
+    .active-tool-top-card textarea { min-height: 72px; }
+    .active-tool-top-card .tool-inline-grid,
+    .active-tool-top-card .tool-stat-grid,
+    .active-tool-top-card .cta-row {
+      gap: 8px;
+    }
+    .active-tool-top-card .tool-result,
+    .active-tool-top-card .tool-mini-list,
+    .active-tool-top-card .tool-canvas-wrap {
+      margin-top: 8px;
+    }
+
   }
 </style>
 
@@ -3114,44 +3167,45 @@
   
 
   
-  <section class="active-tool-hero" aria-label="Premium Browser + network info tool identity">
-    <div class="active-tool-hero-grid">
-      <div class="active-tool-copy">
-        <div class="active-tool-proof-row" aria-label="Tool highlights">
-          <span class="active-tool-proof">📶 Quick diagnostics</span>
-          <span class="active-tool-proof">Quick diagnostics</span>
-          <span class="active-tool-proof">No sign-up · bookmarkable</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="tool-panel active-tool-workbench active-tool-top-card" id="browser-network-info" data-active-tool-slug="browser-network-info">
+      <div class="active-tool-card-header">
+        <div class="active-tool-card-identity">
+          <span class="active-tool-icon" aria-hidden="true">📶</span>
+          <div class="active-tool-card-copy">
+            <div class="active-tool-proof-row" aria-label="Tool highlights">
+              <span class="active-tool-proof">Quick diagnostics</span>
+              <span class="active-tool-proof">Quick diagnostics</span>
+              <span class="active-tool-proof">No sign-up · bookmarkable</span>
+              <span class="active-tool-proof">Fast feedback</span>
+              <span class="active-tool-proof">TWE branded for support snapshot console</span>
+            </div>
+            <h1>Browser + network info</h1>
+            <p class="muted">Read a quick browser and connection snapshot you can copy into a support note or troubleshooting message.</p>
+          </div>
         </div>
-        <h1>Browser + network info that feels built for support snapshot console</h1>
-        <p class="muted">Read a quick browser and connection snapshot you can copy into a support note or troubleshooting message. This page now has its own visual identity, color story, dimensional controls, and repeat-use cues instead of feeling like a generic utility screen.</p>
-        <div class="cta-row">
+        <div class="cta-row active-tool-card-nav">
           <a class="btn secondary toolbox-hub-link" href="/toolbox?cb=toolbox20260705gamepremium">← Go back to TWE Tools</a>
           <a class="btn secondary toolbox-home-link" href="/">Back to TWEStore</a>
         </div>
       </div>
-      <div class="active-tool-stage" data-pattern="device cards + signal waves" aria-hidden="true">
-        <span class="active-tool-icon">📶</span>
-      </div>
-    </div>
-  <div class="active-tool-workbench-zone" aria-label="Focused single-tool panel inside the premium top card">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section class="tool-panel active-tool-workbench" id="browser-network-info" data-active-tool-slug="browser-network-info">
       <span class="tool-badge">📶 Browser + network info</span>
       <h2>See quick browser, screen, language, timezone, and connection details</h2>
       <p class="muted">Useful for simple troubleshooting or when you want a quick snapshot to paste into a support message.</p>
@@ -3164,6 +3218,10 @@
         <strong>Nothing loaded yet.</strong>
         <p class="muted">Click the button to read this browser's current snapshot.</p>
       </div>
+      <div class="active-tool-card-footer">
+        <div class="tool-return-card active-tool-after-panel"><strong>Why you’ll come back:</strong> <span class="muted">Come back when support asks for browser, screen, timezone, or connection details.</span></div>
+        <p class="muted active-tool-privacy-note"><strong>Privacy note:</strong> Most TWE Toolbox helpers run in your browser. Tools that need a live check, such as IP lookup, word unscrambling, or browser diagnostics, only contact the site service when you click the tool button.</p>
+      </div>
     </section>
 
 
@@ -3171,21 +3229,6 @@
 
 
   </div>
-
-  <div class="tool-return-card active-tool-after-panel">
-    <strong>Why you’ll come back:</strong>
-    <p class="muted" style="margin: 6px 0 0;">Come back when support asks for browser, screen, timezone, or connection details.</p>
-  </div>
-  <div class="toolbox-quality-strip active-tool-after-panel" aria-label="Tool quality cues">
-    <div class="toolbox-quality-pill">Fast feedback<span>Controls respond in-page without accounts or checkout friction.</span></div>
-    <div class="toolbox-quality-pill">Touch friendly<span>Designed for quick desktop and mobile use.</span></div>
-    <div class="toolbox-quality-pill">TWE branded<span>Each tool has its own color story and repeat-use cue.</span></div>
-  </div>
-
-  <div class="active-tool-privacy-row">
-    <p class="muted"><strong>Privacy note:</strong> Most TWE Toolbox helpers run in your browser. Tools that need a live check, such as IP lookup, word unscrambling, or browser diagnostics, only contact the site service when you click the tool button.</p>
-  </div>
-  </section>
 
   <section class="toolbox-rail-grid">
     <article class="tool-rail-card">
