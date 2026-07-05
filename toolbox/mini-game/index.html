@@ -40,7 +40,7 @@
       }
     </script>
     
-    <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebPage", "name": "Reaction timer", "url": "https://thewatchersedge.ca/toolbox/mini-game/", "description": "Test your reaction time in a quick browser game, save your best local score, and take a short focus break.", "inLanguage": "en-CA", "isPartOf": {"@type": "WebSite", "name": "thewatchersedge.ca", "url": "https://thewatchersedge.ca/"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewatchersedge.ca/"}, {"@type": "ListItem", "position": 2, "name": "TWE Toolbox", "item": "https://thewatchersedge.ca/toolbox"}, {"@type": "ListItem", "position": 3, "name": "Reaction timer", "item": "https://thewatchersedge.ca/toolbox/mini-game/"}]}, {"@context": "https://schema.org", "@type": "WebApplication", "name": "Reaction timer", "applicationCategory": "Focus + flow", "operatingSystem": "Any", "browserRequirements": "Requires a modern web browser with JavaScript enabled.", "description": "Take a quick reflex break that feels more replayable than a static mini board and works well on touch screens.", "url": "https://thewatchersedge.ca/toolbox/mini-game/", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CAD"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is there a mini game inside TWE Toolbox?", "acceptedAnswer": {"@type": "Answer", "text": "It gives people a tiny reset option between practical tasks without leaving the broader toolbox experience entirely."}}, {"@type": "Question", "name": "What game is included right now?", "acceptedAnswer": {"@type": "Answer", "text": "The current mini game is a reaction timer: wait for the green signal, tap fast, and try to beat your best time."}}, {"@type": "Question", "name": "Does the reaction timer save a best score?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The best reaction time is kept locally in this browser so the tool can feel more worth revisiting without an account."}}]}]</script>
+    <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebPage", "name": "Reaction timer", "url": "https://thewatchersedge.ca/toolbox/mini-game/", "description": "Test your reaction time in a quick browser game, save your best local score, and take a short focus break.", "inLanguage": "en-CA", "isPartOf": {"@type": "WebSite", "name": "thewatchersedge.ca", "url": "https://thewatchersedge.ca/"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewatchersedge.ca/"}, {"@type": "ListItem", "position": 2, "name": "TWE Toolbox", "item": "https://thewatchersedge.ca/toolbox"}, {"@type": "ListItem", "position": 3, "name": "Reaction timer", "item": "https://thewatchersedge.ca/toolbox/mini-game/"}]}, {"@context": "https://schema.org", "@type": "WebApplication", "name": "Reaction timer", "applicationCategory": "Focus + flow", "operatingSystem": "Any", "browserRequirements": "Requires a modern web browser with JavaScript enabled.", "description": "Take a quick operator reset that feels replayable, premium, privacy-safe, keyboard-friendly, and touch-ready.", "url": "https://thewatchersedge.ca/toolbox/mini-game/", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CAD"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is there a mini game inside TWE Toolbox?", "acceptedAnswer": {"@type": "Answer", "text": "It gives people a tiny reset option between practical tasks without leaving the broader toolbox experience entirely."}}, {"@type": "Question", "name": "What game is included right now?", "acceptedAnswer": {"@type": "Answer", "text": "The current mini game is a premium 3-round reaction sprint: wait for the signal lights, tap on green, and compare your single-round and average scores."}}, {"@type": "Question", "name": "Does the reaction timer save a best score?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The best single reaction and best 3-round average are kept locally in this browser so the tool can feel worth revisiting without an account."}}]}]</script>
 
     <title>Reaction Timer | Free Reflex Test | TWE Toolbox</title>
     
@@ -2788,17 +2788,19 @@
     justify-items: start;
   }
   .tool-reaction-target {
-    width: min(100%, 420px);
-    min-height: 178px;
+    width: min(100%, 540px);
+    min-height: 190px;
     border: 1px solid color-mix(in srgb, var(--active-accent, #2771ff) 26%, white);
     border-radius: 28px;
     display: grid;
     place-items: center;
-    padding: 22px;
+    gap: 14px;
+    padding: 24px;
     text-align: center;
     color: var(--active-ink, #122033);
     background:
       radial-gradient(circle at 22% 18%, rgba(255,255,255,.72), transparent 30%),
+      radial-gradient(circle at 80% 80%, color-mix(in srgb, var(--active-accent-2, #10b981) 22%, transparent), transparent 34%),
       linear-gradient(135deg, color-mix(in srgb, var(--active-accent, #2771ff) 12%, white), color-mix(in srgb, var(--active-accent-2, #10b981) 16%, white));
     box-shadow: inset 0 2px 0 rgba(255,255,255,.78), 0 24px 54px color-mix(in srgb, var(--active-accent, #2771ff) 20%, rgba(15,23,42,.13));
     font-size: clamp(1.2rem, 4vw, 2rem);
@@ -2811,6 +2813,31 @@
   .tool-reaction-target.is-waiting { background: linear-gradient(135deg, #fff7d6, #ffe8d6); }
   .tool-reaction-target.is-ready { background: linear-gradient(135deg, #dcfce7, #bbf7d0); box-shadow: 0 0 0 6px rgba(34,197,94,.14), 0 24px 54px rgba(34,197,94,.18); }
   .tool-reaction-target.is-too-soon { background: linear-gradient(135deg, #fee2e2, #fff1f2); }
+  .tool-reaction-target-text { display: block; }
+  .tool-reaction-lights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    pointer-events: none;
+  }
+  .tool-reaction-light {
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    background: rgba(18,32,51,.18);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.58), 0 0 0 1px rgba(18,32,51,.08);
+    transition: background .16s ease, box-shadow .16s ease, transform .16s ease;
+  }
+  .tool-reaction-light.is-lit {
+    background: linear-gradient(135deg, #fbbf24, #f97316);
+    box-shadow: 0 0 0 4px rgba(251,191,36,.16), 0 8px 16px rgba(249,115,22,.2);
+    transform: translateY(-1px) scale(1.08);
+  }
+  .tool-reaction-target.is-ready .tool-reaction-light.is-lit {
+    background: linear-gradient(135deg, #22c55e, #14b8a6);
+    box-shadow: 0 0 0 4px rgba(34,197,94,.18), 0 8px 16px rgba(20,184,166,.22);
+  }
   .tool-mini-list ul { margin: 10px 0 0; padding-left: 18px; }
   .tool-stat-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
   .tool-stat { border: 1px solid rgba(126,152,190,.2); border-radius: 16px; padding: 12px; background: #fff; }
@@ -3029,11 +3056,11 @@
           <span class="active-tool-proof">Focus + flow</span>
           <span class="active-tool-proof">No sign-up · bookmarkable</span>
         </div>
-        <h1>Reaction timer that feels built for one-minute reflex sprint</h1>
-        <p class="muted">Take a quick reflex break that feels more replayable than a static mini board and works well on touch screens. This page now has its own visual identity, color story, dimensional controls, and repeat-use cues instead of feeling like a generic utility screen.</p>
+        <h1>Reaction timer that feels built for premium 3-round reflex sprint</h1>
+        <p class="muted">Take a quick operator reset that feels replayable, premium, privacy-safe, keyboard-friendly, and touch-ready. This page now has its own visual identity, color story, dimensional controls, and repeat-use cues instead of feeling like a generic utility screen.</p>
         <div class="tool-return-card">
           <strong>Why you’ll come back:</strong>
-          <p class="muted" style="margin: 6px 0 0;">Use it as a tiny daily reset and try to beat your best local reaction time.</p>
+          <p class="muted" style="margin: 6px 0 0;">Use it as a tiny operator reset and try to beat your best local single time or 3-round average.</p>
         </div>
         <div class="toolbox-quality-strip" aria-label="Tool quality cues">
           <div class="toolbox-quality-pill">Fast feedback<span>Controls respond in-page without accounts or checkout friction.</span></div>
@@ -3041,7 +3068,7 @@
           <div class="toolbox-quality-pill">TWE branded<span>Each tool has its own color story and repeat-use cue.</span></div>
         </div>
       </div>
-      <div class="active-tool-stage" data-pattern="reflex pulse + daily best glow" aria-hidden="true">
+      <div class="active-tool-stage" data-pattern="signal lights + daily best glow" aria-hidden="true">
         <span class="active-tool-icon">⚡</span>
       </div>
     </div>
@@ -3070,22 +3097,35 @@
 
 
     <article class="tool-panel active-tool-workbench" id="mini-game" data-active-tool-slug="mini-game">
-      <span class="tool-badge">⚡ Reaction timer</span>
-      <h2>Take a one-minute reflex break and try to beat your best time</h2>
-      <p class="muted">A lightweight daily-use challenge: press start, wait for the green signal, then tap as fast as you can. Best score stays local to this browser.</p>
+      <span class="tool-badge">⚡ Reaction timer · 3-round sprint</span>
+      <h2>Run a 60-second operator reset and sharpen your next click</h2>
+      <p class="muted">A premium, local-only reflex sprint: complete three quick rounds, watch the signal lights, then compare your average and best time without creating an account or sending personal data.</p>
       <div class="tool-stat-grid" aria-label="Reaction timer scoreboard">
         <div class="tool-stat"><strong id="reaction-last">—</strong><br><span class="muted">last reaction</span></div>
-        <div class="tool-stat"><strong id="reaction-best">—</strong><br><span class="muted">best local time</span></div>
+        <div class="tool-stat"><strong id="reaction-best">—</strong><br><span class="muted">best single</span></div>
         <div class="tool-stat"><strong id="reaction-attempts">0</strong><br><span class="muted">attempts today</span></div>
+        <div class="tool-stat"><strong id="reaction-round">1 / 3</strong><br><span class="muted">sprint round</span></div>
+        <div class="tool-stat"><strong id="reaction-average">—</strong><br><span class="muted">current average</span></div>
+        <div class="tool-stat"><strong id="reaction-grade">Ready</strong><br><span class="muted">score band</span></div>
+        <div class="tool-stat"><strong id="reaction-best-average">—</strong><br><span class="muted">best 3-round avg</span></div>
       </div>
       <div class="tool-reaction-arena">
-        <button class="tool-reaction-target" type="button" id="reaction-target" aria-live="polite">Press Start, then wait for green.</button>
+        <button class="tool-reaction-target" type="button" id="reaction-target" aria-live="polite" aria-keyshortcuts="Space Enter">
+          <span class="tool-reaction-lights" aria-hidden="true">
+            <span class="tool-reaction-light" data-reaction-light="1"></span>
+            <span class="tool-reaction-light" data-reaction-light="2"></span>
+            <span class="tool-reaction-light" data-reaction-light="3"></span>
+            <span class="tool-reaction-light" data-reaction-light="4"></span>
+            <span class="tool-reaction-light" data-reaction-light="5"></span>
+          </span>
+          <span class="tool-reaction-target-text" id="reaction-target-text">Press Start, then wait for green.</span>
+        </button>
         <div class="cta-row">
-          <button class="btn" type="button" id="reaction-start">Start reaction test</button>
-          <button class="btn secondary" type="button" id="reaction-reset">Reset local best</button>
+          <button class="btn" type="button" id="reaction-start">Start 3-round sprint</button>
+          <button class="btn secondary" type="button" id="reaction-reset">Reset local scores</button>
         </div>
       </div>
-      <div class="tool-result"><strong id="reaction-status">Ready for a clean reflex sprint.</strong><p class="muted">No account, no leaderboard, no personal data sent — just a quick local score.</p></div>
+      <div class="tool-result"><strong id="reaction-status">Ready for a clean three-round reflex sprint.</strong><p class="muted">Mobile friendly, keyboard friendly, and privacy-safe: scores stay in this browser's local storage only. For context, large public reaction-test datasets often place typical adult reaction times around the 200–300 ms range; device latency can affect every score.</p></div>
     </article>
 
   </section>
@@ -3093,7 +3133,7 @@
   <section class="tool-panel" aria-label="Focused tool navigation">
     <div class="tool-link-pill">Focus + flow · direct tool page</div>
     <div class="cta-row" style="margin-top:12px;">
-      <a class="btn" href="/toolbox?cb=toolbox20260704premium">← Back to TWE Toolbox</a>
+      <a class="btn" href="/toolbox?cb=toolbox20260705gamepremium">← Back to TWE Toolbox</a>
       <a class="btn secondary toolbox-home-link" href="/">Back to TWEStore</a>
     </div>
     <p class="muted" style="margin-top:12px;"><strong>Privacy note:</strong> Most TWE Toolbox helpers run in your browser. Tools that need a live check, such as IP lookup, word unscrambling, or browser diagnostics, only contact the site service when you click the tool button.</p>
@@ -3105,11 +3145,11 @@
       <h2>How to use this tool</h2>
       <ol class="tool-instruction-list">
         
-        <li>Press start and wait for the green signal.</li>
+        <li>Press start and wait for the signal lights to finish.</li>
         
-        <li>Tap the target as fast as you can when it says go.</li>
+        <li>Tap the target or press Space/Enter as soon as it says go.</li>
         
-        <li>Try again to beat your best local time.</li>
+        <li>Complete three rounds to set a local average and try to beat it later.</li>
         
       </ol>
     </article>
@@ -3118,9 +3158,9 @@
       <h2>Quick ways people use Reaction timer</h2>
       <div class="tool-mini-list">
         
-        <p class="muted">• Take a one-minute break between tasks with a quick reaction challenge.</p>
+        <p class="muted">• Take a one-minute operator reset between tasks with a 3-round reaction sprint.</p>
         
-        <p class="muted">• Try to beat your best local reaction time without creating an account.</p>
+        <p class="muted">• Try to beat your best local single time and best 3-round average without creating an account.</p>
         
       </div>
     </article>
@@ -3131,9 +3171,9 @@
         
         <p><strong>Why is there a mini game inside TWE Toolbox?</strong><br><span class="muted">It gives people a tiny reset option between practical tasks without leaving the broader toolbox experience entirely.</span></p>
         
-        <p><strong>What game is included right now?</strong><br><span class="muted">The current mini game is a reaction timer: wait for the green signal, tap fast, and try to beat your best time.</span></p>
+        <p><strong>What game is included right now?</strong><br><span class="muted">The current mini game is a premium 3-round reaction sprint: wait for the signal lights, tap on green, and compare your single-round and average scores.</span></p>
         
-        <p><strong>Does the reaction timer save a best score?</strong><br><span class="muted">Yes. The best reaction time is kept locally in this browser so the tool can feel more worth revisiting without an account.</span></p>
+        <p><strong>Does the reaction timer save a best score?</strong><br><span class="muted">Yes. The best single reaction and best 3-round average are kept locally in this browser so the tool can feel worth revisiting without an account.</span></p>
         
       </div>
     </article>
@@ -3604,86 +3644,168 @@ const chooserUpdateCount = () => {
   }
 
   const reactionTarget = document.getElementById('reaction-target');
+  const reactionTargetText = document.getElementById('reaction-target-text');
   const reactionStart = document.getElementById('reaction-start');
   const reactionReset = document.getElementById('reaction-reset');
   const reactionStatus = document.getElementById('reaction-status');
   const reactionLast = document.getElementById('reaction-last');
   const reactionBest = document.getElementById('reaction-best');
   const reactionAttempts = document.getElementById('reaction-attempts');
+  const reactionRound = document.getElementById('reaction-round');
+  const reactionAverage = document.getElementById('reaction-average');
+  const reactionGrade = document.getElementById('reaction-grade');
+  const reactionBestAverage = document.getElementById('reaction-best-average');
+  const reactionLights = Array.from(document.querySelectorAll('[data-reaction-light]'));
   const reactionStorageKey = 'tweReactionBestMs';
+  const reactionAverageStorageKey = 'tweReactionBestAverageMs';
+  const reactionSprintRounds = 3;
   let reactionTimer = null;
+  let reactionLightTimer = null;
   let reactionReadyAt = 0;
   let reactionState = 'idle';
   let reactionAttemptCount = 0;
+  let reactionSprintResults = [];
   const readReactionBest = () => Number(window.localStorage?.getItem(reactionStorageKey) || 0);
+  const readReactionBestAverage = () => Number(window.localStorage?.getItem(reactionAverageStorageKey) || 0);
+  const formatReactionMs = (value) => value ? `${Math.round(value)} ms` : '—';
+  const reactionScoreBand = (value) => {
+    if (!value) return 'Ready';
+    if (value < 200) return 'Elite';
+    if (value < 240) return 'Sharp';
+    if (value < 300) return 'Solid';
+    return 'Reset';
+  };
+  const sprintAverage = () => {
+    if (!reactionSprintResults.length) return 0;
+    return reactionSprintResults.reduce((total, value) => total + value, 0) / reactionSprintResults.length;
+  };
+  const setReactionLights = (count) => {
+    reactionLights.forEach((light, index) => light.classList.toggle('is-lit', index < count));
+  };
+  const clearReactionTimers = () => {
+    window.clearTimeout(reactionTimer);
+    window.clearInterval(reactionLightTimer);
+    reactionTimer = null;
+    reactionLightTimer = null;
+  };
   const renderReactionBest = () => {
     const best = readReactionBest();
-    if (reactionBest) reactionBest.textContent = best ? `${best} ms` : '—';
+    const bestAvg = readReactionBestAverage();
+    if (reactionBest) reactionBest.textContent = formatReactionMs(best);
+    if (reactionBestAverage) reactionBestAverage.textContent = formatReactionMs(bestAvg);
+  };
+  const renderReactionSprint = () => {
+    const nextRound = Math.min(reactionSprintResults.length + 1, reactionSprintRounds);
+    const average = sprintAverage();
+    if (reactionRound) reactionRound.textContent = `${nextRound} / ${reactionSprintRounds}`;
+    if (reactionAverage) reactionAverage.textContent = formatReactionMs(average);
+    if (reactionGrade) reactionGrade.textContent = reactionScoreBand(average || readReactionBest());
   };
   const setReactionTarget = (text, state = 'idle') => {
     if (!reactionTarget) return;
-    reactionTarget.textContent = text;
+    if (reactionTargetText) reactionTargetText.textContent = text;
+    else reactionTarget.textContent = text;
     reactionTarget.classList.toggle('is-waiting', state === 'waiting');
     reactionTarget.classList.toggle('is-ready', state === 'ready');
     reactionTarget.classList.toggle('is-too-soon', state === 'too-soon');
   };
   const startReactionRound = () => {
     if (!reactionTarget || !reactionStatus) return;
-    window.clearTimeout(reactionTimer);
+    clearReactionTimers();
+    if (reactionSprintResults.length >= reactionSprintRounds) reactionSprintResults = [];
     reactionState = 'waiting';
     reactionReadyAt = 0;
-    reactionStatus.textContent = 'Wait for green — tapping early restarts the round.';
-    setReactionTarget('Wait for green…', 'waiting');
+    setReactionLights(0);
+    renderReactionSprint();
+    const roundNumber = reactionSprintResults.length + 1;
+    reactionStatus.textContent = `Round ${roundNumber} of ${reactionSprintRounds}: wait for all lights, then tap on green.`;
+    setReactionTarget('Signal building… wait for green.', 'waiting');
     const delay = 1200 + Math.floor(Math.random() * 2600);
+    let lightStep = 0;
+    const lightEvery = Math.max(160, Math.floor(delay / reactionLights.length));
+    reactionLightTimer = window.setInterval(() => {
+      lightStep = Math.min(reactionLights.length, lightStep + 1);
+      setReactionLights(lightStep);
+      if (lightStep >= reactionLights.length) window.clearInterval(reactionLightTimer);
+    }, lightEvery);
     reactionTimer = window.setTimeout(() => {
+      window.clearInterval(reactionLightTimer);
       reactionState = 'ready';
       reactionReadyAt = performance.now();
-      reactionStatus.textContent = 'Go! Tap the green target.';
+      setReactionLights(reactionLights.length);
+      reactionStatus.textContent = 'Go! Tap the green target or press Space/Enter.';
       setReactionTarget('GO — tap now!', 'ready');
     }, delay);
   };
   const finishReactionRound = () => {
     if (!reactionStatus || !reactionLast || !reactionAttempts) return;
     if (reactionState === 'waiting') {
-      window.clearTimeout(reactionTimer);
+      clearReactionTimers();
       reactionState = 'idle';
-      reactionStatus.textContent = 'Too soon — wait for green before tapping.';
-      setReactionTarget('Too soon. Start again.', 'too-soon');
+      reactionReadyAt = 0;
+      reactionStatus.textContent = 'Too soon — wait for the green signal before tapping.';
+      setReactionLights(0);
+      setReactionTarget('Too soon. Start this round again.', 'too-soon');
       return;
     }
     if (reactionState !== 'ready' || !reactionReadyAt) return;
     const elapsed = Math.max(0, Math.round(performance.now() - reactionReadyAt));
+    clearReactionTimers();
     reactionAttemptCount += 1;
+    reactionSprintResults.push(elapsed);
     reactionLast.textContent = `${elapsed} ms`;
     reactionAttempts.textContent = String(reactionAttemptCount);
     const previousBest = readReactionBest();
-    if (!previousBest || elapsed < previousBest) {
-      window.localStorage?.setItem(reactionStorageKey, String(elapsed));
-      reactionStatus.textContent = `New best: ${elapsed} ms. Nice reflex sprint.`;
+    if (!previousBest || elapsed < previousBest) window.localStorage?.setItem(reactionStorageKey, String(elapsed));
+    const average = Math.round(sprintAverage());
+    const previousBestAverage = readReactionBestAverage();
+    const sprintDone = reactionSprintResults.length >= reactionSprintRounds;
+    if (sprintDone) {
+      if (!previousBestAverage || average < previousBestAverage) {
+        window.localStorage?.setItem(reactionAverageStorageKey, String(average));
+        reactionStatus.textContent = `Sprint complete: ${average} ms average (${reactionScoreBand(average)}). New best 3-round average.`;
+      } else {
+        reactionStatus.textContent = `Sprint complete: ${average} ms average (${reactionScoreBand(average)}). Best average stays ${previousBestAverage} ms.`;
+      }
+      setReactionTarget('Sprint saved. Start a new 3-round sprint?', 'idle');
     } else {
-      reactionStatus.textContent = `${elapsed} ms. Best stays ${previousBest} ms — try another round.`;
+      reactionStatus.textContent = `${elapsed} ms logged. Round ${reactionSprintResults.length + 1} is ready when you are.`;
+      setReactionTarget('Round saved. Start next round?', 'idle');
     }
-    renderReactionBest();
     reactionState = 'idle';
     reactionReadyAt = 0;
-    setReactionTarget('Round saved. Start again?', 'idle');
+    setReactionLights(0);
+    renderReactionBest();
+    renderReactionSprint();
   };
   if (reactionTarget && reactionStart && reactionReset) {
     reactionStart.addEventListener('click', startReactionRound);
     reactionTarget.addEventListener('click', finishReactionRound);
+    reactionTarget.addEventListener('keydown', (event) => {
+      if (event.key === ' ' || event.key === 'Enter') {
+        event.preventDefault();
+        finishReactionRound();
+      }
+    });
     reactionReset.addEventListener('click', () => {
-      window.clearTimeout(reactionTimer);
+      if (!window.confirm('Reset your local reaction timer best single and best 3-round average?')) return;
+      clearReactionTimers();
       window.localStorage?.removeItem(reactionStorageKey);
+      window.localStorage?.removeItem(reactionAverageStorageKey);
       reactionAttemptCount = 0;
+      reactionSprintResults = [];
       reactionState = 'idle';
       reactionReadyAt = 0;
       if (reactionLast) reactionLast.textContent = '—';
       if (reactionAttempts) reactionAttempts.textContent = '0';
-      if (reactionStatus) reactionStatus.textContent = 'Local best cleared. Ready for a clean reflex sprint.';
+      if (reactionStatus) reactionStatus.textContent = 'Local scores cleared. Ready for a clean three-round reflex sprint.';
+      setReactionLights(0);
       renderReactionBest();
+      renderReactionSprint();
       setReactionTarget('Press Start, then wait for green.', 'idle');
     });
     renderReactionBest();
+    renderReactionSprint();
   }
   generatePassword();
   renderQr();

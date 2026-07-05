@@ -2788,17 +2788,19 @@
     justify-items: start;
   }
   .tool-reaction-target {
-    width: min(100%, 420px);
-    min-height: 178px;
+    width: min(100%, 540px);
+    min-height: 190px;
     border: 1px solid color-mix(in srgb, var(--active-accent, #2771ff) 26%, white);
     border-radius: 28px;
     display: grid;
     place-items: center;
-    padding: 22px;
+    gap: 14px;
+    padding: 24px;
     text-align: center;
     color: var(--active-ink, #122033);
     background:
       radial-gradient(circle at 22% 18%, rgba(255,255,255,.72), transparent 30%),
+      radial-gradient(circle at 80% 80%, color-mix(in srgb, var(--active-accent-2, #10b981) 22%, transparent), transparent 34%),
       linear-gradient(135deg, color-mix(in srgb, var(--active-accent, #2771ff) 12%, white), color-mix(in srgb, var(--active-accent-2, #10b981) 16%, white));
     box-shadow: inset 0 2px 0 rgba(255,255,255,.78), 0 24px 54px color-mix(in srgb, var(--active-accent, #2771ff) 20%, rgba(15,23,42,.13));
     font-size: clamp(1.2rem, 4vw, 2rem);
@@ -2811,6 +2813,31 @@
   .tool-reaction-target.is-waiting { background: linear-gradient(135deg, #fff7d6, #ffe8d6); }
   .tool-reaction-target.is-ready { background: linear-gradient(135deg, #dcfce7, #bbf7d0); box-shadow: 0 0 0 6px rgba(34,197,94,.14), 0 24px 54px rgba(34,197,94,.18); }
   .tool-reaction-target.is-too-soon { background: linear-gradient(135deg, #fee2e2, #fff1f2); }
+  .tool-reaction-target-text { display: block; }
+  .tool-reaction-lights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    pointer-events: none;
+  }
+  .tool-reaction-light {
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    background: rgba(18,32,51,.18);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.58), 0 0 0 1px rgba(18,32,51,.08);
+    transition: background .16s ease, box-shadow .16s ease, transform .16s ease;
+  }
+  .tool-reaction-light.is-lit {
+    background: linear-gradient(135deg, #fbbf24, #f97316);
+    box-shadow: 0 0 0 4px rgba(251,191,36,.16), 0 8px 16px rgba(249,115,22,.2);
+    transform: translateY(-1px) scale(1.08);
+  }
+  .tool-reaction-target.is-ready .tool-reaction-light.is-lit {
+    background: linear-gradient(135deg, #22c55e, #14b8a6);
+    box-shadow: 0 0 0 4px rgba(34,197,94,.18), 0 8px 16px rgba(20,184,166,.22);
+  }
   .tool-mini-list ul { margin: 10px 0 0; padding-left: 18px; }
   .tool-stat-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
   .tool-stat { border: 1px solid rgba(126,152,190,.2); border-radius: 16px; padding: 12px; background: #fff; }
@@ -3094,7 +3121,7 @@
   <section class="tool-panel" aria-label="Focused tool navigation">
     <div class="tool-link-pill">Writing + words · direct tool page</div>
     <div class="cta-row" style="margin-top:12px;">
-      <a class="btn" href="/toolbox?cb=toolbox20260704premium">← Back to TWE Toolbox</a>
+      <a class="btn" href="/toolbox?cb=toolbox20260705gamepremium">← Back to TWE Toolbox</a>
       <a class="btn secondary toolbox-home-link" href="/">Back to TWEStore</a>
     </div>
     <p class="muted" style="margin-top:12px;"><strong>Privacy note:</strong> Most TWE Toolbox helpers run in your browser. Tools that need a live check, such as IP lookup, word unscrambling, or browser diagnostics, only contact the site service when you click the tool button.</p>
@@ -3605,86 +3632,168 @@ const chooserUpdateCount = () => {
   }
 
   const reactionTarget = document.getElementById('reaction-target');
+  const reactionTargetText = document.getElementById('reaction-target-text');
   const reactionStart = document.getElementById('reaction-start');
   const reactionReset = document.getElementById('reaction-reset');
   const reactionStatus = document.getElementById('reaction-status');
   const reactionLast = document.getElementById('reaction-last');
   const reactionBest = document.getElementById('reaction-best');
   const reactionAttempts = document.getElementById('reaction-attempts');
+  const reactionRound = document.getElementById('reaction-round');
+  const reactionAverage = document.getElementById('reaction-average');
+  const reactionGrade = document.getElementById('reaction-grade');
+  const reactionBestAverage = document.getElementById('reaction-best-average');
+  const reactionLights = Array.from(document.querySelectorAll('[data-reaction-light]'));
   const reactionStorageKey = 'tweReactionBestMs';
+  const reactionAverageStorageKey = 'tweReactionBestAverageMs';
+  const reactionSprintRounds = 3;
   let reactionTimer = null;
+  let reactionLightTimer = null;
   let reactionReadyAt = 0;
   let reactionState = 'idle';
   let reactionAttemptCount = 0;
+  let reactionSprintResults = [];
   const readReactionBest = () => Number(window.localStorage?.getItem(reactionStorageKey) || 0);
+  const readReactionBestAverage = () => Number(window.localStorage?.getItem(reactionAverageStorageKey) || 0);
+  const formatReactionMs = (value) => value ? `${Math.round(value)} ms` : '—';
+  const reactionScoreBand = (value) => {
+    if (!value) return 'Ready';
+    if (value < 200) return 'Elite';
+    if (value < 240) return 'Sharp';
+    if (value < 300) return 'Solid';
+    return 'Reset';
+  };
+  const sprintAverage = () => {
+    if (!reactionSprintResults.length) return 0;
+    return reactionSprintResults.reduce((total, value) => total + value, 0) / reactionSprintResults.length;
+  };
+  const setReactionLights = (count) => {
+    reactionLights.forEach((light, index) => light.classList.toggle('is-lit', index < count));
+  };
+  const clearReactionTimers = () => {
+    window.clearTimeout(reactionTimer);
+    window.clearInterval(reactionLightTimer);
+    reactionTimer = null;
+    reactionLightTimer = null;
+  };
   const renderReactionBest = () => {
     const best = readReactionBest();
-    if (reactionBest) reactionBest.textContent = best ? `${best} ms` : '—';
+    const bestAvg = readReactionBestAverage();
+    if (reactionBest) reactionBest.textContent = formatReactionMs(best);
+    if (reactionBestAverage) reactionBestAverage.textContent = formatReactionMs(bestAvg);
+  };
+  const renderReactionSprint = () => {
+    const nextRound = Math.min(reactionSprintResults.length + 1, reactionSprintRounds);
+    const average = sprintAverage();
+    if (reactionRound) reactionRound.textContent = `${nextRound} / ${reactionSprintRounds}`;
+    if (reactionAverage) reactionAverage.textContent = formatReactionMs(average);
+    if (reactionGrade) reactionGrade.textContent = reactionScoreBand(average || readReactionBest());
   };
   const setReactionTarget = (text, state = 'idle') => {
     if (!reactionTarget) return;
-    reactionTarget.textContent = text;
+    if (reactionTargetText) reactionTargetText.textContent = text;
+    else reactionTarget.textContent = text;
     reactionTarget.classList.toggle('is-waiting', state === 'waiting');
     reactionTarget.classList.toggle('is-ready', state === 'ready');
     reactionTarget.classList.toggle('is-too-soon', state === 'too-soon');
   };
   const startReactionRound = () => {
     if (!reactionTarget || !reactionStatus) return;
-    window.clearTimeout(reactionTimer);
+    clearReactionTimers();
+    if (reactionSprintResults.length >= reactionSprintRounds) reactionSprintResults = [];
     reactionState = 'waiting';
     reactionReadyAt = 0;
-    reactionStatus.textContent = 'Wait for green — tapping early restarts the round.';
-    setReactionTarget('Wait for green…', 'waiting');
+    setReactionLights(0);
+    renderReactionSprint();
+    const roundNumber = reactionSprintResults.length + 1;
+    reactionStatus.textContent = `Round ${roundNumber} of ${reactionSprintRounds}: wait for all lights, then tap on green.`;
+    setReactionTarget('Signal building… wait for green.', 'waiting');
     const delay = 1200 + Math.floor(Math.random() * 2600);
+    let lightStep = 0;
+    const lightEvery = Math.max(160, Math.floor(delay / reactionLights.length));
+    reactionLightTimer = window.setInterval(() => {
+      lightStep = Math.min(reactionLights.length, lightStep + 1);
+      setReactionLights(lightStep);
+      if (lightStep >= reactionLights.length) window.clearInterval(reactionLightTimer);
+    }, lightEvery);
     reactionTimer = window.setTimeout(() => {
+      window.clearInterval(reactionLightTimer);
       reactionState = 'ready';
       reactionReadyAt = performance.now();
-      reactionStatus.textContent = 'Go! Tap the green target.';
+      setReactionLights(reactionLights.length);
+      reactionStatus.textContent = 'Go! Tap the green target or press Space/Enter.';
       setReactionTarget('GO — tap now!', 'ready');
     }, delay);
   };
   const finishReactionRound = () => {
     if (!reactionStatus || !reactionLast || !reactionAttempts) return;
     if (reactionState === 'waiting') {
-      window.clearTimeout(reactionTimer);
+      clearReactionTimers();
       reactionState = 'idle';
-      reactionStatus.textContent = 'Too soon — wait for green before tapping.';
-      setReactionTarget('Too soon. Start again.', 'too-soon');
+      reactionReadyAt = 0;
+      reactionStatus.textContent = 'Too soon — wait for the green signal before tapping.';
+      setReactionLights(0);
+      setReactionTarget('Too soon. Start this round again.', 'too-soon');
       return;
     }
     if (reactionState !== 'ready' || !reactionReadyAt) return;
     const elapsed = Math.max(0, Math.round(performance.now() - reactionReadyAt));
+    clearReactionTimers();
     reactionAttemptCount += 1;
+    reactionSprintResults.push(elapsed);
     reactionLast.textContent = `${elapsed} ms`;
     reactionAttempts.textContent = String(reactionAttemptCount);
     const previousBest = readReactionBest();
-    if (!previousBest || elapsed < previousBest) {
-      window.localStorage?.setItem(reactionStorageKey, String(elapsed));
-      reactionStatus.textContent = `New best: ${elapsed} ms. Nice reflex sprint.`;
+    if (!previousBest || elapsed < previousBest) window.localStorage?.setItem(reactionStorageKey, String(elapsed));
+    const average = Math.round(sprintAverage());
+    const previousBestAverage = readReactionBestAverage();
+    const sprintDone = reactionSprintResults.length >= reactionSprintRounds;
+    if (sprintDone) {
+      if (!previousBestAverage || average < previousBestAverage) {
+        window.localStorage?.setItem(reactionAverageStorageKey, String(average));
+        reactionStatus.textContent = `Sprint complete: ${average} ms average (${reactionScoreBand(average)}). New best 3-round average.`;
+      } else {
+        reactionStatus.textContent = `Sprint complete: ${average} ms average (${reactionScoreBand(average)}). Best average stays ${previousBestAverage} ms.`;
+      }
+      setReactionTarget('Sprint saved. Start a new 3-round sprint?', 'idle');
     } else {
-      reactionStatus.textContent = `${elapsed} ms. Best stays ${previousBest} ms — try another round.`;
+      reactionStatus.textContent = `${elapsed} ms logged. Round ${reactionSprintResults.length + 1} is ready when you are.`;
+      setReactionTarget('Round saved. Start next round?', 'idle');
     }
-    renderReactionBest();
     reactionState = 'idle';
     reactionReadyAt = 0;
-    setReactionTarget('Round saved. Start again?', 'idle');
+    setReactionLights(0);
+    renderReactionBest();
+    renderReactionSprint();
   };
   if (reactionTarget && reactionStart && reactionReset) {
     reactionStart.addEventListener('click', startReactionRound);
     reactionTarget.addEventListener('click', finishReactionRound);
+    reactionTarget.addEventListener('keydown', (event) => {
+      if (event.key === ' ' || event.key === 'Enter') {
+        event.preventDefault();
+        finishReactionRound();
+      }
+    });
     reactionReset.addEventListener('click', () => {
-      window.clearTimeout(reactionTimer);
+      if (!window.confirm('Reset your local reaction timer best single and best 3-round average?')) return;
+      clearReactionTimers();
       window.localStorage?.removeItem(reactionStorageKey);
+      window.localStorage?.removeItem(reactionAverageStorageKey);
       reactionAttemptCount = 0;
+      reactionSprintResults = [];
       reactionState = 'idle';
       reactionReadyAt = 0;
       if (reactionLast) reactionLast.textContent = '—';
       if (reactionAttempts) reactionAttempts.textContent = '0';
-      if (reactionStatus) reactionStatus.textContent = 'Local best cleared. Ready for a clean reflex sprint.';
+      if (reactionStatus) reactionStatus.textContent = 'Local scores cleared. Ready for a clean three-round reflex sprint.';
+      setReactionLights(0);
       renderReactionBest();
+      renderReactionSprint();
       setReactionTarget('Press Start, then wait for green.', 'idle');
     });
     renderReactionBest();
+    renderReactionSprint();
   }
   generatePassword();
   renderQr();
