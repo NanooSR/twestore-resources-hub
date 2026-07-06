@@ -14636,6 +14636,7 @@
   }
   const normalize = value => (value || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
   const compact = value => (value || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+  const escapeHtml = value => (value || '').replace(/[&<>\"]/g, char => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[char]));
   const productAliases = {
     amazon: ['affiliate', 'amazonca', 'resource', 'resources', 'guide', 'storefront'],
     affiliate: ['amazon', 'resources', 'resource', 'guide', 'storefront'],
