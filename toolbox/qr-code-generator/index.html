@@ -3313,21 +3313,22 @@
       </div>
 
       <span class="tool-badge">▦ QR code generator</span>
-      <h2>Create a clean QR code for a link, note, or Wi-Fi handoff</h2>
-      <p class="muted">Useful for simple sharing. Keep sensitive data out of QR text unless you are comfortable with it being scannable.</p>
+      <h2>Generate a QR code from a link, note, or simple handoff</h2>
+      <p class="muted">Enter the text or link you want to encode. Avoid putting passwords or secrets in the QR code—anyone with a scanner can read it.</p>
       <label for="qr-input"><strong>Text or URL</strong></label>
       <textarea id="qr-input" placeholder="https://www.thewatchersedge.ca/toolbox or WIFI:T:WPA;S:NetworkName;P:password;;">https://www.thewatchersedge.ca/toolbox</textarea>
       <div class="tool-inline-grid two">
         <label><strong>Size</strong><select id="qr-size"><option value="180">Small</option><option value="240" selected>Medium</option><option value="320">Large</option></select></label>
-        <div class="tool-result"><strong id="qr-status">Ready to generate</strong><br><span class="muted">Creates a canvas and download link in-browser.</span></div>
+        <div class="tool-result"><strong id="qr-status" role="status" aria-live="polite">Ready to generate</strong><br><span class="muted">Creates a canvas and download link in-browser. This may be too long to scan reliably.</span></div>
       </div>
       <div class="cta-row">
-        <button class="btn" type="button" id="qr-generate-button">Generate QR code</button>
-        <a class="btn secondary" id="qr-download-link" href="#" download="twe-toolbox-qr.png" style="pointer-events:none;opacity:.55;">Download PNG</a>
+        <button class="btn" type="button" id="qr-generate-button">Make QR code</button>
+        <a class="btn secondary" id="qr-download-link" href="#" download="twe-toolbox-qr.png" aria-disabled="true" style="pointer-events:none;opacity:.55;">Download PNG (QR)</a>
       </div>
-      <div class="tool-canvas-wrap" id="qr-preview-wrap">
-        <canvas id="qr-canvas" width="240" height="240" aria-label="Generated QR code preview"></canvas>
-      </div>
+      <figure class="tool-canvas-wrap" id="qr-preview-wrap">
+        <canvas id="qr-canvas" width="240" height="240" role="img" aria-label="QR code preview"></canvas>
+        <figcaption class="muted" id="qr-caption">QR preview appears here after generation.</figcaption>
+      </figure>
       <div class="active-tool-card-footer">
         <div class="tool-return-card active-tool-after-panel"><strong>Why you’ll come back:</strong> <span class="muted">Bookmark it for links, Wi-Fi handoffs, event tables, and quick printed signs.</span></div>
         <p class="muted active-tool-privacy-note"><strong>Privacy note:</strong> Most TWE Toolbox helpers run in your browser. Tools that need a live check, such as IP lookup, word unscrambling, or browser diagnostics, only contact the site service when you click the tool button.</p>
@@ -3603,27 +3604,43 @@
 
   const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%^&*';
   const lengthInput = document.getElementById('password-length');
+  const lengthNumberInput = document.getElementById('password-length-number');
   const lengthValue = document.getElementById('password-length-value');
   const passwordOutput = document.getElementById('password-output');
   const passwordCopyStatus = document.getElementById('password-copy-status');
+  const passwordCopyButton = document.getElementById('password-copy-button');
+  const clampPasswordLength = (value) => Math.min(40, Math.max(12, Number(value) || 20));
+  const syncPasswordLengthControls = (source) => {
+    const length = clampPasswordLength(source?.value || lengthInput?.value || lengthNumberInput?.value || 20);
+    if (lengthInput) lengthInput.value = String(length);
+    if (lengthNumberInput) lengthNumberInput.value = String(length);
+    if (lengthValue) lengthValue.textContent = String(length);
+    return length;
+  };
   const generatePassword = () => {
     if (!lengthInput || !lengthValue || !passwordOutput || !window.crypto?.getRandomValues) return;
-    const length = Number(lengthInput.value || 20);
-    lengthValue.textContent = String(length);
+    const length = syncPasswordLengthControls(lengthInput);
     const bytes = new Uint8Array(length);
     window.crypto.getRandomValues(bytes);
     passwordOutput.textContent = Array.from(bytes, (value) => alphabet[value % alphabet.length]).join('');
+    if (passwordCopyStatus) passwordCopyStatus.textContent = 'Password ready. Save it in your password manager.';
   };
   if (lengthInput && lengthValue && passwordOutput) {
-    lengthInput.addEventListener('input', generatePassword);
+    lengthInput.addEventListener('input', () => { syncPasswordLengthControls(lengthInput); generatePassword(); });
+    lengthNumberInput?.addEventListener('input', () => { syncPasswordLengthControls(lengthNumberInput); generatePassword(); });
     document.getElementById('password-generate-button')?.addEventListener('click', generatePassword);
-    document.getElementById('password-copy-button')?.addEventListener('click', async () => {
+    passwordCopyButton?.addEventListener('click', async () => {
       const value = passwordOutput.textContent || '';
       if (!value || value === 'Press generate') {
         if (passwordCopyStatus) passwordCopyStatus.textContent = 'Generate a password first.';
         return;
       }
-      await copyWithFeedback(value, passwordCopyStatus, 'Password copied. Save it in your password manager.');
+      const copied = await copyWithFeedback(value, passwordCopyStatus, 'Password copied. Save it in your password manager.');
+      if (copied && passwordCopyButton) {
+        const original = passwordCopyButton.textContent;
+        passwordCopyButton.textContent = 'Copied!';
+        window.setTimeout(() => { passwordCopyButton.textContent = original || 'Copy password'; }, 1800);
+      }
     });
   }
 
@@ -3632,6 +3649,7 @@
   const charCount = document.getElementById('text-char-count');
   const readTime = document.getElementById('text-read-time');
   const textHelperStatus = document.getElementById('text-helper-status');
+  const textBulletStyle = document.getElementById('text-bullet-style');
   const updateTextStats = () => {
     if (!textInput || !wordCount || !charCount || !readTime) return;
     const value = textInput.value || '';
@@ -3639,6 +3657,13 @@
     wordCount.textContent = String(words);
     charCount.textContent = String(value.length);
     readTime.textContent = `${Math.max(0, Math.ceil(words / 200))} min`;
+  };
+  const applyTextBulletStyle = () => {
+    const style = textBulletStyle?.value || 'bullet';
+    const lines = (textInput?.value || '').split(/\r?\n/).map((line) => line.trim()).filter(Boolean).map((line) => line.replace(/^([•–-]|\d+\.)\s*/, ''));
+    if (style === 'numbered') return lines.map((line, index) => `${index + 1}. ${line}`).join('\n');
+    const prefix = style === 'dash' ? '– ' : '• ';
+    return lines.map((line) => `${prefix}${line}`).join('\n');
   };
   if (textInput && wordCount && charCount && readTime) {
     textInput.addEventListener('input', updateTextStats);
@@ -3654,8 +3679,9 @@
           textInput.value = textInput.value.split(/\r?\n/).filter((line) => { const key = line.trim().toLowerCase(); if (!key) return true; if (seen.has(key)) return false; seen.add(key); return true; }).join('\n');
           if (textHelperStatus) textHelperStatus.textContent = 'Duplicate lines removed.';
         }
-        if (action === 'bullets') { textInput.value = textInput.value.split(/\r?\n/).map((line) => line.trim()).filter(Boolean).map((line) => line.startsWith('• ') ? line : `• ${line.replace(/^[-*•]\s*/, '')}`).join('\n'); if (textHelperStatus) textHelperStatus.textContent = 'Converted to simple bullets.'; }
+        if (action === 'bullets') { textInput.value = applyTextBulletStyle(); if (textHelperStatus) textHelperStatus.textContent = textBulletStyle?.value === 'numbered' ? 'Converted to numbered list.' : 'Converted to simple bullets.'; }
         if (action === 'copy') await copyWithFeedback(textInput.value, textHelperStatus, 'Cleaned text copied.');
+        if (action === 'clear') { textInput.value = ''; if (textHelperStatus) textHelperStatus.textContent = 'Text cleared.'; }
         updateTextStats();
       });
     });
@@ -3663,40 +3689,70 @@
   }
 
   const formatCurrency = (value) => new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD' }).format(value);
+  const formatCalcNumber = (value, currencyMode) => currencyMode ? formatCurrency(value) : new Intl.NumberFormat('en-CA', { maximumFractionDigits: 4 }).format(value);
   const runCalc = () => {
     const amountEl = document.getElementById('calc-amount');
     const percentEl = document.getElementById('calc-percent');
     const percentValueEl = document.getElementById('calc-percent-value');
     const totalValueEl = document.getElementById('calc-total-value');
     const plainValueEl = document.getElementById('calc-plain-value');
+    const calcStatus = document.getElementById('calc-status');
+    const currencyMode = document.getElementById('calc-currency-mode')?.checked !== false;
     if (!amountEl || !percentEl || !percentValueEl || !totalValueEl || !plainValueEl) return;
-    const amount = Number(amountEl.value || 0);
-    const percent = Number(percentEl.value || 0);
+    if (!String(amountEl.value || '').trim() || !String(percentEl.value || '').trim()) {
+      if (calcStatus) calcStatus.textContent = 'Please enter a base amount and percent.';
+      return;
+    }
+    const amount = Number(amountEl.value);
+    const percent = Number(percentEl.value);
+    if (!Number.isFinite(amount) || !Number.isFinite(percent)) {
+      if (calcStatus) calcStatus.textContent = 'Please enter a base amount and percent.';
+      return;
+    }
     const percentValue = amount * (percent / 100);
-    percentValueEl.textContent = formatCurrency(percentValue);
-    totalValueEl.textContent = formatCurrency(amount + percentValue);
+    percentValueEl.textContent = formatCalcNumber(percentValue, currencyMode);
+    totalValueEl.textContent = formatCalcNumber(amount + percentValue, currencyMode);
     plainValueEl.textContent = `${percent}%`;
+    if (calcStatus) calcStatus.textContent = percent < 0 ? 'Discount calculated.' : 'Calculation ready.';
   };
   const calcButton = document.getElementById('calc-button');
   if (calcButton) {
     calcButton.addEventListener('click', runCalc);
+    document.getElementById('calc-currency-mode')?.addEventListener('change', runCalc);
     runCalc();
   }
 
   const chooserInput = document.getElementById('chooser-options');
   const chooserButton = document.getElementById('chooser-button');
+  const chooserReset = document.getElementById('chooser-reset');
+  const chooserDedupe = document.getElementById('chooser-dedupe');
   const chooserCountNote = document.getElementById('chooser-count-note');
   const chooserResultValue = document.getElementById('chooser-result-value');
   const chooserResultNote = document.getElementById('chooser-result-note');
-    const chooserCleanOptions = () => (chooserInput?.value || '').split(/\r?\n/).map((value) => value.trim()).filter(Boolean);
-const chooserUpdateCount = () => {
+  const chooserCleanOptions = () => {
+    const options = (chooserInput?.value || '').split(/\r?\n/).map((value) => value.trim()).filter(Boolean);
+    if (!chooserDedupe?.checked) return options;
+    const seen = new Set();
+    return options.filter((value) => { const key = value.toLowerCase(); if (seen.has(key)) return false; seen.add(key); return true; });
+  };
+  const chooserUpdateCount = () => {
     const options = chooserCleanOptions();
     if (!chooserCountNote) return options;
-    chooserCountNote.textContent = options.length >= 2 ? `${options.length} options ready.` : 'Add at least 2 options.';
+    const dedupeNote = chooserDedupe?.checked ? ' Duplicates removed before picking.' : '';
+    chooserCountNote.textContent = options.length >= 2 ? `${options.length} options ready.${dedupeNote}` : 'Add at least 2 options.';
     return options;
+  };
+  const resetChooser = () => {
+    if (chooserInput) chooserInput.value = '';
+    if (chooserDedupe) chooserDedupe.checked = false;
+    if (chooserResultValue) chooserResultValue.textContent = 'Waiting for options';
+    if (chooserResultNote) chooserResultNote.textContent = 'Add at least 2 non-empty lines.';
+    chooserUpdateCount();
   };
   if (chooserInput && chooserButton && chooserCountNote && chooserResultValue && chooserResultNote) {
     chooserInput.addEventListener('input', chooserUpdateCount);
+    chooserDedupe?.addEventListener('change', chooserUpdateCount);
+    chooserReset?.addEventListener('click', resetChooser);
     chooserButton.addEventListener('click', () => {
       const options = chooserUpdateCount();
       if (options.length < 2) {
@@ -3708,7 +3764,7 @@ const chooserUpdateCount = () => {
       window.crypto.getRandomValues(randomValues);
       const index = randomValues[0] % options.length;
       chooserResultValue.textContent = options[index];
-      chooserResultNote.textContent = `Picked from ${options.length} cleaned options.`;
+      chooserResultNote.textContent = `Picked from ${options.length} cleaned options.${chooserDedupe?.checked ? ' Duplicates removed before picking.' : ''}`;
     });
     chooserUpdateCount();
   }
@@ -3723,40 +3779,47 @@ const chooserUpdateCount = () => {
     if (!qrPreviewWrap || !qrStatus || !qrDownloadLink) return;
     qrPreviewWrap.innerHTML = '<div class="tool-result"><strong>QR helper did not load.</strong><br><span class="muted">Refresh the page and try again. Your QR text was not sent to a third-party QR service.</span></div>';
     qrStatus.textContent = 'QR helper did not load';
-    qrDownloadLink.href = '#';
-    qrDownloadLink.style.pointerEvents = 'none';
-    qrDownloadLink.style.opacity = '.55';
+    setQrDownloadReady(false);
+  };
+  const setQrDownloadReady = (ready, href = '#') => {
+    if (!qrDownloadLink) return;
+    qrDownloadLink.href = href;
+    qrDownloadLink.setAttribute('aria-disabled', ready ? 'false' : 'true');
+    qrDownloadLink.style.pointerEvents = ready ? '' : 'none';
+    qrDownloadLink.style.opacity = ready ? '1' : '.55';
+    qrDownloadLink.textContent = ready ? 'Download PNG (ready)' : 'Download PNG (QR)';
   };
   const renderQr = async () => {
     if (!qrInput || !qrSize || !qrPreviewWrap || !qrStatus || !qrDownloadLink) return;
     const value = (qrInput.value || '').trim();
     if (!value) {
       qrStatus.textContent = 'Enter some text or a URL first';
+      setQrDownloadReady(false);
       return;
     }
     const size = Number(qrSize.value || 240);
     try {
       if (window.QRCode?.toCanvas && qrCanvas) {
         try {
-          qrPreviewWrap.innerHTML = `<canvas id="qr-canvas" width="${size}" height="${size}" aria-label="Generated QR code preview"></canvas>`;
+          qrPreviewWrap.innerHTML = `<canvas id="qr-canvas" width="${size}" height="${size}" role="img" aria-label="QR code for ${value.replace(/"/g, '&quot;')}"></canvas><figcaption class="muted" id="qr-caption">QR code for ${value.slice(0, 90)}</figcaption>`;
           const activeCanvas = document.getElementById('qr-canvas');
           await window.QRCode.toCanvas(activeCanvas, value, {
             width: size,
             margin: 1,
             color: { dark: '#122033', light: '#ffffff' }
           });
-          qrStatus.textContent = 'QR code ready';
-          qrDownloadLink.href = activeCanvas.toDataURL('image/png');
+          qrStatus.textContent = value.length > 2000 ? 'QR code ready. This may be too long to scan reliably.' : 'QR code ready. You can now download the PNG image.';
+          setQrDownloadReady(true, activeCanvas.toDataURL('image/png'));
         } catch (_) {
           renderQrFallback(value, size);
         }
       } else {
         renderQrFallback(value, size);
       }
-      qrDownloadLink.style.pointerEvents = '';
-      qrDownloadLink.style.opacity = '1';
+      if (qrDownloadLink.getAttribute('aria-disabled') !== 'false') setQrDownloadReady(true, qrDownloadLink.href);
     } catch (_) {
       qrStatus.textContent = 'Could not generate that QR code';
+      setQrDownloadReady(false);
     }
   };
   if (qrInput && qrSize && qrPreviewWrap && qrStatus && qrDownloadLink) {
@@ -3768,6 +3831,8 @@ const chooserUpdateCount = () => {
   const pomodoroState = document.getElementById('pomodoro-state');
   const pomodoroNotifications = document.getElementById('pomodoro-notifications');
   const pomodoroSound = document.getElementById('pomodoro-sound');
+  const pomodoroMinutes = document.getElementById('pomodoro-minutes');
+  const pomodoroSecondsInput = document.getElementById('pomodoro-seconds');
   let pomodoroSeconds = 25 * 60;
   let pomodoroDefault = 25 * 60;
   let pomodoroTimer = null;
@@ -3781,6 +3846,19 @@ const chooserUpdateCount = () => {
     pomodoroDisplay.textContent = formatSeconds(pomodoroSeconds);
   };
   const stopPomodoro = () => { if (pomodoroTimer) clearInterval(pomodoroTimer); pomodoroTimer = null; };
+  const applyPomodoroCustomDuration = () => {
+    const minutes = Math.max(0, Math.min(180, Number(pomodoroMinutes?.value || 0)));
+    const seconds = Math.max(0, Math.min(59, Number(pomodoroSecondsInput?.value || 0)));
+    const total = Math.max(1, (minutes * 60) + seconds);
+    pomodoroDefault = total;
+    pomodoroSeconds = total;
+    renderPomodoro();
+    return total;
+  };
+  const syncPomodoroInputs = () => {
+    if (pomodoroMinutes) pomodoroMinutes.value = String(Math.floor(pomodoroDefault / 60));
+    if (pomodoroSecondsInput) pomodoroSecondsInput.value = String(pomodoroDefault % 60);
+  };
   const playPomodoroChime = () => {
     if (!pomodoroSound?.checked || !(window.AudioContext || window.webkitAudioContext)) return;
     const AudioCtx = window.AudioContext || window.webkitAudioContext;
@@ -3808,6 +3886,7 @@ const chooserUpdateCount = () => {
       button.addEventListener('click', () => {
         pomodoroDefault = Number(button.getAttribute('data-pomodoro-preset')) * 60;
         pomodoroSeconds = pomodoroDefault;
+        syncPomodoroInputs();
         stopPomodoro();
         pomodoroState.textContent = `Preset loaded: ${formatSeconds(pomodoroDefault)}`;
         renderPomodoro();
@@ -3815,7 +3894,8 @@ const chooserUpdateCount = () => {
     });
     document.getElementById('pomodoro-start')?.addEventListener('click', () => {
       if (pomodoroTimer) return;
-      pomodoroState.textContent = 'Running';
+      if (pomodoroSeconds <= 0) applyPomodoroCustomDuration();
+      pomodoroState.textContent = 'Timer running.';
       pomodoroTimer = window.setInterval(() => {
         pomodoroSeconds = Math.max(0, pomodoroSeconds - 1);
         renderPomodoro();
@@ -3828,14 +3908,16 @@ const chooserUpdateCount = () => {
     });
     document.getElementById('pomodoro-pause')?.addEventListener('click', () => {
       stopPomodoro();
-      pomodoroState.textContent = 'Paused';
+      pomodoroState.textContent = 'Timer paused.';
     });
     document.getElementById('pomodoro-reset')?.addEventListener('click', () => {
       stopPomodoro();
       pomodoroSeconds = pomodoroDefault;
-      pomodoroState.textContent = 'Reset';
+      pomodoroState.textContent = 'Timer reset.';
       renderPomodoro();
     });
+    pomodoroMinutes?.addEventListener('input', () => { stopPomodoro(); applyPomodoroCustomDuration(); if (pomodoroState) pomodoroState.textContent = 'Custom duration loaded.'; });
+    pomodoroSecondsInput?.addEventListener('input', () => { stopPomodoro(); applyPomodoroCustomDuration(); if (pomodoroState) pomodoroState.textContent = 'Custom duration loaded.'; });
     renderPomodoro();
   }
 
@@ -3941,25 +4023,44 @@ const chooserUpdateCount = () => {
   const converterInput = document.getElementById('converter-input');
   const converterOutput = document.getElementById('converter-output');
   const converterNote = document.getElementById('converter-note');
+  const converterCopyButton = document.getElementById('converter-copy');
+  const converterCopyStatus = document.getElementById('converter-copy-status');
+  const converterSwapButton = document.getElementById('converter-swap');
+  const converterPresetButtons = Array.from(document.querySelectorAll('[data-converter-preset]'));
+  const converterDecimalStorageNote = 'This converter uses decimal units (1 KB = 1,000 bytes). Binary KiB/MiB/GiB units are not included.';
   const converterSets = {
     length: {
       note: 'Length conversions use meters as the base unit.',
+      defaultFrom: 'meter',
+      defaultTo: 'kilometer',
       units: { meter: 1, kilometer: 1000, centimeter: 0.01, inch: 0.0254, foot: 0.3048, yard: 0.9144, mile: 1609.344 }
     },
     storage: {
-      note: 'Storage conversions use bytes as the base unit.',
+      note: `Storage conversions use bytes as the base unit. ${converterDecimalStorageNote}`,
+      defaultFrom: 'byte',
+      defaultTo: 'kilobyte',
       units: { byte: 1, kilobyte: 1000, megabyte: 1000000, gigabyte: 1000000000, terabyte: 1000000000000 }
     },
     temperature: {
       note: 'Temperature uses direct formulas between Celsius, Fahrenheit, and Kelvin.',
+      defaultFrom: 'celsius',
+      defaultTo: 'fahrenheit',
       units: { celsius: 'celsius', fahrenheit: 'fahrenheit', kelvin: 'kelvin' }
     }
+  };
+  const converterPresets = {
+    'km-mile': { category: 'length', from: 'kilometer', to: 'mile', value: '1' },
+    freezing: { category: 'temperature', from: 'fahrenheit', to: 'celsius', value: '32' },
+    'gb-mb': { category: 'storage', from: 'gigabyte', to: 'megabyte', value: '1' }
   };
   const titleize = (value) => value.replace(/(^|\s)\w/g, (char) => char.toUpperCase());
   const converterUnitLabels = {
     meter: ['meter', 'meters'],
     kilometer: ['kilometer', 'kilometers'],
+    centimeter: ['centimeter', 'centimeters'],
+    inch: ['inch', 'inches'],
     foot: ['foot', 'feet'],
+    yard: ['yard', 'yards'],
     mile: ['mile', 'miles'],
     byte: ['byte', 'bytes'],
     kilobyte: ['kilobyte', 'kilobytes'],
@@ -3975,14 +4076,27 @@ const chooserUpdateCount = () => {
     if (!labels) return `${unit}${value === 1 ? '' : 's'}`;
     return Math.abs(value) === 1 ? labels[0] : labels[1];
   };
-  const fillConverterUnits = () => {
+  const formatConverterNumber = (value) => {
+    if (!Number.isFinite(value)) return '—';
+    if (value === 0) return '0';
+    if (Math.abs(value) >= 100) return value.toFixed(2).replace(/0+$/, '').replace(/\.$/, '');
+    return value.toFixed(4).replace(/0+$/, '').replace(/\.$/, '');
+  };
+  const setConverterStatus = (message, { isError = false } = {}) => {
+    if (converterOutput) converterOutput.textContent = message;
+    if (converterCopyStatus) converterCopyStatus.textContent = isError ? 'Fix the value before copying.' : 'Result ready to copy.';
+  };
+  const fillConverterUnits = (preserveSelection = false) => {
     if (!converterCategory || !converterFrom || !converterTo || !converterNote) return;
     const category = converterCategory.value;
     const units = Object.keys(converterSets[category].units);
+    const oldFrom = converterFrom.value;
+    const oldTo = converterTo.value;
     const options = units.map((unit) => `<option value="${unit}">${titleize(unit)}</option>`).join('');
     converterFrom.innerHTML = options;
     converterTo.innerHTML = options;
-    converterTo.value = units[Math.min(1, units.length - 1)];
+    converterFrom.value = preserveSelection && units.includes(oldFrom) ? oldFrom : converterSets[category].defaultFrom;
+    converterTo.value = preserveSelection && units.includes(oldTo) ? oldTo : converterSets[category].defaultTo;
     converterNote.textContent = converterSets[category].note;
   };
   const convertTemperature = (value, from, to) => {
@@ -3993,30 +4107,79 @@ const chooserUpdateCount = () => {
     if (to === 'kelvin') return celsius + 273.15;
     return celsius;
   };
+  const validateConverterInput = (category, from, rawText) => {
+    if (!String(rawText || '').trim()) return 'Enter a number to convert.';
+    const value = Number(rawText);
+    if (!Number.isFinite(value)) return 'Enter a number to convert.';
+    if ((category === 'length' || category === 'storage') && value < 0) return 'Enter a non-negative value for this category.';
+    if (category === 'temperature' && from === 'kelvin' && value < 0) return 'Kelvin cannot be below absolute zero (0 K).';
+    return '';
+  };
   const runConverter = () => {
     if (!converterCategory || !converterFrom || !converterTo || !converterInput || !converterOutput || !converterNote) return;
     const category = converterCategory.value;
     const from = converterFrom.value;
     const to = converterTo.value;
-    const rawValue = Number(converterInput.value || 0);
+    const rawText = converterInput.value;
+    const validationMessage = validateConverterInput(category, from, rawText);
+    if (validationMessage) {
+      setConverterStatus(validationMessage, { isError: true });
+      converterNote.textContent = converterSets[category].note;
+      return;
+    }
+    const rawValue = Number(rawText);
     let converted = rawValue;
     if (category === 'temperature') {
       converted = convertTemperature(rawValue, from, to);
+      if (to === 'kelvin' && converted < 0) {
+        setConverterStatus('Kelvin cannot be below absolute zero (0 K).', { isError: true });
+        converterNote.textContent = converterSets[category].note;
+        return;
+      }
     } else {
       const units = converterSets[category].units;
       converted = rawValue * units[from] / units[to];
     }
-    const formatter = Math.abs(converted) >= 100 ? converted.toFixed(2) : converted.toFixed(4).replace(/0+$/, '').replace(/\.$/, '');
-    converterOutput.textContent = `${rawValue} ${formatUnitLabel(from, rawValue)} = ${formatter} ${formatUnitLabel(to, Number(formatter))}`;
+    const formattedInput = formatConverterNumber(rawValue);
+    const formattedOutput = formatConverterNumber(converted);
+    converterOutput.textContent = `${formattedInput} ${formatUnitLabel(from, rawValue)} = ${formattedOutput} ${formatUnitLabel(to, converted)}`;
     converterNote.textContent = converterSets[category].note;
+    if (converterCopyStatus) converterCopyStatus.textContent = 'Result ready to copy.';
+  };
+  const swapConverterUnits = () => {
+    if (!converterFrom || !converterTo) return;
+    const oldFrom = converterFrom.value;
+    converterFrom.value = converterTo.value;
+    converterTo.value = oldFrom;
+    runConverter();
+  };
+  const applyConverterPreset = (presetKey) => {
+    const preset = converterPresets[presetKey];
+    if (!preset || !converterCategory || !converterInput) return;
+    converterCategory.value = preset.category;
+    fillConverterUnits(false);
+    converterFrom.value = preset.from;
+    converterTo.value = preset.to;
+    converterInput.value = preset.value;
+    runConverter();
+  };
+  const copyConverterResult = async () => {
+    if (!converterOutput || !converterCopyStatus) return;
+    const ok = await copyWithFeedback(converterOutput.textContent, converterCopyStatus, 'Copied!');
+    if (!ok && converterCopyStatus.textContent.includes('Copy blocked by this browser')) {
+      converterCopyStatus.textContent = 'Copy blocked by your browser. Please select and copy manually.';
+    }
   };
   if (converterCategory && converterFrom && converterTo && converterInput && converterOutput && converterNote) {
-    converterCategory.addEventListener('change', () => { fillConverterUnits(); runConverter(); });
+    converterCategory.addEventListener('change', () => { fillConverterUnits(false); runConverter(); });
     converterFrom.addEventListener('change', runConverter);
     converterTo.addEventListener('change', runConverter);
     converterInput.addEventListener('input', runConverter);
     document.getElementById('converter-button')?.addEventListener('click', runConverter);
-    fillConverterUnits();
+    converterSwapButton?.addEventListener('click', swapConverterUnits);
+    converterCopyButton?.addEventListener('click', copyConverterResult);
+    converterPresetButtons.forEach((button) => button.addEventListener('click', () => applyConverterPreset(button.dataset.converterPreset)));
+    fillConverterUnits(false);
     runConverter();
   }
 
@@ -4032,7 +4195,10 @@ const chooserUpdateCount = () => {
   const reactionAverage = document.getElementById('reaction-average');
   const reactionGrade = document.getElementById('reaction-grade');
   const reactionBestAverage = document.getElementById('reaction-best-average');
+  const reactionSound = document.getElementById('reaction-sound');
+  const reactionVibration = document.getElementById('reaction-vibration');
   const reactionLights = Array.from(document.querySelectorAll('[data-reaction-light]'));
+  const reactionMissThresholdMs = 2000;
   const reactionStorageKey = 'tweReactionBestMs';
   const reactionAverageStorageKey = 'tweReactionBestAverageMs';
   const reactionSprintRounds = 3;
@@ -4058,6 +4224,22 @@ const chooserUpdateCount = () => {
   };
   const setReactionLights = (count) => {
     reactionLights.forEach((light, index) => light.classList.toggle('is-lit', index < count));
+  };
+  const playReactionCue = () => {
+    if (reactionVibration?.checked && navigator.vibrate) navigator.vibrate(80);
+    if (reactionSound?.checked && (window.AudioContext || window.webkitAudioContext)) {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      const ctx = new AudioCtx();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.frequency.value = 880;
+      gain.gain.setValueAtTime(0.0001, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.05, ctx.currentTime + 0.01);
+      gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.18);
+      osc.connect(gain).connect(ctx.destination);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.2);
+    }
   };
   const clearReactionTimers = () => {
     window.clearTimeout(reactionTimer);
@@ -4112,6 +4294,7 @@ const chooserUpdateCount = () => {
       setReactionLights(reactionLights.length);
       reactionStatus.textContent = 'Go! Tap the green target or press Space/Enter.';
       setReactionTarget('GO — tap now!', 'ready');
+      playReactionCue();
     }, delay);
   };
   const finishReactionRound = () => {
@@ -4129,6 +4312,16 @@ const chooserUpdateCount = () => {
     const elapsed = Math.max(0, Math.round(performance.now() - reactionReadyAt));
     clearReactionTimers();
     reactionAttemptCount += 1;
+    if (elapsed > reactionMissThresholdMs) {
+      reactionLast.textContent = 'Missed';
+      reactionAttempts.textContent = String(reactionAttemptCount);
+      reactionStatus.textContent = 'Missed — too slow for this round. Try again when you are ready.';
+      setReactionTarget('Missed. Start this round again.', 'idle');
+      reactionState = 'idle';
+      setReactionLights(0);
+      renderReactionSprint();
+      return;
+    }
     reactionSprintResults.push(elapsed);
     reactionLast.textContent = `${elapsed} ms`;
     reactionAttempts.textContent = String(reactionAttemptCount);
