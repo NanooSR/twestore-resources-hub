@@ -1,3 +1,5 @@
+# Public crawler access for both apex and www entry points.
+# Canonical sitemap uses the apex host.
 User-agent: *
 Allow: /
 
