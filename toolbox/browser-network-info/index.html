@@ -2734,6 +2734,69 @@
     margin-top: 0;
     padding-top: 0;
   }
+  .browser-info-results {
+    display: grid;
+    gap: 14px;
+  }
+  .browser-info-group-grid {
+    display: grid;
+    gap: 14px;
+  }
+  .browser-info-group {
+    border: 1px solid color-mix(in srgb, var(--active-accent, #14b8a6) 18%, white);
+    border-radius: 16px;
+    background: color-mix(in srgb, var(--active-accent, #14b8a6) 4%, white);
+    padding: 14px;
+  }
+  .browser-info-group h3 {
+    margin: 0 0 10px;
+    font-size: 1rem;
+  }
+  .browser-info-group dl {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+  }
+  .browser-info-row {
+    display: grid;
+    grid-template-columns: minmax(135px, .44fr) minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    padding: 8px 10px;
+    border-radius: 12px;
+    background: rgba(255,255,255,.72);
+  }
+  .browser-info-row dt,
+  .browser-info-row dd {
+    margin: 0;
+  }
+  .browser-info-row dt {
+    color: color-mix(in srgb, var(--active-ink, #15363d) 72%, #fff);
+    font-weight: 800;
+  }
+  .browser-info-row dd {
+    overflow-wrap: anywhere;
+    color: var(--active-ink, #15363d);
+  }
+  .browser-info-row.is-unsupported dd {
+    color: #8a4b08;
+    font-weight: 800;
+  }
+  @media (max-width: 720px) {
+    .browser-info-actions {
+      align-items: stretch;
+    }
+    .browser-info-actions .btn,
+    .browser-info-actions .tool-status {
+      width: 100%;
+      justify-content: center;
+    }
+    .browser-info-row {
+      grid-template-columns: 1fr;
+      gap: 3px;
+    }
+  }
+
   .word-group h3 {
     margin: 0 0 8px;
     font-size: .98rem;
@@ -3253,21 +3316,23 @@
         </div>
       </div>
 
-      <span class="tool-badge">📶 Browser + network info</span>
-      <h2>See quick browser, screen, language, timezone, and connection details</h2>
-      <p class="muted">Useful for simple troubleshooting or when you want a quick snapshot to paste into a support message.</p>
-      <div class="cta-row">
-        <button class="btn" type="button" id="browser-info-button">Check device info</button>
-        <button class="btn secondary" type="button" id="browser-info-copy">Copy summary</button>
-        <span class="tool-status" id="browser-info-copy-status" aria-live="polite">Summary copy appears after checking.</span>
-      </div>
-      <div class="tool-mini-list" id="browser-info-results" aria-live="polite">
-        <strong>Nothing loaded yet.</strong>
-        <p class="muted">Click the button to read this browser's current snapshot.</p>
+      <div id="browser-info-card" class="browser-info-card">
+        <span class="tool-badge">📶 Browser + network info</span>
+        <h2>Browser &amp; Network snapshot</h2>
+        <p class="muted">Get instant details about your browser, display, language, time zone, and connection. Nothing leaves your device — it all runs locally.</p>
+        <div class="cta-row browser-info-actions">
+          <button class="btn" type="button" id="browser-info-button">Read device info</button>
+          <button class="btn secondary" type="button" id="browser-info-copy" disabled aria-disabled="true" data-legacy-copy-message="Browser summary copied.">Copy summary</button>
+          <span class="tool-status" id="browser-info-copy-status" role="status" aria-live="polite">No snapshot yet.</span>
+        </div>
+        <div class="tool-mini-list browser-info-results" id="browser-info-results" aria-live="polite" aria-busy="false">
+          <strong>No snapshot yet.</strong>
+          <p class="muted">No snapshot yet. Click “Read device info” to load your details.</p>
+        </div>
       </div>
       <div class="active-tool-card-footer">
-        <div class="tool-return-card active-tool-after-panel"><strong>Why you’ll come back:</strong> <span class="muted">Come back when support asks for browser, screen, timezone, or connection details.</span></div>
-        <p class="muted active-tool-privacy-note"><strong>Privacy note:</strong> Most TWE Toolbox helpers run in your browser. Tools that need a live check, such as IP lookup, word unscrambling, or browser diagnostics, only contact the site service when you click the tool button.</p>
+        <div class="tool-return-card active-tool-after-panel"><strong>Why you’ll come back:</strong> <span class="muted">Come back when support asks for browser, screen, timezone, or connection details. Re-use this tool whenever support asks for your environment details.</span></div>
+        <p class="muted active-tool-privacy-note"><strong>Privacy note:</strong> This tool runs entirely in your browser. No data is stored or sent anywhere. Most TWE Toolbox helpers only contact the site service when you click the tool button; this browser snapshot stays local and only the values shown below are included when you choose to copy the summary.</p>
       </div>
     </section>
 
@@ -3774,32 +3839,97 @@ const chooserUpdateCount = () => {
 
   const browserInfoResults = document.getElementById('browser-info-results');
   const browserInfoCopyStatus = document.getElementById('browser-info-copy-status');
-  const readBrowserInfo = () => {
-    if (!browserInfoResults) return '';
+  const browserInfoButton = document.getElementById('browser-info-button');
+  const browserInfoCopy = document.getElementById('browser-info-copy');
+  const escapeBrowserInfoValue = (value) => String(value ?? 'Unsupported')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+  const browserInfoUnsupported = (value) => (value === undefined || value === null || value === '' ? 'Unsupported' : value);
+  const browserInfoGroups = () => {
     const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-    const rows = [
-      ['User agent', navigator.userAgent || 'Unavailable'],
-      ['Language', navigator.language || 'Unavailable'],
-      ['Timezone', Intl.DateTimeFormat().resolvedOptions().timeZone || 'Unavailable'],
-      ['Screen', `${window.screen?.width || '?'} × ${window.screen?.height || '?'}`],
-      ['Viewport', `${window.innerWidth} × ${window.innerHeight}`],
-      ['Cookies enabled', navigator.cookieEnabled ? 'Yes' : 'No'],
-      ['Online', navigator.onLine ? 'Yes' : 'No'],
-      ['Connection type', connection?.effectiveType || 'Unavailable'],
-      ['Downlink', connection?.downlink ? `${connection.downlink} Mb/s` : 'Unavailable'],
-      ['Device memory', navigator.deviceMemory ? `${navigator.deviceMemory} GB` : 'Unavailable'],
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Unsupported';
+    return [
+      { label: 'Browser', icon: '🌐', rows: [
+        ['User agent', navigator.userAgent || 'Unsupported'],
+      ] },
+      { label: 'Display', icon: '🖥️', rows: [
+        ['Screen size', `${window.screen?.width || '?'} × ${window.screen?.height || '?'}`],
+        ['Viewport', `${window.innerWidth} × ${window.innerHeight}`],
+        ['Pixel ratio', window.devicePixelRatio != null ? Number(window.devicePixelRatio).toFixed(2) : 'Unsupported'],
+      ] },
+      { label: 'Localization', icon: '🌍', rows: [
+        ['Language', navigator.language || 'Unsupported'],
+        ['Time zone', timezone],
+      ] },
+      { label: 'Connection', icon: '📶', rows: [
+        ['Online status', navigator.onLine ? 'Yes' : 'No'],
+        ['Connection type', browserInfoUnsupported(connection?.effectiveType || connection?.type)],
+        ['Downlink', connection?.downlink != null ? `${Number(connection.downlink).toFixed(2)} Mbps` : 'Unsupported'],
+      ] },
+      { label: 'Device', icon: '💾', rows: [
+        ['Cookies enabled', navigator.cookieEnabled ? 'Yes' : 'No'],
+        ['Approximate memory', navigator.deviceMemory != null ? `${navigator.deviceMemory} GB (approx.)` : 'Unsupported'],
+      ] },
     ];
-    browserInfoResults.innerHTML = `<strong>Current browser snapshot</strong><ul>${rows.map(([label, value]) => `<li><strong>${label}:</strong> ${value}</li>`).join('')}</ul>`;
-    return rows.map(([label, value]) => `${label}: ${value}`).join('\n');
+  };
+  const browserInfoSummaryFromGroups = (groups) => groups
+    .flatMap(group => [`${group.label}:`, ...group.rows.map(([label, value]) => `${label}: ${value}`)])
+    .join('\n');
+  const renderBrowserInfoGroups = (groups) => {
+    if (!browserInfoResults) return;
+    browserInfoResults.setAttribute('aria-busy', 'false');
+    browserInfoResults.innerHTML = `
+      <strong>Your browser snapshot is ready.</strong>
+      <div class="browser-info-group-grid">
+        ${groups.map(group => `
+          <section class="browser-info-group" aria-label="${escapeBrowserInfoValue(group.label)}">
+            <h3><span aria-hidden="true">${group.icon}</span> ${escapeBrowserInfoValue(group.label)}</h3>
+            <dl>
+              ${group.rows.map(([label, value]) => `
+                <div class="browser-info-row${value === 'Unsupported' ? ' is-unsupported' : ''}">
+                  <dt>${escapeBrowserInfoValue(label)}</dt>
+                  <dd>${escapeBrowserInfoValue(value)}</dd>
+                </div>
+              `).join('')}
+            </dl>
+          </section>
+        `).join('')}
+      </div>`;
   };
   let lastBrowserInfoSummary = '';
   if (browserInfoResults) {
-    document.getElementById('browser-info-button')?.addEventListener('click', () => {
-      lastBrowserInfoSummary = readBrowserInfo();
+    const setBrowserInfoCopyEnabled = (enabled) => {
+      if (!browserInfoCopy) return;
+      browserInfoCopy.disabled = !enabled;
+      browserInfoCopy.setAttribute('aria-disabled', enabled ? 'false' : 'true');
+    };
+    browserInfoButton?.addEventListener('click', () => {
+      if (browserInfoCopyStatus) browserInfoCopyStatus.textContent = 'Reading device details…';
+      browserInfoResults.setAttribute('aria-busy', 'true');
+      browserInfoResults.innerHTML = '<strong>Reading device details…</strong><p class="muted">Checking browser-provided values locally on this device.</p>';
+      setBrowserInfoCopyEnabled(false);
+      const groups = browserInfoGroups();
+      lastBrowserInfoSummary = browserInfoSummaryFromGroups(groups);
+      renderBrowserInfoGroups(groups);
+      setBrowserInfoCopyEnabled(true);
+      if (browserInfoCopyStatus) browserInfoCopyStatus.textContent = 'Your browser snapshot is ready.';
     });
-    document.getElementById('browser-info-copy')?.addEventListener('click', async () => {
-      if (!lastBrowserInfoSummary) lastBrowserInfoSummary = readBrowserInfo();
-      await copyWithFeedback(lastBrowserInfoSummary, browserInfoCopyStatus, 'Browser summary copied.');
+    browserInfoCopy?.addEventListener('click', async () => {
+      if (!lastBrowserInfoSummary) {
+        const groups = browserInfoGroups();
+        lastBrowserInfoSummary = browserInfoSummaryFromGroups(groups);
+        renderBrowserInfoGroups(groups);
+        setBrowserInfoCopyEnabled(true);
+      }
+      const copied = await copyWithFeedback(lastBrowserInfoSummary, browserInfoCopyStatus, 'Summary copied. Paste it into your support ticket.');
+      if (copied && browserInfoCopy) {
+        const original = browserInfoCopy.textContent;
+        browserInfoCopy.textContent = 'Copied!';
+        window.setTimeout(() => { browserInfoCopy.textContent = original || 'Copy summary'; }, 2000);
+      }
     });
   }
 
