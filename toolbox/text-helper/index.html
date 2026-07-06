@@ -3322,26 +3322,55 @@
   };
 
   const ipButton = document.getElementById('ip-check-button');
+  const ipCard = document.getElementById('ip-result-card');
+  const ipHeading = document.getElementById('ip-result-heading');
   const ipValue = document.getElementById('ip-result-value');
+  const ipAddressRow = document.getElementById('ip-address-row');
   const ipNote = document.getElementById('ip-result-note');
+  const ipActionStatus = document.getElementById('ip-action-status');
+  const ipCopyButton = document.getElementById('ip-copy-button');
+  const ipCopyStatus = document.getElementById('ip-copy-status');
+  let lastDetectedIp = '';
+  const setIpState = (state, heading, note, value = '') => {
+    if (ipCard) ipCard.dataset.state = state;
+    if (ipHeading) ipHeading.textContent = heading;
+    if (ipNote) ipNote.textContent = note;
+    lastDetectedIp = value || '';
+    if (ipValue) ipValue.textContent = value || '—';
+    if (ipAddressRow) ipAddressRow.hidden = !value;
+    if (ipCopyButton) ipCopyButton.disabled = !value;
+  };
   if (ipButton && ipValue && ipNote) {
     ipButton.addEventListener('click', async () => {
-      ipValue.textContent = 'Checking…';
-      ipNote.textContent = 'Looking up the current connection IP.';
+      ipButton.disabled = true;
+      ipButton.textContent = 'Checking…';
+      if (ipActionStatus) ipActionStatus.textContent = 'Checking your public IP address…';
+      if (ipCopyStatus) ipCopyStatus.textContent = 'Copy is available after a successful check.';
+      setIpState('loading', 'Checking…', 'Looking up the public IP address this request presents.');
       try {
         const response = await fetch(toolboxApiUrl('/api/toolbox/ip'), { headers: { 'Accept': 'application/json' } });
         const payload = await readJsonResponse(response, 'This toolbox copy cannot reach the live IP service right now.');
         if (payload.status === 'ok' && payload.ip) {
-          ipValue.textContent = payload.ip;
-          ipNote.textContent = payload.source ? `Source: ${payload.source}` : (payload.note || 'Detected from the current request.');
+          const sourceNote = payload.source ? ` Source: ${payload.source}.` : '';
+          setIpState('success', 'Your IP address', `This value is plain text for easy copying. It shows what a website may see, not your router’s private address.${sourceNote}`, payload.ip);
+          ipButton.textContent = ipButton.dataset.successLabel || 'Check again';
+          if (ipActionStatus) ipActionStatus.textContent = 'Public IP check complete.';
+          ipCard?.focus({ preventScroll: true });
         } else {
-          ipValue.textContent = 'Unavailable';
-          ipNote.textContent = payload.message || 'Could not detect the IP right now.';
+          setIpState('error', 'We couldn’t load your information.', payload.message || 'Please check your internet connection and try again.');
+          ipButton.textContent = 'Try again';
+          if (ipActionStatus) ipActionStatus.textContent = 'IP check was not available. Try again when you are ready.';
         }
       } catch (error) {
-        ipValue.textContent = 'Unavailable';
-        ipNote.textContent = error?.message || 'Could not detect the IP right now.';
+        setIpState('error', 'We couldn’t load your information.', error?.message || 'Please check your internet connection and try again.');
+        ipButton.textContent = 'Try again';
+        if (ipActionStatus) ipActionStatus.textContent = 'IP check was not available. Try again when you are ready.';
+      } finally {
+        ipButton.disabled = false;
       }
+    });
+    ipCopyButton?.addEventListener('click', () => {
+      copyWithFeedback(lastDetectedIp, ipCopyStatus, 'Copied');
     });
   }
 
