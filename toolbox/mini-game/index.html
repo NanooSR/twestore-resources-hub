@@ -40,7 +40,7 @@
       }
     </script>
     
-    <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebPage", "name": "Reaction timer", "url": "https://thewatchersedge.ca/toolbox/mini-game/", "description": "Test your reaction time in a quick browser game, save your best local score, and take a short focus break.", "inLanguage": "en-CA", "isPartOf": {"@type": "WebSite", "name": "TheWatchersEdge.ca", "url": "https://thewatchersedge.ca/"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewatchersedge.ca/"}, {"@type": "ListItem", "position": 2, "name": "TWE Toolbox", "item": "https://thewatchersedge.ca/toolbox/"}, {"@type": "ListItem", "position": 3, "name": "Reaction timer", "item": "https://thewatchersedge.ca/toolbox/mini-game/"}]}, {"@context": "https://schema.org", "@type": "WebApplication", "name": "Reaction timer", "applicationCategory": "Focus + flow", "operatingSystem": "Any", "browserRequirements": "Requires a modern web browser with JavaScript enabled.", "description": "Take a quick operator reset that feels replayable, premium, privacy-safe, keyboard-friendly, and touch-ready.", "url": "https://thewatchersedge.ca/toolbox/mini-game/", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CAD"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is there a mini game inside TWE Toolbox?", "acceptedAnswer": {"@type": "Answer", "text": "It gives people a tiny reset option between practical tasks without leaving the broader toolbox experience entirely."}}, {"@type": "Question", "name": "What game is included right now?", "acceptedAnswer": {"@type": "Answer", "text": "The current mini game is a premium 3-round reaction sprint: wait for the signal lights, tap on green, and compare your single-round and average scores."}}, {"@type": "Question", "name": "Does the reaction timer save a best score?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The best single reaction and best 3-round average are kept locally in this browser so the tool can feel worth revisiting without an account."}}]}]</script>
+    <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebPage", "name": "Reaction timer", "url": "https://thewatchersedge.ca/toolbox/mini-game/", "description": "Test your reaction time in a quick browser game, save your best local score, and take a short focus break.", "inLanguage": "en-CA", "isPartOf": {"@type": "WebSite", "name": "TheWatchersEdge.ca", "url": "https://thewatchersedge.ca/"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewatchersedge.ca/"}, {"@type": "ListItem", "position": 2, "name": "TWE Toolbox", "item": "https://thewatchersedge.ca/toolbox/"}, {"@type": "ListItem", "position": 3, "name": "Reaction timer", "item": "https://thewatchersedge.ca/toolbox/mini-game/"}]}, {"@context": "https://schema.org", "@type": "WebApplication", "name": "Reaction timer", "applicationCategory": "Focus + flow", "operatingSystem": "Any", "browserRequirements": "Requires a modern web browser with JavaScript enabled.", "description": "Take a quick operator reset that feels replayable with multiple levels, local score goals, privacy-safe storage, keyboard support, and touch-ready controls.", "url": "https://thewatchersedge.ca/toolbox/mini-game/", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CAD"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is there a mini game inside TWE Toolbox?", "acceptedAnswer": {"@type": "Answer", "text": "It gives people a tiny reset option between practical tasks without leaving the broader toolbox experience entirely."}}, {"@type": "Question", "name": "What game is included right now?", "acceptedAnswer": {"@type": "Answer", "text": "The current mini game is a level-up reaction challenge with Rookie, Standard, Pro, and Endurance modes, local bests, and no account required."}}, {"@type": "Question", "name": "Does the reaction timer save a best score?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The best single reaction plus best level averages are kept locally in this browser so the tool can feel worth revisiting without an account."}}]}]</script>
 
     <title>Reaction Timer | Free Reflex Test | TWE Toolbox</title>
     
@@ -3311,7 +3311,7 @@
               <span class="active-tool-proof">TWE branded for premium 3-round reflex sprint</span>
             </div>
             <h1>Reaction timer</h1>
-            <p class="muted">Take a quick operator reset that feels replayable, premium, privacy-safe, keyboard-friendly, and touch-ready.</p>
+            <p class="muted">Take a quick operator reset that feels replayable with multiple levels, local score goals, privacy-safe storage, keyboard support, and touch-ready controls.</p>
           </div>
         </div>
         <div class="cta-row active-tool-card-nav">
@@ -3320,17 +3320,29 @@
         </div>
       </div>
 
-      <span class="tool-badge">⚡ Reaction timer · 3-round sprint</span>
-      <h2>Test your reaction speed with a quick 3-round sprint</h2>
-      <p class="muted">Start the sprint, wait for the signal to turn green, then tap or press as quickly as you can. Scores stay on your device.</p>
+      <span class="tool-badge">⚡ Reaction timer · level challenge</span>
+      <h2>Level-up reaction challenge</h2>
+      <p class="muted">Pick a level, wait for the signal to turn green, then tap or press as quickly as you can. Scores stay on your device.</p>
+      <div class="tool-inline-grid two">
+        <label class="tool-status" for="reaction-mode"><strong>Game level</strong></label>
+        <select id="reaction-mode" aria-describedby="reaction-level-summary reaction-score-guide">
+          <option value="rookie">Rookie — 3 relaxed rounds</option>
+          <option value="standard" selected>Standard — 3 balanced rounds</option>
+          <option value="pro">Pro — 5 faster rounds</option>
+          <option value="endurance">Endurance — 7 consistency rounds</option>
+        </select>
+      </div>
+      <p class="muted" id="reaction-level-summary">Standard mode: 3 rounds with balanced delays and a 2-second miss window.</p>
       <div class="tool-stat-grid" aria-label="Reaction timer scoreboard">
         <div class="tool-stat"><strong id="reaction-last">—</strong><br><span class="muted">last reaction</span></div>
-        <div class="tool-stat"><strong id="reaction-best">—</strong><br><span class="muted">best single</span></div>
+        <div class="tool-stat"><strong id="reaction-best">—</strong><br><span class="muted">best single overall</span></div>
+        <div class="tool-stat"><strong id="reaction-best-mode">—</strong><br><span class="muted">best for this level</span></div>
         <div class="tool-stat"><strong id="reaction-attempts">0</strong><br><span class="muted">attempts today</span></div>
-        <div class="tool-stat"><strong id="reaction-round">1 / 3</strong><br><span class="muted">sprint round</span></div>
+        <div class="tool-stat"><strong id="reaction-round">1 / 3</strong><br><span class="muted">level round</span></div>
+        <div class="tool-stat"><strong id="reaction-streak">0</strong><br><span class="muted">clean streak</span></div>
         <div class="tool-stat"><strong id="reaction-average">—</strong><br><span class="muted">current average</span></div>
         <div class="tool-stat"><strong id="reaction-grade">Ready</strong><br><span class="muted">score band</span></div>
-        <div class="tool-stat"><strong id="reaction-best-average">—</strong><br><span class="muted">best 3-round avg</span></div>
+        <div class="tool-stat"><strong id="reaction-best-average">—</strong><br><span class="muted">best level avg</span></div>
       </div>
       <div class="tool-reaction-arena">
         <button class="tool-reaction-target" type="button" id="reaction-target" aria-live="polite" aria-keyshortcuts="Space Enter">
@@ -3367,11 +3379,11 @@
       <h2>How to use this tool</h2>
       <ol class="tool-instruction-list">
         
+        <li>Choose Rookie, Standard, Pro, or Endurance.</li>
+        
         <li>Press start and wait for the signal lights to finish.</li>
         
-        <li>Tap the target or press Space/Enter as soon as it says go.</li>
-        
-        <li>Complete three rounds to set a local average and try to beat it later.</li>
+        <li>Tap the target or press Space/Enter on green, then finish the level to save a local average.</li>
         
       </ol>
     </article>
@@ -3380,9 +3392,9 @@
       <h2>Quick ways people use Reaction timer</h2>
       <div class="tool-mini-list">
         
-        <p class="muted">• Take a one-minute operator reset between tasks with a 3-round reaction sprint.</p>
+        <p class="muted">• Take a one-minute operator reset with a richer level-up reaction challenge.</p>
         
-        <p class="muted">• Try to beat your best local single time and best 3-round average without creating an account.</p>
+        <p class="muted">• Try Rookie, Standard, Pro, or Endurance and beat your best local single time or level average without creating an account.</p>
         
       </div>
     </article>
@@ -3393,9 +3405,9 @@
         
         <p><strong>Why is there a mini game inside TWE Toolbox?</strong><br><span class="muted">It gives people a tiny reset option between practical tasks without leaving the broader toolbox experience entirely.</span></p>
         
-        <p><strong>What game is included right now?</strong><br><span class="muted">The current mini game is a premium 3-round reaction sprint: wait for the signal lights, tap on green, and compare your single-round and average scores.</span></p>
+        <p><strong>What game is included right now?</strong><br><span class="muted">The current mini game is a level-up reaction challenge with Rookie, Standard, Pro, and Endurance modes, local bests, and no account required.</span></p>
         
-        <p><strong>Does the reaction timer save a best score?</strong><br><span class="muted">Yes. The best single reaction and best 3-round average are kept locally in this browser so the tool can feel worth revisiting without an account.</span></p>
+        <p><strong>Does the reaction timer save a best score?</strong><br><span class="muted">Yes. The best single reaction plus best level averages are kept locally in this browser so the tool can feel worth revisiting without an account.</span></p>
         
       </div>
     </article>
@@ -4206,32 +4218,52 @@
   const reactionStatus = document.getElementById('reaction-status');
   const reactionLast = document.getElementById('reaction-last');
   const reactionBest = document.getElementById('reaction-best');
+  const reactionBestMode = document.getElementById('reaction-best-mode');
   const reactionAttempts = document.getElementById('reaction-attempts');
   const reactionRound = document.getElementById('reaction-round');
+  const reactionStreakEl = document.getElementById('reaction-streak');
   const reactionAverage = document.getElementById('reaction-average');
   const reactionGrade = document.getElementById('reaction-grade');
   const reactionBestAverage = document.getElementById('reaction-best-average');
   const reactionSound = document.getElementById('reaction-sound');
   const reactionVibration = document.getElementById('reaction-vibration');
+  const reactionMode = document.getElementById('reaction-mode');
+  const reactionLevelSummary = document.getElementById('reaction-level-summary');
   const reactionLights = Array.from(document.querySelectorAll('[data-reaction-light]'));
-  const reactionMissThresholdMs = 2000;
+  const reactionModeConfig = {
+    rookie: { label: 'Rookie', rounds: 3, minDelay: 1400, delayRange: 3000, missThresholdMs: 2600, bandShift: 40, summary: 'Rookie mode: 3 relaxed rounds with a forgiving 2.6-second miss window.' },
+    standard: { label: 'Standard', rounds: 3, minDelay: 1200, delayRange: 2600, missThresholdMs: 2000, bandShift: 0, summary: 'Standard mode: 3 rounds with balanced delays and a 2-second miss window.' },
+    pro: { label: 'Pro', rounds: 5, minDelay: 850, delayRange: 2100, missThresholdMs: 1600, bandShift: -25, summary: 'Pro mode: 5 quicker rounds with tighter timing and a 1.6-second miss window.' },
+    endurance: { label: 'Endurance', rounds: 7, minDelay: 1000, delayRange: 2400, missThresholdMs: 1900, bandShift: 10, summary: 'Endurance mode: 7 rounds focused on consistency and clean streaks.' }
+  };
   const reactionStorageKey = 'tweReactionBestMs';
   const reactionAverageStorageKey = 'tweReactionBestAverageMs';
-  const reactionSprintRounds = 3;
+  const reactionModeBestStorageKey = 'tweReactionBestByMode';
+  const reactionModeAverageStorageKey = 'tweReactionBestAverageByMode';
   let reactionTimer = null;
   let reactionLightTimer = null;
   let reactionReadyAt = 0;
   let reactionState = 'idle';
   let reactionAttemptCount = 0;
   let reactionSprintResults = [];
+  let reactionStreak = 0;
+  let reactionCurrentMode = reactionMode?.value || 'standard';
+  const readReactionMap = (key) => {
+    try { return JSON.parse(window.localStorage?.getItem(key) || '{}') || {}; }
+    catch (_) { return {}; }
+  };
+  const writeReactionMap = (key, value) => window.localStorage?.setItem(key, JSON.stringify(value));
   const readReactionBest = () => Number(window.localStorage?.getItem(reactionStorageKey) || 0);
   const readReactionBestAverage = () => Number(window.localStorage?.getItem(reactionAverageStorageKey) || 0);
+  const currentReactionConfig = () => reactionModeConfig[reactionCurrentMode] || reactionModeConfig.standard;
   const formatReactionMs = (value) => value ? `${Math.round(value)} ms` : '—';
   const reactionScoreBand = (value) => {
+    const cfg = currentReactionConfig();
+    const adjusted = Number(value || 0) + cfg.bandShift;
     if (!value) return 'Ready';
-    if (value < 200) return 'Elite';
-    if (value < 240) return 'Sharp';
-    if (value < 300) return 'Solid';
+    if (adjusted < 200) return 'Elite';
+    if (adjusted < 240) return 'Sharp';
+    if (adjusted < 300) return 'Solid';
     return 'Reset';
   };
   const sprintAverage = () => {
@@ -4263,16 +4295,25 @@
     reactionTimer = null;
     reactionLightTimer = null;
   };
+  const renderReactionMode = () => {
+    const cfg = currentReactionConfig();
+    const modeBest = readReactionMap(reactionModeBestStorageKey)[reactionCurrentMode] || 0;
+    const modeAvg = readReactionMap(reactionModeAverageStorageKey)[reactionCurrentMode] || 0;
+    if (reactionLevelSummary) reactionLevelSummary.textContent = cfg.summary;
+    if (reactionBestMode) reactionBestMode.textContent = formatReactionMs(modeBest);
+    if (reactionBestAverage) reactionBestAverage.textContent = formatReactionMs(modeAvg || readReactionBestAverage());
+  };
   const renderReactionBest = () => {
     const best = readReactionBest();
-    const bestAvg = readReactionBestAverage();
     if (reactionBest) reactionBest.textContent = formatReactionMs(best);
-    if (reactionBestAverage) reactionBestAverage.textContent = formatReactionMs(bestAvg);
+    renderReactionMode();
   };
   const renderReactionSprint = () => {
-    const nextRound = Math.min(reactionSprintResults.length + 1, reactionSprintRounds);
+    const cfg = currentReactionConfig();
+    const nextRound = Math.min(reactionSprintResults.length + 1, cfg.rounds);
     const average = sprintAverage();
-    if (reactionRound) reactionRound.textContent = `${nextRound} / ${reactionSprintRounds}`;
+    if (reactionRound) reactionRound.textContent = `${nextRound} / ${cfg.rounds}`;
+    if (reactionStreakEl) reactionStreakEl.textContent = String(reactionStreak);
     if (reactionAverage) reactionAverage.textContent = formatReactionMs(average);
     if (reactionGrade) reactionGrade.textContent = reactionScoreBand(average || readReactionBest());
   };
@@ -4284,20 +4325,34 @@
     reactionTarget.classList.toggle('is-ready', state === 'ready');
     reactionTarget.classList.toggle('is-too-soon', state === 'too-soon');
   };
+  const resetReactionSprint = (message = '') => {
+    clearReactionTimers();
+    reactionSprintResults = [];
+    reactionStreak = 0;
+    reactionState = 'idle';
+    reactionReadyAt = 0;
+    if (reactionLast) reactionLast.textContent = '—';
+    if (reactionStatus && message) reactionStatus.textContent = message;
+    setReactionLights(0);
+    renderReactionBest();
+    renderReactionSprint();
+    setReactionTarget('Press Start, then wait for green.', 'idle');
+  };
   const startReactionRound = () => {
     if (!reactionTarget || !reactionStatus) return;
+    const cfg = currentReactionConfig();
     clearReactionTimers();
-    if (reactionSprintResults.length >= reactionSprintRounds) reactionSprintResults = [];
+    if (reactionSprintResults.length >= cfg.rounds) reactionSprintResults = [];
     reactionState = 'waiting';
     reactionReadyAt = 0;
     setReactionLights(0);
     renderReactionSprint();
     const roundNumber = reactionSprintResults.length + 1;
-    reactionStatus.textContent = `Round ${roundNumber} of ${reactionSprintRounds}: wait for all lights, then tap on green.`;
-    setReactionTarget('Signal building… wait for green.', 'waiting');
-    const delay = 1200 + Math.floor(Math.random() * 2600);
+    reactionStatus.textContent = `${cfg.label} round ${roundNumber} of ${cfg.rounds}: wait for all lights, then tap on green.`;
+    setReactionTarget(`${cfg.label} signal building… wait for green.`, 'waiting');
+    const delay = cfg.minDelay + Math.floor(Math.random() * cfg.delayRange);
     let lightStep = 0;
-    const lightEvery = Math.max(160, Math.floor(delay / reactionLights.length));
+    const lightEvery = Math.max(120, Math.floor(delay / reactionLights.length));
     reactionLightTimer = window.setInterval(() => {
       lightStep = Math.min(reactionLights.length, lightStep + 1);
       setReactionLights(lightStep);
@@ -4308,54 +4363,66 @@
       reactionState = 'ready';
       reactionReadyAt = performance.now();
       setReactionLights(reactionLights.length);
-      reactionStatus.textContent = 'Go! Tap the green target or press Space/Enter.';
+      reactionStatus.textContent = `${cfg.label}: Go! Tap the green target or press Space/Enter.`;
       setReactionTarget('GO — tap now!', 'ready');
       playReactionCue();
     }, delay);
   };
   const finishReactionRound = () => {
     if (!reactionStatus || !reactionLast || !reactionAttempts) return;
+    const cfg = currentReactionConfig();
     if (reactionState === 'waiting') {
       clearReactionTimers();
       reactionState = 'idle';
       reactionReadyAt = 0;
+      reactionStreak = 0;
       reactionStatus.textContent = 'Too soon — wait for the green signal before tapping.';
       setReactionLights(0);
       setReactionTarget('Too soon. Start this round again.', 'too-soon');
+      renderReactionSprint();
       return;
     }
     if (reactionState !== 'ready' || !reactionReadyAt) return;
     const elapsed = Math.max(0, Math.round(performance.now() - reactionReadyAt));
     clearReactionTimers();
     reactionAttemptCount += 1;
-    if (elapsed > reactionMissThresholdMs) {
+    if (elapsed > cfg.missThresholdMs) {
       reactionLast.textContent = 'Missed';
       reactionAttempts.textContent = String(reactionAttemptCount);
-      reactionStatus.textContent = 'Missed — too slow for this round. Try again when you are ready.';
+      reactionStreak = 0;
+      reactionStatus.textContent = 'Missed — too slow for this level. Try again when you are ready.';
       setReactionTarget('Missed. Start this round again.', 'idle');
       reactionState = 'idle';
       setReactionLights(0);
       renderReactionSprint();
       return;
     }
+    reactionStreak += 1;
     reactionSprintResults.push(elapsed);
     reactionLast.textContent = `${elapsed} ms`;
     reactionAttempts.textContent = String(reactionAttemptCount);
     const previousBest = readReactionBest();
     if (!previousBest || elapsed < previousBest) window.localStorage?.setItem(reactionStorageKey, String(elapsed));
+    const modeBests = readReactionMap(reactionModeBestStorageKey);
+    if (!modeBests[reactionCurrentMode] || elapsed < Number(modeBests[reactionCurrentMode])) {
+      modeBests[reactionCurrentMode] = elapsed;
+      writeReactionMap(reactionModeBestStorageKey, modeBests);
+    }
     const average = Math.round(sprintAverage());
-    const previousBestAverage = readReactionBestAverage();
-    const sprintDone = reactionSprintResults.length >= reactionSprintRounds;
+    const modeAverages = readReactionMap(reactionModeAverageStorageKey);
+    const sprintDone = reactionSprintResults.length >= cfg.rounds;
     if (sprintDone) {
-      if (!previousBestAverage || average < previousBestAverage) {
-        window.localStorage?.setItem(reactionAverageStorageKey, String(average));
-        reactionStatus.textContent = `Sprint complete: ${average} ms average (${reactionScoreBand(average)}). New best 3-round average.`;
+      if (!modeAverages[reactionCurrentMode] || average < Number(modeAverages[reactionCurrentMode])) {
+        modeAverages[reactionCurrentMode] = average;
+        writeReactionMap(reactionModeAverageStorageKey, modeAverages);
+        window.localStorage?.setItem(reactionAverageStorageKey, String(Math.min(readReactionBestAverage() || average, average)));
+        reactionStatus.textContent = `${cfg.label} complete: ${average} ms average (${reactionScoreBand(average)}). New best level average. Clean streak: ${reactionStreak}.`;
       } else {
-        reactionStatus.textContent = `Sprint complete: ${average} ms average (${reactionScoreBand(average)}). Best average stays ${previousBestAverage} ms.`;
+        reactionStatus.textContent = `${cfg.label} complete: ${average} ms average (${reactionScoreBand(average)}). Best ${cfg.label} average stays ${modeAverages[reactionCurrentMode]} ms.`;
       }
-      setReactionTarget('Sprint saved. Start a new 3-round sprint?', 'idle');
+      setReactionTarget(`${cfg.label} saved. Start this level again?`, 'idle');
     } else {
-      reactionStatus.textContent = `${elapsed} ms logged. Round ${reactionSprintResults.length + 1} is ready when you are.`;
+      reactionStatus.textContent = `${elapsed} ms logged. Streak ${reactionStreak}. Round ${reactionSprintResults.length + 1} is ready when you are.`;
       setReactionTarget('Round saved. Start next round?', 'idle');
     }
     reactionState = 'idle';
@@ -4373,18 +4440,25 @@
         finishReactionRound();
       }
     });
+    reactionMode?.addEventListener('change', () => {
+      reactionCurrentMode = reactionMode.value;
+      resetReactionSprint(`${currentReactionConfig().label} selected. Ready for a clean level run.`);
+    });
     reactionReset.addEventListener('click', () => {
-      if (!window.confirm('Reset your local reaction timer best single and best 3-round average?')) return;
+      if (!window.confirm('Reset your local reaction timer scores for all levels?')) return;
       clearReactionTimers();
       window.localStorage?.removeItem(reactionStorageKey);
       window.localStorage?.removeItem(reactionAverageStorageKey);
+      window.localStorage?.removeItem(reactionModeBestStorageKey);
+      window.localStorage?.removeItem(reactionModeAverageStorageKey);
       reactionAttemptCount = 0;
       reactionSprintResults = [];
+      reactionStreak = 0;
       reactionState = 'idle';
       reactionReadyAt = 0;
       if (reactionLast) reactionLast.textContent = '—';
       if (reactionAttempts) reactionAttempts.textContent = '0';
-      if (reactionStatus) reactionStatus.textContent = 'Local scores cleared. Ready for a clean three-round reflex sprint.';
+      if (reactionStatus) reactionStatus.textContent = 'Local scores cleared. Ready for a clean level-up reaction challenge.';
       setReactionLights(0);
       renderReactionBest();
       renderReactionSprint();
