@@ -2701,6 +2701,53 @@
     font-size: .9rem;
     font-weight: 800;
   }
+  .tool-example-chips,
+  .word-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tool-example-chip,
+  .word-chip {
+    border: 1px solid rgba(124, 58, 237, .22);
+    border-radius: 999px;
+    background: rgba(124, 58, 237, .10);
+    color: #3b206f;
+    font-weight: 800;
+    padding: 7px 11px;
+  }
+  .tool-example-chip {
+    cursor: pointer;
+  }
+  .tool-example-chip:focus-visible,
+  .word-chip:focus-visible {
+    outline: 3px solid rgba(124, 58, 237, .32);
+    outline-offset: 2px;
+  }
+  .word-group {
+    border-top: 1px solid rgba(45, 35, 88, .12);
+    padding-top: 12px;
+    margin-top: 12px;
+  }
+  .word-group:first-child {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .word-group h3 {
+    margin: 0 0 8px;
+    font-size: .98rem;
+    color: #2a175d;
+  }
+  .unscrambler-actions {
+    align-items: center;
+  }
+  .btn[aria-disabled="true"],
+  .btn:disabled,
+  .tool-example-chip:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+  }
   .tool-chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
   .tool-chip {
     display: inline-flex;

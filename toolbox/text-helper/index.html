@@ -2701,6 +2701,53 @@
     font-size: .9rem;
     font-weight: 800;
   }
+  .tool-example-chips,
+  .word-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tool-example-chip,
+  .word-chip {
+    border: 1px solid rgba(124, 58, 237, .22);
+    border-radius: 999px;
+    background: rgba(124, 58, 237, .10);
+    color: #3b206f;
+    font-weight: 800;
+    padding: 7px 11px;
+  }
+  .tool-example-chip {
+    cursor: pointer;
+  }
+  .tool-example-chip:focus-visible,
+  .word-chip:focus-visible {
+    outline: 3px solid rgba(124, 58, 237, .32);
+    outline-offset: 2px;
+  }
+  .word-group {
+    border-top: 1px solid rgba(45, 35, 88, .12);
+    padding-top: 12px;
+    margin-top: 12px;
+  }
+  .word-group:first-child {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .word-group h3 {
+    margin: 0 0 8px;
+    font-size: .98rem;
+    color: #2a175d;
+  }
+  .unscrambler-actions {
+    align-items: center;
+  }
+  .btn[aria-disabled="true"],
+  .btn:disabled,
+  .tool-example-chip:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+  }
   .tool-chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
   .tool-chip {
     display: inline-flex;
@@ -3287,7 +3334,11 @@
 <script src="/static/public_site/vendor/qrcode-1.5.4.bundle.js"></script>
 <script>
 (() => {
-  const toolboxApiUrl = (path) => (typeof window.tweApiUrl === 'function' ? window.tweApiUrl(path) : path);
+  const toolboxApiUrl = (path) => {
+    const localPreviewHosts = new Set(['127.0.0.1', 'localhost']);
+    if (localPreviewHosts.has(window.location.hostname)) return path;
+    return (typeof window.tweApiUrl === 'function' ? window.tweApiUrl(path) : path);
+  };
   const copyWithFeedback = async (value, statusEl, successMessage = 'Copied') => {
     const copiedText = String(value || '').trim();
     if (!copiedText) {
@@ -3378,18 +3429,80 @@
   const unscramblerLetters = document.getElementById('unscrambler-letters');
   const unscramblerStatus = document.getElementById('unscrambler-status');
   const unscramblerResults = document.getElementById('unscrambler-results');
+  const unscramblerSubmitButton = document.getElementById('unscrambler-submit-button');
   const unscramblerCopyButton = document.getElementById('unscrambler-copy-button');
   const unscramblerCopyStatus = document.getElementById('unscrambler-copy-status');
   let lastUnscramblerMatches = '';
+
+  const setUnscramblerCopyEnabled = (enabled) => {
+    if (!unscramblerCopyButton) return;
+    unscramblerCopyButton.disabled = !enabled;
+    unscramblerCopyButton.setAttribute('aria-disabled', enabled ? 'false' : 'true');
+  };
+  const groupUnscramblerWords = (words) => {
+    const unique = Array.from(new Set((Array.isArray(words) ? words : [])
+      .map((word) => String(word || '').trim().toLowerCase())
+      .filter(Boolean)));
+    const groups = unique.reduce((acc, word) => {
+      const length = word.length;
+      acc[length] = acc[length] || [];
+      acc[length].push(word);
+      return acc;
+    }, {});
+    return Object.entries(groups)
+      .map(([length, group]) => [Number(length), group.sort((a, b) => a.localeCompare(b))])
+      .sort((a, b) => b[0] - a[0]);
+  };
+  const renderUnscramblerGroups = (words, note = '') => {
+    const groups = groupUnscramblerWords(words);
+    if (!groups.length) {
+      if (unscramblerResults) unscramblerResults.innerHTML = '<strong>No common words were found.</strong><p class="muted">Try different letters.</p>';
+      return [];
+    }
+    const html = groups.map(([length, group]) => `
+      <section class="word-group">
+        <h3>${length}-letter words (${group.length})</h3>
+        <div class="word-chips">${group.map((word) => `<span class="word-chip" tabindex="0">${word}</span>`).join('')}</div>
+      </section>
+    `).join('');
+    if (unscramblerResults) {
+      unscramblerResults.innerHTML = `<strong>Words found</strong>${html}<p class="muted">${note || 'Results are grouped by word length so you can scan them faster.'}</p>`;
+    }
+    return groups.flatMap(([, group]) => group);
+  };
+  const updateUnscramblerSubmitState = () => {
+    const ready = ((unscramblerLetters?.value || '').trim().length >= 3);
+    if (unscramblerSubmitButton) {
+      unscramblerSubmitButton.disabled = !ready;
+      unscramblerSubmitButton.setAttribute('aria-disabled', ready ? 'false' : 'true');
+    }
+    if (!ready && unscramblerStatus) unscramblerStatus.textContent = 'Type at least 3 letters to search.';
+  };
+  updateUnscramblerSubmitState();
+  unscramblerLetters?.addEventListener('input', updateUnscramblerSubmitState);
+  document.querySelectorAll('[data-unscrambler-example]').forEach((button) => {
+    button.addEventListener('click', () => {
+      if (!unscramblerLetters || !unscramblerForm) return;
+      unscramblerLetters.value = button.getAttribute('data-unscrambler-example') || '';
+      updateUnscramblerSubmitState();
+      unscramblerForm.requestSubmit();
+    });
+  });
   unscramblerForm?.addEventListener('submit', async (event) => {
     event.preventDefault();
     const letters = (unscramblerLetters?.value || '').trim();
     if (letters.length < 3) {
-      unscramblerStatus.textContent = 'Enter at least 3 letters.';
+      if (unscramblerStatus) unscramblerStatus.textContent = 'Type at least 3 letters to search.';
       return;
     }
-    unscramblerStatus.textContent = 'Checking likely words…';
-    unscramblerResults.innerHTML = '<strong>Working…</strong><p class="muted">Looking for likely matches.</p>';
+    if (unscramblerStatus) unscramblerStatus.textContent = 'Searching for words…';
+    if (unscramblerCopyStatus) unscramblerCopyStatus.textContent = 'Copy words after a search.';
+    setUnscramblerCopyEnabled(false);
+    lastUnscramblerMatches = '';
+    if (unscramblerResults) {
+      unscramblerResults.setAttribute('aria-busy', 'true');
+      unscramblerResults.innerHTML = '<strong>Searching for words…</strong><p class="muted">Checking the curated English word list.</p>';
+    }
     try {
       const response = await fetch(toolboxApiUrl('/api/toolbox/unscramble'), {
         method: 'POST',
@@ -3400,21 +3513,33 @@
       const matches = Array.isArray(payload.matches)
         ? payload.matches
         : (Array.isArray(payload.words) ? payload.words : []);
-      if (payload.status !== 'ok' || !matches.length) {
-        unscramblerStatus.textContent = 'No clear matches found.';
-        unscramblerResults.innerHTML = '<strong>No likely matches</strong><p class="muted">Try a more common letter mix like listen or finder.</p>';
+      const uniqueMatches = renderUnscramblerGroups(matches, payload.note);
+      if (unscramblerResults) unscramblerResults.setAttribute('aria-busy', 'false');
+      if (payload.status !== 'ok' || !uniqueMatches.length) {
+        if (unscramblerStatus) unscramblerStatus.textContent = 'No common words were found. Try different letters.';
+        setUnscramblerCopyEnabled(false);
         return;
       }
-      lastUnscramblerMatches = matches.join(', ');
-      unscramblerStatus.textContent = `${matches.length} likely matches found.`;
-      if (unscramblerCopyStatus) unscramblerCopyStatus.textContent = 'Matches ready to copy.';
-      unscramblerResults.innerHTML = `<strong>${lastUnscramblerMatches}</strong><p class="muted">${payload.note || 'Cleaned to likely English matches.'}</p>`;
+      lastUnscramblerMatches = uniqueMatches.join(', ');
+      if (unscramblerStatus) unscramblerStatus.textContent = `Found ${uniqueMatches.length} words. You can copy them below.`;
+      if (unscramblerCopyStatus) unscramblerCopyStatus.textContent = 'Words ready to copy.';
+      setUnscramblerCopyEnabled(true);
     } catch (error) {
-      unscramblerStatus.textContent = 'Try again.';
-      unscramblerResults.innerHTML = `<strong>Could not check words right now.</strong><p class="muted">${error?.message || 'Please try again in a moment.'}</p>`;
+      if (unscramblerResults) {
+        unscramblerResults.setAttribute('aria-busy', 'false');
+        unscramblerResults.innerHTML = `<strong>Could not check words right now.</strong><p class="muted">${error?.message || 'Please try again in a moment.'}</p>`;
+      }
+      if (unscramblerStatus) unscramblerStatus.textContent = 'Sorry, something went wrong. Please try again later.';
+      setUnscramblerCopyEnabled(false);
     }
   });
-  unscramblerCopyButton?.addEventListener('click', () => copyWithFeedback(lastUnscramblerMatches, unscramblerCopyStatus, 'Unscrambler results copied.'));
+  unscramblerCopyButton?.addEventListener('click', () => {
+    if (!lastUnscramblerMatches) {
+      if (unscramblerCopyStatus) unscramblerCopyStatus.textContent = 'Find words first.';
+      return;
+    }
+    copyWithFeedback(lastUnscramblerMatches, unscramblerCopyStatus, 'Words copied to clipboard.');
+  });
 
   const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%^&*';
   const lengthInput = document.getElementById('password-length');
