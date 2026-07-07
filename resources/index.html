@@ -607,13 +607,6 @@
         padding: 40px;
         margin-bottom: 22px;
       }
-      .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0 0 auto 0;
-        height: 6px;
-        background: linear-gradient(90deg, var(--brand), var(--gold));
-      }
       .hero::after {
         content: "";
         position: absolute;
@@ -2889,24 +2882,6 @@
           linear-gradient(135deg, rgba(255,255,255,.98), rgba(235,251,252,.92) 48%, rgba(255,247,236,.96));
         box-shadow: var(--twe-premium-glow);
       }
-      .home-fable-hero::before,
-      .store-hero-panel::before {
-        content: "✦";
-        position: absolute;
-        top: 28px;
-        right: clamp(24px, 5vw, 72px);
-        width: 64px;
-        height: 64px;
-        display: grid;
-        place-items: center;
-        border-radius: 22px;
-        color: #fff;
-        font-size: 2rem;
-        background: linear-gradient(135deg, var(--twe-coral), var(--twe-gold), var(--twe-teal));
-        background-size: 220% 220%;
-        box-shadow: 0 18px 46px rgba(255,106,77,.32);
-        animation: tweFloatIcon 4.8s ease-in-out infinite, tweGradientDrift 8s ease infinite;
-      }
       .home-fable-hero::after,
       .store-hero-panel::after {
         content: "";
@@ -2994,22 +2969,6 @@
           radial-gradient(circle at 100% 0%, rgba(0,167,179,.10), transparent 34%);
         box-shadow: 0 16px 42px rgba(7,24,39,.09);
       }
-      .section.card::before,
-      .card::before,
-      .mini-card::before,
-      .affiliate-tile::before,
-      .product-card::before {
-        content: "";
-        position: absolute;
-        inset: 0 0 auto 0;
-        height: 4px;
-        border-radius: inherit;
-        background: linear-gradient(90deg, var(--twe-teal), var(--twe-gold), var(--twe-coral), var(--twe-violet));
-        background-size: 240% 100%;
-        animation: tweGradientDrift 11s ease infinite;
-        opacity: .92;
-        pointer-events: none;
-      }
       .section-head h2::before,
       .mini-card h3::before,
       .editorial-card h2::before,
@@ -3057,32 +3016,20 @@
           linear-gradient(135deg, #071827, #006f7a 55%, #241b53) !important;
         box-shadow: 0 30px 88px rgba(7,24,39,.24), 0 0 48px rgba(0,167,179,.12);
       }
-      #digital-kits.section.card.strong-card::before {
-        height: 5px;
-        background: linear-gradient(90deg, var(--twe-mint), var(--twe-gold), var(--twe-coral), var(--twe-violet));
-      }
+
       #digital-kits .mini-card {
         background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.08)) !important;
         backdrop-filter: blur(10px) saturate(1.2);
       }
       @media (prefers-reduced-motion: reduce) {
-        .home-fable-hero::before,
-        .store-hero-panel::before,
         .hero-kicker::before,
         .section-head h2::before,
         .mini-card h3::before,
         .stat-card strong::before,
         .btn,
-        button.btn,
-        .section.card::before,
-        .card::before,
-        .mini-card::before,
-        .affiliate-tile::before,
-        .product-card::before { animation: none !important; }
+        button.btn { animation: none !important; }
       }
       @media (max-width: 720px) {
-        .home-fable-hero::before,
-        .store-hero-panel::before { width: 46px; height: 46px; font-size: 1.35rem; top: 18px; right: 18px; }
         .section-head h2::before,
         .mini-card h3::before { width: 28px; height: 28px; border-radius: 10px; margin-right: 7px; }
       }
@@ -3295,27 +3242,6 @@
         color: #fff !important;
         box-shadow: 0 34px 80px rgba(10,35,55,.28), inset 0 1px 0 rgba(255,255,255,.32) !important;
       }
-      .panel.hero::before,
-      .home-fable-hero::before,
-      .store-hero-panel::before,
-      .hero::before,
-      .homepage-hero::before {
-        content: "✦";
-        position: absolute;
-        right: clamp(1rem, 5vw, 4.25rem);
-        top: clamp(1rem, 4vw, 3.5rem);
-        display: grid;
-        place-items: center;
-        width: clamp(4.75rem, 10vw, 8.5rem);
-        height: clamp(4.75rem, 10vw, 8.5rem);
-        border-radius: 30% 70% 62% 38% / 45% 38% 62% 55%;
-        color: #102233;
-        font-size: clamp(2rem, 5vw, 4rem);
-        background: radial-gradient(circle at 30% 20%, #fff 0%, #ffd166 42%, #f28c38 100%);
-        box-shadow: 0 26px 55px rgba(242,140,56,.38), inset 0 2px 0 rgba(255,255,255,.65);
-        opacity: .95;
-        animation: twe-v2-float 6s var(--twe-v2-ease) infinite;
-      }
       .panel.hero::after,
       .home-fable-hero::after,
       .store-hero-panel::after,
@@ -3374,24 +3300,6 @@
           linear-gradient(135deg, rgba(255,209,102,.7), rgba(20,124,160,.38), rgba(125,107,255,.32)) border-box !important;
         box-shadow: var(--twe-v2-shadow-card), inset 0 1px 0 rgba(255,255,255,.82) !important;
         transition: transform .24s var(--twe-v2-ease), box-shadow .24s var(--twe-v2-ease), border-color .24s var(--twe-v2-ease) !important;
-      }
-      .section.card::before,
-      .mini-card::before,
-      .affiliate-tile::before,
-      .product-card::before,
-      .store-sales-card::before,
-      .email-capture-panel::before,
-      article[class*="card"]::before {
-        content: "";
-        position: absolute;
-        left: 1.15rem;
-        top: 1rem;
-        width: 2.25rem;
-        height: .34rem;
-        border-radius: 999px;
-        background: linear-gradient(90deg, #f28c38, #ffd166, #147ca0);
-        box-shadow: 0 6px 18px rgba(242,140,56,.25);
-        opacity: .78;
       }
       .section.card:hover,
       .mini-card:hover,
@@ -3630,11 +3538,6 @@
         .affiliate-tile,
         .product-card,
         .store-sales-card { border-radius: 22px !important; }
-        .panel.hero::before,
-        .home-fable-hero::before,
-        .store-hero-panel::before,
-        .hero::before,
-        .homepage-hero::before { opacity: .34; right: .75rem; top: .75rem; }
         .btn,
         button,
         .button,
@@ -3842,7 +3745,7 @@
     <div class="mini-stack" style="gap:12px; margin-top:12px;">
       <article class="mini-card" style="padding:16px; border-radius:16px;"><h3>Focused main pages</h3><p class="muted">Store, Home, and Resources now point visitors to the right path instead of showing every affiliate card everywhere.</p></article>
       <article class="mini-card" style="padding:16px; border-radius:16px;"><h3>Dedicated Amazon browsing</h3><p class="muted">The Amazon Store page carries the searchable local catalog and compliance disclosure in one place.</p></article>
-      <article class="mini-card" style="padding:16px; border-radius:16px;"><h3>No unsupported claims</h3><p class="muted">No local prices, ratings, reviews, or “best reviewed” labels are shown unless official approved API access later supports them.</p></article>
+      <article class="mini-card" style="padding:16px; border-radius:16px;"><h3>No unsupported claims</h3><p class="muted">No local Amazon prices, ratings, reviews, ranking labels, discount claims, or availability claims are shown unless official approved API access later supports them.</p></article>
     </div>
   </article>
 </section>

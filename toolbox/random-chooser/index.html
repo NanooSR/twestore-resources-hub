@@ -609,13 +609,6 @@
         padding: 40px;
         margin-bottom: 22px;
       }
-      .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0 0 auto 0;
-        height: 6px;
-        background: linear-gradient(90deg, var(--brand), var(--gold));
-      }
       .hero::after {
         content: "";
         position: absolute;
@@ -2891,24 +2884,6 @@
           linear-gradient(135deg, rgba(255,255,255,.98), rgba(235,251,252,.92) 48%, rgba(255,247,236,.96));
         box-shadow: var(--twe-premium-glow);
       }
-      .home-fable-hero::before,
-      .store-hero-panel::before {
-        content: "✦";
-        position: absolute;
-        top: 28px;
-        right: clamp(24px, 5vw, 72px);
-        width: 64px;
-        height: 64px;
-        display: grid;
-        place-items: center;
-        border-radius: 22px;
-        color: #fff;
-        font-size: 2rem;
-        background: linear-gradient(135deg, var(--twe-coral), var(--twe-gold), var(--twe-teal));
-        background-size: 220% 220%;
-        box-shadow: 0 18px 46px rgba(255,106,77,.32);
-        animation: tweFloatIcon 4.8s ease-in-out infinite, tweGradientDrift 8s ease infinite;
-      }
       .home-fable-hero::after,
       .store-hero-panel::after {
         content: "";
@@ -2996,22 +2971,6 @@
           radial-gradient(circle at 100% 0%, rgba(0,167,179,.10), transparent 34%);
         box-shadow: 0 16px 42px rgba(7,24,39,.09);
       }
-      .section.card::before,
-      .card::before,
-      .mini-card::before,
-      .affiliate-tile::before,
-      .product-card::before {
-        content: "";
-        position: absolute;
-        inset: 0 0 auto 0;
-        height: 4px;
-        border-radius: inherit;
-        background: linear-gradient(90deg, var(--twe-teal), var(--twe-gold), var(--twe-coral), var(--twe-violet));
-        background-size: 240% 100%;
-        animation: tweGradientDrift 11s ease infinite;
-        opacity: .92;
-        pointer-events: none;
-      }
       .section-head h2::before,
       .mini-card h3::before,
       .editorial-card h2::before,
@@ -3059,32 +3018,20 @@
           linear-gradient(135deg, #071827, #006f7a 55%, #241b53) !important;
         box-shadow: 0 30px 88px rgba(7,24,39,.24), 0 0 48px rgba(0,167,179,.12);
       }
-      #digital-kits.section.card.strong-card::before {
-        height: 5px;
-        background: linear-gradient(90deg, var(--twe-mint), var(--twe-gold), var(--twe-coral), var(--twe-violet));
-      }
+
       #digital-kits .mini-card {
         background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.08)) !important;
         backdrop-filter: blur(10px) saturate(1.2);
       }
       @media (prefers-reduced-motion: reduce) {
-        .home-fable-hero::before,
-        .store-hero-panel::before,
         .hero-kicker::before,
         .section-head h2::before,
         .mini-card h3::before,
         .stat-card strong::before,
         .btn,
-        button.btn,
-        .section.card::before,
-        .card::before,
-        .mini-card::before,
-        .affiliate-tile::before,
-        .product-card::before { animation: none !important; }
+        button.btn { animation: none !important; }
       }
       @media (max-width: 720px) {
-        .home-fable-hero::before,
-        .store-hero-panel::before { width: 46px; height: 46px; font-size: 1.35rem; top: 18px; right: 18px; }
         .section-head h2::before,
         .mini-card h3::before { width: 28px; height: 28px; border-radius: 10px; margin-right: 7px; }
       }
@@ -3297,27 +3244,6 @@
         color: #fff !important;
         box-shadow: 0 34px 80px rgba(10,35,55,.28), inset 0 1px 0 rgba(255,255,255,.32) !important;
       }
-      .panel.hero::before,
-      .home-fable-hero::before,
-      .store-hero-panel::before,
-      .hero::before,
-      .homepage-hero::before {
-        content: "✦";
-        position: absolute;
-        right: clamp(1rem, 5vw, 4.25rem);
-        top: clamp(1rem, 4vw, 3.5rem);
-        display: grid;
-        place-items: center;
-        width: clamp(4.75rem, 10vw, 8.5rem);
-        height: clamp(4.75rem, 10vw, 8.5rem);
-        border-radius: 30% 70% 62% 38% / 45% 38% 62% 55%;
-        color: #102233;
-        font-size: clamp(2rem, 5vw, 4rem);
-        background: radial-gradient(circle at 30% 20%, #fff 0%, #ffd166 42%, #f28c38 100%);
-        box-shadow: 0 26px 55px rgba(242,140,56,.38), inset 0 2px 0 rgba(255,255,255,.65);
-        opacity: .95;
-        animation: twe-v2-float 6s var(--twe-v2-ease) infinite;
-      }
       .panel.hero::after,
       .home-fable-hero::after,
       .store-hero-panel::after,
@@ -3376,24 +3302,6 @@
           linear-gradient(135deg, rgba(255,209,102,.7), rgba(20,124,160,.38), rgba(125,107,255,.32)) border-box !important;
         box-shadow: var(--twe-v2-shadow-card), inset 0 1px 0 rgba(255,255,255,.82) !important;
         transition: transform .24s var(--twe-v2-ease), box-shadow .24s var(--twe-v2-ease), border-color .24s var(--twe-v2-ease) !important;
-      }
-      .section.card::before,
-      .mini-card::before,
-      .affiliate-tile::before,
-      .product-card::before,
-      .store-sales-card::before,
-      .email-capture-panel::before,
-      article[class*="card"]::before {
-        content: "";
-        position: absolute;
-        left: 1.15rem;
-        top: 1rem;
-        width: 2.25rem;
-        height: .34rem;
-        border-radius: 999px;
-        background: linear-gradient(90deg, #f28c38, #ffd166, #147ca0);
-        box-shadow: 0 6px 18px rgba(242,140,56,.25);
-        opacity: .78;
       }
       .section.card:hover,
       .mini-card:hover,
@@ -3632,11 +3540,6 @@
         .affiliate-tile,
         .product-card,
         .store-sales-card { border-radius: 22px !important; }
-        .panel.hero::before,
-        .home-fable-hero::before,
-        .store-hero-panel::before,
-        .hero::before,
-        .homepage-hero::before { opacity: .34; right: .75rem; top: .75rem; }
         .btn,
         button,
         .button,
@@ -3735,29 +3638,8 @@
     padding: 16px;
     border-radius: 18px;
     color: #122033;
-    background:
-      radial-gradient(circle at top right, color-mix(in srgb, var(--card-accent) 12%, white) 0%, rgba(255,255,255,0) 42%),
-      linear-gradient(135deg, rgba(255,255,255,.98), rgba(246,249,255,.92));
+    background: linear-gradient(135deg, rgba(255,255,255,.98), rgba(246,249,255,.92));
     box-shadow: 0 14px 34px rgba(15, 23, 42, 0.09), inset 0 1px 0 rgba(255,255,255,.9);
-  }
-  .tool-overview-card::before {
-    content: "";
-    position: absolute;
-    inset: 1px;
-    border-radius: 17px;
-    border: 1px solid rgba(255,255,255,.68);
-    pointer-events: none;
-  }
-  .tool-overview-card::after {
-    content: "";
-    position: absolute;
-    width: 92px;
-    height: 92px;
-    right: -28px;
-    top: -30px;
-    border-radius: 999px;
-    background: radial-gradient(circle, var(--card-glow) 0%, rgba(255,255,255,0) 72%);
-    pointer-events: none;
   }
   .tool-overview-card-link {
     color: inherit;
@@ -4233,38 +4115,11 @@
     border-radius: 32px;
     padding: clamp(20px, 4vw, 34px);
     color: var(--active-ink);
-    background:
-      radial-gradient(circle at 14% 12%, rgba(255,255,255,.74), transparent 28%),
-      radial-gradient(circle at 86% 18%, var(--active-glow), transparent 34%),
-      var(--active-surface, linear-gradient(135deg, #eef4ff, #ffffff));
+    background: var(--active-surface, linear-gradient(135deg, #eef4ff, #ffffff));
     box-shadow: 0 30px 80px rgba(15, 23, 42, .14), inset 0 1px 0 rgba(255,255,255,.9);
     transform: translateZ(0);
   }
-  .active-tool-top-card::before,
-  .active-tool-top-card::after {
-    content: "";
-    position: absolute;
-    pointer-events: none;
-    border-radius: 999px;
-  }
-  .active-tool-top-card::before {
-    width: 220px;
-    height: 220px;
-    right: -58px;
-    top: -54px;
-    background:
-      repeating-radial-gradient(circle, color-mix(in srgb, var(--active-accent) 26%, transparent) 0 2px, transparent 3px 18px),
-      radial-gradient(circle, rgba(255,255,255,.62), transparent 68%);
-    animation: tool-orbit 14s linear infinite;
-  }
-  .active-tool-top-card::after {
-    width: 180px;
-    height: 180px;
-    left: -54px;
-    bottom: -64px;
-    background: radial-gradient(circle, color-mix(in srgb, var(--active-accent-2) 24%, transparent), transparent 70%);
-    filter: blur(1px);
-  }
+
   .active-tool-top-card-grid { display: grid; gap: 20px; align-items: start; position: relative; z-index: 1; }
   .active-tool-card-copy { display: grid; gap: 12px; }
   .active-tool-card-copy h1 { font-size: clamp(1.75rem, 3.3vw, 3.05rem); letter-spacing: -.045em; margin: 0; }
@@ -4352,9 +4207,7 @@
   .toolbox-shell[data-active-tool-slug] .tool-panel,
   .toolbox-shell[data-active-tool-slug] .tool-rail-card {
     border-color: color-mix(in srgb, var(--active-accent) 24%, white);
-    background:
-      radial-gradient(circle at top right, color-mix(in srgb, var(--active-accent) 10%, transparent), transparent 38%),
-      linear-gradient(180deg, rgba(255,255,255,.97), rgba(250,252,255,.91));
+    background: linear-gradient(180deg, rgba(255,255,255,.97), rgba(250,252,255,.91));
     box-shadow: 0 22px 52px rgba(15,23,42,.10), inset 0 1px 0 rgba(255,255,255,.88);
   }
   .toolbox-shell[data-active-tool-slug] .tool-panel:first-child {
@@ -4413,7 +4266,6 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .active-tool-top-card::before,
     .active-tool-icon { animation: none; }
     .toolbox-shell[data-active-tool-slug] .btn:hover,
     .toolbox-shell[data-active-tool-slug] .btn:focus-visible { transform: none; }

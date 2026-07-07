@@ -609,13 +609,6 @@
         padding: 40px;
         margin-bottom: 22px;
       }
-      .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0 0 auto 0;
-        height: 6px;
-        background: linear-gradient(90deg, var(--brand), var(--gold));
-      }
       .hero::after {
         content: "";
         position: absolute;
@@ -2891,24 +2884,6 @@
           linear-gradient(135deg, rgba(255,255,255,.98), rgba(235,251,252,.92) 48%, rgba(255,247,236,.96));
         box-shadow: var(--twe-premium-glow);
       }
-      .home-fable-hero::before,
-      .store-hero-panel::before {
-        content: "✦";
-        position: absolute;
-        top: 28px;
-        right: clamp(24px, 5vw, 72px);
-        width: 64px;
-        height: 64px;
-        display: grid;
-        place-items: center;
-        border-radius: 22px;
-        color: #fff;
-        font-size: 2rem;
-        background: linear-gradient(135deg, var(--twe-coral), var(--twe-gold), var(--twe-teal));
-        background-size: 220% 220%;
-        box-shadow: 0 18px 46px rgba(255,106,77,.32);
-        animation: tweFloatIcon 4.8s ease-in-out infinite, tweGradientDrift 8s ease infinite;
-      }
       .home-fable-hero::after,
       .store-hero-panel::after {
         content: "";
@@ -2996,22 +2971,6 @@
           radial-gradient(circle at 100% 0%, rgba(0,167,179,.10), transparent 34%);
         box-shadow: 0 16px 42px rgba(7,24,39,.09);
       }
-      .section.card::before,
-      .card::before,
-      .mini-card::before,
-      .affiliate-tile::before,
-      .product-card::before {
-        content: "";
-        position: absolute;
-        inset: 0 0 auto 0;
-        height: 4px;
-        border-radius: inherit;
-        background: linear-gradient(90deg, var(--twe-teal), var(--twe-gold), var(--twe-coral), var(--twe-violet));
-        background-size: 240% 100%;
-        animation: tweGradientDrift 11s ease infinite;
-        opacity: .92;
-        pointer-events: none;
-      }
       .section-head h2::before,
       .mini-card h3::before,
       .editorial-card h2::before,
@@ -3059,32 +3018,20 @@
           linear-gradient(135deg, #071827, #006f7a 55%, #241b53) !important;
         box-shadow: 0 30px 88px rgba(7,24,39,.24), 0 0 48px rgba(0,167,179,.12);
       }
-      #digital-kits.section.card.strong-card::before {
-        height: 5px;
-        background: linear-gradient(90deg, var(--twe-mint), var(--twe-gold), var(--twe-coral), var(--twe-violet));
-      }
+
       #digital-kits .mini-card {
         background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.08)) !important;
         backdrop-filter: blur(10px) saturate(1.2);
       }
       @media (prefers-reduced-motion: reduce) {
-        .home-fable-hero::before,
-        .store-hero-panel::before,
         .hero-kicker::before,
         .section-head h2::before,
         .mini-card h3::before,
         .stat-card strong::before,
         .btn,
-        button.btn,
-        .section.card::before,
-        .card::before,
-        .mini-card::before,
-        .affiliate-tile::before,
-        .product-card::before { animation: none !important; }
+        button.btn { animation: none !important; }
       }
       @media (max-width: 720px) {
-        .home-fable-hero::before,
-        .store-hero-panel::before { width: 46px; height: 46px; font-size: 1.35rem; top: 18px; right: 18px; }
         .section-head h2::before,
         .mini-card h3::before { width: 28px; height: 28px; border-radius: 10px; margin-right: 7px; }
       }
@@ -3297,27 +3244,6 @@
         color: #fff !important;
         box-shadow: 0 34px 80px rgba(10,35,55,.28), inset 0 1px 0 rgba(255,255,255,.32) !important;
       }
-      .panel.hero::before,
-      .home-fable-hero::before,
-      .store-hero-panel::before,
-      .hero::before,
-      .homepage-hero::before {
-        content: "✦";
-        position: absolute;
-        right: clamp(1rem, 5vw, 4.25rem);
-        top: clamp(1rem, 4vw, 3.5rem);
-        display: grid;
-        place-items: center;
-        width: clamp(4.75rem, 10vw, 8.5rem);
-        height: clamp(4.75rem, 10vw, 8.5rem);
-        border-radius: 30% 70% 62% 38% / 45% 38% 62% 55%;
-        color: #102233;
-        font-size: clamp(2rem, 5vw, 4rem);
-        background: radial-gradient(circle at 30% 20%, #fff 0%, #ffd166 42%, #f28c38 100%);
-        box-shadow: 0 26px 55px rgba(242,140,56,.38), inset 0 2px 0 rgba(255,255,255,.65);
-        opacity: .95;
-        animation: twe-v2-float 6s var(--twe-v2-ease) infinite;
-      }
       .panel.hero::after,
       .home-fable-hero::after,
       .store-hero-panel::after,
@@ -3376,24 +3302,6 @@
           linear-gradient(135deg, rgba(255,209,102,.7), rgba(20,124,160,.38), rgba(125,107,255,.32)) border-box !important;
         box-shadow: var(--twe-v2-shadow-card), inset 0 1px 0 rgba(255,255,255,.82) !important;
         transition: transform .24s var(--twe-v2-ease), box-shadow .24s var(--twe-v2-ease), border-color .24s var(--twe-v2-ease) !important;
-      }
-      .section.card::before,
-      .mini-card::before,
-      .affiliate-tile::before,
-      .product-card::before,
-      .store-sales-card::before,
-      .email-capture-panel::before,
-      article[class*="card"]::before {
-        content: "";
-        position: absolute;
-        left: 1.15rem;
-        top: 1rem;
-        width: 2.25rem;
-        height: .34rem;
-        border-radius: 999px;
-        background: linear-gradient(90deg, #f28c38, #ffd166, #147ca0);
-        box-shadow: 0 6px 18px rgba(242,140,56,.25);
-        opacity: .78;
       }
       .section.card:hover,
       .mini-card:hover,
@@ -3632,11 +3540,6 @@
         .affiliate-tile,
         .product-card,
         .store-sales-card { border-radius: 22px !important; }
-        .panel.hero::before,
-        .home-fable-hero::before,
-        .store-hero-panel::before,
-        .hero::before,
-        .homepage-hero::before { opacity: .34; right: .75rem; top: .75rem; }
         .btn,
         button,
         .button,
@@ -3746,213 +3649,8 @@
         </div>
       </div>
 
-      <div class="store-sales-banner-grid">
-        <aside class="store-sales-side" data-store-sales-banner data-banner-lane="amazon" aria-label="Amazon.ca picks">
-      <div class="store-sales-side-head">
-        <p class="eyebrow">Featured picks</p>
-        <h2>Amazon.ca picks</h2>
-        <p class="muted" style="margin-bottom: 0;">Hand-picked Amazon.ca ideas to explore next. You will see the latest price and checkout on Amazon.ca.</p>
-      </div>
-      <div class="store-sales-viewport">
-        <div class="store-sales-track">
-          <article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/714K5vgjQdL._AC_SL1500_.jpg" alt="FEZIBO Standing Desk 47 x 24 Inch, Height Adjustable Desk with Memory Buttons, Electric Sit Stand Desk with 7th Gen Lift System, Home Office Table with Splice Board (Maple)" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Workspace%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f6fffd%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d9f3ef%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f766e%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f766e%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f766e%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f766e%27%3EHome%20office%20anchor%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f766e%27%3EWorkspace%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EStanding%20desk%20for%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Edaily%20work%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
+      <div class="store-sales-banner-grid no-rail">
         
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-buyers.html" style="text-decoration:none;">FEZIBO Standing Desk</a></h3>
-      <p class="muted">Extraordinary Stability: This standing desk features a solid construction(38% longer frame wing lengths), its industrial-grade steel frame provi…</p>
-      <p class="muted"><strong>Workspace · Tables</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-buyers.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B09N93L2RQ?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/71nrrO1mkcL._AC_SL1500_.jpg" alt="Mimoglad Office Chair, Comfy Desk Chair - High Back Ergonomic Computer Chair with Adjustable Lumbar Support &amp;amp; Headrest, Flip-up Armrests for Guitar Playing (Moon Grey)" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Workspace%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f6fffd%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d9f3ef%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f766e%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f766e%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f766e%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f766e%27%3EHome%20office%20comfort%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f766e%27%3EWorkspace%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EErgonomic%20chair%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Evalue%20pick%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-home-office-setup-for-solo-buyers.html" style="text-decoration:none;">Mimoglad Office Chair</a></h3>
-      <p class="muted">[Encourage “S-Shaped” Spinal Posture] An ergonomic chair with proper support always maintain a healthy spine posture and will not have a damagin…</p>
-      <p class="muted"><strong>Workspace · Desk Chairs</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-home-office-setup-for-solo-buyers.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B09N93L2RQ?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B07KQZWPYN?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/5186q1u92zL._AC_SL1500_.jpg" alt="Epson WorkForce ES-50 Portable Sheet-fed Document Scanner for PC and Mac, Black" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Admin%20%26amp%3B%20paperwork%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f7fbff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d8ebff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20paperwork%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20%26amp%3B%20paperwork%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EPortable%20document%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Escanner%20for%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html" style="text-decoration:none;">Epson WorkForce ES-50 scanner</a></h3>
-      <p class="muted">The ES-50 is perfect for anyone who’s always on the go. Fast scans and lightweight, it is both portable and powerful. Pair it with the WorkForce…</p>
-      <p class="muted"><strong>Admin &amp; paperwork · Document Scanners</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B07KQZWPYN?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/71cBfxUjyYL._AC_SL1500_.jpg" alt="Label Maker Machine with Tape, P21 Portable Bluetooth Label Printer, Wireless Built-in Cutter Sticker Maker Mini Label Makers with Multiple Templates for Organizing Storage Office Home, Black" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Admin%20%26amp%3B%20paperwork%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f7fbff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d8ebff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20organization%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20%26amp%3B%20paperwork%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3ELabel%20maker%20for%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Efiles%20bins%20and%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html" style="text-decoration:none;">Label Maker Machine with Tape</a></h3>
-      <p class="muted">2026 New Version: Compared with traditional label makers, Nelko P21 Label maker has half the weight and size, making it smaller, smarter, and ul…</p>
-      <p class="muted"><strong>Admin &amp; paperwork · Label Printers &amp; Makers</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B0872CFTGK?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/51I0+PRVbwL._AC_SL1500_.jpg" alt="CMTECK USB Computer Microphone G009, Noise-Cancelling Recording Desktop Mic for PC/Laptop for Online Chatting, Home Studio, Podcasting, Gaming, Skype, YouTube with Mute Function(Windows/Mac)" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Creator%20%26amp%3B%20calls%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23fcf8ff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23ede4ff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20audio%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20%26amp%3B%20calls%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EUSB%20microphone%20for%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Ecalls%20and%20content%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html" style="text-decoration:none;">CMTECK USB microphone</a></h3>
-      <p class="muted">【Crystal Clear Audio Quality】Our Cardioid pattern condenser microphone accurately captures your voice, making it perfect for dictation, online c…</p>
-      <p class="muted"><strong>Creator &amp; calls · Computer Microphones</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B0872CFTGK?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B07M6Y7355?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/61-K2lXmHQL._AC_SL1500_.jpg" alt="EMEET 1080P Webcam with Microphone, C960 Web Camera, 2 Mics Streaming Webcam, 90°FOV Computer Camera, Plug and Play USB Web Cam for Online Calling/Conferencing, Zoom/Teams/Facetime/YouTube, Laptop/PC" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Creator%20%26amp%3B%20calls%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23fcf8ff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23ede4ff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20video%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20%26amp%3B%20calls%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EWebcam%20for%20and%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Emeetings%20tutorials%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/creator-gear-deals.html" style="text-decoration:none;">EMEET webcam</a></h3>
-      <p class="muted">【Full HD 1080P Webcam with Privacy Cover for Video Calls】EMEET computer webcam provides design and Optimization for professional video streaming…</p>
-      <p class="muted"><strong>Creator &amp; calls · Webcams</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/creator-gear-deals.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B07M6Y7355?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article>
-          <article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/714K5vgjQdL._AC_SL1500_.jpg" alt="FEZIBO Standing Desk 47 x 24 Inch, Height Adjustable Desk with Memory Buttons, Electric Sit Stand Desk with 7th Gen Lift System, Home Office Table with Splice Board (Maple)" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Workspace%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f6fffd%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d9f3ef%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f766e%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f766e%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f766e%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f766e%27%3EHome%20office%20anchor%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f766e%27%3EWorkspace%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EStanding%20desk%20for%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Edaily%20work%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-buyers.html" style="text-decoration:none;">FEZIBO Standing Desk</a></h3>
-      <p class="muted">Extraordinary Stability: This standing desk features a solid construction(38% longer frame wing lengths), its industrial-grade steel frame provi…</p>
-      <p class="muted"><strong>Workspace · Tables</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-buyers.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B09N93L2RQ?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/71nrrO1mkcL._AC_SL1500_.jpg" alt="Mimoglad Office Chair, Comfy Desk Chair - High Back Ergonomic Computer Chair with Adjustable Lumbar Support &amp;amp; Headrest, Flip-up Armrests for Guitar Playing (Moon Grey)" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Workspace%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f6fffd%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d9f3ef%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f766e%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f766e%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f766e%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f766e%27%3EHome%20office%20comfort%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f766e%27%3EWorkspace%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EErgonomic%20chair%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Evalue%20pick%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-home-office-setup-for-solo-buyers.html" style="text-decoration:none;">Mimoglad Office Chair</a></h3>
-      <p class="muted">[Encourage “S-Shaped” Spinal Posture] An ergonomic chair with proper support always maintain a healthy spine posture and will not have a damagin…</p>
-      <p class="muted"><strong>Workspace · Desk Chairs</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-home-office-setup-for-solo-buyers.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B09N93L2RQ?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B07KQZWPYN?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/5186q1u92zL._AC_SL1500_.jpg" alt="Epson WorkForce ES-50 Portable Sheet-fed Document Scanner for PC and Mac, Black" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Admin%20%26amp%3B%20paperwork%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f7fbff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d8ebff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20paperwork%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20%26amp%3B%20paperwork%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EPortable%20document%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Escanner%20for%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html" style="text-decoration:none;">Epson WorkForce ES-50 scanner</a></h3>
-      <p class="muted">The ES-50 is perfect for anyone who’s always on the go. Fast scans and lightweight, it is both portable and powerful. Pair it with the WorkForce…</p>
-      <p class="muted"><strong>Admin &amp; paperwork · Document Scanners</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B07KQZWPYN?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/71cBfxUjyYL._AC_SL1500_.jpg" alt="Label Maker Machine with Tape, P21 Portable Bluetooth Label Printer, Wireless Built-in Cutter Sticker Maker Mini Label Makers with Multiple Templates for Organizing Storage Office Home, Black" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Admin%20%26amp%3B%20paperwork%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f7fbff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d8ebff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20organization%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20%26amp%3B%20paperwork%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3ELabel%20maker%20for%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Efiles%20bins%20and%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html" style="text-decoration:none;">Label Maker Machine with Tape</a></h3>
-      <p class="muted">2026 New Version: Compared with traditional label makers, Nelko P21 Label maker has half the weight and size, making it smaller, smarter, and ul…</p>
-      <p class="muted"><strong>Admin &amp; paperwork · Label Printers &amp; Makers</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B0872CFTGK?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/51I0+PRVbwL._AC_SL1500_.jpg" alt="CMTECK USB Computer Microphone G009, Noise-Cancelling Recording Desktop Mic for PC/Laptop for Online Chatting, Home Studio, Podcasting, Gaming, Skype, YouTube with Mute Function(Windows/Mac)" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Creator%20%26amp%3B%20calls%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23fcf8ff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23ede4ff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20audio%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20%26amp%3B%20calls%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EUSB%20microphone%20for%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Ecalls%20and%20content%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html" style="text-decoration:none;">CMTECK USB microphone</a></h3>
-      <p class="muted">【Crystal Clear Audio Quality】Our Cardioid pattern condenser microphone accurately captures your voice, making it perfect for dictation, online c…</p>
-      <p class="muted"><strong>Creator &amp; calls · Computer Microphones</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B0872CFTGK?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B07M6Y7355?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/61-K2lXmHQL._AC_SL1500_.jpg" alt="EMEET 1080P Webcam with Microphone, C960 Web Camera, 2 Mics Streaming Webcam, 90°FOV Computer Camera, Plug and Play USB Web Cam for Online Calling/Conferencing, Zoom/Teams/Facetime/YouTube, Laptop/PC" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Creator%20%26amp%3B%20calls%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23fcf8ff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23ede4ff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20video%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20%26amp%3B%20calls%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EWebcam%20for%20and%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Emeetings%20tutorials%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/creator-gear-deals.html" style="text-decoration:none;">EMEET webcam</a></h3>
-      <p class="muted">【Full HD 1080P Webcam with Privacy Cover for Video Calls】EMEET computer webcam provides design and Optimization for professional video streaming…</p>
-      <p class="muted"><strong>Creator &amp; calls · Webcams</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/creator-gear-deals.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B07M6Y7355?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article>
-        </div>
-      </div>
-      
-    </aside>
         <div class="store-sales-banner-main">
           
 
@@ -4585,214 +4283,7 @@
 
 
 
-          <section class="store-sales-mobile" data-store-sales-banner data-banner-lane="amazon" aria-label="Amazon.ca picks">
-      <div class="section-head" style="align-items: center; margin-bottom: 12px;">
-        <div>
-          <p class="eyebrow">Featured picks</p>
-          <h2 style="margin-bottom: 6px;">Amazon.ca picks</h2>
-          <p class="muted" style="margin-bottom: 0;">Hand-picked Amazon.ca ideas to explore next. You will see the latest price and checkout on Amazon.ca.</p>
-        </div>
-        <span class="pill is-accent">6 items</span>
-      </div>
-      <div class="store-sales-viewport">
-        <div class="store-sales-track">
-          <article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/714K5vgjQdL._AC_SL1500_.jpg" alt="FEZIBO Standing Desk 47 x 24 Inch, Height Adjustable Desk with Memory Buttons, Electric Sit Stand Desk with 7th Gen Lift System, Home Office Table with Splice Board (Maple)" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Workspace%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f6fffd%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d9f3ef%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f766e%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f766e%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f766e%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f766e%27%3EHome%20office%20anchor%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f766e%27%3EWorkspace%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EStanding%20desk%20for%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Edaily%20work%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-buyers.html" style="text-decoration:none;">FEZIBO Standing Desk</a></h3>
-      <p class="muted">Extraordinary Stability: This standing desk features a solid construction(38% longer frame wing lengths), its industrial-grade steel frame provi…</p>
-      <p class="muted"><strong>Workspace · Tables</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-buyers.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B09N93L2RQ?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/71nrrO1mkcL._AC_SL1500_.jpg" alt="Mimoglad Office Chair, Comfy Desk Chair - High Back Ergonomic Computer Chair with Adjustable Lumbar Support &amp;amp; Headrest, Flip-up Armrests for Guitar Playing (Moon Grey)" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Workspace%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f6fffd%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d9f3ef%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f766e%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f766e%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f766e%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f766e%27%3EHome%20office%20comfort%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f766e%27%3EWorkspace%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EErgonomic%20chair%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Evalue%20pick%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-home-office-setup-for-solo-buyers.html" style="text-decoration:none;">Mimoglad Office Chair</a></h3>
-      <p class="muted">[Encourage “S-Shaped” Spinal Posture] An ergonomic chair with proper support always maintain a healthy spine posture and will not have a damagin…</p>
-      <p class="muted"><strong>Workspace · Desk Chairs</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-home-office-setup-for-solo-buyers.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B09N93L2RQ?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B07KQZWPYN?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/5186q1u92zL._AC_SL1500_.jpg" alt="Epson WorkForce ES-50 Portable Sheet-fed Document Scanner for PC and Mac, Black" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Admin%20%26amp%3B%20paperwork%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f7fbff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d8ebff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20paperwork%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20%26amp%3B%20paperwork%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EPortable%20document%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Escanner%20for%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html" style="text-decoration:none;">Epson WorkForce ES-50 scanner</a></h3>
-      <p class="muted">The ES-50 is perfect for anyone who’s always on the go. Fast scans and lightweight, it is both portable and powerful. Pair it with the WorkForce…</p>
-      <p class="muted"><strong>Admin &amp; paperwork · Document Scanners</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B07KQZWPYN?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/71cBfxUjyYL._AC_SL1500_.jpg" alt="Label Maker Machine with Tape, P21 Portable Bluetooth Label Printer, Wireless Built-in Cutter Sticker Maker Mini Label Makers with Multiple Templates for Organizing Storage Office Home, Black" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Admin%20%26amp%3B%20paperwork%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f7fbff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d8ebff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20organization%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20%26amp%3B%20paperwork%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3ELabel%20maker%20for%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Efiles%20bins%20and%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html" style="text-decoration:none;">Label Maker Machine with Tape</a></h3>
-      <p class="muted">2026 New Version: Compared with traditional label makers, Nelko P21 Label maker has half the weight and size, making it smaller, smarter, and ul…</p>
-      <p class="muted"><strong>Admin &amp; paperwork · Label Printers &amp; Makers</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B0872CFTGK?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/51I0+PRVbwL._AC_SL1500_.jpg" alt="CMTECK USB Computer Microphone G009, Noise-Cancelling Recording Desktop Mic for PC/Laptop for Online Chatting, Home Studio, Podcasting, Gaming, Skype, YouTube with Mute Function(Windows/Mac)" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Creator%20%26amp%3B%20calls%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23fcf8ff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23ede4ff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20audio%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20%26amp%3B%20calls%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EUSB%20microphone%20for%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Ecalls%20and%20content%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html" style="text-decoration:none;">CMTECK USB microphone</a></h3>
-      <p class="muted">【Crystal Clear Audio Quality】Our Cardioid pattern condenser microphone accurately captures your voice, making it perfect for dictation, online c…</p>
-      <p class="muted"><strong>Creator &amp; calls · Computer Microphones</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B0872CFTGK?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B07M6Y7355?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/61-K2lXmHQL._AC_SL1500_.jpg" alt="EMEET 1080P Webcam with Microphone, C960 Web Camera, 2 Mics Streaming Webcam, 90°FOV Computer Camera, Plug and Play USB Web Cam for Online Calling/Conferencing, Zoom/Teams/Facetime/YouTube, Laptop/PC" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Creator%20%26amp%3B%20calls%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23fcf8ff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23ede4ff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20video%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20%26amp%3B%20calls%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EWebcam%20for%20and%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Emeetings%20tutorials%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/creator-gear-deals.html" style="text-decoration:none;">EMEET webcam</a></h3>
-      <p class="muted">【Full HD 1080P Webcam with Privacy Cover for Video Calls】EMEET computer webcam provides design and Optimization for professional video streaming…</p>
-      <p class="muted"><strong>Creator &amp; calls · Webcams</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/creator-gear-deals.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B07M6Y7355?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article>
-          <article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/714K5vgjQdL._AC_SL1500_.jpg" alt="FEZIBO Standing Desk 47 x 24 Inch, Height Adjustable Desk with Memory Buttons, Electric Sit Stand Desk with 7th Gen Lift System, Home Office Table with Splice Board (Maple)" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Workspace%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f6fffd%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d9f3ef%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f766e%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f766e%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f766e%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f766e%27%3EHome%20office%20anchor%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f766e%27%3EWorkspace%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EStanding%20desk%20for%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Edaily%20work%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-buyers.html" style="text-decoration:none;">FEZIBO Standing Desk</a></h3>
-      <p class="muted">Extraordinary Stability: This standing desk features a solid construction(38% longer frame wing lengths), its industrial-grade steel frame provi…</p>
-      <p class="muted"><strong>Workspace · Tables</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-buyers.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B09N93L2RQ?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/71nrrO1mkcL._AC_SL1500_.jpg" alt="Mimoglad Office Chair, Comfy Desk Chair - High Back Ergonomic Computer Chair with Adjustable Lumbar Support &amp;amp; Headrest, Flip-up Armrests for Guitar Playing (Moon Grey)" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Workspace%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f6fffd%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d9f3ef%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f766e%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f766e%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f766e%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f766e%27%3EHome%20office%20comfort%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f766e%27%3EWorkspace%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EErgonomic%20chair%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Evalue%20pick%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-home-office-setup-for-solo-buyers.html" style="text-decoration:none;">Mimoglad Office Chair</a></h3>
-      <p class="muted">[Encourage “S-Shaped” Spinal Posture] An ergonomic chair with proper support always maintain a healthy spine posture and will not have a damagin…</p>
-      <p class="muted"><strong>Workspace · Desk Chairs</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-home-office-setup-for-solo-buyers.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B09N93L2RQ?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B07KQZWPYN?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/5186q1u92zL._AC_SL1500_.jpg" alt="Epson WorkForce ES-50 Portable Sheet-fed Document Scanner for PC and Mac, Black" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Admin%20%26amp%3B%20paperwork%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f7fbff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d8ebff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20paperwork%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20%26amp%3B%20paperwork%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EPortable%20document%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Escanner%20for%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html" style="text-decoration:none;">Epson WorkForce ES-50 scanner</a></h3>
-      <p class="muted">The ES-50 is perfect for anyone who’s always on the go. Fast scans and lightweight, it is both portable and powerful. Pair it with the WorkForce…</p>
-      <p class="muted"><strong>Admin &amp; paperwork · Document Scanners</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B07KQZWPYN?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/71cBfxUjyYL._AC_SL1500_.jpg" alt="Label Maker Machine with Tape, P21 Portable Bluetooth Label Printer, Wireless Built-in Cutter Sticker Maker Mini Label Makers with Multiple Templates for Organizing Storage Office Home, Black" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Admin%20%26amp%3B%20paperwork%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23f7fbff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23d8ebff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%230f5a9c%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20organization%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%230f5a9c%27%3EAdmin%20%26amp%3B%20paperwork%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3ELabel%20maker%20for%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Efiles%20bins%20and%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html" style="text-decoration:none;">Label Maker Machine with Tape</a></h3>
-      <p class="muted">2026 New Version: Compared with traditional label makers, Nelko P21 Label maker has half the weight and size, making it smaller, smarter, and ul…</p>
-      <p class="muted"><strong>Admin &amp; paperwork · Label Printers &amp; Makers</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B0872CFTGK?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/51I0+PRVbwL._AC_SL1500_.jpg" alt="CMTECK USB Computer Microphone G009, Noise-Cancelling Recording Desktop Mic for PC/Laptop for Online Chatting, Home Studio, Podcasting, Gaming, Skype, YouTube with Mute Function(Windows/Mac)" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Creator%20%26amp%3B%20calls%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23fcf8ff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23ede4ff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20audio%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20%26amp%3B%20calls%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EUSB%20microphone%20for%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Ecalls%20and%20content%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html" style="text-decoration:none;">CMTECK USB microphone</a></h3>
-      <p class="muted">【Crystal Clear Audio Quality】Our Cardioid pattern condenser microphone accurately captures your voice, making it perfect for dictation, online c…</p>
-      <p class="muted"><strong>Creator &amp; calls · Computer Microphones</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B0872CFTGK?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article><article class="store-sales-card is-amazon" data-store-sales-item data-banner-kind="amazon">
-      <a class="store-sales-image-link" href="https://www.amazon.ca/dp/B07M6Y7355?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">
-        <img src="https://m.media-amazon.com/images/I/61-K2lXmHQL._AC_SL1500_.jpg" alt="EMEET 1080P Webcam with Microphone, C960 Web Camera, 2 Mics Streaming Webcam, 90°FOV Computer Camera, Plug and Play USB Web Cam for Online Calling/Conferencing, Zoom/Teams/Facetime/YouTube, Laptop/PC" loading="eager" decoding="async" fetchpriority="low" data-fallback-src="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20640%20360%27%20role%3D%27img%27%20aria-label%3D%27Creator%20%26amp%3B%20calls%20Amazon%20affiliate%20pick%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27bg%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%23fcf8ff%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%23ede4ff%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27640%27%20height%3D%27360%27%20rx%3D%2736%27%20fill%3D%27url%28%23bg%29%27/%3E%0A%20%20%3Ccircle%20cx%3D%27540%27%20cy%3D%2782%27%20r%3D%2772%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.12%27/%3E%0A%20%20%3Ccircle%20cx%3D%27114%27%20cy%3D%27290%27%20r%3D%2794%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.10%27/%3E%0A%20%20%3Crect%20x%3D%2738%27%20y%3D%2734%27%20width%3D%27176%27%20height%3D%2742%27%20rx%3D%2721%27%20fill%3D%27%237c3aed%27%20opacity%3D%270.15%27/%3E%0A%20%20%3Ctext%20x%3D%27126%27%20y%3D%2761%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2720%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20video%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27146%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2722%27%20font-weight%3D%27700%27%20fill%3D%27%237c3aed%27%3ECreator%20%26amp%3B%20calls%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27206%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3EWebcam%20for%20and%3C/text%3E%0A%20%20%3Ctext%20x%3D%2744%27%20y%3D%27250%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2738%27%20font-weight%3D%27700%27%20fill%3D%27%2316363b%27%3Emeetings%20tutorials%3C/text%3E%0A%20%20%3Crect%20x%3D%2744%27%20y%3D%27286%27%20width%3D%27220%27%20height%3D%2734%27%20rx%3D%2717%27%20fill%3D%27%23ffffff%27%20opacity%3D%270.92%27/%3E%0A%20%20%3Ctext%20x%3D%27154%27%20y%3D%27309%27%20text-anchor%3D%27middle%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2718%27%20font-weight%3D%27700%27%20fill%3D%27%2335535a%27%3EAmazon.ca%20pick%3C/text%3E%0A%3C/svg%3E" onerror="if (this.dataset.fallbackApplied === '1') return; this.dataset.fallbackApplied='1'; this.src=this.dataset.fallbackSrc; this.classList.add('is-fallback-image');" width="640" height="400">
-      </a>
-      <div class="store-sales-meta">
-        <span class="pill is-accent">Amazon.ca affiliate</span>
-        
-      </div>
-      <h3><a href="https://www.thewatchersedge.ca/creator-gear-deals.html" style="text-decoration:none;">EMEET webcam</a></h3>
-      <p class="muted">【Full HD 1080P Webcam with Privacy Cover for Video Calls】EMEET computer webcam provides design and Optimization for professional video streaming…</p>
-      <p class="muted"><strong>Creator &amp; calls · Webcams</strong></p>
-      <div class="store-sales-actions">
-        <a class="btn secondary" href="https://www.thewatchersedge.ca/creator-gear-deals.html">Buying guide</a>
-        <a class="btn" href="https://www.amazon.ca/dp/B07M6Y7355?tag=resourceshubca-20" target="_blank" rel="sponsored nofollow noopener">Check Amazon.ca</a>
-      </div>
-      <p class="store-sales-disclosure">Affiliate link. If you buy through Amazon.ca, I may earn a small commission at no extra cost to you.</p>
-    </article>
-        </div>
-      </div>
-    </section>
+          
       
       <section class="email-capture-shell">
         <div class="section-head" style="align-items: center; margin-bottom: 14px;">
