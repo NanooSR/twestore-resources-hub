@@ -304,16 +304,19 @@
       .nav-links {
         grid-area: links;
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
         gap: 5px;
         min-width: 0;
         padding-top: 0;
       }
       .nav-links.nav-links-primary {
-        overflow-x: auto;
+        justify-content: center;
+        align-items: center;
+        overflow-x: visible;
         overflow-y: visible;
-        scrollbar-width: thin;
+        scrollbar-width: none;
       }
       .nav-links a {
         display: flex;
@@ -2154,6 +2157,49 @@
           max-width: none;
         }
       }
+
+
+      /* 2026-07-07 Store hero light-panel contrast fix */
+      .store-sales-banner-main > section:first-child article,
+      .store-sales-banner-main .panel.hero article,
+      .store-sales-banner-main .store-hero-panel article,
+      .store-hero-copy article {
+        background: linear-gradient(145deg, rgba(255,255,255,.94), rgba(248,251,255,.78)) !important;
+        color: #162130 !important;
+        border: 1px solid rgba(255,255,255,.65) !important;
+        box-shadow: 0 18px 38px rgba(10,35,55,.16), inset 0 1px 0 rgba(255,255,255,.82) !important;
+      }
+      .store-sales-banner-main > section:first-child article h1,
+      .store-sales-banner-main > section:first-child article h2,
+      .store-sales-banner-main > section:first-child article h3,
+      .store-sales-banner-main > section:first-child article p,
+      .store-sales-banner-main > section:first-child article li,
+      .store-sales-banner-main > section:first-child article span,
+      .store-sales-banner-main > section:first-child article strong,
+      .store-sales-banner-main .panel.hero article h1,
+      .store-sales-banner-main .panel.hero article h2,
+      .store-sales-banner-main .panel.hero article h3,
+      .store-sales-banner-main .panel.hero article p,
+      .store-sales-banner-main .panel.hero article li,
+      .store-sales-banner-main .panel.hero article span,
+      .store-sales-banner-main .panel.hero article strong,
+      .store-hero-copy article h1,
+      .store-hero-copy article h2,
+      .store-hero-copy article h3,
+      .store-hero-copy article p,
+      .store-hero-copy article li,
+      .store-hero-copy article span,
+      .store-hero-copy article strong {
+        color: #162130 !important;
+        text-shadow: none !important;
+      }
+      .store-sales-banner-main > section:first-child article .eyebrow,
+      .store-sales-banner-main > section:first-child article [class*="badge"],
+      .store-sales-banner-main .panel.hero article .eyebrow,
+      .store-sales-banner-main .panel.hero article [class*="badge"] {
+        color: #0a4d68 !important;
+      }
+
       @media (max-width: 900px) {
         .split { grid-template-columns: 1fr; }
         .guided-path-grid {
@@ -3426,6 +3472,83 @@
       .site-footer strong { color: #ffd166 !important; }
       footer a,
       .site-footer a { color: #ffd166 !important; }
+
+
+
+      /* 2026-07-07 Store-page containment fix after live V2 QA */
+      .store-sales-banner-grid {
+        align-items: start !important;
+        min-height: 0 !important;
+        height: auto !important;
+      }
+      .store-sales-side {
+        position: sticky;
+        top: 1rem;
+        max-height: min(72vh, 820px) !important;
+        overflow: hidden !important;
+      }
+      .store-sales-viewport {
+        max-height: min(58vh, 620px) !important;
+        overflow: hidden !important;
+        border-radius: 24px !important;
+      }
+      .store-sales-track {
+        will-change: transform;
+      }
+      .store-sales-banner-main,
+      .store-hero-copy,
+      .store-hero-panel,
+      .store-main-hero {
+        position: relative;
+        overflow: hidden;
+        border-radius: clamp(24px, 3vw, 36px) !important;
+      }
+      .store-sales-banner-main > section:first-child,
+      .store-sales-banner-main .panel.hero,
+      .store-sales-banner-main .store-hero-panel,
+      .store-hero-copy {
+        background:
+          radial-gradient(circle at 18% 16%, rgba(255,209,102,.48), transparent 17rem),
+          radial-gradient(circle at 86% 18%, rgba(183,221,227,.56), transparent 18rem),
+          linear-gradient(135deg, #0a4d68 0%, #102233 65%, #281a4d 100%) !important;
+        color: #fff !important;
+        border: 1px solid rgba(255,255,255,.28) !important;
+        box-shadow: 0 28px 65px rgba(10,35,55,.24), inset 0 1px 0 rgba(255,255,255,.25) !important;
+      }
+      .store-sales-banner-main h1,
+      .store-sales-banner-main h2,
+      .store-sales-banner-main h3,
+      .store-hero-copy h1,
+      .store-hero-copy h2,
+      .store-hero-copy h3 {
+        color: #102233;
+      }
+      .store-sales-banner-main > section:first-child h1,
+      .store-sales-banner-main > section:first-child h2,
+      .store-sales-banner-main > section:first-child h3,
+      .store-sales-banner-main .panel.hero h1,
+      .store-sales-banner-main .panel.hero h2,
+      .store-sales-banner-main .panel.hero h3,
+      .store-sales-banner-main .store-hero-panel h1,
+      .store-sales-banner-main .store-hero-panel h2,
+      .store-sales-banner-main .store-hero-panel h3,
+      .store-hero-copy h1,
+      .store-hero-copy h2,
+      .store-hero-copy h3 {
+        color: #fff !important;
+        text-shadow: 0 4px 18px rgba(0,0,0,.24);
+      }
+      .store-sales-banner-main > section:first-child p,
+      .store-sales-banner-main .panel.hero p,
+      .store-sales-banner-main .store-hero-panel p,
+      .store-hero-copy p {
+        color: rgba(255,255,255,.90) !important;
+      }
+      @media (max-width: 900px) {
+        .store-sales-side { position: relative; top: auto; max-height: none !important; }
+        .store-sales-viewport { max-height: 520px !important; }
+        .store-sales-banner-grid { display: block !important; }
+      }
 
       @keyframes twe-v2-float {
         0%, 100% { transform: translate3d(0,0,0) rotate(-2deg); }
