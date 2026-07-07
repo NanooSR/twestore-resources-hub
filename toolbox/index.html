@@ -3638,10 +3638,11 @@
   .toolbox-help-grid,
   .toolbox-rail-grid { display: grid; gap: 18px; }
   .toolbox-overview-grid {
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     align-items: stretch;
+    gap: 14px;
   }
-  .toolbox-sections { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+
   .toolbox-help-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
   .toolbox-rail-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
   .tool-overview-card,
@@ -3656,56 +3657,56 @@
     box-shadow: 0 18px 45px rgba(16, 24, 40, 0.08), inset 0 1px 0 rgba(255,255,255,.85);
     backdrop-filter: blur(10px);
   }
+  .toolbox-sections { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
   .tool-overview-card {
     --card-accent: #4f7cff;
-    --card-glow: rgba(79, 124, 255, 0.18);
+    --card-glow: rgba(79, 124, 255, 0.16);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     display: grid;
-    gap: 16px;
-    padding: 18px;
-    min-height: 100%;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 14px;
+    min-height: 118px;
+    padding: 16px;
+    border-radius: 18px;
+    color: #122033;
     background:
-      radial-gradient(circle at top right, color-mix(in srgb, var(--card-accent) 16%, white) 0%, rgba(255,255,255,0) 40%),
-      linear-gradient(180deg, rgba(255,255,255,.96), rgba(246,249,255,.92));
+      radial-gradient(circle at top right, color-mix(in srgb, var(--card-accent) 12%, white) 0%, rgba(255,255,255,0) 42%),
+      linear-gradient(135deg, rgba(255,255,255,.98), rgba(246,249,255,.92));
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.09), inset 0 1px 0 rgba(255,255,255,.9);
   }
   .tool-overview-card::before {
     content: "";
     position: absolute;
     inset: 1px;
-    border-radius: 23px;
-    border: 1px solid rgba(255,255,255,.62);
+    border-radius: 17px;
+    border: 1px solid rgba(255,255,255,.68);
     pointer-events: none;
   }
   .tool-overview-card::after {
     content: "";
     position: absolute;
-    width: 160px;
-    height: 160px;
-    right: -58px;
-    top: -58px;
+    width: 92px;
+    height: 92px;
+    right: -28px;
+    top: -30px;
     border-radius: 999px;
-    background: radial-gradient(circle, var(--card-glow) 0%, rgba(255,255,255,0) 70%);
+    background: radial-gradient(circle, var(--card-glow) 0%, rgba(255,255,255,0) 72%);
     pointer-events: none;
-  }
-  .tool-overview-card-copy,
-  .tool-overview-card-footer {
-    padding: 0 8px;
-    position: relative;
-    z-index: 1;
   }
   .tool-overview-card-link {
     color: inherit;
     text-decoration: none;
     transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
     cursor: pointer;
-    height: 100%;
+    min-width: 0;
   }
   .tool-overview-card-link:hover,
   .tool-overview-card-link:focus-visible {
-    transform: translateY(-6px) scale(1.01);
-    box-shadow: 0 28px 60px rgba(15, 23, 42, 0.13), 0 0 0 1px rgba(255,255,255,.6) inset;
-    border-color: color-mix(in srgb, var(--card-accent) 45%, white);
+    transform: translateY(-3px);
+    box-shadow: 0 22px 46px rgba(15, 23, 42, 0.13), 0 0 0 1px rgba(255,255,255,.7) inset;
+    border-color: color-mix(in srgb, var(--card-accent) 42%, white);
   }
   .tool-overview-card-link:focus-visible {
     outline: 3px solid color-mix(in srgb, var(--card-accent) 24%, white);
@@ -3722,41 +3723,9 @@
   .tool-overview-card-link[data-tool-slug="browser-network-info"] { --card-accent: #14b8a6; --card-glow: rgba(20,184,166,.2); }
   .tool-overview-card-link[data-tool-slug="unit-converter"] { --card-accent: #8b5cf6; --card-glow: rgba(139,92,246,.2); }
   .tool-overview-card-link[data-tool-slug="mini-game"] { --card-accent: #3b82f6; --card-glow: rgba(59,130,246,.19); }
-  .tool-thumb {
-    border-radius: 20px;
-    min-height: 136px;
-    padding: 18px;
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    gap: 14px;
-    color: #122033;
-    overflow: hidden;
-    position: relative;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.65), 0 14px 26px rgba(15, 23, 42, 0.08);
-  }
-  .tool-thumb::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-      linear-gradient(145deg, rgba(255,255,255,.42), rgba(255,255,255,0) 48%),
-      radial-gradient(circle at 20% 20%, rgba(255,255,255,.5), rgba(255,255,255,0) 38%);
-    pointer-events: none;
-  }
-  .tool-thumb::after {
-    content: "";
-    position: absolute;
-    inset: auto -24px -30px auto;
-    width: 110px;
-    height: 110px;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.42);
-    filter: blur(2px);
-  }
-  .tool-thumb-icon {
-    width: 56px;
-    height: 56px;
+  .tool-card-compact-icon {
+    width: 58px;
+    height: 58px;
     display: inline-grid;
     place-items: center;
     border-radius: 18px;
@@ -3764,80 +3733,89 @@
     line-height: 1;
     position: relative;
     z-index: 1;
-    background: rgba(255,255,255,.52);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.55), 0 10px 22px rgba(18,32,51,.12);
+    flex: 0 0 auto;
+    color: #122033;
+    background:
+      linear-gradient(145deg, rgba(255,255,255,.68), rgba(255,255,255,.32)),
+      color-mix(in srgb, var(--card-accent) 16%, white);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.72), 0 12px 24px color-mix(in srgb, var(--card-accent) 20%, rgba(15,23,42,.1));
   }
-  .tool-thumb-label {
-    font-size: .86rem;
-    font-weight: 800;
-    letter-spacing: .02em;
-    max-width: 10rem;
-    text-align: right;
+  .tool-card-compact-main {
     position: relative;
     z-index: 1;
-    color: rgba(18,32,51,.82);
+    min-width: 0;
+    display: grid;
+    gap: 5px;
   }
-  .tool-card-signal-row {
+  .tool-card-compact-title-row {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 8px;
-    position: relative;
-    z-index: 1;
+    gap: 7px;
+    min-width: 0;
   }
-  .tool-card-signal {
+  .tool-card-compact-title-row h3 {
+    margin: 0;
+    font-size: clamp(1.02rem, 1.6vw, 1.14rem);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    overflow-wrap: anywhere;
+  }
+  .tool-card-compact-badge {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 7px 12px;
+    min-height: 24px;
+    padding: 4px 8px;
     border-radius: 999px;
-    font-size: .78rem;
-    font-weight: 800;
+    font-size: .72rem;
+    font-weight: 850;
     letter-spacing: .02em;
-    color: rgba(18,32,51,.82);
-    background: rgba(255,255,255,.78);
-    border: 1px solid rgba(126,152,190,.18);
-    box-shadow: 0 8px 18px rgba(15,23,42,.06);
-  }
-  .tool-card-signal.is-accent {
     color: color-mix(in srgb, var(--card-accent) 70%, #122033);
     background: color-mix(in srgb, var(--card-accent) 10%, white);
-    border-color: color-mix(in srgb, var(--card-accent) 26%, white);
+    border: 1px solid color-mix(in srgb, var(--card-accent) 24%, white);
+    white-space: nowrap;
   }
-  .tool-overview-card-copy h3 {
-    margin-bottom: 6px;
-    font-size: 1.2rem;
-    letter-spacing: -.01em;
-  }
-  .tool-overview-card-copy .muted {
+  .tool-card-compact-desc {
     margin: 0;
     color: rgba(34, 52, 74, 0.82);
-  }
-  .tool-card-utility-note {
-    margin: 0;
     font-size: .92rem;
-    color: rgba(34,52,74,.68);
+    line-height: 1.34;
+    overflow-wrap: anywhere;
   }
-  .tool-overview-card-footer {
-    display: grid;
-    gap: 12px;
-    align-content: end;
+  .tool-card-compact-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    margin-top: 2px;
   }
-  .tool-card-action {
+  .tool-card-compact-meta span {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: fit-content;
-    min-height: 42px;
-    padding: 10px 15px;
-    border-radius: 14px;
-    font-size: .95rem;
-    font-weight: 800;
-    letter-spacing: -.01em;
+    max-width: 100%;
+    min-height: 24px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: .76rem;
+    font-weight: 780;
+    color: rgba(18,32,51,.76);
+    background: rgba(255,255,255,.76);
+    border: 1px solid rgba(126,152,190,.18);
+    overflow-wrap: anywhere;
+  }
+  .tool-card-compact-cta {
+    position: relative;
+    z-index: 1;
+    display: inline-grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 13px;
     color: #fff;
-    background: linear-gradient(135deg, color-mix(in srgb, var(--card-accent) 88%, white), color-mix(in srgb, var(--card-accent) 56%, #122033));
-    box-shadow: 0 14px 28px color-mix(in srgb, var(--card-accent) 24%, rgba(15,23,42,.1));
+    font-size: 1.25rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--card-accent) 88%, white), color-mix(in srgb, var(--card-accent) 58%, #122033));
+    box-shadow: 0 12px 24px color-mix(in srgb, var(--card-accent) 24%, rgba(15,23,42,.1));
   }
   .tool-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
   .tool-panel {
@@ -4382,30 +4360,41 @@
     .active-tool-top-card-grid { grid-template-columns: minmax(0, 1.35fr) minmax(240px, .65fr); }
   }
   @media (max-width: 680px) {
+    .toolbox-overview-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
     .tool-overview-card {
-      padding: 16px;
-      border-radius: 22px;
+      grid-template-columns: auto minmax(0, 1fr);
+      padding: 13px;
+      border-radius: 18px;
+      min-height: 104px;
+      gap: 11px;
     }
-    .tool-thumb {
-      min-height: 122px;
-      padding: 16px;
+    .tool-card-compact-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      font-size: 1.55rem;
     }
-    .tool-thumb-icon {
-      width: 50px;
-      height: 50px;
-      font-size: 1.65rem;
+    .tool-card-compact-cta {
+      display: none;
     }
-    .tool-card-action,
-    .toolbox-home-link {
-      width: 100%;
-      justify-content: center;
+    .tool-card-compact-meta span {
+      font-size: .72rem;
+      min-height: 22px;
+      padding: 3px 7px;
+    }
+    .tool-card-compact-desc {
+      font-size: .88rem;
+      line-height: 1.3;
     }
     .active-tool-top-card {
       padding: 14px;
       border-radius: 22px;
       gap: 10px;
     }
-    .active-tool-top-card .tool-badge,
+
     .active-tool-top-card > h2,
     .active-tool-top-card > p.muted,
     .active-tool-card-copy p,
@@ -4473,267 +4462,179 @@
     <div class="toolbox-overview-grid">
       
       <a class="tool-overview-card tool-overview-card-link" data-tool-slug="whats-my-ip" href="/toolbox/whats-my-ip/?cb=toolbox20260705gamepremium" aria-label="Open What&#39;s my IP in this Toolbox tab">
-        <div class="tool-card-signal-row">
-          <span class="tool-card-signal is-accent">Useful right away</span>
-          <span class="tool-card-signal">Free tool</span>
-          
-        </div>
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #d7f3ff, #e7fff8);">
-          <span class="tool-thumb-icon" aria-hidden="true">🌐</span>
-          <span class="tool-thumb-label">Connection view</span>
-        </div>
-        <div class="tool-overview-card-copy">
-          <h3>What&#39;s my IP</h3>
-          <p class="muted">See the current public-facing connection IP your browser is presenting right now.</p>
-        </div>
-        <div class="tool-overview-card-footer">
-          <div class="tool-chip-row">
-            <span class="tool-chip">Quick diagnostics</span>
-            <span class="tool-chip">Bookmarkable page</span>
-          </div>
-          <p class="tool-card-utility-note">Fast to open, easy to bookmark, and built to do one job clearly.</p>
-          <span class="tool-card-action">Open IP checker →</span>
-        </div>
+        <span class="tool-card-compact-icon" aria-hidden="true">🌐</span>
+        <span class="tool-card-compact-main">
+          <span class="tool-card-compact-title-row">
+            <h3>What&#39;s my IP</h3>
+            
+          </span>
+          <span class="tool-card-compact-desc">Connection view</span>
+          <span class="tool-card-compact-meta">
+            <span>Quick diagnostics</span>
+            <span>Useful right away</span>
+          </span>
+        </span>
+        <span class="tool-card-compact-cta" aria-hidden="true">→</span>
       </a>
       
       <a class="tool-overview-card tool-overview-card-link" data-tool-slug="unscrambler" href="/toolbox/unscrambler/?cb=toolbox20260705gamepremium" aria-label="Open Unscrambler in this Toolbox tab">
-        <div class="tool-card-signal-row">
-          <span class="tool-card-signal is-accent">Popular helper</span>
-          <span class="tool-card-signal">Free tool</span>
-          
-        </div>
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe1fb, #eef0ff);">
-          <span class="tool-thumb-icon" aria-hidden="true">🔤</span>
-          <span class="tool-thumb-label">Word finder</span>
-        </div>
-        <div class="tool-overview-card-copy">
-          <h3>Unscrambler</h3>
-          <p class="muted">Type scrambled letters and get a cleaner list of likely English words made from them.</p>
-        </div>
-        <div class="tool-overview-card-footer">
-          <div class="tool-chip-row">
-            <span class="tool-chip">Writing + words</span>
-            <span class="tool-chip">Bookmarkable page</span>
-          </div>
-          <p class="tool-card-utility-note">Fast to open, easy to bookmark, and built to do one job clearly.</p>
-          <span class="tool-card-action">Open unscrambler →</span>
-        </div>
+        <span class="tool-card-compact-icon" aria-hidden="true">🔤</span>
+        <span class="tool-card-compact-main">
+          <span class="tool-card-compact-title-row">
+            <h3>Unscrambler</h3>
+            
+          </span>
+          <span class="tool-card-compact-desc">Word finder</span>
+          <span class="tool-card-compact-meta">
+            <span>Writing + words</span>
+            <span>Popular helper</span>
+          </span>
+        </span>
+        <span class="tool-card-compact-cta" aria-hidden="true">→</span>
       </a>
       
       <a class="tool-overview-card tool-overview-card-link" data-tool-slug="password-generator" href="/toolbox/password-generator/?cb=toolbox20260705gamepremium" aria-label="Open Password generator in this Toolbox tab">
-        <div class="tool-card-signal-row">
-          <span class="tool-card-signal is-accent">Practical utility</span>
-          <span class="tool-card-signal">Free tool</span>
-          
-        </div>
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #fdf0cf, #e8fff6);">
-          <span class="tool-thumb-icon" aria-hidden="true">🔐</span>
-          <span class="tool-thumb-label">Secure login helper</span>
-        </div>
-        <div class="tool-overview-card-copy">
-          <h3>Password generator</h3>
-          <p class="muted">Generate a stronger random password locally in your browser without leaving the page.</p>
-        </div>
-        <div class="tool-overview-card-footer">
-          <div class="tool-chip-row">
-            <span class="tool-chip">Privacy + security</span>
-            <span class="tool-chip">Bookmarkable page</span>
-          </div>
-          <p class="tool-card-utility-note">Fast to open, easy to bookmark, and built to do one job clearly.</p>
-          <span class="tool-card-action">Open password generator →</span>
-        </div>
+        <span class="tool-card-compact-icon" aria-hidden="true">🔐</span>
+        <span class="tool-card-compact-main">
+          <span class="tool-card-compact-title-row">
+            <h3>Password generator</h3>
+            
+          </span>
+          <span class="tool-card-compact-desc">Secure login helper</span>
+          <span class="tool-card-compact-meta">
+            <span>Privacy + security</span>
+            <span>Practical utility</span>
+          </span>
+        </span>
+        <span class="tool-card-compact-cta" aria-hidden="true">→</span>
       </a>
       
       <a class="tool-overview-card tool-overview-card-link" data-tool-slug="text-helper" href="/toolbox/text-helper/?cb=toolbox20260705gamepremium" aria-label="Open Text helper in this Toolbox tab">
-        <div class="tool-card-signal-row">
-          <span class="tool-card-signal is-accent">Useful for work</span>
-          <span class="tool-card-signal">Free tool</span>
-          
-        </div>
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #fff0de, #e5f5ff);">
-          <span class="tool-thumb-icon" aria-hidden="true">📝</span>
-          <span class="tool-thumb-label">Copy cleanup</span>
-        </div>
-        <div class="tool-overview-card-copy">
-          <h3>Text helper</h3>
-          <p class="muted">Quickly switch case, count words, and estimate reading time for a pasted block of text.</p>
-        </div>
-        <div class="tool-overview-card-footer">
-          <div class="tool-chip-row">
-            <span class="tool-chip">Writing + words</span>
-            <span class="tool-chip">Bookmarkable page</span>
-          </div>
-          <p class="tool-card-utility-note">Fast to open, easy to bookmark, and built to do one job clearly.</p>
-          <span class="tool-card-action">Open text helper →</span>
-        </div>
+        <span class="tool-card-compact-icon" aria-hidden="true">📝</span>
+        <span class="tool-card-compact-main">
+          <span class="tool-card-compact-title-row">
+            <h3>Text helper</h3>
+            
+          </span>
+          <span class="tool-card-compact-desc">Copy cleanup</span>
+          <span class="tool-card-compact-meta">
+            <span>Writing + words</span>
+            <span>Useful for work</span>
+          </span>
+        </span>
+        <span class="tool-card-compact-cta" aria-hidden="true">→</span>
       </a>
       
       <a class="tool-overview-card tool-overview-card-link" data-tool-slug="quick-calculator" href="/toolbox/quick-calculator/?cb=toolbox20260705gamepremium" aria-label="Open Quick calculator in this Toolbox tab">
-        <div class="tool-card-signal-row">
-          <span class="tool-card-signal is-accent">Small but handy</span>
-          <span class="tool-card-signal">Free tool</span>
-          
-        </div>
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #e9f8d8, #fff7dd);">
-          <span class="tool-thumb-icon" aria-hidden="true">🧮</span>
-          <span class="tool-thumb-label">Fast math</span>
-        </div>
-        <div class="tool-overview-card-copy">
-          <h3>Quick calculator</h3>
-          <p class="muted">Use a simple percentage and tip helper when you need a quick answer without opening another tab.</p>
-        </div>
-        <div class="tool-overview-card-footer">
-          <div class="tool-chip-row">
-            <span class="tool-chip">Daily work helpers</span>
-            <span class="tool-chip">Bookmarkable page</span>
-          </div>
-          <p class="tool-card-utility-note">Fast to open, easy to bookmark, and built to do one job clearly.</p>
-          <span class="tool-card-action">Open calculator →</span>
-        </div>
+        <span class="tool-card-compact-icon" aria-hidden="true">🧮</span>
+        <span class="tool-card-compact-main">
+          <span class="tool-card-compact-title-row">
+            <h3>Quick calculator</h3>
+            
+          </span>
+          <span class="tool-card-compact-desc">Fast math</span>
+          <span class="tool-card-compact-meta">
+            <span>Daily work helpers</span>
+            <span>Small but handy</span>
+          </span>
+        </span>
+        <span class="tool-card-compact-cta" aria-hidden="true">→</span>
       </a>
       
       <a class="tool-overview-card tool-overview-card-link" data-tool-slug="random-chooser" href="/toolbox/random-chooser/?cb=toolbox20260705gamepremium" aria-label="Open Random chooser in this Toolbox tab">
-        <div class="tool-card-signal-row">
-          <span class="tool-card-signal is-accent">Decision helper</span>
-          <span class="tool-card-signal">Free tool</span>
-          
-        </div>
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe4dd, #fff6d9);">
-          <span class="tool-thumb-icon" aria-hidden="true">🎯</span>
-          <span class="tool-thumb-label">Fair pick</span>
-        </div>
-        <div class="tool-overview-card-copy">
-          <h3>Random chooser</h3>
-          <p class="muted">Paste a short list of options and let the toolbox pick one fairly when you are stuck deciding.</p>
-        </div>
-        <div class="tool-overview-card-footer">
-          <div class="tool-chip-row">
-            <span class="tool-chip">Daily work helpers</span>
-            <span class="tool-chip">Bookmarkable page</span>
-          </div>
-          <p class="tool-card-utility-note">Fast to open, easy to bookmark, and built to do one job clearly.</p>
-          <span class="tool-card-action">Open random chooser →</span>
-        </div>
+        <span class="tool-card-compact-icon" aria-hidden="true">🎯</span>
+        <span class="tool-card-compact-main">
+          <span class="tool-card-compact-title-row">
+            <h3>Random chooser</h3>
+            
+          </span>
+          <span class="tool-card-compact-desc">Fair pick</span>
+          <span class="tool-card-compact-meta">
+            <span>Daily work helpers</span>
+            <span>Decision helper</span>
+          </span>
+        </span>
+        <span class="tool-card-compact-cta" aria-hidden="true">→</span>
       </a>
       
       <a class="tool-overview-card tool-overview-card-link" data-tool-slug="qr-code-generator" href="/toolbox/qr-code-generator/?cb=toolbox20260705gamepremium" aria-label="Open QR code generator in this Toolbox tab">
-        <div class="tool-card-signal-row">
-          <span class="tool-card-signal is-accent">Share faster</span>
-          <span class="tool-card-signal">Free tool</span>
-          
-        </div>
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #ddefff, #f1f3ff);">
-          <span class="tool-thumb-icon" aria-hidden="true">▦</span>
-          <span class="tool-thumb-label">Scan-ready</span>
-        </div>
-        <div class="tool-overview-card-copy">
-          <h3>QR code generator</h3>
-          <p class="muted">Turn a link, note, Wi-Fi string, or simple contact detail into a scannable QR code right on the page.</p>
-        </div>
-        <div class="tool-overview-card-footer">
-          <div class="tool-chip-row">
-            <span class="tool-chip">Sharing + handoff</span>
-            <span class="tool-chip">Bookmarkable page</span>
-          </div>
-          <p class="tool-card-utility-note">Fast to open, easy to bookmark, and built to do one job clearly.</p>
-          <span class="tool-card-action">Open QR code generator →</span>
-        </div>
+        <span class="tool-card-compact-icon" aria-hidden="true">▦</span>
+        <span class="tool-card-compact-main">
+          <span class="tool-card-compact-title-row">
+            <h3>QR code generator</h3>
+            
+          </span>
+          <span class="tool-card-compact-desc">Scan-ready</span>
+          <span class="tool-card-compact-meta">
+            <span>Sharing + handoff</span>
+            <span>Share faster</span>
+          </span>
+        </span>
+        <span class="tool-card-compact-cta" aria-hidden="true">→</span>
       </a>
       
       <a class="tool-overview-card tool-overview-card-link" data-tool-slug="pomodoro-timer" href="/toolbox/pomodoro-timer/?cb=toolbox20260705gamepremium" aria-label="Open Pomodoro timer in this Toolbox tab">
-        <div class="tool-card-signal-row">
-          <span class="tool-card-signal is-accent">Focus helper</span>
-          <span class="tool-card-signal">Free tool</span>
-          <span class="tool-card-signal">Newer addition</span>
-        </div>
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #ffe3e3, #fff4dc);">
-          <span class="tool-thumb-icon" aria-hidden="true">⏳</span>
-          <span class="tool-thumb-label">Focus block</span>
-        </div>
-        <div class="tool-overview-card-copy">
-          <h3>Pomodoro timer</h3>
-          <p class="muted">Run a simple work-and-break timer when you want a cleaner focus block without another app.</p>
-        </div>
-        <div class="tool-overview-card-footer">
-          <div class="tool-chip-row">
-            <span class="tool-chip">Focus + flow</span>
-            <span class="tool-chip">Bookmarkable page</span>
-          </div>
-          <p class="tool-card-utility-note">Fast to open, easy to bookmark, and built to do one job clearly.</p>
-          <span class="tool-card-action">Open Pomodoro timer →</span>
-        </div>
+        <span class="tool-card-compact-icon" aria-hidden="true">⏳</span>
+        <span class="tool-card-compact-main">
+          <span class="tool-card-compact-title-row">
+            <h3>Pomodoro timer</h3>
+            <span class="tool-card-compact-badge">New</span>
+          </span>
+          <span class="tool-card-compact-desc">Focus block</span>
+          <span class="tool-card-compact-meta">
+            <span>Focus + flow</span>
+            <span>Focus helper</span>
+          </span>
+        </span>
+        <span class="tool-card-compact-cta" aria-hidden="true">→</span>
       </a>
       
       <a class="tool-overview-card tool-overview-card-link" data-tool-slug="browser-network-info" href="/toolbox/browser-network-info/?cb=toolbox20260705gamepremium" aria-label="Open Browser + network info in this Toolbox tab">
-        <div class="tool-card-signal-row">
-          <span class="tool-card-signal is-accent">Quick diagnostics</span>
-          <span class="tool-card-signal">Free tool</span>
-          <span class="tool-card-signal">Newer addition</span>
-        </div>
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #dff5ff, #e8ffe8);">
-          <span class="tool-thumb-icon" aria-hidden="true">📶</span>
-          <span class="tool-thumb-label">Device snapshot</span>
-        </div>
-        <div class="tool-overview-card-copy">
-          <h3>Browser + network info</h3>
-          <p class="muted">See useful browser, screen, language, timezone, and connection details for quick troubleshooting.</p>
-        </div>
-        <div class="tool-overview-card-footer">
-          <div class="tool-chip-row">
-            <span class="tool-chip">Quick diagnostics</span>
-            <span class="tool-chip">Bookmarkable page</span>
-          </div>
-          <p class="tool-card-utility-note">Fast to open, easy to bookmark, and built to do one job clearly.</p>
-          <span class="tool-card-action">Open browser info →</span>
-        </div>
+        <span class="tool-card-compact-icon" aria-hidden="true">📶</span>
+        <span class="tool-card-compact-main">
+          <span class="tool-card-compact-title-row">
+            <h3>Browser + network info</h3>
+            <span class="tool-card-compact-badge">New</span>
+          </span>
+          <span class="tool-card-compact-desc">Device snapshot</span>
+          <span class="tool-card-compact-meta">
+            <span>Quick diagnostics</span>
+            <span>Quick diagnostics</span>
+          </span>
+        </span>
+        <span class="tool-card-compact-cta" aria-hidden="true">→</span>
       </a>
       
       <a class="tool-overview-card tool-overview-card-link" data-tool-slug="unit-converter" href="/toolbox/unit-converter/?cb=toolbox20260705gamepremium" aria-label="Open Unit converter in this Toolbox tab">
-        <div class="tool-card-signal-row">
-          <span class="tool-card-signal is-accent">Daily utility</span>
-          <span class="tool-card-signal">Free tool</span>
-          <span class="tool-card-signal">Newer addition</span>
-        </div>
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #f1e5ff, #fff4e5);">
-          <span class="tool-thumb-icon" aria-hidden="true">📏</span>
-          <span class="tool-thumb-label">Quick convert</span>
-        </div>
-        <div class="tool-overview-card-copy">
-          <h3>Unit converter</h3>
-          <p class="muted">Convert common length, temperature, and storage values without opening a cluttered converter site.</p>
-        </div>
-        <div class="tool-overview-card-footer">
-          <div class="tool-chip-row">
-            <span class="tool-chip">Daily work helpers</span>
-            <span class="tool-chip">Bookmarkable page</span>
-          </div>
-          <p class="tool-card-utility-note">Fast to open, easy to bookmark, and built to do one job clearly.</p>
-          <span class="tool-card-action">Open unit converter →</span>
-        </div>
+        <span class="tool-card-compact-icon" aria-hidden="true">📏</span>
+        <span class="tool-card-compact-main">
+          <span class="tool-card-compact-title-row">
+            <h3>Unit converter</h3>
+            <span class="tool-card-compact-badge">New</span>
+          </span>
+          <span class="tool-card-compact-desc">Quick convert</span>
+          <span class="tool-card-compact-meta">
+            <span>Daily work helpers</span>
+            <span>Daily utility</span>
+          </span>
+        </span>
+        <span class="tool-card-compact-cta" aria-hidden="true">→</span>
       </a>
       
       <a class="tool-overview-card tool-overview-card-link" data-tool-slug="mini-game" href="/toolbox/mini-game/?cb=toolbox20260705gamepremium" aria-label="Open Reaction timer in this Toolbox tab">
-        <div class="tool-card-signal-row">
-          <span class="tool-card-signal is-accent">Daily break</span>
-          <span class="tool-card-signal">Free tool</span>
-          <span class="tool-card-signal">Newer addition</span>
-        </div>
-        <div class="tool-thumb" style="background: linear-gradient(135deg, #dff7ff, #fff0fa);">
-          <span class="tool-thumb-icon" aria-hidden="true">⚡</span>
-          <span class="tool-thumb-label">Level challenge</span>
-        </div>
-        <div class="tool-overview-card-copy">
-          <h3>Reaction timer</h3>
-          <p class="muted">Play a richer browser-only reaction challenge with Rookie, Standard, Pro, and Endurance levels, local bests, and no account required.</p>
-        </div>
-        <div class="tool-overview-card-footer">
-          <div class="tool-chip-row">
-            <span class="tool-chip">Focus + flow</span>
-            <span class="tool-chip">Bookmarkable page</span>
-          </div>
-          <p class="tool-card-utility-note">Fast to open, easy to bookmark, and built to do one job clearly.</p>
-          <span class="tool-card-action">Open level challenge →</span>
-        </div>
+        <span class="tool-card-compact-icon" aria-hidden="true">⚡</span>
+        <span class="tool-card-compact-main">
+          <span class="tool-card-compact-title-row">
+            <h3>Reaction timer</h3>
+            <span class="tool-card-compact-badge">New</span>
+          </span>
+          <span class="tool-card-compact-desc">Level challenge</span>
+          <span class="tool-card-compact-meta">
+            <span>Focus + flow</span>
+            <span>Daily break</span>
+          </span>
+        </span>
+        <span class="tool-card-compact-cta" aria-hidden="true">→</span>
       </a>
       
     </div>
