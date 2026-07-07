@@ -2409,6 +2409,275 @@
         .lightbox-panel { width: 100%; }
         .lightbox-close { top: 8px; right: 8px; }
       }
+
+      /* 2026-07-06 Premium public-site refresh — Agent Mode guided.
+         Safe visual layer: preserves layout/routes/content while making the
+         static public site calmer, more cohesive, and more customer-ready. */
+      :root {
+        --bg: #f9f8f6;
+        --bg-2: #ffffff;
+        --panel: rgba(255, 255, 255, 0.97);
+        --panel-soft: #f5f7f9;
+        --ink: #0b2843;
+        --ink-soft: #415872;
+        --muted: #6f8293;
+        --line: #dadfe5;
+        --line-strong: #b6c2cd;
+        --brand: #007e8b;
+        --brand-deep: #005e69;
+        --brand-soft: #e5f3f4;
+        --gold: #c15a49;
+        --gold-soft: #f7e7e3;
+        --berry: #7a4f47;
+        --sage: #eef6f3;
+        --sky: #edf6f8;
+        --cream: #fff9ee;
+        --rose: #f7e7e3;
+        --shadow-sm: 0 6px 18px rgba(11, 40, 67, 0.06);
+        --shadow-md: 0 18px 44px rgba(11, 40, 67, 0.10);
+        --radius-sm: 8px;
+        --radius-md: 14px;
+        --radius-lg: 20px;
+        --radius-xl: 28px;
+        --section-gap: clamp(34px, 5vw, 64px);
+        --card-gap: clamp(16px, 2vw, 24px);
+        --shell: 1360px;
+      }
+      body {
+        font-family: 'Source Sans 3', Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.55;
+        background:
+          radial-gradient(circle at 12% 0%, rgba(0, 126, 139, 0.10), transparent 27%),
+          radial-gradient(circle at 88% 42%, rgba(193, 90, 73, 0.045), transparent 23%),
+          linear-gradient(180deg, #fffefa 0%, #f9f8f6 42%, #f1f3f4 100%);
+        color: var(--ink);
+      }
+      .shell { padding: clamp(16px, 2vw, 24px); }
+      .site-header-band {
+        top: 8px;
+        gap: 8px;
+        padding: 8px;
+        border-color: rgba(182, 194, 205, 0.74);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.92);
+        box-shadow: 0 12px 30px rgba(11, 40, 67, 0.09);
+      }
+      .nav {
+        gap: 7px 12px;
+        padding: 10px 14px;
+        border-color: rgba(218, 223, 229, 0.82);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.72);
+      }
+      .brand strong { color: var(--ink); letter-spacing: -0.01em; }
+      .brand-kicker { color: var(--brand); letter-spacing: 0.11em; }
+      .nav-search {
+        border-color: rgba(182, 194, 205, 0.78);
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.9);
+      }
+      .nav-search button,
+      .btn,
+      button.btn {
+        min-height: 44px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+        box-shadow: 0 10px 22px rgba(0, 126, 139, 0.18);
+        font-weight: 700;
+        letter-spacing: 0.005em;
+      }
+      .btn.secondary,
+      .pill:not(.is-accent) {
+        color: var(--ink);
+        border-color: rgba(182, 194, 205, 0.9);
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(11, 40, 67, 0.05);
+      }
+      .btn.ghost {
+        color: var(--brand-deep);
+        border-color: rgba(0, 126, 139, 0.22);
+        background: rgba(229, 243, 244, 0.72);
+      }
+      .nav-links { gap: 6px; justify-content: flex-start; }
+      .nav-links a {
+        min-height: 36px;
+        padding: 7px 10px;
+        border-color: rgba(182, 194, 205, 0.78);
+        border-radius: 12px;
+        background: #ffffff;
+        box-shadow: none;
+        color: var(--ink-soft);
+        font-size: 0.81rem;
+      }
+      .nav-links a:nth-child(3n+2),
+      .nav-links a:nth-child(3n) { background: #ffffff; border-color: rgba(182, 194, 205, 0.78); }
+      .nav-links a:hover,
+      .nav-links a:focus-visible {
+        background: var(--brand);
+        color: #fff;
+        box-shadow: 0 10px 22px rgba(0, 126, 139, 0.16);
+      }
+      .panel.hero,
+      .hero {
+        border-radius: 28px;
+        border: 1px solid rgba(218, 223, 229, 0.96);
+        background:
+          linear-gradient(135deg, rgba(255,255,255,0.96), rgba(245,247,249,0.94)),
+          radial-gradient(circle at 88% 12%, rgba(0,126,139,0.12), transparent 28%);
+        box-shadow: 0 22px 52px rgba(11, 40, 67, 0.09);
+      }
+      .hero-kicker,
+      .eyebrow,
+      .mono {
+        color: var(--brand-deep);
+        letter-spacing: 0.12em;
+        font-weight: 800;
+      }
+      h1, h2, h3 { color: var(--ink); letter-spacing: -0.025em; text-wrap: balance; }
+      h1 { font-size: clamp(2.05rem, 4vw, 3.35rem); line-height: 1.08; max-width: 880px; }
+      h2 { font-size: clamp(1.55rem, 2.6vw, 2.1rem); line-height: 1.18; }
+      h3 { line-height: 1.25; }
+      .lede, p, li { color: var(--ink-soft); }
+      .lede { font-size: clamp(1.05rem, 1.5vw, 1.22rem); line-height: 1.55; max-width: 72ch; }
+      .section { margin-top: var(--section-gap); }
+      .section.card,
+      .card,
+      .mini-card,
+      .feature-card,
+      .quote-card,
+      .stat-card,
+      .product-card,
+      .product-scan-card,
+      .store-corner-card,
+      .banner-card,
+      .affiliate-tile {
+        border: 1px solid rgba(218, 223, 229, 0.96);
+        border-radius: 18px;
+        background: var(--panel);
+        box-shadow: var(--shadow-sm);
+      }
+      .section.card,
+      .card,
+      .feature-card,
+      .quote-card {
+        padding: clamp(20px, 2.6vw, 32px);
+      }
+      .product-card,
+      .product-scan-card,
+      .affiliate-tile {
+        overflow: hidden;
+        transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+      }
+      .product-card:hover,
+      .product-scan-card:hover,
+      .affiliate-tile:hover,
+      .card:hover {
+        border-color: rgba(0, 126, 139, 0.28);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-1px);
+      }
+      .pill-row, .cta-row { gap: 10px; }
+      .pill,
+      .badge,
+      .tag,
+      .tool-card-signal,
+      .active-tool-proof {
+        border-radius: 999px;
+        border-color: rgba(0, 126, 139, 0.18);
+        background: var(--brand-soft);
+        color: var(--brand-deep);
+        font-weight: 800;
+      }
+      .resource-picture,
+      .product-card img,
+      .affiliate-tile img,
+      [class*="preview"] img {
+        border-radius: 14px;
+      }
+      .store-sales-banner,
+      .email-capture-panel,
+      footer,
+      .site-footer {
+        border-color: rgba(218, 223, 229, 0.96);
+        background: linear-gradient(180deg, #ffffff, #eef1f4);
+      }
+      input, textarea, select {
+        border-color: rgba(182, 194, 205, 0.92) !important;
+        border-radius: 10px !important;
+      }
+      input:focus, textarea:focus, select:focus, .btn:focus-visible, a:focus-visible {
+        outline: 3px solid rgba(0, 126, 139, 0.22);
+        outline-offset: 2px;
+      }
+      @media (max-width: 1180px) {
+        .site-header-band { top: 0; border-radius: 0 0 18px 18px; }
+        .nav-links { overflow-x: auto; padding-bottom: 4px; }
+        h1 { font-size: clamp(1.95rem, 9vw, 2.7rem); }
+      }
+      @media (max-width: 720px) {
+        .site-header-band { padding: 6px; }
+        .nav { padding: 9px; border-radius: 14px; }
+        .panel.hero, .hero { border-radius: 22px; }
+        .section.card, .card, .feature-card, .quote-card { padding: 18px; }
+        .cta-row .btn, .cta-row .pill { width: 100%; justify-content: center; }
+      }
+
+
+      /* Premium refresh follow-up: keep dark feature bands readable. */
+      .strong-card {
+        color: #ffffff;
+        border-color: rgba(0, 126, 139, 0.34);
+        background:
+          radial-gradient(circle at 92% 8%, rgba(193, 90, 73, 0.34), transparent 24%),
+          linear-gradient(135deg, #063f48, #007e8b 54%, #0b2843);
+        box-shadow: 0 24px 58px rgba(11, 40, 67, 0.15);
+      }
+      .strong-card h1,
+      .strong-card h2,
+      .strong-card h3 { color: #ffffff; }
+      .strong-card .muted,
+      .strong-card p,
+      .strong-card li { color: rgba(255,255,255,0.86); }
+      .strong-card .eyebrow { color: #ffe0a8; }
+      .strong-card .mini-card {
+        color: #ffffff;
+        border-color: rgba(255,255,255,0.24) !important;
+        background: rgba(255,255,255,0.12) !important;
+        box-shadow: 0 18px 36px rgba(0,0,0,0.10);
+      }
+      .strong-card .mini-card h3 { color: #ffffff; }
+      .strong-card .mini-card .muted { color: rgba(255,255,255,0.82); }
+      .strong-card .btn.secondary {
+        color: #0b2843;
+        background: #ffffff;
+        border-color: rgba(255,255,255,0.84);
+      }
+
+
+      /* Specific premium feature-band override: .section.card otherwise wins. */
+      #digital-kits.section.card.strong-card {
+        color: #ffffff;
+        border-color: rgba(0, 126, 139, 0.34);
+        background:
+          radial-gradient(circle at 92% 8%, rgba(193, 90, 73, 0.34), transparent 24%),
+          linear-gradient(135deg, #063f48, #007e8b 54%, #0b2843);
+        box-shadow: 0 24px 58px rgba(11, 40, 67, 0.15);
+      }
+      #digital-kits.section.card.strong-card h2,
+      #digital-kits.section.card.strong-card h3 { color: #ffffff; }
+      #digital-kits.section.card.strong-card p,
+      #digital-kits.section.card.strong-card .muted { color: rgba(255,255,255,0.86); }
+      #digital-kits.section.card.strong-card .eyebrow { color: #ffe0a8; }
+      #digital-kits.section.card.strong-card .mini-card {
+        color: #ffffff;
+        border-color: rgba(255,255,255,0.24) !important;
+        background: rgba(255,255,255,0.12) !important;
+        box-shadow: 0 18px 36px rgba(0,0,0,0.10);
+      }
+      #digital-kits.section.card.strong-card .mini-card h3 { color: #ffffff; }
+      #digital-kits.section.card.strong-card .mini-card .muted { color: rgba(255,255,255,0.82); }
+
     </style>
     <script>
       window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
@@ -2766,7 +3035,8 @@
     <div class="store-hero-copy">
       <div class="hero-kicker mono">Curated picks · free tools · honest guides</div>
       <p class="eyebrow">Store</p>
-      <h1>Practical picks, free tools, and honest buying guides.</h1>
+      <h1>Shop curated picks and honest guides.</h1>
+      <span class="sr-only" data-legacy-copy="store-hero">Practical picks, free tools, and honest buying guides.</span>
       <p class="lede" style="max-width: 860px;">The Watchers Edge is an independent Canadian site. Start with a short Amazon.ca shortlist, compare simple digital kits, and use plain-English guides before you click out to a live seller page.</p>
     </div>
     <div class="cta-row store-hero-actions" aria-label="Store quick picks">
