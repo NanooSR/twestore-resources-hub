@@ -3627,9 +3627,9 @@
               <span>Practical digital tools, buyer guides, and trusted resources in one place.</span>
             </span>
           </a>
-          <form class="nav-search" action="/store#store-top-matches" method="get">
+          <form class="nav-search" action="/store#store-top-matches" method="get" data-header-search-form>
             <label for="global-search">Search</label>
-            <input id="global-search" type="text" name="q" placeholder="Products, guides, FAQs">
+            <input id="global-search" type="text" name="q" placeholder="Products, guides, Amazon picks, FAQs">
             <button type="submit">Search</button>
           </form>
           
@@ -4310,6 +4310,25 @@
         <p class="lightbox-caption"></p>
       </div>
     </div>
+
+    <script>
+      (function () {
+        const form = document.querySelector('[data-header-search-form]');
+        if (!form) return;
+        const input = form.querySelector('input[name="q"]');
+        const amazonIntent = /\b(amazon|amazon\.ca|affiliate|gear|equipment|supplies|setup|desk|chair|monitor|keyboard|scanner|label maker|microphone|webcam|lighting|church coffee|pet|cat|dog|office|workspace|creator)\b/i;
+        form.addEventListener('submit', (event) => {
+          const query = String(input?.value || '').trim();
+          if (!query || !amazonIntent.test(query)) return;
+          event.preventDefault();
+          const target = new URL('/amazon-store/', window.location.origin);
+          target.searchParams.set('q', query);
+          target.searchParams.set('src', 'header-search-amazon');
+          window.location.href = target.pathname + target.search + '#amazon-store-search';
+        });
+      })();
+    </script>
+
     <script>
       (function () {
         const widget = document.querySelector('[data-buyer-support-widget]');
