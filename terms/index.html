@@ -2438,6 +2438,27 @@
         .store-corner-card .pill-row { gap: 5px; }
         .store-corner-card .pill,
         .store-weather-card button { font-size: 0.8rem; padding: 8px 10px; min-height: 44px; }
+        .section-head {
+          display: grid;
+          grid-template-columns: 1fr;
+          align-items: start;
+          gap: 10px;
+          min-width: 0;
+          overflow-wrap: anywhere;
+        }
+        .section-head .pill,
+        .section-head .btn,
+        .pill.is-accent {
+          max-width: 100%;
+          white-space: normal;
+          overflow-wrap: anywhere;
+          text-align: left;
+        }
+        .stat-card strong,
+        .store-result-count strong {
+          min-width: 0;
+          overflow-wrap: normal;
+        }
         .store-weather-card {
           gap: 8px;
           min-height: 0;
