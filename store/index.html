@@ -290,8 +290,8 @@
         border-radius: 999px;
         background: var(--brand);
         color: #fff;
-        padding: 9px 14px;
-        min-width: 68px;
+        padding: 9px 18px;
+        min-width: 90px;
         min-height: 44px;
         font: inherit;
         font-weight: 600;
@@ -725,10 +725,16 @@
         gap: 18px;
         align-items: start;
       }
-      .grid.two { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+      .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .grid.three { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
       .grid.four { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
       .grid.five { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+      @media (min-width: 901px) {
+        .grid.three > :last-child:nth-child(3n + 1),
+        .grid.five > :last-child:nth-child(5n + 1) {
+          grid-column: 1 / -1;
+        }
+      }
       .guided-path-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
       .split {
         display: grid;
@@ -984,9 +990,11 @@
         text-decoration: none;
         font-size: 0.92rem;
         transition: 160ms ease;
-        overflow-wrap: anywhere;
-        word-break: break-word;
+        overflow-wrap: normal;
+        word-break: keep-all;
+        white-space: normal;
       }
+
       .pill:hover,
       .pill:focus-visible {
         border-color: rgba(9, 103, 114, 0.22);
@@ -1184,6 +1192,24 @@
         grid-template-columns: minmax(0, 1.75fr) minmax(320px, 0.9fr);
         gap: 22px;
         align-items: start;
+      }
+      .store-main-layout.is-filtered {
+        grid-template-columns: minmax(0, 1.9fr) minmax(280px, 0.62fr);
+      }
+      .store-main-layout.is-filtered .store-main-primary,
+      .store-main-layout.is-filtered .store-main-secondary,
+      .store-main-layout.is-filtered #store-product-results {
+        grid-column: auto;
+        grid-row: auto;
+      }
+      .grid.three.store-situation-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .grid.five.store-quick-path-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+      .store-filtered-secondary {
+        align-self: start;
       }
       .store-main-primary {
         display: grid;
@@ -1834,6 +1860,10 @@
         margin: 0;
         padding: 0;
       }
+      .store-sales-banner-grid.no-rail {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "main";
+      }
       .store-sales-banner-main {
         grid-area: main;
         min-width: 0;
@@ -2019,6 +2049,32 @@
         from { transform: translateX(0); }
         to { transform: translateX(-50%); }
       }
+
+
+      .store-main-layout.is-static-filtered {
+        grid-template-columns: minmax(0, 1fr) !important;
+      }
+      .store-main-layout.is-static-filtered .store-main-primary,
+      .store-main-layout.is-static-filtered .store-main-secondary,
+      .store-main-layout.is-static-filtered #store-product-results {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        width: 100% !important;
+        min-width: 0 !important;
+      }
+
+      /* Static GitHub Pages search/filter state: do not reserve empty sales-rail columns. */
+      .store-sales-banner-grid.no-rail {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        grid-template-areas: "main" !important;
+      }
+      .store-sales-banner-grid.no-rail > .store-sales-banner-main {
+        grid-area: main !important;
+        width: 100% !important;
+        min-width: 0 !important;
+      }
+
       @media (prefers-reduced-motion: reduce) {
         .store-sales-track {
           animation: none !important;
@@ -2211,9 +2267,17 @@
         }
         .store-filter-grid,
         .store-main-layout,
+        .store-main-layout.is-filtered,
         .store-compare-row,
         .advanced-amazon-grid,
-        .email-capture-plan {
+        .email-capture-plan,
+        .grid.two,
+        .grid.three,
+        .grid.three.store-situation-grid,
+        .grid.three.store-front-product-grid,
+        .grid.four,
+        .grid.five,
+        .grid.five.store-quick-path-grid {
           grid-template-columns: 1fr;
         }
         .store-main-primary {
@@ -3615,6 +3679,7 @@
       
       
       
+      
       <div class="site-header-band store-top-corner-grid" aria-label="Site quick tools">
         <div class="header-band-side header-band-side-left">
           <article class="store-corner-card store-corner-deal header-side-widget" aria-label="Featured deal path">
@@ -3650,7 +3715,7 @@
           
           <div class="nav-links nav-links-primary" aria-label="Primary site navigation">
             <a class="is-home" href="/">Home</a>
-            <a class="is-amazon" href="/resources?src=store-nav-route">Amazon Picks</a>
+            <a class="is-amazon" href="/amazon-store?src=store-nav-route">Amazon Store</a>
             <a class="is-kits" href="/store">Digital Kits</a>
             <a class="is-church" href="/church?src=store-nav-route">Church</a>
             <a class="is-pets" href="/resources?category=pet-home&amp;src=store-nav-route">Pets</a>
@@ -3941,7 +4006,7 @@
     <h3>Try the closest guide instead of starting over</h3>
     <p class="muted">No strong result is showing yet. Try a broader phrase, open the closest Amazon section, browse live digital offers, or use Collections for a wider browse.</p>
     <div class="cta-row">
-      <a class="btn secondary" href="/resources?src=store-search-empty-state">Browse Amazon picks</a>
+      <a class="btn secondary" href="/resources?src=store-search-empty-state">Open Amazon Store</a>
       <a class="btn ghost" href="/collections?src=store-search-empty-state">Browse collections</a>
     </div>
   </article>
@@ -3957,7 +4022,7 @@
       <p class="lede" style="max-width: 860px;">The Watchers Edge is an independent Canadian site. Start with a short Amazon.ca shortlist, compare simple digital kits, and use plain-English guides before you click out to a live seller page.</p>
     </div>
     <div class="cta-row store-hero-actions" aria-label="Store quick picks">
-      <a class="btn" href="#store-front-amazon-picks">Browse Amazon picks</a>
+      <a class="btn" href="#store-front-amazon-picks">Open Amazon Store</a>
       <a class="btn secondary" href="/toolbox?cb=" target="twe-toolbox">Try the free toolbox</a>
       <a class="btn ghost" href="#store-front-product-picks">See the digital kits</a>
     </div>
@@ -4000,110 +4065,32 @@
 <section class="section card" id="store-front-amazon-picks" style="padding: 24px; border-radius: 22px; background: linear-gradient(180deg, rgba(255,255,255,0.99), rgba(255,241,214,0.46));">
   <div class="section-head" style="align-items: center; margin-bottom: 16px;">
     <div>
-      <p class="eyebrow">Featured picks</p>
-      <h2 style="margin-bottom: 6px;">Start with three practical Amazon.ca picks</h2>
-      <p class="muted" style="margin-bottom: 0; max-width: 860px;">If you want something useful today, start here. Each card gives you a plain-English fit note, a direct Amazon.ca price check, and a matching guide if you want more context first.</p>
+      <p class="eyebrow">Amazon Store</p>
+      <h2 style="margin-bottom: 6px;">Amazon picks now live on one clean search page.</h2>
+      <p class="muted" style="margin-bottom: 0; max-width: 860px;">To keep this Store page focused and professional, the full Amazon affiliate catalog moved to the dedicated TWE Amazon Store. Search there for local approved Amazon.ca picks; live price, availability, ratings, reviews, shipping, and checkout stay on Amazon.ca.</p>
     </div>
-    <a class="pill is-accent" href="/resources?src=store-front-route">Open all 490 Amazon picks</a>
+    <a class="pill is-accent" href="/amazon-store?src=store-front-route">Open TWE Amazon Store</a>
   </div>
-  <div class="card" style="margin-bottom: 18px; padding: 18px; border-radius: 18px; background: rgba(255,255,255,0.82);">
-    <p class="eyebrow">Shop by need</p>
-    <h3 style="margin-bottom: 8px;">Start with the guide that matches your problem best.</h3>
-    <p class="muted" style="margin-bottom: 0;">The strongest quick starts right now are daily workspace fixes, quick admin cleanup, creator/call polish, research comfort, church/event supply picks, and smaller first buys that feel easier to act on fast.</p>
-    <div class="grid three" style="margin-top: 16px;">
-      <article class="mini-card" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.92);">
-        <p class="eyebrow">Workspace</p>
-        <p class="muted">Desk comfort, posture, and daily work upgrades.</p>
-        <div class="cta-row" style="margin-top: 0;">
-          <a class="btn secondary" href="/best-standing-desk-upgrades-for-solo-buyers.html?src=store-front-route">Open workspace guide</a>
-          <a class="btn ghost" href="/resources?category=workspace&amp;q=standing+desk&amp;src=store-front-route">Browse picks</a>
-        </div>
-      </article>
-      <article class="mini-card" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.92);">
-        <p class="eyebrow">Admin &amp; paperwork</p>
-        <p class="muted">Scanners, filing, and paperwork cleanup tools.</p>
-        <div class="cta-row" style="margin-top: 0;">
-          <a class="btn secondary" href="/best-admin-desk-tools-for-invoices-and-paperwork.html?src=store-front-route">Open admin guide</a>
-          <a class="btn ghost" href="/resources?category=admin-paperwork&amp;q=scanner+filing&amp;src=store-front-route">Browse picks</a>
-        </div>
-      </article>
-      <article class="mini-card" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.92);">
-        <p class="eyebrow">Creator &amp; calls</p>
-        <p class="muted">Microphones, webcams, lighting, and creator-call gear.</p>
-        <div class="cta-row" style="margin-top: 0;">
-          <a class="btn secondary" href="/best-usb-microphone-upgrades-for-calls-and-content.html?src=store-front-route">Open creator guide</a>
-          <a class="btn ghost" href="/resources?category=creator-calls&amp;q=microphone+webcam&amp;src=store-front-route">Browse picks</a>
-        </div>
-      </article>
-      <article class="mini-card" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.92);">
-        <p class="eyebrow">Research &amp; reading</p>
-        <p class="muted">Monitors, lighting, and longer-session desk support.</p>
-        <div class="cta-row" style="margin-top: 0;">
-          <a class="btn secondary" href="/best-ai-research-desk-setup.html?src=store-front-route">Open research guide</a>
-          <a class="btn ghost" href="/resources?category=research-reading&amp;q=monitor+desk+lighting&amp;src=store-front-route">Browse picks</a>
-        </div>
-      </article>
-      <article class="mini-card" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.92);">
-        <p class="eyebrow">Church &amp; events</p>
-        <p class="muted">Welcome, coffee, kids, signage, care-room, and service-day supply picks.</p>
-        <div class="cta-row" style="margin-top: 0;">
-          <a class="btn secondary" href="/church-supplies-buying-path-for-offices-services-and-events.html?src=store-front-route">See church guide</a>
-          <a class="btn ghost" href="/resources?category=church-ministry&amp;q=church+welcome+coffee&amp;src=store-front-route">Browse picks</a>
-        </div>
-      </article>
-      <article class="mini-card" style="padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.92);">
-        <p class="eyebrow">Small quick wins</p>
-        <p class="muted">Lighting, note capture, labels, and desk-reset tools that feel easier to buy first.</p>
-        <div class="cta-row" style="margin-top: 0;">
-          <a class="btn secondary" href="/best-review-desk-lighting-and-note-capture-tools.html?src=store-front-route">Open quick-win guide</a>
-          <a class="btn ghost" href="/resources?q=label+desk+light+reset&amp;src=store-front-route">Browse picks</a>
-        </div>
-      </article>
-    </div>
+  <div class="grid three">
+    <article class="mini-card" style="padding: 18px; border-radius: 18px; background: rgba(255,255,255,0.92);">
+      <p class="eyebrow">Search</p>
+      <h3>Find gear without a wall of cards.</h3>
+      <p class="muted">Use one dedicated search for desk, admin, creator, church, pet, and quick-win Amazon.ca ideas.</p>
+      <a class="btn ghost" href="/amazon-store?src=store-amazon-compact-search">Search Amazon Store</a>
+    </article>
+    <article class="mini-card" style="padding: 18px; border-radius: 18px; background: rgba(255,255,255,0.92);">
+      <p class="eyebrow">Compliant fallback</p>
+      <h3>Local approved picks first.</h3>
+      <p class="muted">Until official Amazon API access is configured, TWEStore only shows existing approved local affiliate picks.</p>
+      <a class="btn ghost" href="/amazon-store?src=store-amazon-compact-fallback#amazon-store-results">Browse approved picks</a>
+    </article>
+    <article class="mini-card" style="padding: 18px; border-radius: 18px; background: rgba(255,255,255,0.92);">
+      <p class="eyebrow">Disclosure</p>
+      <h3>No fake prices or reviews.</h3>
+      <p class="muted">The main site avoids unsupported price, rating, review, and “best reviewed” claims. Amazon.ca shows live details.</p>
+      <a class="btn ghost" href="/privacy#affiliate-disclosure">Read disclosure</a>
+    </article>
   </div>
-  <div class="grid three store-front-product-grid">
-    
-    <article class="mini-card" style="padding: 18px; border-radius: 18px; background: rgba(255,255,255,0.94);">
-      <div class="resource-picture is-amazon-photo" style="margin-bottom: 14px;"><img src="https://m.media-amazon.com/images/I/714K5vgjQdL._AC_SL1500_.jpg" alt="FEZIBO Standing Desk 47 x 24 Inch, Height Adjustable Desk with Memory Buttons, Electric Sit Stand Desk with 7th Gen Lift System, Home Office Table with Splice Board (Maple)" loading="lazy"></div>
-      <p class="eyebrow">Workspace · Amazon.ca</p>
-      <h3 style="margin-bottom: 6px;">Standing desk for daily work</h3>
-      <p class="muted">A sturdy sit-stand desk if you work at the same spot all day.</p>
-      <p class="resource-card-amazon-title"><strong>Amazon product:</strong> FEZIBO Standing Desk</p>
-      <p class="resource-card-guide-note"><strong>Why it made the list:</strong> Best Standing Desk Upgrades For Solo Buyers</p>
-      <div class="cta-row resource-card-actions" style="margin-top: 0;">
-        <a class="btn" href="https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank" data-affiliate-click="amazon" data-affiliate-title="Standing desk for daily work" data-affiliate-category="workspace" data-affiliate-guide-url="https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-buyers.html" data-affiliate-placement="store-amazon-card">See price on Amazon.ca</a>
-        <a class="btn ghost" href="https://www.thewatchersedge.ca/best-standing-desk-upgrades-for-solo-buyers.html">Read the guide</a>
-      </div>
-    </article>
-    
-    <article class="mini-card" style="padding: 18px; border-radius: 18px; background: rgba(255,255,255,0.94);">
-      <div class="resource-picture is-amazon-photo" style="margin-bottom: 14px;"><img src="https://m.media-amazon.com/images/I/5186q1u92zL._AC_SL1500_.jpg" alt="Epson WorkForce ES-50 Portable Sheet-fed Document Scanner for PC and Mac, Black" loading="lazy"></div>
-      <p class="eyebrow">Admin &amp; paperwork · Amazon.ca</p>
-      <h3 style="margin-bottom: 6px;">Portable document scanner for paperwork capture</h3>
-      <p class="muted">Useful when invoices, intake forms, receipts, and client paperwork are slowing down admin flow.</p>
-      <p class="resource-card-amazon-title"><strong>Amazon product:</strong> Epson WorkForce ES-50 scanner</p>
-      <p class="resource-card-guide-note"><strong>Why it made the list:</strong> Best Invoice Filing And Admin Office Setup</p>
-      <div class="cta-row resource-card-actions" style="margin-top: 0;">
-        <a class="btn" href="https://www.amazon.ca/dp/B07KQZWPYN?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank" data-affiliate-click="amazon" data-affiliate-title="Portable document scanner for paperwork capture" data-affiliate-category="admin-paperwork" data-affiliate-guide-url="https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html" data-affiliate-placement="store-amazon-card">See price on Amazon.ca</a>
-        <a class="btn ghost" href="https://www.thewatchersedge.ca/best-invoice-filing-and-admin-office-setup.html">Read the guide</a>
-      </div>
-    </article>
-    
-    <article class="mini-card" style="padding: 18px; border-radius: 18px; background: rgba(255,255,255,0.94);">
-      <div class="resource-picture is-amazon-photo" style="margin-bottom: 14px;"><img src="https://m.media-amazon.com/images/I/51I0+PRVbwL._AC_SL1500_.jpg" alt="CMTECK USB Computer Microphone G009, Noise-Cancelling Recording Desktop Mic for PC/Laptop for Online Chatting, Home Studio, Podcasting, Gaming, Skype, YouTube with Mute Function(Windows/Mac)" loading="lazy"></div>
-      <p class="eyebrow">Creator &amp; calls · Amazon.ca</p>
-      <h3 style="margin-bottom: 6px;">USB microphone for calls and content</h3>
-      <p class="muted">Audio is one of the fastest professionalism upgrades for creators, consultants, coaches, and service providers.</p>
-      <p class="resource-card-amazon-title"><strong>Amazon product:</strong> CMTECK USB microphone</p>
-      <p class="resource-card-guide-note"><strong>Why it made the list:</strong> Best Creator Recording Setup For Calls Content And Client Work</p>
-      <div class="cta-row resource-card-actions" style="margin-top: 0;">
-        <a class="btn" href="https://www.amazon.ca/dp/B0872CFTGK?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank" data-affiliate-click="amazon" data-affiliate-title="USB microphone for calls and content" data-affiliate-category="creator-calls" data-affiliate-guide-url="https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html" data-affiliate-placement="store-amazon-card">See price on Amazon.ca</a>
-        <a class="btn ghost" href="https://www.thewatchersedge.ca/best-creator-recording-setup-for-calls-content-and-client-work.html">Read the guide</a>
-      </div>
-    </article>
-    
-  </div>
-  <p class="muted" style="margin-top: 12px; margin-bottom: 0;">Use the matching guide if you want a calmer shortlist before you open Amazon.ca for the final live product details.</p>
 </section>
 
 <section class="section card" id="store-front-product-picks" style="padding: 24px; border-radius: 22px; background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(220,238,237,0.42));">
@@ -4312,7 +4299,7 @@
         <p class="muted" style="margin-bottom: 14px;">Use the live resource hub when you want category-first Amazon browsing, plain-English notes, and direct links to the most relevant guide pages.</p>
       </div>
       <div class="cta-row" style="margin-top: 0; align-items: center; justify-content: space-between;">
-        <a class="btn" href="/resources?src=store-amazon-help">Browse Amazon picks</a>
+        <a class="btn" href="/resources?src=store-amazon-help">Open Amazon Store</a>
         <span class="pill">Live now</span>
       </div>
       <div class="advanced-amazon-state" data-advanced-amazon-state>Browse the live Amazon.ca picks and buying guides below when a physical-product path is the better fit.</div>
@@ -13563,7 +13550,7 @@
         </div>
         <a class="pill" href="/collections">Outcome-based collections</a>
       </div>
-      <div class="grid three">
+      <div class="grid three store-situation-grid">
         <article class="mini-card" style="padding: 18px; border-radius: 18px;">
           <h3>Start with your needs</h3>
           <p class="muted">Start here when you want help identifying the clearest next purchase.</p>
@@ -15458,7 +15445,8 @@
     </article>
 </div>
 
-<aside class="mini-stack store-main-secondary" style="gap: 18px;">
+
+<aside class="mini-stack store-main-secondary" data-store-browse-sidebar style="gap: 18px;">
   <article class="card" style="padding: 22px; border-radius: 22px; background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(220,238,237,0.44));">
     <p class="eyebrow">Helpful next paths</p>
     <h2>Helpful next paths</h2>
@@ -15610,6 +15598,7 @@
     </div>
   </article>
 </aside>
+
 </section>
 
 <section class="section card" id="supporting-resource-hubs" style="padding: 24px; border-radius: 22px; background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(245,251,249,0.94));">
@@ -15862,6 +15851,47 @@
     document.querySelectorAll('[data-store-browse-only]').forEach(section => {
       section.style.display = 'none';
     });
+    const salesGrid = document.querySelector('.store-sales-banner-grid');
+    salesGrid?.classList.add('no-rail');
+    if (salesGrid) {
+      salesGrid.style.display = 'block';
+      salesGrid.style.gridTemplateColumns = 'none';
+      salesGrid.style.gridTemplateAreas = 'none';
+    }
+    const salesMain = document.querySelector('.store-sales-banner-main');
+    if (salesMain) {
+      salesMain.style.gridArea = 'auto';
+      salesMain.style.gridColumn = 'auto';
+      salesMain.style.gridRow = 'auto';
+      salesMain.style.display = 'block';
+      salesMain.style.width = '100%';
+      salesMain.style.maxWidth = '100%';
+      salesMain.style.minWidth = '0';
+    }
+    const storeMainLayout = document.querySelector('.store-main-layout');
+    storeMainLayout?.classList.add('is-filtered', 'is-static-filtered');
+    const staticSidebar = document.querySelector('.store-main-secondary');
+    if (staticSidebar && !staticSidebar.hasAttribute('data-store-filtered-sidebar')) {
+      staticSidebar.classList.add('store-filtered-secondary');
+      staticSidebar.setAttribute('data-store-filtered-sidebar', 'true');
+      staticSidebar.innerHTML = `
+        <article class="card" style="padding: 22px; border-radius: 22px; background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(220,238,237,0.44));">
+          <p class="eyebrow">Try these next</p>
+          <h2>Try these next</h2>
+          <p class="muted">Keep the filtered view compact. Use one of these wider paths if this search feels too narrow.</p>
+          <div class="mini-stack" style="gap: 10px; margin-top: 12px;">
+            <a class="btn secondary" href="/store">Reset store view</a>
+            <a class="btn ghost" href="/resources?src=store-filter-sidebar">Open Amazon Store</a>
+            <a class="btn ghost" href="/collections">Browse collections</a>
+            <a class="btn ghost" href="/start-here?src=store-filter-sidebar">Use Start Here</a>
+          </div>
+        </article>
+        <article class="card" style="padding: 22px; border-radius: 22px; background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(233,241,255,0.5));">
+          <p class="eyebrow">Search tip</p>
+          <h2>Broaden the phrase</h2>
+          <p class="muted">Try short words like <strong>desk</strong>, <strong>scanner</strong>, <strong>creator</strong>, <strong>church</strong>, <strong>bot</strong>, or <strong>Amazon</strong>. The summary above separates products, Amazon picks, and guides.</p>
+        </article>`;
+    }
     const topPanel = document.getElementById('store-top-matches');
     if (topPanel) {
       topPanel.style.display = '';

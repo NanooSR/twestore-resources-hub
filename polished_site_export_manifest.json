@@ -9,6 +9,7 @@
     "/toolbox/",
     "/church",
     "/store",
+    "/amazon-store",
     "/startnow20",
     "/privacy",
     "/terms",
@@ -120,5 +121,5 @@
     "twe-website-audit-scorecard"
   ],
   "redirects": [],
-  "exported_count": 48
+  "exported_count": 49
 }
