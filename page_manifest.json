@@ -15,21 +15,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best compact scanner or document-capture tool",
+        "name": "Option: compact scanner or document-capture tool",
         "reason": "For people who keep losing momentum when paperwork stays physical too long.",
         "affiliate_url": "https://www.amazon.ca/dp/B07KQZWPYN?tag=resourceshubca-20",
         "cta_label": "See compact scanner option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca compact scanner option."
       },
       {
-        "name": "Best filing organizer or tray system",
+        "name": "Option: filing organizer or tray system",
         "reason": "For people who need invoices, receipts, and follow-up items visible but controlled.",
         "affiliate_url": "https://www.amazon.ca/dp/B07RX17FKL?tag=resourceshubca-20",
         "cta_label": "See filing-organizer pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca filing-organizer option."
       },
       {
-        "name": "Best label or paper-handling support tool",
+        "name": "Option: label or paper-handling support tool",
         "reason": "For people whose friction comes from sorting, naming, and re-finding admin materials.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20",
         "cta_label": "See label-support pick on Amazon.ca",
@@ -55,21 +55,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best docking station or device-switching hub",
+        "name": "Option: docking station or device-switching hub",
         "reason": "For people who keep bouncing between laptops, browser tabs, docs, and admin tools during run reviews.",
         "affiliate_url": "https://www.amazon.ca/dp/B0BY8QNV1C?tag=resourceshubca-20",
         "cta_label": "See docking-station option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca USB-C docking-station option."
       },
       {
-        "name": "Best external SSD or local archive drive",
+        "name": "Option: external SSD or local archive drive",
         "reason": "For people who want a cleaner place for exports, transcripts, screenshots, incident notes, or offline backup files.",
         "affiliate_url": "https://www.amazon.ca/dp/B08GTYFC37?tag=resourceshubca-20",
         "cta_label": "See external-SSD option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca portable external SSD option."
       },
       {
-        "name": "Best dry-erase planner or visible review board",
+        "name": "Option: dry-erase planner or visible review board",
         "reason": "For people who need agent follow-ups, review checkpoints, and incident next steps to stay visible after the screen closes.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CGLP5LQD?tag=resourceshubca-20",
         "cta_label": "See dry-erase planner option on Amazon.ca",
@@ -95,21 +95,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best docking station or screen-switching hub",
+        "name": "Option: docking station or screen-switching hub",
         "reason": "For people who keep bouncing between drafts, source tabs, fact-check notes, and approval checklists across too many disconnected windows.",
         "affiliate_url": "https://www.amazon.ca/dp/B0BY8QNV1C?tag=resourceshubca-20",
         "cta_label": "See docking-station option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca USB-C docking-station option."
       },
       {
-        "name": "Best external SSD for source packs and review archives",
+        "name": "Option: external SSD for source packs and review archives",
         "reason": "For people who want one calmer place for source exports, screenshots, revision bundles, transcripts, and review evidence instead of scattered downloads folders.",
         "affiliate_url": "https://www.amazon.ca/dp/B08GTYFC37?tag=resourceshubca-20",
         "cta_label": "See external-SSD option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca portable external SSD option."
       },
       {
-        "name": "Best dry-erase planner or visible approval board",
+        "name": "Option: dry-erase planner or visible approval board",
         "reason": "For people who need fact-check gaps, revision passes, and final approval steps to stay visible after the browser closes.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CGLP5LQD?tag=resourceshubca-20",
         "cta_label": "See dry-erase planner option on Amazon.ca",
@@ -175,28 +175,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best gentle cat toothbrush for slow introductions",
+        "name": "Option: gentle cat toothbrush for slow introductions",
         "reason": "For cat owners who want a softer traditional brushing start and need a tool that feels less awkward in smaller mouths.",
         "affiliate_url": "https://www.amazon.ca/Brush-My-Teeth-Cat-Toothbrush/dp/B07SHRVBPH?tag=resourceshubca-20",
         "cta_label": "See gentle cat toothbrush on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca cat dental-care product."
       },
       {
-        "name": "Best no-rinse finger wipes for easy everyday mouth care",
+        "name": "Option: no-rinse finger wipes for easy everyday mouth care",
         "reason": "For people whose cats resist brushing and who want a lower-friction way to start cleaning around teeth and gums more consistently.",
         "affiliate_url": "https://www.amazon.ca/Petsters-Cleaning-No-Rinse-Plant-Based-Unscented/dp/B0GMBCBHKV?tag=resourceshubca-20",
         "cta_label": "See no-rinse dental wipes on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca cat dental-care product."
       },
       {
-        "name": "Best daily finger-wipe option for brushing-resistant cats",
+        "name": "Option: daily finger-wipe option for brushing-resistant cats",
         "reason": "For owners who want a quick routine they can use after meals, during calm cuddle time, or as a stepping stone before any brush-based routine.",
         "affiliate_url": "https://www.amazon.ca/Dental-Wipes-Dogs-Cats-Toothpaste/dp/B07NP5S3N4?tag=resourceshubca-20",
         "cta_label": "See daily dental-wipe option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca cat dental-care product."
       },
       {
-        "name": "Best no-brushing oral gel for the lowest-friction starting point",
+        "name": "Option: no-brushing oral gel for the lowest-friction starting point",
         "reason": "For people who want the simplest routine to try first before deciding whether their cat will tolerate wipes or brushing tools later.",
         "affiliate_url": "https://www.amazon.ca/bluestem-Dog-Cat-Oral-Original/dp/B0CLQ2LZP9?tag=resourceshubca-20",
         "cta_label": "See no-brushing oral gel on Amazon.ca",
@@ -222,28 +222,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best baptism robe option for cleaner sizing and repeat-use ceremony prep",
+        "name": "Option: baptism robe option for cleaner sizing and repeat-use ceremony prep",
         "reason": "For churches that need a more dependable robe option for recurring baptisms instead of borrowing inconsistent garments or scrambling for last-minute sizing.",
         "affiliate_url": "https://www.amazon.ca/dp/B07CNT1XS9?tag=resourceshubca-20",
         "cta_label": "See baptism robe option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca baptism robe option."
       },
       {
-        "name": "Best portable changing-room screen for privacy and pre-service transitions",
+        "name": "Option: portable changing-room screen for privacy and pre-service transitions",
         "reason": "For churches that need a clearer changing or staging area near a baptism room, backstage zone, or multipurpose ceremony space.",
         "affiliate_url": "https://www.amazon.ca/dp/B096ZL9XN1?tag=resourceshubca-20",
         "cta_label": "See portable changing-room screen on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca portable changing-room screen."
       },
       {
-        "name": "Best towel warmer rack for comfort and post-baptism reset support",
+        "name": "Option: towel warmer rack for comfort and post-baptism reset support",
         "reason": "For churches that want a steadier way to keep towels ready, dry, and more comfortable around baptism or changing-room support flow.",
         "affiliate_url": "https://www.amazon.ca/dp/B09GBH3BJ4?tag=resourceshubca-20",
         "cta_label": "See towel warmer rack on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca towel warmer rack."
       },
       {
-        "name": "Best alternate baptism robe option for mixed-size volunteer prep",
+        "name": "Option: alternate baptism robe option for mixed-size volunteer prep",
         "reason": "For churches that need another repeat-use robe option so size availability and turnover do not become the bottleneck on ceremony day.",
         "affiliate_url": "https://www.amazon.ca/dp/B00RYXGR1C?tag=resourceshubca-20",
         "cta_label": "See alternate robe option on Amazon.ca",
@@ -269,28 +269,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best folding music stand for portable rehearsals and flexible stage prep",
+        "name": "Option: folding music stand for portable rehearsals and flexible stage prep",
         "reason": "For churches that need a dependable stand solution for choir practice, overflow musicians, or multi-room rehearsal setups without grabbing random podium substitutes.",
         "affiliate_url": "https://www.amazon.ca/dp/B07D5KK26W?tag=resourceshubca-20",
         "cta_label": "See folding music stand on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca folding music stand."
       },
       {
-        "name": "Best choral folder for cleaner sheet handling and rehearsal organization",
+        "name": "Option: choral folder for cleaner sheet handling and rehearsal organization",
         "reason": "For churches that want choir members or music volunteers to hold, sort, and carry music more cleanly than loose paper stacks allow.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CTQ5DZJK?tag=resourceshubca-20",
         "cta_label": "See choir folder on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca choir folder."
       },
       {
-        "name": "Best portable rehearsal stand bundle for quick practice-room setup",
+        "name": "Option: portable rehearsal stand bundle for quick practice-room setup",
         "reason": "For churches that need a lightweight stand option with clips and carrying support so practice spaces can be built fast and packed away quickly.",
         "affiliate_url": "https://www.amazon.ca/dp/B07D7QN1Z1?tag=resourceshubca-20",
         "cta_label": "See rehearsal stand bundle on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca rehearsal stand bundle."
       },
       {
-        "name": "Best mobile music staff whiteboard for rehearsal coaching and arrangement cues",
+        "name": "Option: mobile music staff whiteboard for rehearsal coaching and arrangement cues",
         "reason": "For churches that teach parts, sketch transitions, or coach musicians live and need more than spoken instructions across the room.",
         "affiliate_url": "https://www.amazon.ca/dp/B0GXF5JV4C?tag=resourceshubca-20",
         "cta_label": "See music staff whiteboard on Amazon.ca",
@@ -316,28 +316,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best portable folding table for check-in and event stations",
+        "name": "Option: portable folding table for check-in and event stations",
         "reason": "For churches that need dependable setup surfaces for registration, hospitality, kids ministry, or hallway events without hauling heavy furniture.",
         "affiliate_url": "https://www.amazon.ca/dp/B0GD5KFR1H?tag=resourceshubca-20",
         "cta_label": "See folding-table pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca portable folding table option."
       },
       {
-        "name": "Best queue-barrier set for line control and event entry",
+        "name": "Option: queue-barrier set for line control and event entry",
         "reason": "For churches that need cleaner queue flow for sign-ins, food service, ticketed events, or high-volume ministry stations.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CNRB8XVC?tag=resourceshubca-20",
         "cta_label": "See queue-barrier set on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca crowd-control barrier set."
       },
       {
-        "name": "Best sign stand for temporary event directions",
+        "name": "Option: sign stand for temporary event directions",
         "reason": "For churches that need visible wayfinding for classes, overflow rooms, check-in points, or event entrances.",
         "affiliate_url": "https://www.amazon.ca/dp/B07P8TXWYH?tag=resourceshubca-20",
         "cta_label": "See event sign-stand pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca sign-stand option for portable event direction."
       },
       {
-        "name": "Best rolling utility cart for portable room resets",
+        "name": "Option: rolling utility cart for portable room resets",
         "reason": "For churches that move supplies, papers, signage, hospitality items, or kids ministry tools across rooms before and after events.",
         "affiliate_url": "https://www.amazon.ca/dp/B0BW8LZK4Y?tag=resourceshubca-20",
         "cta_label": "See rolling-cart pick on Amazon.ca",
@@ -363,28 +363,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best bilingual wet-floor sign for hallway and washroom safety",
+        "name": "Option: bilingual wet-floor sign for hallway and washroom safety",
         "reason": "For churches that need a clearer spill-response tool in washrooms, entryways, kitchens, or fellowship areas without relying on verbal warning alone.",
         "affiliate_url": "https://www.amazon.ca/dp/B000LDLEWE?tag=resourceshubca-20",
         "cta_label": "See wet-floor sign on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca wet-floor safety sign option."
       },
       {
-        "name": "Best office and volunteer-area first-aid kit",
+        "name": "Option: office and volunteer-area first-aid kit",
         "reason": "For churches that need a more dependable response kit in office, facility, classroom, or event areas instead of piecing basic care items together.",
         "affiliate_url": "https://www.amazon.ca/dp/B09SSD1QFB?tag=resourceshubca-20",
         "cta_label": "See first-aid kit on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca office/worksite first-aid kit."
       },
       {
-        "name": "Best janitorial cart for room resets and portable cleaning supply flow",
+        "name": "Option: janitorial cart for room resets and portable cleaning supply flow",
         "reason": "For churches that carry liners, sprays, paper products, and reset supplies across classrooms, washrooms, halls, and event rooms every week.",
         "affiliate_url": "https://www.amazon.ca/dp/B073S9XS14?tag=resourceshubca-20",
         "cta_label": "See janitorial cart on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca janitorial cart option."
       },
       {
-        "name": "Best sanitizer dispenser stand for common-area entry points",
+        "name": "Option: sanitizer dispenser stand for common-area entry points",
         "reason": "For churches that want a cleaner hand-sanitizing station at doors, check-in points, or fellowship areas without wall-mounting a permanent fixture first.",
         "affiliate_url": "https://www.amazon.ca/dp/B086ZLFG6N?tag=resourceshubca-20",
         "cta_label": "See sanitizer stand on Amazon.ca",
@@ -410,28 +410,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best church offering bag set for cleaner service-day collection flow",
+        "name": "Option: church offering bag set for cleaner service-day collection flow",
         "reason": "For churches that still run physical offering collection and need a more consistent handoff tool instead of improvising week to week.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CJ32DD17?tag=resourceshubca-20",
         "cta_label": "See offering bag set on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca church offering bag set."
       },
       {
-        "name": "Best lockable donation box for giving stations and secure temporary drop flow",
+        "name": "Option: lockable donation box for giving stations and secure temporary drop flow",
         "reason": "For churches that need a clearer way to handle forms, envelopes, or donation slips at a front desk, event table, or unattended giving point.",
         "affiliate_url": "https://www.amazon.ca/dp/B09BHPYTXK?tag=resourceshubca-20",
         "cta_label": "See lockable donation box on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca lockable donation box."
       },
       {
-        "name": "Best church offering envelope supply for recurring paper giving routines",
+        "name": "Option: church offering envelope supply for recurring paper giving routines",
         "reason": "For churches that still need a dependable physical giving process alongside digital options and want less envelope scramble in the office.",
         "affiliate_url": "https://www.amazon.ca/dp/B0DNN6MZRP?tag=resourceshubca-20",
         "cta_label": "See offering envelopes on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca church offering-envelope option."
       },
       {
-        "name": "Best accordion file organizer for sorting giving paperwork and follow-up documents",
+        "name": "Option: accordion file organizer for sorting giving paperwork and follow-up documents",
         "reason": "For churches that need a cleaner way to separate giving forms, deposit notes, guest paperwork, or temporary admin packets after a service.",
         "affiliate_url": "https://www.amazon.ca/dp/B0D8JDKTT4?tag=resourceshubca-20",
         "cta_label": "See accordion organizer on Amazon.ca",
@@ -457,28 +457,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best rolling garment rack for backstage wardrobe support and quick room resets",
+        "name": "Option: rolling garment rack for backstage wardrobe support and quick room resets",
         "reason": "For churches that need a more dependable way to hang jackets, robes, costume items, or service-day layers without tossing them over chairs and cases.",
         "affiliate_url": "https://www.amazon.ca/dp/B07995MHFL?tag=resourceshubca-20",
         "cta_label": "See rolling garment rack on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca rolling garment rack."
       },
       {
-        "name": "Best multi-port charging hub for worship-team phones, tablets, and backstage accessories",
+        "name": "Option: multi-port charging hub for worship-team phones, tablets, and backstage accessories",
         "reason": "For churches that need one reliable charging point for service-day devices instead of hunting for spare outlets across several rooms.",
         "affiliate_url": "https://www.amazon.ca/dp/B00QTIQ21I?tag=resourceshubca-20",
         "cta_label": "See charging hub on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca multi-port charging hub."
       },
       {
-        "name": "Best beverage mini fridge for green-room hydration and longer rehearsal days",
+        "name": "Option: beverage mini fridge for green-room hydration and longer rehearsal days",
         "reason": "For churches that want cold drinks available close to the worship team during rehearsals, service blocks, or extended event setups.",
         "affiliate_url": "https://www.amazon.ca/dp/B0FT2WBPKL?tag=resourceshubca-20",
         "cta_label": "See mini fridge on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca beverage mini fridge."
       },
       {
-        "name": "Best simple lap desk for backstage writing, tablet support, or quick prep notes",
+        "name": "Option: simple lap desk for backstage writing, tablet support, or quick prep notes",
         "reason": "For churches that need a flexible surface for quick writing, set review, or small-device staging when the green room has limited table space.",
         "affiliate_url": "https://www.amazon.ca/dp/B08WRKXGFC?tag=resourceshubca-20",
         "cta_label": "See lap desk on Amazon.ca",
@@ -504,28 +504,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best coffee urn for fellowship and event hospitality",
+        "name": "Option: coffee urn for fellowship and event hospitality",
         "reason": "For churches serving coffee after services, classes, or events without overcomplicating the setup.",
         "affiliate_url": "https://www.amazon.ca/dp/B00008IH9R?tag=resourceshubca-20",
         "cta_label": "See coffee-urn pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca coffee urn option."
       },
       {
-        "name": "Best welcome-sign stand for lobbies and event wayfinding",
+        "name": "Option: welcome-sign stand for lobbies and event wayfinding",
         "reason": "For churches that need clearer entrance, classroom, and event direction cues.",
         "affiliate_url": "https://www.amazon.ca/dp/B07P8TXWYH?tag=resourceshubca-20",
         "cta_label": "See sign-stand pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca sign-stand option."
       },
       {
-        "name": "Best brochure or connection-card holder for welcome tables",
+        "name": "Option: brochure or connection-card holder for welcome tables",
         "reason": "For churches keeping guest cards, ministry flyers, and next-step handouts visible and tidy.",
         "affiliate_url": "https://www.amazon.ca/dp/B09SBR35YP?tag=resourceshubca-20",
         "cta_label": "See brochure-holder pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca brochure-holder option."
       },
       {
-        "name": "Best rolling cart for portable welcome-station resets",
+        "name": "Option: rolling cart for portable welcome-station resets",
         "reason": "For volunteers who need to move signage, handouts, supplies, and extras between rooms quickly.",
         "affiliate_url": "https://www.amazon.ca/dp/B0BW8LZK4Y?tag=resourceshubca-20",
         "cta_label": "See rolling-cart pick on Amazon.ca",
@@ -551,28 +551,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best label maker for nursery bins and kids check-in zones",
+        "name": "Option: label maker for nursery bins and kids check-in zones",
         "reason": "For churches that need cleaner naming across classrooms, diaper supplies, toys, and volunteer reset bins.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20",
         "cta_label": "See nursery label-maker pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca label-maker option for kids ministry and nursery organization."
       },
       {
-        "name": "Best storage-bin set for classroom toys, crafts, and nursery extras",
+        "name": "Option: storage-bin set for classroom toys, crafts, and nursery extras",
         "reason": "For churches that need fast grab-and-reset storage that stays easy for rotating volunteers to understand.",
         "affiliate_url": "https://www.amazon.ca/dp/B0BCL619MD?tag=resourceshubca-20",
         "cta_label": "See storage-bin set on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca storage-bin set for classroom and nursery organization."
       },
       {
-        "name": "Best schedule pocket chart for classroom flow and volunteer cues",
+        "name": "Option: schedule pocket chart for classroom flow and volunteer cues",
         "reason": "For churches that want visible lesson order, room routines, or rotation cues without re-explaining the whole class plan every week.",
         "affiliate_url": "https://www.amazon.ca/dp/B0BVZ3QLS1?tag=resourceshubca-20",
         "cta_label": "See classroom pocket-chart pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca classroom schedule pocket-chart option."
       },
       {
-        "name": "Best rolling cart for portable kids-ministry and nursery resets",
+        "name": "Option: rolling cart for portable kids-ministry and nursery resets",
         "reason": "For churches moving crafts, teaching tools, wipes, and room supplies across hallways or shared spaces each week.",
         "affiliate_url": "https://www.amazon.ca/dp/B0F1CDL63G?tag=resourceshubca-20",
         "cta_label": "See rolling classroom-cart pick on Amazon.ca",
@@ -645,28 +645,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best wireless microphone system for stage, classroom, or church events",
+        "name": "Option: wireless microphone system for stage, classroom, or church events",
         "reason": "For churches that need cleaner spoken-word audio without locking every speaker to a fixed desk mic.",
         "affiliate_url": "https://www.amazon.ca/dp/B07RKN9FF6?tag=resourceshubca-20",
         "cta_label": "See wireless-mic pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca wireless microphone option."
       },
       {
-        "name": "Best webcam for livestreams, classes, and volunteer-run recordings",
+        "name": "Option: webcam for livestreams, classes, and volunteer-run recordings",
         "reason": "For churches building a simple camera layer for classes, remote updates, or lightweight streaming.",
         "affiliate_url": "https://www.amazon.ca/dp/B07M6Y7355?tag=resourceshubca-20",
         "cta_label": "See webcam pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca webcam option."
       },
       {
-        "name": "Best ring light for sermon clips, classes, or announcement videos",
+        "name": "Option: ring light for sermon clips, classes, or announcement videos",
         "reason": "For spaces where existing room light leaves speakers dim or inconsistent on camera.",
         "affiliate_url": "https://www.amazon.ca/dp/B09K7F27SW?tag=resourceshubca-20",
         "cta_label": "See ring-light pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca ring-light option."
       },
       {
-        "name": "Best label maker for volunteer bins, classrooms, and recurring setup kits",
+        "name": "Option: label maker for volunteer bins, classrooms, and recurring setup kits",
         "reason": "For churches that need cables, classrooms, and ministry supplies to stay easy for volunteers to reset.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20",
         "cta_label": "See label-maker pick on Amazon.ca",
@@ -692,28 +692,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best buffet chafer set for warm-meal service",
+        "name": "Option: buffet chafer set for warm-meal service",
         "reason": "For churches that serve potlucks, fellowship lunches, or volunteer meals and need a more orderly warming setup than improvised countertop trays.",
         "affiliate_url": "https://www.amazon.ca/dp/B073PQJWY9?tag=resourceshubca-20",
         "cta_label": "See buffet chafer set on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca buffet chafer set option."
       },
       {
-        "name": "Best food-service gloves for serving lines and prep resets",
+        "name": "Option: food-service gloves for serving lines and prep resets",
         "reason": "For churches that need an easier disposable glove option for volunteers handling food, portioning desserts, or resetting serving stations.",
         "affiliate_url": "https://www.amazon.ca/dp/B07PJ8WKML?tag=resourceshubca-20",
         "cta_label": "See food-service gloves on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca disposable food-service glove option."
       },
       {
-        "name": "Best utility table for overflow serving and staging",
+        "name": "Option: utility table for overflow serving and staging",
         "reason": "For churches that need another stable surface for buffet staging, dessert layouts, registration snacks, or kitchen-adjacent prep during events.",
         "affiliate_url": "https://www.amazon.ca/dp/B07P8TXWYH?tag=resourceshubca-20",
         "cta_label": "See utility table on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca folding utility table option."
       },
       {
-        "name": "Best janitorial cart for post-meal cleanup and room reset",
+        "name": "Option: janitorial cart for post-meal cleanup and room reset",
         "reason": "For churches that need to move liners, sprays, towels, and cleanup supplies quickly after meal service instead of making repeated closet trips.",
         "affiliate_url": "https://www.amazon.ca/dp/B073S9XS14?tag=resourceshubca-20",
         "cta_label": "See janitorial cart on Amazon.ca",
@@ -739,28 +739,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best memorial guest book for cleaner family sign-in and remembrance capture",
+        "name": "Option: memorial guest book for cleaner family sign-in and remembrance capture",
         "reason": "For churches that want an easier way to gather names, messages, and guest presence during memorial services without a last-minute improvised notebook.",
         "affiliate_url": "https://www.amazon.ca/dp/B0DHZJHKM7?tag=resourceshubca-20",
         "cta_label": "See memorial guest book on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca memorial guest book."
       },
       {
-        "name": "Best sympathy card set for family follow-up and bereavement care notes",
+        "name": "Option: sympathy card set for family follow-up and bereavement care notes",
         "reason": "For churches that want a steadier follow-up rhythm after the service instead of depending on scattered single cards and forgotten note-writing.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CTQ4J2HB?tag=resourceshubca-20",
         "cta_label": "See sympathy card set on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca sympathy card set."
       },
       {
-        "name": "Best folding tray-table set for overflow comfort tables and quick hospitality staging",
+        "name": "Option: folding tray-table set for overflow comfort tables and quick hospitality staging",
         "reason": "For churches that need fast temporary surfaces for guest books, tissues, water, printed handouts, or family-room support during memorial events.",
         "affiliate_url": "https://www.amazon.ca/dp/B07MDJNF6R?tag=resourceshubca-20",
         "cta_label": "See folding tray-table set on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca folding tray-table set."
       },
       {
-        "name": "Best decorative tissue box cover for counseling corners and memorial hospitality tables",
+        "name": "Option: decorative tissue box cover for counseling corners and memorial hospitality tables",
         "reason": "For churches that want a cleaner, less improvised way to keep tissues accessible in family rooms, memorial sign-in areas, or pastoral care spaces.",
         "affiliate_url": "https://www.amazon.ca/dp/B004CEQ0QI?tag=resourceshubca-20",
         "cta_label": "See tissue box cover on Amazon.ca",
@@ -786,28 +786,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best bulk disinfecting wipes for nursery touchpoints",
+        "name": "Option: bulk disinfecting wipes for nursery touchpoints",
         "reason": "For churches that need a practical wipe-down option for check-in surfaces, changing stations, tables, toys, and shared nursery touchpoints between uses.",
         "affiliate_url": "https://www.amazon.ca/dp/B09XJC428L?tag=resourceshubca-20",
         "cta_label": "See disinfecting wipes on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca bulk disinfecting wipes option."
       },
       {
-        "name": "Best nursery gate for room separation and pickup safety",
+        "name": "Option: nursery gate for room separation and pickup safety",
         "reason": "For churches that need a clearer physical boundary between nursery flow, hallway traffic, and toddler movement without rebuilding the room.",
         "affiliate_url": "https://www.amazon.ca/dp/B071989QVZ?tag=resourceshubca-20",
         "cta_label": "See nursery gate on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca metal safety gate option."
       },
       {
-        "name": "Best disposable changing-table paper roll for easier diaper-area resets",
+        "name": "Option: disposable changing-table paper roll for easier diaper-area resets",
         "reason": "For churches that want a lower-friction way to refresh changing surfaces between families and volunteer shifts.",
         "affiliate_url": "https://www.amazon.ca/dp/B01D0TJFQM?tag=resourceshubca-20",
         "cta_label": "See changing-table paper on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca disposable table-cover paper roll."
       },
       {
-        "name": "Best small sharps/disposal container for nursery care stations",
+        "name": "Option: small sharps/disposal container for nursery care stations",
         "reason": "For churches that need a safer disposal option near nursery care areas or first-aid-adjacent kid spaces where small sharps or similar items may appear.",
         "affiliate_url": "https://www.amazon.ca/dp/B000SOP4UY?tag=resourceshubca-20",
         "cta_label": "See disposal container on Amazon.ca",
@@ -833,28 +833,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best church offering-envelope supply",
+        "name": "Option: church offering-envelope supply",
         "reason": "For churches that still need a clean physical giving flow alongside digital options.",
         "affiliate_url": "https://www.amazon.ca/dp/B0DNN6MZRP?tag=resourceshubca-20",
         "cta_label": "See church offering envelopes on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca church offering-envelope option."
       },
       {
-        "name": "Best visitor-card follow-up set",
+        "name": "Option: visitor-card follow-up set",
         "reason": "For welcome teams that want first-time guest capture and prayer-request follow-up in one simple surface.",
         "affiliate_url": "https://www.amazon.ca/dp/B0D7GKPZ96?tag=resourceshubca-20",
         "cta_label": "See church visitor-card set on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca church visitor-card set."
       },
       {
-        "name": "Best label maker for church office organization",
+        "name": "Option: label maker for church office organization",
         "reason": "For churches that need faster naming and re-finding across bins, folders, classrooms, and volunteer supplies.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20",
         "cta_label": "See label maker option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca label maker option."
       },
       {
-        "name": "Best dry-erase planner for weekly ministry visibility",
+        "name": "Option: dry-erase planner for weekly ministry visibility",
         "reason": "For churches that need a visible board for volunteers, rooms, announcements, and recurring weekly tasks.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CGLP5LQD?tag=resourceshubca-20",
         "cta_label": "See dry-erase planner option on Amazon.ca",
@@ -880,28 +880,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best delineator-post set for parking categories and vehicle-direction flow",
+        "name": "Option: delineator-post set for parking categories and vehicle-direction flow",
         "reason": "For churches that need a clearer way to mark curbside turns, drop-off categories, overflow parking entrances, or outdoor queue boundaries during busy services and events.",
         "affiliate_url": "https://www.amazon.ca/dp/B0FMKPX57D?tag=resourceshubca-20",
         "cta_label": "See delineator posts on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca parking-flow delineator set."
       },
       {
-        "name": "Best heavy-duty sidewalk sign for entrance and wayfinding updates",
+        "name": "Option: heavy-duty sidewalk sign for entrance and wayfinding updates",
         "reason": "For churches that need a reusable outdoor sign surface for guest entry directions, weather-plan reroutes, event check-in, or room-change notices.",
         "affiliate_url": "https://www.amazon.ca/dp/B08NYS239Z?tag=resourceshubca-20",
         "cta_label": "See sidewalk sign on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca folding sidewalk sign option."
       },
       {
-        "name": "Best freestanding directional sign holder for lobby-to-outdoor handoff points",
+        "name": "Option: freestanding directional sign holder for lobby-to-outdoor handoff points",
         "reason": "For churches that need smaller but clearer directional signs at parking entrances, hallway junctions, registration tables, or temporary ministry stations.",
         "affiliate_url": "https://www.amazon.ca/dp/B0DJSLHH6S?tag=resourceshubca-20",
         "cta_label": "See directional sign holders on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca multi-pack directional sign stand option."
       },
       {
-        "name": "Best collapsible cones for pop-up service days and event redirects",
+        "name": "Option: collapsible cones for pop-up service days and event redirects",
         "reason": "For churches that need quick temporary hazard, pedestrian, or vehicle-routing markers that store more easily than permanent bulky cones.",
         "affiliate_url": "https://www.amazon.ca/dp/B0BM9M78W9?tag=resourceshubca-20",
         "cta_label": "See collapsible cones on Amazon.ca",
@@ -927,28 +927,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best freestanding room divider for private prayer or counseling conversations",
+        "name": "Option: freestanding room divider for private prayer or counseling conversations",
         "reason": "For churches that need a faster way to create visual privacy in multipurpose rooms, care corners, or temporary counseling spaces without building permanent walls.",
         "affiliate_url": "https://www.amazon.ca/dp/B0BMTBSB7R?tag=resourceshubca-20",
         "cta_label": "See room divider on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca freestanding room divider."
       },
       {
-        "name": "Best portable white-noise machine for softer sound privacy at the door",
+        "name": "Option: portable white-noise machine for softer sound privacy at the door",
         "reason": "For churches that want quieter hallway bleed-through and a calmer room atmosphere during prayer support, care conversations, or sensitive follow-up.",
         "affiliate_url": "https://www.amazon.ca/dp/B0B6G2BV9W?tag=resourceshubca-20",
         "cta_label": "See white-noise machine on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca portable white-noise machine."
       },
       {
-        "name": "Best notebook-and-pen set for care requests, reflection prompts, and follow-up capture",
+        "name": "Option: notebook-and-pen set for care requests, reflection prompts, and follow-up capture",
         "reason": "For churches that need an orderly way to offer journaling, written prayer prompts, or volunteer note capture without scavenging loose paper every session.",
         "affiliate_url": "https://www.amazon.ca/dp/B097GS1GW6?tag=resourceshubca-20",
         "cta_label": "See journal set on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca notebook-and-pen set."
       },
       {
-        "name": "Best soft blanket pack for prayer-room comfort and care waiting spaces",
+        "name": "Option: soft blanket pack for prayer-room comfort and care waiting spaces",
         "reason": "For churches that want a warmer, more welcoming room for prayer support, recovery conversations, or longer care appointments without overcomplicating the setup.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CNR5GDGM?tag=resourceshubca-20",
         "cta_label": "See blanket pack on Amazon.ca",
@@ -974,28 +974,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best insulated casserole carrier for meal-train drop-offs and care-meal transport",
+        "name": "Option: insulated casserole carrier for meal-train drop-offs and care-meal transport",
         "reason": "For churches that regularly send hot meals to grieving families, recovering members, or volunteer support teams and need a simpler way to move dishes without awkward last-minute improvising.",
         "affiliate_url": "https://www.amazon.ca/dp/B0D9RN6TQX?tag=resourceshubca-20",
         "cta_label": "See casserole carrier on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca insulated casserole carrier."
       },
       {
-        "name": "Best bulk food containers for meal portions, leftovers, and organized drop-off recovery",
+        "name": "Option: bulk food containers for meal portions, leftovers, and organized drop-off recovery",
         "reason": "For churches that need cleaner meal handoff, easier family storage, and less confusion around portions, returns, and next-day cleanup after care deliveries.",
         "affiliate_url": "https://www.amazon.ca/dp/B094X2F2NQ?tag=resourceshubca-20",
         "cta_label": "See meal containers on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca bulk food-container pack."
       },
       {
-        "name": "Best airpot coffee dispenser for prayer rooms, bereavement gatherings, and volunteer hospitality tables",
+        "name": "Option: airpot coffee dispenser for prayer rooms, bereavement gatherings, and volunteer hospitality tables",
         "reason": "For churches that want simpler beverage service during longer support conversations, hospitality tables, or family gatherings without constant kitchen trips.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CS9XGKYP?tag=resourceshubca-20",
         "cta_label": "See airpot dispenser on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca airpot coffee dispenser."
       },
       {
-        "name": "Best thank-you card set for family follow-up, volunteer appreciation, and care-team notes",
+        "name": "Option: thank-you card set for family follow-up, volunteer appreciation, and care-team notes",
         "reason": "For churches that want a cleaner, more repeatable way to send follow-up encouragement, meal-thank-yous, or volunteer appreciation after difficult family seasons.",
         "affiliate_url": "https://www.amazon.ca/dp/B083TKMSXY?tag=resourceshubca-20",
         "cta_label": "See thank-you card set on Amazon.ca",
@@ -1021,28 +1021,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best pop-up canopy for outdoor greeting, registration, and weather backup",
+        "name": "Option: pop-up canopy for outdoor greeting, registration, and weather backup",
         "reason": "For churches that need a fast shelter option for parking-lot welcome, outdoor check-in, community events, or rain-sensitive ministry stations.",
         "affiliate_url": "https://www.amazon.ca/dp/B0C13XNKM2?tag=resourceshubca-20",
         "cta_label": "See pop-up canopy on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca portable canopy option."
       },
       {
-        "name": "Best heavy-duty wagon for portable ministry load-ins and resets",
+        "name": "Option: heavy-duty wagon for portable ministry load-ins and resets",
         "reason": "For churches that carry signage, supplies, registration bins, kids materials, or outdoor-event gear across parking lots, hallways, and temporary ministry zones.",
         "affiliate_url": "https://www.amazon.ca/dp/B0C2TBHMQV?tag=resourceshubca-20",
         "cta_label": "See heavy-duty wagon on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca heavy-duty folding wagon option."
       },
       {
-        "name": "Best adjustable banner stand for seasonal ministry messaging and event branding",
+        "name": "Option: adjustable banner stand for seasonal ministry messaging and event branding",
         "reason": "For churches that need a reusable larger-format sign surface for seasonal campaigns, outdoor welcome, registration, or community event messaging.",
         "affiliate_url": "https://www.amazon.ca/dp/B0111K3VZI?tag=resourceshubca-20",
         "cta_label": "See banner stand on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca adjustable banner stand option."
       },
       {
-        "name": "Best folding table for temporary outdoor check-in and portable ministry stations",
+        "name": "Option: folding table for temporary outdoor check-in and portable ministry stations",
         "reason": "For churches that need a dependable quick-setup surface for registration, hospitality, supply staging, or seasonal event overflow without borrowing tables from every room.",
         "affiliate_url": "https://www.amazon.ca/dp/B07P8TXWYH?tag=resourceshubca-20",
         "cta_label": "See folding table on Amazon.ca",
@@ -1068,28 +1068,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best rechargeable radio set for volunteer communication",
+        "name": "Option: rechargeable radio set for volunteer communication",
         "reason": "For churches that want faster communication between entry points, kids check-in, ushers, and room leaders without phone-tag delays.",
         "affiliate_url": "https://www.amazon.ca/dp/B00G9T7AEA?tag=resourceshubca-20",
         "cta_label": "See church-radio pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca rechargeable radio set suitable for volunteer coordination."
       },
       {
-        "name": "Best visitor badge sticker set for guest check-in",
+        "name": "Option: visitor badge sticker set for guest check-in",
         "reason": "For churches that need a low-friction way to mark visitors, classroom pickups, or event guests without building a complicated badge process first.",
         "affiliate_url": "https://www.amazon.ca/dp/B0B5RLWFWX?tag=resourceshubca-20",
         "cta_label": "See visitor-badge sticker set on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca visitor badge sticker set for check-in flow."
       },
       {
-        "name": "Best sign-display frame for room directions and facility notices",
+        "name": "Option: sign-display frame for room directions and facility notices",
         "reason": "For churches that need temporary room labels, security notices, or event instructions to look clearer than taped paper.",
         "affiliate_url": "https://www.amazon.ca/dp/B09Q8SF3MG?tag=resourceshubca-20",
         "cta_label": "See sign-display frame on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca magnetic sign/display frame option."
       },
       {
-        "name": "Best queue barrier set for controlled check-in flow",
+        "name": "Option: queue barrier set for controlled check-in flow",
         "reason": "For churches that need cleaner lines at kids ministry, event registration, or high-traffic guest moments without confusing crowd movement.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CNRB8XVC?tag=resourceshubca-20",
         "cta_label": "See queue-barrier set on Amazon.ca",
@@ -1162,28 +1162,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best padded folding-chair set for flexible small-group seating",
+        "name": "Option: padded folding-chair set for flexible small-group seating",
         "reason": "For churches that need easier temporary seating for classes, discussion circles, support groups, or overflow adult formation rooms.",
         "affiliate_url": "https://www.amazon.ca/dp/B09NCFPV8F?tag=resourceshubca-20",
         "cta_label": "See folding-chair set on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca padded folding-chair set."
       },
       {
-        "name": "Best portable whiteboard easel for guided discussion and room teaching",
+        "name": "Option: portable whiteboard easel for guided discussion and room teaching",
         "reason": "For churches that want a simple visual teaching surface for prompts, prayer points, study notes, or breakout facilitation in rooms without a permanent board.",
         "affiliate_url": "https://www.amazon.ca/dp/B09YTX18HH?tag=resourceshubca-20",
         "cta_label": "See whiteboard easel on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca magnetic whiteboard easel."
       },
       {
-        "name": "Best rolling utility cart for leader supplies and room-reset storage",
+        "name": "Option: rolling utility cart for leader supplies and room-reset storage",
         "reason": "For churches that need one portable place for markers, handouts, wipes, cords, discussion prompts, and other weekly group materials.",
         "affiliate_url": "https://www.amazon.ca/dp/B0BPRZM78S?tag=resourceshubca-20",
         "cta_label": "See rolling cart on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca rolling utility cart."
       },
       {
-        "name": "Best bulk clipboard set for discussion notes, prayer prompts, and no-table rooms",
+        "name": "Option: bulk clipboard set for discussion notes, prayer prompts, and no-table rooms",
         "reason": "For churches that run circles, support groups, or discussion rooms where participants need an easy writing surface without relying on tables everywhere.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CHHZJL24?tag=resourceshubca-20",
         "cta_label": "See clipboard set on Amazon.ca",
@@ -1209,28 +1209,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best name-badge holder set for ushers and hospitality volunteers",
+        "name": "Option: name-badge holder set for ushers and hospitality volunteers",
         "reason": "For churches that want volunteer identification to stay clear, reusable, and easy to hand off between weeks.",
         "affiliate_url": "https://www.amazon.ca/dp/B07C4HVY3X?tag=resourceshubca-20",
         "cta_label": "See usher badge-holder set on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca reusable name-badge holder set."
       },
       {
-        "name": "Best sign or bulletin display frame for handouts and direction cues",
+        "name": "Option: sign or bulletin display frame for handouts and direction cues",
         "reason": "For churches that need bulletins, notices, or printed instructions visible without messy tape-and-paper setups.",
         "affiliate_url": "https://www.amazon.ca/dp/B09Q8SF3MG?tag=resourceshubca-20",
         "cta_label": "See bulletin-display frame on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca magnetic sign/display frame option."
       },
       {
-        "name": "Best communion cup filler for faster prep",
+        "name": "Option: communion cup filler for faster prep",
         "reason": "For churches that still fill cups manually and want a cleaner, calmer communion-prep routine.",
         "affiliate_url": "https://www.amazon.ca/dp/B07WCD3ZWS?tag=resourceshubca-20",
         "cta_label": "See communion cup-filler pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca communion cup-filler option."
       },
       {
-        "name": "Best communion tray for repeat-use serving flow",
+        "name": "Option: communion tray for repeat-use serving flow",
         "reason": "For churches that want a more durable passing and cleanup setup for recurring communion weeks.",
         "affiliate_url": "https://www.amazon.ca/dp/B0BBGX5QL7?tag=resourceshubca-20",
         "cta_label": "See communion-tray pick on Amazon.ca",
@@ -1256,28 +1256,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best structured visit bag for mobile care supplies and organized handoffs",
+        "name": "Option: structured visit bag for mobile care supplies and organized handoffs",
         "reason": "For churches that want one dependable bag for forms, comfort items, prayer materials, and visit-day supplies instead of piecing together random totes.",
         "affiliate_url": "https://www.amazon.ca/dp/B08FB96551?tag=resourceshubca-20",
         "cta_label": "See visit bag on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca structured medical-style visit bag."
       },
       {
-        "name": "Best storage clipboard for visit notes, forms, and standing follow-up capture",
+        "name": "Option: storage clipboard for visit notes, forms, and standing follow-up capture",
         "reason": "For churches that need a cleaner way to carry paperwork, capture notes, and keep visit-day details together when tables are not available.",
         "affiliate_url": "https://www.amazon.ca/dp/B07S6WQ1DD?tag=resourceshubca-20",
         "cta_label": "See storage clipboard on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca storage clipboard."
       },
       {
-        "name": "Best accordion file organizer for prayer cards, referrals, and recovery-step paperwork",
+        "name": "Option: accordion file organizer for prayer cards, referrals, and recovery-step paperwork",
         "reason": "For churches that need a simple system for separating follow-up items, resource sheets, and next-step paperwork without creating a loose-paper problem.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CGV5CNPR?tag=resourceshubca-20",
         "cta_label": "See accordion organizer on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca accordion file organizer."
       },
       {
-        "name": "Best zipper-envelope set for small visit-kit items, receipts, and care-card sorting",
+        "name": "Option: zipper-envelope set for small visit-kit items, receipts, and care-card sorting",
         "reason": "For churches that want an inexpensive way to group pens, cards, forms, gift cards, receipts, or recovery resources inside a larger visitation kit.",
         "affiliate_url": "https://www.amazon.ca/dp/B0B41DDJ3H?tag=resourceshubca-20",
         "cta_label": "See zipper-envelope set on Amazon.ca",
@@ -1303,28 +1303,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best coffee pod drawer for cleaner volunteer coffee-station resets",
+        "name": "Option: coffee pod drawer for cleaner volunteer coffee-station resets",
         "reason": "For churches that already run a pod-based coffee setup and need a cleaner way to keep service-day beverage stations organized instead of covered in loose boxes and partial sleeves.",
         "affiliate_url": "https://www.amazon.ca/dp/B0BJNYYRXB?tag=resourceshubca-20",
         "cta_label": "See coffee pod drawer on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca coffee pod organizer drawer."
       },
       {
-        "name": "Best snack organizer bins for break-room counters and volunteer hospitality restocks",
+        "name": "Option: snack organizer bins for break-room counters and volunteer hospitality restocks",
         "reason": "For churches that want a more repeatable snack, tea, packet, and grab-and-go setup without turning volunteer support areas into cluttered catch-all tables.",
         "affiliate_url": "https://www.amazon.ca/dp/B0BZ4LWJVX?tag=resourceshubca-20",
         "cta_label": "See snack organizer bins on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca snack and pantry organizer."
       },
       {
-        "name": "Best beverage mini fridge for volunteer rooms and backstage refreshment stations",
+        "name": "Option: beverage mini fridge for volunteer rooms and backstage refreshment stations",
         "reason": "For churches that want cold drinks ready for volunteers, worship teams, and longer service days without repeated kitchen runs or last-minute cooler improvising.",
         "affiliate_url": "https://www.amazon.ca/dp/B0FT2WBPKL?tag=resourceshubca-20",
         "cta_label": "See beverage mini fridge on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca beverage mini fridge."
       },
       {
-        "name": "Best multi-port charging hub for volunteer phones and service-day device recovery",
+        "name": "Option: multi-port charging hub for volunteer phones and service-day device recovery",
         "reason": "For churches that need a simple shared charging point in a volunteer room so phones, earbuds, and small devices are easier to top up between service roles.",
         "affiliate_url": "https://www.amazon.ca/dp/B00QTIQ21I?tag=resourceshubca-20",
         "cta_label": "See charging hub on Amazon.ca",
@@ -1350,28 +1350,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best litter-area mat or floor-protection layer",
+        "name": "Option: litter-area mat or floor-protection layer",
         "reason": "For pet owners who want fewer tracked bits outside the litter zone and need something that feels realistic to shake out, wipe down, or reset during normal cleanup.",
         "affiliate_url": "https://www.amazon.ca/Catit-Litter-Mat-Large/dp/B07KSNBXM8?tag=resourceshubca-20",
         "cta_label": "See Catit large litter mat on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca Catit litter-mat product page."
       },
       {
-        "name": "Best feeding-zone mat for splashy bowls and messy eaters",
+        "name": "Option: feeding-zone mat for splashy bowls and messy eaters",
         "reason": "For homes where food crumbs, drips, or bowl movement create the biggest daily annoyance and a wipeable layer would make the feeding corner easier to maintain.",
         "affiliate_url": "https://www.amazon.ca/dp/B081S7C5DN?tag=resourceshubca-20",
         "cta_label": "See feeding-mat option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca feeding-mat option."
       },
       {
-        "name": "Best washable blanket, cover, or soft reset layer for favorite pet corners",
+        "name": "Option: washable blanket, cover, or soft reset layer for favorite pet corners",
         "reason": "For people who want couches, crate corners, nap spots, or apartment pet zones to feel easier to freshen up without treating every fur or paw mark like a full-room project.",
         "affiliate_url": "https://www.amazon.ca/dp/B0G65LN4R8?tag=resourceshubca-20",
         "cta_label": "See waterproof pet blanket cover on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca waterproof pet blanket or furniture-cover product page."
       },
       {
-        "name": "Best muddy-paw or entryway cleanup helper",
+        "name": "Option: muddy-paw or entryway cleanup helper",
         "reason": "For pet owners who keep dealing with wet paws, outdoor dirt, or doorway clutter and want one more contained little landing zone before the mess spreads further into the home.",
         "affiliate_url": "https://www.amazon.ca/dp/B08N6VLJKV?tag=resourceshubca-20",
         "cta_label": "See muddy-paw cleanup mat option on Amazon.ca",
@@ -1397,21 +1397,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best desk organizer bundle",
+        "name": "Option: desk organizer bundle",
         "reason": "For keeping intake, notes, and physical admin items from taking over the surface.",
         "affiliate_url": "https://www.amazon.ca/dp/B07RX17FKL?tag=resourceshubca-20",
         "cta_label": "See organizer bundle on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca desk organizer bundle option."
       },
       {
-        "name": "Best document scanner or compact filing tool",
+        "name": "Option: document scanner or compact filing tool",
         "reason": "For people who still handle signed forms, receipts, or paper intake.",
         "affiliate_url": "https://www.amazon.ca/dp/B07KQZWPYN?tag=resourceshubca-20",
         "cta_label": "See document-scanner pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca compact document scanner option."
       },
       {
-        "name": "Best webcam and call-light combo",
+        "name": "Option: webcam and call-light combo",
         "reason": "For people who run kickoff calls from the same desk.",
         "affiliate_url": "https://www.amazon.ca/dp/B07M6Y7355?tag=resourceshubca-20",
         "cta_label": "See webcam pick on Amazon.ca",
@@ -1437,21 +1437,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best docking station or screen-switching hub",
+        "name": "Option: docking station or screen-switching hub",
         "reason": "For people who keep bouncing between the portal dashboard, file folders, client messages, and approval notes across too many disconnected windows.",
         "affiliate_url": "https://www.amazon.ca/dp/B0BY8QNV1C?tag=resourceshubca-20",
         "cta_label": "See docking-station option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca USB-C docking-station option."
       },
       {
-        "name": "Best active project tray or desk organizer",
+        "name": "Option: active project tray or desk organizer",
         "reason": "For agencies or freelancers who still handle printed briefs, handwritten notes, contracts, or checklist pages and need one active delivery zone instead of desk sprawl.",
         "affiliate_url": "https://www.amazon.ca/dp/B07RX17FKL?tag=resourceshubca-20",
         "cta_label": "See project-organizer option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca desk organizer option."
       },
       {
-        "name": "Best label-maker support tool for client handoff clarity",
+        "name": "Option: label-maker support tool for client handoff clarity",
         "reason": "For people who want a faster way to label folders, bins, asset packs, or approval stages so delivery materials stay easier to track.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20",
         "cta_label": "See label-maker option on Amazon.ca",
@@ -1477,21 +1477,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best USB microphone for desk use",
+        "name": "Option: USB microphone for desk use",
         "reason": "For people who need a simple, strong audio upgrade.",
         "affiliate_url": "https://www.amazon.ca/dp/B0872CFTGK?tag=resourceshubca-20",
         "cta_label": "See USB microphone option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca USB microphone option."
       },
       {
-        "name": "Best webcam for meetings and tutorials",
+        "name": "Option: webcam for meetings and tutorials",
         "reason": "For people whose camera angle or clarity undermines trust.",
         "affiliate_url": "https://www.amazon.ca/dp/B07M6Y7355?tag=resourceshubca-20",
         "cta_label": "See webcam pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca webcam option."
       },
       {
-        "name": "Best light setup for calls and short-form content",
+        "name": "Option: light setup for calls and short-form content",
         "reason": "For people who want a cleaner image without a studio rebuild.",
         "affiliate_url": "https://www.amazon.ca/dp/B09K7F27SW?tag=resourceshubca-20",
         "cta_label": "See call-light pick on Amazon.ca",
@@ -1517,21 +1517,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best overall standing desk pick",
+        "name": "Option: overall standing desk pick",
         "reason": "For people who want a stable work surface that will actually get used daily.",
         "affiliate_url": "https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20",
         "cta_label": "See standing desk option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca standing desk option."
       },
       {
-        "name": "Best ergonomic chair value pick",
+        "name": "Option: ergonomic chair value pick",
         "reason": "For people who sit for long stretches and need comfort before accessories.",
         "affiliate_url": "https://www.amazon.ca/dp/B09N93L2RQ?tag=resourceshubca-20",
         "cta_label": "See ergonomic chair pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca ergonomic office chair option."
       },
       {
-        "name": "Best cable and docking cleanup bundle",
+        "name": "Option: cable and docking cleanup bundle",
         "reason": "For people whose desk friction comes from device switching and power clutter.",
         "affiliate_url": "https://www.amazon.ca/dp/B0BY8QNV1C?tag=resourceshubca-20",
         "cta_label": "See docking-station pick on Amazon.ca",
@@ -1557,21 +1557,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best scanner or compact document tool",
+        "name": "Option: scanner or compact document tool",
         "reason": "For people who handle recurring paper or intake artifacts.",
         "affiliate_url": "https://www.amazon.ca/dp/B07KQZWPYN?tag=resourceshubca-20",
         "cta_label": "See document scanner option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca document scanner option."
       },
       {
-        "name": "Best label maker or filing support pick",
+        "name": "Option: label maker or filing support pick",
         "reason": "For people who need cleaner categorization and retrieval.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20",
         "cta_label": "See label-maker pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca label-maker option."
       },
       {
-        "name": "Best shredder or privacy-support tool",
+        "name": "Option: shredder or privacy-support tool",
         "reason": "For people who handle sensitive paper and want cleaner disposal habits.",
         "affiliate_url": "https://www.amazon.ca/dp/B0F6C6LZ5J?tag=resourceshubca-20",
         "cta_label": "See shredder pick on Amazon.ca",
@@ -1597,21 +1597,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best portable monitor for side-by-side meeting capture",
+        "name": "Option: portable monitor for side-by-side meeting capture",
         "reason": "For people who need the call window, agenda, and notes sheet visible at the same time without constantly minimizing one to see the other.",
         "affiliate_url": "https://www.amazon.ca/dp/B0B9GLG86C?tag=resourceshubca-20",
         "cta_label": "See portable-monitor option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca portable monitor option."
       },
       {
-        "name": "Best active project tray or desk organizer for current meeting materials",
+        "name": "Option: active project tray or desk organizer for current meeting materials",
         "reason": "For people who still use printed agendas, handwritten pages, follow-up sheets, or client packets and need one visible action zone instead of paper drift.",
         "affiliate_url": "https://www.amazon.ca/dp/B07RX17FKL?tag=resourceshubca-20",
         "cta_label": "See desk-organizer option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca desk organizer option."
       },
       {
-        "name": "Best dry-erase planner or visible follow-up board",
+        "name": "Option: dry-erase planner or visible follow-up board",
         "reason": "For people who need decisions, owners, and next-call promises to stay visible after the meeting tab closes.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CGLP5LQD?tag=resourceshubca-20",
         "cta_label": "See dry-erase-planner option on Amazon.ca",
@@ -1637,21 +1637,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best portable monitor for side-by-side offer review",
+        "name": "Option: portable monitor for side-by-side offer review",
         "reason": "For people who need the offer page, scorecard, and proof notes visible together without constantly hiding one screen to inspect another.",
         "affiliate_url": "https://www.amazon.ca/dp/B0B9GLG86C?tag=resourceshubca-20",
         "cta_label": "See portable-monitor option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca portable monitor option."
       },
       {
-        "name": "Best external SSD for swipe files, proof assets, and versioned offer drafts",
+        "name": "Option: external SSD for swipe files, proof assets, and versioned offer drafts",
         "reason": "For people who want one calmer place for screenshots, case-study notes, revisions, and positioning drafts instead of scattered folders and desktop clutter.",
         "affiliate_url": "https://www.amazon.ca/dp/B08GTYFC37?tag=resourceshubca-20",
         "cta_label": "See external-SSD option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca portable external SSD option."
       },
       {
-        "name": "Best dry-erase planner for visible offer-messaging checkpoints",
+        "name": "Option: dry-erase planner for visible offer-messaging checkpoints",
         "reason": "For people who need the promise, proof gaps, urgency cues, and next revision steps to stay visible after the packaging-review session ends.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CGLP5LQD?tag=resourceshubca-20",
         "cta_label": "See dry-erase-planner option on Amazon.ca",
@@ -1677,28 +1677,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best treat-tossing pet camera for playful check-ins",
+        "name": "Option: treat-tossing pet camera for playful check-ins",
         "reason": "For pet owners who want more than a passive camera and like the idea of rewarding or redirecting a dog or cat during short home check-ins.",
         "affiliate_url": "https://www.amazon.ca/PARIS-RH\u00d4NE-Dispenser-Monitoring-Detection/dp/B0CG8B725J?tag=resourceshubca-20",
         "cta_label": "See treat-tossing pet camera on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca pet camera."
       },
       {
-        "name": "Best app-first pet camera for straightforward remote viewing",
+        "name": "Option: app-first pet camera for straightforward remote viewing",
         "reason": "For people who mainly want quick phone-based check-ins, two-way audio, and a familiar plug-it-in-and-use-it path without overcomplicating setup.",
         "affiliate_url": "https://www.amazon.ca/Petcube-Interactive-Monitoring-Dispenser-Two-Way/dp/B08XXKJGKH?tag=resourceshubca-20",
         "cta_label": "See app-first pet camera on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca pet camera."
       },
       {
-        "name": "Best pan-and-zoom pet camera for wider room coverage",
+        "name": "Option: pan-and-zoom pet camera for wider room coverage",
         "reason": "For households where pets move around a lot and a fixed-angle camera may miss the spots that matter most during the day.",
         "affiliate_url": "https://www.amazon.ca/SKYMEE-Camera-Automatic-Dispenser-Compatible/dp/B081SVJ5BN?tag=resourceshubca-20",
         "cta_label": "See pan-and-zoom pet camera on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca pet camera."
       },
       {
-        "name": "Best higher-detail indoor pet camera for multi-pet homes",
+        "name": "Option: higher-detail indoor pet camera for multi-pet homes",
         "reason": "For people who want stronger visibility and recognition-style features because more than one pet shares the same room, routine, or check-in schedule.",
         "affiliate_url": "https://www.amazon.ca/SiiPet-Multi-Pet-Recognition-Highlight-Real-Time/dp/B0G1S9MDM2?tag=resourceshubca-20",
         "cta_label": "See multi-pet camera option on Amazon.ca",
@@ -1724,21 +1724,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best portable monitor for side-by-side promo review",
+        "name": "Option: portable monitor for side-by-side promo review",
         "reason": "For people who keep switching between the share log, results snapshot, store pages, and analytics tabs and need cleaner side-by-side visibility during the weekly review.",
         "affiliate_url": "https://www.amazon.ca/dp/B0B9GLG86C?tag=resourceshubca-20",
         "cta_label": "See portable-monitor option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca portable-monitor option."
       },
       {
-        "name": "Best external SSD for exports, screenshots, and archived promo proof",
+        "name": "Option: external SSD for exports, screenshots, and archived promo proof",
         "reason": "For people who save screenshots, CSV exports, notes, and before/after promo proof and need them in one calmer place instead of scattered downloads folders.",
         "affiliate_url": "https://www.amazon.ca/dp/B08GTYFC37?tag=resourceshubca-20",
         "cta_label": "See external-SSD option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca external-SSD option."
       },
       {
-        "name": "Best visible weekly review board for traffic follow-through",
+        "name": "Option: visible weekly review board for traffic follow-through",
         "reason": "For people who know the main issue is not data access but forgetting which promo test, page, or follow-up decision should stay visible after the tabs close.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CGLP5LQD?tag=resourceshubca-20",
         "cta_label": "See weekly-review board option on Amazon.ca",
@@ -1764,21 +1764,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best portable monitor for side-by-side pricing review",
+        "name": "Option: portable monitor for side-by-side pricing review",
         "reason": "For people who need the proposal draft, cost assumptions, and margin output visible at the same time without constantly hiding one to see the other.",
         "affiliate_url": "https://www.amazon.ca/dp/B0B9GLG86C?tag=resourceshubca-20",
         "cta_label": "See portable-monitor option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca portable monitor option."
       },
       {
-        "name": "Best external SSD for estimate archives and versioned scope files",
+        "name": "Option: external SSD for estimate archives and versioned scope files",
         "reason": "For people who want one calmer place for proposal drafts, pricing exports, delivery notes, and prior estimate versions instead of scattered folders and desktop chaos.",
         "affiliate_url": "https://www.amazon.ca/dp/B08GTYFC37?tag=resourceshubca-20",
         "cta_label": "See external-SSD option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca portable external SSD option."
       },
       {
-        "name": "Best dry-erase planner or visible floor-price board",
+        "name": "Option: dry-erase planner or visible floor-price board",
         "reason": "For people who need margin thresholds, open assumptions, and approval notes to stay visible after the calculator tab closes.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CGLP5LQD?tag=resourceshubca-20",
         "cta_label": "See dry-erase-planner option on Amazon.ca",
@@ -1804,21 +1804,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best headphones for focus and interview prep",
+        "name": "Option: headphones for focus and interview prep",
         "reason": "For job seekers working in shared or noisy environments.",
         "affiliate_url": "https://www.amazon.ca/dp/B0GFSPX7SS?tag=resourceshubca-20",
         "cta_label": "See work-headset option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca work-headset option."
       },
       {
-        "name": "Best webcam or light improvement",
+        "name": "Option: webcam or light improvement",
         "reason": "For remote interviews where first impressions matter.",
         "affiliate_url": "https://www.amazon.ca/dp/B07M6Y7355?tag=resourceshubca-20",
         "cta_label": "See interview-webcam pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca webcam option."
       },
       {
-        "name": "Best desk organizer or document station",
+        "name": "Option: desk organizer or document station",
         "reason": "For keeping resumes, notes, and application materials from getting scattered.",
         "affiliate_url": "https://www.amazon.ca/dp/B07RX17FKL?tag=resourceshubca-20",
         "cta_label": "See desk-organizer pick on Amazon.ca",
@@ -1844,21 +1844,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best portable monitor for side-by-side retainer review",
+        "name": "Option: portable monitor for side-by-side retainer review",
         "reason": "For people who need the retainer planner, service assumptions, and quote notes visible together without constantly hiding one screen to see another.",
         "affiliate_url": "https://www.amazon.ca/dp/B0B9GLG86C?tag=resourceshubca-20",
         "cta_label": "See portable-monitor option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca portable monitor option."
       },
       {
-        "name": "Best external SSD for recurring-client archive files",
+        "name": "Option: external SSD for recurring-client archive files",
         "reason": "For people who want one calmer place for pricing exports, service notes, prior quote versions, and delivery references instead of scattered folders and desktop clutter.",
         "affiliate_url": "https://www.amazon.ca/dp/B08GTYFC37?tag=resourceshubca-20",
         "cta_label": "See external-SSD option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca portable external SSD option."
       },
       {
-        "name": "Best dry-erase planner for visible monthly floor checks",
+        "name": "Option: dry-erase planner for visible monthly floor checks",
         "reason": "For people who need included-hours limits, margin reminders, and open support-load questions to stay visible after the retainer calculator tab closes.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CGLP5LQD?tag=resourceshubca-20",
         "cta_label": "See dry-erase-planner option on Amazon.ca",
@@ -1884,21 +1884,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best monitor light or task lamp for KPI reviews",
+        "name": "Option: monitor light or task lamp for KPI reviews",
         "reason": "For people whose reviews happen early, late, or in visually dull desk conditions.",
         "affiliate_url": "https://www.amazon.ca/dp/B08DKQ3JG1?tag=resourceshubca-20",
         "cta_label": "See monitor light option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca monitor light option."
       },
       {
-        "name": "Best whiteboard or side-note capture tool",
+        "name": "Option: whiteboard or side-note capture tool",
         "reason": "For people who need next actions to stay visible after the review ends.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CGLP5LQD?tag=resourceshubca-20",
         "cta_label": "See whiteboard-planner pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca dry-erase planner option."
       },
       {
-        "name": "Best compact notebook companion for weekly reviews",
+        "name": "Option: compact notebook companion for weekly reviews",
         "reason": "For people who think more clearly when decisions leave the screen and hit paper.",
         "affiliate_url": "https://www.amazon.ca/dp/B07YLTJHH4?tag=resourceshubca-20",
         "cta_label": "See notebook companion on Amazon.ca",
@@ -1924,21 +1924,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best visible weekly review planner or dry-erase board",
+        "name": "Option: visible weekly review planner or dry-erase board",
         "reason": "For people who need lead next steps, callbacks, and weekly pipeline priorities to stay visible after they close the CRM.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CGLP5LQD?tag=resourceshubca-20",
         "cta_label": "See weekly-review board option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca dry-erase planner option."
       },
       {
-        "name": "Best desk organizer or active-follow-up tray system",
+        "name": "Option: desk organizer or active-follow-up tray system",
         "reason": "For consultants who keep notes, intake forms, notebooks, or call prep materials spread across the desk instead of in one active follow-up zone.",
         "affiliate_url": "https://www.amazon.ca/dp/B07RX17FKL?tag=resourceshubca-20",
         "cta_label": "See active-follow-up organizer on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca desk organizer option."
       },
       {
-        "name": "Best label-maker support tool for pipeline clarity",
+        "name": "Option: label-maker support tool for pipeline clarity",
         "reason": "For people who want a faster way to keep folders, bins, notebooks, or printed lead materials sorted by stage or next action.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20",
         "cta_label": "See label-maker option on Amazon.ca",
@@ -1964,21 +1964,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best whiteboard or dry-erase planner",
+        "name": "Option: whiteboard or dry-erase planner",
         "reason": "For visible recurring processes and weekly process reminders.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CGLP5LQD?tag=resourceshubca-20",
         "cta_label": "See dry-erase planner option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca dry-erase planner option."
       },
       {
-        "name": "Best label or filing support tool",
+        "name": "Option: label or filing support tool",
         "reason": "For people who need a cleaner physical admin layer.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20",
         "cta_label": "See label-support pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca label-maker option."
       },
       {
-        "name": "Best desk-lighting and visibility upgrade",
+        "name": "Option: desk-lighting and visibility upgrade",
         "reason": "For longer documentation or review sessions.",
         "affiliate_url": "https://www.amazon.ca/dp/B08DKQ3JG1?tag=resourceshubca-20",
         "cta_label": "See desk-lighting pick on Amazon.ca",
@@ -2004,21 +2004,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best standing desk for all-day laptop and monitor work",
+        "name": "Option: standing desk for all-day laptop and monitor work",
         "reason": "For people whose main goal is posture, stability, and enough surface for daily buyer work.",
         "affiliate_url": "https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20",
         "cta_label": "See standing desk option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca standing desk option."
       },
       {
-        "name": "Best compact standing desk for smaller rooms",
+        "name": "Option: compact standing desk for smaller rooms",
         "reason": "For people who need the ergonomic win without overbuilding the whole office.",
         "affiliate_url": "https://www.amazon.ca/dp/B0G2QB7PB1?tag=resourceshubca-20",
         "cta_label": "See compact standing-desk pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca compact standing-desk option."
       },
       {
-        "name": "Best anti-fatigue or standing support add-on",
+        "name": "Option: anti-fatigue or standing support add-on",
         "reason": "For people who already have a decent desk but need standing to feel sustainable.",
         "affiliate_url": "https://www.amazon.ca/dp/B07DCPSJPN?tag=resourceshubca-20",
         "cta_label": "See anti-fatigue mat pick on Amazon.ca",
@@ -2044,21 +2044,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best desk-ready USB microphone for meetings and Looms",
+        "name": "Option: desk-ready USB microphone for meetings and Looms",
         "reason": "For people who want a clear upgrade without audio complexity.",
         "affiliate_url": "https://www.amazon.ca/dp/B0872CFTGK?tag=resourceshubca-20",
         "cta_label": "See USB microphone option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca USB microphone option."
       },
       {
-        "name": "Best compact USB microphone for smaller desks",
+        "name": "Option: compact USB microphone for smaller desks",
         "reason": "For people who need cleaner sound but cannot give up much desk space.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CT6DFXRH?tag=resourceshubca-20",
         "cta_label": "See compact USB-mic pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca compact USB microphone option."
       },
       {
-        "name": "Best microphone arm or simple placement add-on",
+        "name": "Option: microphone arm or simple placement add-on",
         "reason": "For people whose sound problem is partly positioning, not just microphone quality.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CS9K4665?tag=resourceshubca-20",
         "cta_label": "See boom-arm pick on Amazon.ca",
@@ -2084,21 +2084,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best portable monitor for side-by-side site review",
+        "name": "Option: portable monitor for side-by-side site review",
         "reason": "For people who need the live page, scorecard, and recommendation notes visible at the same time without constantly hiding one to see the others.",
         "affiliate_url": "https://www.amazon.ca/dp/B0B9GLG86C?tag=resourceshubca-20",
         "cta_label": "See portable-monitor option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca portable monitor option."
       },
       {
-        "name": "Best external SSD for screenshots, exports, and audit archives",
+        "name": "Option: external SSD for screenshots, exports, and audit archives",
         "reason": "For people who want one calmer place for screenshots, annotated exports, scoring snapshots, and revision evidence instead of scattered downloads folders.",
         "affiliate_url": "https://www.amazon.ca/dp/B08GTYFC37?tag=resourceshubca-20",
         "cta_label": "See external-SSD option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca portable external SSD option."
       },
       {
-        "name": "Best dry-erase planner or visible top-fixes board",
+        "name": "Option: dry-erase planner or visible top-fixes board",
         "reason": "For people who need the top priority fixes, next recommendations, and follow-up notes to stay visible after the browser session ends.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CGLP5LQD?tag=resourceshubca-20",
         "cta_label": "See dry-erase-planner option on Amazon.ca",
@@ -2124,21 +2124,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best monitor arm or riser",
+        "name": "Option: monitor arm or riser",
         "reason": "For people who need cleaner screen placement during scorecard reviews.",
         "affiliate_url": "https://www.amazon.ca/dp/B07T3KCQ94?tag=resourceshubca-20",
         "cta_label": "See monitor arm option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca monitor arm option."
       },
       {
-        "name": "Best desk lamp or monitor light",
+        "name": "Option: desk lamp or monitor light",
         "reason": "For clearer visibility in early-morning or late-evening review sessions.",
         "affiliate_url": "https://www.amazon.ca/dp/B08DKQ3JG1?tag=resourceshubca-20",
         "cta_label": "See monitor-light pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca monitor-light option."
       },
       {
-        "name": "Best notebook or whiteboard companion",
+        "name": "Option: notebook or whiteboard companion",
         "reason": "For turning a KPI review into decisions and next actions.",
         "affiliate_url": "https://www.amazon.ca/dp/B07YLTJHH4?tag=resourceshubca-20",
         "cta_label": "See review-notebook pick on Amazon.ca",
@@ -2164,28 +2164,28 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best first office-admin pick for forms, labels, and weekly visibility",
+        "name": "Option: first office-admin pick for forms, labels, and weekly visibility",
         "reason": "For churches whose biggest weekly drag is still paperwork, visitor follow-up, and keeping recurring admin visible enough for the next volunteer to pick up cleanly.",
         "affiliate_url": "https://www.amazon.ca/dp/B0CHJR142G?tag=resourceshubca-20",
         "cta_label": "See the church-office label-maker pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca label-maker option already used on the church office guide."
       },
       {
-        "name": "Best first welcome-flow pick for signs and guest direction",
+        "name": "Option: first welcome-flow pick for signs and guest direction",
         "reason": "For churches whose next fastest win is helping guests, classes, and first-time visitors understand where to go without volunteer guesswork at the front door.",
         "affiliate_url": "https://www.amazon.ca/dp/B07P8TXWYH?tag=resourceshubca-20",
         "cta_label": "See the church sign-stand pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca sign-stand option already used on the church hospitality guide."
       },
       {
-        "name": "Best first nursery-reset pick for sanitation and child-flow basics",
+        "name": "Option: first nursery-reset pick for sanitation and child-flow basics",
         "reason": "For churches whose most fragile handoff is still diaper-area cleanup, shared touchpoint sanitation, or keeping nursery and toddler pickup flow calmer week to week.",
         "affiliate_url": "https://www.amazon.ca/dp/B09XJC428L?tag=resourceshubca-20",
         "cta_label": "See the nursery disinfecting-wipes pick on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca disinfecting-wipes option already used on the nursery sanitation guide."
       },
       {
-        "name": "Best first portable-event pick for room setup and queue flow",
+        "name": "Option: first portable-event pick for room setup and queue flow",
         "reason": "For churches whose biggest stress point is still event setup, hallway bottlenecks, mobile check-in, or carrying supplies between rooms before and after ministry events.",
         "affiliate_url": "https://www.amazon.ca/dp/B0BW8LZK4Y?tag=resourceshubca-20",
         "cta_label": "See the rolling-cart event-reset pick on Amazon.ca",
@@ -2251,21 +2251,21 @@
     ],
     "recommendation_slots": [
       {
-        "name": "Best standing desk deal to watch",
+        "name": "Option: standing desk deal to watch",
         "reason": "Big-ticket desk upgrades can create the clearest savings when timing lines up and posture is the real bottleneck.",
         "affiliate_url": "https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20",
         "cta_label": "See standing desk deal option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca standing desk deal option."
       },
       {
-        "name": "Best ergonomic foot-rest deal category",
+        "name": "Option: ergonomic foot-rest deal category",
         "reason": "Comfort upgrades have daily-use value beyond sale-day excitement, especially for long seated blocks.",
         "affiliate_url": "https://www.amazon.ca/dp/B07L3RVF7C?tag=resourceshubca-20",
         "cta_label": "See ergonomic foot-rest option on Amazon.ca",
         "link_disclaimer": "Affiliate link to an Amazon.ca ergonomic foot-rest option."
       },
       {
-        "name": "Best cable-management tray deal category",
+        "name": "Option: cable-management tray deal category",
         "reason": "Smaller support purchases often give fast day-one improvements by calming visible desk chaos and power clutter.",
         "affiliate_url": "https://www.amazon.ca/dp/B0BPLRX32S?tag=resourceshubca-20",
         "cta_label": "See cable-management tray option on Amazon.ca",
