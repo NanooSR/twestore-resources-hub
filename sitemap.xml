@@ -52,6 +52,12 @@
     <loc>https://thewatchersedge.ca/command-center/</loc>
   </url>
   <url>
+    <loc>https://thewatchersedge.ca/toolbox/tools/</loc>
+  </url>
+  <url>
+    <loc>https://thewatchersedge.ca/toolbox/games/</loc>
+  </url>
+  <url>
     <loc>https://thewatchersedge.ca/toolbox/whats-my-ip/</loc>
   </url>
   <url>
@@ -82,7 +88,49 @@
     <loc>https://thewatchersedge.ca/toolbox/unit-converter/</loc>
   </url>
   <url>
+    <loc>https://thewatchersedge.ca/toolbox/color-palette-maker/</loc>
+  </url>
+  <url>
+    <loc>https://thewatchersedge.ca/toolbox/meta-title-preview/</loc>
+  </url>
+  <url>
+    <loc>https://thewatchersedge.ca/toolbox/csv-table-cleaner/</loc>
+  </url>
+  <url>
+    <loc>https://thewatchersedge.ca/toolbox/image-resizer/</loc>
+  </url>
+  <url>
+    <loc>https://thewatchersedge.ca/toolbox/time-zone-planner/</loc>
+  </url>
+  <url>
     <loc>https://thewatchersedge.ca/toolbox/mini-game/</loc>
+  </url>
+  <url>
+    <loc>https://thewatchersedge.ca/toolbox/memory-match/</loc>
+  </url>
+  <url>
+    <loc>https://thewatchersedge.ca/toolbox/word-ladder/</loc>
+  </url>
+  <url>
+    <loc>https://thewatchersedge.ca/toolbox/snake/</loc>
+  </url>
+  <url>
+    <loc>https://thewatchersedge.ca/toolbox/twenty-forty-eight/</loc>
+  </url>
+  <url>
+    <loc>https://thewatchersedge.ca/toolbox/sudoku-mini/</loc>
+  </url>
+  <url>
+    <loc>https://thewatchersedge.ca/toolbox/minesweeper/</loc>
+  </url>
+  <url>
+    <loc>https://thewatchersedge.ca/toolbox/typing-sprint/</loc>
+  </url>
+  <url>
+    <loc>https://thewatchersedge.ca/toolbox/trivia-quickfire/</loc>
+  </url>
+  <url>
+    <loc>https://thewatchersedge.ca/toolbox/sliding-puzzle/</loc>
   </url>
   <url>
     <loc>https://thewatchersedge.ca/store/the-watchers-edge-botops-toolkit/</loc>
