@@ -3861,7 +3861,7 @@
     <article class="mini-card">
       <p class="eyebrow">Best result fit</p>
       <h3>How this helps</h3>
-      <p class="muted">Best for people who need one clearer repeatable business system instead of another one-off file or disconnected quick fix.</p>
+      <p class="muted">Good fit for people who need one clearer repeatable business system instead of another one-off file or disconnected quick fix.</p>
       <p class="muted">Pick this when the need touches several connected routines and you want one stronger foundation.</p>
     </article>
     
@@ -4081,8 +4081,8 @@
 
 <section class="section split">
   <article class="card">
-    <p class="eyebrow">Best fit</p>
-    <h2>Best for</h2>
+    <p class="eyebrow">Fit check</p>
+    <h2>Good fit for</h2>
     
     <ul class="bullet-list">
       
@@ -4268,7 +4268,7 @@
   <article class="card">
     <p class="eyebrow">Best use case</p>
     <h2>What this product helps you do</h2>
-    <p class="muted">Best for people who need one clearer repeatable business system instead of another one-off file or disconnected quick fix.</p>
+    <p class="muted">Good fit for people who need one clearer repeatable business system instead of another one-off file or disconnected quick fix.</p>
   </article>
   <article class="card">
     <p class="eyebrow">Pairing guidance</p>
@@ -4427,23 +4427,7 @@
       </div>
     </div>
 
-    <script>
-      (function () {
-        const form = document.querySelector('[data-header-search-form]');
-        if (!form) return;
-        const input = form.querySelector('input[name="q"]');
-        const amazonIntent = /\b(amazon|amazon\.ca|affiliate|gear|equipment|supplies|setup|desk|chair|monitor|keyboard|scanner|label maker|microphone|webcam|lighting|church coffee|pet|cat|dog|office|workspace|creator)\b/i;
-        form.addEventListener('submit', (event) => {
-          const query = String(input?.value || '').trim();
-          if (!query || !amazonIntent.test(query)) return;
-          event.preventDefault();
-          const target = new URL('/amazon-store/', window.location.origin);
-          target.searchParams.set('q', query);
-          target.searchParams.set('src', 'header-search-amazon');
-          window.location.href = target.pathname + target.search + '#amazon-store-search';
-        });
-      })();
-    </script>
+    <!-- Header search always submits to Store so TWE-owned products, guides, and Amazon.ca affiliate picks stay visibly separated. -->
 
     <script>
       (function () {
