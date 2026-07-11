@@ -71,27 +71,27 @@
     <style>
       :root {
         color-scheme: light;
-        --bg: #f3eee6;
-        --bg-2: #fffdf9;
-        --panel: rgba(255, 252, 247, 0.96);
-        --panel-soft: rgba(248, 241, 233, 0.92);
-        --ink: #17343a;
-        --ink-soft: #35545a;
-        --muted: #667b80;
-        --line: #d8ddd6;
-        --line-strong: #c4d1cb;
+        --bg: #f8f4ec;
+        --bg-2: #fffefb;
+        --panel: rgba(255, 254, 250, 0.97);
+        --panel-soft: rgba(252, 247, 240, 0.94);
+        --ink: #14363b;
+        --ink-soft: #36595f;
+        --muted: #5f777d;
+        --line: #e4ddd1;
+        --line-strong: #cfddd8;
         --brand: #096772;
         --brand-deep: #064c55;
-        --brand-soft: #dceeed;
+        --brand-soft: #e4f4f2;
         --gold: #ef9b13;
         --gold-soft: #fff1d6;
         --berry: #8c5b53;
-        --sage: #e9f3ee;
-        --sky: #e8f3f6;
-        --cream: #fff7e8;
-        --rose: #f7ebe6;
-        --shadow-sm: 0 10px 26px rgba(23, 52, 58, 0.07);
-        --shadow-md: 0 24px 56px rgba(23, 52, 58, 0.10);
+        --sage: #eef7f2;
+        --sky: #edf8fa;
+        --cream: #fff9ed;
+        --rose: #faeee9;
+        --shadow-sm: 0 8px 22px rgba(23, 52, 58, 0.055);
+        --shadow-md: 0 18px 44px rgba(23, 52, 58, 0.085);
         --radius-sm: 8px;
         --radius-md: 12px;
         --radius-lg: 18px;
@@ -109,10 +109,9 @@
         font-family: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
         overflow-x: clip;
         background:
-          radial-gradient(circle at top left, rgba(9, 103, 114, 0.10), transparent 28%),
-
-          radial-gradient(circle at 85% 48%, rgba(140, 91, 83, 0.06), transparent 22%),
-          linear-gradient(180deg, #fffefc 0%, #f8f3eb 34%, #efe8de 100%);
+          radial-gradient(circle at top left, rgba(9, 103, 114, 0.075), transparent 30%),
+          radial-gradient(circle at 85% 48%, rgba(239, 155, 19, 0.055), transparent 24%),
+          linear-gradient(180deg, #fffefc 0%, #fbf7ef 40%, #f5eee3 100%);
         color: var(--ink);
       }
       a { color: inherit; }
@@ -161,9 +160,9 @@
         padding: 12px;
         border: 1px solid rgba(196, 209, 203, 0.92);
         border-radius: 26px;
-        background: linear-gradient(180deg, rgba(255, 252, 247, 0.985), rgba(247, 243, 236, 0.965));
+        background: linear-gradient(180deg, rgba(255, 254, 251, 0.99), rgba(250, 246, 239, 0.975));
         backdrop-filter: blur(16px);
-        box-shadow: 0 18px 44px rgba(23, 52, 58, 0.11);
+        box-shadow: 0 14px 34px rgba(23, 52, 58, 0.085);
         pointer-events: none;
       }
       .site-header-band > * {
@@ -214,7 +213,7 @@
         padding: 12px 16px 13px;
         border: 1px solid rgba(196, 209, 203, 0.72);
         border-radius: 20px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 252, 247, 0.48));
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 252, 247, 0.62));
         backdrop-filter: blur(8px);
         box-shadow: inset 0 1px 0 rgba(255,255,255,0.72);
         margin-bottom: 0;
@@ -619,7 +618,7 @@
       .editorial-card,
       .product,
       .dock-card {
-        background: var(--panel);
+        background: linear-gradient(180deg, rgba(255,254,251,0.985), rgba(250,247,241,0.93));
         border: 1px solid var(--line);
         box-shadow: var(--shadow-md);
       }
@@ -799,16 +798,16 @@
         padding: 24px;
       }
       .quote-card {
-        background: linear-gradient(160deg, #0f5f68, #1a4b4c);
-        color: #fff;
-        border-color: rgba(9, 103, 114, 0.5);
+        background: linear-gradient(160deg, #eaf8f7 0%, #fff8e8 100%);
+        color: var(--ink);
+        border-color: rgba(9, 103, 114, 0.22);
       }
       .quote-card h2,
       .quote-card h3,
       .quote-card h4,
-      .quote-card p:not(.eyebrow) { color: #fff; }
-      .quote-card .muted { color: rgba(255,255,255,0.88); }
-      .quote-card .eyebrow { color: #ffe4b5; }
+      .quote-card p:not(.eyebrow) { color: var(--ink); }
+      .quote-card .muted { color: var(--ink-soft); }
+      .quote-card .eyebrow { color: var(--brand); }
       .stat-card strong,
       .stat-number {
         display: block;
@@ -3608,6 +3607,138 @@
         }
       }
 
+      /* 2026-07-10 final visual polish pass: lighten large dark feature bands while preserving TWE teal/gold branding. */
+      .panel.hero,
+      .home-fable-hero,
+      .store-hero-panel,
+      .hero,
+      .homepage-hero,
+      .store-sales-banner-main > section:first-child,
+      .store-sales-banner-main .panel.hero,
+      .store-sales-banner-main .store-hero-panel,
+      .store-hero-copy {
+        color: var(--ink) !important;
+        border-color: rgba(9, 103, 114, 0.18) !important;
+        background:
+          radial-gradient(circle at 12% 12%, rgba(255, 209, 102, 0.20), transparent 20rem),
+          radial-gradient(circle at 88% 10%, rgba(183, 221, 227, 0.48), transparent 24rem),
+          linear-gradient(135deg, rgba(255,255,255,.98), rgba(241,251,253,.94) 52%, rgba(255,247,236,.96)) !important;
+        box-shadow: 0 20px 50px rgba(23, 52, 58, 0.12), inset 0 1px 0 rgba(255,255,255,.9) !important;
+      }
+      .panel.hero h1,
+      .home-fable-hero h1,
+      .store-hero-panel h1,
+      .hero h1,
+      .homepage-hero h1 {
+        color: var(--ink) !important;
+        text-shadow: none !important;
+      }
+      .panel.hero :is(p, li),
+      .home-fable-hero :is(p, li),
+      .store-hero-panel :is(p, li),
+      .hero :is(p, li),
+      .homepage-hero :is(p, li) {
+        color: var(--ink-soft) !important;
+      }
+      .panel.hero .eyebrow,
+      .home-fable-hero .eyebrow,
+      .store-hero-panel .eyebrow,
+      .hero .eyebrow,
+      .homepage-hero .eyebrow {
+        color: var(--brand) !important;
+      }
+      .panel.hero::after,
+      .home-fable-hero::after,
+      .store-hero-panel::after,
+      .hero::after,
+      .homepage-hero::after {
+        opacity: .22 !important;
+      }
+      .store-sales-banner-main > section:first-child h1,
+      .store-sales-banner-main > section:first-child h2,
+      .store-sales-banner-main > section:first-child h3,
+      .store-sales-banner-main .panel.hero h1,
+      .store-sales-banner-main .panel.hero h2,
+      .store-sales-banner-main .panel.hero h3,
+      .store-sales-banner-main .store-hero-panel h1,
+      .store-sales-banner-main .store-hero-panel h2,
+      .store-sales-banner-main .store-hero-panel h3,
+      .store-hero-copy h1,
+      .store-hero-copy h2,
+      .store-hero-copy h3 {
+        color: var(--ink) !important;
+        text-shadow: none !important;
+      }
+      .store-sales-banner-main > section:first-child :is(p, li),
+      .store-sales-banner-main .panel.hero :is(p, li),
+      .store-sales-banner-main .store-hero-panel :is(p, li),
+      .store-hero-copy :is(p, li) {
+        color: var(--ink-soft) !important;
+      }
+      .strong-card,
+      #digital-kits.section.card.strong-card {
+        color: var(--ink) !important;
+        border-color: rgba(9, 103, 114, 0.20) !important;
+        background:
+          radial-gradient(circle at 10% 12%, rgba(27,214,170,.14), transparent 26%),
+          radial-gradient(circle at 90% 6%, rgba(255,191,63,.16), transparent 26%),
+          linear-gradient(135deg, rgba(255,255,255,.98), rgba(236,250,249,.94) 58%, rgba(255,248,235,.96)) !important;
+        box-shadow: 0 18px 44px rgba(23, 52, 58, 0.10), inset 0 1px 0 rgba(255,255,255,.86) !important;
+      }
+      .strong-card :is(h1,h2,h3,h4),
+      #digital-kits.section.card.strong-card :is(h1,h2,h3,h4) { color: var(--ink) !important; }
+      .strong-card :is(p,li,.muted,.stat-label),
+      #digital-kits.section.card.strong-card :is(p,li,.muted,.stat-label) { color: var(--ink-soft) !important; }
+      .strong-card .eyebrow,
+      #digital-kits.section.card.strong-card .eyebrow { color: var(--brand) !important; }
+      .strong-card .mini-card,
+      #digital-kits.section.card.strong-card .mini-card {
+        color: var(--ink) !important;
+        border-color: rgba(9, 103, 114, 0.14) !important;
+        background: rgba(255,255,255,.82) !important;
+        box-shadow: 0 12px 30px rgba(23, 52, 58, 0.08), inset 0 1px 0 rgba(255,255,255,.8) !important;
+      }
+      .strong-card .mini-card h3,
+      #digital-kits.section.card.strong-card .mini-card h3 { color: var(--ink) !important; }
+      .strong-card .mini-card .muted,
+      #digital-kits.section.card.strong-card .mini-card .muted { color: var(--ink-soft) !important; }
+      /* Keep inline text links readable; generic card-link button treatment is only for standalone CTAs. */
+      .card a.text-link[href],
+      .panel a.text-link[href],
+      .hero a.text-link[href],
+      .mini-card a.text-link[href],
+      .card a.text-link[href]:not(.bare-link):not(.title-link),
+      .panel a.text-link[href]:not(.bare-link):not(.title-link),
+      .hero a.text-link[href]:not(.bare-link):not(.title-link),
+      .mini-card a.text-link[href]:not(.bare-link):not(.title-link) {
+        position: static !important;
+        isolation: auto !important;
+        display: inline !important;
+        min-height: 0 !important;
+        width: auto !important;
+        padding: 0 !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        background-image: none !important;
+        box-shadow: none !important;
+        color: var(--brand-deep) !important;
+        font-weight: 800 !important;
+        text-decoration: underline !important;
+        overflow: visible !important;
+        vertical-align: baseline !important;
+      }
+      .card a.text-link[href]::before,
+      .panel a.text-link[href]::before,
+      .hero a.text-link[href]::before,
+      .mini-card a.text-link[href]::before,
+      .card a.text-link[href]:not(.bare-link):not(.title-link)::before,
+      .panel a.text-link[href]:not(.bare-link):not(.title-link)::before,
+      .hero a.text-link[href]:not(.bare-link):not(.title-link)::before,
+      .mini-card a.text-link[href]:not(.bare-link):not(.title-link)::before {
+        display: none !important;
+        content: none !important;
+      }
       </style>
     <script>
       window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
