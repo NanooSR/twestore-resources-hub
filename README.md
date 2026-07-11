@@ -10,6 +10,17 @@ Read and share the current launch note here:
 
 https://thewatchersedge.ca/updates/resources-startnow20-launch/
 
+## Fresh free Toolbox + Store paths
+
+The refreshed **TWE Toolbox** offers practical browser-based utilities that are free to use with no sign-up:
+
+- **Free TWE Toolbox:** https://thewatchersedge.ca/toolbox/
+- **Main TWE Store:** https://thewatchersedge.ca/store/
+- **Resources & Amazon.ca guides:** https://thewatchersedge.ca/resources/
+- **STARTNOW20 digital-kit path:** https://thewatchersedge.ca/startnow20/
+
+Some resource links are Amazon affiliate links. As an Amazon Associate, The Watchers Edge earns from qualifying purchases, at no extra cost to the buyer. These tools, guides, and offers do not guarantee income, traffic, profit, platform approval, the cheapest price, or the best product for every buyer. Check current pricing, availability, eligibility, and seller terms on the linked provider page.
+
 ## Fastest direct paid path right now
 
 If someone wants the clearest paid route instead of browsing everything first, send them here:
