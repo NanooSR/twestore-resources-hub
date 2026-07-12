@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     
-    <meta name="description" content="Find free browser tools, plain-English Amazon.ca buying guides, pet and church resource ideas, and practical TWE digital kits without hype.">
-    <meta property="og:title" content="The Watchers Edge | Free Tools, Buying Guides &amp; Digital Kits">
-    <meta property="og:description" content="Find free browser tools, plain-English Amazon.ca buying guides, pet and church resource ideas, and practical TWE digital kits without hype.">
+    <meta name="description" content="Choose the right next step with free browser tools, plain-English Amazon.ca buying guides, pet and church resource ideas, and practical TWE digital kits.">
+    <meta property="og:title" content="The Watchers Edge | Practical Tools, Guides &amp; Digital Kits">
+    <meta property="og:description" content="Choose the right next step with free browser tools, plain-English Amazon.ca buying guides, pet and church resource ideas, and practical TWE digital kits.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="TheWatchersEdge.ca">
     <meta property="og:url" content="https://thewatchersedge.ca/">
     <meta property="og:image" content="https://thewatchersedge.ca/static/public_site/the-watchers-edge-logo.png">
     <meta property="og:image:alt" content="The Watchers Edge logo">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="The Watchers Edge | Free Tools, Buying Guides &amp; Digital Kits">
-    <meta name="twitter:description" content="Find free browser tools, plain-English Amazon.ca buying guides, pet and church resource ideas, and practical TWE digital kits without hype.">
+    <meta name="twitter:title" content="The Watchers Edge | Practical Tools, Guides &amp; Digital Kits">
+    <meta name="twitter:description" content="Choose the right next step with free browser tools, plain-English Amazon.ca buying guides, pet and church resource ideas, and practical TWE digital kits.">
     <meta name="twitter:image" content="https://thewatchersedge.ca/static/public_site/the-watchers-edge-logo.png">
     <meta name="theme-color" content="#096772">
     <link rel="canonical" href="https://thewatchersedge.ca/">
@@ -63,7 +63,7 @@
   }
 </style>
 
-    <title>The Watchers Edge | Free Tools, Buying Guides &amp; Digital Kits</title>
+    <title>The Watchers Edge | Practical Tools, Guides &amp; Digital Kits</title>
     
     
     
@@ -3739,6 +3739,82 @@
         display: none !important;
         content: none !important;
       }
+
+      /* 2026-07-12 SOL main-site polish: reduce pill-heavy visual noise, keep the header focused, and stop orphan cards from spanning full-width rows. */
+      @media (min-width: 901px) {
+        .grid.three > :last-child:nth-child(3n + 1),
+        .grid.five > :last-child:nth-child(5n + 1) {
+          grid-column: auto !important;
+        }
+      }
+      .btn {
+        border-radius: 14px;
+        box-shadow: 0 12px 24px rgba(9, 103, 114, 0.16), inset 0 1px 0 rgba(255,255,255,0.24);
+      }
+      .btn.secondary,
+      .btn.ghost {
+        box-shadow: 0 8px 18px rgba(23, 52, 58, 0.10), inset 0 1px 0 rgba(255,255,255,0.72);
+      }
+      .pill {
+        border-radius: 12px;
+      }
+      .nav-links a,
+      .nav-utility-row a,
+      .store-corner-card .pill,
+      .store-weather-card button.pill {
+        border-radius: 12px;
+      }
+      .site-header-band {
+        grid-template-columns: minmax(176px, 0.44fr) minmax(720px, 3.15fr) minmax(150px, 0.38fr);
+        gap: 8px;
+      }
+      .header-side-widget {
+        opacity: 0.88;
+        box-shadow: 0 10px 24px rgba(23, 52, 58, 0.07), inset 0 1px 0 rgba(255,255,255,0.76) !important;
+      }
+      .header-side-widget:hover,
+      .header-side-widget:focus-within {
+        opacity: 1;
+      }
+      .store-weather-card.is-fallback .store-weather-city-form {
+        display: none;
+      }
+      .store-weather-card .store-weather-status {
+        line-height: 1.32;
+      }
+      .section.card,
+      .panel.hero,
+      .home-fable-hero,
+      .store-hero-panel {
+        border-radius: 24px;
+      }
+      .mini-card,
+      .editorial-card,
+      .stat-card,
+      .quote-card,
+      .guide-card,
+      .timeline-step {
+        border-radius: 18px !important;
+      }
+      .homepage-benefit-statement,
+      .store-hero-panel h1,
+      #resource-hero h1 {
+        letter-spacing: -0.04em;
+      }
+      .cta-row {
+        gap: 10px;
+      }
+      @media (max-width: 760px) {
+        .btn,
+        .pill,
+        .nav-links a,
+        .nav-utility-row a {
+          border-radius: 13px;
+        }
+        .site-header-band {
+          gap: 10px;
+        }
+      }
       </style>
     <script>
       window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
@@ -3829,10 +3905,10 @@
           
 <section class="panel hero split home-fable-hero">
   <div class="hero-copy">
-    <div class="hero-kicker mono">Independent Canadian site · Amazon.ca affiliate · no hype</div>
+    <div class="hero-kicker mono">Independent Canadian site · Amazon.ca affiliate · practical, no-hype guidance</div>
     <p class="eyebrow">The Watchers Edge</p>
-    <h1 class="homepage-benefit-statement">Tools and guides you can trust.</h1>
-    <p class="lede homepage-benefit-support">Discover free browser tools, plain-English buying guides, and practical digital kits. Always independent, Canadian, and hype-free.</p>
+    <h1 class="homepage-benefit-statement">Find the right tool before you click buy.</h1>
+    <p class="lede homepage-benefit-support">Use free browser tools, plain-English Amazon.ca buying guides, and practical digital kits to narrow the fit first — then check live price, delivery, reviews, and checkout on the trusted seller page.</p>
     <div class="cta-row">
       <a class="btn" href="/resources?src=home-hero">Browse buying guides</a>
       <a class="btn secondary" href="/toolbox/?cb=toolbox20260711toolsGamesExpansion" target="twe-toolbox">Try the free toolbox</a>
@@ -3843,8 +3919,8 @@
   <aside class="mini-stack">
     <article class="editorial-card">
       <p class="eyebrow">How to use the site</p>
-      <h2>Check the fit here, buy on the trusted platform there.</h2>
-      <p class="muted">Use our notes to narrow the choice. Live price, reviews, payment, delivery, and seller terms stay on Amazon.ca, Gumroad, Etsy, or the seller page you open next.</p>
+      <h2>Compare here, confirm there.</h2>
+      <p class="muted">Use our notes to shortlist the right fit. Live price, reviews, payment, delivery, and seller terms stay on Amazon.ca, Gumroad, Etsy, or the seller page you open next.</p>
     </article>
     <article class="stat-card">
       <span class="eyebrow">Current site</span>
@@ -3858,8 +3934,8 @@
   <div class="section-head">
     <div>
       <p class="eyebrow">Free toolbox</p>
-      <h2>Free, no sign-up — bookmark it.</h2>
-      <p class="muted">Open a small browser tool when you need a quick check, a quick word helper, or a random choice without installing anything.</p>
+      <h2>Quick helpers for the moment you need them.</h2>
+      <p class="muted">Open a small browser tool for a quick check, word helper, or random choice without installing anything or creating an account.</p>
     </div>
     <a class="pill is-accent" href="/toolbox/?cb=toolbox20260711toolsGamesExpansion" target="twe-toolbox">Open the toolbox</a>
   </div>
@@ -3889,7 +3965,7 @@
   <div class="section-head">
     <div>
       <p class="eyebrow">Shop by need</p>
-      <h2>Find the right tools by starting with your problem.</h2>
+      <h2>Start with the job, not a wall of products.</h2>
       <span class="sr-only" data-legacy-copy="shop-by-need">Start with the problem you are trying to solve</span>
     </div>
     <a class="pill is-accent" href="/resources?src=home-shop-by-need">Open buying guides</a>
@@ -3945,8 +4021,8 @@
   <div class="section-head">
     <div>
       <p class="eyebrow">Featured picks</p>
-      <h2>Six practical Amazon.ca picks to start with.</h2>
-      <p class="muted">Each card stays short: what it is, who it fits, and where to check live details.</p>
+      <h2>Six practical Amazon.ca picks to compare first.</h2>
+      <p class="muted">Each card stays short: what it is, who it fits, and where to confirm live details on Amazon.ca.</p>
     </div>
     <a class="pill is-accent" href="/amazon-store?src=home-featured-picks">Search Amazon.ca picks</a>
   </div>
@@ -4035,12 +4111,12 @@
   <div class="section-head">
     <div>
       <p class="eyebrow">How we choose</p>
-      <h2>A careful shortlist beats a catalog dump.</h2>
+      <h2>A careful shortlist beats a noisy catalog.</h2>
     </div>
   </div>
   <div class="grid three">
-    <article class="mini-card"><h3>Picked by hand</h3><p class="muted">We write plain notes for the jobs real visitors are trying to solve.</p></article>
-    <article class="mini-card"><h3>Check the fit first</h3><p class="muted">The site helps you narrow the choice before you open Amazon.ca or a checkout page.</p></article>
+    <article class="mini-card"><h3>Picked by hand</h3><p class="muted">We write plain notes for real visitor jobs, not endless catalog browsing.</p></article>
+    <article class="mini-card"><h3>Check the fit first</h3><p class="muted">Use the site to narrow the choice before you open Amazon.ca or a checkout page.</p></article>
     <article class="mini-card"><h3>No fake urgency</h3><p class="muted">No invented prices, reviews, income promises, or pay-to-be-listed claims.</p></article>
   </div>
 </section>

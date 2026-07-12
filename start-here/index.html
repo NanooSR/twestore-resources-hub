@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     
-    <meta name="description" content="Start Here on The Watchers Edge to choose the clearest first step into live offers, buying guides, church resources, Amazon.ca picks, free tools, and support help.">
+    <meta name="description" content="Start Here on The Watchers Edge to choose the calmest first step into buying guides, Amazon.ca picks, free tools, digital kits, church resources, and support help.">
     <meta property="og:title" content="TheWatchersEdge.ca | Start Here">
-    <meta property="og:description" content="Start Here on The Watchers Edge to choose the clearest first step into live offers, buying guides, church resources, Amazon.ca picks, free tools, and support help.">
+    <meta property="og:description" content="Start Here on The Watchers Edge to choose the calmest first step into buying guides, Amazon.ca picks, free tools, digital kits, church resources, and support help.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="TheWatchersEdge.ca">
     <meta property="og:url" content="https://thewatchersedge.ca/start-here/">
@@ -15,7 +15,7 @@
     <meta property="og:image:alt" content="The Watchers Edge logo">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="TheWatchersEdge.ca | Start Here">
-    <meta name="twitter:description" content="Start Here on The Watchers Edge to choose the clearest first step into live offers, buying guides, church resources, Amazon.ca picks, free tools, and support help.">
+    <meta name="twitter:description" content="Start Here on The Watchers Edge to choose the calmest first step into buying guides, Amazon.ca picks, free tools, digital kits, church resources, and support help.">
     <meta name="twitter:image" content="https://thewatchersedge.ca/static/public_site/the-watchers-edge-logo.png">
     <meta name="theme-color" content="#096772">
     <link rel="canonical" href="https://thewatchersedge.ca/start-here/">
@@ -3716,6 +3716,82 @@
         display: none !important;
         content: none !important;
       }
+
+      /* 2026-07-12 SOL main-site polish: reduce pill-heavy visual noise, keep the header focused, and stop orphan cards from spanning full-width rows. */
+      @media (min-width: 901px) {
+        .grid.three > :last-child:nth-child(3n + 1),
+        .grid.five > :last-child:nth-child(5n + 1) {
+          grid-column: auto !important;
+        }
+      }
+      .btn {
+        border-radius: 14px;
+        box-shadow: 0 12px 24px rgba(9, 103, 114, 0.16), inset 0 1px 0 rgba(255,255,255,0.24);
+      }
+      .btn.secondary,
+      .btn.ghost {
+        box-shadow: 0 8px 18px rgba(23, 52, 58, 0.10), inset 0 1px 0 rgba(255,255,255,0.72);
+      }
+      .pill {
+        border-radius: 12px;
+      }
+      .nav-links a,
+      .nav-utility-row a,
+      .store-corner-card .pill,
+      .store-weather-card button.pill {
+        border-radius: 12px;
+      }
+      .site-header-band {
+        grid-template-columns: minmax(176px, 0.44fr) minmax(720px, 3.15fr) minmax(150px, 0.38fr);
+        gap: 8px;
+      }
+      .header-side-widget {
+        opacity: 0.88;
+        box-shadow: 0 10px 24px rgba(23, 52, 58, 0.07), inset 0 1px 0 rgba(255,255,255,0.76) !important;
+      }
+      .header-side-widget:hover,
+      .header-side-widget:focus-within {
+        opacity: 1;
+      }
+      .store-weather-card.is-fallback .store-weather-city-form {
+        display: none;
+      }
+      .store-weather-card .store-weather-status {
+        line-height: 1.32;
+      }
+      .section.card,
+      .panel.hero,
+      .home-fable-hero,
+      .store-hero-panel {
+        border-radius: 24px;
+      }
+      .mini-card,
+      .editorial-card,
+      .stat-card,
+      .quote-card,
+      .guide-card,
+      .timeline-step {
+        border-radius: 18px !important;
+      }
+      .homepage-benefit-statement,
+      .store-hero-panel h1,
+      #resource-hero h1 {
+        letter-spacing: -0.04em;
+      }
+      .cta-row {
+        gap: 10px;
+      }
+      @media (max-width: 760px) {
+        .btn,
+        .pill,
+        .nav-links a,
+        .nav-utility-row a {
+          border-radius: 13px;
+        }
+        .site-header-band {
+          gap: 10px;
+        }
+      }
       </style>
     <script>
       window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
@@ -3806,10 +3882,10 @@
           
 <section class="panel hero split">
   <div class="hero-copy">
-    <div class="hero-kicker mono">Quick orientation · clear choices · calmer next steps</div>
+    <div class="hero-kicker mono">Quick orientation · calmer choices · no-pressure next steps</div>
     <p class="eyebrow">Start here</p>
-    <h1>Not sure where to start? Choose an option below.</h1>
-    <p class="lede">Use this page when you know you need help but do not yet know whether to begin with store products, Amazon.ca resources, broader gear guides, church buying guides, free tools, or support.</p>
+    <h1>Choose the clearest first click.</h1>
+    <p class="lede">Use this page when you know the job but not the route: a buying guide, Amazon.ca shortlist, church resource path, free browser tool, digital kit, or support note.</p>
     <div class="cta-row">
       <a class="btn" href="/resources?q=label+desk+light+reset&amp;src=start-here-hero">Start with a small Amazon quick win</a>
       <a class="btn secondary" href="/resources?category=church-ministry&amp;q=church+welcome+coffee&amp;src=start-here-hero">Open church Amazon guide</a>
@@ -3825,8 +3901,8 @@
       <div class="stat-label">guided ways to begin without getting lost</div>
     </article>
     <article class="mini-card">
-      <h3>Use this page when you want the shortest way into the right part of the site.</h3>
-      <p class="muted">It is designed for practical visitors who want a calmer first click and less guesswork.</p>
+      <h3>A calmer map for practical visitors.</h3>
+      <p class="muted">Pick the closest path, read the fit notes, and only leave for a seller page when you are ready to confirm live details.</p>
     </article>
   </div>
 </section>
@@ -3877,11 +3953,11 @@
     <div class="mini-stack">
       <article class="timeline-step">
         <h3>If you already want a product</h3>
-        <p class="muted">Go straight to the store, then use product pages and filters to narrow the best fit before opening checkout.</p>
+        <p class="muted">Go to the Store, check the fit notes, then open checkout only when the seller page is the right next step.</p>
       </article>
       <article class="timeline-step">
         <h3>If you need buying guidance</h3>
-        <p class="muted">Open Resources for category guides, broader buyer guides, church buying guides, and practical next-step thinking.</p>
+        <p class="muted">Open Resources for category guides, broader buyer guides, church buying guides, and practical next-step thinking before you shop.</p>
       </article>
       <article class="timeline-step">
         <h3>If you want help choosing</h3>

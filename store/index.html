@@ -3716,6 +3716,82 @@
         display: none !important;
         content: none !important;
       }
+
+      /* 2026-07-12 SOL main-site polish: reduce pill-heavy visual noise, keep the header focused, and stop orphan cards from spanning full-width rows. */
+      @media (min-width: 901px) {
+        .grid.three > :last-child:nth-child(3n + 1),
+        .grid.five > :last-child:nth-child(5n + 1) {
+          grid-column: auto !important;
+        }
+      }
+      .btn {
+        border-radius: 14px;
+        box-shadow: 0 12px 24px rgba(9, 103, 114, 0.16), inset 0 1px 0 rgba(255,255,255,0.24);
+      }
+      .btn.secondary,
+      .btn.ghost {
+        box-shadow: 0 8px 18px rgba(23, 52, 58, 0.10), inset 0 1px 0 rgba(255,255,255,0.72);
+      }
+      .pill {
+        border-radius: 12px;
+      }
+      .nav-links a,
+      .nav-utility-row a,
+      .store-corner-card .pill,
+      .store-weather-card button.pill {
+        border-radius: 12px;
+      }
+      .site-header-band {
+        grid-template-columns: minmax(176px, 0.44fr) minmax(720px, 3.15fr) minmax(150px, 0.38fr);
+        gap: 8px;
+      }
+      .header-side-widget {
+        opacity: 0.88;
+        box-shadow: 0 10px 24px rgba(23, 52, 58, 0.07), inset 0 1px 0 rgba(255,255,255,0.76) !important;
+      }
+      .header-side-widget:hover,
+      .header-side-widget:focus-within {
+        opacity: 1;
+      }
+      .store-weather-card.is-fallback .store-weather-city-form {
+        display: none;
+      }
+      .store-weather-card .store-weather-status {
+        line-height: 1.32;
+      }
+      .section.card,
+      .panel.hero,
+      .home-fable-hero,
+      .store-hero-panel {
+        border-radius: 24px;
+      }
+      .mini-card,
+      .editorial-card,
+      .stat-card,
+      .quote-card,
+      .guide-card,
+      .timeline-step {
+        border-radius: 18px !important;
+      }
+      .homepage-benefit-statement,
+      .store-hero-panel h1,
+      #resource-hero h1 {
+        letter-spacing: -0.04em;
+      }
+      .cta-row {
+        gap: 10px;
+      }
+      @media (max-width: 760px) {
+        .btn,
+        .pill,
+        .nav-links a,
+        .nav-utility-row a {
+          border-radius: 13px;
+        }
+        .site-header-band {
+          gap: 10px;
+        }
+      }
       </style>
     <script>
       window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
@@ -3867,11 +3943,11 @@
 <section class="panel hero store-hero-panel" style="padding-bottom: 22px;">
   <div class="store-hero-intro">
     <div class="store-hero-copy">
-      <div class="hero-kicker mono">Curated picks · free tools · honest guides</div>
+      <div class="hero-kicker mono">Curated picks · free tools · honest fit checks</div>
       <p class="eyebrow">Store</p>
-      <h1>Shop curated picks and honest guides.</h1>
+      <h1>Choose with confidence before checkout.</h1>
       <span class="sr-only" data-legacy-copy="store-hero">Practical picks, free tools, and honest buying guides.</span>
-      <p class="lede" style="max-width: 860px;">The Watchers Edge is an independent Canadian site. Start with a short Amazon.ca shortlist, compare simple digital kits, and use plain-English guides before you click out to a live seller page.</p>
+      <p class="lede" style="max-width: 860px;">The Watchers Edge is an independent Canadian site. Compare short Amazon.ca shortlists, simple digital kits, and plain-English guides here first, then confirm live seller details on the platform you open next.</p>
     </div>
     <div class="cta-row store-hero-actions" aria-label="Store quick picks">
       <a class="btn" href="#store-front-amazon-picks">Open Amazon Store</a>
