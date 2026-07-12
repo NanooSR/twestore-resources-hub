@@ -3905,62 +3905,26 @@
 
 <section class="section card">
   <p class="eyebrow">Support request details</p>
-  <h2>Send the shortest useful request</h2>
+  <h2>Email support with the safest details</h2>
   <p class="muted">Use this page for order/access help, product-fit questions, website issue reports, and buyer-support requests. Include only the details needed to identify the page, product, or issue.</p>
-  <form data-support-request-form class="grid two" novalidate>
-    <div>
-      <label for="support-name"><strong>Your name</strong></label>
-      <input id="support-name" type="text" name="name" maxlength="80" autocomplete="name" required>
-    </div>
-    <div>
-      <label for="support-email"><strong>Your email address</strong></label>
-      <input id="support-email" type="email" name="email" maxlength="160" autocomplete="email" required>
-    </div>
-    <div>
-      <label for="support-category"><strong>Subject/category</strong></label>
-      <select id="support-category" name="category" required>
-        
-        <option value="order-access">Order or access help</option>
-        
-        <option value="product-fit">Product-fit question</option>
-        
-        <option value="website-issue">Website issue report</option>
-        
-        <option value="billing-refund">Billing or refund follow-up</option>
-        
-        <option value="general">General support request</option>
-        
-      </select>
-    </div>
-    <div>
-      <label for="support-subject"><strong>Short subject</strong></label>
-      <input id="support-subject" type="text" name="subject" maxlength="120" placeholder="Short summary of the request" required>
-    </div>
-    <div style="grid-column: 1 / -1;">
-      <label for="support-message"><strong>Message</strong></label>
-      <textarea id="support-message" name="message" rows="8" maxlength="1200" placeholder="What happened, what you expected, product/page, order reference if relevant, and the best next action you need." required></textarea>
-    </div>
-    <input type="hidden" name="page" value="/support">
-    <input type="hidden" name="source" value="public-site-support-page">
-    <input type="hidden" name="timestamp" value="">
-    <div style="grid-column: 1 / -1; display: grid; gap: 10px;">
-      <div class="card" style="padding: 16px 18px; background: rgba(255,255,255,0.74); box-shadow: none;">
-        <p class="muted" style="margin-bottom: 0;">Prefer email? Write to support@thewatchersedge.ca — include the page or product name and we&#39;ll get back to you.</p>
-      </div>
-      <div class="cta-row" style="margin-top: 0;">
-        <button class="btn" type="submit" disabled aria-disabled="true">Submit support request</button>
-        <a class="btn ghost" href="mailto:support@thewatchersedge.ca?subject=The%20Watchers%20Edge%20support%20request%20%E2%80%94%20General%20support%20request&amp;body=Name%3A%20Not%20provided%0AEmail%3A%20Not%20provided%0ACategory%3A%20General%20support%20request%0ASubject%3A%20General%20support%20request%0AMessage%3A%20%0APage%3A%20%2Fsupport%0ASource%3A%20public-site-support-page" data-support-fallback-link>Use fallback support email</a>
-      </div>
-      <div class="card" data-support-success hidden style="padding: 16px 18px; background: linear-gradient(135deg, rgba(232,244,241,0.92), rgba(255,255,255,0.96)); box-shadow: none;">
-        <strong>Support request sent.</strong>
-        <p class="muted" style="margin: 8px 0 0;">Your request was delivered to support and should be ready for Outlook handling.</p>
-      </div>
-      <div class="card" data-support-error  style="padding: 16px 18px; background: linear-gradient(135deg, rgba(255,244,236,0.96), rgba(255,255,255,0.98)); box-shadow: none;">
-        <strong>Email support is ready.</strong>
-        <p class="muted" style="margin: 8px 0 0;">Use the support email link so the request reaches support@thewatchersedge.ca with the page or product name included.</p>
-      </div>
-    </div>
-  </form>
+  
+  <div class="grid two">
+    <article class="mini-card">
+      <h3>Email is the primary support path right now</h3>
+      <p class="muted">The public page is intentionally email-first until a secure live support endpoint is approved and tested. This avoids sending private details into an unfinished form.</p>
+      <a class="btn" href="mailto:support@thewatchersedge.ca?subject=The%20Watchers%20Edge%20support%20request%20%E2%80%94%20General%20support%20request&amp;body=Name%3A%20Not%20provided%0AEmail%3A%20Not%20provided%0ACategory%3A%20General%20support%20request%0ASubject%3A%20General%20support%20request%0AMessage%3A%20%0APage%3A%20%2Fsupport%0ASource%3A%20public-site-support-page" data-support-fallback-link>Email support@thewatchersedge.ca</a>
+    </article>
+    <article class="mini-card">
+      <h3>What to include</h3>
+      <ul class="hero-summary-list">
+        <li>Your name and reply email.</li>
+        <li>The page, product, or order context.</li>
+        <li>The shortest useful description of what happened and what help you need.</li>
+      </ul>
+      <p class="muted">Please do not include passwords, payment details, API keys, tax details, or other sensitive account information.</p>
+    </article>
+  </div>
+  
 </section>
 
 <script>
