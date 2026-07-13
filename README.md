@@ -1,25 +1,25 @@
-# The Watchers Edge — Store + STARTNOW20
+# The Watchers Edge — Amazon.ca Share Paths + Store
 
-A practical public resource hub for The Watchers Edge: live Store paths, buyer guides, Amazon.ca affiliate resource pages, cleaned Blogger resource trails, and selected TWE Gumroad setup-kit offers.
+A practical public resource hub for The Watchers Edge: Amazon.ca buying guides, three-lane affiliate sales routing, free Toolbox utilities, live Store paths, cleaned Blogger resource trails, and selected TWE Gumroad setup-kit offers.
 
-## Current money-now launch note
+## Fastest Amazon.ca affiliate path right now
 
-**Store browse paths + STARTNOW20 launch note**
+The current safest sales push is **one buying job at a time**, not a generic product wall. Share the TWE page first, then let Amazon.ca handle live price, shipping, reviews, seller terms, and checkout.
 
-Read and share the current launch note here:
+- **Amazon Share Kit:** https://thewatchersedge.ca/amazon-share-kit/
+- **Amazon Sales Sprint:** https://thewatchersedge.ca/amazon-sales-sprint/
+- **Admin reset lane:** https://thewatchersedge.ca/amazon-store/?category=admin-paperwork&q=scanner+filing+label&src=github-readme-admin-reset#amazon-store-results
+- **Calls/content lane:** https://thewatchersedge.ca/amazon-store/?category=creator-calls&q=microphone+webcam+light&src=github-readme-calls-content#amazon-store-results
+- **Church/event lane:** https://thewatchersedge.ca/amazon-store/?category=church-ministry&q=church+welcome+coffee&src=github-readme-church-event#amazon-store-results
 
-https://thewatchersedge.ca/updates/resources-startnow20-launch/
+Disclosure: some resource links are Amazon affiliate links. As an Amazon Associate I earn from qualifying purchases. No income, traffic, Amazon approval, cheapest-product, best-product, price, availability, rating, or review claims are made here; check current details on Amazon.ca or the destination marketplace.
 
-## Fresh free Toolbox + Store paths
-
-The refreshed **TWE Toolbox** offers practical browser-based utilities that are free to use with no sign-up:
+## Free Toolbox + Store paths
 
 - **Free TWE Toolbox:** https://thewatchersedge.ca/toolbox/
 - **Main TWE Store:** https://thewatchersedge.ca/store/
 - **Resources & Amazon.ca guides:** https://thewatchersedge.ca/resources/
 - **STARTNOW20 digital-kit path:** https://thewatchersedge.ca/startnow20/
-
-Some resource links are Amazon affiliate links. As an Amazon Associate, The Watchers Edge earns from qualifying purchases, at no extra cost to the buyer. These tools, guides, and offers do not guarantee income, traffic, profit, platform approval, the cheapest price, or the best product for every buyer. Check current pricing, availability, eligibility, and seller terms on the linked provider page.
 
 ## Fastest direct paid path right now
 

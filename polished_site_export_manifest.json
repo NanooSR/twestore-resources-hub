@@ -10,6 +10,7 @@
     "/store",
     "/amazon-store",
     "/amazon-sales-sprint",
+    "/amazon-share-kit",
     "/startnow20",
     "/privacy",
     "/terms",
@@ -133,6 +134,7 @@
     "/store",
     "/amazon-store",
     "/amazon-sales-sprint",
+    "/amazon-share-kit",
     "/startnow20",
     "/privacy",
     "/terms",
@@ -320,5 +322,5 @@
       "location": "/"
     }
   ],
-  "exported_count": 65
+  "exported_count": 66
 }
