@@ -9,6 +9,7 @@
     "/church",
     "/store",
     "/amazon-store",
+    "/amazon-sales-sprint",
     "/startnow20",
     "/privacy",
     "/terms",
@@ -131,6 +132,7 @@
     "/church",
     "/store",
     "/amazon-store",
+    "/amazon-sales-sprint",
     "/startnow20",
     "/privacy",
     "/terms",
@@ -318,5 +320,5 @@
       "location": "/"
     }
   ],
-  "exported_count": 64
+  "exported_count": 65
 }
