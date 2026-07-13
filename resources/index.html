@@ -4370,6 +4370,33 @@
     </div>
   </article>
 </section>
+<script>
+  (() => {
+    const params = new URLSearchParams(window.location.search || '');
+    const categorySlug = (params.get('category') || '').trim();
+    const query = (params.get('q') || '').trim().replace(/\s+/g, ' ');
+    if (!categorySlug && !query) return;
+    const categoryTitles = {
+      'workspace': 'Workspace',
+      'admin-paperwork': 'Admin & paperwork',
+      'creator-calls': 'Creator calls',
+      'research-reading': 'Research & reading',
+      'church-ministry': 'Church & ministry',
+      'pet-routines': 'Pet routines'
+    };
+    const labels = [];
+    if (categorySlug) labels.push(`Amazon category: ${categoryTitles[categorySlug] || categorySlug.replace(/-/g, ' ')}`);
+    if (query) labels.push(`Search: ${query}`);
+    const title = `TheWatchersEdge.ca | Resource results — ${labels.join(' · ')}`;
+    document.title = title;
+    const setMeta = (selector) => {
+      const node = document.querySelector(selector);
+      if (node) node.setAttribute('content', title);
+    };
+    setMeta('meta[property="og:title"]');
+    setMeta('meta[name="twitter:title"]');
+  })();
+</script>
 
           
       
