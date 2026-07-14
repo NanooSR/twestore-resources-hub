@@ -19,6 +19,7 @@
     "/resources",
     "/updates/resources-startnow20-launch",
     "/updates/retainer-guide-and-toolbox",
+    "/updates/admin-reset-amazon-shortlist",
     "/command-center",
     "/toolbox/tools/",
     "/toolbox/games/",
@@ -143,6 +144,7 @@
     "/resources",
     "/updates/resources-startnow20-launch",
     "/updates/retainer-guide-and-toolbox",
+    "/updates/admin-reset-amazon-shortlist",
     "/command-center",
     "/toolbox/tools/",
     "/toolbox/games/",
@@ -322,5 +324,5 @@
       "location": "/"
     }
   ],
-  "exported_count": 66
+  "exported_count": 67
 }
