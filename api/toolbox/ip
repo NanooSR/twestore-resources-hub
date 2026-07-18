@@ -1,0 +1,1 @@
+{"ip": "", "label": "IP check unavailable on static hosting", "note": "This static fallback prevents a broken request. No IP result was saved; use the live site service when available."}
