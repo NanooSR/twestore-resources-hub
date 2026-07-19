@@ -67,7 +67,10 @@
     "/store/twe-meeting-notes-action-tracker",
     "/store/twe-local-service-quote-calculator",
     "/store/twe-lead-value-roi-calculator",
-    "/store/twe-website-audit-scorecard"
+    "/store/twe-website-audit-scorecard",
+    "/store/lead-value-roi-calculator",
+    "/store/local-service-quote-calculator",
+    "/store/website-audit-scorecard"
   ],
   "affiliate_guide_routes": [
     "/best-admin-desk-tools-for-invoices-and-paperwork.html",
@@ -193,6 +196,9 @@
     "/store/twe-local-service-quote-calculator",
     "/store/twe-lead-value-roi-calculator",
     "/store/twe-website-audit-scorecard",
+    "/store/lead-value-roi-calculator",
+    "/store/local-service-quote-calculator",
+    "/store/website-audit-scorecard",
     "/best-admin-desk-tools-for-invoices-and-paperwork.html",
     "/best-ai-agent-ops-run-review-desk-setup.html",
     "/best-ai-output-qa-review-desk-setup.html",
@@ -249,8 +255,8 @@
     "/productivity-books-and-kindle-deals.html"
   ],
   "affiliate_guide_route_count": 54,
-  "product_count": 43,
-  "unique_product_route_count": 20,
+  "product_count": 46,
+  "unique_product_route_count": 23,
   "product_slugs": [
     "the-watchers-edge-botops-toolkit",
     "twe-solo-crm-follow-up-system",
@@ -294,7 +300,10 @@
     "twe-meeting-notes-action-tracker",
     "twe-local-service-quote-calculator",
     "twe-lead-value-roi-calculator",
-    "twe-website-audit-scorecard"
+    "twe-website-audit-scorecard",
+    "lead-value-roi-calculator",
+    "local-service-quote-calculator",
+    "website-audit-scorecard"
   ],
   "unique_product_slugs": [
     "the-watchers-edge-botops-toolkit",
@@ -316,7 +325,10 @@
     "twe-meeting-notes-action-tracker",
     "twe-local-service-quote-calculator",
     "twe-lead-value-roi-calculator",
-    "twe-website-audit-scorecard"
+    "twe-website-audit-scorecard",
+    "lead-value-roi-calculator",
+    "local-service-quote-calculator",
+    "website-audit-scorecard"
   ],
   "redirects": [
     {
@@ -324,5 +336,5 @@
       "location": "/"
     }
   ],
-  "exported_count": 67
+  "exported_count": 70
 }
