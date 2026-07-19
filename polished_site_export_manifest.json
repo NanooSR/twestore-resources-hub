@@ -14,6 +14,7 @@
     "/startnow20",
     "/privacy",
     "/terms",
+    "/affiliate-disclosure",
     "/contact",
     "/support",
     "/resources",
@@ -142,6 +143,7 @@
     "/startnow20",
     "/privacy",
     "/terms",
+    "/affiliate-disclosure",
     "/contact",
     "/support",
     "/resources",
@@ -336,5 +338,5 @@
       "location": "/"
     }
   ],
-  "exported_count": 70
+  "exported_count": 71
 }
