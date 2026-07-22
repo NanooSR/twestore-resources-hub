@@ -104,7 +104,7 @@
         overflow-wrap: anywhere;
         word-break: normal;
       }
-      img { display: block; max-width: 100%; }
+      img { display: block; max-width: 100%; height: auto; }
       .sr-only {
         position: absolute;
         width: 1px;
@@ -4357,7 +4357,7 @@
     const make=safe=>{mines.clear(); while(mines.size<m){let x=Math.floor(rng()*n*n); if(x!==safe&&!neigh(safe).includes(x))mines.add(x);} started=true;};
     const count=i=>neigh(i).filter(x=>mines.has(x)).length;
     const flood=i=>{if(rev.has(i)||flg.has(i))return; rev.add(i); if(count(i)===0)neigh(i).forEach(flood);};
-    const draw=()=>{$('#grid').classList.toggle('epic-board--dense',n>=9);$('#grid').style.gridTemplateColumns=`repeat(${n},minmax(44px,1fr))`;$('#flags').textContent=flg.size;$('#safe').textContent=rev.size+'/'+(n*n-m);$('#best').textContent=getBest('mines',level);progress('session-progress',rev.size,n*n-m); $('#grid').innerHTML=Array.from({length:n*n},(_,i)=>`<button class="epic-cell ${rev.has(i)?'is-goal':''} ${over&&mines.has(i)?'is-bad':''}" data-i="${i}" aria-label="row ${Math.floor(i/n)+1} column ${i%n+1}, ${flg.has(i)?'flagged':rev.has(i)?'revealed '+(count(i)||'safe'):(over&&mines.has(i)?'mine':'hidden')}">${flg.has(i)?'⚑':rev.has(i)?(count(i)||'·'):(over&&mines.has(i)?'✹':'')}</button>`).join(''); $$('.epic-cell').forEach(b=>b.onclick=()=>tap(+b.dataset.i));};
+    const draw=()=>{$('#grid').classList.toggle('epic-board--dense',n>=9);$('#grid').style.gridTemplateColumns=`repeat(${n},minmax(0,1fr))`;$('#flags').textContent=flg.size;$('#safe').textContent=rev.size+'/'+(n*n-m);$('#best').textContent=getBest('mines',level);progress('session-progress',rev.size,n*n-m); $('#grid').innerHTML=Array.from({length:n*n},(_,i)=>`<button class="epic-cell ${rev.has(i)?'is-goal':''} ${over&&mines.has(i)?'is-bad':''}" data-i="${i}" aria-label="row ${Math.floor(i/n)+1} column ${i%n+1}, ${flg.has(i)?'flagged':rev.has(i)?'revealed '+(count(i)||'safe'):(over&&mines.has(i)?'mine':'hidden')}">${flg.has(i)?'⚑':rev.has(i)?(count(i)||'·'):(over&&mines.has(i)?'✹':'')}</button>`).join(''); $$('.epic-cell').forEach(b=>b.onclick=()=>tap(+b.dataset.i));};
     const tap=i=>{if(over)return; clicks++; if(!started)make(i); if(mode==='flag'){flg.has(i)?flg.delete(i):flg.add(i);draw();return;} if(flg.has(i))return; if(mines.has(i)){over=true;draw();status('Mine hit. Replay with a safer sweep.');return;} flood(i); if(rev.size>=n*n-m){over=true;setBest('mines',level,clicks,true); if(flg.size===0)markMission('noflag'); if(level==='expert')markMission('expert'); if(daily)markMission('daily'); winXp(daily?100:55,daily?'Daily Sweep':'Safe Sweep'); status(`Minefield clear in ${clicks} clicks.`);} draw();};
     const reset=()=>{level=$('#mode').value;[n,m]=cfg[level];mines=new Set;rev=new Set;flg=new Set;over=started=false;clicks=0;draw();status('First click is safe.');};
     $('#reveal').onclick=()=>{mode='reveal';status('Reveal mode.');}; $('#flag').onclick=()=>{mode='flag';status('Flag mode.');}; $('#new').onclick=()=>{daily=false;rng=Math.random;reset();}; $('#daily').onclick=()=>{daily=true;rng=rngFor('mines-'+todayKey());$('#mode').value='hero';reset();}; $('#mode').onchange=reset; reset();
