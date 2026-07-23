@@ -4093,7 +4093,90 @@
 <section class="toolbox-rail-grid"><article class="tool-rail-card"><p class="eyebrow">How to use</p><h2>2048 Tiles</h2><ol class="tool-instruction-list"><li>Open the page.</li><li>Use the clearly labeled controls.</li><li>Retry, reset, or copy the result when you are done.</li></ol></article><article class="tool-rail-card"><p class="eyebrow">Common questions</p><h2>Questions people often ask about 2048 Tiles</h2><p class="eyebrow">What this page does well</p><p class="muted">Slide matching tiles together and chase higher scores in a clean number board. This page is intentionally focused so it stays fast, understandable, and useful on desktop and mobile.</p></article><article class="tool-rail-card"><p class="eyebrow">Privacy by design</p><p class="muted">Most TWE Toolbox pages run locally in your browser. The main controls stay clear so forms, boards, navigation, and results remain easy to use.</p></article><article class="tool-rail-card"><p class="eyebrow">Next paths</p><h2>Done with this quick task?</h2><p class="muted">Keep going with plain-English buying help, approved Amazon.ca picks, or TWE digital kits without cluttering the tool itself.</p><div class="cta-row"><a class="btn secondary" href="/resources/?src=tool-page-next">Buying guides</a><a class="btn secondary" href="/amazon-store/?src=tool-page-next">Amazon.ca picks</a><a class="btn ghost" href="/store/?src=tool-page-next">Digital kits</a></div></article></section>
 
 <style>
-.twe-fullscreen-shell{--twe-fullscreen-board-size:min(78vw,78vh,780px);--twe-fullscreen-gap:clamp(10px,2vw,18px);position:relative}.twe-fullscreen-helper{margin:12px 0 0;color:#475569;font-size:.95rem}.twe-fullscreen-enter,.twe-fullscreen-exit-overlay{min-height:44px}.twe-fullscreen-exit-overlay{display:none;position:fixed;top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:2147483000;border:1px solid rgba(255,255,255,.72);background:linear-gradient(135deg,#0f766e,#0891b2)!important;color:#fff!important;box-shadow:0 18px 42px rgba(15,23,42,.24)}.twe-fullscreen-status{display:block;margin-top:10px;color:#0f4f4a;font-weight:800}.twe-fullscreen-shell.is-twe-fullscreen-active,.twe-fullscreen-shell.twe-fullscreen-fallback{background:radial-gradient(circle at 10% 0%,rgba(20,184,166,.24),transparent 30%),linear-gradient(135deg,#081827,#0f3a46 52%,#12313f)!important;color:#f8fafc!important;border-radius:0!important;overflow:auto!important;padding:clamp(12px,2vw,28px)!important}.twe-fullscreen-shell.is-twe-fullscreen-active .muted,.twe-fullscreen-shell.twe-fullscreen-fallback .muted{color:#334155!important}.twe-fullscreen-shell.is-twe-fullscreen-active .twe-fullscreen-exit-overlay,.twe-fullscreen-shell.twe-fullscreen-fallback .twe-fullscreen-exit-overlay{display:inline-flex}.twe-fullscreen-shell.is-twe-fullscreen-active .twe-fullscreen-enter,.twe-fullscreen-shell.twe-fullscreen-fallback .twe-fullscreen-enter{display:none!important}.twe-fullscreen-shell.is-twe-fullscreen-active .active-tool-card-footer,.twe-fullscreen-shell.twe-fullscreen-fallback .active-tool-card-footer{display:none}.twe-fullscreen-resize-target{contain:layout paint;transition:min-height .2s ease}.twe-fullscreen-shell.is-twe-fullscreen-active .twe-fullscreen-resize-target,.twe-fullscreen-shell.twe-fullscreen-fallback .twe-fullscreen-resize-target{min-height:calc(100vh - 230px);display:grid;align-content:start;gap:var(--twe-fullscreen-gap);touch-action:none}.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].is-twe-fullscreen-active .game-board,.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].twe-fullscreen-fallback .game-board{width:var(--twe-fullscreen-board-size)!important;max-width:100%!important;margin-inline:auto;grid-auto-rows:minmax(44px,1fr)}.twe-fullscreen-shell.is-twe-fullscreen-active canvas,.twe-fullscreen-shell.twe-fullscreen-fallback canvas{max-width:min(92vw,calc(100vh - 260px));height:auto}.twe-fullscreen-shell[data-twe-fullscreen-surface="workspace"].is-twe-fullscreen-active textarea,.twe-fullscreen-shell[data-twe-fullscreen-surface="workspace"].twe-fullscreen-fallback textarea{min-height:clamp(220px,42vh,520px)}.twe-fullscreen-shell.is-twe-fullscreen-active button:focus-visible,.twe-fullscreen-shell.twe-fullscreen-fallback button:focus-visible{outline:3px solid #facc15;outline-offset:3px}@media (orientation:portrait){.twe-fullscreen-shell{--twe-fullscreen-board-size:min(92vw,62vh,700px)}}@media (max-width:720px){.twe-fullscreen-shell.is-twe-fullscreen-active,.twe-fullscreen-shell.twe-fullscreen-fallback{padding:12px!important}.twe-fullscreen-shell.is-twe-fullscreen-active .active-tool-card-header,.twe-fullscreen-shell.twe-fullscreen-fallback .active-tool-card-header{display:grid;gap:10px}.twe-fullscreen-exit-overlay{left:max(12px,env(safe-area-inset-left));right:auto}}@media (prefers-reduced-motion: reduce){.twe-fullscreen-resize-target,.twe-fullscreen-enter,.twe-fullscreen-exit-overlay{transition:none!important;animation:none!important}}
+.twe-fullscreen-shell{
+ --twe-fullscreen-board-size:min(78vw,78vh,780px);
+ --twe-fullscreen-gap:clamp(10px,2vw,18px);
+ --twe-fullscreen-side-gutter:clamp(0px,8vw,156px);
+ --twe-fullscreen-hud-height:clamp(92px,14vh,148px);
+ --twe-fullscreen-play-height:calc(100vh - var(--twe-fullscreen-hud-height) - 56px);
+ position:relative;
+}
+.twe-fullscreen-helper{margin:12px 0 0;color:#475569;font-size:.95rem}
+.twe-fullscreen-enter,.twe-fullscreen-exit-overlay{min-height:44px}
+.twe-fullscreen-exit-overlay{display:none;position:fixed;top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:2147483000;border:1px solid rgba(255,255,255,.72);background:linear-gradient(135deg,#0f766e,#0891b2)!important;color:#fff!important;box-shadow:0 18px 42px rgba(15,23,42,.24)}
+.twe-fullscreen-status{display:block;margin-top:10px;color:#0f4f4a;font-weight:800}
+.twe-fullscreen-shell.is-twe-fullscreen-active,.twe-fullscreen-shell.twe-fullscreen-fallback{
+ min-height:100vh;
+ background:radial-gradient(circle at 10% 0%,rgba(20,184,166,.24),transparent 30%),linear-gradient(135deg,#07131f,#0f3540 52%,#122c39)!important;
+ color:#f8fafc!important;border-radius:0!important;overflow:auto!important;padding:clamp(10px,1.8vw,22px)!important;
+ isolation:isolate;
+}
+.twe-fullscreen-shell.is-twe-fullscreen-active::before,.twe-fullscreen-shell.twe-fullscreen-fallback::before,
+.twe-fullscreen-shell.is-twe-fullscreen-active::after,.twe-fullscreen-shell.twe-fullscreen-fallback::after{
+ content:"";position:fixed;top:0;bottom:0;width:var(--twe-fullscreen-side-gutter);z-index:-1;pointer-events:none;
+ background:linear-gradient(180deg,rgba(20,184,166,.10),rgba(245,158,11,.07) 48%,rgba(8,145,178,.10));
+ border-inline:1px solid rgba(255,255,255,.06);
+}
+.twe-fullscreen-shell.is-twe-fullscreen-active::before,.twe-fullscreen-shell.twe-fullscreen-fallback::before{left:0}
+.twe-fullscreen-shell.is-twe-fullscreen-active::after,.twe-fullscreen-shell.twe-fullscreen-fallback::after{right:0}
+.twe-fullscreen-shell.is-twe-fullscreen-active .muted,.twe-fullscreen-shell.twe-fullscreen-fallback .muted{color:#d8e7ea!important}
+.twe-fullscreen-shell.is-twe-fullscreen-active .twe-fullscreen-exit-overlay,.twe-fullscreen-shell.twe-fullscreen-fallback .twe-fullscreen-exit-overlay{display:inline-flex}
+.twe-fullscreen-shell.is-twe-fullscreen-active .twe-fullscreen-enter,.twe-fullscreen-shell.twe-fullscreen-fallback .twe-fullscreen-enter{display:none!important}
+.twe-fullscreen-shell.is-twe-fullscreen-active .active-tool-card-footer,.twe-fullscreen-shell.twe-fullscreen-fallback .active-tool-card-footer{display:none}
+.twe-fullscreen-shell.is-twe-fullscreen-active .active-tool-card-header,.twe-fullscreen-shell.twe-fullscreen-fallback .active-tool-card-header{
+ max-width:min(1180px,calc(100vw - (var(--twe-fullscreen-side-gutter) * 2) - 28px));margin-inline:auto;padding:clamp(10px,1.4vw,16px);
+ grid-template-columns:minmax(0,1fr) auto;gap:12px;background:linear-gradient(135deg,rgba(15,42,54,.82),rgba(13,80,84,.62))!important;color:#f8fafc;border-color:rgba(255,255,255,.14);
+}
+.twe-fullscreen-shell.is-twe-fullscreen-active .active-tool-card-copy h1,.twe-fullscreen-shell.twe-fullscreen-fallback .active-tool-card-copy h1{font-size:clamp(1.25rem,2.4vw,2.2rem);margin-block:.12em}
+.twe-fullscreen-shell.is-twe-fullscreen-active .active-tool-proof-row,.twe-fullscreen-shell.twe-fullscreen-fallback .active-tool-proof-row{gap:6px}
+.twe-fullscreen-shell.is-twe-fullscreen-active .active-tool-proof,.twe-fullscreen-shell.twe-fullscreen-fallback .active-tool-proof{background:rgba(255,255,255,.10);color:#ecfeff;border-color:rgba(255,255,255,.14)}
+.twe-fullscreen-resize-target{contain:layout paint;transition:min-height .2s ease,width .2s ease;outline:0}
+.twe-fullscreen-shell.is-twe-fullscreen-active .twe-fullscreen-resize-target,.twe-fullscreen-shell.twe-fullscreen-fallback .twe-fullscreen-resize-target{
+ min-height:var(--twe-fullscreen-play-height);width:min(1180px,calc(100vw - (var(--twe-fullscreen-side-gutter) * 2) - 28px));margin:clamp(10px,1.6vw,18px) auto 0;
+ display:grid;align-content:start;gap:var(--twe-fullscreen-gap);touch-action:auto;background:linear-gradient(135deg,rgba(8,24,39,.74),rgba(15,55,64,.70))!important;border-color:rgba(255,255,255,.12)!important;
+}
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].is-twe-fullscreen-active .epic-game-wrap,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].twe-fullscreen-fallback .epic-game-wrap{display:grid;grid-template-columns:minmax(230px,.72fr) minmax(280px,1fr);align-items:start;gap:clamp(10px,1.8vw,22px)}
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].is-twe-fullscreen-active .epic-hero,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].twe-fullscreen-fallback .epic-hero,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].is-twe-fullscreen-active .epic-missions,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].twe-fullscreen-fallback .epic-missions{grid-column:1;align-self:start}
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].is-twe-fullscreen-active .epic-board,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].twe-fullscreen-fallback .epic-board,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].is-twe-fullscreen-active .game-board,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].twe-fullscreen-fallback .game-board{
+ grid-column:2;grid-row:1 / span 4;width:var(--twe-fullscreen-board-size)!important;max-width:100%!important;justify-self:center;align-self:start;margin-inline:auto;overflow:visible!important;
+}
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].is-twe-fullscreen-active .epic-cell,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].twe-fullscreen-fallback .epic-cell,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].is-twe-fullscreen-active .game-cell,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].twe-fullscreen-fallback .game-cell,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].is-twe-fullscreen-active .game-tile,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].twe-fullscreen-fallback .game-tile{aspect-ratio:1/1;min-height:0;font-size:clamp(.92rem,calc(var(--twe-fullscreen-board-size)/24),1.75rem)}
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].is-twe-fullscreen-active .epic-dpad,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].twe-fullscreen-fallback .epic-dpad{grid-column:1;grid-template-columns:repeat(3,clamp(54px,5vw,76px));justify-content:center;touch-action:manipulation}
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].is-twe-fullscreen-active .epic-board,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].twe-fullscreen-fallback .epic-board,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].is-twe-fullscreen-active .game-board,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="board"].twe-fullscreen-fallback .game-board{touch-action:none}
+.twe-fullscreen-shell[data-twe-fullscreen-surface="controls"].is-twe-fullscreen-active .reaction-target,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="controls"].twe-fullscreen-fallback .reaction-target{min-height:min(54vh,520px)!important;font-size:clamp(1.1rem,3.2vw,2.4rem)}
+.twe-fullscreen-shell[data-twe-fullscreen-surface="workspace"].is-twe-fullscreen-active textarea,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="workspace"].twe-fullscreen-fallback textarea{min-height:clamp(260px,48vh,620px)}
+.twe-fullscreen-shell[data-twe-fullscreen-surface="canvas"].is-twe-fullscreen-active canvas,
+.twe-fullscreen-shell[data-twe-fullscreen-surface="canvas"].twe-fullscreen-fallback canvas{max-width:min(92vw,calc(100vh - 220px));height:auto}
+.twe-fullscreen-shell.is-twe-fullscreen-active button:focus-visible,.twe-fullscreen-shell.twe-fullscreen-fallback button:focus-visible{outline:3px solid #facc15;outline-offset:3px}
+@media (max-width:980px), (orientation:portrait){
+ .twe-fullscreen-shell{--twe-fullscreen-side-gutter:0px;--twe-fullscreen-board-size:min(92vw,58vh,720px)}
+ .twe-fullscreen-shell[data-twe-fullscreen-surface="board"].is-twe-fullscreen-active .epic-game-wrap,
+ .twe-fullscreen-shell[data-twe-fullscreen-surface="board"].twe-fullscreen-fallback .epic-game-wrap{grid-template-columns:1fr}
+ .twe-fullscreen-shell[data-twe-fullscreen-surface="board"].is-twe-fullscreen-active .epic-board,
+ .twe-fullscreen-shell[data-twe-fullscreen-surface="board"].twe-fullscreen-fallback .epic-board,
+ .twe-fullscreen-shell[data-twe-fullscreen-surface="board"].is-twe-fullscreen-active .game-board,
+ .twe-fullscreen-shell[data-twe-fullscreen-surface="board"].twe-fullscreen-fallback .game-board{grid-column:1;grid-row:auto}
+}
+@media (max-width:720px){.twe-fullscreen-shell.is-twe-fullscreen-active,.twe-fullscreen-shell.twe-fullscreen-fallback{padding:10px!important}.twe-fullscreen-shell.is-twe-fullscreen-active .active-tool-card-header,.twe-fullscreen-shell.twe-fullscreen-fallback .active-tool-card-header{display:grid;grid-template-columns:1fr;gap:10px}.twe-fullscreen-exit-overlay{left:max(12px,env(safe-area-inset-left));right:auto}}
+@media (prefers-reduced-motion: reduce){.twe-fullscreen-resize-target,.twe-fullscreen-enter,.twe-fullscreen-exit-overlay{transition:none!important;animation:none!important}}
 </style>
 <script src="/static/public_site/vendor/qrcode-1.5.4.bundle.js"></script>
 <script>
@@ -4105,6 +4188,7 @@
  const status=shell.querySelector('.twe-fullscreen-status');
  const target=shell.querySelector('.twe-fullscreen-resize-target');
  let restoreFocusAfterFullscreen=null;
+ let wasFullscreenActive=false;
  const stateKey='tweToolboxFullscreenState:'+shell.dataset.toolSlug;
  window.tweToolboxFullscreen={shell,target,enter,exit,stateKey};
  const isActive=()=>document.fullscreenElement===shell || shell.classList.contains('twe-fullscreen-fallback');
@@ -4114,11 +4198,29 @@
  function sizeBoard(){
   const viewport=window.visualViewport||window;
   const w=viewport.width||innerWidth, h=viewport.height||innerHeight;
-  const reserve=shell.dataset.tweFullscreenSurface==='board'?220:260;
-  const board=Math.max(220,Math.min(w*.92,h-reserve,820));
+  const active=isActive();
+  const surface=shell.dataset.tweFullscreenSurface||'simple';
+  const header=shell.querySelector('.active-tool-card-header');
+  const hudHeight=active&&header?Math.max(92,Math.ceil(header.getBoundingClientRect().height)+28):132;
+  const sideGutter=active&&w>=1180?Math.min(176,Math.max(84,Math.round(w*.095))):0;
+  const usableW=Math.max(260,w-(sideGutter*2)-36);
+  const reserve=surface==='board'?Math.max(150,hudHeight+72):Math.max(210,hudHeight+116);
+  const maxBoard=surface==='board'?920:820;
+  const board=Math.max(220,Math.min(usableW*.98,h-reserve,maxBoard));
   shell.style.setProperty('--twe-fullscreen-board-size',Math.round(board)+'px');
+  shell.style.setProperty('--twe-fullscreen-side-gutter',sideGutter+'px');
+  shell.style.setProperty('--twe-fullscreen-hud-height',hudHeight+'px');
+  shell.style.setProperty('--twe-fullscreen-play-height',Math.max(260,Math.round(h-hudHeight-56))+'px');
  }
- function applyActive(active, fallback=false){
+ function restoreFocusAfterExit(){
+  const fallback=enter&&document.contains(enter)?enter:null;
+  const prior=restoreFocusAfterFullscreen&&document.contains(restoreFocusAfterFullscreen)?restoreFocusAfterFullscreen:null;
+  const focusTarget=prior||fallback;
+  restoreFocusAfterFullscreen=null;
+  if(focusTarget&&focusTarget.focus) requestAnimationFrame(()=>focusTarget.focus({preventScroll:true}));
+ }
+ function applyActive(active, fallback=false, restoreOnExit=false){
+   const previouslyActive=wasFullscreenActive;
    shell.classList.toggle('is-twe-fullscreen-active',active&&!fallback);
    shell.classList.toggle('twe-fullscreen-fallback',active&&fallback);
    if(enter){
@@ -4136,7 +4238,10 @@
    sizeBoard();
    persist(active);
    setStatus(active?(fallback?'Full Screen fallback active. Use Exit Full Screen to return.':'Full Screen active. Esc exits browser full screen; Exit Full Screen also returns safely.'):'Full Screen ready.');
+   if(active&&target){ target.setAttribute('tabindex','-1'); requestAnimationFrame(()=>target.focus({preventScroll:true})); }
    if(active&&exit&&exit.focus) requestAnimationFrame(()=>exit.focus({preventScroll:true}));
+   wasFullscreenActive=!!active;
+   if(!active&&previouslyActive&&restoreOnExit) restoreFocusAfterExit();
  }
  async function openFullscreen(){
   restoreFocusAfterFullscreen=document.activeElement instanceof HTMLElement?document.activeElement:null;
@@ -4146,13 +4251,12 @@
   }catch(err){applyActive(true,true);setStatus('Full Screen fallback active because browser full screen was blocked.');}
  }
  async function closeFullscreen(){
-  try{if(document.fullscreenElement) await document.exitFullscreen();}catch(e){}
-  applyActive(false,false);
-  if(restoreFocusAfterFullscreen&&restoreFocusAfterFullscreen.focus) restoreFocusAfterFullscreen.focus({preventScroll:true});
+  try{if(document.fullscreenElement){ await document.exitFullscreen(); return; }}catch(e){}
+  applyActive(false,false,true);
  }
  enter&&enter.addEventListener('click',openFullscreen);
  exit&&exit.addEventListener('click',closeFullscreen);
- document.addEventListener('fullscreenchange',()=>applyActive(document.fullscreenElement===shell,false));
+ document.addEventListener('fullscreenchange',()=>{const active=document.fullscreenElement===shell; applyActive(active,false,!active);});
  document.addEventListener('fullscreenerror',()=>{applyActive(true,true);setStatus('Full Screen fallback active because browser full screen was blocked.');});
  window.addEventListener('resize',sizeBoard,{passive:true});
  window.addEventListener('orientationchange',()=>setTimeout(sizeBoard,120),{passive:true});
@@ -4167,7 +4271,7 @@
 /* const browserInfoResults = null; const converterCategory = null; const reactionTarget = null; */
 /* if (browserInfoResults) { if (textInput && wordCount && charCount && readTime) { if (qrInput && qrSize && qrPreviewWrap && qrStatus && qrDownloadLink) { if (converterCategory && converterFrom && converterTo && converterInput && converterOutput && converterNote) { const converterCategory = null; const reactionTarget = null; } */
 (() => {
- const slug="twenty-forty-eight"; const app=document.getElementById('tool-app'); if(!app) return;
+ const slug="twenty-forty-eight"; const kind="game"; const app=document.getElementById('tool-app'); if (!app || kind === 'game') return;
  const $=(s,r=app)=>r.querySelector(s), $$=(s,r=app)=>Array.from(r.querySelectorAll(s));
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const copy=async(t,el)=>{try{await navigator.clipboard.writeText(String(t||'')); if(el) el.textContent='Copied.';}catch(e){if(el) el.textContent='Copy blocked. Select and copy manually.';}};
@@ -4323,14 +4427,17 @@ Australia/Sydney</textarea></label><div class="game-toolbar"><button class="btn"
   const hash = s => { let h=2166136261; for (let i=0;i<s.length;i++){ h^=s.charCodeAt(i); h=Math.imul(h,16777619); } return h>>>0; };
   const rngFor = s => { let a=hash(s)||1; return () => { a += 0x6D2B79F5; let t=a; t=Math.imul(t^t>>>15,t|1); t^=t+Math.imul(t^t>>>7,t|61); return ((t^t>>>14)>>>0)/4294967296; }; };
   const isEditableTarget = el => !!(el && (el.closest?.('input,textarea,select,button,[contenteditable="true"]')));
+  const isTextEntryTarget = el => !!(el && el.closest?.('input,textarea,select,[contenteditable="true"]'));
   const activeGameOwnsKey = e => {
-    if (!e || e.key === 'Escape' || isEditableTarget(e.target)) return false;
+    if (!e || e.key === 'Escape' || isTextEntryTarget(e.target)) return false;
     const wrap = app.querySelector('.epic-game-wrap');
     if (!wrap) return false;
     const active = document.activeElement;
-    return wrap.contains(active) || wrap.matches(':hover') || !!wrap.dataset.keyboardActive;
+    const fsShell = app.closest?.('[data-twe-fullscreen-root="true"]');
+    const fullscreenActive = !!(document.fullscreenElement === fsShell || fsShell?.classList.contains('twe-fullscreen-fallback') || fsShell?.classList.contains('is-twe-fullscreen-active'));
+    return fullscreenActive || wrap.contains(active) || wrap.matches(':hover') || !!wrap.dataset.keyboardActive;
   };
-  const armGameKeyboard = () => { const wrap = app.querySelector('.epic-game-wrap'); if (!wrap) return; wrap.tabIndex = -1; wrap.dataset.keyboardActive = 'true'; };
+  const armGameKeyboard = () => { const wrap = app.querySelector('.epic-game-wrap'); if (!wrap) return; wrap.tabIndex = -1; wrap.dataset.keyboardActive = 'true'; if (wrap.focus) wrap.focus({preventScroll:true}); };
   const shuffle = (arr, rng=Math.random) => { const a=[...arr]; for(let i=a.length-1;i>0;i--){ const j=Math.floor(rng()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
   const progress = (id, val, max) => { const el=$('#'+id); if(el) el.style.width = Math.max(0,Math.min(100,(val/max)*100))+'%'; };
   const prof = () => safeGet('profile',{schema:1,plays:0,wins:0,xp:0,badges:{}});
