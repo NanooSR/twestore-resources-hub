@@ -976,8 +976,8 @@
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        min-height: 30px;
-        padding: 5px 10px;
+        min-height: 38px;
+        padding: 7px 12px;
         border-radius: 999px;
         border: 1px solid var(--line);
         background: #fff;
@@ -988,6 +988,22 @@
         overflow-wrap: normal;
         word-break: keep-all;
         white-space: normal;
+      }
+      a.pill,
+      button.pill,
+      .card-link {
+        min-height: 44px;
+        align-items: center;
+      }
+      .card-link {
+        display: inline-flex;
+        gap: 6px;
+        line-height: 1.2;
+      }
+      a.text-link[href] {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
       }
 
       .pill:hover,
@@ -3931,18 +3947,7 @@
       
       
       
-      <div class="site-header-band store-top-corner-grid" aria-label="Site quick tools">
-        <div class="header-band-side header-band-side-left">
-          <article class="store-corner-card store-corner-deal header-side-widget" aria-label="Featured deal path">
-            <p class="eyebrow">Featured bundle offer</p>
-            <h2>Start with the bundle discount</h2>
-            <p class="muted">Use STARTNOW20 for an easy first bundle pick.</p>
-            <div class="pill-row">
-              <a class="pill is-accent" href="/startnow20/">View bundle picks</a>
-              <span class="pill">46 ways to start</span>
-            </div>
-          </article>
-        </div>
+      <div class="site-header-band site-header-simple" aria-label="Site navigation">
         <nav class="nav">
           <a class="brand" href="/">
             <img class="brand-mark" src="/static/public_site/the-watchers-edge-mark.png" alt="The Watchers Edge logo" width="68" height="84">
@@ -3954,7 +3959,7 @@
           </a>
           <form class="nav-search" action="/store/#store-top-matches" method="get" data-header-search-form>
             <label for="global-search">Search</label>
-            <input id="global-search" type="text" name="q" placeholder="Products, guides, Amazon picks, FAQs">
+            <input id="global-search" type="text" name="q" aria-label="Search products, guides, Amazon picks, and FAQs" placeholder="Products, guides, Amazon picks, FAQs">
             <button type="submit">Search</button>
           </form>
           
@@ -3977,19 +3982,6 @@
             <a class="nav-blog-link is-pet" href="https://pawsomepetgearhub.blogspot.com/" target="_blank" rel="noopener sponsored nofollow">Open pet blog</a>
           </div>
         </nav>
-        <div class="header-band-side header-band-side-right">
-          <article class="store-corner-card store-weather-card header-side-widget" data-weather-widget aria-label="Local weather helper">
-            <p class="eyebrow">Local weather</p>
-            <div class="store-weather-visual">
-              <div>
-                <h2>Local forecast</h2>
-              </div>
-              <span class="store-weather-icon" data-weather-icon aria-hidden="true">☀️</span>
-            </div>
-            <p class="store-weather-location" data-weather-location></p>
-            <p class="muted store-weather-status" data-weather-status>Checking your local weather…</p>
-          </article>
-        </div>
       </div>
 
       <div class="store-sales-banner-grid no-rail">
@@ -4029,7 +4021,7 @@
       <h2>Where to share first — and where to pause.</h2>
       <p class="muted">This is conservative guidance based on current Amazon.ca Associates public help/policy summaries and CASL-safe common sense. If the account dashboard says something stricter, follow the dashboard.</p>
     </div>
-    <a class="pill is-accent" href="/privacy/#affiliate-disclosure">Affiliate disclosure</a>
+    <a class="pill is-accent" href="/affiliate-disclosure/">Affiliate disclosure</a>
   </div>
   <div class="grid three">
     <article class="mini-card"><h3>Use first</h3><p class="muted">The Watchers Edge pages, approved Blogger posts/pages, public Facebook fan/open group pages where allowed, Instagram, X/Twitter, YouTube, TikTok, Twitch, and opted-in email/SMS/list messages.</p></article>
@@ -4103,13 +4095,13 @@
   </div>
   <p class="muted"><strong>Disclosure:</strong> Affiliate link. As an Amazon Associate I earn from qualifying purchases. Check current details on Amazon.ca before buying.</p>
   <div class="grid two" style="margin-top:18px;">
-    <article class="mini-card"><p class="eyebrow">B09K7F27SW · Camera / Content Workflow Basics</p><h3>Clip-on lighting for calls and content.</h3><p class="muted">A practical compare-first pick for brighter desk video when the setup fits your workspace.</p><a class="btn" href="https://www.amazon.ca/dp/B09K7F27SW?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a></article>
+    <article class="mini-card"><p class="eyebrow">B09K7F27SW · Camera / Content Setup Basics</p><h3>Clip-on lighting for calls and content.</h3><p class="muted">A practical compare-first pick for brighter desk video when the setup fits your workspace.</p><a class="btn" href="https://www.amazon.ca/dp/B09K7F27SW?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a></article>
     <article class="mini-card"><p class="eyebrow">B0CGLP5LQD · Workspace &amp; Creator Desk Basics</p><h3>Magnetic monthly whiteboard planning.</h3><p class="muted">Useful for visible planning, reminders, and weekly review loops near a desk or studio wall.</p><a class="btn" href="https://www.amazon.ca/dp/B0CGLP5LQD?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a></article>
     <article class="mini-card"><p class="eyebrow">B0F4QHLMF4 · Workspace &amp; Creator Desk Basics</p><h3>Height-adjustable desk shortlist.</h3><p class="muted">A compare-first option for a cleaner sit/stand work zone when the dimensions fit your room.</p><a class="btn" href="https://www.amazon.ca/dp/B0F4QHLMF4?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a></article>
     <article class="mini-card"><p class="eyebrow">B00008IH9R · Church / Event Setup Essentials</p><h3>Coffee urn for hospitality flow.</h3><p class="muted">A practical event-table comparison pick for volunteer rooms, welcome areas, or group gatherings.</p><a class="btn" href="https://www.amazon.ca/dp/B00008IH9R?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a></article>
     <article class="mini-card"><p class="eyebrow">B0G65LN4R8 · Pet Home Comfort &amp; Cleanup</p><h3>Furniture cover for pet homes.</h3><p class="muted">A gentle home-comfort comparison pick for furniture coverage and easier room resets.</p><a class="btn" href="https://www.amazon.ca/dp/B0G65LN4R8?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a></article>
     <article class="mini-card"><p class="eyebrow">B07RX17FKL · Small Business Shipping &amp; Organization</p><h3>Organizer trays for small supplies.</h3><p class="muted">A tidy comparison pick for labels, small parts, packing-zone tools, or desk drawer resets.</p><a class="btn" href="https://www.amazon.ca/dp/B07RX17FKL?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a></article>
-    <article class="mini-card"><p class="eyebrow">B0CS9K4665 · Camera / Content Workflow Basics</p><h3>Compact microphone arm option.</h3><p class="muted">A compare-first desk pick for creators, meetings, tutorials, and cleaner audio setups.</p><a class="btn" href="https://www.amazon.ca/dp/B0CS9K4665?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a></article>
+    <article class="mini-card"><p class="eyebrow">B0CS9K4665 · Camera / Content Setup Basics</p><h3>Compact microphone arm option.</h3><p class="muted">A compare-first desk pick for creators, meetings, tutorials, and cleaner audio setups.</p><a class="btn" href="https://www.amazon.ca/dp/B0CS9K4665?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a></article>
     <article class="mini-card"><p class="eyebrow">B07RKN9FF6 · Church / Event Setup Essentials</p><h3>Wireless microphone comparison pick.</h3><p class="muted">A setup-check option for events, announcements, small services, and volunteer-led rooms.</p><a class="btn" href="https://www.amazon.ca/dp/B07RKN9FF6?tag=resourceshubca-20" rel="sponsored nofollow noopener" target="_blank">View on Amazon.ca</a></article>
   </div>
 </section>
@@ -4169,7 +4161,8 @@
         <p>Some links on this site are affiliate links. If you buy through them, The Watchers Edge may earn a small commission at no extra cost to you. As an Amazon Associate I earn from qualifying purchases. Final pricing, taxes, delivery, and checkout details stay on the live provider page you open next.</p>
         <p>Buyer support and contact: <a class="text-link" href="mailto:support@thewatchersedge.ca?subject=The%20Watchers%20Edge%20support%20question&amp;body=Order%20ID%20or%20receipt%20reference%2C%20if%20you%20have%20one%3A%0AProduct%20or%20page%3A%0ACheckout%2Faccess%20platform%2C%20if%20relevant%3A%0AQuestion%20or%20issue%3A">support@thewatchersedge.ca</a></p>
         <div class="footer-links">
-          <a class="text-link" href="/privacy/">Affiliate disclosure &amp; privacy</a>
+          <a class="text-link" href="/affiliate-disclosure/">Affiliate disclosure</a>
+          <a class="text-link" href="/privacy/">Privacy</a>
           <a class="text-link" href="/terms/">Terms</a>
           <a class="text-link" href="/contact/">Contact</a>
           <a class="text-link" href="/support/">Support</a>

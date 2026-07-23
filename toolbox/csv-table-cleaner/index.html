@@ -976,8 +976,8 @@
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        min-height: 30px;
-        padding: 5px 10px;
+        min-height: 38px;
+        padding: 7px 12px;
         border-radius: 999px;
         border: 1px solid var(--line);
         background: #fff;
@@ -988,6 +988,22 @@
         overflow-wrap: normal;
         word-break: keep-all;
         white-space: normal;
+      }
+      a.pill,
+      button.pill,
+      .card-link {
+        min-height: 44px;
+        align-items: center;
+      }
+      .card-link {
+        display: inline-flex;
+        gap: 6px;
+        line-height: 1.2;
+      }
+      a.text-link[href] {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
       }
 
       .pill:hover,

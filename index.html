@@ -999,8 +999,8 @@
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        min-height: 30px;
-        padding: 5px 10px;
+        min-height: 38px;
+        padding: 7px 12px;
         border-radius: 999px;
         border: 1px solid var(--line);
         background: #fff;
@@ -1011,6 +1011,22 @@
         overflow-wrap: normal;
         word-break: keep-all;
         white-space: normal;
+      }
+      a.pill,
+      button.pill,
+      .card-link {
+        min-height: 44px;
+        align-items: center;
+      }
+      .card-link {
+        display: inline-flex;
+        gap: 6px;
+        line-height: 1.2;
+      }
+      a.text-link[href] {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
       }
 
       .pill:hover,
@@ -3954,18 +3970,7 @@
       
       
       
-      <div class="site-header-band store-top-corner-grid" aria-label="Site quick tools">
-        <div class="header-band-side header-band-side-left">
-          <article class="store-corner-card store-corner-deal header-side-widget" aria-label="Featured deal path">
-            <p class="eyebrow">Featured bundle offer</p>
-            <h2>Start with the bundle discount</h2>
-            <p class="muted">Use STARTNOW20 for an easy first bundle pick.</p>
-            <div class="pill-row">
-              <a class="pill is-accent" href="/startnow20/">View bundle picks</a>
-              <span class="pill">46 ways to start</span>
-            </div>
-          </article>
-        </div>
+      <div class="site-header-band site-header-simple" aria-label="Site navigation">
         <nav class="nav">
           <a class="brand" href="/">
             <img class="brand-mark" src="/static/public_site/the-watchers-edge-mark.png" alt="The Watchers Edge logo" width="68" height="84">
@@ -3977,7 +3982,7 @@
           </a>
           <form class="nav-search" action="/store/#store-top-matches" method="get" data-header-search-form>
             <label for="global-search">Search</label>
-            <input id="global-search" type="text" name="q" placeholder="Products, guides, Amazon picks, FAQs">
+            <input id="global-search" type="text" name="q" aria-label="Search products, guides, Amazon picks, and FAQs" placeholder="Products, guides, Amazon picks, FAQs">
             <button type="submit">Search</button>
           </form>
           
@@ -4002,19 +4007,6 @@
             <a class="nav-blog-link is-pet" href="https://pawsomepetgearhub.blogspot.com/" target="_blank" rel="noopener sponsored nofollow">Open pet blog</a>
           </div>
         </nav>
-        <div class="header-band-side header-band-side-right">
-          <article class="store-corner-card store-weather-card header-side-widget" data-weather-widget aria-label="Local weather helper">
-            <p class="eyebrow">Local weather</p>
-            <div class="store-weather-visual">
-              <div>
-                <h2>Local forecast</h2>
-              </div>
-              <span class="store-weather-icon" data-weather-icon aria-hidden="true">☀️</span>
-            </div>
-            <p class="store-weather-location" data-weather-location></p>
-            <p class="muted store-weather-status" data-weather-status>Checking your local weather…</p>
-          </article>
-        </div>
       </div>
 
       <div class="store-sales-banner-grid no-rail">
@@ -4029,13 +4021,13 @@
     <p class="lede homepage-benefit-support">Use free browser tools, plain-English Amazon.ca buying guides, and practical digital kits to narrow the fit first — then check live price, delivery, reviews, and checkout on the trusted seller page.</p>
     <div class="cta-row">
       <a class="btn" href="/amazon-store/?src=home-hero-sales-sprint#amazon-store-results">Shop Amazon.ca picks</a>
-      <a class="btn secondary" href="/amazon-sales-sprint/?src=home-hero">Amazon sales sprint</a>
+      <a class="btn secondary" href="/amazon-sales-sprint/?src=home-hero">Browse quick Amazon.ca paths</a>
       <a class="btn secondary" href="/resources/?src=home-hero">Browse buying guides</a>
       <a class="btn ghost" href="/toolbox/?cb=toolbox20260711toolsGamesExpansion">Try the free toolbox</a>
       <a class="btn ghost" href="/store/?src=home-hero">See the digital kits</a>
       <a class="btn ghost" href="#service-demos">Try service demos</a>
     </div>
-    <p class="muted" style="max-width: 760px;">Amazon.ca affiliate: if you buy through our links we may earn a small commission at no extra cost to you. <a class="text-link" href="/privacy/">Read the disclosure</a>.</p>
+    <p class="muted" style="max-width: 760px;">Amazon.ca affiliate: if you buy through our links we may earn a small commission at no extra cost to you. <a class="text-link" href="/affiliate-disclosure/">Read the disclosure</a>.</p>
   </div>
   <aside class="mini-stack">
     <article class="editorial-card">
@@ -4071,7 +4063,7 @@
     </div>
     <div class="pill-row" style="margin:0; justify-content:flex-end;">
       <a class="pill is-accent" href="/amazon-store/?src=home-amazon-sales-routes">Open full Amazon Store</a>
-      <a class="pill" href="/amazon-share-kit/?src=home-amazon-routes">Copy/share kit</a>
+      <a class="pill" href="/amazon-share-kit/?src=home-amazon-routes">Share buyer shortcuts</a>
     </div>
   </div>
   <div class="grid three" data-amazon-purchase-intent-lanes="3">
@@ -4080,7 +4072,7 @@
     <article class="mini-card"><p class="eyebrow">Lane 3 · church/event readiness</p><h3>Coffee, welcome, service flow</h3><p class="muted">Practical hospitality and setup picks for volunteer-run spaces.</p><a class="btn secondary" href="/amazon-store/?category=church-ministry&amp;q=church+welcome+coffee&amp;src=home-church-event#amazon-store-results">Shop church/event picks</a></article>
   </div>
   <p class="muted" style="margin:16px 0 0;">As an Amazon Associate, The Watchers Edge may earn from qualifying purchases at no extra cost to you.</p>
-  <p class="muted" style="margin:10px 0 0;"><a class="text-link" href="/amazon-sales-sprint/?src=home-amazon-sales-routes">Open the Amazon sales sprint page</a> for shareable buyer routes, source-marker rules, and the daily shipped-sales monitoring checklist.</p>
+  <p class="muted" style="margin:10px 0 0;"><a class="text-link" href="/amazon-store/?src=home-amazon-sales-routes#amazon-store-results">Open the Amazon Store</a> for focused buyer paths and approved Amazon.ca pick notes.</p>
 </section>
 
 
@@ -4088,7 +4080,7 @@
 <section class="section card" id="service-demos" data-vercel-gig-promo="home" style="padding:24px; border-radius:22px; background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(220,238,237,0.52));">
   <div class="section-head">
     <div>
-      <p class="eyebrow">New service demos</p>
+      <p class="eyebrow">Custom calculator demos</p>
       <h2>Try the mini-site calculators we can customize for your business.</h2>
       <p class="muted">These are live working demos for service businesses, agencies, freelancers, and operators who want a clearer lead, quote, or audit flow. They are contact-for-pricing customization demos, not fixed-price instant checkout products.</p>
     </div>
@@ -4221,7 +4213,7 @@
     
     <article class="mini-card affiliate-tile">
       <div class="resource-picture"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2NDAgMzYwJyByb2xlPSdpbWcnIGFyaWEtbGFiZWw9J1dvcmtzcGFjZSBBbWF6b24gYWZmaWxpYXRlIHBpY2snPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSdiZycgeDE9JzAnIHkxPScwJyB4Mj0nMScgeTI9JzEnPgogICAgICA8c3RvcCBvZmZzZXQ9JzAlJyBzdG9wLWNvbG9yPScjZjZmZmZkJy8+CiAgICAgIDxzdG9wIG9mZnNldD0nMTAwJScgc3RvcC1jb2xvcj0nI2Q5ZjNlZicvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9JzY0MCcgaGVpZ2h0PSczNjAnIHJ4PSczNicgZmlsbD0ndXJsKCNiZyknLz4KICA8Y2lyY2xlIGN4PSc1NDAnIGN5PSc4Micgcj0nNzInIGZpbGw9JyMwZjc2NmUnIG9wYWNpdHk9JzAuMTInLz4KICA8Y2lyY2xlIGN4PScxMTQnIGN5PScyOTAnIHI9Jzk0JyBmaWxsPScjMGY3NjZlJyBvcGFjaXR5PScwLjEwJy8+CiAgPHJlY3QgeD0nMzgnIHk9JzM0JyB3aWR0aD0nMTc2JyBoZWlnaHQ9JzQyJyByeD0nMjEnIGZpbGw9JyMwZjc2NmUnIG9wYWNpdHk9JzAuMTUnLz4KICA8dGV4dCB4PScxMjYnIHk9JzYxJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmb250LWZhbWlseT0nQXJpYWwsIHNhbnMtc2VyaWYnIGZvbnQtc2l6ZT0nMjAnIGZvbnQtd2VpZ2h0PSc3MDAnIGZpbGw9JyMwZjc2NmUnPkhvbWUgb2ZmaWNlIGFuY2hvcjwvdGV4dD4KICA8dGV4dCB4PSc0NCcgeT0nMTQ2JyBmb250LWZhbWlseT0nQXJpYWwsIHNhbnMtc2VyaWYnIGZvbnQtc2l6ZT0nMjInIGZvbnQtd2VpZ2h0PSc3MDAnIGZpbGw9JyMwZjc2NmUnPldvcmtzcGFjZTwvdGV4dD4KICA8dGV4dCB4PSc0NCcgeT0nMjA2JyBmb250LWZhbWlseT0nQXJpYWwsIHNhbnMtc2VyaWYnIGZvbnQtc2l6ZT0nMzgnIGZvbnQtd2VpZ2h0PSc3MDAnIGZpbGw9JyMxNjM2M2InPlN0YW5kaW5nIGRlc2sgZm9yPC90ZXh0PgogIDx0ZXh0IHg9JzQ0JyB5PScyNTAnIGZvbnQtZmFtaWx5PSdBcmlhbCwgc2Fucy1zZXJpZicgZm9udC1zaXplPSczOCcgZm9udC13ZWlnaHQ9JzcwMCcgZmlsbD0nIzE2MzYzYic+ZGFpbHkgd29yazwvdGV4dD4KICA8cmVjdCB4PSc0NCcgeT0nMjg2JyB3aWR0aD0nMjIwJyBoZWlnaHQ9JzM0JyByeD0nMTcnIGZpbGw9JyNmZmZmZmYnIG9wYWNpdHk9JzAuOTInLz4KICA8dGV4dCB4PScxNTQnIHk9JzMwOScgdGV4dC1hbmNob3I9J21pZGRsZScgZm9udC1mYW1pbHk9J0FyaWFsLCBzYW5zLXNlcmlmJyBmb250LXNpemU9JzE4JyBmb250LXdlaWdodD0nNzAwJyBmaWxsPScjMzU1MzVhJz5BbWF6b24uY2EgcGljazwvdGV4dD4KPC9zdmc+" alt="Standing desk for daily work" loading="lazy" onerror="this.onerror=null; this.src='/static/public_site/the-watchers-edge-mark.png'; this.closest('.resource-picture')?.classList.add('is-fallback-image');"></div>
-      <p class="eyebrow">Workspace · <a class="text-link" href="/privacy/">Affiliate link</a></p>
+      <p class="eyebrow">Workspace · <a class="text-link" href="/affiliate-disclosure/">Affiliate link</a></p>
       <h3>Standing desk for daily work</h3>
       
       <p class="muted">A sturdy sit-stand desk if you work at the same spot all day.</p>
@@ -4233,7 +4225,7 @@
     
     <article class="mini-card affiliate-tile">
       <div class="resource-picture"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2NDAgMzYwJyByb2xlPSdpbWcnIGFyaWEtbGFiZWw9J0FkbWluICZhbXA7IHBhcGVyd29yayBBbWF6b24gYWZmaWxpYXRlIHBpY2snPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSdiZycgeDE9JzAnIHkxPScwJyB4Mj0nMScgeTI9JzEnPgogICAgICA8c3RvcCBvZmZzZXQ9JzAlJyBzdG9wLWNvbG9yPScjZjdmYmZmJy8+CiAgICAgIDxzdG9wIG9mZnNldD0nMTAwJScgc3RvcC1jb2xvcj0nI2Q4ZWJmZicvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9JzY0MCcgaGVpZ2h0PSczNjAnIHJ4PSczNicgZmlsbD0ndXJsKCNiZyknLz4KICA8Y2lyY2xlIGN4PSc1NDAnIGN5PSc4Micgcj0nNzInIGZpbGw9JyMwZjVhOWMnIG9wYWNpdHk9JzAuMTInLz4KICA8Y2lyY2xlIGN4PScxMTQnIGN5PScyOTAnIHI9Jzk0JyBmaWxsPScjMGY1YTljJyBvcGFjaXR5PScwLjEwJy8+CiAgPHJlY3QgeD0nMzgnIHk9JzM0JyB3aWR0aD0nMTc2JyBoZWlnaHQ9JzQyJyByeD0nMjEnIGZpbGw9JyMwZjVhOWMnIG9wYWNpdHk9JzAuMTUnLz4KICA8dGV4dCB4PScxMjYnIHk9JzYxJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmb250LWZhbWlseT0nQXJpYWwsIHNhbnMtc2VyaWYnIGZvbnQtc2l6ZT0nMjAnIGZvbnQtd2VpZ2h0PSc3MDAnIGZpbGw9JyMwZjVhOWMnPkFkbWluIHBhcGVyd29yazwvdGV4dD4KICA8dGV4dCB4PSc0NCcgeT0nMTQ2JyBmb250LWZhbWlseT0nQXJpYWwsIHNhbnMtc2VyaWYnIGZvbnQtc2l6ZT0nMjInIGZvbnQtd2VpZ2h0PSc3MDAnIGZpbGw9JyMwZjVhOWMnPkFkbWluICZhbXA7IHBhcGVyd29yazwvdGV4dD4KICA8dGV4dCB4PSc0NCcgeT0nMjA2JyBmb250LWZhbWlseT0nQXJpYWwsIHNhbnMtc2VyaWYnIGZvbnQtc2l6ZT0nMzgnIGZvbnQtd2VpZ2h0PSc3MDAnIGZpbGw9JyMxNjM2M2InPlBvcnRhYmxlIGRvY3VtZW50PC90ZXh0PgogIDx0ZXh0IHg9JzQ0JyB5PScyNTAnIGZvbnQtZmFtaWx5PSdBcmlhbCwgc2Fucy1zZXJpZicgZm9udC1zaXplPSczOCcgZm9udC13ZWlnaHQ9JzcwMCcgZmlsbD0nIzE2MzYzYic+c2Nhbm5lciBmb3I8L3RleHQ+CiAgPHJlY3QgeD0nNDQnIHk9JzI4Nicgd2lkdGg9JzIyMCcgaGVpZ2h0PSczNCcgcng9JzE3JyBmaWxsPScjZmZmZmZmJyBvcGFjaXR5PScwLjkyJy8+CiAgPHRleHQgeD0nMTU0JyB5PSczMDknIHRleHQtYW5jaG9yPSdtaWRkbGUnIGZvbnQtZmFtaWx5PSdBcmlhbCwgc2Fucy1zZXJpZicgZm9udC1zaXplPScxOCcgZm9udC13ZWlnaHQ9JzcwMCcgZmlsbD0nIzM1NTM1YSc+QW1hem9uLmNhIHBpY2s8L3RleHQ+Cjwvc3ZnPg==" alt="Portable document scanner for paperwork capture" loading="lazy" onerror="this.onerror=null; this.src='/static/public_site/the-watchers-edge-mark.png'; this.closest('.resource-picture')?.classList.add('is-fallback-image');"></div>
-      <p class="eyebrow">Admin &amp; paperwork · <a class="text-link" href="/privacy/">Affiliate link</a></p>
+      <p class="eyebrow">Admin &amp; paperwork · <a class="text-link" href="/affiliate-disclosure/">Affiliate link</a></p>
       <h3>Portable document scanner for paperwork capture</h3>
       
       <p class="muted">Useful when invoices, intake forms, receipts, and client paperwork are slowing down admin flow.</p>
@@ -4245,7 +4237,7 @@
     
     <article class="mini-card affiliate-tile">
       <div class="resource-picture"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2NDAgMzYwJyByb2xlPSdpbWcnIGFyaWEtbGFiZWw9J0NyZWF0b3IgJmFtcDsgY2FsbHMgQW1hem9uIGFmZmlsaWF0ZSBwaWNrJz4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0nYmcnIHgxPScwJyB5MT0nMCcgeDI9JzEnIHkyPScxJz4KICAgICAgPHN0b3Agb2Zmc2V0PScwJScgc3RvcC1jb2xvcj0nI2ZjZjhmZicvPgogICAgICA8c3RvcCBvZmZzZXQ9JzEwMCUnIHN0b3AtY29sb3I9JyNlZGU0ZmYnLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSc2NDAnIGhlaWdodD0nMzYwJyByeD0nMzYnIGZpbGw9J3VybCgjYmcpJy8+CiAgPGNpcmNsZSBjeD0nNTQwJyBjeT0nODInIHI9JzcyJyBmaWxsPScjN2MzYWVkJyBvcGFjaXR5PScwLjEyJy8+CiAgPGNpcmNsZSBjeD0nMTE0JyBjeT0nMjkwJyByPSc5NCcgZmlsbD0nIzdjM2FlZCcgb3BhY2l0eT0nMC4xMCcvPgogIDxyZWN0IHg9JzM4JyB5PSczNCcgd2lkdGg9JzE3NicgaGVpZ2h0PSc0Micgcng9JzIxJyBmaWxsPScjN2MzYWVkJyBvcGFjaXR5PScwLjE1Jy8+CiAgPHRleHQgeD0nMTI2JyB5PSc2MScgdGV4dC1hbmNob3I9J21pZGRsZScgZm9udC1mYW1pbHk9J0FyaWFsLCBzYW5zLXNlcmlmJyBmb250LXNpemU9JzIwJyBmb250LXdlaWdodD0nNzAwJyBmaWxsPScjN2MzYWVkJz5DcmVhdG9yIGF1ZGlvPC90ZXh0PgogIDx0ZXh0IHg9JzQ0JyB5PScxNDYnIGZvbnQtZmFtaWx5PSdBcmlhbCwgc2Fucy1zZXJpZicgZm9udC1zaXplPScyMicgZm9udC13ZWlnaHQ9JzcwMCcgZmlsbD0nIzdjM2FlZCc+Q3JlYXRvciAmYW1wOyBjYWxsczwvdGV4dD4KICA8dGV4dCB4PSc0NCcgeT0nMjA2JyBmb250LWZhbWlseT0nQXJpYWwsIHNhbnMtc2VyaWYnIGZvbnQtc2l6ZT0nMzgnIGZvbnQtd2VpZ2h0PSc3MDAnIGZpbGw9JyMxNjM2M2InPlVTQiBtaWNyb3Bob25lIGZvcjwvdGV4dD4KICA8dGV4dCB4PSc0NCcgeT0nMjUwJyBmb250LWZhbWlseT0nQXJpYWwsIHNhbnMtc2VyaWYnIGZvbnQtc2l6ZT0nMzgnIGZvbnQtd2VpZ2h0PSc3MDAnIGZpbGw9JyMxNjM2M2InPmNhbGxzIGFuZCBjb250ZW50PC90ZXh0PgogIDxyZWN0IHg9JzQ0JyB5PScyODYnIHdpZHRoPScyMjAnIGhlaWdodD0nMzQnIHJ4PScxNycgZmlsbD0nI2ZmZmZmZicgb3BhY2l0eT0nMC45MicvPgogIDx0ZXh0IHg9JzE1NCcgeT0nMzA5JyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmb250LWZhbWlseT0nQXJpYWwsIHNhbnMtc2VyaWYnIGZvbnQtc2l6ZT0nMTgnIGZvbnQtd2VpZ2h0PSc3MDAnIGZpbGw9JyMzNTUzNWEnPkFtYXpvbi5jYSBwaWNrPC90ZXh0Pgo8L3N2Zz4=" alt="USB microphone for calls and content" loading="lazy" onerror="this.onerror=null; this.src='/static/public_site/the-watchers-edge-mark.png'; this.closest('.resource-picture')?.classList.add('is-fallback-image');"></div>
-      <p class="eyebrow">Creator &amp; calls · <a class="text-link" href="/privacy/">Affiliate link</a></p>
+      <p class="eyebrow">Creator &amp; calls · <a class="text-link" href="/affiliate-disclosure/">Affiliate link</a></p>
       <h3>USB microphone for calls and content</h3>
       
       <p class="muted">Audio is one of the fastest professionalism upgrades for creators, consultants, coaches, and service providers.</p>
@@ -4284,7 +4276,7 @@
   <div class="grid three">
     
     <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
-      <a href="/store/twe-operator-systems-bundle/" style="display:block; margin-bottom: 14px; border-radius: 14px; overflow:hidden;"><img src="/static/public_site/product_previews/twe-operator-systems-bundle/00_square_thumbnail.png?v=20260721-card3" alt="Preview for TWE Operator Systems Bundle" loading="lazy" width="1200" height="1200"></a>
+      <a href="/store/twe-operator-systems-bundle/" aria-label="Review TWE Operator Systems Bundle" style="display:block; margin-bottom: 14px; border-radius: 14px; overflow:hidden;"><img src="/static/public_site/product_previews/twe-operator-systems-bundle/00_square_thumbnail.png?v=20260721-card3" alt="Preview for TWE Operator Systems Bundle" loading="lazy" width="1200" height="1200"></a>
       <p class="eyebrow">gumroad · CAD $112.00</p>
       <h3>TWE Operator Systems Bundle</h3>
       <p class="muted">Get five practical operator systems in one stack so you can manage follow-up, onboarding, SOPs, cash-flow visibility, and AI output review without building every workflow from scratch.</p>
@@ -4295,7 +4287,7 @@
     </article>
     
     <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
-      <a href="/store/twetrade-bot-builder-workbook/" style="display:block; margin-bottom: 14px; border-radius: 14px; overflow:hidden;"><img src="/static/public_site/product_previews/twetrade-bot-builder-workbook/00_square_thumbnail.png?v=20260721-card3" alt="Preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit" loading="lazy" width="1200" height="1200"></a>
+      <a href="/store/twetrade-bot-builder-workbook/" aria-label="Review TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit" style="display:block; margin-bottom: 14px; border-radius: 14px; overflow:hidden;"><img src="/static/public_site/product_previews/twetrade-bot-builder-workbook/00_square_thumbnail.png?v=20260721-card3" alt="Preview for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit" loading="lazy" width="1200" height="1200"></a>
       <p class="eyebrow">gumroad · CAD $59.00</p>
       <h3>TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit</h3>
       <p class="muted">Plan, organize, document, and review a serious trading-bot build with premium worksheets, click-to-enlarge customer-safe interface examples, expanded AI prompt packs, and safer paper-testing structure before live-risk decisions enter the picture.</p>
@@ -4306,7 +4298,7 @@
     </article>
     
     <article class="mini-card" style="background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.22);">
-      <a href="/store/twe-amazon-affiliate-store-quickstart-kit/" style="display:block; margin-bottom: 14px; border-radius: 14px; overflow:hidden;"><img src="/static/public_site/product_previews/twe-amazon-affiliate-store-quickstart-kit/00_square_thumbnail.png?v=20260721-card3" alt="Preview for Amazon Affiliate Store Quickstart Kit — Setup Guide, Storefront Blueprint &amp; Link Tracker" loading="lazy" width="1200" height="1200"></a>
+      <a href="/store/twe-amazon-affiliate-store-quickstart-kit/" aria-label="Review Amazon Affiliate Store Quickstart Kit — Setup Guide, Storefront Blueprint &amp; Link Tracker" style="display:block; margin-bottom: 14px; border-radius: 14px; overflow:hidden;"><img src="/static/public_site/product_previews/twe-amazon-affiliate-store-quickstart-kit/00_square_thumbnail.png?v=20260721-card3" alt="Preview for Amazon Affiliate Store Quickstart Kit — Setup Guide, Storefront Blueprint &amp; Link Tracker" loading="lazy" width="1200" height="1200"></a>
       <p class="eyebrow">gumroad · CAD $41.00</p>
       <h3>Amazon Affiliate Store Quickstart Kit — Setup Guide, Storefront Blueprint &amp; Link Tracker</h3>
       <p class="muted">Learn how to set up Amazon affiliate links, organize a basic resource storefront, and start a simple monetized publishing workflow — without pretending income is guaranteed.</p>
@@ -4383,7 +4375,8 @@
         <p>Some links on this site are affiliate links. If you buy through them, The Watchers Edge may earn a small commission at no extra cost to you. As an Amazon Associate I earn from qualifying purchases. Final pricing, taxes, delivery, and checkout details stay on the live provider page you open next.</p>
         <p>Buyer support and contact: <a class="text-link" href="mailto:support@thewatchersedge.ca?subject=The%20Watchers%20Edge%20support%20question&amp;body=Order%20ID%20or%20receipt%20reference%2C%20if%20you%20have%20one%3A%0AProduct%20or%20page%3A%0ACheckout%2Faccess%20platform%2C%20if%20relevant%3A%0AQuestion%20or%20issue%3A">support@thewatchersedge.ca</a></p>
         <div class="footer-links">
-          <a class="text-link" href="/privacy/">Affiliate disclosure &amp; privacy</a>
+          <a class="text-link" href="/affiliate-disclosure/">Affiliate disclosure</a>
+          <a class="text-link" href="/privacy/">Privacy</a>
           <a class="text-link" href="/terms/">Terms</a>
           <a class="text-link" href="/contact/">Contact</a>
           <a class="text-link" href="/support/">Support</a>
