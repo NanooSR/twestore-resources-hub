@@ -8,9 +8,9 @@
     
     
     
-    <meta name="description" content="Some TWE pages include Amazon.ca affiliate links, and the site is being prepared for Google AdSense. This page keeps those paths clear, labeled, and customer-safe.">
+    <meta name="description" content="Some TWE pages include Amazon.ca affiliate links, and advertising may appear only when approved and enabled. This page explains the buyer-facing boundaries in plain language.">
     <meta property="og:title" content="TheWatchersEdge.ca | Affiliate and advertising disclosure">
-    <meta property="og:description" content="Some TWE pages include Amazon.ca affiliate links, and the site is being prepared for Google AdSense. This page keeps those paths clear, labeled, and customer-safe.">
+    <meta property="og:description" content="Some TWE pages include Amazon.ca affiliate links, and advertising may appear only when approved and enabled. This page explains the buyer-facing boundaries in plain language.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="TheWatchersEdge.ca">
     <meta property="og:url" content="https://thewatchersedge.ca/affiliate-disclosure/">
@@ -18,7 +18,7 @@
     <meta property="og:image:alt" content="The Watchers Edge logo">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="TheWatchersEdge.ca | Affiliate and advertising disclosure">
-    <meta name="twitter:description" content="Some TWE pages include Amazon.ca affiliate links, and the site is being prepared for Google AdSense. This page keeps those paths clear, labeled, and customer-safe.">
+    <meta name="twitter:description" content="Some TWE pages include Amazon.ca affiliate links, and advertising may appear only when approved and enabled. This page explains the buyer-facing boundaries in plain language.">
     <meta name="twitter:image" content="https://thewatchersedge.ca/static/public_site/the-watchers-edge-logo.png">
     <meta name="theme-color" content="#096772">
     <link rel="canonical" href="https://thewatchersedge.ca/affiliate-disclosure/">
@@ -156,7 +156,16 @@
         height: auto;
         align-self: start;
       }
-      .site-header-band > .header-band-side-left,
+      .site-header-band.site-header-simple {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "nav";
+        pointer-events: auto;
+      }
+      .site-header-band.site-header-simple > .nav {
+        grid-area: nav;
+        width: 100%;
+      }
+
       .site-header-band > .header-band-side-right {
         min-width: 0;
         width: 100%;
@@ -301,6 +310,72 @@
         white-space: nowrap;
         overflow-wrap: normal;
       }
+      @media (max-width: 760px) {
+        .shell { padding: 12px; }
+        .site-header-band.site-header-simple {
+          position: static;
+          top: auto;
+          padding: 10px;
+          border-radius: 20px;
+        }
+        .site-header-band.site-header-simple .nav {
+          grid-template-columns: minmax(0, 1fr);
+          grid-template-areas:
+            "brand"
+            "search"
+            "links"
+            "utility";
+          gap: 10px;
+          padding: 12px;
+        }
+        .site-header-band.site-header-simple .brand {
+          width: 100%;
+          align-items: center;
+        }
+        .site-header-band.site-header-simple .brand-copy { min-width: 0; }
+        .site-header-band.site-header-simple .brand strong,
+        .site-header-band.site-header-simple .brand-copy span:last-child {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .site-header-band.site-header-simple .nav-search {
+          width: 100%;
+          max-width: none;
+          justify-self: stretch;
+          border-radius: 16px;
+          flex-wrap: wrap;
+        }
+        .site-header-band.site-header-simple .nav-search input { flex-basis: 160px; }
+        .site-header-band.site-header-simple .nav-search button { flex: 1 0 104px; }
+        .site-header-band.site-header-simple .nav-links,
+        .site-header-band.site-header-simple .nav-utility-row {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 8px;
+          width: 100%;
+          justify-content: stretch;
+        }
+        .site-header-band.site-header-simple .nav-links a,
+        .site-header-band.site-header-simple .nav-utility-row a {
+          width: 100%;
+          min-height: 44px;
+          padding: 9px 10px;
+          white-space: normal;
+          line-height: 1.12;
+        }
+      }
+      @media (max-width: 420px) {
+        .site-header-band.site-header-simple .nav-links,
+        .site-header-band.site-header-simple .nav-utility-row {
+          grid-template-columns: minmax(0, 1fr);
+        }
+        .site-header-band.site-header-simple .brand-mark {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
       .nav-links {
         grid-area: links;
         display: flex;
@@ -1048,6 +1123,26 @@
         padding: 24px;
         background: linear-gradient(180deg, #fffdfa, #faf5ef);
       }
+      .product-detail-hero {
+        align-items: start;
+      }
+      .product-detail-hero .mini-stack {
+        align-content: start;
+      }
+      .product-hero-proof-card {
+        max-width: 520px;
+        justify-self: end;
+      }
+      .product-hero-preview {
+        max-height: 320px;
+        width: 100%;
+        object-fit: contain;
+      }
+      .external-url-safe,
+      .checkout-handoff-card a[href^="http"] {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
       .product-card-head {
         display: flex;
         justify-content: space-between;
@@ -1193,6 +1288,32 @@
         gap: 22px;
         align-items: start;
       }
+
+      .store-all-offers-disclosure {
+        border: 1px solid rgba(9, 103, 114, 0.18);
+        border-radius: 22px;
+        background: rgba(255,255,255,0.92);
+        padding: 18px;
+      }
+      .store-all-offers-disclosure > summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 48px;
+        cursor: pointer;
+        color: var(--brand-deep);
+        font-weight: 800;
+      }
+      .store-all-offers-disclosure > summary::after {
+        content: "Show";
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: var(--gold-soft);
+        color: #9a5d00;
+        font-size: 0.9rem;
+      }
+      .store-all-offers-disclosure[open] > summary::after { content: "Hide"; }
       .start-here-first-clicks-stack {
         display: grid;
         gap: 18px;
@@ -3992,7 +4113,7 @@
   <div class="hero-copy">
     <p class="eyebrow">Affiliate disclosure</p>
     <h1>Affiliate and advertising disclosure</h1>
-    <p class="lede">Some TWE pages include Amazon.ca affiliate links, and the site is being prepared for Google AdSense. This page keeps those paths clear, labeled, and customer-safe.</p>
+    <p class="lede">Some TWE pages include Amazon.ca affiliate links, and advertising may appear only when approved and enabled. This page explains the buyer-facing boundaries in plain language.</p>
     
     <ul class="hero-summary-list">
       
@@ -4035,7 +4156,7 @@
   <article class="mini-card">
     <p class="eyebrow">Helpful detail</p>
     <h3>Advertising boundary</h3>
-    <p class="muted">Google AdSense, if approved and enabled, may use cookies or similar technologies to serve, personalize, limit, and measure ads. Ads should never be clicked just to support this site.</p>
+    <p class="muted">If advertising appears on the site, it may use cookies or similar technologies according to the ad provider&#39;s policies. Ads should be opened only when they are genuinely relevant.</p>
   </article>
   
   <article class="mini-card">
@@ -4114,12 +4235,12 @@
   
   <article class="card">
     <p class="eyebrow">Customer information</p>
-    <h2>What AdSense means here</h2>
-    <p class="muted">TheWatchersEdge.ca includes a public ads.txt seller line, but Google site review, account status, ads.txt-table status, and ad serving are controlled by Google and may lag behind public-site fixes. Ads are displayed only when owner-approved site settings enable the public AdSense loader after approval.</p>
+    <h2>What advertising means here</h2>
+    <p class="muted">Advertising, when present, is separate from product fit, support, checkout, and affiliate guidance. The site should remain useful even when no ad is relevant to your visit.</p>
     
     <ul class="bullet-list">
       
-      <li>Google account status, site approval, and indexing can take time to update after public-site fixes.</li>
+      <li>Advertising should not be treated as a recommendation unless the destination is useful to you.</li>
       
       <li>Advertising and affiliate blocks should remain clearly separate from support, checkout, and product-fit guidance.</li>
       

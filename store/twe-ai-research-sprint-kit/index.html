@@ -158,7 +158,16 @@
         height: auto;
         align-self: start;
       }
-      .site-header-band > .header-band-side-left,
+      .site-header-band.site-header-simple {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "nav";
+        pointer-events: auto;
+      }
+      .site-header-band.site-header-simple > .nav {
+        grid-area: nav;
+        width: 100%;
+      }
+
       .site-header-band > .header-band-side-right {
         min-width: 0;
         width: 100%;
@@ -303,6 +312,72 @@
         white-space: nowrap;
         overflow-wrap: normal;
       }
+      @media (max-width: 760px) {
+        .shell { padding: 12px; }
+        .site-header-band.site-header-simple {
+          position: static;
+          top: auto;
+          padding: 10px;
+          border-radius: 20px;
+        }
+        .site-header-band.site-header-simple .nav {
+          grid-template-columns: minmax(0, 1fr);
+          grid-template-areas:
+            "brand"
+            "search"
+            "links"
+            "utility";
+          gap: 10px;
+          padding: 12px;
+        }
+        .site-header-band.site-header-simple .brand {
+          width: 100%;
+          align-items: center;
+        }
+        .site-header-band.site-header-simple .brand-copy { min-width: 0; }
+        .site-header-band.site-header-simple .brand strong,
+        .site-header-band.site-header-simple .brand-copy span:last-child {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .site-header-band.site-header-simple .nav-search {
+          width: 100%;
+          max-width: none;
+          justify-self: stretch;
+          border-radius: 16px;
+          flex-wrap: wrap;
+        }
+        .site-header-band.site-header-simple .nav-search input { flex-basis: 160px; }
+        .site-header-band.site-header-simple .nav-search button { flex: 1 0 104px; }
+        .site-header-band.site-header-simple .nav-links,
+        .site-header-band.site-header-simple .nav-utility-row {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 8px;
+          width: 100%;
+          justify-content: stretch;
+        }
+        .site-header-band.site-header-simple .nav-links a,
+        .site-header-band.site-header-simple .nav-utility-row a {
+          width: 100%;
+          min-height: 44px;
+          padding: 9px 10px;
+          white-space: normal;
+          line-height: 1.12;
+        }
+      }
+      @media (max-width: 420px) {
+        .site-header-band.site-header-simple .nav-links,
+        .site-header-band.site-header-simple .nav-utility-row {
+          grid-template-columns: minmax(0, 1fr);
+        }
+        .site-header-band.site-header-simple .brand-mark {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
       .nav-links {
         grid-area: links;
         display: flex;
@@ -1050,6 +1125,26 @@
         padding: 24px;
         background: linear-gradient(180deg, #fffdfa, #faf5ef);
       }
+      .product-detail-hero {
+        align-items: start;
+      }
+      .product-detail-hero .mini-stack {
+        align-content: start;
+      }
+      .product-hero-proof-card {
+        max-width: 520px;
+        justify-self: end;
+      }
+      .product-hero-preview {
+        max-height: 320px;
+        width: 100%;
+        object-fit: contain;
+      }
+      .external-url-safe,
+      .checkout-handoff-card a[href^="http"] {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
       .product-card-head {
         display: flex;
         justify-content: space-between;
@@ -1195,6 +1290,32 @@
         gap: 22px;
         align-items: start;
       }
+
+      .store-all-offers-disclosure {
+        border: 1px solid rgba(9, 103, 114, 0.18);
+        border-radius: 22px;
+        background: rgba(255,255,255,0.92);
+        padding: 18px;
+      }
+      .store-all-offers-disclosure > summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 48px;
+        cursor: pointer;
+        color: var(--brand-deep);
+        font-weight: 800;
+      }
+      .store-all-offers-disclosure > summary::after {
+        content: "Show";
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: var(--gold-soft);
+        color: #9a5d00;
+        font-size: 0.9rem;
+      }
+      .store-all-offers-disclosure[open] > summary::after { content: "Hide"; }
       .start-here-first-clicks-stack {
         display: grid;
         gap: 18px;
@@ -3996,7 +4117,7 @@
 
 
 
-<section class="panel hero split">
+<section class="panel hero split product-detail-hero">
   <div>
     <p class="eyebrow">Offer details</p>
     <h1>TWE AI Research Sprint Kit</h1>

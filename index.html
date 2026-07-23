@@ -179,7 +179,16 @@
         height: auto;
         align-self: start;
       }
-      .site-header-band > .header-band-side-left,
+      .site-header-band.site-header-simple {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "nav";
+        pointer-events: auto;
+      }
+      .site-header-band.site-header-simple > .nav {
+        grid-area: nav;
+        width: 100%;
+      }
+
       .site-header-band > .header-band-side-right {
         min-width: 0;
         width: 100%;
@@ -324,6 +333,72 @@
         white-space: nowrap;
         overflow-wrap: normal;
       }
+      @media (max-width: 760px) {
+        .shell { padding: 12px; }
+        .site-header-band.site-header-simple {
+          position: static;
+          top: auto;
+          padding: 10px;
+          border-radius: 20px;
+        }
+        .site-header-band.site-header-simple .nav {
+          grid-template-columns: minmax(0, 1fr);
+          grid-template-areas:
+            "brand"
+            "search"
+            "links"
+            "utility";
+          gap: 10px;
+          padding: 12px;
+        }
+        .site-header-band.site-header-simple .brand {
+          width: 100%;
+          align-items: center;
+        }
+        .site-header-band.site-header-simple .brand-copy { min-width: 0; }
+        .site-header-band.site-header-simple .brand strong,
+        .site-header-band.site-header-simple .brand-copy span:last-child {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .site-header-band.site-header-simple .nav-search {
+          width: 100%;
+          max-width: none;
+          justify-self: stretch;
+          border-radius: 16px;
+          flex-wrap: wrap;
+        }
+        .site-header-band.site-header-simple .nav-search input { flex-basis: 160px; }
+        .site-header-band.site-header-simple .nav-search button { flex: 1 0 104px; }
+        .site-header-band.site-header-simple .nav-links,
+        .site-header-band.site-header-simple .nav-utility-row {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 8px;
+          width: 100%;
+          justify-content: stretch;
+        }
+        .site-header-band.site-header-simple .nav-links a,
+        .site-header-band.site-header-simple .nav-utility-row a {
+          width: 100%;
+          min-height: 44px;
+          padding: 9px 10px;
+          white-space: normal;
+          line-height: 1.12;
+        }
+      }
+      @media (max-width: 420px) {
+        .site-header-band.site-header-simple .nav-links,
+        .site-header-band.site-header-simple .nav-utility-row {
+          grid-template-columns: minmax(0, 1fr);
+        }
+        .site-header-band.site-header-simple .brand-mark {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
       .nav-links {
         grid-area: links;
         display: flex;
@@ -1071,6 +1146,26 @@
         padding: 24px;
         background: linear-gradient(180deg, #fffdfa, #faf5ef);
       }
+      .product-detail-hero {
+        align-items: start;
+      }
+      .product-detail-hero .mini-stack {
+        align-content: start;
+      }
+      .product-hero-proof-card {
+        max-width: 520px;
+        justify-self: end;
+      }
+      .product-hero-preview {
+        max-height: 320px;
+        width: 100%;
+        object-fit: contain;
+      }
+      .external-url-safe,
+      .checkout-handoff-card a[href^="http"] {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
       .product-card-head {
         display: flex;
         justify-content: space-between;
@@ -1216,6 +1311,32 @@
         gap: 22px;
         align-items: start;
       }
+
+      .store-all-offers-disclosure {
+        border: 1px solid rgba(9, 103, 114, 0.18);
+        border-radius: 22px;
+        background: rgba(255,255,255,0.92);
+        padding: 18px;
+      }
+      .store-all-offers-disclosure > summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 48px;
+        cursor: pointer;
+        color: var(--brand-deep);
+        font-weight: 800;
+      }
+      .store-all-offers-disclosure > summary::after {
+        content: "Show";
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: var(--gold-soft);
+        color: #9a5d00;
+        font-size: 0.9rem;
+      }
+      .store-all-offers-disclosure[open] > summary::after { content: "Hide"; }
       .start-here-first-clicks-stack {
         display: grid;
         gap: 18px;
@@ -4021,11 +4142,8 @@
     <p class="lede homepage-benefit-support">Use free browser tools, plain-English Amazon.ca buying guides, and practical digital kits to narrow the fit first — then check live price, delivery, reviews, and checkout on the trusted seller page.</p>
     <div class="cta-row">
       <a class="btn" href="/amazon-store/?src=home-hero-sales-sprint#amazon-store-results">Shop Amazon.ca picks</a>
-      <a class="btn secondary" href="/amazon-sales-sprint/?src=home-hero">Browse quick Amazon.ca paths</a>
-      <a class="btn secondary" href="/resources/?src=home-hero">Browse buying guides</a>
       <a class="btn ghost" href="/toolbox/?cb=toolbox20260711toolsGamesExpansion">Try the free toolbox</a>
       <a class="btn ghost" href="/store/?src=home-hero">See the digital kits</a>
-      <a class="btn ghost" href="#service-demos">Try service demos</a>
     </div>
     <p class="muted" style="max-width: 760px;">Amazon.ca affiliate: if you buy through our links we may earn a small commission at no extra cost to you. <a class="text-link" href="/affiliate-disclosure/">Read the disclosure</a>.</p>
   </div>
@@ -4067,7 +4185,7 @@
     </div>
   </div>
   <div class="grid three" data-amazon-purchase-intent-lanes="3">
-    <article class="mini-card"><p class="eyebrow">Lane 1 · admin reset</p><h3>Scanner, filing, labels</h3><p class="muted">Paperwork cleanup tools for invoices, receipts, forms, and follow-up.</p><a class="btn secondary" href="/amazon-store/?category=admin-paperwork&amp;q=scanner+filing+label&amp;src=home-admin-reset#amazon-store-results">Shop admin reset picks</a></article>
+    <article class="mini-card"><p class="eyebrow">Paperwork setup</p><h3>Scanner, filing, labels</h3><p class="muted">Paperwork cleanup tools for invoices, receipts, forms, and follow-up.</p><a class="btn secondary" href="/amazon-store/?category=admin-paperwork&amp;q=scanner+filing+label&amp;src=home-admin-reset#amazon-store-results">Shop paperwork picks</a></article>
     <article class="mini-card"><p class="eyebrow">Lane 2 · calls/content</p><h3>Microphone, webcam, light</h3><p class="muted">Simple upgrades for calls, tutorials, meetings, and content.</p><a class="btn secondary" href="/amazon-store/?category=creator-calls&amp;q=microphone+webcam+light&amp;src=home-calls-content#amazon-store-results">Shop calls/content picks</a></article>
     <article class="mini-card"><p class="eyebrow">Lane 3 · church/event readiness</p><h3>Coffee, welcome, service flow</h3><p class="muted">Practical hospitality and setup picks for volunteer-run spaces.</p><a class="btn secondary" href="/amazon-store/?category=church-ministry&amp;q=church+welcome+coffee&amp;src=home-church-event#amazon-store-results">Shop church/event picks</a></article>
   </div>

@@ -156,7 +156,16 @@
         height: auto;
         align-self: start;
       }
-      .site-header-band > .header-band-side-left,
+      .site-header-band.site-header-simple {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "nav";
+        pointer-events: auto;
+      }
+      .site-header-band.site-header-simple > .nav {
+        grid-area: nav;
+        width: 100%;
+      }
+
       .site-header-band > .header-band-side-right {
         min-width: 0;
         width: 100%;
@@ -301,6 +310,72 @@
         white-space: nowrap;
         overflow-wrap: normal;
       }
+      @media (max-width: 760px) {
+        .shell { padding: 12px; }
+        .site-header-band.site-header-simple {
+          position: static;
+          top: auto;
+          padding: 10px;
+          border-radius: 20px;
+        }
+        .site-header-band.site-header-simple .nav {
+          grid-template-columns: minmax(0, 1fr);
+          grid-template-areas:
+            "brand"
+            "search"
+            "links"
+            "utility";
+          gap: 10px;
+          padding: 12px;
+        }
+        .site-header-band.site-header-simple .brand {
+          width: 100%;
+          align-items: center;
+        }
+        .site-header-band.site-header-simple .brand-copy { min-width: 0; }
+        .site-header-band.site-header-simple .brand strong,
+        .site-header-band.site-header-simple .brand-copy span:last-child {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .site-header-band.site-header-simple .nav-search {
+          width: 100%;
+          max-width: none;
+          justify-self: stretch;
+          border-radius: 16px;
+          flex-wrap: wrap;
+        }
+        .site-header-band.site-header-simple .nav-search input { flex-basis: 160px; }
+        .site-header-band.site-header-simple .nav-search button { flex: 1 0 104px; }
+        .site-header-band.site-header-simple .nav-links,
+        .site-header-band.site-header-simple .nav-utility-row {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 8px;
+          width: 100%;
+          justify-content: stretch;
+        }
+        .site-header-band.site-header-simple .nav-links a,
+        .site-header-band.site-header-simple .nav-utility-row a {
+          width: 100%;
+          min-height: 44px;
+          padding: 9px 10px;
+          white-space: normal;
+          line-height: 1.12;
+        }
+      }
+      @media (max-width: 420px) {
+        .site-header-band.site-header-simple .nav-links,
+        .site-header-band.site-header-simple .nav-utility-row {
+          grid-template-columns: minmax(0, 1fr);
+        }
+        .site-header-band.site-header-simple .brand-mark {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
       .nav-links {
         grid-area: links;
         display: flex;
@@ -1048,6 +1123,26 @@
         padding: 24px;
         background: linear-gradient(180deg, #fffdfa, #faf5ef);
       }
+      .product-detail-hero {
+        align-items: start;
+      }
+      .product-detail-hero .mini-stack {
+        align-content: start;
+      }
+      .product-hero-proof-card {
+        max-width: 520px;
+        justify-self: end;
+      }
+      .product-hero-preview {
+        max-height: 320px;
+        width: 100%;
+        object-fit: contain;
+      }
+      .external-url-safe,
+      .checkout-handoff-card a[href^="http"] {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
       .product-card-head {
         display: flex;
         justify-content: space-between;
@@ -1193,6 +1288,32 @@
         gap: 22px;
         align-items: start;
       }
+
+      .store-all-offers-disclosure {
+        border: 1px solid rgba(9, 103, 114, 0.18);
+        border-radius: 22px;
+        background: rgba(255,255,255,0.92);
+        padding: 18px;
+      }
+      .store-all-offers-disclosure > summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 48px;
+        cursor: pointer;
+        color: var(--brand-deep);
+        font-weight: 800;
+      }
+      .store-all-offers-disclosure > summary::after {
+        content: "Show";
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: var(--gold-soft);
+        color: #9a5d00;
+        font-size: 0.9rem;
+      }
+      .store-all-offers-disclosure[open] > summary::after { content: "Hide"; }
       .start-here-first-clicks-stack {
         display: grid;
         gap: 18px;
@@ -3991,7 +4112,7 @@
 <section class="panel hero amazon-store-hero" style="padding-bottom: 22px;">
   <div class="section-head" style="align-items:flex-start; gap:24px; margin-bottom:18px;">
     <div>
-      <div class="hero-kicker mono">Amazon.ca picks · compliant local catalog · no scraped data</div>
+      <div class="hero-kicker mono">Amazon.ca picks · practical shortlists · live details on Amazon.ca</div>
       <p class="eyebrow">TWE Amazon Store</p>
       <h1>Search TWE Amazon.ca picks by the problem you are solving.</h1>
       <p class="lede" style="max-width:860px;">Use this dedicated page for Amazon affiliate shopping so the main TWEStore pages stay focused. Search TWE-approved local picks first; live price, availability, shipping, seller details, ratings, and reviews stay on Amazon.ca.</p>
@@ -4006,14 +4127,14 @@
 
   <div class="grid three">
     <article class="mini-card strong-card" style="padding:18px; border-radius:18px;">
-      <p class="eyebrow">Current mode</p>
-      <h3>Safe local-catalog mode</h3>
-      <p class="muted" style="margin-bottom:0;">Official Amazon search is currently unavailable while Amazon eligibility or review is pending. This page continues to use TWE&#39;s approved local shortlist.</p>
+      <p class="eyebrow">How this page helps</p>
+      <h3>Shortlists before checkout</h3>
+      <p class="muted" style="margin-bottom:0;">Use TWE notes to narrow the problem first, then open Amazon.ca for live seller details.</p>
     </article>
     <article class="mini-card warm-card" style="padding:18px; border-radius:18px;">
-      <p class="eyebrow">Compliance guardrail</p>
-      <h3>No scraped Amazon data.</h3>
-      <p class="muted" style="margin-bottom:0;">This page does not scrape Amazon and does not invent prices, ratings, reviews, ranking or review claims.</p>
+      <p class="eyebrow">Buyer boundary</p>
+      <h3>Compare here, confirm there.</h3>
+      <p class="muted" style="margin-bottom:0;">TWE shows curated notes only. Amazon.ca shows current price, availability, reviews, shipping, seller terms, and checkout.</p>
     </article>
     <article class="mini-card accent-card" style="padding:18px; border-radius:18px;">
       <p class="eyebrow">Affiliate disclosure</p>
@@ -4026,17 +4147,17 @@
 <section class="section card" id="amazon-sales-shortcuts" style="padding:24px; border-radius:22px; background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(220,238,237,0.42));">
   <div class="section-head" style="align-items:center; margin-bottom:16px;">
     <div>
-      <p class="eyebrow">Three purchase-intent routes</p>
-      <h2 style="margin-bottom:6px;">Choose the buying job before showing product cards.</h2>
-      <p class="muted" style="margin-bottom:0;">The fastest path is a clearer buying job, not more generic browsing. Start with one of three needs, then use Amazon.ca for live price, delivery, reviews, seller terms, and checkout.</p>
+      <p class="eyebrow">Three common buying needs</p>
+      <h2 style="margin-bottom:6px;">Choose the need before opening product cards.</h2>
+      <p class="muted" style="margin-bottom:0;">Start with the kind of setup you are trying to improve, then use Amazon.ca for live price, delivery, reviews, seller terms, and checkout.</p>
     </div>
     <div class="pill-row" style="margin:0; justify-content:flex-end;">
-      <span class="pill is-accent">No price/rating claims here</span>
-      <a class="pill" href="/amazon-share-kit/?src=amazon-store-hero">Share buyer shortcuts</a>
+      <span class="pill is-accent">Live details on Amazon.ca</span>
+      <a class="pill" href="#amazon-store-search">Search the shortlist</a>
     </div>
   </div>
   <div class="grid three" data-amazon-purchase-intent-lanes="3">
-    <article class="mini-card"><p class="eyebrow">Lane 1 · admin reset</p><h3>Scanner, filing, labels</h3><p class="muted">Paperwork capture, receipts, forms, and office reset picks.</p><a class="btn secondary" href="/amazon-store/?category=admin-paperwork&amp;q=scanner+filing+label&amp;src=amazon-store-admin-reset#amazon-store-results">Show admin reset picks</a></article>
+    <article class="mini-card"><p class="eyebrow">Paperwork setup</p><h3>Scanner, filing, labels</h3><p class="muted">Paperwork capture, receipts, forms, and office cleanup picks.</p><a class="btn secondary" href="/amazon-store/?category=admin-paperwork&amp;q=scanner+filing+label&amp;src=amazon-store-paperwork#amazon-store-results">Show paperwork picks</a></article>
     <article class="mini-card"><p class="eyebrow">Lane 2 · calls/content</p><h3>Mic, webcam, light</h3><p class="muted">Simple remote-call and content-quality upgrades.</p><a class="btn secondary" href="/amazon-store/?category=creator-calls&amp;q=microphone+webcam+light&amp;src=amazon-store-calls-content#amazon-store-results">Show calls/content picks</a></article>
     <article class="mini-card"><p class="eyebrow">Lane 3 · church/event readiness</p><h3>Coffee and welcome flow</h3><p class="muted">Hospitality, welcome-table, and volunteer setup tools.</p><a class="btn secondary" href="/amazon-store/?category=church-ministry&amp;q=church+welcome+coffee&amp;src=amazon-store-church-event#amazon-store-results">Show church/event picks</a></article>
   </div>
@@ -4105,7 +4226,7 @@
     <span class="pill">10 shown</span>
     <span class="pill">No prices or ratings shown here</span>
   </div>
-  <p class="muted" data-amazon-store-live-state style="margin:12px 0 0;">Search uses TWE's approved local shortlist first. If official Amazon search is unavailable, local results stay visible.</p>
+  <p class="muted" data-amazon-store-live-state style="margin:12px 0 0;">Search uses the TWE shortlist on this page. Open Amazon.ca for current marketplace details.</p>
 </section>
 
 <section class="section card" id="amazon-store-results" style="padding:24px; border-radius:22px;">
@@ -4297,14 +4418,14 @@
 
 <section class="section grid two" style="align-items:start;">
   <article class="card" style="padding:22px; border-radius:22px; background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(220,238,237,0.44));">
-    <p class="eyebrow">API status</p>
-    <h2>Live Amazon search boundary</h2>
-    <p class="muted">Official Amazon search is currently unavailable while Amazon eligibility or review is pending. This page continues to use TWE&#39;s approved local shortlist.</p>
-    <p class="muted">If Amazon returns access-review or eligibility errors, this page keeps using local approved affiliate picks until live official search can be verified with nonzero permitted results.</p>
+    <p class="eyebrow">Amazon.ca boundary</p>
+    <h2>What to confirm on Amazon.ca</h2>
+    <p class="muted">Use this page for TWE shortlist notes only. Before buying, confirm the current price, availability, shipping, reviews, seller terms, and checkout details on Amazon.ca.</p>
+    <p class="muted">If a shortlist does not cover your exact need yet, search broader categories or ask support for help choosing.</p>
   </article>
   <article class="card" style="padding:22px; border-radius:22px;">
-    <p class="eyebrow">Compliance notes</p>
-    <h2>What this page avoids</h2>
+    <p class="eyebrow">Trust notes</p>
+    <h2>What this page keeps clear</h2>
     <div class="mini-stack" style="gap:12px; margin-top:12px;">
       
       <article class="mini-card" style="padding:14px 16px; border-radius:16px;"><p class="muted" style="margin-bottom:0;">No Amazon scraping is used.</p></article>
@@ -4395,7 +4516,7 @@
         </article>`;
       }).join('');
     } else {
-      grid.innerHTML = `<article class="mini-card" style="padding:20px; border-radius:18px; background:rgba(255,241,214,0.52); grid-column:1/-1;"><p class="eyebrow">No local approved match yet</p><h3>Try a broader search or category.</h3><p class="muted">Official Amazon search is currently unavailable while Amazon eligibility or review is pending, so TWEStore will not fabricate or scrape extra Amazon results. Try desk, scanner, church, monitor, labels, pet camera, or creator gear.</p><div class="cta-row"><a class="btn secondary" href="/amazon-store/">Reset Amazon Store</a><a class="btn ghost" href="/support/?src=amazon-store-no-results">Ask for help choosing</a></div></article>`;
+      grid.innerHTML = `<article class="mini-card" style="padding:20px; border-radius:18px; background:rgba(255,241,214,0.52); grid-column:1/-1;"><p class="eyebrow">No local approved match yet</p><h3>Try a broader search or category.</h3><p class="muted">No shortlist match is available for that phrase yet. Try desk, scanner, church, monitor, labels, pet camera, or creator gear.</p><div class="cta-row"><a class="btn secondary" href="/amazon-store/">Reset Amazon Store</a><a class="btn ghost" href="/support/?src=amazon-store-no-results">Ask for help choosing</a></div></article>`;
     }
     if (state) state.textContent = matches.length ? `Showing ${matches.length} local TWE shortlist match${matches.length === 1 ? '' : 'es'}. Open Amazon.ca for live checkout details.` : 'No local shortlist match yet. Try a broader search or category.';
     if (updateHistory) {
