@@ -6,7 +6,6 @@
     "/collections",
     "/about",
     "/toolbox/",
-    "/tools/",
     "/church",
     "/store",
     "/amazon-store",
@@ -136,7 +135,6 @@
     "/collections",
     "/about",
     "/toolbox/",
-    "/tools/",
     "/church",
     "/store",
     "/amazon-store",
@@ -336,13 +334,9 @@
   ],
   "redirects": [
     {
-      "route": "/tools/",
-      "location": "/toolbox/tools/"
-    },
-    {
       "route": "/home",
       "location": "/"
     }
   ],
-  "exported_count": 72
+  "exported_count": 71
 }
