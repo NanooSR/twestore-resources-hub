@@ -71,7 +71,8 @@
     "/store/twe-website-audit-scorecard",
     "/store/lead-value-roi-calculator",
     "/store/local-service-quote-calculator",
-    "/store/website-audit-scorecard"
+    "/store/website-audit-scorecard",
+    "/store/twe-follow-up-cadence-calculator"
   ],
   "affiliate_guide_routes": [
     "/best-admin-desk-tools-for-invoices-and-paperwork.html",
@@ -201,6 +202,7 @@
     "/store/lead-value-roi-calculator",
     "/store/local-service-quote-calculator",
     "/store/website-audit-scorecard",
+    "/store/twe-follow-up-cadence-calculator",
     "/best-admin-desk-tools-for-invoices-and-paperwork.html",
     "/best-ai-agent-ops-run-review-desk-setup.html",
     "/best-ai-output-qa-review-desk-setup.html",
@@ -257,8 +259,8 @@
     "/productivity-books-and-kindle-deals.html"
   ],
   "affiliate_guide_route_count": 54,
-  "product_count": 46,
-  "unique_product_route_count": 23,
+  "product_count": 47,
+  "unique_product_route_count": 24,
   "product_slugs": [
     "the-watchers-edge-botops-toolkit",
     "twe-solo-crm-follow-up-system",
@@ -305,7 +307,8 @@
     "twe-website-audit-scorecard",
     "lead-value-roi-calculator",
     "local-service-quote-calculator",
-    "website-audit-scorecard"
+    "website-audit-scorecard",
+    "twe-follow-up-cadence-calculator"
   ],
   "unique_product_slugs": [
     "the-watchers-edge-botops-toolkit",
@@ -330,7 +333,8 @@
     "twe-website-audit-scorecard",
     "lead-value-roi-calculator",
     "local-service-quote-calculator",
-    "website-audit-scorecard"
+    "website-audit-scorecard",
+    "twe-follow-up-cadence-calculator"
   ],
   "redirects": [
     {
@@ -338,5 +342,5 @@
       "location": "/"
     }
   ],
-  "exported_count": 71
+  "exported_count": 72
 }
