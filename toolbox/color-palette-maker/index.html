@@ -4212,7 +4212,7 @@
 
 <section class="tool-panel active-tool-workbench active-tool-top-card twe-fullscreen-shell" id="color-palette-maker" data-active-tool-slug="color-palette-maker" data-tool-slug="color-palette-maker" data-tool-kind="tool" data-twe-fullscreen-root="true" data-twe-fullscreen-applicable="true" data-twe-fullscreen-surface="workspace">
  <div class="active-tool-card-header"><div class="active-tool-card-identity"><span class="active-tool-icon" aria-hidden="true">🎨</span><div class="active-tool-card-copy"><div class="active-tool-proof-row"><span class="active-tool-proof">Design helper</span><span class="active-tool-proof">Design + web</span><span class="active-tool-proof">No sign-up · bookmarkable</span><span class="active-tool-proof">Fast feedback</span><span class="active-tool-proof">TWE branded</span><span class="active-tool-proof">Full Screen ready</span></div><h1>Color palette maker</h1><p class="muted">Create a bright, readable palette for cards, buttons, and brand accents without a design app.</p></div></div><div class="cta-row active-tool-card-nav"><a class="btn secondary toolbox-hub-link" href="/toolbox/tools/?cb=color-palette-maker">← Back to TWE Tools</a><button class="btn twe-fullscreen-enter" type="button" data-twe-fullscreen-enter aria-label="Enter full screen for Color palette maker">Full Screen</button><a class="btn secondary toolbox-home-link" href="/">Home</a></div></div>
-  <div class="twe-fullscreen-helper" id="twe-fullscreen-helper-color-palette-maker">Use Full Screen for an immersive, larger workspace. Esc exits browser full screen; the Exit Full Screen button remains visible.</div><button class="btn twe-fullscreen-exit-overlay" type="button" data-twe-fullscreen-exit aria-label="Exit full screen">Exit Full Screen</button><span class="twe-fullscreen-status" role="status" aria-live="polite">Full Screen ready.</span><div data-twe-ad-boundary="future-disabled" data-ad-status="disabled" data-twe-ad-boundary-mode="in-page-only" data-twe-ad-boundary-policy="no-ads-in-browser-fullscreen" data-twe-ad-boundary-min-distance="150" hidden aria-hidden="true"></div>
+  <div class="twe-fullscreen-helper twe-fullscreen-mobile-meta" id="twe-fullscreen-helper-color-palette-maker">Use Full Screen for an immersive, larger workspace. Esc exits browser full screen; the Exit Full Screen button remains visible.</div><button class="btn twe-fullscreen-exit-overlay" type="button" data-twe-fullscreen-exit aria-label="Exit full screen">Exit Full Screen</button><span class="twe-fullscreen-status" role="status" aria-live="polite">Full Screen ready.</span><div data-twe-ad-boundary="future-disabled" data-ad-status="disabled" data-twe-ad-boundary-mode="in-page-only" data-twe-ad-boundary-policy="no-ads-in-browser-fullscreen" data-twe-ad-boundary-min-distance="150" hidden aria-hidden="true"></div>
   <div id="tool-app" class="tool-game-surface twe-fullscreen-resize-target"></div><span hidden>"@type": "WebApplication"</span>
   <div class="active-tool-card-footer"><div class="tool-return-card active-tool-after-panel"><strong>Why you’ll come back:</strong> <span class="muted">Bookmark it for a fast, focused TWE Toolbox experience.</span></div><p class="muted active-tool-privacy-note"><strong>Privacy note:</strong> Most TWE Toolbox helpers run in your browser. Tools that need a live check, such as IP lookup, word unscrambling, or browser diagnostics, only contact the site service when you click the tool button.</p></div>
  
@@ -4235,6 +4235,7 @@
  --twe-fullscreen-gap:clamp(10px,2vw,18px);
  --twe-fullscreen-side-gutter:clamp(0px,8vw,156px);
  --twe-fullscreen-hud-height:clamp(92px,14vh,148px);
+ --twe-fullscreen-header-compact-height:clamp(58px,9vh,92px);
  --twe-fullscreen-play-height:calc(100vh - var(--twe-fullscreen-hud-height) - 56px);
  position:relative;
 }
@@ -4247,7 +4248,10 @@
  background:radial-gradient(circle at 10% 0%,rgba(20,184,166,.24),transparent 30%),linear-gradient(135deg,#07131f,#0f3540 52%,#122c39)!important;
  color:#f8fafc!important;border-radius:0!important;overflow:auto!important;padding:clamp(10px,1.8vw,22px)!important;
  isolation:isolate;
+ --twe-fs-card:rgba(7,26,36,.74);--twe-fs-text:#f8fafc;--twe-fs-muted:#d8e7ea;
 }
+.twe-fullscreen-shell.twe-fullscreen-fallback{position:fixed!important;inset:0!important;z-index:9999!important;width:100vw!important;height:100dvh!important;max-height:100dvh!important;overscroll-behavior:contain;}
+body.twe-fullscreen-scroll-locked{overflow:hidden!important;touch-action:none;}
 .twe-fullscreen-shell.is-twe-fullscreen-active::before,.twe-fullscreen-shell.twe-fullscreen-fallback::before,
 .twe-fullscreen-shell.is-twe-fullscreen-active::after,.twe-fullscreen-shell.twe-fullscreen-fallback::after{
  content:"";position:fixed;top:0;bottom:0;width:var(--twe-fullscreen-side-gutter);z-index:-1;pointer-events:none;
@@ -4312,7 +4316,14 @@
  .twe-fullscreen-shell[data-twe-fullscreen-surface="board"].is-twe-fullscreen-active .game-board,
  .twe-fullscreen-shell[data-twe-fullscreen-surface="board"].twe-fullscreen-fallback .game-board{grid-column:1;grid-row:auto}
 }
-@media (max-width:720px){.twe-fullscreen-shell.is-twe-fullscreen-active,.twe-fullscreen-shell.twe-fullscreen-fallback{padding:10px!important}.twe-fullscreen-shell.is-twe-fullscreen-active .active-tool-card-header,.twe-fullscreen-shell.twe-fullscreen-fallback .active-tool-card-header{display:grid;grid-template-columns:1fr;gap:10px}.twe-fullscreen-exit-overlay{left:max(12px,env(safe-area-inset-left));right:auto}}
+@media (max-width:720px){
+ .twe-fullscreen-shell.is-twe-fullscreen-active,.twe-fullscreen-shell.twe-fullscreen-fallback{padding:8px!important;display:flex;flex-direction:column;gap:8px;overflow:auto!important}
+ .twe-fullscreen-shell.is-twe-fullscreen-active .twe-fullscreen-resize-target,.twe-fullscreen-shell.twe-fullscreen-fallback .twe-fullscreen-resize-target{order:-2;width:100%;margin:0 auto;min-height:calc(100vh - var(--twe-fullscreen-header-compact-height) - 28px);align-content:center}
+ .twe-fullscreen-shell.is-twe-fullscreen-active .active-tool-card-header,.twe-fullscreen-shell.twe-fullscreen-fallback .active-tool-card-header{order:-1;display:grid;grid-template-columns:1fr;gap:8px;padding:8px 10px;max-height:var(--twe-fullscreen-header-compact-height);overflow:auto}
+ .twe-fullscreen-shell.is-twe-fullscreen-active .active-tool-proof-row,.twe-fullscreen-shell.twe-fullscreen-fallback .active-tool-proof-row,.twe-fullscreen-shell.is-twe-fullscreen-active .twe-fullscreen-mobile-meta,.twe-fullscreen-shell.twe-fullscreen-fallback .twe-fullscreen-mobile-meta{display:none!important}
+ .twe-fullscreen-shell.is-twe-fullscreen-active .active-tool-card-copy h1,.twe-fullscreen-shell.twe-fullscreen-fallback .active-tool-card-copy h1{font-size:clamp(1rem,5vw,1.35rem);margin:0}
+ .twe-fullscreen-exit-overlay{left:max(12px,env(safe-area-inset-left));right:auto}
+}
 @media (prefers-reduced-motion: reduce){.twe-fullscreen-resize-target,.twe-fullscreen-enter,.twe-fullscreen-exit-overlay{transition:none!important;animation:none!important}}
 </style>
 <script src="/static/public_site/vendor/qrcode-1.5.4.bundle.js"></script>
@@ -4326,22 +4337,30 @@
  const target=shell.querySelector('.twe-fullscreen-resize-target');
  let restoreFocusAfterFullscreen=null;
  let wasFullscreenActive=false;
+ let bodyOverflowBefore='';
+ let bodyTouchActionBefore='';
  const stateKey='tweToolboxFullscreenState:'+shell.dataset.toolSlug;
  window.tweToolboxFullscreen={shell,target,enter,exit,stateKey};
  const isActive=()=>document.fullscreenElement===shell || shell.classList.contains('twe-fullscreen-fallback');
  const setStatus=t=>{if(status)status.textContent=t;};
  const persist=active=>{try{sessionStorage.setItem(stateKey,JSON.stringify({active:!!active,surface:shell.dataset.tweFullscreenSurface,ts:Date.now()}));}catch(e){}};
  const restore=()=>{try{return JSON.parse(sessionStorage.getItem(stateKey)||'{}');}catch(e){return {}}};
+ function setScrollLock(active){
+  document.body.classList.toggle('twe-fullscreen-scroll-locked',!!active);
+  if(active){bodyOverflowBefore=document.body.style.overflow||''; bodyTouchActionBefore=document.body.style.touchAction||''; document.body.style.overflow='hidden'; document.body.style.touchAction='none';}
+  else{document.body.style.overflow=bodyOverflowBefore; document.body.style.touchAction=bodyTouchActionBefore;}
+ }
  function sizeBoard(){
   const viewport=window.visualViewport||window;
   const w=viewport.width||innerWidth, h=viewport.height||innerHeight;
   const active=isActive();
   const surface=shell.dataset.tweFullscreenSurface||'simple';
   const header=shell.querySelector('.active-tool-card-header');
-  const hudHeight=active&&header?Math.max(92,Math.ceil(header.getBoundingClientRect().height)+28):132;
+  const mobileChrome=active&&w<=720;
+  const hudHeight=mobileChrome?Math.max(58,Math.min(92,Math.ceil(header?.getBoundingClientRect().height||64)+12)):(active&&header?Math.max(92,Math.ceil(header.getBoundingClientRect().height)+28):132);
   const sideGutter=active&&w>=1180?Math.min(176,Math.max(84,Math.round(w*.095))):0;
   const usableW=Math.max(260,w-(sideGutter*2)-36);
-  const reserve=surface==='board'?Math.max(150,hudHeight+72):Math.max(210,hudHeight+116);
+  const reserve=surface==='board'?(mobileChrome?Math.max(86,hudHeight+28):Math.max(150,hudHeight+72)):Math.max(210,hudHeight+116);
   const maxBoard=surface==='board'?920:820;
   const board=Math.max(220,Math.min(usableW*.98,h-reserve,maxBoard));
   shell.style.setProperty('--twe-fullscreen-board-size',Math.round(board)+'px');
@@ -4360,6 +4379,7 @@
    const previouslyActive=wasFullscreenActive;
    shell.classList.toggle('is-twe-fullscreen-active',active&&!fallback);
    shell.classList.toggle('twe-fullscreen-fallback',active&&fallback);
+   setScrollLock(active&&fallback);
    if(enter){
     enter.hidden=active;
     enter.disabled=!!active;
@@ -4395,6 +4415,7 @@
  exit&&exit.addEventListener('click',closeFullscreen);
  document.addEventListener('fullscreenchange',()=>{const active=document.fullscreenElement===shell; applyActive(active,false,!active);});
  document.addEventListener('fullscreenerror',()=>{applyActive(true,true);setStatus('Full Screen fallback active because browser full screen was blocked.');});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&shell.classList.contains('twe-fullscreen-fallback')){e.preventDefault();closeFullscreen();}});
  window.addEventListener('resize',sizeBoard,{passive:true});
  window.addEventListener('orientationchange',()=>setTimeout(sizeBoard,120),{passive:true});
  if(window.visualViewport) window.visualViewport.addEventListener('resize',sizeBoard,{passive:true});
