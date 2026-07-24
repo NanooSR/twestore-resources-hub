@@ -4336,6 +4336,31 @@
       .about-return-stack .mini-stack { gap:10px; }
       .about-return-stack .mini-card { background:rgba(255,255,255,.88); }
       @media (max-width:820px){ .about-content-fit-band{grid-template-columns:1fr;padding:16px;} }
+      .product-decision-module {
+        grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);
+        gap:18px;
+        align-items:start;
+      }
+      .product-decision-summary {
+        display:grid;
+        gap:12px;
+        padding:18px;
+        border:1px solid rgba(10,105,116,.14);
+        border-radius:24px;
+        background:linear-gradient(135deg,rgba(255,255,255,.94),rgba(236,250,248,.72));
+        box-shadow:0 16px 38px rgba(8,55,68,.075);
+      }
+      .product-decision-summary .product-hero-preview-frame {
+        margin:0;
+        aspect-ratio:16/9;
+        overflow:hidden;
+        border-radius:18px;
+        background:rgba(255,255,255,.82);
+      }
+      .product-decision-summary .product-hero-preview { width:100%; height:100%; object-fit:cover; }
+      .product-decision-action-strip { display:grid; gap:10px; }
+      .product-checkout-boundary-note { margin:0; max-width:68ch; font-size:.92rem; }
+      @media (max-width:920px){ .product-decision-module{grid-template-columns:1fr;} }
 
     </style>
     <script>
@@ -4410,8 +4435,8 @@
 
 
 
-<section class="panel hero split product-detail-hero">
-  <div class="product-hero-primary">
+<section class="panel hero split product-detail-hero product-decision-module">
+  <div class="product-hero-primary product-decision-summary">
     <div>
       <p class="eyebrow">Offer details</p>
       <h1>TWE Operator Systems Bundle</h1>
@@ -4423,14 +4448,16 @@
       <p class="lede">Get five practical operator systems in one stack so you can manage follow-up, onboarding, SOPs, cash-flow visibility, and AI output review without building every workflow from scratch.</p>
     </div>
     <figure class="product-hero-preview-frame">
-      <img class="product-hero-preview" src="/static/public_site/product_previews/twe-operator-systems-bundle/01_twe_operator_systems_bundle_hero.png" alt="Preview for TWE Operator Systems Bundle" width="1600" height="900">
+      <img class="product-hero-preview" src="/static/public_site/product_previews/twe-operator-systems-bundle/01_twe_operator_systems_bundle_hero.png" alt="Preview for TWE Operator Systems Bundle" width="1200" height="675" decoding="async" fetchpriority="high">
     </figure>
-    <div class="cta-row">
+    <div class="product-decision-action-strip">
+      <div class="cta-row">
       <a class="btn" href="https://nanoojr.gumroad.com/l/operator-systems-bundle" target="_blank" rel="noopener">Open secure checkout</a>
       
       <a class="btn secondary" href="/store/">Back to store</a>
       <a class="btn ghost" href="/store/?family=business-systems-and-template-kits">More in this product family</a>
     </div>
+    <p class="muted product-checkout-boundary-note">Checkout opens on the current seller page; final access, terms, taxes, delivery, and payment details are confirmed there before purchase.</p>
     <div class="product-hero-fit-grid" aria-label="Quick fit facts for TWE Operator Systems Bundle">
       <article class="mini-card"><p class="eyebrow">Result</p><h3>Set up a cleaner operator stack faster, with five practical systems that help you move from lead follow-up to delivery and review with less chaos.</h3></article>
       <article class="mini-card"><p class="eyebrow">Fit</p><h3>Good fit for people who need one clearer repeatable business system instead of another one-off file or disconnected quick fix.</h3></article>
