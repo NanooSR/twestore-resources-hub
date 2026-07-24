@@ -2902,8 +2902,8 @@
         border-radius: 10px !important;
       }
       input:focus, textarea:focus, select:focus, .btn:focus-visible, a:focus-visible {
-        outline: 3px solid rgba(0, 126, 139, 0.22);
-        outline-offset: 2px;
+        outline: 3px solid #06445f;
+        outline-offset: 3px;
       }
       @media (max-width: 1180px) {
         .site-header-band { top: 0; border-radius: 0 0 18px 18px; }
@@ -3413,9 +3413,9 @@
         border-color: rgba(242,140,56,.42) !important;
       }
       :is(a,button,input,textarea,select):focus-visible {
-        outline: 3px solid rgba(242,140,56,.62) !important;
+        outline: 3px solid var(--twe-accessible-focus-ring) !important;
         outline-offset: 3px !important;
-        box-shadow: var(--twe-v2-ring), 0 12px 24px rgba(10,77,104,.18) !important;
+        box-shadow: 0 0 0 5px rgba(6,68,95,.20), 0 12px 24px rgba(10,77,104,.18) !important;
       }
 
       .panel.hero,
@@ -4055,11 +4055,11 @@
       .skip-link:focus,
       .skip-link:focus-visible {
         transform: translateY(0);
-        outline: 3px solid rgba(239, 155, 19, 0.58);
+        outline: 3px solid #06445f;
         outline-offset: 3px;
       }
       :where(a, button, input, textarea, select, summary):focus-visible {
-        outline: 3px solid rgba(239, 155, 19, 0.72);
+        outline: 3px solid var(--twe-accessible-focus-ring);
         outline-offset: 3px;
       }
       .nav-search:focus-within,
@@ -4206,6 +4206,23 @@
       @media (max-width: 860px) {
         .product-detail-hero { grid-template-columns: 1fr; }
         .product-hero-fit-grid { grid-template-columns: 1fr; }
+      }
+
+      /* 2026-07-24 SOL accessibility hardening: keep text-bearing CTAs dark enough for white text and use an opaque focus ring on light surfaces. */
+      :root {
+        --twe-accessible-focus-ring: #06445f;
+        --twe-accessible-cta-bg: linear-gradient(135deg, #0a4d68 0%, #005e69 58%, #063f48 100%);
+      }
+      .btn:not(.secondary):not(.ghost),
+      button.btn:not(.secondary):not(.ghost),
+      .nav-search button {
+        background: var(--twe-accessible-cta-bg) !important;
+        color: #ffffff !important;
+      }
+      :where(a, button, input, textarea, select, summary):focus-visible,
+      :is(a,button,input,textarea,select):focus-visible {
+        outline: 3px solid var(--twe-accessible-focus-ring) !important;
+        outline-offset: 3px !important;
       }
 
       /* Premium visual-design hardening: keep motion meaningful and calm. Motion is now hover/focus-led instead of ambient infinite pulsing/floating. */
