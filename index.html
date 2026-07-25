@@ -99,6 +99,19 @@
   }
   .home-path-card h3 { margin: 0 0 6px; }
   .home-path-card p { margin: 0; }
+  .panel.home-tools-hero .cta-row a.btn[href],
+  .home-tools-hero .cta-row .btn {
+    border-radius: 14px;
+    justify-content: center;
+  }
+  @media (max-width: 720px) {
+    .panel.home-tools-hero .cta-row a.btn[href],
+    .home-tools-hero .cta-row .btn {
+      width: 100%;
+      min-height: 54px;
+      border-radius: 14px;
+    }
+  }
   .adsense-ready-note {
     border-style: dashed;
     background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,249,237,0.74));
@@ -577,7 +590,7 @@
         filter: drop-shadow(0 1px 0 rgba(255,255,255,0.7));
       }
       .nav-links a.is-home::before { content: "⌂"; }
-      .nav-links a.is-amazon::before { content: "★"; color: #b26700; }
+      .nav-links a.is-amazon::before { content: ""; color: #b26700; }
       .nav-links a.is-kits::before { content: "▣"; color: #096772; }
       .nav-links a.is-church::before { content: "✚"; color: #0b7277; }
       .nav-links a.is-pets::before { content: "🐾"; }
@@ -3303,12 +3316,12 @@
         box-shadow: 0 10px 24px rgba(0,126,139,.20);
         animation: tweFloatIcon 5.6s ease-in-out infinite;
       }
-      .section-head h2::before { content: "✦"; }
+      .section-head h2::before { content: ""; }
       .mini-card h3::before { content: "✓"; }
       .editorial-card h2::before { content: "◆"; }
-      .stat-card strong::before { content: "★"; font-size: .82rem; }
+      .stat-card strong::before { content: ""; font-size: .82rem; }
       .grid.three > .mini-card:nth-child(2n) h3::before { background: linear-gradient(135deg, var(--twe-coral), var(--twe-gold)); content: "↗"; }
-      .grid.three > .mini-card:nth-child(3n) h3::before { background: linear-gradient(135deg, var(--twe-violet), var(--twe-hot)); content: "✦"; }
+      .grid.three > .mini-card:nth-child(3n) h3::before { background: linear-gradient(135deg, var(--twe-violet), var(--twe-hot)); content: ""; }
       .resource-picture,
       .store-sales-image-link,
       .product-card img,
@@ -3418,17 +3431,8 @@
       }
       .brand-lockup::after,
       .site-header-band .brand::after {
-        content: "✦";
-        display: inline-grid;
-        place-items: center;
-        margin-left: .45rem;
-        width: 1.65rem;
-        height: 1.65rem;
-        border-radius: 999px;
-        color: #0a4d68;
-        background: radial-gradient(circle at 35% 25%, #fff, #ffd166 42%, #f28c38 100%);
-        box-shadow: 0 10px 20px rgba(242,140,56,.28), inset 0 1px 0 rgba(255,255,255,.7);
-        animation: twe-v2-float 5.2s var(--twe-v2-ease) infinite;
+        content: none !important;
+        display: none !important;
       }
 
       .nav-links a,
@@ -3488,6 +3492,10 @@
         text-decoration: none !important;
         transition: transform .22s var(--twe-v2-ease), box-shadow .22s var(--twe-v2-ease), filter .22s var(--twe-v2-ease) !important;
         overflow: hidden;
+      }
+      .panel.home-tools-hero .cta-row a.btn[href],
+      .home-tools-hero .cta-row .btn {
+        border-radius: 14px !important;
       }
       .btn::before,
       button::before,
@@ -3645,7 +3653,7 @@
         color: #0a4d68 !important;
         box-shadow: inset 0 1px 0 rgba(255,255,255,.8), 0 8px 18px rgba(10,77,104,.08) !important;
       }
-      .eyebrow::before { content: "✦ "; color: #f28c38; }
+      .eyebrow::before { content: none; color: #f28c38; }
 
       .resource-picture,
       .product-card img,
@@ -4597,12 +4605,12 @@
     </div>
   </div>
   <div class="home-path-grid">
-    <a class="home-path-card" href="/toolbox/?cb=toolbox20260711toolsGamesExpansion"><span class="home-path-icon" aria-hidden="true">🛠</span><h3>Use a free tool</h3><p class="muted">Quick helpers for text, files, images, calculators, planning, and everyday checks.</p></a>
-    <a class="home-path-card" href="/toolbox/games/"><span class="home-path-icon" aria-hidden="true">🎮</span><h3>Play a quick game</h3><p class="muted">Easy mini-games for relaxing, passing time, and taking a short brain break.</p></a>
-    <a class="home-path-card" href="/church/?src=home-community"><span class="home-path-icon" aria-hidden="true">📅</span><h3>Find church news &amp; events</h3><p class="muted">Organized church updates, announcements, event resources, and current public links.</p></a>
-    <a class="home-path-card" href="/resources/?category=pet-home&amp;src=home-pet-content"><span class="home-path-icon" aria-hidden="true">🐾</span><h3>Read pet articles</h3><p class="muted">Helpful pet content, product notes, and home-routine ideas for animal lovers.</p></a>
-    <a class="home-path-card" href="/resources/?src=home-helpful-resources"><span class="home-path-icon" aria-hidden="true">📚</span><h3>Browse resources</h3><p class="muted">Practical guides and articles that help visitors make better everyday decisions.</p></a>
-    <a class="home-path-card" href="/store/?src=home-store-entry"><span class="home-path-icon" aria-hidden="true">🛒</span><h3>Visit the TWE Store</h3><p class="muted">Optional dedicated store area for digital products, guides, and sale items.</p></a>
+    <a class="home-path-card bare-link" href="/toolbox/?cb=toolbox20260711toolsGamesExpansion"><span class="home-path-icon" aria-hidden="true">🛠</span><h3>Use a free tool</h3><p class="muted">Quick helpers for text, files, images, calculators, planning, and everyday checks.</p></a>
+    <a class="home-path-card bare-link" href="/toolbox/games/"><span class="home-path-icon" aria-hidden="true">🎮</span><h3>Play a quick game</h3><p class="muted">Easy mini-games for relaxing, passing time, and taking a short brain break.</p></a>
+    <a class="home-path-card bare-link" href="/church/?src=home-community"><span class="home-path-icon" aria-hidden="true">📅</span><h3>Find church news &amp; events</h3><p class="muted">Organized church updates, announcements, event resources, and current public links.</p></a>
+    <a class="home-path-card bare-link" href="/resources/?category=pet-home&amp;src=home-pet-content"><span class="home-path-icon" aria-hidden="true">🐾</span><h3>Read pet articles</h3><p class="muted">Helpful pet content, product notes, and home-routine ideas for animal lovers.</p></a>
+    <a class="home-path-card bare-link" href="/resources/?src=home-helpful-resources"><span class="home-path-icon" aria-hidden="true">📚</span><h3>Browse resources</h3><p class="muted">Practical guides and articles that help visitors make better everyday decisions.</p></a>
+    <a class="home-path-card bare-link" href="/store/?src=home-store-entry"><span class="home-path-icon" aria-hidden="true">🛒</span><h3>Visit the TWE Store</h3><p class="muted">Optional dedicated store area for digital products, guides, and sale items.</p></a>
   </div>
 </section>
 
