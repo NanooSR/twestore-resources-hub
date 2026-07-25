@@ -2728,6 +2728,13 @@
         .lightbox-close { top: 8px; right: 8px; }
       }
 
+      @media (max-width: 430px) {
+        .store-result-count-grid { grid-template-columns: 1fr; }
+        .store-result-count { min-width: 0; width: 100%; }
+        .store-result-count span,
+        .store-results-summary .muted { overflow-wrap: anywhere; }
+      }
+
       /* 2026-07-06 Premium public-site refresh — Agent Mode guided.
          Safe visual layer: preserves layout/routes/content while making the
          static public site calmer, more cohesive, and more customer-ready. */
