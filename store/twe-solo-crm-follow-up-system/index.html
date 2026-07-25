@@ -401,10 +401,14 @@
         .site-header-band.site-header-simple {
           position: static;
           top: auto;
+          display: block;
+          height: auto;
+          min-height: 0;
           align-items: stretch;
           padding: 10px;
           border-radius: 22px;
         }
+        .site-header-band.site-header-simple > .nav,
         .site-header-band.site-header-simple .nav {
           grid-template-columns: minmax(0, 1fr);
           grid-template-areas:
@@ -4363,6 +4367,14 @@
         .site-header-band { max-height:var(--warm-signal-header-tablet-max); }
         .nav { grid-template-columns:minmax(0,1fr) auto; grid-template-areas:"brand toggle" "panel panel"; }
         .nav-menu-panel { grid-area:panel; }
+      }
+      @media (min-width:761px) and (max-width:1100px) {
+        .site-header-band.site-header-simple { max-height:none; display:block; height:auto; }
+        .site-header-band.site-header-simple .nav {
+          grid-template-columns:minmax(0,1fr);
+          grid-template-areas:"brand" "search" "links" "utility";
+        }
+        .site-header-band.site-header-simple .nav-menu-panel { display:contents; }
       }
       @media (max-width:720px) {
         .site-header-band { top:8px; padding:6px; border-radius:18px; max-height:none; }
