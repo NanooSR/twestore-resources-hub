@@ -73,7 +73,10 @@
     }
   };
 
-  const compactQuery = window.matchMedia ? window.matchMedia('(min-width: 761px)') : {matches: true, addEventListener: null, addListener: null};
+  // Compact scroll mode is a wide-desktop enhancement only. Phone/tablet Safari must never
+  // enter the compact header state while the menu is open; Ryan's iPhone screenshots showed
+  // the mobile actions mutating into a narrow vertical side rail during scroll.
+  const compactQuery = window.matchMedia ? window.matchMedia('(min-width: 1181px)') : {matches: true, addEventListener: null, addListener: null};
   const setCompact = () => header.classList.toggle('is-compact', Boolean(compactQuery.matches) && window.scrollY >= 150);
   setCompact();
   window.addEventListener('scroll', setCompact, {passive: true});
