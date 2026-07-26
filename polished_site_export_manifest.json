@@ -8,6 +8,7 @@
     "/toolbox/",
     "/church",
     "/store",
+    "/store-browse",
     "/amazon-store",
     "/amazon-sales-sprint",
     "/amazon-share-kit",
@@ -138,6 +139,7 @@
     "/toolbox/",
     "/church",
     "/store",
+    "/store-browse",
     "/amazon-store",
     "/amazon-sales-sprint",
     "/amazon-share-kit",
@@ -342,5 +344,5 @@
       "location": "/"
     }
   ],
-  "exported_count": 72
+  "exported_count": 73
 }
