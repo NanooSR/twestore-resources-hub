@@ -980,7 +980,8 @@
       .product-hero-preview {
         display: block;
         width: 100%;
-        aspect-ratio: 16 / 9;
+        height: auto;
+        aspect-ratio: auto;
         object-fit: contain;
         border-radius: 18px;
         border: 1px solid rgba(196, 209, 203, 0.78);
@@ -1041,7 +1042,8 @@
       }
       .preview-card img {
         width: 100%;
-        aspect-ratio: 16 / 9;
+        height: auto;
+        aspect-ratio: auto;
         object-fit: contain;
         background: #fffdf9;
         border-radius: 16px;
@@ -4262,7 +4264,7 @@
         padding: clamp(10px, 1.6vw, 16px);
         box-shadow: var(--shadow-sm);
       }
-      .product-hero-preview-frame img { width: 100%; max-height: 320px; object-fit: contain; border-radius: 14px; background: #fff; }
+      .product-hero-preview-frame img { width: 100%; height: auto; max-height: none; object-fit: contain; border-radius: 14px; background: #fff; }
       .product-hero-fit-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
       .product-hero-fit-grid .mini-card { padding: 13px; min-height: 0; }
       .product-hero-fit-grid h3 { margin-bottom: 4px; font-size: 1rem; }
@@ -5082,6 +5084,42 @@
       .twe-premium-quick .eyebrow { color: var(--twe-v11-coral); font-weight: 950; letter-spacing: .12em; text-transform: uppercase; }
       .twe-premium-panel-title { display:block; margin: 0 0 8px; color: var(--twe-v11-ink); font-size: clamp(1.35rem, 2vw, 2rem); font-weight: 950; line-height: 1.12; }
       .twe-premium-drawer-title { display:block; margin:0 0 8px; color: var(--twe-v11-ink); font-size: 1.05rem; font-weight: 950; }
+      /* SOL 2026-07-26 MF-02: non-home routes need a compact route shell, not the full discovery module. */
+      .site-header-band[data-twe-premium-header].is-route-compact .twe-premium-destinations,
+      .site-header-band[data-twe-premium-header].is-route-compact .twe-premium-daily,
+      .site-header-band[data-twe-premium-header].is-route-compact .twe-premium-fresh,
+      .site-header-band[data-twe-premium-header].is-route-compact .twe-premium-trust-line {
+        display: none !important;
+      }
+      @media (min-width: 1181px) {
+        .site-header-band[data-twe-premium-header].is-route-compact { top: 10px !important; }
+        .site-header-band[data-twe-premium-header].is-route-compact .nav {
+          grid-template-columns: minmax(220px, 300px) minmax(260px, 1fr) auto !important;
+          grid-template-areas: "brand search actions" "panel panel panel" !important;
+          align-items: center !important;
+          min-height: 0 !important;
+          padding: 12px 14px !important;
+        }
+        .site-header-band[data-twe-premium-header].is-route-compact .brand { min-height: 56px !important; }
+        .site-header-band[data-twe-premium-header].is-route-compact .brand-mark { width: 54px !important; height: 54px !important; }
+        .site-header-band[data-twe-premium-header].is-route-compact .brand-copy span:last-child { display: none !important; }
+        .site-header-band[data-twe-premium-header].is-route-compact .nav-menu-panel {
+          display: grid !important;
+          grid-template-areas: "links" "utility" "results" "drawer" !important;
+          gap: 8px !important;
+        }
+        .site-header-band[data-twe-premium-header].is-route-compact .nav-links.nav-links-primary,
+        .site-header-band[data-twe-premium-header].is-route-compact .nav-utility-row { margin-top: 0 !important; }
+        .site-header-band[data-twe-premium-header].is-route-compact .nav-links a,
+        .site-header-band[data-twe-premium-header].is-route-compact .nav-utility-link { min-height: 40px !important; padding: 8px 11px !important; }
+      }
+      @media (max-width: 1180px) {
+        .site-header-band[data-twe-premium-header].is-route-compact .nav {
+          grid-template-areas: "brand toggle" "search search" "actions actions" "panel panel" !important;
+        }
+        .site-header-band[data-twe-premium-header].is-route-compact .brand { min-height: 58px !important; }
+        .site-header-band[data-twe-premium-header].is-route-compact .brand-copy span:last-child { display: none !important; }
+      }
       .twe-premium-panel p { margin: 0 0 12px; color: var(--twe-v11-primary); }
       .twe-premium-quick,
       .twe-premium-fresh { padding: 14px; }
@@ -5850,7 +5888,7 @@ Australia/Sydney</textarea></label><div class="game-toolbar"><button class="btn"
 <style>
 .epic-game-wrap{display:grid;gap:16px}.epic-hero{border:1px solid rgba(15,118,110,.2);border-radius:22px;padding:16px;background:linear-gradient(135deg,#ecfeff,#fff7ed);box-shadow:0 14px 34px rgba(15,118,110,.1)}.epic-topline{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.epic-chip{border:1px solid rgba(15,118,110,.18);border-radius:999px;padding:6px 10px;background:#fff;font-weight:850;font-size:.88rem}.epic-progress{height:12px;border-radius:999px;background:#dbeafe;overflow:hidden;border:1px solid rgba(15,118,110,.16)}.epic-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#0f766e,#f59e0b)}.epic-missions{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px}.epic-mission{border:1px solid rgba(15,118,110,.16);border-radius:16px;padding:10px;background:#fff}.epic-mission.is-done{background:linear-gradient(135deg,#dcfce7,#fef3c7)}.epic-badge{display:inline-flex;margin:3px;border:1px solid rgba(15,118,110,.18);border-radius:999px;padding:5px 9px;background:#fff;font-size:.82rem;font-weight:850}.epic-board{display:grid;gap:8px;touch-action:none;max-width:560px}.epic-cell{min-height:50px;border:1px solid rgba(15,118,110,.2);border-radius:14px;background:#fff;display:grid;place-items:center;font-weight:950;color:#12313f}.tool-check-row{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:8px 10px;border-radius:14px}.tool-check-row input{appearance:none;-webkit-appearance:none;width:24px;height:24px;inline-size:24px;block-size:24px;min-width:24px;min-height:24px;min-inline-size:24px;min-block-size:24px;border:2px solid #0f766e;border-radius:7px;background:#fff;display:inline-grid;place-content:center;accent-color:#0f766e}.tool-check-row input:checked{background:linear-gradient(135deg,#0f766e,#14b8a6);box-shadow:inset 0 0 0 4px #fff}.mines-board--mobile-safe{grid-auto-columns:minmax(44px,1fr)}.epic-cell.is-on{background:linear-gradient(135deg,#99f6e4,#bfdbfe)}.epic-cell.is-food,.epic-cell.is-goal{background:linear-gradient(135deg,#fde68a,#fed7aa)}.epic-cell.is-bad{background:linear-gradient(135deg,#fecaca,#fed7aa)}.epic-cell.is-locked{background:#e2e8f0}.epic-dpad{display:grid;grid-template-columns:repeat(3,58px);gap:8px;width:max-content}.epic-dpad button:nth-child(1){grid-column:2}.epic-dpad button:nth-child(2){grid-column:1}.epic-dpad button:nth-child(3){grid-column:2}.epic-dpad button:nth-child(4){grid-column:3}.epic-primary-result{font-size:clamp(1.55rem,5vw,2.5rem);font-weight:950;color:#0f766e}.epic-log{max-height:180px;overflow:auto}.epic-choice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}.epic-choice-grid button{min-height:54px}.epic-shake{animation:epicShake .25s linear}@keyframes epicShake{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}@media(max-width:420px){.epic-board{gap:6px}.epic-cell{min-height:42px;border-radius:11px}.epic-dpad{grid-template-columns:repeat(3,52px)}}
 @keyframes finalFloat{to{transform:translateY(-80px) scale(1.2);opacity:0}}.epic-board{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain}.epic-board--dense{grid-auto-columns:minmax(44px,1fr)}@media (prefers-reduced-motion: reduce){.epic-game-wrap *{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reaction-target,.epic-cell,.epic-badge,.epic-mission{transform:none!important}}
-.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"]{--mines-fullscreen-bg:#062f3a;--mines-fullscreen-surface:#f8fffd;--mines-fullscreen-text:#102a43;--mines-fullscreen-muted:#31535d;--mines-fullscreen-border:#78a7ad;background:var(--mines-fullscreen-bg);color:var(--mines-fullscreen-text);}.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] .epic-hero,.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] .epic-mission,.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] .toolbox-result-card,.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] .toolbox-stat{background:var(--mines-fullscreen-surface);color:var(--mines-fullscreen-text);border-color:var(--mines-fullscreen-border);}.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] h2,.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] h3,.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] strong{-webkit-text-fill-color:var(--mines-fullscreen-text);color:var(--mines-fullscreen-text);background:none;}.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] .toolbox-muted-note,.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] span{color:var(--mines-fullscreen-muted);}.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] .epic-cell{background:var(--mines-fullscreen-surface);color:var(--mines-fullscreen-text);border-color:var(--mines-fullscreen-border);}</style>
+.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"]{--mines-fullscreen-bg:#e8f7f4;--mines-fullscreen-surface:#ffffff;--mines-fullscreen-text:#102033;--mines-fullscreen-muted:#304f57;--mines-fullscreen-border:#1f6f78;background:var(--mines-fullscreen-bg);color:var(--mines-fullscreen-text);}.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] .epic-hero,.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] .epic-mission,.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] .toolbox-result-card,.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] .toolbox-stat{background:var(--mines-fullscreen-surface);color:var(--mines-fullscreen-text);border-color:var(--mines-fullscreen-border);}.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] h2,.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] h3,.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] strong{-webkit-text-fill-color:var(--mines-fullscreen-text);color:var(--mines-fullscreen-text);background:none;}.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] .toolbox-muted-note,.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] span{color:var(--mines-fullscreen-muted);}.twe-fullscreen-fallback .epic-game-wrap[data-game="minesweeper"] .epic-cell{background:#ffffff;color:var(--mines-fullscreen-text);border:2px solid var(--mines-fullscreen-border);box-shadow:inset 0 0 0 1px rgba(16,32,51,.12);}.epic-game-wrap[data-game="minesweeper"] .epic-cell{border:2px solid #1f6f78;background:#ffffff;color:#102033;}.epic-game-wrap[data-game="minesweeper"] .epic-cell:focus-visible{outline:4px solid #06445f;outline-offset:2px;}</style>
 <script>
 (() => {
   const slug = "minesweeper";

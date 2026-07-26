@@ -980,7 +980,8 @@
       .product-hero-preview {
         display: block;
         width: 100%;
-        aspect-ratio: 16 / 9;
+        height: auto;
+        aspect-ratio: auto;
         object-fit: contain;
         border-radius: 18px;
         border: 1px solid rgba(196, 209, 203, 0.78);
@@ -1041,7 +1042,8 @@
       }
       .preview-card img {
         width: 100%;
-        aspect-ratio: 16 / 9;
+        height: auto;
+        aspect-ratio: auto;
         object-fit: contain;
         background: #fffdf9;
         border-radius: 16px;
@@ -4262,7 +4264,7 @@
         padding: clamp(10px, 1.6vw, 16px);
         box-shadow: var(--shadow-sm);
       }
-      .product-hero-preview-frame img { width: 100%; max-height: 320px; object-fit: contain; border-radius: 14px; background: #fff; }
+      .product-hero-preview-frame img { width: 100%; height: auto; max-height: none; object-fit: contain; border-radius: 14px; background: #fff; }
       .product-hero-fit-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
       .product-hero-fit-grid .mini-card { padding: 13px; min-height: 0; }
       .product-hero-fit-grid h3 { margin-bottom: 4px; font-size: 1rem; }
@@ -5082,6 +5084,42 @@
       .twe-premium-quick .eyebrow { color: var(--twe-v11-coral); font-weight: 950; letter-spacing: .12em; text-transform: uppercase; }
       .twe-premium-panel-title { display:block; margin: 0 0 8px; color: var(--twe-v11-ink); font-size: clamp(1.35rem, 2vw, 2rem); font-weight: 950; line-height: 1.12; }
       .twe-premium-drawer-title { display:block; margin:0 0 8px; color: var(--twe-v11-ink); font-size: 1.05rem; font-weight: 950; }
+      /* SOL 2026-07-26 MF-02: non-home routes need a compact route shell, not the full discovery module. */
+      .site-header-band[data-twe-premium-header].is-route-compact .twe-premium-destinations,
+      .site-header-band[data-twe-premium-header].is-route-compact .twe-premium-daily,
+      .site-header-band[data-twe-premium-header].is-route-compact .twe-premium-fresh,
+      .site-header-band[data-twe-premium-header].is-route-compact .twe-premium-trust-line {
+        display: none !important;
+      }
+      @media (min-width: 1181px) {
+        .site-header-band[data-twe-premium-header].is-route-compact { top: 10px !important; }
+        .site-header-band[data-twe-premium-header].is-route-compact .nav {
+          grid-template-columns: minmax(220px, 300px) minmax(260px, 1fr) auto !important;
+          grid-template-areas: "brand search actions" "panel panel panel" !important;
+          align-items: center !important;
+          min-height: 0 !important;
+          padding: 12px 14px !important;
+        }
+        .site-header-band[data-twe-premium-header].is-route-compact .brand { min-height: 56px !important; }
+        .site-header-band[data-twe-premium-header].is-route-compact .brand-mark { width: 54px !important; height: 54px !important; }
+        .site-header-band[data-twe-premium-header].is-route-compact .brand-copy span:last-child { display: none !important; }
+        .site-header-band[data-twe-premium-header].is-route-compact .nav-menu-panel {
+          display: grid !important;
+          grid-template-areas: "links" "utility" "results" "drawer" !important;
+          gap: 8px !important;
+        }
+        .site-header-band[data-twe-premium-header].is-route-compact .nav-links.nav-links-primary,
+        .site-header-band[data-twe-premium-header].is-route-compact .nav-utility-row { margin-top: 0 !important; }
+        .site-header-band[data-twe-premium-header].is-route-compact .nav-links a,
+        .site-header-band[data-twe-premium-header].is-route-compact .nav-utility-link { min-height: 40px !important; padding: 8px 11px !important; }
+      }
+      @media (max-width: 1180px) {
+        .site-header-band[data-twe-premium-header].is-route-compact .nav {
+          grid-template-areas: "brand toggle" "search search" "actions actions" "panel panel" !important;
+        }
+        .site-header-band[data-twe-premium-header].is-route-compact .brand { min-height: 58px !important; }
+        .site-header-band[data-twe-premium-header].is-route-compact .brand-copy span:last-child { display: none !important; }
+      }
       .twe-premium-panel p { margin: 0 0 12px; color: var(--twe-v11-primary); }
       .twe-premium-quick,
       .twe-premium-fresh { padding: 14px; }

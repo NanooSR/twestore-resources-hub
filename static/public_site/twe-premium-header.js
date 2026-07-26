@@ -7,6 +7,9 @@
     {id:'time-zone-planner', name:'Time Zone Planner', type:'Tool', detail:'Compare meeting times with DST-aware formatting.', href:'/toolbox/time-zone-planner/', keywords:'meeting schedule toronto london time date plan'},
     {id:'reaction-timer', name:'Reaction Timer', type:'Game', detail:'A fast reflex round with local bests.', href:'/toolbox/mini-game/', keywords:'quick fun reflex game score beat'},
     {id:'trivia-quickfire', name:'Trivia Quickfire', type:'Game', detail:'A family-friendly knowledge sprint.', href:'/toolbox/trivia-quickfire/', keywords:'quiz questions knowledge fun new trivia'},
+    {id:'random-chooser', name:'Random Chooser', type:'Tool', detail:'Paste options and pick fairly, with duplicate cleanup and draw-bag choices.', href:'/toolbox/random-chooser/', keywords:'random chooser choice picker decide decision options draw bag raffle select'},
+    {id:'safe-sweep', name:'Safe Sweep', type:'Game', detail:'First-click-safe minesweeper with reveal and flag modes.', href:'/toolbox/minesweeper/', keywords:'safe sweep minesweeper mine mines flag reveal board puzzle game'},
+    {id:'text-tools', name:'Writing & Planning Tools', type:'Tool', detail:'Lightweight text helpers and quick decision tools.', href:'/toolbox/tools/', keywords:'writing words text helper planning decision cleanup'},
     {id:'csv-cleaner', name:'CSV Table Cleaner', type:'Tool', detail:'Turn messy CSV data into a cleaner table.', href:'/toolbox/csv-table-cleaner/', keywords:'spreadsheet data tidy rows columns csv file clean'},
     {id:'pet-home-resources', name:'Pet Home Resources', type:'Guide', detail:'Practical pet-home routines and buying guidance.', href:'/resources?category=pet-home', keywords:'pet pets dogs cats home routine guide'},
     {id:'church-community', name:'Church & Community', type:'Resource', detail:'News, events, ministry guides, and practical support.', href:'/church/', keywords:'church community events news ministry'},
@@ -73,15 +76,11 @@
     }
   };
 
-  // Compact scroll mode is a wide-desktop enhancement only. Phone/tablet Safari must never
-  // enter the compact header state while the menu is open; Ryan's iPhone screenshots showed
-  // the mobile actions mutating into a narrow vertical side rail during scroll.
-  const compactQuery = window.matchMedia ? window.matchMedia('(min-width: 1181px)') : {matches: true, addEventListener: null, addListener: null};
-  const setCompact = () => header.classList.toggle('is-compact', Boolean(compactQuery.matches) && window.scrollY >= 150);
-  setCompact();
-  window.addEventListener('scroll', setCompact, {passive: true});
-  if (compactQuery.addEventListener) compactQuery.addEventListener('change', setCompact);
-  else if (compactQuery.addListener) compactQuery.addListener(setCompact);
+  // SOL/Ryan 2026-07-26: do not mutate the shared header into compact mode on scroll.
+  // The old scrollY>=150 class toggle changed header height/display during the first
+  // scroll and caused visible screen shake/twitch across platforms. Route-level compact
+  // treatment is now CSS/static only; scrolling must not rewrite the layout.
+  header.classList.remove('is-compact');
 
   const motion = header.querySelector('[data-twe-motion-toggle]');
   const applyMotion = () => {
@@ -134,7 +133,7 @@
     if (resultsBox) resultsBox.hidden = true;
     if (searchResults) searchResults.innerHTML = '';
     if (searchInput) searchInput.value = '';
-    say(message);
+    say('');
   };
   header.querySelector('[data-twe-search-close]')?.addEventListener('click', () => {
     closeSearchResults('Search cleared.');
