@@ -1208,6 +1208,17 @@
       .product-detail-hero {
         align-items: start;
       }
+      .product-detail-hero.product-hero-single-column {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 22px;
+      }
+      .product-detail-hero.product-hero-single-column .product-hero-primary,
+      .product-detail-hero.product-hero-single-column .mini-stack {
+        width: 100%;
+        max-width: none;
+        justify-self: stretch;
+      }
       .product-detail-hero .mini-stack {
         align-content: start;
       }
@@ -5027,8 +5038,8 @@
         .site-header-band[data-twe-premium-header].is-compact .twe-premium-drawer {
           min-width: min(720px, calc(100vw - 48px));
           max-width: min(920px, calc(100vw - 48px));
-          width: max-content;
-          justify-self: end;
+          width: min(920px, calc(100vw - 48px)) !important;
+          justify-self: stretch;
         }
         .site-header-band[data-twe-premium-header].is-compact .twe-premium-search-results-head {
           display: grid;
@@ -5132,10 +5143,12 @@
       .site-header-band[data-twe-premium-header].is-compact .nav-menu-panel:has(.twe-premium-drawer:not([hidden])) {
         grid-template-areas: "drawer" "links" "utility" !important;
         position: fixed !important;
-        top: clamp(118px, 15vh, 148px) !important;
-        right: max(24px, calc((100vw - 1320px) / 2 + 24px)) !important;
-        width: min(526px, calc(100vw - 48px)) !important;
-        max-height: calc(100vh - 170px) !important;
+        top: 104px !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        width: min(920px, calc(100vw - 48px)) !important;
+        max-height: calc(100vh - 128px) !important;
         overflow: auto !important;
         z-index: 120 !important;
         box-shadow: 0 28px 70px rgba(8, 51, 64, 0.24) !important;
@@ -5149,6 +5162,11 @@
       }
       .site-header-band[data-twe-premium-header].is-compact .nav-menu-panel:has(.twe-premium-drawer:not([hidden])) .twe-premium-drawer {
         margin-top: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .site-header-band[data-twe-premium-header].is-compact .nav-menu-panel:has(.twe-premium-drawer:not([hidden])) .twe-premium-drawer-grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr)) !important;
       }
       .site-header-band[data-twe-premium-header].is-compact .twe-destination-card { min-height: 56px; padding: 10px 11px; align-content: center; }
       .site-header-band[data-twe-premium-header].is-compact .twe-destination-card small,
@@ -5411,7 +5429,7 @@
 
 
 
-<section class="panel hero split product-detail-hero product-decision-module">
+<section class="panel hero product-detail-hero product-decision-module product-hero-single-column">
   <div class="product-hero-primary product-decision-summary">
     <div>
       <p class="eyebrow">Offer details</p>
@@ -5439,6 +5457,7 @@
       <article class="mini-card"><p class="eyebrow">Fit</p><h3>Built for review-heavy workflows where better visibility, calmer scorecards, or clearer documentation improve decisions.</h3></article>
       <article class="mini-card"><p class="eyebrow">Checkout</p><h3>nanoojr.gumroad.com</h3></article>
     </div>
+  </div>
   </div>
   <div class="mini-stack">
     <article class="mini-card product-hero-proof-card">
@@ -5606,7 +5625,7 @@
     <article class="mini-card">
       <p class="eyebrow">Next best action</p>
       <h2>Review the fit, then open checkout only when ready.</h2>
-      <p class="muted">This side panel keeps the purchase boundary, support path, and related resources visible without leaving the rest of the page in a narrow column.</p>
+      <p class="muted">Use this quick panel to confirm checkout, support, and related resources before leaving this page.</p>
       <div class="cta-row" style="margin-top:0;">
         <a class="btn" href="https://nanoojr.gumroad.com/l/ehnwj" target="_blank" rel="noopener">Open secure checkout</a>
         <a class="btn ghost" href="/support/">Support guidance</a>

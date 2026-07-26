@@ -1206,6 +1206,17 @@
       .product-detail-hero {
         align-items: start;
       }
+      .product-detail-hero.product-hero-single-column {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 22px;
+      }
+      .product-detail-hero.product-hero-single-column .product-hero-primary,
+      .product-detail-hero.product-hero-single-column .mini-stack {
+        width: 100%;
+        max-width: none;
+        justify-self: stretch;
+      }
       .product-detail-hero .mini-stack {
         align-content: start;
       }
@@ -5025,8 +5036,8 @@
         .site-header-band[data-twe-premium-header].is-compact .twe-premium-drawer {
           min-width: min(720px, calc(100vw - 48px));
           max-width: min(920px, calc(100vw - 48px));
-          width: max-content;
-          justify-self: end;
+          width: min(920px, calc(100vw - 48px)) !important;
+          justify-self: stretch;
         }
         .site-header-band[data-twe-premium-header].is-compact .twe-premium-search-results-head {
           display: grid;
@@ -5130,10 +5141,12 @@
       .site-header-band[data-twe-premium-header].is-compact .nav-menu-panel:has(.twe-premium-drawer:not([hidden])) {
         grid-template-areas: "drawer" "links" "utility" !important;
         position: fixed !important;
-        top: clamp(118px, 15vh, 148px) !important;
-        right: max(24px, calc((100vw - 1320px) / 2 + 24px)) !important;
-        width: min(526px, calc(100vw - 48px)) !important;
-        max-height: calc(100vh - 170px) !important;
+        top: 104px !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        width: min(920px, calc(100vw - 48px)) !important;
+        max-height: calc(100vh - 128px) !important;
         overflow: auto !important;
         z-index: 120 !important;
         box-shadow: 0 28px 70px rgba(8, 51, 64, 0.24) !important;
@@ -5147,6 +5160,11 @@
       }
       .site-header-band[data-twe-premium-header].is-compact .nav-menu-panel:has(.twe-premium-drawer:not([hidden])) .twe-premium-drawer {
         margin-top: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .site-header-band[data-twe-premium-header].is-compact .nav-menu-panel:has(.twe-premium-drawer:not([hidden])) .twe-premium-drawer-grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr)) !important;
       }
       .site-header-band[data-twe-premium-header].is-compact .twe-destination-card { min-height: 56px; padding: 10px 11px; align-content: center; }
       .site-header-band[data-twe-premium-header].is-compact .twe-destination-card small,
@@ -5555,7 +5573,7 @@
     <div>
       <p class="eyebrow">Amazon Store</p>
       <h2 style="margin-bottom: 6px;">Amazon picks now live on one clean search page.</h2>
-      <p class="muted" style="margin-bottom: 0; max-width: 860px;">To keep this Store page focused and professional, the full Amazon affiliate catalog moved to the dedicated TWE Amazon Store. Search there for local approved Amazon.ca picks; live price, availability, ratings, reviews, shipping, and checkout stay on Amazon.ca.</p>
+      <p class="muted" style="margin-bottom: 0; max-width: 860px;">Use the dedicated TWE Amazon Store when you want more Amazon.ca shortlists in one place. This Store keeps the first buying paths simple while Amazon.ca remains the place for live price, availability, ratings, reviews, shipping, and checkout details.</p>
     </div>
     <a class="pill is-accent" href="/amazon-store/?src=store-front-route">Open TWE Amazon Store</a>
   </div>
@@ -5799,7 +5817,7 @@
       <div class="advanced-amazon-title-row">
         <h2 style="margin-bottom: 0;">Amazon browsing now lives on one clean page.</h2>
       </div>
-      <p class="lede" style="margin-top: 12px; max-width: 760px;">To keep the main Store short, fast, and professional, full Amazon.ca affiliate browsing moved to the dedicated TWE Amazon Store.</p>
+      <p class="lede" style="margin-top: 12px; max-width: 760px;">Use the dedicated TWE Amazon Store when you want the fuller Amazon.ca shortlist instead of the quick Store path.</p>
       <p class="muted">Use the Amazon Store for searchable local approved picks, clear affiliate disclosure, and compliance notes. Live price, availability, ratings, reviews, seller terms, shipping, and checkout stay on Amazon.ca.</p>
       <div class="advanced-amazon-chip-row" aria-label="Popular Amazon Store search starters">
         
@@ -5888,7 +5906,7 @@
     </div>
     <a class="pill is-accent" href="/command-center/">Buying Guide</a>
   </div>
-  <form action="/store/#store-top-matches" method="get" class="store-filter-form">
+  <form action="/store-browse/#store-top-matches" method="get" class="store-filter-form" data-store-route-preserving-search>
     <div class="store-filter-grid">
       <label class="store-filter-field">
         <span class="eyebrow">Search</span>
@@ -5958,7 +5976,7 @@
       </label>
       <div class="cta-row store-filter-actions">
         <button class="btn" type="submit">Search store</button>
-        <a class="btn secondary" href="/store/">Reset</a>
+        <a class="btn secondary" href="/store-browse/">Reset</a>
       </div>
     </div>
   </form>
@@ -5994,8 +6012,8 @@
     <div class="section-head" style="align-items: center; margin-bottom: 12px;">
       <div>
         <p class="eyebrow">Amazon Store moved</p>
-        <h3 style="margin-bottom: 6px;">The full Amazon affiliate experience is on the dedicated TWE Amazon Store.</h3>
-        <p class="muted" style="margin-bottom: 0;">This main Store page now stays focused on TWE digital kits, guide routes, and a small number of shortcuts. Use the Amazon Store page for searchable Amazon.ca affiliate picks, local approved results, disclosure, and buyer-boundary notes.</p>
+        <h3 style="margin-bottom: 6px;">Search the dedicated TWE Amazon Store for more Amazon.ca picks.</h3>
+        <p class="muted" style="margin-bottom: 0;">Use this page for digital kits and quick buying paths. Use the Amazon Store when you want searchable Amazon.ca picks, clear disclosure, and live marketplace details in one place.</p>
       </div>
       <a class="pill is-accent" href="/amazon-store/?src=store-amazon-moved-panel">Open TWE Amazon Store</a>
     </div>

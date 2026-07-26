@@ -130,10 +130,15 @@
     event.preventDefault();
     runSearch(value);
   });
-  header.querySelector('[data-twe-search-close]')?.addEventListener('click', () => {
+  const closeSearchResults = (message = 'Search results closed.') => {
     if (resultsBox) resultsBox.hidden = true;
+    if (searchResults) searchResults.innerHTML = '';
+    if (searchInput) searchInput.value = '';
+    say(message);
+  };
+  header.querySelector('[data-twe-search-close]')?.addEventListener('click', () => {
+    closeSearchResults('Search cleared.');
     searchInput?.focus();
-    say('Search results closed.');
   });
   document.addEventListener('keydown', (event) => {
     if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
@@ -144,9 +149,8 @@
     }
     if (event.key === 'Escape') {
       if (resultsBox && !resultsBox.hidden) {
-        resultsBox.hidden = true;
+        closeSearchResults('Search cleared.');
         searchInput?.focus();
-        say('Search results closed.');
       }
       const drawer = header.querySelector('[data-twe-drawer]');
       const trigger = header.querySelector('[data-twe-drawer-toggle]');
@@ -166,6 +170,7 @@
   drawerToggle?.addEventListener('click', () => {
     const open = drawer?.hidden !== false;
     if (drawer) drawer.hidden = !open;
+    if (open) closeSearchResults('Search cleared before opening My TWE.');
     if (open && navPanel) {
       navPanel.hidden = false;
       navToggle?.setAttribute('aria-expanded', 'true');

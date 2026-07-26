@@ -1330,6 +1330,17 @@
       .product-detail-hero {
         align-items: start;
       }
+      .product-detail-hero.product-hero-single-column {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 22px;
+      }
+      .product-detail-hero.product-hero-single-column .product-hero-primary,
+      .product-detail-hero.product-hero-single-column .mini-stack {
+        width: 100%;
+        max-width: none;
+        justify-self: stretch;
+      }
       .product-detail-hero .mini-stack {
         align-content: start;
       }
@@ -5149,8 +5160,8 @@
         .site-header-band[data-twe-premium-header].is-compact .twe-premium-drawer {
           min-width: min(720px, calc(100vw - 48px));
           max-width: min(920px, calc(100vw - 48px));
-          width: max-content;
-          justify-self: end;
+          width: min(920px, calc(100vw - 48px)) !important;
+          justify-self: stretch;
         }
         .site-header-band[data-twe-premium-header].is-compact .twe-premium-search-results-head {
           display: grid;
@@ -5254,10 +5265,12 @@
       .site-header-band[data-twe-premium-header].is-compact .nav-menu-panel:has(.twe-premium-drawer:not([hidden])) {
         grid-template-areas: "drawer" "links" "utility" !important;
         position: fixed !important;
-        top: clamp(118px, 15vh, 148px) !important;
-        right: max(24px, calc((100vw - 1320px) / 2 + 24px)) !important;
-        width: min(526px, calc(100vw - 48px)) !important;
-        max-height: calc(100vh - 170px) !important;
+        top: 104px !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        width: min(920px, calc(100vw - 48px)) !important;
+        max-height: calc(100vh - 128px) !important;
         overflow: auto !important;
         z-index: 120 !important;
         box-shadow: 0 28px 70px rgba(8, 51, 64, 0.24) !important;
@@ -5271,6 +5284,11 @@
       }
       .site-header-band[data-twe-premium-header].is-compact .nav-menu-panel:has(.twe-premium-drawer:not([hidden])) .twe-premium-drawer {
         margin-top: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .site-header-band[data-twe-premium-header].is-compact .nav-menu-panel:has(.twe-premium-drawer:not([hidden])) .twe-premium-drawer-grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr)) !important;
       }
       .site-header-band[data-twe-premium-header].is-compact .twe-destination-card { min-height: 56px; padding: 10px 11px; align-content: center; }
       .site-header-band[data-twe-premium-header].is-compact .twe-destination-card small,
@@ -5534,7 +5552,7 @@
     <div class="hero-kicker mono">Free customer site · tools · games · community updates · helpful resources</div>
     <p class="eyebrow">The Watchers Edge</p>
     <h1 class="homepage-benefit-statement">Free tools, quick games, helpful guides, and community updates.</h1>
-    <p class="lede homepage-benefit-support"><strong>Save time with practical tools. Relax with easy games.</strong> The Watchers Edge is a useful customer and community website first: open a helper, play a short game, find church news and upcoming events, read pet and practical resources, then visit the separate TWE Store only when you choose.</p>
+    <p class="lede homepage-benefit-support"><strong>Save time with practical tools. Relax with easy games.</strong> The Watchers Edge is a quick-help website for tools, games, guides, community updates, and optional offers: open a helper, play a short game, find church news and upcoming events, read pet and practical resources, then visit the separate TWE Store only when you choose.</p>
     <div class="home-premium-proof-row" aria-label="Why visitors can trust the site quickly">
       <span class="pill">Clear paths</span>
       <span class="pill">Free value first</span>
@@ -5549,10 +5567,10 @@
   </div>
   <aside class="mini-stack" aria-label="How to use The Watchers Edge">
     <article class="editorial-card home-journey-card">
-      <p class="eyebrow">First 5 seconds</p>
+      <p class="eyebrow">Start here</p>
       <h2>A calm path from useful to optional.</h2>
       <div class="home-journey-step"><span aria-hidden="true">1</span><p><strong>Choose a need.</strong> Tools, games, updates, pet content, resources, or store are visible immediately.</p></div>
-      <div class="home-journey-step"><span aria-hidden="true">2</span><p><strong>Get value first.</strong> The page explains what is free, helpful, and low-friction before commercial offers appear.</p></div>
+      <div class="home-journey-step"><span aria-hidden="true">2</span><p><strong>Get value first.</strong> The page explains what is free, helpful, and low-friction before you compare optional offers.</p></div>
       <div class="home-journey-step"><span aria-hidden="true">3</span><p><strong>Continue with confidence.</strong> Store, support, disclosures, and destination labels stay clear when visitors are ready.</p></div>
     </article>
     <article class="stat-card">

@@ -1206,6 +1206,17 @@
       .product-detail-hero {
         align-items: start;
       }
+      .product-detail-hero.product-hero-single-column {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 22px;
+      }
+      .product-detail-hero.product-hero-single-column .product-hero-primary,
+      .product-detail-hero.product-hero-single-column .mini-stack {
+        width: 100%;
+        max-width: none;
+        justify-self: stretch;
+      }
       .product-detail-hero .mini-stack {
         align-content: start;
       }
@@ -5025,8 +5036,8 @@
         .site-header-band[data-twe-premium-header].is-compact .twe-premium-drawer {
           min-width: min(720px, calc(100vw - 48px));
           max-width: min(920px, calc(100vw - 48px));
-          width: max-content;
-          justify-self: end;
+          width: min(920px, calc(100vw - 48px)) !important;
+          justify-self: stretch;
         }
         .site-header-band[data-twe-premium-header].is-compact .twe-premium-search-results-head {
           display: grid;
@@ -5130,10 +5141,12 @@
       .site-header-band[data-twe-premium-header].is-compact .nav-menu-panel:has(.twe-premium-drawer:not([hidden])) {
         grid-template-areas: "drawer" "links" "utility" !important;
         position: fixed !important;
-        top: clamp(118px, 15vh, 148px) !important;
-        right: max(24px, calc((100vw - 1320px) / 2 + 24px)) !important;
-        width: min(526px, calc(100vw - 48px)) !important;
-        max-height: calc(100vh - 170px) !important;
+        top: 104px !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        width: min(920px, calc(100vw - 48px)) !important;
+        max-height: calc(100vh - 128px) !important;
         overflow: auto !important;
         z-index: 120 !important;
         box-shadow: 0 28px 70px rgba(8, 51, 64, 0.24) !important;
@@ -5147,6 +5160,11 @@
       }
       .site-header-band[data-twe-premium-header].is-compact .nav-menu-panel:has(.twe-premium-drawer:not([hidden])) .twe-premium-drawer {
         margin-top: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .site-header-band[data-twe-premium-header].is-compact .nav-menu-panel:has(.twe-premium-drawer:not([hidden])) .twe-premium-drawer-grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr)) !important;
       }
       .site-header-band[data-twe-premium-header].is-compact .twe-destination-card { min-height: 56px; padding: 10px 11px; align-content: center; }
       .site-header-band[data-twe-premium-header].is-compact .twe-destination-card small,
@@ -5661,7 +5679,7 @@
     <div>
       <p class="eyebrow">Browse all guides by category</p>
       <h2 style="margin-bottom:6px;">Open only the category you need.</h2>
-      <p class="muted" style="margin-bottom:0;">The full guide inventory stays available inside focused category groups.</p>
+      <p class="muted" style="margin-bottom:0;">Open only the category that matches your current buying problem, then compare the most relevant guides first.</p>
     </div>
   </div>
   <div class="mini-stack" style="gap:12px;">
