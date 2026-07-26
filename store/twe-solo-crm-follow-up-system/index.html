@@ -4751,6 +4751,380 @@
         .site-header-band.site-header-simple .nav-menu-panel[hidden] { display: none !important; }
         .site-header-band.site-header-simple .brand-copy span:last-child { display: none !important; }
       }
+
+      /* 2026-07-26 Header Design Concepts final-output V11 implementation.
+         Source: final ChatGPT Header Design Concepts package only, SHA-256
+         1bb79923afc44ae1848889b2059d5b8059e475cdcb0d270894dcd8eafa4f9542. */
+      :root {
+        --twe-v11-ink: #0a3141;
+        --twe-v11-primary: #103c4b;
+        --twe-v11-muted: #54727b;
+        --twe-v11-paper: #f3eee4;
+        --twe-v11-tools: #0c8296;
+        --twe-v11-games: #5062b0;
+        --twe-v11-resources: #657b43;
+        --twe-v11-store: #aa6a31;
+        --twe-v11-coral: #b96048;
+        --twe-v11-focus: #084f9a;
+        --twe-v11-shadow: 0 26px 72px rgba(10, 49, 65, 0.17);
+      }
+      body:not([data-standalone-page="true"]) {
+        background:
+          radial-gradient(circle at 10% 4%, rgba(12,130,150,.18), transparent 28%),
+          radial-gradient(circle at 88% 6%, rgba(185,96,72,.14), transparent 24%),
+          radial-gradient(circle at 80% 62%, rgba(80,98,176,.10), transparent 30%),
+          linear-gradient(180deg, #fffdf8 0%, #f7f0e6 42%, #eef8f6 100%);
+      }
+      .site-header-band[data-twe-premium-header] {
+        position: sticky;
+        top: 10px;
+        max-width: 1440px;
+        margin-inline: auto;
+        padding: clamp(10px, 1.2vw, 16px) !important;
+        border-radius: 32px !important;
+        border: 1px solid rgba(12,130,150,.24) !important;
+        background:
+          radial-gradient(circle at 9% 18%, rgba(12,130,150,.22), transparent 34%),
+          radial-gradient(circle at 90% 13%, rgba(185,96,72,.16), transparent 30%),
+          linear-gradient(135deg, rgba(255,255,255,.96), rgba(229,249,246,.90) 48%, rgba(255,244,222,.92)) !important;
+        box-shadow: var(--twe-v11-shadow), inset 0 1px 0 rgba(255,255,255,.92) !important;
+        backdrop-filter: blur(18px) saturate(1.18);
+        overflow: visible;
+      }
+      .site-header-band[data-twe-premium-header] .nav {
+        display: grid !important;
+        grid-template-columns: minmax(260px,.9fr) minmax(0,1.25fr) minmax(248px,.72fr) !important;
+        grid-template-areas:
+          "brand destinations actions"
+          "search search search"
+          "panel panel panel" !important;
+        align-items: start !important;
+        gap: 12px !important;
+        padding: clamp(14px, 1.5vw, 22px) !important;
+        border-radius: 26px !important;
+        border: 1px solid rgba(255,255,255,.72) !important;
+        background:
+          linear-gradient(145deg, rgba(255,255,255,.72), rgba(255,250,239,.60)),
+          radial-gradient(circle at 95% 5%, rgba(243,170,45,.20), transparent 26%) !important;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.95), 0 12px 34px rgba(10,49,65,.08) !important;
+        overflow: hidden;
+        isolation: isolate;
+      }
+      .site-header-band[data-twe-premium-header] .nav::before,
+      .site-header-band[data-twe-premium-header] .nav::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        z-index: -1;
+      }
+      .site-header-band[data-twe-premium-header] .nav::before {
+        inset: 10px auto auto 10px;
+        width: 132px;
+        height: 132px;
+        border-radius: 38px;
+        background: conic-gradient(from 115deg, rgba(12,130,150,.28), rgba(255,255,255,.40), rgba(185,96,72,.20), rgba(12,130,150,.28));
+        filter: blur(.2px);
+        opacity: .82;
+      }
+      .site-header-band[data-twe-premium-header] .nav::after {
+        right: -90px;
+        top: -95px;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255,255,255,.45), rgba(12,130,150,.18) 42%, transparent 64%);
+      }
+      .site-header-band[data-twe-premium-header] .brand {
+        grid-area: brand !important;
+        align-items: center;
+        gap: 16px;
+        min-height: 84px;
+      }
+      .site-header-band[data-twe-premium-header] .brand-mark {
+        width: 80px !important;
+        height: 80px !important;
+        padding: 6px !important;
+        border-radius: 24px !important;
+        border-color: rgba(170,106,49,.38) !important;
+        background: linear-gradient(145deg, #fff8e8, #e4faf5) !important;
+        box-shadow: 0 18px 36px rgba(10,49,65,.15), inset 0 1px 0 rgba(255,255,255,.96) !important;
+      }
+      .site-header-band[data-twe-premium-header] .brand-kicker {
+        color: var(--twe-v11-coral) !important;
+        font-size: .74rem;
+        letter-spacing: .16em;
+      }
+      .site-header-band[data-twe-premium-header] .brand strong {
+        color: var(--twe-v11-ink) !important;
+        background: none !important;
+        font-size: clamp(1.55rem, 2.35vw, 2.45rem) !important;
+        font-weight: 950;
+        letter-spacing: -.045em;
+        line-height: .94;
+      }
+      .site-header-band[data-twe-premium-header] .brand-copy span:last-child {
+        display: block !important;
+        color: var(--twe-v11-primary) !important;
+        font-size: 1rem;
+        font-weight: 750;
+        white-space: normal;
+        max-width: 30ch;
+      }
+      .twe-premium-destinations {
+        grid-area: destinations;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+      }
+      .twe-destination-card {
+        position: relative;
+        display: grid;
+        align-content: start;
+        gap: 5px;
+        min-height: 132px;
+        padding: 14px 12px;
+        border-radius: 22px;
+        border: 1px solid rgba(10,49,65,.12);
+        background: rgba(255,255,255,.88);
+        color: var(--twe-v11-ink);
+        text-decoration: none;
+        box-shadow: 0 13px 28px rgba(10,49,65,.08), inset 0 1px 0 rgba(255,255,255,.92);
+        overflow: hidden;
+      }
+      .twe-destination-card::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 4px;
+        background: var(--destination-accent, var(--twe-v11-tools));
+      }
+      .twe-destination-card::after {
+        content: attr(data-icon);
+        position: absolute;
+        right: 11px;
+        bottom: 9px;
+        font-size: 1.45rem;
+        opacity: .28;
+      }
+      .twe-destination-card[data-accent="tools"] { --destination-accent: var(--twe-v11-tools); }
+      .twe-destination-card[data-accent="games"] { --destination-accent: var(--twe-v11-games); }
+      .twe-destination-card[data-accent="resources"] { --destination-accent: var(--twe-v11-resources); }
+      .twe-destination-card[data-accent="store"] { --destination-accent: var(--twe-v11-store); }
+      .twe-destination-card span { color: var(--destination-accent); font-size: .66rem; font-weight: 950; letter-spacing: .13em; text-transform: uppercase; }
+      .twe-destination-card strong { font-size: clamp(.98rem, 1vw, 1.15rem); line-height: 1.04; }
+      .twe-destination-card small { color: var(--twe-v11-muted); font-weight: 700; line-height: 1.22; }
+      .twe-destination-card em { color: var(--twe-v11-primary); font-size: .72rem; font-style: normal; font-weight: 900; }
+      .twe-destination-card:hover,
+      .twe-destination-card:focus-visible {
+        transform: translateY(-2px);
+        border-color: var(--destination-accent);
+        box-shadow: 0 24px 52px rgba(10,49,65,.14), inset 0 1px 0 rgba(255,255,255,.96);
+      }
+      .twe-premium-actions {
+        grid-area: actions;
+        display: grid;
+        gap: 10px;
+      }
+      .twe-premium-trust-line {
+        margin: 0;
+        padding: 12px 14px;
+        border-radius: 18px;
+        background: rgba(255,255,255,.76);
+        color: var(--twe-v11-primary);
+        font-weight: 850;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.9);
+      }
+      .twe-premium-action-row { display: flex; gap: 8px; flex-wrap: wrap; }
+      .twe-premium-tool-button,
+      .twe-premium-mini-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        border-radius: 15px;
+        border: 1px solid rgba(12,130,150,.24);
+        background: rgba(255,255,255,.88);
+        color: var(--twe-v11-ink);
+        padding: 8px 12px;
+        font: inherit;
+        font-weight: 900;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 10px 22px rgba(10,49,65,.075);
+      }
+      .twe-premium-tool-button:hover,
+      .twe-premium-tool-button:focus-visible,
+      .twe-premium-mini-button:hover,
+      .twe-premium-mini-button:focus-visible { border-color: rgba(12,130,150,.48); transform: translateY(-1px); }
+      .site-header-band[data-twe-premium-header] .nav-search {
+        grid-area: search !important;
+        width: 100%;
+        max-width: none !important;
+        min-height: 56px;
+        justify-self: stretch;
+        border-radius: 20px !important;
+        background: rgba(255,255,255,.92) !important;
+        border-color: rgba(12,130,150,.28) !important;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.95), 0 12px 28px rgba(10,49,65,.075) !important;
+      }
+      .site-header-band[data-twe-premium-header] .nav-search input { font-size: 1rem; }
+      .twe-premium-search-hint { margin-left: auto; color: var(--twe-v11-muted); font-size: .82rem; font-weight: 800; white-space: nowrap; }
+      .site-header-band[data-twe-premium-header] .nav-menu-panel {
+        grid-area: panel !important;
+        display: grid !important;
+        gap: 12px;
+        width: 100%;
+      }
+      .twe-premium-daily {
+        display: grid;
+        grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr) minmax(230px, .7fr);
+        gap: 12px;
+        align-items: stretch;
+      }
+      .twe-premium-tabs,
+      .twe-premium-panel,
+      .twe-premium-quick,
+      .twe-premium-fresh,
+      .twe-premium-drawer,
+      .twe-premium-search-results {
+        border-radius: 22px;
+        border: 1px solid rgba(12,130,150,.16);
+        background: rgba(255,255,255,.78);
+        box-shadow: 0 14px 32px rgba(10,49,65,.075), inset 0 1px 0 rgba(255,255,255,.88);
+      }
+      .twe-premium-tabs { display: grid; gap: 8px; padding: 12px; }
+      .twe-premium-tabs button {
+        min-height: 44px;
+        border-radius: 14px;
+        border: 1px solid rgba(12,130,150,.16);
+        background: rgba(255,255,255,.84);
+        color: var(--twe-v11-primary);
+        font: inherit;
+        font-weight: 900;
+        cursor: pointer;
+      }
+      .twe-premium-tabs button[aria-selected="true"] {
+        background: linear-gradient(135deg, var(--twe-v11-ink), var(--twe-v11-tools));
+        color: #fff;
+      }
+      .twe-premium-panel { padding: 16px; }
+      .twe-premium-panel[hidden],
+      .twe-premium-search-results[hidden],
+      .twe-premium-drawer[hidden] { display: none !important; }
+      .twe-premium-panel p:first-child,
+      .twe-premium-fresh .eyebrow,
+      .twe-premium-quick .eyebrow { color: var(--twe-v11-coral); font-weight: 950; letter-spacing: .12em; text-transform: uppercase; }
+      .twe-premium-panel-title { display:block; margin: 0 0 8px; color: var(--twe-v11-ink); font-size: clamp(1.35rem, 2vw, 2rem); font-weight: 950; line-height: 1.12; }
+      .twe-premium-drawer-title { display:block; margin:0 0 8px; color: var(--twe-v11-ink); font-size: 1.05rem; font-weight: 950; }
+      .twe-premium-panel p { margin: 0 0 12px; color: var(--twe-v11-primary); }
+      .twe-premium-quick,
+      .twe-premium-fresh { padding: 14px; }
+      .twe-premium-quick-grid,
+      .twe-premium-fresh-list { display: grid; gap: 8px; }
+      .twe-premium-quick a,
+      .twe-premium-fresh a,
+      .twe-premium-search-result,
+      .twe-premium-mini-result {
+        display: grid;
+        gap: 3px;
+        min-height: 44px;
+        padding: 10px 12px;
+        border-radius: 15px;
+        border: 1px solid rgba(12,130,150,.14);
+        background: rgba(255,255,255,.82);
+        color: var(--twe-v11-ink);
+        text-decoration: none;
+      }
+      .twe-premium-search-result span,
+      .twe-premium-mini-result span,
+      .twe-premium-fresh a span { color: var(--twe-v11-tools); font-size: .72rem; font-weight: 950; letter-spacing: .10em; text-transform: uppercase; }
+      .twe-premium-search-results { padding: 14px; }
+      .twe-premium-search-results-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+      .twe-premium-search-results-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; }
+      .twe-premium-drawer { padding: 14px; }
+      .twe-premium-drawer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+      .twe-premium-empty { margin: 0; color: var(--twe-v11-muted); font-weight: 700; }
+      .twe-premium-status { min-height: 1.2em; color: var(--twe-v11-primary); font-weight: 800; }
+      .twe-premium-status[aria-live] { font-size: .86rem; }
+      .site-header-band[data-twe-premium-header] .nav-links.nav-links-primary,
+      .site-header-band[data-twe-premium-header] .nav-utility-row {
+        justify-content: center !important;
+        gap: 8px !important;
+      }
+      .site-header-band[data-twe-premium-header] .nav-links a,
+      .site-header-band[data-twe-premium-header] .nav-utility-link {
+        min-height: 44px !important;
+        border-radius: 15px !important;
+      }
+      .site-header-band[data-twe-premium-header].is-compact .nav {
+        grid-template-columns: minmax(210px, 280px) minmax(0,1fr) auto !important;
+        grid-template-areas: "brand destinations actions" !important;
+        align-items: center !important;
+        min-height: 92px !important;
+      }
+      .site-header-band[data-twe-premium-header].is-compact .brand { min-height: 58px; }
+      .site-header-band[data-twe-premium-header].is-compact .brand-mark { width: 54px !important; height: 54px !important; }
+      .site-header-band[data-twe-premium-header].is-compact .brand-copy span:last-child,
+      .site-header-band[data-twe-premium-header].is-compact .nav-search,
+      .site-header-band[data-twe-premium-header].is-compact .nav-menu-panel,
+      .site-header-band[data-twe-premium-header].is-compact .twe-premium-trust-line { display: none !important; }
+      .site-header-band[data-twe-premium-header].is-compact .twe-destination-card { min-height: 56px; padding: 10px 11px; align-content: center; }
+      .site-header-band[data-twe-premium-header].is-compact .twe-destination-card small,
+      .site-header-band[data-twe-premium-header].is-compact .twe-destination-card em { display: none; }
+      .site-header-band[data-twe-premium-header].is-compact .twe-premium-action-row { justify-content: end; }
+      @media (prefers-reduced-motion: no-preference) {
+        .site-header-band[data-twe-premium-header]:not(.motion-paused) .nav::after { animation: tweV11Aura 16s ease-in-out infinite alternate; }
+        .site-header-band[data-twe-premium-header] :is(.twe-destination-card,.twe-premium-tool-button,.twe-premium-mini-button,.twe-premium-search-result) { transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease; }
+      }
+      @keyframes tweV11Aura { from { transform: translate3d(0,0,0) scale(1); opacity:.64; } to { transform: translate3d(-24px,18px,0) scale(1.06); opacity:.88; } }
+      .site-header-band[data-twe-premium-header].motion-paused *,
+      .site-header-band[data-twe-premium-header].motion-paused *::before,
+      .site-header-band[data-twe-premium-header].motion-paused *::after { animation: none !important; transition-duration: .001ms !important; }
+      @media (max-width: 1180px) {
+        .site-header-band[data-twe-premium-header] { position: static !important; border-radius: 24px !important; }
+        .site-header-band[data-twe-premium-header] .nav {
+          grid-template-columns: minmax(0,1fr) auto !important;
+          grid-template-areas: "brand toggle" "actions actions" "destinations destinations" "search search" "panel panel" !important;
+        }
+        .site-header-band[data-twe-premium-header] .nav-menu-toggle { display: inline-flex !important; grid-area: toggle !important; }
+        .site-header-band[data-twe-premium-header].is-compact .nav-menu-panel:not([hidden]) { display: grid !important; }
+        .twe-premium-destinations { grid-template-columns: repeat(4, minmax(140px,1fr)); overflow-x: auto; padding-bottom: 4px; }
+        .twe-premium-daily { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 760px) {
+        .site-header-band[data-twe-premium-header] { top: 0 !important; padding: 8px !important; border-radius: 22px !important; }
+        .site-header-band[data-twe-premium-header] .nav {
+          grid-template-columns: minmax(0,1fr) auto !important;
+          grid-template-areas: "brand toggle" "actions actions" "destinations destinations" "search search" "panel panel" !important;
+          padding: 10px !important;
+          border-radius: 20px !important;
+        }
+        .site-header-band[data-twe-premium-header] .brand { min-height: 66px; gap: 10px; }
+        .site-header-band[data-twe-premium-header] .brand-mark { width: 65px !important; height: 65px !important; }
+        .site-header-band[data-twe-premium-header] .brand strong { font-size: clamp(1.2rem, 7vw, 1.55rem) !important; max-width: 55vw; }
+        .site-header-band[data-twe-premium-header] .brand-copy span:last-child { display: none !important; }
+        .site-header-band[data-twe-premium-header] .nav-menu-toggle { display: inline-flex !important; grid-area: toggle !important; }
+        .site-header-band[data-twe-premium-header] .nav-menu-panel[hidden] { display: none !important; }
+        .twe-premium-destinations { grid-template-columns: repeat(2, minmax(0,1fr)); overflow: visible; }
+        .twe-destination-card { min-height: 122px; padding: 12px 10px; }
+        .site-header-band[data-twe-premium-header] .nav-search { min-height: 52px; flex-wrap: wrap; }
+        .site-header-band[data-twe-premium-header] .nav-search label,
+        .twe-premium-search-hint { position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important; clip: rect(0 0 0 0) !important; white-space: nowrap !important; }
+        .twe-premium-drawer-grid,
+        .twe-premium-search-results-list { grid-template-columns: 1fr; }
+        .site-header-band[data-twe-premium-header] .nav-menu-panel:not([hidden]) { display: grid !important; grid-template-columns: minmax(0, 1fr) !important; width: 100% !important; }
+        .site-header-band[data-twe-premium-header] .nav-menu-panel > * { width: 100% !important; grid-column: 1 / -1 !important; }
+        .site-header-band[data-twe-premium-header].is-compact .nav { grid-template-areas: "brand toggle" "destinations destinations" "panel panel" !important; min-height: 0 !important; }
+        .site-header-band[data-twe-premium-header].is-compact .nav-menu-panel:not([hidden]) { display: grid !important; grid-template-columns: minmax(0, 1fr) !important; width: 100% !important; }
+        .site-header-band[data-twe-premium-header] .twe-premium-drawer,
+        .site-header-band[data-twe-premium-header] .twe-premium-search-results,
+        .site-header-band[data-twe-premium-header] .twe-premium-fresh,
+        .site-header-band[data-twe-premium-header] .twe-premium-daily { width: 100% !important; grid-column: 1 / -1 !important; }
+        .site-header-band[data-twe-premium-header].is-compact .twe-premium-destinations { grid-template-columns: repeat(4, minmax(76px,1fr)); gap: 6px; }
+        .site-header-band[data-twe-premium-header].is-compact .twe-destination-card { min-height: 48px; padding: 8px 6px; }
+        .site-header-band[data-twe-premium-header].is-compact .twe-destination-card span { display:none; }
+        .site-header-band[data-twe-premium-header].is-compact .twe-destination-card strong { font-size:.78rem; }
+      }
     </style>
     <script>
       window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
@@ -4773,26 +5147,41 @@
       
       
       
-      <div class="site-header-band site-header-simple" aria-label="Site navigation">
-        <nav class="nav">
-          <a class="brand" data-warm-signal-brand-lockup="true" href="/">
-            <img class="brand-mark" src="/static/public_site/the-watchers-edge-mark.png" alt="The Watchers Edge logo" width="68" height="84">
+      <div class="site-header-band site-header-simple" data-twe-premium-header aria-label="Site navigation">
+        <nav class="nav" aria-label="The Watchers Edge premium navigation">
+          <a class="brand" data-warm-signal-brand-lockup="true" href="/" aria-label="The Watchers Edge home">
+            <img class="brand-mark" src="/static/public_site/the-watchers-edge-mark.png" alt="The Watchers Edge logo" width="80" height="80" fetchpriority="high" decoding="async">
             <span class="brand-copy">
               <span class="brand-kicker">The Watchers Edge</span>
               <strong>TheWatchersEdge.ca</strong>
-              <span>Practical digital tools, buyer guides, and trusted resources in one place.</span>
+              <span>Free tools, games, guides, community updates, and an optional store.</span>
             </span>
           </a>
           <button class="nav-menu-toggle" type="button" aria-expanded="false" aria-controls="global-nav-panel" data-nav-menu-toggle>
             <span class="nav-menu-toggle-icon" aria-hidden="true">☰</span>
             <span>Menu</span>
           </button>
-          <div id="global-nav-panel" class="nav-menu-panel" data-nav-menu-panel hidden>
-          <form class="nav-search" action="/store/#store-top-matches" method="get" data-header-search-form>
-            <label for="global-search">Search</label>
-            <input id="global-search" type="text" name="q" aria-label="Search products and buying guides" placeholder="Search products and buying guides">
+          <div class="twe-premium-destinations" aria-label="Primary destinations">
+            <a class="twe-destination-card" data-accent="tools" data-icon="🧰" data-twe-item-id="qr-generator" href="/toolbox/?cb=toolbox20260711toolsGamesExpansion"><span>Get something done</span><strong>Tools</strong><small>Fast practical helpers</small><em>QR · calculate · convert →</em></a>
+            <a class="twe-destination-card" data-accent="games" data-icon="🎮" data-twe-item-id="reaction-timer" href="/toolbox/games/"><span>Take a good break</span><strong>Games</strong><small>Replayable browser games</small><em>Reaction · trivia · sudoku →</em></a>
+            <a class="twe-destination-card" data-accent="resources" data-icon="📚" data-twe-item-id="pet-home-resources" href="/resources/"><span>Find a clear answer</span><strong>Resources</strong><small>Guides for real decisions</small><em>Buying · pets · community →</em></a>
+            <a class="twe-destination-card" data-accent="store" data-icon="✦" data-twe-item-id="twe-store" href="/store/"><span>Browse when you want</span><strong>TWE Store</strong><small>Curated and optional</small><em>Kits · picks · fit checks →</em></a>
+          </div>
+          <div class="twe-premium-actions" aria-label="Repeat visit controls">
+            <p class="twe-premium-trust-line">Free to explore · No account needed · Store always optional</p>
+            <div class="twe-premium-action-row">
+              <button class="twe-premium-tool-button" type="button" data-twe-drawer-toggle aria-expanded="false" aria-controls="twe-premium-drawer">My TWE</button>
+              <button class="twe-premium-tool-button" type="button" data-twe-motion-toggle aria-pressed="false">Pause motion</button>
+            </div>
+            <p class="twe-premium-status" data-twe-status aria-live="polite">Ready when you are.</p>
+          </div>
+          <form class="nav-search" action="/store/#store-top-matches" method="get" data-header-search-form role="search">
+            <label for="global-search">Search TWE</label>
+            <input id="global-search" type="text" name="q" aria-label="Search tools, games, guides, and store items" placeholder="Try “pet guide”, “QR code”, “time zone”, or “trivia”" autocomplete="off">
+            <span class="twe-premium-search-hint" aria-hidden="true">Ctrl/⌘ K</span>
             <button type="submit">Search</button>
           </form>
+          <div id="global-nav-panel" class="nav-menu-panel" data-nav-menu-panel hidden>
           
           
           
@@ -4814,8 +5203,23 @@
             <a class="nav-utility-link is-pet" href="/resources/?category=pet-home&amp;src=product-nav-route&amp;from=twe-solo-crm-follow-up-system">Pet Content</a>
             <a class="nav-utility-link is-support" href="/support/">Support</a>
           </div>
+          <section class="twe-premium-daily" aria-label="Daily Edge and quick paths">
+            <div class="twe-premium-tabs" role="tablist" aria-label="Daily Edge modes">
+              <button type="button" role="tab" id="twe-daily-tab-today" data-twe-daily-tab aria-controls="twe-daily-panel-today" aria-selected="true">Today’s pick</button>
+              <button type="button" role="tab" id="twe-daily-tab-continue" data-twe-daily-tab aria-controls="twe-daily-panel-continue" aria-selected="false" tabindex="-1">Pick up</button>
+              <button type="button" role="tab" id="twe-daily-tab-discover" data-twe-daily-tab aria-controls="twe-daily-panel-discover" aria-selected="false" tabindex="-1">Surprise me</button>
+            </div>
+            <div>
+              <article class="twe-premium-panel" id="twe-daily-panel-today" data-twe-daily-panel role="tabpanel" aria-labelledby="twe-daily-tab-today"><p>Today’s quick win · about 60 seconds</p><strong class="twe-premium-panel-title">Can you beat 342 ms?</strong><p>One fast Reaction Timer round, no setup, and your best stays on this device.</p><a class="btn" data-twe-item-id="reaction-timer" href="/toolbox/mini-game/">Start one quick round</a></article>
+              <article class="twe-premium-panel" id="twe-daily-panel-continue" data-twe-daily-panel role="tabpanel" aria-labelledby="twe-daily-tab-continue" hidden><p>Welcome back · your last helper</p><strong class="twe-premium-panel-title">Your time zones are ready.</strong><p>Pick up a practical helper locally. No account, profile, or cloud sync needed.</p><a class="btn" data-twe-item-id="time-zone-planner" href="/toolbox/time-zone-planner/">Continue planning</a></article>
+              <article class="twe-premium-panel" id="twe-daily-panel-discover" data-twe-daily-panel role="tabpanel" aria-labelledby="twe-daily-tab-discover" hidden><p>A useful find · chosen only when you ask</p><strong class="twe-premium-panel-title">Meet the CSV Table Cleaner.</strong><p>Clean up a messy table without installing anything.</p><a class="btn" data-twe-item-id="csv-cleaner" href="/toolbox/csv-table-cleaner/">Open this useful find</a></article>
+            </div>
+            <div class="twe-premium-quick"><p class="eyebrow">Quick Paths</p><div class="twe-premium-quick-grid"><a data-twe-item-id="time-zone-planner" href="/toolbox/time-zone-planner/"><strong>Plan &amp; schedule</strong><small>Time zones · timer · calculator</small></a><a data-twe-item-id="qr-generator" href="/toolbox/tools/"><strong>Create &amp; share</strong><small>QR · images · text helpers</small></a><a data-twe-item-id="reaction-timer" href="/toolbox/games/"><strong>Reset &amp; play</strong><small>Trivia · reaction · puzzles</small></a></div></div>
+          </section>
+          <section class="twe-premium-fresh" aria-label="Fresh at TWE"><p class="eyebrow">Fresh at TWE</p><div class="twe-premium-fresh-list"><a data-twe-item-id="trivia-quickfire" href="/toolbox/trivia-quickfire/"><span>New game</span><strong>Trivia Quickfire</strong></a><a data-twe-item-id="church-community" href="/church/"><span>Community</span><strong>Church news &amp; events</strong></a><a data-twe-item-id="pet-home-resources" href="/resources/?category=pet-home"><span>Helpful</span><strong>Pet-home resources</strong></a></div></section>
+          <section class="twe-premium-search-results" data-twe-search-results hidden aria-label="Search results"><div class="twe-premium-search-results-head"><strong>Search results</strong><button class="twe-premium-mini-button" type="button" data-twe-search-close>Close</button></div><div class="twe-premium-search-results-list" data-twe-search-results-list></div></section>
+          <section class="twe-premium-drawer" id="twe-premium-drawer" data-twe-drawer hidden aria-label="My TWE device-local saved items"><div class="twe-premium-search-results-head"><div><strong>My TWE</strong><p class="twe-premium-empty">Private to this device. No account and no cloud sync.</p></div><button class="twe-premium-mini-button" type="button" data-twe-save-current>Save this page</button></div><div class="twe-premium-drawer-grid"><div><strong class="twe-premium-drawer-title">Saved</strong><div data-twe-saved-list></div></div><div><strong class="twe-premium-drawer-title">Recent</strong><div data-twe-recent-list></div></div></div><div class="twe-premium-action-row" style="margin-top:12px;"><button class="twe-premium-mini-button" type="button" data-twe-clear>Clear local items</button><button class="twe-premium-mini-button" type="button" data-twe-install disabled>Shortcut unlocks after repeat visits (0/3)</button></div></section>
           </div>
-
         </nav>
       </div>
 
@@ -5540,6 +5944,8 @@
     </div>
     
     
+    <script src="/static/public_site/twe-premium-header.js" defer></script>
+
     <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
       <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Expanded product image">
         <button class="lightbox-close" type="button" aria-label="Close expanded image">×</button>
