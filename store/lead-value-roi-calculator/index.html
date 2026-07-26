@@ -4870,6 +4870,12 @@
         white-space: normal;
         max-width: 30ch;
       }
+      .site-header-band[data-twe-premium-header] .brand strong,
+      .site-header-band[data-twe-premium-header] .brand-copy span:nth-child(2) {
+        white-space: nowrap !important;
+        word-break: keep-all !important;
+        overflow-wrap: normal !important;
+      }
       .twe-premium-destinations {
         grid-area: destinations;
         display: grid;
@@ -4972,8 +4978,12 @@
       .site-header-band[data-twe-premium-header] .nav-menu-panel {
         grid-area: panel !important;
         display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
         gap: 12px;
         width: 100%;
+      }
+      .site-header-band[data-twe-premium-header] .nav-menu-panel > * {
+        grid-column: 1 / -1 !important;
       }
       .twe-premium-daily {
         display: grid;
@@ -5124,6 +5134,70 @@
         .site-header-band[data-twe-premium-header].is-compact .twe-destination-card { min-height: 48px; padding: 8px 6px; }
         .site-header-band[data-twe-premium-header].is-compact .twe-destination-card span { display:none; }
         .site-header-band[data-twe-premium-header].is-compact .twe-destination-card strong { font-size:.78rem; }
+      }
+      /* V11 closeout overrides: keep approved rectangular cards and separated menu rows
+         ahead of older shared-header pill/grid rules in the cascade. */
+      .site-header-band[data-twe-premium-header] .brand {
+        min-width: 0 !important;
+      }
+      .site-header-band[data-twe-premium-header] .brand strong {
+        display: block !important;
+        max-width: 100% !important;
+        font-size: clamp(1.32rem, 1.95vw, 2.08rem) !important;
+        letter-spacing: -.055em !important;
+        line-height: .96 !important;
+      }
+      .site-header-band[data-twe-premium-header].is-compact .brand strong {
+        font-size: clamp(1.02rem, 1.35vw, 1.32rem) !important;
+        letter-spacing: -.045em !important;
+      }
+      .site-header-band[data-twe-premium-header] .twe-destination-card {
+        border-radius: 22px !important;
+        min-width: 0 !important;
+      }
+      .site-header-band[data-twe-premium-header] .nav-menu-panel {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        grid-template-areas:
+          "daily"
+          "links"
+          "utility"
+          "fresh"
+          "results"
+          "drawer" !important;
+        gap: 12px !important;
+        align-items: stretch !important;
+      }
+      .site-header-band[data-twe-premium-header] .twe-premium-daily { grid-area: daily !important; }
+      .site-header-band[data-twe-premium-header] .twe-premium-fresh { grid-area: fresh !important; }
+      .site-header-band[data-twe-premium-header] .twe-premium-search-results { grid-area: results !important; }
+      .site-header-band[data-twe-premium-header] .twe-premium-drawer { grid-area: drawer !important; }
+      .site-header-band[data-twe-premium-header] .nav-links.nav-links-primary { grid-area: links !important; }
+      .site-header-band[data-twe-premium-header] .nav-utility-row { grid-area: utility !important; }
+      .site-header-band[data-twe-premium-header] .nav-links.nav-links-primary,
+      .site-header-band[data-twe-premium-header] .nav-utility-row {
+        grid-column: 1 / -1 !important;
+        position: static !important;
+        inset: auto !important;
+        transform: none !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+      }
+      .site-header-band[data-twe-premium-header] .nav-utility-row {
+        margin-top: 8px !important;
+      }
+      @media (max-width: 760px) {
+        .site-header-band[data-twe-premium-header] .twe-destination-card {
+          border-radius: 18px !important;
+          min-height: 118px !important;
+        }
+        .site-header-band[data-twe-premium-header].is-compact .twe-destination-card {
+          border-radius: 14px !important;
+        }
       }
     </style>
     <script>
