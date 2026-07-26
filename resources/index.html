@@ -5019,6 +5019,53 @@
       .twe-premium-panel[hidden],
       .twe-premium-search-results[hidden],
       .twe-premium-drawer[hidden] { display: none !important; }
+
+      /* SOL full-site re-audit hardening: compact desktop drawers must stay readable panels. */
+      @media (min-width: 1181px) {
+        .site-header-band[data-twe-premium-header].is-compact .twe-premium-drawer {
+          min-width: min(720px, calc(100vw - 48px));
+          max-width: min(920px, calc(100vw - 48px));
+          width: max-content;
+          justify-self: end;
+        }
+        .site-header-band[data-twe-premium-header].is-compact .twe-premium-search-results-head {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto;
+          align-items: start;
+          gap: 14px;
+        }
+        .site-header-band[data-twe-premium-header].is-compact .twe-premium-search-results-head .twe-premium-mini-button,
+        .site-header-band[data-twe-premium-header].is-compact .twe-premium-drawer .twe-premium-mini-button {
+          min-width: 132px;
+          width: auto;
+          max-width: 240px;
+          white-space: normal;
+          line-height: 1.15;
+        }
+      }
+      .product-detail-followup-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(320px, .42fr);
+        gap: 22px;
+        align-items: start;
+      }
+      .product-detail-followup-main {
+        display: grid;
+        gap: 18px;
+        min-width: 0;
+      }
+      .product-detail-followup-main > .section { margin-top: 0; }
+      .product-detail-followup-aside {
+        display: grid;
+        gap: 14px;
+        position: sticky;
+        top: 150px;
+        min-width: 0;
+      }
+      @media (max-width: 980px) {
+        .product-detail-followup-grid { grid-template-columns: minmax(0, 1fr); }
+        .product-detail-followup-aside { position: static; }
+      }
       .twe-premium-panel p:first-child,
       .twe-premium-fresh .eyebrow,
       .twe-premium-quick .eyebrow { color: var(--twe-v11-coral); font-weight: 950; letter-spacing: .12em; text-transform: uppercase; }
@@ -5382,7 +5429,7 @@
     <div>
       <p class="eyebrow">Fast Amazon.ca routes</p>
       <h2 style="margin-bottom:6px;">Pick one of three purchase-intent jobs.</h2>
-      <p class="muted" style="margin-bottom:0;">The current sales goal is higher intent per click, not more generic browsing. Start with the buying job, compare local fit notes, then use Amazon.ca for live price, delivery, reviews, seller terms, and checkout.</p>
+      <p class="muted" style="margin-bottom:0;">Start with the buying job that fits your situation, compare local fit notes, then use Amazon.ca for live price, delivery, reviews, seller terms, and checkout.</p>
     </div>
     <div class="pill-row" style="margin:0; justify-content:flex-end;">
       <a class="pill is-accent" href="/amazon-store/?src=resources-amazon-sales-routes">Open full Amazon Store</a>
@@ -5614,7 +5661,7 @@
     <div>
       <p class="eyebrow">Browse all guides by category</p>
       <h2 style="margin-bottom:6px;">Open only the category you need.</h2>
-      <p class="muted" style="margin-bottom:0;">The full guide inventory stays available without turning this page into one long wall of cards.</p>
+      <p class="muted" style="margin-bottom:0;">The full guide inventory stays available inside focused category groups.</p>
     </div>
   </div>
   <div class="mini-stack" style="gap:12px;">
@@ -5985,7 +6032,7 @@
     <p class="eyebrow">Clear paths</p>
     <h2>Guides, Amazon.ca picks, and TWE digital kits stay separate.</h2>
     <div class="mini-stack" style="gap:12px; margin-top:12px;">
-      <article class="mini-card" style="padding:16px; border-radius:16px;"><h3>Focused main pages</h3><p class="muted">Store, Home, and Resources now point visitors to the right path instead of showing every affiliate card everywhere.</p></article>
+      <article class="mini-card" style="padding:16px; border-radius:16px;"><h3>Focused main pages</h3><p class="muted">Store, Home, and Resources each guide visitors toward the clearest next step without overwhelming the page.</p></article>
       <article class="mini-card" style="padding:16px; border-radius:16px;"><h3>Dedicated Amazon browsing</h3><p class="muted">The Amazon Store page carries the searchable local catalog and compliance disclosure in one place.</p></article>
       <article class="mini-card" style="padding:16px; border-radius:16px;"><h3>No unsupported claims</h3><p class="muted">No local Amazon prices, ratings, reviews, ranking labels, discount claims, or availability claims are shown unless official approved API access later supports them.</p></article>
     </div>

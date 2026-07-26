@@ -5021,6 +5021,53 @@
       .twe-premium-panel[hidden],
       .twe-premium-search-results[hidden],
       .twe-premium-drawer[hidden] { display: none !important; }
+
+      /* SOL full-site re-audit hardening: compact desktop drawers must stay readable panels. */
+      @media (min-width: 1181px) {
+        .site-header-band[data-twe-premium-header].is-compact .twe-premium-drawer {
+          min-width: min(720px, calc(100vw - 48px));
+          max-width: min(920px, calc(100vw - 48px));
+          width: max-content;
+          justify-self: end;
+        }
+        .site-header-band[data-twe-premium-header].is-compact .twe-premium-search-results-head {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto;
+          align-items: start;
+          gap: 14px;
+        }
+        .site-header-band[data-twe-premium-header].is-compact .twe-premium-search-results-head .twe-premium-mini-button,
+        .site-header-band[data-twe-premium-header].is-compact .twe-premium-drawer .twe-premium-mini-button {
+          min-width: 132px;
+          width: auto;
+          max-width: 240px;
+          white-space: normal;
+          line-height: 1.15;
+        }
+      }
+      .product-detail-followup-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(320px, .42fr);
+        gap: 22px;
+        align-items: start;
+      }
+      .product-detail-followup-main {
+        display: grid;
+        gap: 18px;
+        min-width: 0;
+      }
+      .product-detail-followup-main > .section { margin-top: 0; }
+      .product-detail-followup-aside {
+        display: grid;
+        gap: 14px;
+        position: sticky;
+        top: 150px;
+        min-width: 0;
+      }
+      @media (max-width: 980px) {
+        .product-detail-followup-grid { grid-template-columns: minmax(0, 1fr); }
+        .product-detail-followup-aside { position: static; }
+      }
       .twe-premium-panel p:first-child,
       .twe-premium-fresh .eyebrow,
       .twe-premium-quick .eyebrow { color: var(--twe-v11-coral); font-weight: 950; letter-spacing: .12em; text-transform: uppercase; }
@@ -5388,7 +5435,7 @@
     </div>
     <p class="muted product-checkout-boundary-note">Checkout opens on the current seller page; final access, terms, taxes, delivery, and payment details are confirmed there before purchase.</p>
     <div class="product-hero-fit-grid" aria-label="Quick fit facts for TWE AI Output QA Review Kit">
-      <article class="mini-card"><p class="eyebrow">Result</p><h3>Review AI output with a repeatable rubric before it embarrasses your brand or team.</h3></article>
+      <article class="mini-card"><p class="eyebrow">Result</p><h2>Review AI output with a repeatable rubric before it embarrasses your brand or team.</h2></article>
       <article class="mini-card"><p class="eyebrow">Fit</p><h3>Built for review-heavy workflows where better visibility, calmer scorecards, or clearer documentation improve decisions.</h3></article>
       <article class="mini-card"><p class="eyebrow">Checkout</p><h3>nanoojr.gumroad.com</h3></article>
     </div>
@@ -5397,7 +5444,7 @@
     <article class="mini-card product-hero-proof-card">
       <p class="eyebrow">Quick customer view</p>
       <h3>Review AI output with a repeatable rubric before it embarrasses your brand or team.</h3>
-      <p class="muted">Review the fit, what is included, and where checkout happens before you buy. The strongest product details now stay with the offer identity and preview above, while this column holds supporting proof.</p>
+      <p class="muted">Review the fit, what is included, and where checkout happens before you buy. The preview, fit notes, and checkout boundary are grouped so you can decide whether to continue before opening the seller page.</p>
     </article>
     <article class="mini-card">
       <p class="eyebrow">Family</p>
@@ -5444,6 +5491,8 @@
   </div>
 </section>
 
+<div class="product-detail-followup-grid">
+  <div class="product-detail-followup-main">
 
 <section class="section card checkout-handoff-card" id="checkout-handoff">
   <div class="checkout-handoff-grid">
@@ -5552,6 +5601,28 @@
     </article>
   </div>
 </section>
+  </div>
+  <aside class="product-detail-followup-aside" aria-label="Product page next steps">
+    <article class="mini-card">
+      <p class="eyebrow">Next best action</p>
+      <h2>Review the fit, then open checkout only when ready.</h2>
+      <p class="muted">This side panel keeps the purchase boundary, support path, and related resources visible without leaving the rest of the page in a narrow column.</p>
+      <div class="cta-row" style="margin-top:0;">
+        <a class="btn" href="https://nanoojr.gumroad.com/l/ehnwj" target="_blank" rel="noopener">Open secure checkout</a>
+        <a class="btn ghost" href="/support/">Support guidance</a>
+      </div>
+    </article>
+    <article class="mini-card">
+      <p class="eyebrow">Browse next</p>
+      <h3>Keep comparing if you are unsure.</h3>
+      <p class="muted">Use the Store, product family, or Resources page when you want more context before opening an external seller page.</p>
+      <div class="cta-row" style="margin-top:0;">
+        <a class="btn secondary" href="/store/">Store</a>
+        <a class="btn ghost" href="/resources/?src=product-followup-aside&amp;from=twe-ai-output-qa-review-kit">Resources</a>
+      </div>
+    </article>
+  </aside>
+</div>
 
 
 <section class="section card product-demo-video-section" id="product-demo-video">
