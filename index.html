@@ -5200,6 +5200,10 @@
       .site-header-band[data-twe-premium-header].is-compact .nav-search,
       .site-header-band[data-twe-premium-header].is-compact .nav-menu-panel,
       .site-header-band[data-twe-premium-header].is-compact .twe-premium-trust-line { display: none !important; }
+      .site-header-band[data-twe-premium-header].is-compact .nav-menu-panel:has(.twe-premium-drawer:not([hidden])),
+      .site-header-band[data-twe-premium-header].is-compact .nav-menu-panel:has(.twe-premium-search-results:not([hidden])) {
+        display: grid !important;
+      }
       .site-header-band[data-twe-premium-header].is-compact .twe-destination-card { min-height: 56px; padding: 10px 11px; align-content: center; }
       .site-header-band[data-twe-premium-header].is-compact .twe-destination-card small,
       .site-header-band[data-twe-premium-header].is-compact .twe-destination-card em { display: none; }

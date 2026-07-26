@@ -73,9 +73,12 @@
     }
   };
 
-  const setCompact = () => header.classList.toggle('is-compact', window.scrollY >= 150);
+  const compactQuery = window.matchMedia ? window.matchMedia('(min-width: 761px)') : {matches: true, addEventListener: null, addListener: null};
+  const setCompact = () => header.classList.toggle('is-compact', Boolean(compactQuery.matches) && window.scrollY >= 150);
   setCompact();
   window.addEventListener('scroll', setCompact, {passive: true});
+  if (compactQuery.addEventListener) compactQuery.addEventListener('change', setCompact);
+  else if (compactQuery.addListener) compactQuery.addListener(setCompact);
 
   const motion = header.querySelector('[data-twe-motion-toggle]');
   const applyMotion = () => {
@@ -155,9 +158,15 @@
 
   const drawer = header.querySelector('[data-twe-drawer]');
   const drawerToggle = header.querySelector('[data-twe-drawer-toggle]');
+  const navPanel = header.querySelector('[data-nav-menu-panel]');
+  const navToggle = header.querySelector('[data-nav-menu-toggle]');
   drawerToggle?.addEventListener('click', () => {
     const open = drawer?.hidden !== false;
     if (drawer) drawer.hidden = !open;
+    if (open && navPanel) {
+      navPanel.hidden = false;
+      navToggle?.setAttribute('aria-expanded', 'true');
+    }
     drawerToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     refreshMyTWE();
     if (open) drawer?.querySelector('a,button')?.focus();
