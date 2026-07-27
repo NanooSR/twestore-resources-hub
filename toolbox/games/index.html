@@ -5089,7 +5089,6 @@
       .twe-premium-panel-title { display:block; margin: 0 0 8px; color: var(--twe-v11-ink); font-size: clamp(1.35rem, 2vw, 2rem); font-weight: 950; line-height: 1.12; }
       .twe-premium-drawer-title { display:block; margin:0 0 8px; color: var(--twe-v11-ink); font-size: 1.05rem; font-weight: 950; }
       /* SOL 2026-07-26 MF-02: non-home routes need a compact route shell, not the full discovery module. */
-      .site-header-band[data-twe-premium-header].is-route-compact .twe-premium-destinations,
       .site-header-band[data-twe-premium-header].is-route-compact .twe-premium-daily,
       .site-header-band[data-twe-premium-header].is-route-compact .twe-premium-fresh,
       .site-header-band[data-twe-premium-header].is-route-compact .twe-premium-trust-line {
@@ -5419,6 +5418,8 @@
       }
 
     </style>
+    <link rel="stylesheet" href="/static/public_site/twe-v12-command-deck.css">
+    <link rel="stylesheet" href="/static/public_site/twe-v12-body-polish.css">
     <script>
       window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
       window.tweApiUrl = function (path) {
@@ -5581,6 +5582,12 @@
   <nav class="toolbox-breadcrumb" aria-label="Toolbox breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/toolbox/">Toolbox</a><span aria-hidden="true">/</span><span>Games</span></nav>
   <div class="toolbox-brand-actions"><a class="btn secondary" href="/toolbox/tools/">Tools</a><a class="btn secondary" href="/toolbox/games/">Games</a><a class="btn ghost" href="/support/">Support</a></div>
 </header>
+<nav class="twe-v12-toolbox-bridge" aria-label="Explore The Watchers Edge">
+  <a href="/toolbox/tools/" data-twe-v12-destination="tools"><span class="twe-v12-bridge-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M14 17.5h20a5 5 0 0 1 5 5v12.3A5.2 5.2 0 0 1 33.8 40H14.2A5.2 5.2 0 0 1 9 34.8V22.5a5 5 0 0 1 5-5Z"/><path d="M18 17.5v-3.2A4.3 4.3 0 0 1 22.3 10h3.4a4.3 4.3 0 0 1 4.3 4.3v3.2M9 27h30M20.5 24.8v4.4h7v-4.4"/></svg></span><span><small>Get something done</small><strong>Tools</strong></span><span class="twe-v12-bridge-arrow" aria-hidden="true">→</span></a>
+  <a href="/toolbox/games/" data-twe-v12-destination="games"><span class="twe-v12-bridge-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M15 18h18c5.7 0 9.3 14.7 5.5 18.2-2.1 2-5.2-.2-8.2-4.2H17.7c-3 4-6.1 6.2-8.2 4.2C5.7 32.7 9.3 18 15 18Z"/><path d="M17 23v8M13 27h8"/><circle cx="31.5" cy="25" r="1.7"/><circle cx="35" cy="29" r="1.7"/></svg></span><span><small>Take a good break</small><strong>Games</strong></span><span class="twe-v12-bridge-arrow" aria-hidden="true">→</span></a>
+  <a href="/resources/" data-twe-v12-destination="resources"><span class="twe-v12-bridge-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 12.5c6.1-2 11.4-1.1 16 2.6v25c-4.6-3.7-9.9-4.6-16-2.6v-25Z"/><path d="M40 12.5c-6.1-2-11.4-1.1-16 2.6v25c4.6-3.7 9.9-4.6 16-2.6v-25Z"/></svg></span><span><small>Find a clear answer</small><strong>Resources</strong></span><span class="twe-v12-bridge-arrow" aria-hidden="true">→</span></a>
+  <a href="/store/" data-twe-v12-destination="store"><span class="twe-v12-bridge-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M11 18h26l-2.2 21H13.2L11 18Z"/><path d="M18 19v-4a6 6 0 0 1 12 0v4"/></svg></span><span><small>Browse when you want</small><strong>TWE Store</strong></span><span class="twe-v12-bridge-arrow" aria-hidden="true">→</span></a>
+</nav>
 
 
 <section class="toolbox-hero-card">
@@ -5619,6 +5626,7 @@
     
     
     <script src="/static/public_site/twe-premium-header.js" defer></script>
+    <script src="/static/public_site/twe-v12-command-deck.js" defer></script>
 
     <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
       <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Expanded product image">

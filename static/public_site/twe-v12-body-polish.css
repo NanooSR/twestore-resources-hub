@@ -1,0 +1,546 @@
+/**
+ * Whole-site visual continuity for V12.
+ * Load after the existing public-site styles and after twe-v12-command-deck.css.
+ */
+
+html[data-twe-v12="ready"] body {
+  --twe-v12-route-accent: #087f91;
+  --twe-v12-route-accent-2: #bd6449;
+  --twe-v12-route-surface: #ecf8f5;
+  color: var(--twe-v12-ink);
+  background:
+    radial-gradient(
+      circle at 4% 1%,
+      color-mix(in srgb, var(--twe-v12-route-accent), transparent 90%),
+      transparent 31rem
+    ),
+    radial-gradient(
+      circle at 96% 16%,
+      color-mix(in srgb, var(--twe-v12-route-accent-2), transparent 91%),
+      transparent 28rem
+    ),
+    linear-gradient(180deg, #f6fbfa, #fbf6ee 48%, #f6faf8);
+}
+
+html[data-twe-v12="ready"] body.twe-v12-route-store {
+  --twe-v12-route-accent: #a75b3e;
+  --twe-v12-route-accent-2: #087b8c;
+  --twe-v12-route-surface: #fff4e6;
+}
+
+html[data-twe-v12="ready"] body.twe-v12-route-resources {
+  --twe-v12-route-accent: #687d3c;
+  --twe-v12-route-accent-2: #247f91;
+  --twe-v12-route-surface: #f4f6e7;
+}
+
+html[data-twe-v12="ready"] body.twe-v12-route-start {
+  --twe-v12-route-accent: #b76145;
+  --twe-v12-route-accent-2: #0d7a8c;
+  --twe-v12-route-surface: #fff2e7;
+}
+
+html[data-twe-v12="ready"] body.twe-v12-route-collections {
+  --twe-v12-route-accent: #765c8e;
+  --twe-v12-route-accent-2: #a66342;
+  --twe-v12-route-surface: #f7f1fa;
+}
+
+html[data-twe-v12="ready"] body.twe-v12-route-product {
+  --twe-v12-route-accent: #9f573d;
+  --twe-v12-route-accent-2: #315f91;
+  --twe-v12-route-surface: #fff4ea;
+}
+
+html[data-twe-v12="ready"] body.twe-v12-route-support {
+  --twe-v12-route-accent: #315f91;
+  --twe-v12-route-accent-2: #a85b43;
+  --twe-v12-route-surface: #eff5fb;
+}
+
+html[data-twe-v12="ready"] body.twe-v12-route-toolbox {
+  --twe-v12-route-accent: #087e8f;
+  --twe-v12-route-accent-2: #c39a2e;
+  --twe-v12-route-surface: #eaf9f6;
+}
+
+/* Strong, consistent focus without changing component geometry. */
+html[data-twe-v12="ready"]
+  :where(a, button, input, select, textarea, summary):focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--twe-v12-route-accent), white 12%) !important;
+  outline-offset: 3px !important;
+}
+
+/* Hero surfaces: rich enough to anchor a route, calm enough for trust. */
+html[data-twe-v12="ready"] main > .panel.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  background:
+    radial-gradient(
+      circle at 92% 12%,
+      color-mix(in srgb, var(--twe-v12-route-accent-2), transparent 82%),
+      transparent 25rem
+    ),
+    radial-gradient(
+      circle at 4% 98%,
+      color-mix(in srgb, var(--twe-v12-route-accent), transparent 88%),
+      transparent 24rem
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.9),
+      color-mix(in srgb, var(--twe-v12-route-surface), white 22%)
+    );
+  box-shadow:
+    0 25px 58px rgba(29, 67, 74, 0.15),
+    0 5px 0 rgba(39, 76, 76, 0.045),
+    inset 0 1px 0 #fff;
+}
+
+html[data-twe-v12="ready"] main > .panel.hero::after {
+  position: absolute;
+  z-index: -1;
+  width: 250px;
+  height: 250px;
+  top: -145px;
+  right: -88px;
+  content: "";
+  pointer-events: none;
+  border: 1px solid
+    color-mix(in srgb, var(--twe-v12-route-accent), transparent 76%);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 38px color-mix(in srgb, var(--twe-v12-route-accent), transparent 95%),
+    0 0 0 76px
+      color-mix(in srgb, var(--twe-v12-route-accent-2), transparent 97%);
+}
+
+html[data-twe-v12="ready"] main > .panel.hero h1 {
+  max-width: 17ch;
+  color: #0b3444;
+  letter-spacing: -0.045em;
+}
+
+/* Break up the repeated-white-card feeling while retaining the current IA. */
+html[data-twe-v12="ready"] main > .section.card,
+html[data-twe-v12="ready"] main > .section.split,
+html[data-twe-v12="ready"] .product-detail-followup-grid > *,
+html[data-twe-v12="ready"] .product-preview-section,
+html[data-twe-v12="ready"] .product-demo-video-section {
+  position: relative;
+  overflow: clip;
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  background: linear-gradient(
+    150deg,
+    rgba(255, 255, 255, 0.88),
+    rgba(250, 248, 241, 0.7)
+  );
+  box-shadow:
+    0 18px 42px rgba(27, 66, 74, 0.1),
+    0 3px 0 rgba(32, 71, 76, 0.035),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+}
+
+html[data-twe-v12="ready"] main > .section.card:nth-of-type(even),
+html[data-twe-v12="ready"] main > .section.split:nth-of-type(even) {
+  background:
+    radial-gradient(
+      circle at 100% 0,
+      color-mix(in srgb, var(--twe-v12-route-accent), transparent 93%),
+      transparent 18rem
+    ),
+    linear-gradient(
+      150deg,
+      rgba(255, 255, 255, 0.9),
+      color-mix(in srgb, var(--twe-v12-route-surface), white 52%)
+    );
+}
+
+html[data-twe-v12="ready"] main > .section.card::before,
+html[data-twe-v12="ready"] main > .section.split::before {
+  position: absolute;
+  height: 2px;
+  top: 0;
+  right: 22px;
+  left: 22px;
+  content: "";
+  opacity: 0.7;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--twe-v12-route-accent),
+    var(--twe-v12-route-accent-2),
+    transparent
+  );
+}
+
+html[data-twe-v12="ready"]
+  main
+  :where(.section.card, .section.split, .panel.hero)
+  .eyebrow {
+  color: var(--twe-v12-route-accent);
+}
+
+/* Buttons: clear edge, comfortable tap target, restrained movement. */
+html[data-twe-v12="ready"]
+  main
+  :where(.btn, .pill.is-accent, .tool-card-compact-cta),
+html[data-twe-v12="ready"] .email-capture-shell .btn {
+  min-height: 44px;
+  border-radius: 14px !important;
+  box-shadow:
+    0 10px 22px color-mix(in srgb, var(--twe-v12-route-accent), transparent 82%),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+html[data-twe-v12="ready"] main :where(a.btn, a.pill.is-accent):hover,
+html[data-twe-v12="ready"] main :where(a.btn, a.pill.is-accent):focus-visible {
+  transform: translateY(-2px);
+}
+
+/* Homepage world system */
+html[data-twe-v12="ready"] .twe-living-home {
+  --living-accent: var(--twe-v12-teal);
+}
+
+html[data-twe-v12="ready"] .living-hero,
+html[data-twe-v12="ready"] .living-section {
+  position: relative;
+  overflow: clip;
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  box-shadow:
+    0 21px 50px rgba(25, 66, 74, 0.11),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92);
+}
+
+html[data-twe-v12="ready"] .living-section.tools {
+  --living-accent: #087f91;
+  background:
+    radial-gradient(
+      circle at 92% 10%,
+      rgba(8, 127, 145, 0.13),
+      transparent 22rem
+    ),
+    linear-gradient(145deg, #f8ffff, #eaf8f4);
+}
+
+html[data-twe-v12="ready"] .living-section.games {
+  --living-accent: #315f91;
+  background:
+    radial-gradient(
+      circle at 90% 8%,
+      rgba(118, 92, 142, 0.15),
+      transparent 21rem
+    ),
+    linear-gradient(145deg, #f9fbff, #edf3fb);
+}
+
+html[data-twe-v12="ready"] .living-section.resources {
+  --living-accent: #687d3c;
+  background:
+    radial-gradient(
+      circle at 93% 7%,
+      rgba(104, 125, 60, 0.15),
+      transparent 21rem
+    ),
+    linear-gradient(145deg, #fffef9, #f2f6e8);
+}
+
+html[data-twe-v12="ready"] .living-section.community {
+  --living-accent: #765c8e;
+  background:
+    radial-gradient(
+      circle at 91% 9%,
+      rgba(118, 92, 142, 0.13),
+      transparent 20rem
+    ),
+    linear-gradient(145deg, #fffdfb, #f6f0f8);
+}
+
+html[data-twe-v12="ready"] .living-section.store {
+  --living-accent: #a75b3e;
+  background:
+    radial-gradient(
+      circle at 92% 7%,
+      rgba(225, 167, 83, 0.2),
+      transparent 21rem
+    ),
+    linear-gradient(145deg, #fffdf8, #fff1e5);
+}
+
+html[data-twe-v12="ready"] .living-section::before {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -88px;
+  right: -55px;
+  content: "";
+  opacity: 0.5;
+  border: 1px solid color-mix(in srgb, var(--living-accent), transparent 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 26px
+    color-mix(in srgb, var(--living-accent), transparent 94%);
+}
+
+html[data-twe-v12="ready"] .living-section .living-icon {
+  border: 1px solid color-mix(in srgb, var(--living-accent), transparent 68%);
+  background: color-mix(in srgb, var(--living-accent), transparent 89%);
+  box-shadow:
+    0 10px 23px color-mix(in srgb, var(--living-accent), transparent 86%),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+html[data-twe-v12="ready"] .living-section .living-card {
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.66);
+  box-shadow:
+    0 14px 30px rgba(24, 64, 71, 0.09),
+    inset 0 1px 0 #fff;
+}
+
+.twe-v12-path-label {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  min-height: 24px;
+  margin: 0 0 7px;
+  padding: 0 8px;
+  color: var(--living-accent, var(--twe-v12-route-accent));
+  border: 1px solid color-mix(in srgb, currentColor, transparent 76%);
+  border-radius: 8px;
+  background: color-mix(in srgb, currentColor, transparent 93%);
+  font-size: 0.63rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* Product media should read as a deliberate preview, never a cropped badge. */
+html[data-twe-v12="ready"] .product-preview-frame,
+html[data-twe-v12="ready"]
+  .product-detail-hero
+  :where(figure, .product-image-shell) {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  border-radius: 22px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.88),
+    color-mix(in srgb, var(--twe-v12-route-surface), white 28%)
+  );
+  box-shadow:
+    0 20px 45px rgba(32, 65, 72, 0.13),
+    inset 0 1px 0 #fff;
+}
+
+html[data-twe-v12="ready"] .product-preview-frame img,
+html[data-twe-v12="ready"]
+  .product-detail-hero
+  :where(figure, .product-image-shell)
+  img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Email/footer remain calm and clearly secondary. */
+html[data-twe-v12="ready"] .email-capture-shell {
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  background:
+    radial-gradient(
+      circle at 8% 15%,
+      rgba(8, 127, 145, 0.11),
+      transparent 22rem
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.86),
+      rgba(249, 244, 233, 0.76)
+    );
+  box-shadow:
+    0 18px 42px rgba(26, 64, 72, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.94);
+}
+
+html[data-twe-v12="ready"] .footer {
+  color: #48646c;
+}
+
+/* Toolbox continuity bridge */
+.twe-v12-toolbox-bridge {
+  --v12-bridge-accent: #087e8f;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 10px 0 18px;
+}
+
+.twe-v12-toolbox-bridge > a {
+  --v12-local: #087e8f;
+  min-width: 0;
+  min-height: 76px;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 22px;
+  align-items: center;
+  gap: 8px;
+  padding: 9px;
+  color: #153e4c;
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  border-radius: 17px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.88),
+    rgba(248, 246, 237, 0.72)
+  );
+  box-shadow:
+    0 11px 25px rgba(24, 66, 75, 0.1),
+    inset 0 1px 0 #fff;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.twe-v12-toolbox-bridge > a[data-twe-v12-destination="games"] {
+  --v12-local: #315f91;
+}
+
+.twe-v12-toolbox-bridge > a[data-twe-v12-destination="resources"] {
+  --v12-local: #687d3c;
+}
+
+.twe-v12-toolbox-bridge > a[data-twe-v12-destination="store"] {
+  --v12-local: #a75b3e;
+}
+
+.twe-v12-toolbox-bridge > a:hover,
+.twe-v12-toolbox-bridge > a:focus-visible,
+.twe-v12-toolbox-bridge > a.is-current,
+.twe-v12-toolbox-bridge > a[aria-current="page"] {
+  border-color: color-mix(in srgb, var(--v12-local), white 52%);
+  box-shadow:
+    0 16px 32px rgba(24, 66, 75, 0.14),
+    0 0 0 3px color-mix(in srgb, var(--v12-local), transparent 88%);
+  transform: translateY(-2px);
+}
+
+.twe-v12-bridge-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  color: var(--v12-local);
+  border: 1px solid color-mix(in srgb, var(--v12-local), transparent 70%);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--v12-local), transparent 90%);
+}
+
+.twe-v12-bridge-icon svg {
+  width: 31px;
+  height: 31px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.twe-v12-toolbox-bridge > a > span:nth-child(2) {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.twe-v12-toolbox-bridge small {
+  overflow: hidden;
+  color: var(--v12-local);
+  font-size: 0.54rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.twe-v12-toolbox-bridge strong {
+  margin-top: 2px;
+  overflow: hidden;
+  font-size: 0.94rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.twe-v12-bridge-arrow {
+  color: var(--v12-local);
+  font-weight: 900;
+}
+
+html[data-twe-v12="ready"] .toolbox-shell {
+  box-shadow:
+    0 26px 68px rgba(21, 67, 74, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.84);
+}
+
+html[data-twe-v12="ready"] .toolbox-choice-card,
+html[data-twe-v12="ready"] .tool-overview-card,
+html[data-twe-v12="ready"] .game-card {
+  border-radius: 20px !important;
+  box-shadow:
+    0 15px 34px rgba(23, 65, 72, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.94);
+}
+
+/* Inactive fullscreen controls must stay truly non-rendered. */
+html[data-twe-v12="ready"] button[data-twe-fullscreen-exit][hidden],
+html[data-twe-v12="ready"] .twe-fullscreen-exit-overlay[hidden] {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+
+@media (max-width: 760px) {
+  .twe-v12-toolbox-bridge {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  .twe-v12-toolbox-bridge > a {
+    min-height: 72px;
+    grid-template-columns: 38px minmax(0, 1fr);
+    border-radius: 15px;
+  }
+
+  .twe-v12-bridge-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .twe-v12-bridge-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .twe-v12-bridge-arrow {
+    display: none;
+  }
+
+  html[data-twe-v12="ready"] main > .panel.hero h1 {
+    max-width: none;
+  }
+}

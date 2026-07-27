@@ -5091,7 +5091,6 @@
       .twe-premium-panel-title { display:block; margin: 0 0 8px; color: var(--twe-v11-ink); font-size: clamp(1.35rem, 2vw, 2rem); font-weight: 950; line-height: 1.12; }
       .twe-premium-drawer-title { display:block; margin:0 0 8px; color: var(--twe-v11-ink); font-size: 1.05rem; font-weight: 950; }
       /* SOL 2026-07-26 MF-02: non-home routes need a compact route shell, not the full discovery module. */
-      .site-header-band[data-twe-premium-header].is-route-compact .twe-premium-destinations,
       .site-header-band[data-twe-premium-header].is-route-compact .twe-premium-daily,
       .site-header-band[data-twe-premium-header].is-route-compact .twe-premium-fresh,
       .site-header-band[data-twe-premium-header].is-route-compact .twe-premium-trust-line {
@@ -5421,6 +5420,8 @@
       }
 
     </style>
+    <link rel="stylesheet" href="/static/public_site/twe-v12-command-deck.css">
+    <link rel="stylesheet" href="/static/public_site/twe-v12-body-polish.css">
     <script>
       window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
       window.tweApiUrl = function (path) {
@@ -6227,6 +6228,7 @@
     
     
     <script src="/static/public_site/twe-premium-header.js" defer></script>
+    <script src="/static/public_site/twe-v12-command-deck.js" defer></script>
 
     <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
       <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Expanded product image">

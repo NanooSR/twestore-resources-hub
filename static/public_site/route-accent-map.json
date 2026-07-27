@@ -1,0 +1,42 @@
+{
+  "home": {
+    "accent": "#087f91",
+    "accent2": "#bd6449",
+    "surface": "#ecf8f5"
+  },
+  "store": {
+    "accent": "#a75b3e",
+    "accent2": "#0a7889",
+    "surface": "#fff4e6"
+  },
+  "resources": {
+    "accent": "#687d3c",
+    "accent2": "#247f91",
+    "surface": "#f4f6e7"
+  },
+  "start": {
+    "accent": "#b76145",
+    "accent2": "#0d7a8c",
+    "surface": "#fff2e7"
+  },
+  "collections": {
+    "accent": "#765c8e",
+    "accent2": "#a66342",
+    "surface": "#f7f1fa"
+  },
+  "product": {
+    "accent": "#9f573d",
+    "accent2": "#315f91",
+    "surface": "#fff4ea"
+  },
+  "support": {
+    "accent": "#315f91",
+    "accent2": "#a85b43",
+    "surface": "#eff5fb"
+  },
+  "toolbox": {
+    "accent": "#087e8f",
+    "accent2": "#c39a2e",
+    "surface": "#eaf9f6"
+  }
+}
