@@ -24,6 +24,7 @@ html[data-twe-v12="ready"] [data-twe-premium-header] {
   isolation: isolate;
   width: min(100% - 32px, 1400px);
   margin: 24px auto 18px;
+  padding: 4px !important;
   overflow: clip;
   border: 1px solid rgba(255, 255, 255, 0.84);
   border-radius: 34px;
@@ -93,10 +94,10 @@ html[data-twe-v12="ready"] [data-twe-premium-header] .nav {
   max-width: none;
   min-height: 0;
   margin: 0;
-  padding: 22px;
+  padding: 16px;
   display: grid !important;
   align-items: stretch;
-  gap: 13px 16px;
+  gap: 9px 13px;
   border: 0;
   border-radius: inherit;
   background: transparent;
@@ -104,7 +105,7 @@ html[data-twe-v12="ready"] [data-twe-premium-header] .nav {
 }
 
 html[data-twe-v12="ready"] [data-twe-v12-layout="home"] .nav {
-  grid-template-columns: minmax(330px, 0.82fr) minmax(520px, 1.48fr) minmax(
+  grid-template-columns: minmax(350px, 0.9fr) minmax(500px, 1.4fr) minmax(
       220px,
       0.58fr
     ) !important;
@@ -174,7 +175,7 @@ html[data-twe-v12="ready"] [data-twe-premium-header] .brand-kicker {
 html[data-twe-v12="ready"] [data-twe-premium-header] .brand-copy strong {
   overflow: hidden;
   color: #0a3a4b;
-  font-size: clamp(1.35rem, 2vw, 1.82rem) !important;
+  font-size: clamp(1.32rem, 1.88vw, 1.74rem) !important;
   font-weight: 850;
   line-height: 1.02;
   letter-spacing: -0.055em;
@@ -715,11 +716,11 @@ html[data-twe-v12="ready"] [data-twe-premium-header] .nav-menu-panel {
 
 html[data-twe-v12="ready"] [data-twe-v12-layout="home"] .nav-menu-panel {
   grid-template-columns: minmax(0, 1.45fr) minmax(225px, 0.62fr) !important;
-  grid-template-rows: auto auto minmax(0, 1fr) auto auto !important;
+  grid-template-rows: auto minmax(0, 1fr) auto auto auto !important;
   grid-template-areas:
-    "daily links"
-    "daily utility"
     "daily fresh"
+    "daily utility"
+    "links links"
     "results results"
     "drawer drawer" !important;
 }
@@ -779,7 +780,7 @@ html[data-twe-v12="ready"] [data-twe-premium-header] .nav-utility-link {
 html[data-twe-v12="ready"] [data-twe-premium-header] .twe-premium-daily {
   grid-area: daily !important;
   min-width: 0;
-  min-height: 300px;
+  min-height: 260px;
   display: grid !important;
   grid-template-columns: minmax(0, 1.42fr) minmax(210px, 0.58fr);
   grid-template-rows: auto minmax(0, 1fr);
@@ -842,7 +843,7 @@ html[data-twe-v12="ready"]
 }
 
 html[data-twe-v12="ready"] [data-twe-premium-header] .twe-premium-panel {
-  min-height: 224px;
+  min-height: 190px;
   height: 100%;
   padding: 24px;
   display: flex !important;
@@ -1005,9 +1006,9 @@ html[data-twe-v12="ready"] [data-twe-premium-header] .twe-premium-drawer {
 /* Wide-desktop scrolled mode: logo + four worlds + repeat controls. */
 @media (min-width: 1181px) {
   html[data-twe-v12="ready"] [data-twe-premium-header].is-compact {
-    position: sticky;
-    top: 12px;
-    z-index: 50;
+    position: sticky !important;
+    top: 12px !important;
+    z-index: 999 !important;
     border-radius: 25px;
   }
 

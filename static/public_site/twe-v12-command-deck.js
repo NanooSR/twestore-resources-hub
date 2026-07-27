@@ -47,6 +47,20 @@
   ];
 
   const PATH = window.location.pathname.replace(/\/+$/, "") || "/";
+  const GAME_PATHS = new Set([
+    "/toolbox/games",
+    "/toolbox/memory-match",
+    "/toolbox/minesweeper",
+    "/toolbox/mini-game",
+    "/toolbox/sliding-puzzle",
+    "/toolbox/snake",
+    "/toolbox/sudoku-mini",
+    "/toolbox/trivia-quickfire",
+    "/toolbox/twenty-forty-eight",
+    "/toolbox/typing-sprint",
+    "/toolbox/unscrambler",
+    "/toolbox/word-ladder",
+  ]);
 
   function routeKind(path) {
     if (path === "/") return "home";
@@ -74,7 +88,7 @@
   }
 
   function activeDestination(path) {
-    if (path.startsWith("/toolbox/games")) return "games";
+    if (GAME_PATHS.has(path)) return "games";
     if (path.startsWith("/toolbox")) return "tools";
     if (path.startsWith("/resources") || path.startsWith("/church"))
       return "resources";
@@ -186,16 +200,30 @@
       </a>`;
   }
 
+  function enhanceToolboxBridge(bridge) {
+    [...bridge.querySelectorAll("a[data-twe-v12-destination]")].forEach((link) => {
+      const isCurrent = link.dataset.tweV12Destination === active;
+      link.classList.toggle("is-current", isCurrent);
+      if (isCurrent) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
+    });
+  }
+
   function addToolboxBridge() {
     const shell = document.querySelector(".toolbox-shell");
     const brandStrip = shell?.querySelector(".toolbox-brand-strip");
-    if (!shell || !brandStrip || shell.querySelector(".twe-v12-toolbox-bridge"))
+    if (!shell || !brandStrip) return;
+    const existing = shell.querySelector(".twe-v12-toolbox-bridge");
+    if (existing) {
+      enhanceToolboxBridge(existing);
       return;
+    }
 
     const bridge = document.createElement("nav");
     bridge.className = "twe-v12-toolbox-bridge";
     bridge.setAttribute("aria-label", "Explore The Watchers Edge");
     bridge.innerHTML = DESTINATIONS.map(destinationMarkup).join("");
+    enhanceToolboxBridge(bridge);
     brandStrip.insertAdjacentElement("afterend", bridge);
   }
 
@@ -204,17 +232,16 @@
     if (!home) return;
 
     const directMap = [
-      { match: "/toolbox", label: "Tools" },
-      { match: "/toolbox/games", label: "Games" },
-      { match: "/resources", label: "Resources" },
-      { match: "/store", label: "TWE Store" },
+      { test: (path) => GAME_PATHS.has(path), label: "Games" },
+      { test: (path) => path.startsWith("/toolbox"), label: "Tools" },
+      { test: (path) => path.startsWith("/resources"), label: "Resources" },
+      { test: (path) => path.startsWith("/store"), label: "TWE Store" },
     ];
 
     [...home.querySelectorAll("a")].forEach((link) => {
       const href = link.getAttribute("href") || "";
-      const item = directMap.find((candidate) =>
-        href.startsWith(candidate.match),
-      );
+      const path = new URL(href, window.location.origin).pathname.replace(/\/+$/, "") || "/";
+      const item = directMap.find((candidate) => candidate.test(path));
       if (!item || link.querySelector(".twe-v12-path-label")) return;
       const label = document.createElement("span");
       label.className = "twe-v12-path-label";
@@ -230,6 +257,13 @@
       button.getAttribute("aria-pressed") === "true" ? "paused" : "running";
   }
 
+  function syncCompactHeader() {
+    const wide = window.matchMedia("(min-width: 1181px)").matches;
+    document.querySelectorAll("[data-twe-premium-header]").forEach((header) => {
+      header.classList.toggle("is-compact", wide && window.scrollY > 180);
+    });
+  }
+
   function init() {
     document.documentElement.dataset.tweV12 = "ready";
     document.body.classList.add(`twe-v12-route-${kind}`);
@@ -240,11 +274,14 @@
     addToolboxBridge();
     labelLivingPaths();
     setMotionState();
+    syncCompactHeader();
 
     const motionButton = document.querySelector("[data-twe-motion-toggle]");
     motionButton?.addEventListener("click", () =>
       window.requestAnimationFrame(setMotionState),
     );
+    window.addEventListener("scroll", () => window.requestAnimationFrame(syncCompactHeader), { passive: true });
+    window.addEventListener("resize", () => window.requestAnimationFrame(syncCompactHeader));
   }
 
   if (document.readyState === "loading") {
