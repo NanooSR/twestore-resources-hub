@@ -5404,6 +5404,12 @@
         height: auto !important;
         object-fit: contain !important;
       }
+      :is(.stat-card strong,.mini-card h2,.mini-card h3,.product-offer-meta,.product-checkout-boundary-note,.checkout-handoff-card strong) {
+        max-width: 100% !important;
+        overflow-wrap: anywhere !important;
+        word-break: break-word !important;
+      }
+
       @media (max-width: 720px) {
         :is(.btn,.button,button,input[type="submit"],input[type="button"],[role="button"],.tool-card-compact-cta,.card-link,a.pill):not(.bare-link):not(.title-link) {
           width: auto;
