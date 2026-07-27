@@ -5366,6 +5366,54 @@
           white-space: normal !important;
         }
       }
+      /* HERMES_SITEWIDE_POLISH_20260727: final customer-facing CTA/image hardening.
+         Keep all button words visually enclosed with real padding/borders across old and new templates. */
+      :is(.btn,.button,button,input[type="submit"],input[type="button"],[role="button"],.tool-card-compact-cta,.card-link,a.pill,.resource-chip,.active-tool-proof):not(.bare-link):not(.title-link) {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: .45rem !important;
+        min-height: 44px !important;
+        min-width: 44px !important;
+        padding-block: max(.62rem, 9px) !important;
+        padding-inline: max(1rem, 16px) !important;
+        line-height: 1.18 !important;
+        white-space: normal !important;
+        text-align: center !important;
+        border-radius: 999px !important;
+        border: 1px solid rgba(10, 77, 104, .26) !important;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+      }
+      :is(.text-link,a[href^="mailto:"],.detail-list a,.footer-links a):not(.btn):not(.button):not(.pill):not(.bare-link):not(.title-link) {
+        border-radius: 12px !important;
+        padding: .08rem .22rem !important;
+        text-underline-offset: .18em !important;
+        text-decoration-thickness: .09em !important;
+        overflow-wrap: anywhere !important;
+      }
+      :is(.resource-picture,.product-card picture,.product-card-media,.preview-frame,.media-card,.image-frame) {
+        overflow: hidden !important;
+        border-radius: 20px !important;
+        border: 1px solid rgba(10,77,104,.16) !important;
+        background: linear-gradient(135deg, rgba(255,255,255,.96), rgba(228,244,242,.82)) !important;
+      }
+      :is(.resource-picture img,.product-card img,.product-card-media img,.preview-frame img,.media-card img,.image-frame img) {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+      }
+      @media (max-width: 720px) {
+        :is(.btn,.button,button,input[type="submit"],input[type="button"],[role="button"],.tool-card-compact-cta,.card-link,a.pill):not(.bare-link):not(.title-link) {
+          width: auto;
+          max-width: 100%;
+          padding-inline: 14px !important;
+        }
+        .cta-row { align-items: stretch; }
+        .cta-row :is(.btn,.button,button,input[type="submit"],input[type="button"]) { width: 100%; }
+      }
+
     </style>
     <script>
       window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
@@ -5540,11 +5588,11 @@
       <h3>3 ways to open this offer</h3>
       <div class="pill-row">
         
-        <a class="pill" href="https://www.etsy.com/listing/4522004085/resume-tailoring-job-tracker-notion">Etsy</a>
+        <a class="pill" href="https://www.etsy.com/listing/4522004085/resume-tailoring-job-tracker-notion" target="_blank" rel="noopener">Etsy</a>
         
-        <a class="pill" href="https://ca.pinterest.com/pin/1111544751858155035/">Pinterest</a>
+        <a class="pill" href="https://ca.pinterest.com/pin/1111544751858155035/" target="_blank" rel="noopener">Pinterest</a>
         
-        <a class="pill" href="https://nanoojr.gumroad.com/l/nfuhde">Gumroad</a>
+        <a class="pill" href="https://nanoojr.gumroad.com/l/nfuhde" target="_blank" rel="noopener">Gumroad</a>
         
       </div>
     </article>
