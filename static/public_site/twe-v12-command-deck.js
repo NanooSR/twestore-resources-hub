@@ -58,7 +58,6 @@
     "/toolbox/trivia-quickfire",
     "/toolbox/twenty-forty-eight",
     "/toolbox/typing-sprint",
-    "/toolbox/unscrambler",
     "/toolbox/word-ladder",
   ]);
 
