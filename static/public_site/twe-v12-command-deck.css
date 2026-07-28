@@ -48,8 +48,12 @@ html[data-twe-v12="ready"] [data-twe-header-slot] {
   position: relative;
   z-index: 60;
   width: min(100% - 32px, 1400px);
-  min-height: var(--twe-header-slot-height, auto);
+  min-height: var(--twe-header-slot-height, 860px);
   margin: 24px auto 18px;
+}
+
+html[data-twe-v12="ready"] [data-twe-header-slot]:has(.site-header-band.is-route-compact) {
+  min-height: var(--twe-header-slot-height, 448px);
 }
 
 html[data-twe-v12="ready"] [data-twe-header-slot] > [data-twe-premium-header] {

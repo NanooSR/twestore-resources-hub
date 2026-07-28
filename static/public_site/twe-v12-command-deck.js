@@ -175,7 +175,7 @@
     deck.setAttribute("role", "navigation");
     deck.setAttribute("aria-label", "Explore The Watchers Edge");
 
-    addBrandStory(nav);
+    if (kind === "home") addBrandStory(nav);
 
     const cards = [...deck.querySelectorAll(".twe-destination-card")];
     DESTINATIONS.forEach((destination, index) => {
