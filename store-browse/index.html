@@ -5418,7 +5418,7 @@
       }
 
     </style>
-    <link rel="stylesheet" href="/static/public_site/twe-v12-command-deck.css?v=20260728a">
+    <link rel="stylesheet" href="/static/public_site/twe-v12-command-deck.css?v=20260728b">
     <link rel="stylesheet" href="/static/public_site/twe-v12-body-polish.css?v=20260728a">
     <script>
       window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
@@ -8140,46 +8140,49 @@
   if (currentViewCount && filterActive) currentViewCount.textContent = String(visible);
   const ran = document.getElementById('store-search-ran');
   const activePills = document.getElementById('store-active-filter-pills');
-  if (ran && filterActive) {
-    ran.style.display = '';
-    const title = ran.querySelector('h3');
-    const copy = ran.querySelector('.muted');
-    const activeLabels = [];
-    for (const [label, name, value] of [['Family', 'family', selectedFamily], ['Platform', 'platform', selectedPlatform], ['Outcome', 'outcome', selectedOutcome], ['Amazon category', 'resource_category', selectedResourceCategory]]) {
-      if (!value) continue;
-      const selected = document.querySelector(`select[name="${name}"] option[value="${value}"]`);
-      activeLabels.push(`${label}: ${selected ? selected.textContent : value}`);
+  const labelFallbacks = {
+    family: {
+      'client-delivery-and-admin-systems': 'Client delivery and admin systems',
+      'ai-workflows-and-review-systems': 'AI workflows and review systems',
+      'business-systems-and-template-kits': 'Business systems and template kits',
+      'church-and-ministry-operations': 'Church and ministry operations'
+    },
+    platform: {
+      gumroad: 'Gumroad',
+      etsy: 'Etsy',
+      amazon: 'Amazon.ca',
+      vercel: 'Vercel'
+    },
+    outcome: {},
+    resource_category: {
+      'church-ministry': 'Church & ministry',
+      'pet-home': 'Pet home & routines',
+      workspace: 'Workspace',
+      'admin-paperwork': 'Admin & paperwork',
+      'creator-calls': 'Creator & calls',
+      'research-reading': 'Research & reading',
+      'practical-picks': 'More practical picks'
     }
-    if (query) activeLabels.push(`Search: ${query}`);
-    const totalVisible = visible + visibleResources + visibleGuides;
-    const combinedCount = document.getElementById('store-combined-result-count');
-    const productResultCount = document.getElementById('store-product-result-count');
-    const resourceResultCount = document.getElementById('store-resource-result-count');
-    const guideResultCount = document.getElementById('store-guide-result-count');
-    if (combinedCount) combinedCount.textContent = String(totalVisible);
-    if (productResultCount) productResultCount.textContent = String(visible);
-    if (resourceResultCount) resourceResultCount.textContent = String(visibleResources);
-    if (guideResultCount) guideResultCount.textContent = String(visibleGuides);
-    const summaryTitle = document.getElementById('store-filter-summary-title');
-    const summaryCopy = document.getElementById('store-filter-summary-copy');
-    const setMetaContent = (selector, value) => {
-      const element = document.querySelector(selector);
-      if (element) element.setAttribute('content', value);
-    };
-    if (activePills) {
-      activePills.innerHTML = '<span class="pill">Current search scope</span>' + activeLabels.map(label => `<span class="pill">${escapeHtml(label)}</span>`).join('') + `<span class="pill">${totalVisible} matching result${totalVisible === 1 ? '' : 's'}</span><a class="pill is-accent" href="/store/">Clear all filters</a>`;
-    }
-    const summaryLabel = activeLabels.length ? activeLabels.join(' · ') : 'Filtered results';
-    if (summaryTitle) summaryTitle.textContent = activeLabels.length ? `Filtered view: ${summaryLabel}` : 'Filtered results are ready';
-    if (summaryCopy) {
-      summaryCopy.textContent = totalVisible
-        ? `Showing ${totalVisible} matching result${totalVisible === 1 ? '' : 's'} across ${visible} product offer${visible === 1 ? '' : 's'}, ${visibleResources} Amazon pick${visibleResources === 1 ? '' : 's'}, and ${visibleGuides} guide page${visibleGuides === 1 ? '' : 's'}. Use the count cards to jump to the best section for this search.`
-        : 'Nothing matched those filters yet. Clear the filters or try a broader word like Amazon, desk, scanner, church, or bot.';
-    }
-    if (title) title.textContent = activeLabels.length ? `Filtered results: ${summaryLabel}` : 'Filtered results';
-    if (copy) {
-      copy.textContent = `Showing ${totalVisible} matching result${totalVisible === 1 ? '' : 's'}: ${visible} product offer${visible === 1 ? '' : 's'}, ${visibleResources} Amazon/resource result${visibleResources === 1 ? '' : 's'}, and ${visibleGuides} guide page${visibleGuides === 1 ? '' : 's'}. Use the summary above to jump to the section you want, or clear filters for a wider browse path.`;
-    }
+  };
+  const readableFilterValue = (name, value) => {
+    const selected = document.querySelector(`select[name="${name}"] option[value="${value}"]`);
+    if (selected?.textContent?.trim()) return selected.textContent.trim();
+    if (labelFallbacks[name]?.[value]) return labelFallbacks[name][value];
+    return (value || '').replace(/[-_]+/g, ' ').replace(/\b\w/g, letter => letter.toUpperCase());
+  };
+  const activeLabels = [];
+  for (const [label, name, value] of [['Family', 'family', selectedFamily], ['Platform', 'platform', selectedPlatform], ['Outcome', 'outcome', selectedOutcome], ['Amazon category', 'resource_category', selectedResourceCategory]]) {
+    if (!value) continue;
+    activeLabels.push(`${label}: ${readableFilterValue(name, value)}`);
+  }
+  if (query) activeLabels.push(`Search: ${query}`);
+  const totalVisible = visible + visibleResources + visibleGuides;
+  const summaryLabel = activeLabels.length ? activeLabels.join(' · ') : 'Filtered results';
+  const setMetaContent = (selector, value) => {
+    const element = document.querySelector(selector);
+    if (element) element.setAttribute('content', value);
+  };
+  if (filterActive) {
     const siteDomain = "TheWatchersEdge.ca";
     const metaTitle = `${siteDomain} | Store results — ${summaryLabel}`;
     const metaDescription = totalVisible
@@ -8191,6 +8194,34 @@
     setMetaContent('meta[property="og:description"]', metaDescription);
     setMetaContent('meta[name="twitter:title"]', metaTitle);
     setMetaContent('meta[name="twitter:description"]', metaDescription);
+  }
+  if (ran && filterActive) {
+    ran.style.display = '';
+    const title = ran.querySelector('h3');
+    const copy = ran.querySelector('.muted');
+    const combinedCount = document.getElementById('store-combined-result-count');
+    const productResultCount = document.getElementById('store-product-result-count');
+    const resourceResultCount = document.getElementById('store-resource-result-count');
+    const guideResultCount = document.getElementById('store-guide-result-count');
+    if (combinedCount) combinedCount.textContent = String(totalVisible);
+    if (productResultCount) productResultCount.textContent = String(visible);
+    if (resourceResultCount) resourceResultCount.textContent = String(visibleResources);
+    if (guideResultCount) guideResultCount.textContent = String(visibleGuides);
+    const summaryTitle = document.getElementById('store-filter-summary-title');
+    const summaryCopy = document.getElementById('store-filter-summary-copy');
+    if (activePills) {
+      activePills.innerHTML = '<span class="pill">Current search scope</span>' + activeLabels.map(label => `<span class="pill">${escapeHtml(label)}</span>`).join('') + `<span class="pill">${totalVisible} matching result${totalVisible === 1 ? '' : 's'}</span><a class="pill is-accent" href="/store/">Clear all filters</a>`;
+    }
+    if (summaryTitle) summaryTitle.textContent = activeLabels.length ? `Filtered view: ${summaryLabel}` : 'Filtered results are ready';
+    if (summaryCopy) {
+      summaryCopy.textContent = totalVisible
+        ? `Showing ${totalVisible} matching result${totalVisible === 1 ? '' : 's'} across ${visible} product offer${visible === 1 ? '' : 's'}, ${visibleResources} Amazon pick${visibleResources === 1 ? '' : 's'}, and ${visibleGuides} guide page${visibleGuides === 1 ? '' : 's'}. Use the count cards to jump to the best section for this search.`
+        : 'Nothing matched those filters yet. Clear the filters or try a broader word like Amazon, desk, scanner, church, or bot.';
+    }
+    if (title) title.textContent = activeLabels.length ? `Filtered results: ${summaryLabel}` : 'Filtered results';
+    if (copy) {
+      copy.textContent = `Showing ${totalVisible} matching result${totalVisible === 1 ? '' : 's'}: ${visible} product offer${visible === 1 ? '' : 's'}, ${visibleResources} Amazon/resource result${visibleResources === 1 ? '' : 's'}, and ${visibleGuides} guide page${visibleGuides === 1 ? '' : 's'}. Use the summary above to jump to the section you want, or clear filters for a wider browse path.`;
+    }
   }
   const noResults = document.getElementById('client-no-results');
   if (noResults && filterActive) noResults.style.display = (visible || visibleResources || visibleGuides || serverResourceResultCount) ? 'none' : '';
@@ -8355,8 +8386,8 @@
     </div>
     
     
-    <script src="/static/public_site/twe-premium-header.js?v=20260728a" defer></script>
-    <script src="/static/public_site/twe-v12-command-deck.js?v=20260728a" defer></script>
+    <script src="/static/public_site/twe-premium-header.js?v=20260728b" defer></script>
+    <script src="/static/public_site/twe-v12-command-deck.js?v=20260728b" defer></script>
 
     <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
       <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Expanded product image">

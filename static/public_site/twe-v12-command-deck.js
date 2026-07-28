@@ -256,42 +256,17 @@
       button.getAttribute("aria-pressed") === "true" ? "paused" : "running";
   }
 
-  const COMPACT_ENTER_Y = 220;
-  const COMPACT_EXIT_Y = 140;
-
-  function lockHeaderSlotHeight(header) {
-    const slot = header.closest("[data-twe-header-slot]");
-    if (!slot) return;
-    const wasCompact = header.classList.contains("is-compact");
-    if (wasCompact) header.classList.remove("is-compact");
-    const height = Math.ceil(header.getBoundingClientRect().height);
-    if (wasCompact) header.classList.add("is-compact");
-    if (height > 0) {
-      slot.style.setProperty("--twe-header-slot-height", `${height}px`);
-      slot.classList.add("is-header-slot-ready");
-    }
-  }
-
   function syncCompactHeader() {
-    const wide = window.matchMedia("(min-width: 1181px)").matches;
+    // Google ecosystem SOL evidence repair 2026-07-28:
+    // Do not mutate the premium header into/out of is-compact at load or scroll time.
+    // Lighthouse attributed large CLS to the header band after this V12 enhancer ran.
+    // Route compactness is rendered statically via is-route-compact; runtime scroll
+    // compacting is intentionally disabled to preserve layout stability.
     document.querySelectorAll("[data-twe-premium-header]").forEach((header) => {
+      header.classList.remove("is-compact");
       const slot = header.closest("[data-twe-header-slot]");
-      if (!wide) {
-        header.classList.remove("is-compact");
-        slot?.classList.remove("is-header-slot-ready");
-        slot?.style.removeProperty("--twe-header-slot-height");
-        return;
-      }
-
-      if (!slot?.classList.contains("is-header-slot-ready")) {
-        lockHeaderSlotHeight(header);
-      }
-
-      const compact = header.classList.contains("is-compact");
-      const shouldCompact = compact
-        ? window.scrollY > COMPACT_EXIT_Y
-        : window.scrollY >= COMPACT_ENTER_Y;
-      header.classList.toggle("is-compact", shouldCompact);
+      slot?.classList.remove("is-header-slot-ready");
+      slot?.style.removeProperty("--twe-header-slot-height");
     });
   }
 
