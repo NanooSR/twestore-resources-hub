@@ -155,6 +155,8 @@
       const trigger = header.querySelector('[data-twe-drawer-toggle]');
       if (drawer && !drawer.hidden) {
         drawer.hidden = true;
+        header.classList.remove('is-drawer-open');
+        header.querySelector('[data-nav-menu-panel]')?.classList.remove('is-drawer-open');
         trigger?.setAttribute('aria-expanded', 'false');
         trigger?.focus();
         say('My TWE closed.');
@@ -166,9 +168,14 @@
   const drawerToggle = header.querySelector('[data-twe-drawer-toggle]');
   const navPanel = header.querySelector('[data-nav-menu-panel]');
   const navToggle = header.querySelector('[data-nav-menu-toggle]');
+  const setDrawerOpenState = (open) => {
+    header.classList.toggle('is-drawer-open', Boolean(open));
+    if (navPanel) navPanel.classList.toggle('is-drawer-open', Boolean(open));
+  };
   drawerToggle?.addEventListener('click', () => {
     const open = drawer?.hidden !== false;
     if (drawer) drawer.hidden = !open;
+    setDrawerOpenState(open);
     if (open) closeSearchResults('Search cleared before opening My TWE.');
     if (open && navPanel) {
       navPanel.hidden = false;
