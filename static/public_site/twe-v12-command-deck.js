@@ -256,10 +256,42 @@
       button.getAttribute("aria-pressed") === "true" ? "paused" : "running";
   }
 
+  const COMPACT_ENTER_Y = 220;
+  const COMPACT_EXIT_Y = 140;
+
+  function lockHeaderSlotHeight(header) {
+    const slot = header.closest("[data-twe-header-slot]");
+    if (!slot) return;
+    const wasCompact = header.classList.contains("is-compact");
+    if (wasCompact) header.classList.remove("is-compact");
+    const height = Math.ceil(header.getBoundingClientRect().height);
+    if (wasCompact) header.classList.add("is-compact");
+    if (height > 0) {
+      slot.style.setProperty("--twe-header-slot-height", `${height}px`);
+      slot.classList.add("is-header-slot-ready");
+    }
+  }
+
   function syncCompactHeader() {
     const wide = window.matchMedia("(min-width: 1181px)").matches;
     document.querySelectorAll("[data-twe-premium-header]").forEach((header) => {
-      header.classList.toggle("is-compact", wide && window.scrollY > 180);
+      const slot = header.closest("[data-twe-header-slot]");
+      if (!wide) {
+        header.classList.remove("is-compact");
+        slot?.classList.remove("is-header-slot-ready");
+        slot?.style.removeProperty("--twe-header-slot-height");
+        return;
+      }
+
+      if (!slot?.classList.contains("is-header-slot-ready")) {
+        lockHeaderSlotHeight(header);
+      }
+
+      const compact = header.classList.contains("is-compact");
+      const shouldCompact = compact
+        ? window.scrollY > COMPACT_EXIT_Y
+        : window.scrollY >= COMPACT_ENTER_Y;
+      header.classList.toggle("is-compact", shouldCompact);
     });
   }
 
@@ -280,7 +312,13 @@
       window.requestAnimationFrame(setMotionState),
     );
     window.addEventListener("scroll", () => window.requestAnimationFrame(syncCompactHeader), { passive: true });
-    window.addEventListener("resize", () => window.requestAnimationFrame(syncCompactHeader));
+    window.addEventListener("resize", () => window.requestAnimationFrame(() => {
+      document.querySelectorAll("[data-twe-header-slot]").forEach((slot) => {
+        slot.classList.remove("is-header-slot-ready");
+        slot.style.removeProperty("--twe-header-slot-height");
+      });
+      syncCompactHeader();
+    }));
   }
 
   if (document.readyState === "loading") {
