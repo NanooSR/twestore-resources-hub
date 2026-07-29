@@ -2,5 +2,7 @@
 # Canonical sitemap uses the apex host.
 User-agent: *
 Allow: /
+Disallow: /amazon-sales-sprint
+Disallow: /amazon-share-kit
 
 Sitemap: https://thewatchersedge.ca/sitemap.xml

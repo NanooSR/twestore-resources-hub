@@ -141,8 +141,6 @@
     "/store",
     "/store-browse",
     "/amazon-store",
-    "/amazon-sales-sprint",
-    "/amazon-share-kit",
     "/startnow20",
     "/privacy",
     "/terms",
@@ -259,6 +257,10 @@
     "/home-office-deals-for-freelancers.html",
     "/how-we-choose.html",
     "/productivity-books-and-kindle-deals.html"
+  ],
+  "noindex_routes": [
+    "/amazon-sales-sprint",
+    "/amazon-share-kit"
   ],
   "affiliate_guide_route_count": 54,
   "product_count": 47,
