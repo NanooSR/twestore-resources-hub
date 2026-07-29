@@ -22,6 +22,8 @@
     "/updates/resources-startnow20-launch",
     "/updates/retainer-guide-and-toolbox",
     "/updates/admin-reset-amazon-shortlist",
+    "/updates/calls-content-amazon-shortlist",
+    "/updates/church-event-amazon-shortlist",
     "/command-center",
     "/toolbox/tools/",
     "/toolbox/games/",
@@ -151,6 +153,8 @@
     "/updates/resources-startnow20-launch",
     "/updates/retainer-guide-and-toolbox",
     "/updates/admin-reset-amazon-shortlist",
+    "/updates/calls-content-amazon-shortlist",
+    "/updates/church-event-amazon-shortlist",
     "/command-center",
     "/toolbox/tools/",
     "/toolbox/games/",
@@ -346,5 +350,5 @@
       "location": "/"
     }
   ],
-  "exported_count": 73
+  "exported_count": 75
 }
