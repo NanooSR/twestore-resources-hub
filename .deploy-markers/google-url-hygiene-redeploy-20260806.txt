@@ -1,0 +1,3 @@
+Force GitHub Pages redeploy after deploy timeout for Google URL hygiene fix.
+UTC: 2026-08-06T14:24:04+00:00
+Previous fix commit: 4415315fb95bfb02f1c849b46df1acc9088c1055
