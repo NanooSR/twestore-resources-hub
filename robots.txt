@@ -1,8 +1,7 @@
 # Public crawler access for both apex and www entry points.
 # Canonical sitemap uses the apex host.
+# Amazon helper pages are noindex pages, but robots must allow crawling so Google can read that directive.
 User-agent: *
 Allow: /
-Disallow: /amazon-sales-sprint
-Disallow: /amazon-share-kit
 
 Sitemap: https://thewatchersedge.ca/sitemap.xml

@@ -5625,7 +5625,7 @@
   </div>
   <span hidden>"@type": "FAQPage" "@type": "Question" "name": "Do I need to sign in?" "acceptedAnswer": "No. Finished TWE Toolbox pages open without an account." "@type": "Question" "name": "Can I bookmark one tool directly?"</span>
 </section>
-<section class="tool-ad-card"><p class="eyebrow">After a quick tool break</p><h2>Use the free helpers, then keep shopping simple.</h2><p class="muted">When a tool solves the quick task, the main site gives you three clear next paths: buying guides, Amazon.ca picks, or practical digital kits.</p><div class="cta-row"><a class="btn" href="/resources/?src=toolbox-next-step">Browse buying guides</a><a class="btn secondary" href="/amazon-store/?src=toolbox-next-step">Search Amazon.ca picks</a><a class="btn ghost" href="/store/?src=toolbox-next-step">See digital kits</a></div></section>
+<section class="tool-ad-card"><p class="eyebrow">After a quick tool break</p><h2>Use the free helpers, then keep shopping simple.</h2><p class="muted">When a tool solves the quick task, the main site gives you three clear next paths: buying guides, Amazon.ca picks, or practical digital kits.</p><div class="cta-row"><a class="btn" href="/resources/">Browse buying guides</a><a class="btn secondary" href="/amazon-store/">Search Amazon.ca picks</a><a class="btn ghost" href="/store/">See digital kits</a></div></section>
 <section class="toolbox-rail-grid"><article class="tool-rail-card"><h2>Why the split?</h2><p class="muted">Tools and games have separate paths so quick helpers and short play breaks are easy to find again.</p></article><article class="tool-rail-card"><h2>Where to go next</h2><p class="muted">Use Resources for plain-English buying help, Amazon Store for approved Amazon.ca picks, or Store for TWE digital kits.</p></article></section>
 
 
@@ -5691,7 +5691,7 @@
         });
         const localSupportFallback = (message) => {
           const text = message.toLowerCase();
-          const emailLink = '<a class="text-link" href="mailto:support@thewatchersedge.ca?subject=Watchers%20Edge%20support%20chat%20follow-up&amp;body=Page%20or%20route%3A%0AProduct%20or%20topic%3A%0AOrder%20ID%20or%20receipt%20reference%2C%20if%20relevant%3A%0AQuestion%20or%20issue%20from%20chat%3A">support@thewatchersedge.ca</a>';
+          const emailLink = '<a class="text-link" href="/support/">the Support page</a>';
           if (/(human|live person|refund|payment|billing|account|login|password|paypal|bank|tax|legal|lawyer)/.test(text)) {
             return 'Thanks for asking. This one needs personal support, so please email ' + emailLink + ' and leave out passwords, payment details, tax or banking details, API keys, and private account information.';
           }
