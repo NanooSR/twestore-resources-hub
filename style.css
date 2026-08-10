@@ -633,7 +633,6 @@ main.wrap {
     font-size: 2rem;
   }
 
-  .header-nav,
   .hero-actions,
   .feature-footer,
   .page-list-meta {
@@ -641,8 +640,21 @@ main.wrap {
     align-items: stretch;
   }
 
-  .button,
+  .header-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
   .header-nav a {
+    border-radius: 12px;
+  }
+
+  .header-nav a:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .button {
     width: 100%;
   }
 }
