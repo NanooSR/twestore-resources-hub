@@ -1668,6 +1668,91 @@ html[data-twe-v12="ready"] [data-twe-premium-header] .twe-premium-drawer {
   }
 }
 
+/* ADSENSE_MAIN_ROUTE_HEADER_CONTROL_P0_20260809:
+   Bound only the audited informational/update route deck. Keep route content,
+   search, primary links, optional controls, focus, and reduced motion intact. */
+html[data-twe-v12="ready"]
+  [data-twe-header-slot]:has(.site-header-band[data-twe-premium-header][data-twe-v12-layout="route"][data-twe-route-header-p0="true"].is-route-compact) {
+  min-height: 0;
+}
+
+html[data-twe-v12="ready"]
+  [data-twe-route-header-p0="true"]
+  .twe-premium-destinations {
+  display: none !important;
+}
+
+@media (min-width: 1101px) {
+  html[data-twe-v12="ready"] .site-header-band[data-twe-premium-header][data-twe-v12-layout="route"][data-twe-route-header-p0="true"].is-route-compact .nav {
+    grid-template-columns: minmax(280px, 0.85fr) minmax(360px, 1.35fr) minmax(220px, 0.62fr) !important;
+    grid-template-rows: auto auto !important;
+    grid-template-areas:
+      "brand search actions"
+      "panel panel panel" !important;
+  }
+
+  html[data-twe-v12="ready"]
+    [data-twe-route-header-p0="true"]
+    .nav-menu-panel {
+    display: grid !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  html[data-twe-v12="ready"]
+    .site-header-band[data-twe-premium-header][data-twe-v12-layout="route"][data-twe-route-header-p0="true"].is-route-compact {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  html[data-twe-v12="ready"] .site-header-band[data-twe-premium-header][data-twe-v12-layout="route"][data-twe-route-header-p0="true"].is-route-compact .nav {
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    grid-template-rows: auto auto auto !important;
+    grid-template-areas:
+      "brand toggle"
+      "search search"
+      "panel panel" !important;
+  }
+
+  html[data-twe-v12="ready"]
+    [data-twe-route-header-p0="true"]
+    .twe-premium-actions {
+    display: none !important;
+  }
+
+  html[data-twe-v12="ready"]
+    [data-twe-route-header-p0="true"]
+    .nav-menu-panel[hidden] {
+    display: none !important;
+  }
+
+  html[data-twe-v12="ready"]
+    .site-header-band[data-twe-premium-header][data-twe-v12-layout="route"][data-twe-route-header-p0="true"].is-route-compact
+    .nav:has(.nav-menu-toggle[aria-expanded="true"]) {
+    grid-template-rows: auto auto auto auto !important;
+    grid-template-areas:
+      "brand toggle"
+      "search search"
+      "actions actions"
+      "panel panel" !important;
+  }
+
+  html[data-twe-v12="ready"]
+    [data-twe-route-header-p0="true"]
+    .nav:has(.nav-menu-toggle[aria-expanded="true"])
+    .twe-premium-actions {
+    display: flex !important;
+    width: 100%;
+  }
+
+  html[data-twe-v12="ready"]
+    [data-twe-route-header-p0="true"]
+    .nav:has(.nav-menu-toggle[aria-expanded="true"])
+    .nav-menu-panel {
+    display: grid !important;
+  }
+}
+
 @keyframes twe-v12-orbit {
   to {
     transform: rotate(360deg);

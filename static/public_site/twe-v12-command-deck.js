@@ -83,7 +83,7 @@
     ) {
       return "support";
     }
-    return "home";
+    return "route";
   }
 
   function activeDestination(path) {
