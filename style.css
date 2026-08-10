@@ -558,6 +558,32 @@ main.wrap {
   border: 1px solid rgba(148, 163, 184, 0.12);
 }
 
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.footer-nav a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 10px;
+  color: var(--muted);
+  background: rgba(8, 16, 31, 0.72);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footer-nav a:hover {
+  color: var(--text);
+  border-color: rgba(96, 165, 250, 0.46);
+}
+
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
