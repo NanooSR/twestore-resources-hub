@@ -5554,6 +5554,12 @@
   box-shadow:0 12px 30px rgba(15,23,42,.08),inset 0 1px 0 rgba(255,255,255,.96)!important;
 }
 .toolbox-stat strong,.tool-stat strong,.epic-primary-result,.tool-primary-result{font-size:clamp(1.5rem,4vw,2.35rem);letter-spacing:-.04em;color:#075e58}
+.toolbox-stat>span,.tool-stat>span{color:#334155!important;-webkit-text-fill-color:#334155!important}
+.toolbox-result-card,.tool-result,.epic-hero{color:#102033!important;-webkit-text-fill-color:#102033!important}
+.epic-hero .toolbox-muted-note{color:#334155!important;-webkit-text-fill-color:#334155!important}
+.epic-cell{color:#102033!important;-webkit-text-fill-color:#102033!important}
+.toolbox-stat.palette-swatch{background:var(--palette-swatch)!important;color:var(--palette-ink)!important;-webkit-text-fill-color:var(--palette-ink)!important}
+.toolbox-stat.palette-swatch strong,.toolbox-stat.palette-swatch span{color:var(--palette-ink)!important;-webkit-text-fill-color:var(--palette-ink)!important}
 .reaction-target{
   min-height:clamp(170px,28vw,260px)!important;
   border-radius:30px!important;
@@ -5561,8 +5567,9 @@
     radial-gradient(circle at 25% 20%,rgba(255,255,255,.55),transparent 24%),
     linear-gradient(135deg,#016b63,#0891b2 45%,#f59e0b)!important;
   box-shadow:0 28px 65px rgba(8,145,178,.22),0 10px 34px rgba(245,158,11,.16),inset 0 1px 0 rgba(255,255,255,.48)!important;
-  color:white!important;
-  text-shadow:0 2px 18px rgba(0,0,0,.24);
+  color:#072f2d!important;
+  -webkit-text-fill-color:#072f2d!important;
+  text-shadow:0 2px 18px rgba(255,255,255,.28);
 }
 .reaction-target.is-ready{background:radial-gradient(circle at 28% 22%,rgba(255,255,255,.7),transparent 26%),linear-gradient(135deg,#16a34a,#22c55e 48%,#facc15)!important}
 .epic-cell,.game-cell,.game-tile{
@@ -5570,7 +5577,7 @@
   background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(236,253,245,.82))!important;
   box-shadow:0 10px 24px rgba(15,23,42,.08),inset 0 1px 0 rgba(255,255,255,.95);
 }
-.epic-cell.is-on,.game-cell.is-on,.game-tile.is-on{background:linear-gradient(135deg,#06b6d4,#14b8a6)!important;color:#fff!important}
+.epic-cell.is-on,.game-cell.is-on,.game-tile.is-on{background:linear-gradient(135deg,#06b6d4,#14b8a6)!important;color:#062f2d!important;-webkit-text-fill-color:#062f2d!important}
 .epic-cell.is-food,.epic-cell.is-goal,.game-cell.is-win,.game-tile.is-revealed{background:linear-gradient(135deg,#fde68a,#fb923c)!important;color:#143042!important}
 .btn{box-shadow:0 12px 24px rgba(15,118,110,.16);transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}.btn:hover{transform:translateY(-1px);filter:saturate(1.08);box-shadow:0 18px 32px rgba(15,118,110,.20)}
 @media (max-width:720px){.toolbox-shell{padding:10px;border-radius:20px}.toolbox-choice-card{min-height:0}.toolbox-hero-card h1,.tool-panel h1{font-size:clamp(2rem,11vw,3.1rem)}.active-tool-card-header{display:grid}.toolbox-overview-grid{grid-template-columns:1fr}.tool-overview-card{min-height:136px}.reaction-target{min-height:150px!important}}
