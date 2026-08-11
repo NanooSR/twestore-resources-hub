@@ -514,6 +514,14 @@ html[data-twe-v12="ready"] .twe-fullscreen-exit-overlay[hidden] {
   pointer-events: none !important;
 }
 
+/* Immersive state controls are intentionally isolated from the global button cascade. */
+html[data-twe-v12="ready"] [data-twe-fullscreen-root][data-immersive-state="immersive"] .twe-fullscreen-enter {
+  display: none !important;
+}
+html[data-twe-v12="ready"] [data-twe-fullscreen-root][data-immersive-state="normal"] .twe-fullscreen-exit-overlay {
+  display: none !important;
+}
+
 @media (max-width: 760px) {
   .twe-v12-toolbox-bridge {
     grid-template-columns: repeat(2, minmax(0, 1fr));
