@@ -377,7 +377,7 @@ html[data-twe-v12="ready"] .footer {
 
 /* Toolbox continuity bridge */
 .twe-v12-toolbox-bridge {
-  --v12-bridge-accent: #087e8f;
+  --v12-bridge-accent: #065a63;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -386,7 +386,7 @@ html[data-twe-v12="ready"] .footer {
 }
 
 .twe-v12-toolbox-bridge > a {
-  --v12-local: #087e8f;
+  --v12-local: #065a63;
   min-width: 0;
   min-height: 76px;
   display: grid;
@@ -412,15 +412,15 @@ html[data-twe-v12="ready"] .footer {
 }
 
 .twe-v12-toolbox-bridge > a[data-twe-v12-destination="games"] {
-  --v12-local: #315f91;
+  --v12-local: #244a72;
 }
 
 .twe-v12-toolbox-bridge > a[data-twe-v12-destination="resources"] {
-  --v12-local: #687d3c;
+  --v12-local: #4a5a29;
 }
 
 .twe-v12-toolbox-bridge > a[data-twe-v12-destination="store"] {
-  --v12-local: #a75b3e;
+  --v12-local: #7a3c29;
 }
 
 .twe-v12-toolbox-bridge > a:hover,
