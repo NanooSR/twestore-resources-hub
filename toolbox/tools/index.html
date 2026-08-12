@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; connect-src &#39;self&#39; https://fonts.googleapis.com https://api.open-meteo.com https://geocoding-api.open-meteo.com https://cloudflareinsights.com https://static.cloudflareinsights.com; img-src &#39;self&#39; data: https://m.media-amazon.com; style-src &#39;self&#39; &#39;unsafe-inline&#39; https://fonts.googleapis.com; script-src &#39;self&#39; &#39;nonce-twe-static-export-v1&#39; https://www.googletagmanager.com https://www.clarity.ms https://static.cloudflareinsights.com; font-src &#39;self&#39; https://fonts.gstatic.com; base-uri &#39;self&#39;; form-action &#39;self&#39; mailto:; object-src &#39;none&#39;">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    
-    
-    
-    
+
+
+
+
+
     <meta name="description" content="Open free, useful TWE browser tools for writing, SEO previews, color palettes, CSV cleanup, image resizing, timers, QR codes, and diagnostics.">
     <meta property="og:title" content="TWE Tools | Free Online Utilities | TWE Toolbox">
     <meta property="og:description" content="Open free, useful TWE browser tools for writing, SEO previews, color palettes, CSV cleanup, image resizing, timers, QR codes, and diagnostics.">
@@ -43,13 +43,13 @@
         ]
       }
     </script>
-    
+
   <script nonce="twe-static-export-v1" type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebPage", "name": "TWE Toolbox", "url": "https://thewatchersedge.ca/toolbox/", "description": "Choose TWE Tools or TWE Games, then open fast, mobile-friendly browser utilities, puzzles, arcade games, and focus breaks with no sign-up.", "inLanguage": "en-CA", "isPartOf": {"@type": "WebSite", "name": "TheWatchersEdge.ca", "url": "https://thewatchersedge.ca/"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thewatchersedge.ca/"}, {"@type": "ListItem", "position": 2, "name": "TWE Toolbox", "item": "https://thewatchersedge.ca/toolbox/"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is TWE Toolbox meant for?", "acceptedAnswer": {"@type": "Answer", "text": "TWE Toolbox is a free collection of practical browser-based tools for quick diagnostics, writing help, simple calculations, conversions, QR sharing, short focus blocks, and lightweight decision help."}}, {"@type": "Question", "name": "Does each tool open on its own page?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The main toolbox page is a clean tool hub, and each tool card opens a dedicated bookmarkable tool page with a direct URL."}}, {"@type": "Question", "name": "Can I use TWE Toolbox on mobile?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The toolbox pages are designed to stay useful on desktop and mobile so quick checks and simple tasks are easy to run without extra apps."}}]}]</script>
 
     <title>TWE Tools | Free Online Utilities | TWE Toolbox</title>
-    
-    
-    
+
+
+
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
       :root {
@@ -3299,7 +3299,7 @@
         .mini-card h3::before { width: 28px; height: 28px; border-radius: 10px; margin-right: 7px; }
       }
 
-    
+
 
       /* 2026-07-07 Agent Mode Premium Sweep V2 — bold Ryan-review layer */
       :root {
@@ -4320,7 +4320,7 @@
           box-shadow: 0 16px 34px rgba(0,126,139,.22), inset 0 1px 0 rgba(255,255,255,.32) !important;
         }
       }
-      
+
 
       /* 2026-07-24 Warm Signal Studio header foundation — compact, light-shaded, colourful, and customer-facing. */
       :root {
@@ -5430,17 +5430,25 @@
         const cleanPath = String(path || '').startsWith('/') ? String(path || '') : '/' + String(path || '');
         return base ? base + cleanPath : cleanPath;
       };
+      document.addEventListener('error',event=>{
+        const image=event.target;
+        if (!(image instanceof HTMLImageElement) || !image.dataset.fallbackSrc || image.dataset.fallbackApplied === '1') return;
+        image.dataset.fallbackApplied='1';
+        image.src=image.dataset.fallbackSrc;
+        image.classList.add('is-fallback-image');
+        image.closest('.resource-picture')?.classList.add('is-fallback-image');
+      },true);
     </script>
   </head>
   <body data-standalone-page="true">
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    
-    
-    
-    
-    
+
+
+
+
+
     <main id="main-content" class="shell shell-standalone" tabindex="-1">
-      
+
 <style>
 .toolbox-shell{display:grid;gap:clamp(18px,3vw,28px);--twe-teal:#0f766e;--twe-gold:#f5c451;--twe-ink:#102033;--twe-cream:#fffaf0}.toolbox-overhaul-panel input:not([type=checkbox]):not([type=radio]),.toolbox-overhaul-panel textarea,.toolbox-overhaul-panel select,.tool-game-surface input:not([type=checkbox]):not([type=radio]),.tool-game-surface textarea,.tool-game-surface select{min-height:44px}.toolbox-overhaul-panel input[type=checkbox],.toolbox-overhaul-panel input[type=radio],.tool-game-surface input[type=checkbox],.tool-game-surface input[type=radio]{width:auto;min-width:44px;min-height:44px;accent-color:#0f766e}.toolbox-hero-card,.tool-panel,.toolbox-choice-card,.tool-overview-card,.tool-category-card,.tool-rail-card{border:1px solid rgba(15,118,110,.18);border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,250,240,.9));box-shadow:0 22px 48px rgba(15,23,42,.08),inset 0 1px 0 rgba(255,255,255,.9)}.toolbox-hero-card,.tool-panel{padding:clamp(18px,3vw,30px)}.toolbox-landing-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,2.5vw,22px);margin-top:18px}.toolbox-choice-card{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:center;padding:clamp(18px,3vw,28px);min-height:190px;text-decoration:none!important;color:inherit!important}.toolbox-choice-card:hover,.tool-overview-card:hover{transform:translateY(-3px);box-shadow:0 28px 58px rgba(15,118,110,.14)}.toolbox-choice-icon,.tool-card-compact-icon{display:grid;place-items:center;flex:0 0 auto;width:72px;height:72px;border-radius:18px;background:linear-gradient(135deg,#ccfbf1,#fef3c7);font-size:2.1rem;box-shadow:inset 0 1px 0 rgba(255,255,255,.9)}.toolbox-choice-card h2,.tool-overview-card h3{margin:0;color:#12313f}.toolbox-overview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:14px}.tool-overview-card{display:grid;grid-template-columns:auto minmax(0,1fr);gap:13px;padding:16px;text-decoration:none!important;color:inherit!important;min-height:145px}.tool-card-compact-icon{width:54px;height:54px;font-size:1.5rem;border-radius:15px}.tool-card-compact-main{display:grid;gap:7px}.tool-card-compact-title-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.tool-card-compact-desc{color:#475569;line-height:1.35}.tool-card-compact-meta{display:flex;flex-wrap:wrap;gap:6px}.tool-card-compact-meta span,.tool-chip,.tool-badge,.toolbox-quality-pill{border:1px solid rgba(15,118,110,.16);border-radius:999px;background:#fffdf5;padding:6px 10px;font-size:.78rem;font-weight:800;color:#0f766e}.tool-card-compact-badge{border-radius:999px;padding:4px 8px;background:#fef3c7;color:#92400e;font-weight:900;font-size:.72rem}.tool-card-compact-cta{font-weight:900;color:#0f766e}.toolbox-section-head{display:flex;justify-content:space-between;gap:12px;align-items:end;flex-wrap:wrap}.tool-category-grid,.toolbox-rail-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.tool-category-card,.tool-rail-card{padding:16px}.toolbox-quality-strip,.cta-row,.tool-chip-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.btn{min-height:44px}.tool-panel{--active-accent:#0f766e;--active-accent-2:#f59e0b;border-color:color-mix(in srgb,var(--active-accent) 28%,white);background:linear-gradient(135deg,color-mix(in srgb,var(--active-accent) 11%,white),#fffaf0 65%,#fff)}.active-tool-card-header{display:grid;gap:14px}.active-tool-card-identity{display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:center}.active-tool-icon{display:grid;place-items:center;width:70px;height:70px;border-radius:20px;background:linear-gradient(135deg,var(--active-accent),var(--active-accent-2));color:white;font-size:2rem;box-shadow:0 18px 34px color-mix(in srgb,var(--active-accent) 28%,transparent)}.active-tool-card-copy h1{margin:0;font-size:clamp(1.7rem,4vw,3rem)}.active-tool-proof-row{display:flex;gap:8px;flex-wrap:wrap}.active-tool-proof{font-size:.78rem;font-weight:900;color:#0f766e;border-radius:999px;background:rgba(255,255,255,.72);padding:7px 10px}.tool-inline-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.tool-stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}.tool-stat,.tool-result,.game-board,.tool-canvas-wrap{border:1px solid rgba(15,118,110,.14);border-radius:18px;background:rgba(255,255,255,.72);padding:14px}.tool-result{position:relative;display:grid;gap:10px;border:1px solid rgba(15,118,110,.26);background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(236,254,255,.9));box-shadow:0 18px 36px rgba(15,118,110,.12),inset 0 1px 0 rgba(255,255,255,.95);overflow-wrap:anywhere}.tool-result::before{content:"Result";width:max-content;border-radius:999px;background:#0f766e;color:#fff;font-size:.72rem;font-weight:950;letter-spacing:.08em;text-transform:uppercase;padding:5px 9px}.tool-result-heading{margin:0;color:#0f766e;font-size:.88rem;font-weight:950;letter-spacing:.06em;text-transform:uppercase}.tool-primary-result{display:block;color:#0f172a;font-size:clamp(1.65rem,5vw,3.2rem);font-weight:950;line-height:1.08;letter-spacing:-.04em;overflow-wrap:anywhere}.tool-secondary-result{margin:0;color:#475569;font-weight:700}.tool-status{display:inline-flex;align-items:center;min-height:1.5rem;color:#0f766e;font-weight:850}.tool-status.is-error{color:#b91c1c}.tool-result-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.tool-result-note{margin:0;color:#475569;font-size:.94rem}.tool-stat strong{font-size:1.35rem}.tool-stat-grid .tool-stat{display:grid;gap:4px;min-height:86px;align-content:center}.tool-stat-grid .tool-stat strong{display:block;color:#0f172a;font-size:clamp(1.35rem,3.4vw,2rem);font-weight:950;line-height:1.05}.game-board+.tool-result,.reaction-target+.cta-row+.tool-result{border-width:2px}.game-tile:focus-visible,.reaction-target:focus-visible,.tool-result-actions .btn:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid rgba(245,158,11,.78);outline-offset:3px}@media(max-width:520px){.tool-primary-result{font-size:clamp(1.45rem,10vw,2.4rem)}.tool-result-actions .btn{width:100%;justify-content:center}}textarea,input,select{max-width:100%;border:1px solid rgba(15,118,110,.25);border-radius:13px;padding:12px;background:white}textarea{min-height:118px;width:100%}.tool-game-surface{display:grid;gap:14px}.game-board{display:grid;gap:8px;touch-action:manipulation}.memory-grid{grid-template-columns:repeat(4,1fr)}.game-tile{min-height:54px;border:1px solid rgba(15,118,110,.2);border-radius:14px;background:#fff;display:grid;place-items:center;font-weight:900;font-size:1.25rem}.game-tile.is-on,.game-tile.is-revealed{background:linear-gradient(135deg,#ccfbf1,#fef3c7)}.snake-board,.game-canvas{width:100%;max-width:420px;aspect-ratio:1/1;background:#ecfeff;border-radius:18px;border:1px solid rgba(15,118,110,.2);touch-action:none}.reaction-target{min-height:170px;border-radius:24px;border:0;background:linear-gradient(135deg,#dbeafe,#fef3c7);font-size:1.35rem;font-weight:950;color:#12313f}.reaction-target.is-waiting{background:linear-gradient(135deg,#fee2e2,#fef3c7)}.reaction-target.is-ready{background:linear-gradient(135deg,#bbf7d0,#ccfbf1)}.reaction-light{display:inline-block;width:18px;height:18px;border-radius:99px;background:#cbd5e1;margin:4px}.reaction-light.is-lit{background:#22c55e}.tool-ad-card{border:1px dashed rgba(15,118,110,.22);border-radius:20px;padding:14px;background:rgba(255,255,255,.66)}@media(max-width:760px){.toolbox-landing-grid{grid-template-columns:1fr}.toolbox-choice-card{min-height:150px;grid-template-columns:auto 1fr;padding:16px}.toolbox-choice-icon{width:58px;height:58px}.active-tool-card-identity{grid-template-columns:auto 1fr}.active-tool-icon{width:54px;height:54px}.toolbox-overview-grid{grid-template-columns:1fr}.tool-overview-card{min-height:118px}.memory-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.game-tile{min-height:46px;font-size:1rem}}
 
@@ -5548,6 +5556,9 @@
   border:1px solid rgba(15,118,110,.16);
   box-shadow:inset 0 1px 0 rgba(255,255,255,.96),0 18px 45px rgba(15,23,42,.08);
 }
+#tool-app[data-game="trivia-quickfire"]{min-height:1000px}
+@media(max-width:980px){ #tool-app[data-game="trivia-quickfire"]{min-height:1140px}}
+@media(max-width:720px){ #tool-app[data-game="trivia-quickfire"]{min-height:1992px}}
 .toolbox-result-card,.tool-result,.toolbox-stat,.tool-stat,.epic-hero,.epic-mission{
   border-color:rgba(255,255,255,.78)!important;
   background:linear-gradient(135deg,rgba(255,255,255,.94),rgba(240,253,250,.80))!important;
@@ -5588,7 +5599,7 @@
 </style>
 <section class="toolbox-shell">
 <header class="toolbox-brand-strip" aria-label="TWE Toolbox brand navigation">
-  <a class="toolbox-brand-home" href="/" aria-label="Return to The Watchers Edge home"><img src="/static/public_site/the-watchers-edge-mark.png" alt="The Watchers Edge mark" width="68" height="84"><span><strong>The Watchers Edge</strong><small>Toolbox</small></span></a>
+  <a class="toolbox-brand-home" href="/"><img src="/static/public_site/the-watchers-edge-mark.png" alt="The Watchers Edge mark" width="68" height="84"><span><strong>The Watchers Edge</strong><small>Toolbox</small></span></a>
   <nav class="toolbox-breadcrumb" aria-label="Toolbox breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/toolbox/">Toolbox</a><span aria-hidden="true">/</span><span>Tools</span></nav>
   <div class="toolbox-brand-actions"><a class="btn secondary" href="/toolbox/tools/">Tools</a><a class="btn secondary" href="/toolbox/games/">Games</a><a class="btn ghost" href="/support/">Support</a></div>
 </header>
@@ -5605,37 +5616,37 @@
   <div class="toolbox-section-head"><div><h1>Pick a practical browser tool</h1><p class="muted">Choose a complete, bookmarkable page with clear controls, instant feedback, and a TWE-branded surface built for repeat visits.</p></div><div class="cta-row"><a class="btn secondary" href="/toolbox/">← Toolbox home</a></div></div>
 </section>
 <section class="toolbox-hero-card"><h2>Tool directory</h2><div class="toolbox-overview-grid">
-  
+
   <a class="tool-overview-card tool-overview-card-link" data-tool-slug="whats-my-ip" href="/toolbox/whats-my-ip/?cb=toolbox20260711toolsGamesExpansion" aria-label="Open IP checker"><span class="tool-card-compact-icon" aria-hidden="true">🌐</span><span class="tool-card-compact-main"><span class="tool-card-compact-title-row"><h3>IP checker</h3></span><span class="tool-card-compact-desc">See the current public-facing connection IP your browser is presenting right now.</span><span class="tool-card-compact-meta"><span>Quick diagnostics</span><span>Useful right away</span></span><span class="tool-card-compact-cta">Open tool →</span></span></a>
-  
+
   <a class="tool-overview-card tool-overview-card-link" data-tool-slug="unscrambler" href="/toolbox/unscrambler/?cb=toolbox20260711toolsGamesExpansion" aria-label="Open Unscrambler"><span class="tool-card-compact-icon" aria-hidden="true">🔤</span><span class="tool-card-compact-main"><span class="tool-card-compact-title-row"><h3>Unscrambler</h3></span><span class="tool-card-compact-desc">Type scrambled letters and get a cleaner list of likely English words made from them.</span><span class="tool-card-compact-meta"><span>Writing + words</span><span>Popular helper</span></span><span class="tool-card-compact-cta">Open tool →</span></span></a>
-  
+
   <a class="tool-overview-card tool-overview-card-link" data-tool-slug="password-generator" href="/toolbox/password-generator/?cb=toolbox20260711toolsGamesExpansion" aria-label="Open Password generator"><span class="tool-card-compact-icon" aria-hidden="true">🔐</span><span class="tool-card-compact-main"><span class="tool-card-compact-title-row"><h3>Password generator</h3></span><span class="tool-card-compact-desc">Generate a stronger random password locally in your browser without leaving the page.</span><span class="tool-card-compact-meta"><span>Privacy + security</span><span>Practical utility</span></span><span class="tool-card-compact-cta">Open tool →</span></span></a>
-  
+
   <a class="tool-overview-card tool-overview-card-link" data-tool-slug="text-helper" href="/toolbox/text-helper/?cb=toolbox20260711toolsGamesExpansion" aria-label="Open Text helper"><span class="tool-card-compact-icon" aria-hidden="true">📝</span><span class="tool-card-compact-main"><span class="tool-card-compact-title-row"><h3>Text helper</h3></span><span class="tool-card-compact-desc">Switch case, count words, estimate reading time, trim lines, and clean pasted text.</span><span class="tool-card-compact-meta"><span>Writing + words</span><span>Useful for work</span></span><span class="tool-card-compact-cta">Open tool →</span></span></a>
-  
+
   <a class="tool-overview-card tool-overview-card-link" data-tool-slug="quick-calculator" href="/toolbox/quick-calculator/?cb=toolbox20260711toolsGamesExpansion" aria-label="Open Quick calculator"><span class="tool-card-compact-icon" aria-hidden="true">🧮</span><span class="tool-card-compact-main"><span class="tool-card-compact-title-row"><h3>Quick calculator</h3></span><span class="tool-card-compact-desc">Calculate percentages, tips, taxes, discounts, markup, and totals quickly.</span><span class="tool-card-compact-meta"><span>Daily work helpers</span><span>Small but handy</span></span><span class="tool-card-compact-cta">Open tool →</span></span></a>
-  
+
   <a class="tool-overview-card tool-overview-card-link" data-tool-slug="random-chooser" href="/toolbox/random-chooser/?cb=toolbox20260711toolsGamesExpansion" aria-label="Open Random chooser"><span class="tool-card-compact-icon" aria-hidden="true">🎯</span><span class="tool-card-compact-main"><span class="tool-card-compact-title-row"><h3>Random chooser</h3></span><span class="tool-card-compact-desc">Paste a short list of options and let the toolbox pick one fairly.</span><span class="tool-card-compact-meta"><span>Daily work helpers</span><span>Decision helper</span></span><span class="tool-card-compact-cta">Open tool →</span></span></a>
-  
+
   <a class="tool-overview-card tool-overview-card-link" data-tool-slug="qr-code-generator" href="/toolbox/qr-code-generator/?cb=toolbox20260711toolsGamesExpansion" aria-label="Open QR code generator"><span class="tool-card-compact-icon" aria-hidden="true">▦</span><span class="tool-card-compact-main"><span class="tool-card-compact-title-row"><h3>QR code generator</h3></span><span class="tool-card-compact-desc">Turn a link, note, Wi-Fi string, or simple contact detail into a scannable QR code.</span><span class="tool-card-compact-meta"><span>Sharing + handoff</span><span>Share faster</span></span><span class="tool-card-compact-cta">Open tool →</span></span></a>
-  
+
   <a class="tool-overview-card tool-overview-card-link" data-tool-slug="pomodoro-timer" href="/toolbox/pomodoro-timer/?cb=toolbox20260711toolsGamesExpansion" aria-label="Open Pomodoro timer"><span class="tool-card-compact-icon" aria-hidden="true">⏳</span><span class="tool-card-compact-main"><span class="tool-card-compact-title-row"><h3>Pomodoro timer</h3></span><span class="tool-card-compact-desc">Run a simple work-and-break timer without another app.</span><span class="tool-card-compact-meta"><span>Focus + flow</span><span>Focus helper</span></span><span class="tool-card-compact-cta">Open tool →</span></span></a>
-  
+
   <a class="tool-overview-card tool-overview-card-link" data-tool-slug="browser-network-info" href="/toolbox/browser-network-info/?cb=toolbox20260711toolsGamesExpansion" aria-label="Open Browser + network info"><span class="tool-card-compact-icon" aria-hidden="true">📶</span><span class="tool-card-compact-main"><span class="tool-card-compact-title-row"><h3>Browser + network info</h3></span><span class="tool-card-compact-desc">See useful browser, screen, language, timezone, and connection details.</span><span class="tool-card-compact-meta"><span>Quick diagnostics</span><span>Quick diagnostics</span></span><span class="tool-card-compact-cta">Open tool →</span></span></a>
-  
+
   <a class="tool-overview-card tool-overview-card-link" data-tool-slug="unit-converter" href="/toolbox/unit-converter/?cb=toolbox20260711toolsGamesExpansion" aria-label="Open Unit converter"><span class="tool-card-compact-icon" aria-hidden="true">📏</span><span class="tool-card-compact-main"><span class="tool-card-compact-title-row"><h3>Unit converter</h3></span><span class="tool-card-compact-desc">Convert common length, temperature, weight, volume, speed, and storage values.</span><span class="tool-card-compact-meta"><span>Daily work helpers</span><span>Daily utility</span></span><span class="tool-card-compact-cta">Open tool →</span></span></a>
-  
+
   <a class="tool-overview-card tool-overview-card-link" data-tool-slug="color-palette-maker" href="/toolbox/color-palette-maker/?cb=toolbox20260711toolsGamesExpansion" aria-label="Open Color palette maker"><span class="tool-card-compact-icon" aria-hidden="true">🎨</span><span class="tool-card-compact-main"><span class="tool-card-compact-title-row"><h3>Color palette maker</h3><span class="tool-card-compact-badge">Replay-ready</span></span><span class="tool-card-compact-desc">Build accessible color palettes from a base color with contrast notes and copyable HEX values.</span><span class="tool-card-compact-meta"><span>Design + web</span><span>Design helper</span></span><span class="tool-card-compact-cta">Open tool →</span></span></a>
-  
+
   <a class="tool-overview-card tool-overview-card-link" data-tool-slug="meta-title-preview" href="/toolbox/meta-title-preview/?cb=toolbox20260711toolsGamesExpansion" aria-label="Open SEO snippet preview"><span class="tool-card-compact-icon" aria-hidden="true">🔎</span><span class="tool-card-compact-main"><span class="tool-card-compact-title-row"><h3>SEO snippet preview</h3><span class="tool-card-compact-badge">Replay-ready</span></span><span class="tool-card-compact-desc">Preview a page title and meta description before publishing a public page.</span><span class="tool-card-compact-meta"><span>SEO + publishing</span><span>SEO helper</span></span><span class="tool-card-compact-cta">Open tool →</span></span></a>
-  
+
   <a class="tool-overview-card tool-overview-card-link" data-tool-slug="csv-table-cleaner" href="/toolbox/csv-table-cleaner/?cb=toolbox20260711toolsGamesExpansion" aria-label="Open CSV table cleaner"><span class="tool-card-compact-icon" aria-hidden="true">🧹</span><span class="tool-card-compact-main"><span class="tool-card-compact-title-row"><h3>CSV table cleaner</h3><span class="tool-card-compact-badge">Replay-ready</span></span><span class="tool-card-compact-desc">Paste small CSV or tabular text, trim cells, remove empty rows, and preview a clean table.</span><span class="tool-card-compact-meta"><span>Data + tables</span><span>Data cleanup</span></span><span class="tool-card-compact-cta">Open tool →</span></span></a>
-  
+
   <a class="tool-overview-card tool-overview-card-link" data-tool-slug="image-resizer" href="/toolbox/image-resizer/?cb=toolbox20260711toolsGamesExpansion" aria-label="Open Image resizer"><span class="tool-card-compact-icon" aria-hidden="true">🖼️</span><span class="tool-card-compact-main"><span class="tool-card-compact-title-row"><h3>Image resizer</h3><span class="tool-card-compact-badge">Replay-ready</span></span><span class="tool-card-compact-desc">Resize a local image in-browser and download a lighter PNG or JPEG draft.</span><span class="tool-card-compact-meta"><span>Creator tools</span><span>Creator utility</span></span><span class="tool-card-compact-cta">Open tool →</span></span></a>
-  
+
   <a class="tool-overview-card tool-overview-card-link" data-tool-slug="time-zone-planner" href="/toolbox/time-zone-planner/?cb=toolbox20260711toolsGamesExpansion" aria-label="Open Time zone planner"><span class="tool-card-compact-icon" aria-hidden="true">🕒</span><span class="tool-card-compact-main"><span class="tool-card-compact-title-row"><h3>Time zone planner</h3><span class="tool-card-compact-badge">Replay-ready</span></span><span class="tool-card-compact-desc">Compare meeting times across common time zones and copy a friendly schedule line.</span><span class="tool-card-compact-meta"><span>Daily work helpers</span><span>Scheduling helper</span></span><span class="tool-card-compact-cta">Open tool →</span></span></a>
-  
+
 </div></section>
 <section class="toolbox-hero-card"><p class="eyebrow">Browse by category</p><h2>Browse by category</h2><div class="tool-category-grid"><article class="tool-category-card"><strong>2 tools</strong><h3>Quick diagnostics</h3><p class="muted">IP checker · Browser + network info</p></article><article class="tool-category-card"><strong>2 tools</strong><h3>Writing + words</h3><p class="muted">Unscrambler · Text helper</p></article><article class="tool-category-card"><strong>1 tool</strong><h3>Privacy + security</h3><p class="muted">Password generator</p></article><article class="tool-category-card"><strong>4 tools</strong><h3>Daily work helpers</h3><p class="muted">Quick calculator · Random chooser · Unit converter · Time zone planner</p></article><article class="tool-category-card"><strong>1 tool</strong><h3>Sharing + handoff</h3><p class="muted">QR code generator</p></article><article class="tool-category-card"><strong>1 tool</strong><h3>Focus + flow</h3><p class="muted">Pomodoro timer</p></article><article class="tool-category-card"><strong>1 tool</strong><h3>Design + web</h3><p class="muted">Color palette maker</p></article><article class="tool-category-card"><strong>1 tool</strong><h3>SEO + publishing</h3><p class="muted">SEO snippet preview</p></article><article class="tool-category-card"><strong>1 tool</strong><h3>Data + tables</h3><p class="muted">CSV table cleaner</p></article><article class="tool-category-card"><strong>1 tool</strong><h3>Creator tools</h3><p class="muted">Image resizer</p></article></div></section>
 
@@ -5659,8 +5670,8 @@
 </section>
 
     </main>
-    
-    
+
+
     <script nonce="twe-static-export-v1" src="/static/public_site/twe-premium-header.js?v=20260728b" defer></script>
     <script nonce="twe-static-export-v1" src="/static/public_site/twe-v12-command-deck.js?v=20260728c" defer></script>
 

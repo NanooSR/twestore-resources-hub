@@ -125,10 +125,6 @@
     card.dataset.accent = destination.id;
     card.dataset.tweV12Destination = destination.id;
     card.removeAttribute("data-icon");
-    card.setAttribute(
-      "aria-label",
-      `${destination.label}: ${destination.description}`,
-    );
 
     if (!card.querySelector(".twe-v12-destination-icon")) {
       card.prepend(makeIcon(destination));

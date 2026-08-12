@@ -2,12 +2,13 @@
 <html lang="en" data-twe-v12="ready">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; connect-src &#39;self&#39; https://fonts.googleapis.com https://api.open-meteo.com https://geocoding-api.open-meteo.com https://cloudflareinsights.com https://static.cloudflareinsights.com; img-src &#39;self&#39; data: https://m.media-amazon.com; style-src &#39;self&#39; &#39;unsafe-inline&#39; https://fonts.googleapis.com; script-src &#39;self&#39; &#39;nonce-twe-static-export-v1&#39; https://www.googletagmanager.com https://www.clarity.ms https://static.cloudflareinsights.com; font-src &#39;self&#39; https://fonts.gstatic.com; base-uri &#39;self&#39;; form-action &#39;self&#39; mailto:; object-src &#39;none&#39;">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    
-    
-    
-    
+
+
+
+
+
     <meta name="description" content="Search The Watchers Edge Resources &amp; Gear Store for Amazon.ca buying guides and affiliate-supported gear picks.">
     <meta property="og:title" content="TheWatchersEdge.ca | Resources &amp; Gear Store">
     <meta property="og:description" content="Search The Watchers Edge Resources &amp; Gear Store for Amazon.ca buying guides and affiliate-supported gear picks.">
@@ -27,7 +28,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/static/public_site/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/static/public_site/apple-touch-icon.png">
     <link rel="manifest" href="/static/public_site/site.webmanifest">
-    <script type="application/ld+json">
+    <script nonce="twe-static-export-v1" type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -42,11 +43,11 @@
         ]
       }
     </script>
-    
+
     <title>TheWatchersEdge.ca | Resources &amp; Gear Store</title>
-    
-    
-    
+
+
+
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
       :root {
@@ -3296,7 +3297,7 @@
         .mini-card h3::before { width: 28px; height: 28px; border-radius: 10px; margin-right: 7px; }
       }
 
-    
+
 
       /* 2026-07-07 Agent Mode Premium Sweep V2 — bold Ryan-review layer */
       :root {
@@ -4317,7 +4318,7 @@
           box-shadow: 0 16px 34px rgba(0,126,139,.22), inset 0 1px 0 rgba(255,255,255,.32) !important;
         }
       }
-      
+
 
       /* 2026-07-24 Warm Signal Studio header foundation — compact, light-shaded, colourful, and customer-facing. */
       :root {
@@ -5419,33 +5420,41 @@
 
     </style>
     <link rel="stylesheet" href="/static/public_site/twe-v12-command-deck.css?v=20260728c">
-    <link rel="stylesheet" href="/static/public_site/twe-v12-body-polish.css?v=20260728a">
-    <script>
+    <link rel="stylesheet" href="/static/public_site/twe-v12-body-polish.css?v=20260811a">
+    <script nonce="twe-static-export-v1">
       window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
       window.tweApiUrl = function (path) {
         const base = String(window.TWE_PUBLIC_API_BASE_URL || '').replace(/\/+$/, '');
         const cleanPath = String(path || '').startsWith('/') ? String(path || '') : '/' + String(path || '');
         return base ? base + cleanPath : cleanPath;
       };
+      document.addEventListener('error',event=>{
+        const image=event.target;
+        if (!(image instanceof HTMLImageElement) || !image.dataset.fallbackSrc || image.dataset.fallbackApplied === '1') return;
+        image.dataset.fallbackApplied='1';
+        image.src=image.dataset.fallbackSrc;
+        image.classList.add('is-fallback-image');
+        image.closest('.resource-picture')?.classList.add('is-fallback-image');
+      },true);
     </script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    
-    
-    
-    
-    
+
+
+
+
+
     <div class="shell">
-      
-      
-      
-      
-      
+
+
+
+
+
       <div class="twe-header-slot" data-twe-header-slot>
       <div class="site-header-band site-header-simple is-route-compact" data-twe-premium-header data-twe-v12-layout="route" role="banner" aria-label="Site navigation">
         <nav class="nav" aria-label="The Watchers Edge premium navigation">
-          <a class="brand" data-warm-signal-brand-lockup="true" href="/" aria-label="The Watchers Edge home">
+          <a class="brand" data-warm-signal-brand-lockup="true" href="/">
             <img class="brand-mark" src="/static/public_site/the-watchers-edge-mark.png" alt="The Watchers Edge logo" width="80" height="80" fetchpriority="high" decoding="async">
             <span class="brand-copy">
               <span class="brand-kicker">The Watchers Edge</span>
@@ -5467,7 +5476,7 @@
             <p class="twe-premium-trust-line">Free to explore · No account needed · Store always optional</p>
             <div class="twe-premium-action-row">
               <button class="twe-premium-tool-button" type="button" data-twe-drawer-toggle aria-expanded="false" aria-controls="twe-premium-drawer">My TWE</button>
-              <button class="twe-premium-tool-button" type="button" data-twe-motion-toggle aria-pressed="false">Pause motion</button>
+              <button class="twe-premium-tool-button" type="button" data-twe-motion-toggle aria-pressed="false">Pause header motion</button>
             </div>
             <p class="twe-premium-status" data-twe-status aria-live="polite">Ready when you are.</p>
           </div>
@@ -5478,11 +5487,11 @@
             <button type="submit">Search</button>
           </form>
           <div id="global-nav-panel" class="nav-menu-panel" data-nav-menu-panel hidden>
-          
-          
-          
-          
-          
+
+
+
+
+
           <div class="nav-links nav-links-primary" role="navigation" aria-label="Primary site navigation">
             <a class="is-start" href="/start-here/">Start Here</a>
             <a class="is-toolbox" href="/toolbox/?cb=toolbox20260711toolsGamesExpansion">Tools</a>
@@ -5518,9 +5527,9 @@
       </div>
 
       <div class="store-sales-banner-grid no-rail">
-        
+
         <main id="main-content" class="store-sales-banner-main" tabindex="-1">
-          
+
 <section class="panel hero" id="resource-hero" style="padding-bottom:22px;">
   <div class="section-head" style="align-items:flex-start; gap:24px; margin-bottom:18px;">
     <div>
@@ -5574,7 +5583,7 @@
     <a class="pill is-accent" href="/amazon-store/">Search Amazon Store</a>
   </div>
   <div class="grid three">
-    
+
     <article class="mini-card" style="padding:18px; border-radius:18px; background:rgba(255,255,255,0.94);">
       <p class="eyebrow">Workspace</p>
       <h3>Workspace</h3>
@@ -5583,7 +5592,7 @@
         <a class="btn secondary" href="/amazon-store/?category=workspace">Search this category</a>
       </div>
     </article>
-    
+
     <article class="mini-card" style="padding:18px; border-radius:18px; background:rgba(255,255,255,0.94);">
       <p class="eyebrow">Admin &amp; paperwork</p>
       <h3>Admin &amp; paperwork</h3>
@@ -5592,7 +5601,7 @@
         <a class="btn secondary" href="/amazon-store/?category=admin-paperwork">Search this category</a>
       </div>
     </article>
-    
+
     <article class="mini-card" style="padding:18px; border-radius:18px; background:rgba(255,255,255,0.94);">
       <p class="eyebrow">Creator &amp; calls</p>
       <h3>Creator &amp; calls</h3>
@@ -5601,7 +5610,7 @@
         <a class="btn secondary" href="/amazon-store/?category=creator-calls">Search this category</a>
       </div>
     </article>
-    
+
     <article class="mini-card" style="padding:18px; border-radius:18px; background:rgba(255,255,255,0.94);">
       <p class="eyebrow">Research &amp; reading</p>
       <h3>Research &amp; reading</h3>
@@ -5610,7 +5619,7 @@
         <a class="btn secondary" href="/amazon-store/?category=research-reading">Search this category</a>
       </div>
     </article>
-    
+
     <article class="mini-card" style="padding:18px; border-radius:18px; background:rgba(255,255,255,0.94);">
       <p class="eyebrow">Church &amp; ministry</p>
       <h3>Church &amp; ministry</h3>
@@ -5619,7 +5628,7 @@
         <a class="btn secondary" href="/amazon-store/?category=church-ministry">Search this category</a>
       </div>
     </article>
-    
+
     <article class="mini-card" style="padding:18px; border-radius:18px; background:rgba(255,255,255,0.94);">
       <p class="eyebrow">Pet home &amp; routines</p>
       <h3>Pet home &amp; routines</h3>
@@ -5628,7 +5637,7 @@
         <a class="btn secondary" href="/amazon-store/?category=pet-home">Search this category</a>
       </div>
     </article>
-    
+
   </div>
 </section>
 
@@ -5648,6 +5657,9 @@
       <ul class="muted" style="padding-left:18px; margin-bottom:0;">
         <li><a href="/how-we-choose.html">How The Watchers Edge builds buying guides</a></li>
         <li><a href="/updates/retainer-guide-and-toolbox/">Retainer guide and Toolbox update</a></li>
+        <li><a href="/updates/admin-reset-amazon-shortlist/">Admin reset Amazon.ca shortlist</a></li>
+        <li><a href="/updates/calls-content-amazon-shortlist/">Calls and content Amazon.ca shortlist</a></li>
+        <li><a href="/updates/church-event-amazon-shortlist/">Church and event Amazon.ca shortlist</a></li>
       </ul>
     </article>
     <article class="mini-card" style="padding:16px; border-radius:16px; background:rgba(255,255,255,0.94);">
@@ -5669,6 +5681,10 @@
         <li><a href="/best-church-visitation-follow-up-and-recovery-ministry-kit-supplies.html">Visitation and follow-up ministry</a></li>
         <li><a href="/best-church-volunteer-break-room-and-refreshment-station-supplies.html">Volunteer break-room setup</a></li>
         <li><a href="/best-cleaner-pet-home-setup-refresh-basics.html">Cleaner pet-home setup basics</a></li>
+        <li><a href="/best-ai-output-qa-review-desk-setup.html">AI output QA review setup</a></li>
+        <li><a href="/best-offer-packaging-and-service-positioning-desk-setup.html">Offer packaging and service positioning</a></li>
+        <li><a href="/best-promo-tracking-and-weekly-traffic-review-desk-setup.html">Promo tracking and weekly traffic review</a></li>
+        <li><a href="/best-website-audit-and-conversion-review-desk-setup.html">Website audit and conversion review</a></li>
       </ul>
     </article>
   </div>
@@ -5683,8 +5699,8 @@
     </div>
     <a class="pill is-accent" href="/amazon-store/">Search Amazon.ca picks</a>
   </div>
-  <div class="grid three" role="group" aria-label="Featured buying guides">
-    
+  <div class="grid three" role="region" aria-label="Featured buying guides">
+
     <article class="mini-card" data-featured-guide-card style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
       <p class="eyebrow">Admin &amp; paperwork</p>
       <h3>Best admin desk tools for invoices and paperwork</h3>
@@ -5694,7 +5710,7 @@
         <a class="btn ghost" href="/amazon-store/?category=admin-paperwork#amazon-store-results">Related Amazon.ca picks</a>
       </div>
     </article>
-    
+
     <article class="mini-card" data-featured-guide-card style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
       <p class="eyebrow">Admin &amp; paperwork</p>
       <h3>Best client onboarding desk setup</h3>
@@ -5704,7 +5720,7 @@
         <a class="btn ghost" href="/amazon-store/?category=admin-paperwork#amazon-store-results">Related Amazon.ca picks</a>
       </div>
     </article>
-    
+
     <article class="mini-card" data-featured-guide-card style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
       <p class="eyebrow">Admin &amp; paperwork</p>
       <h3>Best invoice, filing, and admin office setup</h3>
@@ -5714,7 +5730,7 @@
         <a class="btn ghost" href="/amazon-store/?category=admin-paperwork#amazon-store-results">Related Amazon.ca picks</a>
       </div>
     </article>
-    
+
     <article class="mini-card" data-featured-guide-card style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
       <p class="eyebrow">Church &amp; ministry</p>
       <h3>Best Church Choir Worship Music And Rehearsal Support Supplies</h3>
@@ -5724,7 +5740,7 @@
         <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">Related Amazon.ca picks</a>
       </div>
     </article>
-    
+
     <article class="mini-card" data-featured-guide-card style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
       <p class="eyebrow">Church &amp; ministry</p>
       <h3>Best Church Event Setup Queue Flow And Portable Room Reset Tools</h3>
@@ -5734,7 +5750,7 @@
         <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">Related Amazon.ca picks</a>
       </div>
     </article>
-    
+
     <article class="mini-card" data-featured-guide-card style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
       <p class="eyebrow">Church &amp; ministry</p>
       <h3>Best Church Giving Offering And Donation Station Supplies</h3>
@@ -5744,7 +5760,7 @@
         <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">Related Amazon.ca picks</a>
       </div>
     </article>
-    
+
     <article class="mini-card" data-featured-guide-card style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
       <p class="eyebrow">Church &amp; ministry</p>
       <h3>Best Church Hospitality Signage And Welcome Table Supplies</h3>
@@ -5754,7 +5770,7 @@
         <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">Related Amazon.ca picks</a>
       </div>
     </article>
-    
+
     <article class="mini-card" data-featured-guide-card style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
       <p class="eyebrow">Church &amp; ministry</p>
       <h3>Best Church Nursery Sanitation And Child Safety Supplies</h3>
@@ -5764,7 +5780,7 @@
         <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">Related Amazon.ca picks</a>
       </div>
     </article>
-    
+
     <article class="mini-card" data-featured-guide-card style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
       <p class="eyebrow">Church &amp; ministry</p>
       <h3>Best Church Parking Outdoor Welcome And Event Signage Supplies</h3>
@@ -5774,7 +5790,7 @@
         <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">Related Amazon.ca picks</a>
       </div>
     </article>
-    
+
   </div>
   <div class="section-head" style="align-items:center; margin:24px 0 12px;">
     <div>
@@ -5784,11 +5800,11 @@
     </div>
   </div>
   <div class="mini-stack" style="gap:12px;">
-    
+
     <details class="mini-card" data-guide-category-summary style="padding:16px; border-radius:16px; background:rgba(255,255,255,0.88);">
       <summary><strong>Admin &amp; paperwork</strong> · 3 guides</summary>
       <div class="grid three" style="margin-top:12px;">
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best admin desk tools for invoices and paperwork</h3>
           <p class="muted">A handy organizer for office, church, creator, and client-delivery spaces that need clearer labels fast.</p>
@@ -5797,7 +5813,7 @@
             <a class="btn ghost" href="/amazon-store/?category=admin-paperwork#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best client onboarding desk setup</h3>
           <p class="muted">For buyers who make money through client work and need cleaner intake, records, scanning, organizing, and delivery handoffs.</p>
@@ -5806,7 +5822,7 @@
             <a class="btn ghost" href="/amazon-store/?category=admin-paperwork#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best invoice, filing, and admin office setup</h3>
           <p class="muted">A practical paperwork add-on for people handling invoices, forms, labels, or notes they should not leave visible on the desk.</p>
@@ -5815,14 +5831,14 @@
             <a class="btn ghost" href="/amazon-store/?category=admin-paperwork#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
       </div>
     </details>
-    
+
     <details class="mini-card" data-guide-category-summary style="padding:16px; border-radius:16px; background:rgba(255,255,255,0.88);">
       <summary><strong>Church &amp; ministry</strong> · 15 guides</summary>
       <div class="grid three" style="margin-top:12px;">
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best Church Choir Worship Music And Rehearsal Support Supplies</h3>
           <p class="muted">Portable worship and choir support item for rehearsal rooms, flexible stages, and temporary music setups.</p>
@@ -5831,7 +5847,7 @@
             <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best Church Event Setup Queue Flow And Portable Room Reset Tools</h3>
           <p class="muted">A practical event-flow pick when churches need calmer direction at foyer sticking points, welcome-night entry points, or coffee-hour lines that suddenly back up.</p>
@@ -5840,7 +5856,7 @@
             <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best Church Giving Offering And Donation Station Supplies</h3>
           <p class="muted">Helps churches keep offering forms, count-room notes, and temporary admin packets sorted instead of falling into one mixed stack after service.</p>
@@ -5849,7 +5865,7 @@
             <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best Church Hospitality Signage And Welcome Table Supplies</h3>
           <p class="muted">A practical guest-follow-up and hospitality upgrade when churches want first-time visitors easier to welcome and capture without overcomplicating the table.</p>
@@ -5858,7 +5874,7 @@
             <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best Church Nursery Sanitation And Child Safety Supplies</h3>
           <p class="muted">A repeat-use cleanup pick for volunteers who need faster wipe-down passes between toy shelves, welcome-desk touchpoints, craft corners, and nursery surfaces.</p>
@@ -5867,7 +5883,7 @@
             <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best Church Parking Outdoor Welcome And Event Signage Supplies</h3>
           <p class="muted">Helps churches route guests and event traffic more clearly before visitors even reach the welcome table.</p>
@@ -5876,7 +5892,7 @@
             <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best Church Prayer Counseling And Care Ministry Room Supplies</h3>
           <p class="muted">Useful when care teams need a cleaner way to capture requests, reflections, and gentle next-step notes without loose paper.</p>
@@ -5885,7 +5901,7 @@
             <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best Church Prayer Team Hospitality Bereavement And Care Meal Support Supplies</h3>
           <p class="muted">A practical hospitality support pick when care teams need steadier transport for casserole pans, soup containers, desserts, and volunteer meal handoffs across multiple homes.</p>
@@ -5894,7 +5910,7 @@
             <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best Church Security Check In And Facility Signage Supplies</h3>
           <p class="muted">Helpful when welcome, hallway, and family check-in teams need the same radios charged, staged, and easier to hand off before the next volunteer block starts.</p>
@@ -5903,7 +5919,7 @@
             <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best Church Service Welcome And Classroom Supplies</h3>
           <p class="muted">A recurring service-flow supply for simpler prep and cleanup on communion weeks.</p>
@@ -5912,7 +5928,7 @@
             <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best Church Small Group Discussion And Room Setup Supplies</h3>
           <p class="muted">Flexible seating category for small groups, overflow rooms, classrooms, and temporary ministry spaces.</p>
@@ -5921,7 +5937,7 @@
             <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Church facilities, janitorial, and safety supplies</h3>
           <p class="muted">A practical hygiene pick when churches want the sanitizing step visible right where families, guests, and volunteers enter.</p>
@@ -5930,7 +5946,7 @@
             <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Church kitchen, coffee, and fellowship supplies</h3>
           <p class="muted">A practical coffee urn for churches that keep welcome tables and fellowship rooms moving without constant refills.</p>
@@ -5939,7 +5955,7 @@
             <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Church office and record-keeping supplies</h3>
           <p class="muted">Useful when volunteers need portable note capture for requests, room checks, supply lists, or service-day follow-up.</p>
@@ -5948,7 +5964,7 @@
             <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Church supplies buying guide</h3>
           <p class="muted">For ministry buyers who need practical supplies organized by function instead of a random shopping list.</p>
@@ -5957,14 +5973,14 @@
             <a class="btn ghost" href="/amazon-store/?category=church-ministry#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
       </div>
     </details>
-    
+
     <details class="mini-card" data-guide-category-summary style="padding:16px; border-radius:16px; background:rgba(255,255,255,0.88);">
       <summary><strong>Creator &amp; calls</strong> · 4 guides</summary>
       <div class="grid three" style="margin-top:12px;">
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best Church Livestream Teaching And Volunteer Coordination Tools</h3>
           <p class="muted">A practical microphone system for services, classrooms, events, and volunteer-run recordings.</p>
@@ -5973,7 +5989,7 @@
             <a class="btn ghost" href="/amazon-store/?category=creator-calls#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best USB microphone upgrades</h3>
           <p class="muted">A practical audio upgrade for people who need clearer calls or Looms without giving up scarce desk space.</p>
@@ -5982,7 +5998,7 @@
             <a class="btn ghost" href="/amazon-store/?category=creator-calls#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best creator recording setup</h3>
           <p class="muted">A low-friction lighting pick for people whose early-morning client reviews, walkthroughs, or coaching calls still look dim without a full creator-lighting rebuild.</p>
@@ -5991,7 +6007,7 @@
             <a class="btn ghost" href="/amazon-store/?category=creator-calls#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Creator gear deals</h3>
           <p class="muted">For creators, consultants, coaches, and service providers who need calls and content to feel more professional without overbuying.</p>
@@ -6000,14 +6016,14 @@
             <a class="btn ghost" href="/amazon-store/?category=creator-calls#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
       </div>
     </details>
-    
+
     <details class="mini-card" data-guide-category-summary style="padding:16px; border-radius:16px; background:rgba(255,255,255,0.88);">
       <summary><strong>Pet home &amp; routines</strong> · 2 guides</summary>
       <div class="grid three" style="margin-top:12px;">
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best cat dental-care basics for gentle home routines</h3>
           <p class="muted">A lower-friction repeat-buy angle for households that can follow through on short wipe-based mouth-care resets more easily than longer brushing sessions between breakfast and bedtime.</p>
@@ -6016,7 +6032,7 @@
             <a class="btn ghost" href="/amazon-store/?category=pet-home#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best pet cameras for home check-ins and peace of mind</h3>
           <p class="muted">Useful when owners mainly want one quick reassurance view covering the litter-room approach, hallway category, and the comfort loop pets follow between those spots.</p>
@@ -6025,14 +6041,14 @@
             <a class="btn ghost" href="/amazon-store/?category=pet-home#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
       </div>
     </details>
-    
+
     <details class="mini-card" data-guide-category-summary style="padding:16px; border-radius:16px; background:rgba(255,255,255,0.88);">
       <summary><strong>Research &amp; reading</strong> · 4 guides</summary>
       <div class="grid three" style="margin-top:12px;">
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best AI research desk setup</h3>
           <p class="muted">Useful when people do research or document work after dark and want a simpler lighting fix before changing the whole desk setup.</p>
@@ -6041,7 +6057,7 @@
             <a class="btn ghost" href="/amazon-store/?category=research-reading#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best Review Desk Lighting And Note Capture Tools</h3>
           <p class="muted">Helps longer research, review, and evening work feel less fatiguing.</p>
@@ -6050,7 +6066,7 @@
             <a class="btn ghost" href="/amazon-store/?category=research-reading#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best resume tailoring and interview desk setup</h3>
           <p class="muted">A strong fit for people working in shared spaces where cleaner call audio and fewer distractions matter more than another decorative accessory.</p>
@@ -6059,7 +6075,7 @@
             <a class="btn ghost" href="/amazon-store/?category=research-reading#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Productivity books and Kindle deals</h3>
           <p class="muted">A practical reading-support pick for people who want printed buyer guides, SOP binders, or workbook references upright during deeper review and note-taking blocks.</p>
@@ -6068,14 +6084,14 @@
             <a class="btn ghost" href="/amazon-store/?category=research-reading#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
       </div>
     </details>
-    
+
     <details class="mini-card" data-guide-category-summary style="padding:16px; border-radius:16px; background:rgba(255,255,255,0.88);">
       <summary><strong>Workspace</strong> · 6 guides</summary>
       <div class="grid three" style="margin-top:12px;">
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best AI Agent Ops Run Review Desk Setup</h3>
           <p class="muted">Helpful when people want one simple place for exports, recordings, screenshots, and local backup files instead of scattering them across a crowded laptop.</p>
@@ -6084,7 +6100,7 @@
             <a class="btn ghost" href="/amazon-store/?category=workspace#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best Sop And Operations Desk Setup</h3>
           <p class="muted">Helps people keep repeat delivery deadlines, review windows, and weekly operating rhythms visible when client work starts slipping behind inbox noise and open tabs.</p>
@@ -6093,7 +6109,7 @@
             <a class="btn ghost" href="/amazon-store/?category=workspace#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best Standing Desk Upgrades For Solo Buyers</h3>
           <p class="muted">For people who want the ergonomic win without rebuilding the whole room.</p>
@@ -6102,7 +6118,7 @@
             <a class="btn ghost" href="/amazon-store/?category=workspace#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best home office setup for solo operators</h3>
           <p class="muted">Useful when people want the laptop parked upright beside a main display so the desk footprint feels calmer between focused work, review blocks, and quick meeting switches.</p>
@@ -6111,7 +6127,7 @@
             <a class="btn ghost" href="/amazon-store/?category=workspace#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Best weekly KPI review workspace</h3>
           <p class="muted">A low-friction support tool for people who want clearer time boundaries and visible planning anchors during reviews, deep-work blocks, or admin catch-up sessions.</p>
@@ -6120,7 +6136,7 @@
             <a class="btn ghost" href="/amazon-store/?category=workspace#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
         <article class="mini-card" style="padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.94);">
           <h3>Home office deals for freelancers</h3>
           <p class="muted">A practical desk-reset angle for people who want larger power bricks, dock cables, and adapter clutter tucked out of sight before buying bigger office furniture changes.</p>
@@ -6129,10 +6145,10 @@
             <a class="btn ghost" href="/amazon-store/?category=workspace#amazon-store-results">See related Amazon.ca picks</a>
           </div>
         </article>
-        
+
       </div>
     </details>
-    
+
   </div>
 </section>
 <section class="section grid two" style="align-items:start;">
@@ -6157,7 +6173,7 @@
     </div>
   </article>
 </section>
-<script>
+<script nonce="twe-static-export-v1">
   (() => {
     const params = new URLSearchParams(window.location.search || '');
     const categorySlug = (params.get('category') || '').trim();
@@ -6185,8 +6201,8 @@
   })();
 </script>
 
-          
-      
+
+
       <section class="email-capture-shell">
         <div class="section-head" style="align-items: center; margin-bottom: 14px;">
           <div>
@@ -6213,13 +6229,13 @@
             <p class="muted">Store notes appear only when they fit the topic. You can leave the list whenever it stops being useful.</p>
           </article>
         </div>
-        
+
         <div class="card" style="padding: 18px; border-radius: 18px; background: rgba(255,255,255,0.76); box-shadow: none;">
           <p class="muted" style="margin-bottom: 0;">Open the signup form in a new tab to join the Watchers Edge list. This keeps the site clean while the list provider securely handles subscriber signup and confirmation.</p>
         </div>
-        
+
       </section>
-      
+
 
       <footer class="footer">
         <p><strong>TheWatchersEdge.ca</strong> is a free customer and community site for practical tools, quick games, church news and events, pet content, helpful resources, and an optional TWE Store.</p>
@@ -6238,10 +6254,10 @@
 
       </main>
     </div>
-    
-    
-    <script src="/static/public_site/twe-premium-header.js?v=20260728b" defer></script>
-    <script src="/static/public_site/twe-v12-command-deck.js?v=20260728c" defer></script>
+
+
+    <script nonce="twe-static-export-v1" src="/static/public_site/twe-premium-header.js?v=20260728b" defer></script>
+    <script nonce="twe-static-export-v1" src="/static/public_site/twe-v12-command-deck.js?v=20260728c" defer></script>
 
     <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
       <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Expanded product image">
@@ -6253,7 +6269,7 @@
 
     <!-- Header search always submits to Store so TWE-owned products, guides, and Amazon.ca affiliate picks stay visibly separated. -->
 
-    <script>
+    <script nonce="twe-static-export-v1">
       (function () {
         const toggle = document.querySelector('[data-nav-menu-toggle]');
         const panel = document.querySelector('[data-nav-menu-panel]');
@@ -6281,7 +6297,7 @@
 
     <!-- Header search always submits to Store so TWE-owned products, guides, and Amazon.ca affiliate picks stay visibly separated. -->
 
-    <script>
+    <script nonce="twe-static-export-v1">
       (function () {
         const widget = document.querySelector('[data-buyer-support-widget]');
         if (!widget) return;

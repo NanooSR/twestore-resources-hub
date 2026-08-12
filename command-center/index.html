@@ -2,12 +2,13 @@
 <html lang="en" data-twe-v12="ready">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; connect-src &#39;self&#39; https://fonts.googleapis.com https://api.open-meteo.com https://geocoding-api.open-meteo.com https://cloudflareinsights.com https://static.cloudflareinsights.com; img-src &#39;self&#39; data: https://m.media-amazon.com; style-src &#39;self&#39; &#39;unsafe-inline&#39; https://fonts.googleapis.com; script-src &#39;self&#39; &#39;nonce-twe-static-export-v1&#39; https://www.googletagmanager.com https://www.clarity.ms https://static.cloudflareinsights.com; font-src &#39;self&#39; https://fonts.gstatic.com; base-uri &#39;self&#39;; form-action &#39;self&#39; mailto:; object-src &#39;none&#39;">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    
-    
-    
-    
+
+
+
+
+
     <meta name="description" content="Use this page when you want a calmer front door into the right store page, resource guide, church path, or support route.">
     <meta property="og:title" content="TheWatchersEdge.ca | Buying guide and support hub">
     <meta property="og:description" content="Use this page when you want a calmer front door into the right store page, resource guide, church path, or support route.">
@@ -27,7 +28,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/static/public_site/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/static/public_site/apple-touch-icon.png">
     <link rel="manifest" href="/static/public_site/site.webmanifest">
-    <script type="application/ld+json">
+    <script nonce="twe-static-export-v1" type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -42,11 +43,11 @@
         ]
       }
     </script>
-    
+
     <title>TheWatchersEdge.ca | Buying guide and support hub</title>
-    
-    
-    
+
+
+
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
       :root {
@@ -3296,7 +3297,7 @@
         .mini-card h3::before { width: 28px; height: 28px; border-radius: 10px; margin-right: 7px; }
       }
 
-    
+
 
       /* 2026-07-07 Agent Mode Premium Sweep V2 — bold Ryan-review layer */
       :root {
@@ -4317,7 +4318,7 @@
           box-shadow: 0 16px 34px rgba(0,126,139,.22), inset 0 1px 0 rgba(255,255,255,.32) !important;
         }
       }
-      
+
 
       /* 2026-07-24 Warm Signal Studio header foundation — compact, light-shaded, colourful, and customer-facing. */
       :root {
@@ -5419,33 +5420,41 @@
 
     </style>
     <link rel="stylesheet" href="/static/public_site/twe-v12-command-deck.css?v=20260809a">
-    <link rel="stylesheet" href="/static/public_site/twe-v12-body-polish.css?v=20260728a">
-    <script>
+    <link rel="stylesheet" href="/static/public_site/twe-v12-body-polish.css?v=20260811a">
+    <script nonce="twe-static-export-v1">
       window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
       window.tweApiUrl = function (path) {
         const base = String(window.TWE_PUBLIC_API_BASE_URL || '').replace(/\/+$/, '');
         const cleanPath = String(path || '').startsWith('/') ? String(path || '') : '/' + String(path || '');
         return base ? base + cleanPath : cleanPath;
       };
+      document.addEventListener('error',event=>{
+        const image=event.target;
+        if (!(image instanceof HTMLImageElement) || !image.dataset.fallbackSrc || image.dataset.fallbackApplied === '1') return;
+        image.dataset.fallbackApplied='1';
+        image.src=image.dataset.fallbackSrc;
+        image.classList.add('is-fallback-image');
+        image.closest('.resource-picture')?.classList.add('is-fallback-image');
+      },true);
     </script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    
-    
-    
-    
-    
+
+
+
+
+
     <div class="shell">
-      
-      
-      
-      
-      
+
+
+
+
+
       <div class="twe-header-slot" data-twe-header-slot role="banner">
       <div class="site-header-band site-header-simple is-route-compact" data-twe-premium-header data-twe-v12-layout="route" data-twe-route-header-p0="true" role="banner" aria-label="Site navigation">
         <nav class="nav" aria-label="The Watchers Edge premium navigation">
-          <a class="brand" data-warm-signal-brand-lockup="true" href="/" aria-label="The Watchers Edge home">
+          <a class="brand" data-warm-signal-brand-lockup="true" href="/">
             <img class="brand-mark" src="/static/public_site/the-watchers-edge-mark.png" alt="The Watchers Edge logo" width="80" height="80" fetchpriority="high" decoding="async">
             <span class="brand-copy">
               <span class="brand-kicker">The Watchers Edge</span>
@@ -5467,7 +5476,7 @@
             <p class="twe-premium-trust-line">Free to explore · No account needed · Store always optional</p>
             <div class="twe-premium-action-row">
               <button class="twe-premium-tool-button" type="button" data-twe-drawer-toggle aria-expanded="false" aria-controls="twe-premium-drawer">My TWE</button>
-              <button class="twe-premium-tool-button" type="button" data-twe-motion-toggle aria-pressed="false">Pause motion</button>
+              <button class="twe-premium-tool-button" type="button" data-twe-motion-toggle aria-pressed="false">Pause header motion</button>
             </div>
             <p class="twe-premium-status" data-twe-status aria-live="polite">Ready when you are.</p>
           </div>
@@ -5478,13 +5487,13 @@
             <button type="submit">Search</button>
           </form>
           <div id="global-nav-panel" class="nav-menu-panel" data-nav-menu-panel hidden>
-          
-          
-          
-          
-            
-          
-          
+
+
+
+
+
+
+
           <div class="nav-links nav-links-primary" role="navigation" aria-label="Primary site navigation">
             <a class="is-start" href="/start-here/">Start Here</a>
             <a class="is-toolbox" href="/toolbox/?cb=toolbox20260711toolsGamesExpansion">Tools</a>
@@ -5520,30 +5529,30 @@
       </div>
 
       <div class="store-sales-banner-grid no-rail">
-        
+
         <main id="main-content" class="store-sales-banner-main" tabindex="-1">
-          
+
 <section class="panel hero split">
   <div class="hero-copy">
     <p class="eyebrow">Buying guide</p>
     <h1>Buying guide and support hub</h1>
     <p class="lede">Use this page when you want a calmer front door into the right store page, resource guide, church path, or support route.</p>
-    
+
     <ul class="hero-summary-list">
-      
+
       <li>Use Store when you already know the type of product or workflow help you want.</li>
-      
+
       <li>Use Resources when you want buyer guidance, comparisons, or church resource links first.</li>
-      
+
       <li>Use the Solo CRM follow-up route below when missed lead follow-up, weekly pipeline review drift, or scattered next steps are the real sticking point.</li>
-      
+
     </ul>
-    
+
     <div class="cta-row" style="margin-top: 0;">
       <a class="btn" href="/support/">Email support</a>
-      
+
       <a class="btn ghost" href="/resources/">Open Amazon fast lanes</a>
-      
+
     </div>
   </div>
   <div class="mini-stack hero-aside-grid">
@@ -5560,19 +5569,19 @@
 
 
 <section class="section grid two">
-  
+
   <article class="mini-card">
     <p class="eyebrow">Helpful detail</p>
     <h3>Best use of this page</h3>
     <p class="muted">This page helps visitors choose the right next path without getting stuck between store browsing, church resources, and support questions.</p>
   </article>
-  
+
   <article class="mini-card">
     <p class="eyebrow">Helpful detail</p>
     <h3>A clearer next click</h3>
     <p class="muted">If you are unsure where to begin, start here instead of guessing between multiple tabs or category pages.</p>
   </article>
-  
+
 </section>
 
 
@@ -5582,17 +5591,17 @@
   <p class="eyebrow">What to do next</p>
   <h2>What to do next</h2>
   <ul class="bullet-list">
-    
+
     <li>Use Store when you already know the type of product or workflow help you want.</li>
-    
+
     <li>Use Resources when you want buyer guidance, comparisons, or church resource links first.</li>
-    
+
     <li>Use the Solo CRM follow-up route below when missed lead follow-up, weekly pipeline review drift, or scattered next steps are the real sticking point.</li>
-    
+
     <li>Use the Amazon quick links below when you already know the problem and want the fastest route into approved picks.</li>
-    
+
     <li>Use Support when you need help with fit, access, or the right next route.</li>
-    
+
   </ul>
 </section>
 
@@ -5601,125 +5610,125 @@
   <p class="eyebrow">Helpful next paths</p>
   <h2>Helpful next paths</h2>
   <div class="grid three">
-    
+
     <article class="mini-card">
       <h3>Open guided start</h3>
       <p class="muted">Use Start Here when you want the quickest calm path into the right shopping need before comparing products or categories.</p>
       <a class="card-link" href="/start-here/">Open guided start →</a>
     </article>
-    
+
     <article class="mini-card">
       <h3>Open Amazon fast lanes</h3>
       <p class="muted">Use Resources when you already know the kind of workspace, admin, creator, research, church, or quick-win problem you want to solve first.</p>
       <a class="card-link" href="/resources/">Open Amazon fast lanes →</a>
     </article>
-    
+
     <article class="mini-card">
       <h3>Open Solo CRM route</h3>
       <p class="muted">Use this when lead follow-up, next-step visibility, or weekly pipeline review discipline is the real sticking point and you want the tightest Amazon-first desk guide.</p>
       <a class="card-link" href="/best-solo-crm-follow-up-desk-setup.html">Open Solo CRM route →</a>
     </article>
-    
+
     <article class="mini-card">
       <h3>Browse the store</h3>
       <p class="muted">Use Store when you already know the kind of product, kit, or workflow help you want to open next.</p>
       <a class="card-link" href="/store/">Browse the store →</a>
     </article>
-    
+
     <article class="mini-card">
       <h3>Review collections</h3>
       <p class="muted">Use Collections when you want to compare offer families and paired paths before choosing a product page.</p>
       <a class="card-link" href="/collections/">Review collections →</a>
     </article>
-    
+
     <article class="mini-card">
       <h3>Open church buying guide</h3>
       <p class="muted">Use Church when you want practical help for ministry, hospitality, classrooms, service-day prep, or volunteer support.</p>
       <a class="card-link" href="/church/">Open church buying guide →</a>
     </article>
-    
+
     <article class="mini-card">
       <h3>Open support guidance</h3>
       <p class="muted">Use Support when you need help with product fit, access, order context, or the fastest next route.</p>
       <a class="card-link" href="/support/">Open support guidance →</a>
     </article>
-    
+
   </div>
 </section>
 
 
 <section class="section grid two">
-  
+
   <article class="card">
     <p class="eyebrow">Customer information</p>
     <h2>Recommended starting points</h2>
     <p class="muted">Most visitors should choose one of these paths based on what they need right now.</p>
-    
+
     <ul class="bullet-list">
-      
+
       <li>Store for live product pages and checkout links</li>
-      
+
       <li>Start Here for quick orientation</li>
-      
+
       <li>Church for ministry-focused buying paths</li>
-      
+
     </ul>
-    
+
   </article>
-  
+
   <article class="card">
     <p class="eyebrow">Customer information</p>
     <h2>When support is the better choice</h2>
     <p class="muted">If your question is about delivery, access, product fit, or which path makes the most sense, support is usually the fastest next step.</p>
-    
+
     <ul class="bullet-list">
-      
+
       <li>Order questions</li>
-      
+
       <li>Access issues</li>
-      
+
       <li>Pre-purchase clarification</li>
-      
+
     </ul>
-    
+
   </article>
-  
+
 </section>
 
 <section class="section card">
   <p class="eyebrow">Helpful next links</p>
   <h2>Continue browsing</h2>
   <div class="pill-row">
-    
+
     <a class="pill" href="/resources/">Open Amazon fast lanes</a>
-    
+
     <a class="pill" href="/best-solo-crm-follow-up-desk-setup.html">Solo CRM follow-up route</a>
-    
+
     <a class="pill" href="/resources/?category=workspace&amp;q=standing+desk">Workspace picks</a>
-    
+
     <a class="pill" href="/resources/?category=admin-paperwork&amp;q=scanner+filing">Admin picks</a>
-    
+
     <a class="pill" href="/resources/?category=creator-calls&amp;q=microphone+webcam">Creator picks</a>
-    
+
     <a class="pill" href="/resources/?category=research-reading&amp;q=monitor+desk+lighting">Research picks</a>
-    
+
     <a class="pill" href="/resources/?category=church-ministry&amp;q=church+welcome+coffee">Church picks</a>
-    
+
     <a class="pill" href="/best-review-desk-lighting-and-note-capture-tools.html">Quick-win route</a>
-    
+
     <a class="pill" href="/store/">Browse the store</a>
-    
+
     <a class="pill" href="/support/">Open support</a>
-    
+
     <a class="pill" href="/start-here/">Start here first</a>
-    
+
     <a class="pill" href="/collections/">Review collections</a>
-    
+
   </div>
 </section>
 
-          
-      
+
+
       <section class="email-capture-shell">
         <div class="section-head" style="align-items: center; margin-bottom: 14px;">
           <div>
@@ -5746,13 +5755,13 @@
             <p class="muted">Store notes appear only when they fit the topic. You can leave the list whenever it stops being useful.</p>
           </article>
         </div>
-        
+
         <div class="card" style="padding: 18px; border-radius: 18px; background: rgba(255,255,255,0.76); box-shadow: none;">
           <p class="muted" style="margin-bottom: 0;">Open the signup form in a new tab to join the Watchers Edge list. This keeps the site clean while the list provider securely handles subscriber signup and confirmation.</p>
         </div>
-        
+
       </section>
-      
+
 
       <footer class="footer">
         <p><strong>TheWatchersEdge.ca</strong> is a free customer and community site for practical tools, quick games, church news and events, pet content, helpful resources, and an optional TWE Store.</p>
@@ -5771,10 +5780,10 @@
 
       </main>
     </div>
-    
-    
-    <script src="/static/public_site/twe-premium-header.js?v=20260728b" defer></script>
-    <script src="/static/public_site/twe-v12-command-deck.js?v=20260809a" defer></script>
+
+
+    <script nonce="twe-static-export-v1" src="/static/public_site/twe-premium-header.js?v=20260728b" defer></script>
+    <script nonce="twe-static-export-v1" src="/static/public_site/twe-v12-command-deck.js?v=20260809a" defer></script>
 
     <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
       <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Expanded product image">
@@ -5786,7 +5795,7 @@
 
     <!-- Header search always submits to Store so TWE-owned products, guides, and Amazon.ca affiliate picks stay visibly separated. -->
 
-    <script>
+    <script nonce="twe-static-export-v1">
       (function () {
         const toggle = document.querySelector('[data-nav-menu-toggle]');
         const panel = document.querySelector('[data-nav-menu-panel]');
@@ -5814,7 +5823,7 @@
 
     <!-- Header search always submits to Store so TWE-owned products, guides, and Amazon.ca affiliate picks stay visibly separated. -->
 
-    <script>
+    <script nonce="twe-static-export-v1">
       (function () {
         const widget = document.querySelector('[data-buyer-support-widget]');
         if (!widget) return;

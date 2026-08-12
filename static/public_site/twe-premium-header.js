@@ -88,7 +88,7 @@
     header.classList.toggle('motion-paused', paused);
     if (motion) {
       motion.setAttribute('aria-pressed', paused ? 'true' : 'false');
-      motion.textContent = paused ? 'Motion paused' : 'Pause motion';
+      motion.textContent = paused ? 'Header motion paused' : 'Pause header motion';
     }
   };
   motion?.addEventListener('click', () => {

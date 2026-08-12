@@ -2,12 +2,13 @@
 <html lang="en" data-twe-v12="ready">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; connect-src &#39;self&#39; https://fonts.googleapis.com https://api.open-meteo.com https://geocoding-api.open-meteo.com https://cloudflareinsights.com https://static.cloudflareinsights.com; img-src &#39;self&#39; data: https://m.media-amazon.com; style-src &#39;self&#39; &#39;unsafe-inline&#39; https://fonts.googleapis.com; script-src &#39;self&#39; &#39;nonce-twe-static-export-v1&#39; https://www.googletagmanager.com https://www.clarity.ms https://static.cloudflareinsights.com; font-src &#39;self&#39; https://fonts.gstatic.com; base-uri &#39;self&#39;; form-action &#39;self&#39; mailto:; object-src &#39;none&#39;">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    
-    
-    
-    
+
+
+
+
+
     <meta name="description" content="Browse The Watchers Edge Store for digital kits, buying guides, Amazon.ca picks, and clear support paths.">
     <meta property="og:title" content="TheWatchersEdge.ca | Store">
     <meta property="og:description" content="Browse The Watchers Edge Store for digital kits, buying guides, Amazon.ca picks, and clear support paths.">
@@ -27,7 +28,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/static/public_site/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/static/public_site/apple-touch-icon.png">
     <link rel="manifest" href="/static/public_site/site.webmanifest">
-    <script type="application/ld+json">
+    <script nonce="twe-static-export-v1" type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -42,11 +43,11 @@
         ]
       }
     </script>
-    
+
     <title>TheWatchersEdge.ca | Store</title>
-    
-    
-    
+
+
+
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
       :root {
@@ -3296,7 +3297,7 @@
         .mini-card h3::before { width: 28px; height: 28px; border-radius: 10px; margin-right: 7px; }
       }
 
-    
+
 
       /* 2026-07-07 Agent Mode Premium Sweep V2 — bold Ryan-review layer */
       :root {
@@ -4317,7 +4318,7 @@
           box-shadow: 0 16px 34px rgba(0,126,139,.22), inset 0 1px 0 rgba(255,255,255,.32) !important;
         }
       }
-      
+
 
       /* 2026-07-24 Warm Signal Studio header foundation — compact, light-shaded, colourful, and customer-facing. */
       :root {
@@ -5419,33 +5420,41 @@
 
     </style>
     <link rel="stylesheet" href="/static/public_site/twe-v12-command-deck.css?v=20260728c">
-    <link rel="stylesheet" href="/static/public_site/twe-v12-body-polish.css?v=20260728a">
-    <script>
+    <link rel="stylesheet" href="/static/public_site/twe-v12-body-polish.css?v=20260811a">
+    <script nonce="twe-static-export-v1">
       window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
       window.tweApiUrl = function (path) {
         const base = String(window.TWE_PUBLIC_API_BASE_URL || '').replace(/\/+$/, '');
         const cleanPath = String(path || '').startsWith('/') ? String(path || '') : '/' + String(path || '');
         return base ? base + cleanPath : cleanPath;
       };
+      document.addEventListener('error',event=>{
+        const image=event.target;
+        if (!(image instanceof HTMLImageElement) || !image.dataset.fallbackSrc || image.dataset.fallbackApplied === '1') return;
+        image.dataset.fallbackApplied='1';
+        image.src=image.dataset.fallbackSrc;
+        image.classList.add('is-fallback-image');
+        image.closest('.resource-picture')?.classList.add('is-fallback-image');
+      },true);
     </script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    
-    
-    
-    
-    
+
+
+
+
+
     <div class="shell">
-      
-      
-      
-      
-      
+
+
+
+
+
       <div class="twe-header-slot" data-twe-header-slot>
       <div class="site-header-band site-header-simple is-route-compact" data-twe-premium-header data-twe-v12-layout="route" role="banner" aria-label="Site navigation">
         <nav class="nav" aria-label="The Watchers Edge premium navigation">
-          <a class="brand" data-warm-signal-brand-lockup="true" href="/" aria-label="The Watchers Edge home">
+          <a class="brand" data-warm-signal-brand-lockup="true" href="/">
             <img class="brand-mark" src="/static/public_site/the-watchers-edge-mark.png" alt="The Watchers Edge logo" width="80" height="80" fetchpriority="high" decoding="async">
             <span class="brand-copy">
               <span class="brand-kicker">The Watchers Edge</span>
@@ -5467,7 +5476,7 @@
             <p class="twe-premium-trust-line">Free to explore · No account needed · Store always optional</p>
             <div class="twe-premium-action-row">
               <button class="twe-premium-tool-button" type="button" data-twe-drawer-toggle aria-expanded="false" aria-controls="twe-premium-drawer">My TWE</button>
-              <button class="twe-premium-tool-button" type="button" data-twe-motion-toggle aria-pressed="false">Pause motion</button>
+              <button class="twe-premium-tool-button" type="button" data-twe-motion-toggle aria-pressed="false">Pause header motion</button>
             </div>
             <p class="twe-premium-status" data-twe-status aria-live="polite">Ready when you are.</p>
           </div>
@@ -5478,13 +5487,13 @@
             <button type="submit">Search</button>
           </form>
           <div id="global-nav-panel" class="nav-menu-panel" data-nav-menu-panel hidden>
-          
-          
-          
-          
-            
-          
-          
+
+
+
+
+
+
+
           <div class="nav-links nav-links-primary" role="navigation" aria-label="Primary site navigation">
             <a class="is-start" href="/start-here/">Start Here</a>
             <a class="is-toolbox" href="/toolbox/?cb=toolbox20260711toolsGamesExpansion">Tools</a>
@@ -5520,9 +5529,9 @@
       </div>
 
       <div class="store-sales-banner-grid no-rail">
-        
+
         <main id="main-content" class="store-sales-banner-main" tabindex="-1">
-          
+
 <section class="panel hero store-hero-panel" data-sol-store-landing="reduced-premium" style="padding-bottom: 22px;">
   <div class="store-hero-intro">
     <div class="store-hero-copy">
@@ -5582,42 +5591,42 @@
     <article class="mini-card" id="store-top-match-product" style="padding: 18px; border-radius: 18px;">
       <p class="eyebrow">Matching digital kit</p>
       <div data-top-match-body>
-        
-        
+
+
         <a href="/store/the-watchers-edge-botops-toolkit/" aria-label="Review The Watchers Edge BotOps Toolkit" style="display:block; margin-bottom: 14px; border-radius: 14px; overflow:hidden; border: 1px solid var(--line-strong); background: #0b1628;">
           <picture class="responsive-product-picture" style="display: contents;">
-<source data-responsive-format="webp" sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1100px) 44vw, 360px" srcset="/static/public_site/product_previews/_responsive/the-watchers-edge-botops-toolkit/01_the_watchers_edge_botops_toolkit_hero.w640.webp 640w, /static/public_site/product_previews/_responsive/the-watchers-edge-botops-toolkit/01_the_watchers_edge_botops_toolkit_hero.w960.webp 960w" type="image/webp"/>
-<img alt="Preview image for The Watchers Edge BotOps Toolkit" height="900" loading="lazy" src="/static/public_site/product_previews/the-watchers-edge-botops-toolkit/01_the_watchers_edge_botops_toolkit_hero.png" width="1600"/>
+  <source type="image/webp" data-responsive-format="webp" srcset="/static/public_site/product_previews/_responsive/the-watchers-edge-botops-toolkit/01_the_watchers_edge_botops_toolkit_hero.w640.webp 640w, /static/public_site/product_previews/_responsive/the-watchers-edge-botops-toolkit/01_the_watchers_edge_botops_toolkit_hero.w960.webp 960w" sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1100px) 44vw, 360px">
+  <img src="/static/public_site/product_previews/the-watchers-edge-botops-toolkit/01_the_watchers_edge_botops_toolkit_hero.png" alt="Preview image for The Watchers Edge BotOps Toolkit" width="1600" height="900" loading="lazy">
 </picture>
         </a>
-        
+
         <h3 style="margin-bottom: 6px;"><a href="/store/the-watchers-edge-botops-toolkit/" style="text-decoration:none;">The Watchers Edge BotOps Toolkit</a></h3>
         <p class="muted">Organize bot-operation notes, incident reviews, and AI-assisted debugging prompts without turning messy logs into risky guesswork.</p>
         <div class="cta-row" style="margin-top: 0;">
           <a class="btn" href="/store/the-watchers-edge-botops-toolkit/">See what's inside</a>
           <a class="btn secondary" href="https://nanoojr.gumroad.com/l/ltusy" target="_blank" rel="noopener">Buy on Gumroad</a>
         </div>
-        
+
       </div>
     </article>
     <article class="mini-card" id="store-top-match-resource" style="padding: 18px; border-radius: 18px; background: rgba(255,241,214,0.50); display:none;">
       <p class="eyebrow">Matching Amazon pick</p>
       <div data-top-match-body>
-        
+
       </div>
     </article>
     <article class="mini-card" id="store-top-match-guide" style="padding: 18px; border-radius: 18px; background: rgba(246,243,238,0.92);">
       <p class="eyebrow">Matching buying guide</p>
       <div data-top-match-body>
-        
-        
+
+
         <h3 style="margin-bottom: 6px;">Best admin desk tools for invoices and paperwork</h3>
         <p class="muted">A handy organizer for office, church, creator, and client-delivery spaces that need clearer labels fast.</p>
         <div class="cta-row" style="margin-top: 0;">
           <a class="btn" href="https://thewatchersedge.ca/best-admin-desk-tools-for-invoices-and-paperwork.html">Read the guide</a>
           <a class="btn ghost" href="/resources/?category=admin-paperwork">Browse category</a>
         </div>
-        
+
       </div>
     </article>
   </div>
@@ -5746,20 +5755,20 @@
       <h2 style="margin-bottom: 6px;">Then compare three live digital kits</h2>
       <p class="muted" style="margin-bottom: 0; max-width: 860px;">After the Amazon picks, these digital kits help with planning, follow-up, paperwork, client delivery, and practical business cleanup.</p>
     </div>
-    <a class="pill is-accent" href="/store-browse/#store-product-results">Jump to all 47 offers</a>
+    <a class="pill is-accent" href="/store-browse/#store-product-results">Jump to all 24 offers</a>
   </div>
   <div class="grid three store-front-product-grid">
-    
+
     <article class="mini-card" style="padding: 18px; border-radius: 18px; background: rgba(255,255,255,0.94);">
-      
+
       <a class="product-preview-card product-preview-frame" data-product-specific-preview="twe-operator-systems-bundle" href="/store/twe-operator-systems-bundle/" aria-label="Review TWE Operator Systems Bundle" style="display:block; margin-bottom: 14px; border-radius: 14px; overflow:hidden; border: 1px solid var(--line-strong); background: #0b1628;">
         <picture class="responsive-product-picture" style="display: contents;">
-<source data-responsive-format="webp" sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1100px) 30vw, 360px" srcset="/static/public_site/product_previews/_responsive/twe-operator-systems-bundle/00_square_thumbnail.w640.webp 640w, /static/public_site/product_previews/_responsive/twe-operator-systems-bundle/00_square_thumbnail.w960.webp 960w" type="image/webp"/>
-<img alt="Preview image for TWE Operator Systems Bundle" height="1200" loading="lazy" src="/static/public_site/product_previews/twe-operator-systems-bundle/00_square_thumbnail.png?v=20260721-card3" width="1200"/>
+  <source type="image/webp" data-responsive-format="webp" srcset="/static/public_site/product_previews/_responsive/twe-operator-systems-bundle/00_square_thumbnail.w640.webp 640w, /static/public_site/product_previews/_responsive/twe-operator-systems-bundle/00_square_thumbnail.w960.webp 960w" sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1100px) 30vw, 360px">
+  <img src="/static/public_site/product_previews/twe-operator-systems-bundle/00_square_thumbnail.png?v=20260721-card3" alt="Preview image for TWE Operator Systems Bundle" width="1200" height="1200" loading="lazy">
 </picture>
         <span class="product-preview-copy"><strong>TWE Operator Systems Bundle</strong></span>
       </a>
-      
+
       <p class="eyebrow">gumroad · CAD $112.00</p>
       <h3 style="margin-bottom: 6px;"><a href="/store/twe-operator-systems-bundle/" style="text-decoration:none;">TWE Operator Systems Bundle</a></h3>
       <p class="muted">Get five practical operator systems in one stack so you can manage follow-up, onboarding, SOPs, cash-flow visibility, and AI output review without building every workflow from scratch.</p>
@@ -5779,17 +5788,17 @@
         <a class="btn secondary" href="https://nanoojr.gumroad.com/l/operator-systems-bundle" target="_blank" rel="noopener">Buy on Gumroad</a>
       </div>
     </article>
-    
+
     <article class="mini-card" style="padding: 18px; border-radius: 18px; background: rgba(255,255,255,0.94);">
-      
+
       <a class="product-preview-card product-preview-frame" data-product-specific-preview="twetrade-bot-builder-workbook" href="/store/twetrade-bot-builder-workbook/" aria-label="Review TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit" style="display:block; margin-bottom: 14px; border-radius: 14px; overflow:hidden; border: 1px solid var(--line-strong); background: #0b1628;">
         <picture class="responsive-product-picture" style="display: contents;">
-<source data-responsive-format="webp" sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1100px) 30vw, 360px" srcset="/static/public_site/product_previews/_responsive/twetrade-bot-builder-workbook/00_square_thumbnail.w640.webp 640w, /static/public_site/product_previews/_responsive/twetrade-bot-builder-workbook/00_square_thumbnail.w960.webp 960w" type="image/webp"/>
-<img alt="Preview image for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit" height="1200" loading="lazy" src="/static/public_site/product_previews/twetrade-bot-builder-workbook/00_square_thumbnail.png?v=20260721-card3" width="1200"/>
+  <source type="image/webp" data-responsive-format="webp" srcset="/static/public_site/product_previews/_responsive/twetrade-bot-builder-workbook/00_square_thumbnail.w640.webp 640w, /static/public_site/product_previews/_responsive/twetrade-bot-builder-workbook/00_square_thumbnail.w960.webp 960w" sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1100px) 30vw, 360px">
+  <img src="/static/public_site/product_previews/twetrade-bot-builder-workbook/00_square_thumbnail.png?v=20260721-card3" alt="Preview image for TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit" width="1200" height="1200" loading="lazy">
 </picture>
         <span class="product-preview-copy"><strong>TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit</strong></span>
       </a>
-      
+
       <p class="eyebrow">gumroad · CAD $59.00</p>
       <h3 style="margin-bottom: 6px;"><a href="/store/twetrade-bot-builder-workbook/" style="text-decoration:none;">TWETrade Bot Builder Workbook — Project Planning &amp; Build Kit</a></h3>
       <p class="muted">Plan, organize, document, and review a serious trading-bot build with premium worksheets, click-to-enlarge customer-safe interface examples, expanded AI prompt packs, and safer paper-testing structure before live-risk decisions enter the picture.</p>
@@ -5809,17 +5818,17 @@
         <a class="btn secondary" href="https://nanoojr.gumroad.com/l/twetrade-bot-builder-workbook" target="_blank" rel="noopener">Buy on Gumroad</a>
       </div>
     </article>
-    
+
     <article class="mini-card" style="padding: 18px; border-radius: 18px; background: rgba(255,255,255,0.94);">
-      
+
       <a class="product-preview-card product-preview-frame" data-product-specific-preview="twe-amazon-affiliate-store-quickstart-kit" href="/store/twe-amazon-affiliate-store-quickstart-kit/" aria-label="Review Amazon Affiliate Store Quickstart Kit — Setup Guide, Storefront Blueprint &amp; Link Tracker" style="display:block; margin-bottom: 14px; border-radius: 14px; overflow:hidden; border: 1px solid var(--line-strong); background: #0b1628;">
         <picture class="responsive-product-picture" style="display: contents;">
-<source data-responsive-format="webp" sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1100px) 30vw, 360px" srcset="/static/public_site/product_previews/_responsive/twe-amazon-affiliate-store-quickstart-kit/00_square_thumbnail.w640.webp 640w, /static/public_site/product_previews/_responsive/twe-amazon-affiliate-store-quickstart-kit/00_square_thumbnail.w960.webp 960w" type="image/webp"/>
-<img alt="Preview image for Amazon Affiliate Store Quickstart Kit — Setup Guide, Storefront Blueprint &amp; Link Tracker" height="1200" loading="lazy" src="/static/public_site/product_previews/twe-amazon-affiliate-store-quickstart-kit/00_square_thumbnail.png?v=20260721-card3" width="1200"/>
+  <source type="image/webp" data-responsive-format="webp" srcset="/static/public_site/product_previews/_responsive/twe-amazon-affiliate-store-quickstart-kit/00_square_thumbnail.w640.webp 640w, /static/public_site/product_previews/_responsive/twe-amazon-affiliate-store-quickstart-kit/00_square_thumbnail.w960.webp 960w" sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1100px) 30vw, 360px">
+  <img src="/static/public_site/product_previews/twe-amazon-affiliate-store-quickstart-kit/00_square_thumbnail.png?v=20260721-card3" alt="Preview image for Amazon Affiliate Store Quickstart Kit — Setup Guide, Storefront Blueprint &amp; Link Tracker" width="1200" height="1200" loading="lazy">
 </picture>
         <span class="product-preview-copy"><strong>Amazon Affiliate Store Quickstart Kit — Setup Guide, Storefront Blueprint &amp; Link Tracker</strong></span>
       </a>
-      
+
       <p class="eyebrow">gumroad · CAD $41.00</p>
       <h3 style="margin-bottom: 6px;"><a href="/store/twe-amazon-affiliate-store-quickstart-kit/" style="text-decoration:none;">Amazon Affiliate Store Quickstart Kit — Setup Guide, Storefront Blueprint &amp; Link Tracker</a></h3>
       <p class="muted">Learn how to set up Amazon affiliate links, organize a basic resource storefront, and start a simple monetized publishing workflow — without pretending income is guaranteed.</p>
@@ -5839,7 +5848,7 @@
         <a class="btn secondary" href="https://nanoojr.gumroad.com/l/amazon-affiliate-store-quickstart-kit" target="_blank" rel="noopener">Buy on Gumroad</a>
       </div>
     </article>
-    
+
   </div>
   <p class="muted" style="margin-top: 12px; margin-bottom: 0;"><strong>Before you click away:</strong> Product pages help you check the fit first. You will see the latest price, delivery details, and seller terms on the checkout page.</p>
 </section>
@@ -5935,17 +5944,17 @@
       <p class="lede" style="margin-top: 12px; max-width: 760px;">Use the dedicated TWE Amazon Store when you want the fuller Amazon.ca shortlist instead of the quick Store path.</p>
       <p class="muted">Use the Amazon Store for searchable local approved picks, clear affiliate disclosure, and compliance notes. Live price, availability, ratings, reviews, seller terms, shipping, and checkout stay on Amazon.ca.</p>
       <div class="advanced-amazon-chip-row" role="group" aria-label="Popular Amazon Store search starters">
-        
+
         <a class="advanced-amazon-chip" href="/amazon-store/?q=ergonomic+office+chair">ergonomic office chair</a>
-        
+
         <a class="advanced-amazon-chip" href="/amazon-store/?q=portable+monitor">portable monitor</a>
-        
+
         <a class="advanced-amazon-chip" href="/amazon-store/?q=church+office+supplies">church office supplies</a>
-        
+
         <a class="advanced-amazon-chip" href="/amazon-store/?q=standing+desk">standing desk</a>
-        
+
         <a class="advanced-amazon-chip" href="/amazon-store/?q=label+maker">label maker</a>
-        
+
       </div>
     </div>
     <div class="advanced-amazon-form" role="group" aria-label="Amazon Store shortcut">
@@ -6026,7 +6035,7 @@
     </div>
   </div>
 </section>
-<script>
+<script nonce="twe-static-export-v1">
 (() => {
   const shell = document.querySelector('[data-advanced-amazon-search]');
   if (!shell) return;
@@ -6493,8 +6502,8 @@
 </script>
 
 
-          
-      
+
+
       <section class="email-capture-shell">
         <div class="section-head" style="align-items: center; margin-bottom: 14px;">
           <div>
@@ -6521,13 +6530,13 @@
             <p class="muted">Store notes appear only when they fit the topic. You can leave the list whenever it stops being useful.</p>
           </article>
         </div>
-        
+
         <div class="card" style="padding: 18px; border-radius: 18px; background: rgba(255,255,255,0.76); box-shadow: none;">
           <p class="muted" style="margin-bottom: 0;">Open the signup form in a new tab to join the Watchers Edge list. This keeps the site clean while the list provider securely handles subscriber signup and confirmation.</p>
         </div>
-        
+
       </section>
-      
+
 
       <footer class="footer">
         <p><strong>TheWatchersEdge.ca</strong> is a free customer and community site for practical tools, quick games, church news and events, pet content, helpful resources, and an optional TWE Store.</p>
@@ -6546,10 +6555,10 @@
 
       </main>
     </div>
-    
-    
-    <script src="/static/public_site/twe-premium-header.js?v=20260728b" defer></script>
-    <script src="/static/public_site/twe-v12-command-deck.js?v=20260728c" defer></script>
+
+
+    <script nonce="twe-static-export-v1" src="/static/public_site/twe-premium-header.js?v=20260728b" defer></script>
+    <script nonce="twe-static-export-v1" src="/static/public_site/twe-v12-command-deck.js?v=20260728c" defer></script>
 
     <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
       <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Expanded product image">
@@ -6561,7 +6570,7 @@
 
     <!-- Header search always submits to Store so TWE-owned products, guides, and Amazon.ca affiliate picks stay visibly separated. -->
 
-    <script>
+    <script nonce="twe-static-export-v1">
       (function () {
         const toggle = document.querySelector('[data-nav-menu-toggle]');
         const panel = document.querySelector('[data-nav-menu-panel]');
@@ -6589,7 +6598,7 @@
 
     <!-- Header search always submits to Store so TWE-owned products, guides, and Amazon.ca affiliate picks stay visibly separated. -->
 
-    <script>
+    <script nonce="twe-static-export-v1">
       (function () {
         const widget = document.querySelector('[data-buyer-support-widget]');
         if (!widget) return;
