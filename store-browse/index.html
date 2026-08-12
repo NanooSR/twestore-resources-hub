@@ -6019,6 +6019,10 @@
 </div>
 
 
+<div class="section-head store-browse-orientation" style="align-items:center; margin-bottom: 12px;">
+  <p class="muted" style="margin:0;">Store Browse keeps active search and filter choices visible below.</p>
+  <a class="pill is-accent" href="#store-browse-controls">Review or change Store Browse filters</a>
+</div>
 <section class="section card store-filter-panel" id="store-browse-controls" style="padding: 24px; border-radius: 22px; background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(249,247,242,0.94));">
   <div class="section-head" style="margin-bottom: 16px; align-items: center;">
     <div>
@@ -6118,7 +6122,7 @@
 
     <span class="pill">Full store browse</span>
     <span class="pill">55 matching results</span>
-    <a class="pill is-accent" href="/store/">Clear all filters</a>
+    <a class="pill is-accent" href="/store-browse/">Clear all filters</a>
 
   </div>
   <article id="store-search-ran" class="mini-card store-search-ran" style=" display:none;">
@@ -6164,6 +6168,7 @@
     <div class="section-head" style="align-items: center; margin-bottom: 12px;">
       <div>
         <p class="eyebrow">Guide page results</p>
+        <p class="muted"><strong>Related buyer guides — not product offers.</strong></p>
         <h3 style="margin-bottom: 6px;">Matching buyer guides</h3>
         <p class="muted" style="margin-bottom: 0;">These guide pages help shoppers compare categories, understand fit, and click through to Amazon.ca more confidently without turning the site into an Amazon lookalike.</p>
       </div>
@@ -9126,6 +9131,13 @@
 
 (() => {
   const params = new URLSearchParams(window.location.search);
+  const resetStoreHref = `${window.location.pathname}`;
+  const removalHref = name => {
+    const next = new URLSearchParams(window.location.search);
+    next.delete(name);
+    const queryString = next.toString();
+    return `${window.location.pathname}${queryString ? `?${queryString}` : ''}#store-filter-summary`;
+  };
   const query = (params.get('q') || '').trim();
   const selectedFamily = (params.get('family') || '').trim();
   const selectedPlatform = (params.get('platform') || '').trim();
@@ -9210,7 +9222,7 @@
           <h2>Try these next</h2>
           <p class="muted">Keep the filtered view compact. Use one of these wider paths if this search feels too narrow.</p>
           <div class="mini-stack" style="gap: 10px; margin-top: 12px;">
-            <a class="btn secondary" href="/store/">Reset store view</a>
+            <a class="btn secondary" href="${escapeHtml(resetStoreHref)}">Reset store view</a>
             <a class="btn ghost" href="/amazon-store/">Open Amazon Store</a>
             <a class="btn ghost" href="/collections/">Browse collections</a>
             <a class="btn ghost" href="/start-here/">Use Start Here</a>
@@ -9327,12 +9339,13 @@
     if (labelFallbacks[name]?.[value]) return labelFallbacks[name][value];
     return (value || '').replace(/[-_]+/g, ' ').replace(/\b\w/g, letter => letter.toUpperCase());
   };
-  const activeLabels = [];
+  const activeFilters = [];
   for (const [label, name, value] of [['Family', 'family', selectedFamily], ['Platform', 'platform', selectedPlatform], ['Outcome', 'outcome', selectedOutcome], ['Amazon category', 'resource_category', selectedResourceCategory]]) {
     if (!value) continue;
-    activeLabels.push(`${label}: ${readableFilterValue(name, value)}`);
+    activeFilters.push({label, name, value: readableFilterValue(name, value)});
   }
-  if (query) activeLabels.push(`Search: ${query}`);
+  if (query) activeFilters.push({label: 'Search', name: 'q', value: query});
+  const activeLabels = activeFilters.map(({label, value}) => `${label}: ${value}`);
   const totalVisible = visible + visibleResources + visibleGuides;
   const summaryLabel = activeLabels.length ? activeLabels.join(' · ') : 'Filtered results';
   const setMetaContent = (selector, value) => {
@@ -9367,7 +9380,7 @@
     const summaryTitle = document.getElementById('store-filter-summary-title');
     const summaryCopy = document.getElementById('store-filter-summary-copy');
     if (activePills) {
-      activePills.innerHTML = '<span class="pill">Current search scope</span>' + activeLabels.map(label => `<span class="pill">${escapeHtml(label)}</span>`).join('') + `<span class="pill">${totalVisible} matching result${totalVisible === 1 ? '' : 's'}</span><a class="pill is-accent" href="/store/">Clear all filters</a>`;
+      activePills.innerHTML = '<span class="pill">Current search scope</span>' + activeFilters.map(({label, name, value}) => `<a class="pill" aria-label="${escapeHtml(`Remove ${label.toLowerCase()} filter: ${value}`)}" href="${escapeHtml(removalHref(name))}">${escapeHtml(`${label}: ${value}`)} ×</a>`).join('') + `<span class="pill">${totalVisible} matching result${totalVisible === 1 ? '' : 's'}</span><a class="pill is-accent" href="${escapeHtml(resetStoreHref)}">Clear all filters</a>`;
     }
     if (summaryTitle) summaryTitle.textContent = activeLabels.length ? `Filtered view: ${summaryLabel}` : 'Filtered results are ready';
     if (summaryCopy) {

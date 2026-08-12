@@ -677,3 +677,7 @@ main.wrap {
 #church-featured-block {
   margin-top: 8px;
 }
+
+.quick-shop-section .section-head {
+  margin-top: 0;
+}
