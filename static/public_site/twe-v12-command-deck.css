@@ -429,6 +429,7 @@ html[data-twe-v12="ready"] [data-twe-premium-header] .twe-premium-destinations {
 
 html[data-twe-v12="ready"] [data-twe-premium-header] .twe-destination-card {
   --v12-card-accent: var(--twe-v12-teal);
+  --v12-card-surface: #e4f8f7;
   position: relative;
   min-width: 0;
   min-height: 112px !important;
@@ -443,11 +444,9 @@ html[data-twe-v12="ready"] [data-twe-premium-header] .twe-destination-card {
   color: var(--twe-v12-ink);
   border: 1px solid rgba(255, 255, 255, 0.88) !important;
   border-radius: 21px !important;
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.91),
-    rgba(249, 246, 235, 0.66)
-  ) !important;
+  background:
+    radial-gradient(circle at 86% 18%, color-mix(in srgb, var(--v12-card-accent), transparent 78%), transparent 34%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.97), var(--v12-card-surface)) !important;
   box-shadow:
     0 15px 32px rgba(25, 70, 80, 0.13),
     0 3px 0 rgba(33, 78, 87, 0.055),
@@ -463,20 +462,30 @@ html[data-twe-v12="ready"] [data-twe-premium-header] .twe-destination-card {
 
 html[data-twe-v12="ready"]
   [data-twe-premium-header]
+  .twe-destination-card[data-accent="tools"] {
+  --v12-card-accent: var(--twe-v12-teal);
+  --v12-card-surface: #e4f8f7;
+}
+
+html[data-twe-v12="ready"]
+  [data-twe-premium-header]
   .twe-destination-card[data-accent="games"] {
   --v12-card-accent: var(--twe-v12-blue);
+  --v12-card-surface: #ececff;
 }
 
 html[data-twe-v12="ready"]
   [data-twe-premium-header]
   .twe-destination-card[data-accent="resources"] {
   --v12-card-accent: var(--twe-v12-olive);
+  --v12-card-surface: #eef6df;
 }
 
 html[data-twe-v12="ready"]
   [data-twe-premium-header]
   .twe-destination-card[data-accent="store"] {
   --v12-card-accent: var(--twe-v12-bronze);
+  --v12-card-surface: #fff0d8;
 }
 
 html[data-twe-v12="ready"]

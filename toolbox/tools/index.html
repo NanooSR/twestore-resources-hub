@@ -5515,6 +5515,21 @@
   color:#0f4f4a;
 }
 .toolbox-choice-card{min-height:230px;grid-template-columns:minmax(0,1fr);align-content:space-between;gap:14px}
+.toolbox-choice-card[data-accent="tools"]{
+  --choice-accent:#087f86;
+  background:radial-gradient(circle at 88% 12%,rgba(8,164,175,.24),transparent 34%),linear-gradient(150deg,#ffffff,#e4f8f7)!important;
+  border-color:rgba(8,127,134,.28)!important;
+  box-shadow:0 24px 58px rgba(8,127,134,.15),inset 0 1px 0 rgba(255,255,255,.96)!important;
+}
+.toolbox-choice-card[data-accent="games"]{
+  --choice-accent:#5263d9;
+  background:radial-gradient(circle at 88% 12%,rgba(82,99,217,.23),transparent 34%),linear-gradient(150deg,#ffffff,#ececff)!important;
+  border-color:rgba(82,99,217,.27)!important;
+  box-shadow:0 24px 58px rgba(82,99,217,.15),inset 0 1px 0 rgba(255,255,255,.96)!important;
+}
+.toolbox-choice-card[data-accent]::before{background:linear-gradient(90deg,var(--choice-accent),color-mix(in srgb,var(--choice-accent),#f5c451 42%))}
+.toolbox-choice-card[data-accent] .eyebrow,.toolbox-choice-card[data-accent] h2{color:color-mix(in srgb,var(--choice-accent),#102033 30%)}
+.toolbox-choice-card[data-accent] .tool-card-compact-cta{background:color-mix(in srgb,var(--choice-accent),white 84%);border-color:color-mix(in srgb,var(--choice-accent),transparent 68%);color:color-mix(in srgb,var(--choice-accent),#102033 24%)}
 .toolbox-choice-card>span:last-child{display:grid;gap:8px}
 .toolbox-choice-card .tool-card-compact-cta,.tool-overview-card .tool-card-compact-cta{
   display:inline-flex;
@@ -5601,7 +5616,7 @@
 <header class="toolbox-brand-strip" aria-label="TWE Toolbox brand navigation">
   <a class="toolbox-brand-home" href="/"><img src="/static/public_site/the-watchers-edge-mark.png" alt="The Watchers Edge mark" width="68" height="84"><span><strong>The Watchers Edge</strong><small>Toolbox</small></span></a>
   <nav class="toolbox-breadcrumb" aria-label="Toolbox breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/toolbox/">Toolbox</a><span aria-hidden="true">/</span><span>Tools</span></nav>
-  <div class="toolbox-brand-actions"><a class="btn secondary" href="/toolbox/tools/">Tools</a><a class="btn secondary" href="/toolbox/games/">Games</a><a class="btn ghost" href="/support/">Support</a></div>
+  <div class="toolbox-brand-actions"><a class="btn ghost" href="/support/">Support</a></div>
 </header>
 <nav class="twe-v12-toolbox-bridge" aria-label="Explore The Watchers Edge">
   <a href="/toolbox/tools/" data-twe-v12-destination="tools"><span class="twe-v12-bridge-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M14 17.5h20a5 5 0 0 1 5 5v12.3A5.2 5.2 0 0 1 33.8 40H14.2A5.2 5.2 0 0 1 9 34.8V22.5a5 5 0 0 1 5-5Z"/><path d="M18 17.5v-3.2A4.3 4.3 0 0 1 22.3 10h3.4a4.3 4.3 0 0 1 4.3 4.3v3.2M9 27h30M20.5 24.8v4.4h7v-4.4"/></svg></span><span><small>Get something done</small><strong>Tools</strong></span><span class="twe-v12-bridge-arrow" aria-hidden="true">→</span></a>

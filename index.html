@@ -432,6 +432,11 @@
     --accent: #087a86;
     --accent-soft: #e8fbff;
     min-height: 190px;
+    border-color: color-mix(in srgb, var(--accent) 24%, white);
+    background:
+      radial-gradient(circle at 82% 16%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 34%),
+      linear-gradient(150deg, rgba(255,255,255,.96), var(--accent-soft));
+    box-shadow: 0 15px 32px color-mix(in srgb, var(--accent) 13%, transparent), inset 0 1px 0 rgba(255,255,255,.95);
   }
   .home-path-card.tools { --accent: #08a4af; --accent-soft: #e5fbfd; }
   .home-path-card.games { --accent: #5263d9; --accent-soft: #eef0ff; }
@@ -5971,8 +5976,6 @@
 
           <div class="nav-links nav-links-primary" role="navigation" aria-label="Primary site navigation">
             <a class="is-start" href="/start-here/">Start Here</a>
-            <a class="is-toolbox" href="/toolbox/?cb=toolbox20260711toolsGamesExpansion">Tools</a>
-            <a class="is-games" href="/toolbox/games/">Games</a>
             <a class="is-guides" href="/resources/">Buying Guides</a>
             <a class="is-collections" href="/collections/">Collections</a>
             <a class="is-church" href="/church/">News &amp; Events</a>
@@ -6014,9 +6017,7 @@
         <div class="living-kicker">Updated today · free tools · quick breaks · clear guides</div>
         <h1 id="living-home-title">Your useful corner of the internet.</h1>
         <p class="lede"><strong>Finish the small task in front of you, take five, or discover something helpful today.</strong> The Watchers Edge brings free tools, quick games, practical guides, warm community updates, pet-friendly resources, and optional Store kits into one easy place.</p>
-        <div class="living-actions" role="group" aria-label="Primary visitor actions">
-          <a class="btn" href="/toolbox/?cb=toolbox20260711toolsGamesExpansion">Open free tools</a>
-          <a class="btn secondary" href="/toolbox/games/">Take a quick break</a>
+        <div class="living-actions" role="group" aria-label="Visitor guidance">
           <a class="text-link" href="/start-here/">Help me choose →</a>
         </div>
       </div>
@@ -6038,18 +6039,16 @@
           </div>
         </article>
         <div class="fresh-side-stack">
-          <article class="fresh-side-card games">
+          <a class="fresh-side-card games bare-link" href="/toolbox/games/">
             <span class="living-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="5" y="10" width="22" height="13" rx="5"/><path d="M11 16h5M13.5 13.5v5M21 15h.01M24 18h.01"/></svg></span>
             <h2>Today’s challenge</h2>
             <p class="muted">Take five. Beat your last score in a quick puzzle, memory round, or reflex break.</p>
-            <a class="card-link" href="/toolbox/games/">Open games →</a>
-          </article>
-          <article class="fresh-side-card reading">
+          </a>
+          <a class="fresh-side-card reading bare-link" href="/resources/">
             <span class="living-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 7h9a4 4 0 014 4v14H10a4 4 0 00-4 4z"/><path d="M26 7h-7a4 4 0 00-4 4v14h7a4 4 0 014 4z"/><path d="M10 12h4M10 16h4M20 12h3M20 16h3"/></svg></span>
             <h2>Worth reading</h2>
             <p class="muted">Clear answers, pet notes, community links, and buying guides without the hard sell.</p>
-            <a class="card-link" href="/resources/">Browse guides →</a>
-          </article>
+          </a>
         </div>
       </aside>
     </div>
@@ -6076,7 +6075,6 @@
   <section class="living-section tools" id="free-tools-showcase">
     <div class="section-head">
       <div><p class="eyebrow">Free TWE Tools</p><h2>Finish the small task in front of you.</h2><p class="muted">An aqua utility desk with fast helpers for text, files, images, calculators, choices, and everyday checks.</p></div>
-      <a class="pill is-accent living-pill-link" href="/toolbox/?cb=toolbox20260711toolsGamesExpansion">Open all Tools</a>
     </div>
     <div class="feature-layout">
       <article class="living-card featured">
@@ -6097,7 +6095,6 @@
   <section class="living-section games" id="games-showcase">
     <div class="section-head">
       <div><p class="eyebrow">TWE Games</p><h2>Take five. Beat your last score.</h2><p class="muted">Short games get a richer cobalt-violet stage with challenge cues, score readouts, and quick entry points.</p></div>
-      <a class="pill is-accent living-pill-link" href="/toolbox/games/">Open Games</a>
     </div>
     <div class="feature-layout">
       <article class="game-scene" aria-label="Decorative game-board preview"><div class="game-board"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="game-score"><span>Today’s target</span><span>Beat 342 ms</span></div></article>
@@ -6112,7 +6109,6 @@
   <section class="living-section resources" id="helpful-resources">
     <div class="section-head">
       <div><p class="eyebrow">Worth knowing</p><h2>Clear answers without the hard sell.</h2><p class="muted">Resources now read like magazine-style guide covers with topic colour, reading cues, and direct benefits.</p></div>
-      <a class="pill is-accent living-pill-link" href="/resources/">Open Resources</a>
     </div>
     <div class="guide-covers">
 
@@ -6137,7 +6133,6 @@
     <div class="section-head">
       <div><p class="eyebrow">Carefully chosen</p><h2>Useful kits, clearly explained before checkout.</h2><p class="muted">The Store becomes a warm shelf of rectangular product previews with fit, destination, and checkout-boundary cues.</p><p class="muted" style="margin-bottom:0;">As an Amazon Associate I earn from qualifying purchases. Amazon.ca shows current price, availability, seller terms, and checkout.</p></div>
       <div class="cta-row" style="margin-top:0; justify-content:flex-end;">
-        <a class="btn" href="/store/">Visit the TWE Store</a>
         <a class="btn secondary" href="https://www.amazon.ca/shop/thewatcher097?tag=resourceshubca-20&amp;ref_=assoc_tag_storefront_twe_home" target="_blank" rel="sponsored nofollow noopener" data-affiliate-click="amazon" data-affiliate-title="Verified Amazon.ca Storefront" data-affiliate-category="storefront" data-affiliate-guide-url="/amazon-store" data-affiliate-placement="home-verified-storefront">Visit verified Amazon.ca Storefront</a>
       </div>
     </div>
