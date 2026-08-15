@@ -1,12 +1,17 @@
 {
-  "truth_label": "R9_BLOGGER_IMAGE_ASSETS_COMPLETE_PUBLIC_VERIFIED",
+  "truth_label": "R9_BLOGGER_IMAGE_ASSETS_COMPLETE_LOCAL",
   "expected_post_count": 104,
   "generated_post_count": 104,
+  "asset_set_sha256": "8ec0badebe372fa936a3dcd62989f527376f85735702d57e087605a9ba42ff09",
+  "remediation_plan_sha256": "7fb24c6ff38e87b0d092282d14ce3e71890b0b50a1d83821f12e4754d89b9870",
+  "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
   "public_url_verification": {
-    "verified": true,
+    "verified": false,
     "checked": 208,
     "passed": 208,
     "failed_count": 0,
+    "asset_set_sha256": null,
+    "remediation_plan_sha256": null,
     "receipt": "runtime/amazon_channel_campaign_20260813/publication/R9_BLOGGER_IMAGE_PUBLIC_URL_VERIFICATION_20260815.json"
   },
   "rights_basis": "Original AI-generated illustrative photo-style assets created for TWEStore. No third-party stock/photo scrape, Amazon/product imagery, brand, logo, readable private record, or real-location claim.",
@@ -20,12 +25,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-001-the-five-zone-pet-gear-inventory-a-one-afternoon-shelf-map.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for The Five-Zone Pet Gear Inventory: A One-Afternoon Shelf Map.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Flat lay of leash, bowl, brush, toys, cards, and a room plan.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "d6d17c13ac9f42012df5d1d99e41c7739f3b47868f696730a1821d3e48a444d4",
+        "source_sha256": "035632fc6dd5541f37f0e2dc45f458f3fda1f910cc501080998784703a43af27",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "f1476abcf23dbf90c8c71853f07f7d856a064edfd53a8428faaec3bafccd64fd",
       "sha256_webp": "c930b6a8d084eca537e88421658ab434b450edceb6dcf93ce9339b7d591fb65d",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-002",
@@ -36,12 +49,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-002-how-to-measure-a-pet-s-everyday-space-before-buying-anything.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for How to Measure a Pet’s Everyday Space Before Buying Anything.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Room plan, tape measure, bowl, fabric, and bone toy.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "d6d17c13ac9f42012df5d1d99e41c7739f3b47868f696730a1821d3e48a444d4",
+        "source_sha256": "035632fc6dd5541f37f0e2dc45f458f3fda1f910cc501080998784703a43af27",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "8182c29c045e90806cb415d8c9b0a2573c3190c8cdc58617293476776e6d7af6",
       "sha256_webp": "8e191147f663849942a2309458e5cb59fbf4194104e49e890a3580a70523df7f",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-003",
@@ -52,12 +73,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-003-a-calm-entryway-routine-for-leashes-towels-and-wet-paws.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for A Calm Entryway Routine for Leashes, Towels, and Wet Paws.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Entryway with mat, leashes, towels, basket, and resting dog.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "d6d17c13ac9f42012df5d1d99e41c7739f3b47868f696730a1821d3e48a444d4",
+        "source_sha256": "035632fc6dd5541f37f0e2dc45f458f3fda1f910cc501080998784703a43af27",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "acdeb57e3b95cfeca601d4bd7b99da76379bd640877a929d6772f79ec72ce6ce",
       "sha256_webp": "8a84a6d13ac69b527a470b9ea40b56928a094f22246f4a29afc60a25aa7906cf",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-004",
@@ -68,12 +97,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-004-decode-before-you-clean-a-pet-gear-care-label-worksheet.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Decode Before You Clean: A Pet-Gear Care Label Worksheet.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Blank-label flat lay with notebook, pouch, fabric swatch, watch, and buckle.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "d6d17c13ac9f42012df5d1d99e41c7739f3b47868f696730a1821d3e48a444d4",
+        "source_sha256": "035632fc6dd5541f37f0e2dc45f458f3fda1f910cc501080998784703a43af27",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "08fe400ad4be044555d8aeb49a25c4046a865a9ecdf419d503f71dee26026c08",
       "sha256_webp": "a7ad48f6f429b03543a686133e824050cc69a07321808169632fcb4ff5c95b46",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-005",
@@ -84,12 +121,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-005-choosing-a-travel-water-setup-by-trip-length-and-cleanup-needs.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Choosing a Travel Water Setup by Trip Length and Cleanup Needs.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Packed travel tote with bottle, collapsible bowl, and pet supplies.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "b23abebc97c5eee0fbc39cba9f9472c2baf6ead6a784488472cb82516e865c75",
+        "source_sha256": "2d12cfb529c210e6ae0fcda3bdbe8f90bb602e6d7117aa62561d7116acd0c9d2",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "f836c8cf3ff0f889f8dd718118d9e515255240c44eb3ea8734a8a07d0b4002a2",
       "sha256_webp": "d396eb5663cfa04c86ccb3b657b6646cf78bee1ac5f0e14ae7da48dd61fd3470",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-006",
@@ -100,12 +145,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-006-the-pet-carrier-fit-check-interior-space-doors-and-cleaning-access.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for The Pet Carrier Fit Check: Interior Space, Doors, and Cleaning Access.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Open soft carrier beside carrier diagrams and cleaning items.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "b23abebc97c5eee0fbc39cba9f9472c2baf6ead6a784488472cb82516e865c75",
+        "source_sha256": "2d12cfb529c210e6ae0fcda3bdbe8f90bb602e6d7117aa62561d7116acd0c9d2",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "15e81ed3a78dfe1cb3642e759f3f88b0c48921c30619d73d75adbf22b15f7a02",
       "sha256_webp": "435db54ec3baae29c8227f7ec7753473f2e36049a58db3174fb9537258cb88ae",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-007",
@@ -116,12 +169,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-007-the-three-lane-pet-supply-cabinet-a-separation-plan-that-stays-usable.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for The Three-Lane Pet Supply Cabinet: A Separation Plan That Stays Usable.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Drawer organizers holding kibble, wipes, leash, brush, and small supplies.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "b23abebc97c5eee0fbc39cba9f9472c2baf6ead6a784488472cb82516e865c75",
+        "source_sha256": "2d12cfb529c210e6ae0fcda3bdbe8f90bb602e6d7117aa62561d7116acd0c9d2",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "d44e91c145e4b22455a2d300938df6eb720f1adbe55a6813336d9cb46f2c575a",
       "sha256_webp": "548a493ca66bfb007acf0189012bf712efd387903370f9c274fd726685c12f27",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-008",
@@ -132,12 +193,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-008-how-to-build-a-simple-pet-emergency-contact-card.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for How to Build a Simple Pet Emergency Contact Card.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Blank pet emergency contact card beside a collar and carrier, with a dog resting in the background.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "53a0d246ea91f0ae749a04b35331c4f5a9dcd516803bcedb47ddcb8385f5ce76",
+        "source_sha256": "5ea720a107d596f027cd779486a052983995e0a0186c7f0537147268c51d1f9e",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "ff0131a3beebd12592ef467ea895f02d4c0cc0f7916699d551d2772bc661d5d3",
-      "sha256_webp": "f50cc484497d410967e901d0b7d8d74a0bd2445bc8cc39f06b8ab0fe0ec8701e",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "49d2130c9ebe583d9449c2b91092f955e1a14f34cacfeeae60a9a19db3ec0c88",
+      "sha256_webp": "8134cb5bf7f3f23fe5353672cc9bad14dc30901b27a467d2098d013bd772aa66",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-009",
@@ -148,12 +217,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-009-spring-mud-planning-for-dog-walks-a-home-to-door-checklist.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Spring Mud Planning for Dog Walks: A Home-to-Door Checklist.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Entry bench with leash, towels, and blank planning cards.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "5083f4d1ee2c4a01698fb07029b7cd53f51f52c6a7f1b3b1cb490c109d0f2680",
+        "source_sha256": "a0bc960085c599ac329324bf46ff8d7001042c13de2d91e62cc0688e6234e391",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "4f5c3ba3cd59a1cd606468a5c4c99135422592efb1e9b2f343856a39750f7485",
       "sha256_webp": "fb48126eef5e4f0cc6b269b3caae54e9c31ff04ea1770674b3919de9f246e349",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-010",
@@ -164,12 +241,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-010-dog-waste-bag-routine-what-to-keep-at-home-in-the-car-and-by-the-door.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Dog Waste Bag Routine: What to Keep at Home, in the Car, and by the Door.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Pet-supply shelf and green bag connected by graphic arrows.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "5083f4d1ee2c4a01698fb07029b7cd53f51f52c6a7f1b3b1cb490c109d0f2680",
+        "source_sha256": "a0bc960085c599ac329324bf46ff8d7001042c13de2d91e62cc0688e6234e391",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "bfb013a1a7da3b2254270b62ded45e7712264066034676e9800e4be6a9cbe6d6",
       "sha256_webp": "e192e86ad3170f9caf3a5a44bd8dfe98374e16205fe7a22f7b2a4f440370b1d2",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-011",
@@ -180,12 +265,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-011-a-pet-friendly-car-cleanup-kit-without-overpacking.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for A Pet-Friendly Car Cleanup Kit Without Overpacking.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Compartment car bin with waste bags, towel, rope, and cleanup supplies.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "5083f4d1ee2c4a01698fb07029b7cd53f51f52c6a7f1b3b1cb490c109d0f2680",
+        "source_sha256": "a0bc960085c599ac329324bf46ff8d7001042c13de2d91e62cc0688e6234e391",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "f57f087ceb936a1087b2744d25e85267983cc5c33d2d303b2d68abda9b217e9a",
       "sha256_webp": "0e489711d7a80a7c2dc3b0a7e50a99da03c28eea84206403ca1cd915651f4f80",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-012",
@@ -196,12 +289,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-012-how-to-rotate-pet-toys-without-turning-it-into-a-complicated-system.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for How to Rotate Pet Toys Without Turning It Into a Complicated System.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Two toy baskets with plush toys and balls.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "5083f4d1ee2c4a01698fb07029b7cd53f51f52c6a7f1b3b1cb490c109d0f2680",
+        "source_sha256": "a0bc960085c599ac329324bf46ff8d7001042c13de2d91e62cc0688e6234e391",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "ae78a7934c98d031ab870753fe475f0f2229c90c8b04ee7dba248c4cf11f88aa",
       "sha256_webp": "e9c447959c660917d57cef34ad36c5d8f0527c8cec852aa1b7b9f542558c4acf",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-013",
@@ -212,12 +313,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-013-pet-bedding-refresh-a-decision-tree-for-washing-repairing-or-replacing.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Pet Bedding Refresh: A Decision Tree for Washing, Repairing, or Replacing.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Opened pet bed with sewing tools and blank repair checklist.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "6c69ed6739d9a18885eaebe3cb07aa93f8160f30a96e949f3d5ac29addbac466",
+        "source_sha256": "4f17f1143f9001592b9f7b90c8cfbbe5df76c53b572f585ac5ccbf37b993d959",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "bbcd9909ebb60d7a3d7f214d31a421ede3ce152cb2491c07972cd5e8dc5638bb",
       "sha256_webp": "7d6a93a5608af811d8a096d635dea85e90b7718f2dd8c1066a826abf723138f7",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-014",
@@ -228,12 +337,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-014-balcony-and-patio-pet-setup-shade-boundaries-and-supervision-questions.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Balcony and Patio Pet Setup: Shade, Boundaries, and Supervision Questions.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Dog resting in a shaded patio area with water and a secure boundary beside the open doorway.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "8ee830d67e50925b436a9f44f6d1fedd561c2f712e310c19b2e0bef9b5716458",
+        "source_sha256": "667473d427a1f35236cf0b0e59abba80c2d9298562309d0f0a93c1fa47b8bc20",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "e7e0dc9bc0c80fae4c6acae0dc0316af2ec27cbb79dd830959cda9d1fa0a0347",
-      "sha256_webp": "4f4e7292a50ecb66af7f56a7ebd5f79aec5d724f9850c3a5d843dfe85e5ee7b5",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "55a536eeefa105a0918d63daa899289b009e75e0039d3657148f02b2d1b48a33",
+      "sha256_webp": "a8871a5950902d737c9fc84f8adee0a1ce80ad3438b3585e9cd9d058fb5c6eae",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-015",
@@ -244,12 +361,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-015-before-a-pet-sitter-visit-a-gear-handover-checklist.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Before a Pet-Sitter Visit: A Gear Handover Checklist.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Home floor plan and multiple checklists beside a coiled leash.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "6c69ed6739d9a18885eaebe3cb07aa93f8160f30a96e949f3d5ac29addbac466",
+        "source_sha256": "4f17f1143f9001592b9f7b90c8cfbbe5df76c53b572f585ac5ccbf37b993d959",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "f25be67a237aa7a009e4787b758db9621b008768231ec76c0783f60cc0029c8f",
       "sha256_webp": "0c74cfdeb68031e4c0e83389bc5124c4572fd8c7be4b31a2280fbf541662f820",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-016",
@@ -260,12 +385,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-016-pet-id-backup-basics-a-practical-record-keeping-guide.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Pet ID Backup Basics: A Practical Record-Keeping Guide.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Pet-record folder with dog photo and document containing heavy black bars.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "6c69ed6739d9a18885eaebe3cb07aa93f8160f30a96e949f3d5ac29addbac466",
+        "source_sha256": "4f17f1143f9001592b9f7b90c8cfbbe5df76c53b572f585ac5ccbf37b993d959",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "9c90383938f9ee4837948402efb8b6d7d493b3700f584a9fc6fcc805ba496fc4",
       "sha256_webp": "e93a870125a2ec6ceb8851b8eaf90755ac308d825a6b4cff5235d3364dc07394",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-017",
@@ -276,12 +409,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-017-how-to-plan-a-cooler-weather-walking-bag-before-summer-arrives.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for How to Plan a Cooler-Weather Walking Bag Before Summer Arrives.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Small packed cooler-weather walking bag with leash, kibble, roll, brush, and pouch.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "c260c80d1988a2d9f07295d026c493268a33a31677f54ed63a92ea07323d26c5",
+        "source_sha256": "3eafea08b2e7724763e9a9ed96fd8d054ef1340e62c61e3327c47d77b025d56e",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "bf40d21d2f808d7e6a742072c5e10308db06d598d3abf58a39352529ea84624d",
       "sha256_webp": "fa92e4b2986cf60807882b77e5daf97231560d9346aa3bff9f999e4ea9380f30",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-018",
@@ -292,12 +433,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-018-pet-travel-documents-what-to-verify-before-a-cross-border-trip.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Pet Travel Documents: What to Verify Before a Cross-Border Trip.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Travel documents, folder, blank forms, and map-like sheet.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "c260c80d1988a2d9f07295d026c493268a33a31677f54ed63a92ea07323d26c5",
+        "source_sha256": "3eafea08b2e7724763e9a9ed96fd8d054ef1340e62c61e3327c47d77b025d56e",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "ea179eee1ceb5ae6f57f2ae32a64d9274e85e7252d6d803500aaf3e97e72da0f",
       "sha256_webp": "2a337cd6d7dff807c8dad996f37ecb6bff34a2975b80c6b207e98539506c133c",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-019",
@@ -308,12 +457,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-019-a-low-clutter-feeding-station-storage-cleanup-and-refill-cues.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for A Low-Clutter Feeding Station: Storage, Cleanup, and Refill Cues.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Indoor feeding station with bowls, storage cabinet, and food bin.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "c260c80d1988a2d9f07295d026c493268a33a31677f54ed63a92ea07323d26c5",
+        "source_sha256": "3eafea08b2e7724763e9a9ed96fd8d054ef1340e62c61e3327c47d77b025d56e",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "90d734330641f7263820413550a02aa94dbf720f6bbc49dc39c0bcaf5ffc2100",
       "sha256_webp": "23d55246c94de314fea9014bb747f87c38d85e2ba70b440eb3bab0afacb6e6d8",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-020",
@@ -324,12 +481,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-020-weekend-cabin-trips-with-pets-a-gear-planning-framework.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Weekend Cabin Trips With Pets: A Gear-Planning Framework.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Packed cabin-trip bag with bedding, toys, leash, grooming tools, and bottle.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "c260c80d1988a2d9f07295d026c493268a33a31677f54ed63a92ea07323d26c5",
+        "source_sha256": "3eafea08b2e7724763e9a9ed96fd8d054ef1340e62c61e3327c47d77b025d56e",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "a0b9e3fdda7e693427d942ded2d322a4c8af3571ceb298840eea618d3347b46a",
       "sha256_webp": "7a1bc76ea497cb1cd0f00f52a5d81cdeabb7deec6943eeba4fb65582fdecc5d9",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-021",
@@ -340,12 +505,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-021-dog-walk-cleanup-etiquette-checking-local-disposal-rules-before-you-go.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Dog Walk Cleanup Etiquette: Checking Local Disposal Rules Before You Go.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Cleanup/disposal trays, supplies, map-pin prop, and question-mark prop.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "96fcb1e58f6df15060cc9162d3e2be6e1c13eb869603c733691135d71ada26af",
+        "source_sha256": "630f967deb19d63d5351996800736455d01f8b94307b9465eecbf7dc3eec23c6",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "16aeb14ebd9609463e1b93051934388060581ca64075a1438f092e4ac75b45b2",
       "sha256_webp": "38c2f0a5102b97f35ddd32721748e1829a175cb226c9a48b8b17cb1800a37d5c",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-022",
@@ -356,12 +529,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-022-pet-gear-in-small-spaces-choosing-multi-use-storage-zones.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Pet Gear in Small Spaces: Choosing Multi-Use Storage Zones.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Small-space wall storage with leashes, carrier, toys, and supplies.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "96fcb1e58f6df15060cc9162d3e2be6e1c13eb869603c733691135d71ada26af",
+        "source_sha256": "630f967deb19d63d5351996800736455d01f8b94307b9465eecbf7dc3eec23c6",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "18403649cf61bfaff81d5f969830d4f2d5fead9c74c137112cc412bf232094e0",
       "sha256_webp": "e26f43fa400596bf053beb3331c794244af6efd9b9b12f473c97397fa881dbf5",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-023",
@@ -372,12 +553,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-023-beach-day-tote-organization-a-destination-check-and-packing-worksheet.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Beach-Day Tote Organization: A Destination-Check and Packing Worksheet.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Beach tote, bottle, containers, leash, and question-mark card.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "96fcb1e58f6df15060cc9162d3e2be6e1c13eb869603c733691135d71ada26af",
+        "source_sha256": "630f967deb19d63d5351996800736455d01f8b94307b9465eecbf7dc3eec23c6",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "e7c2891035a90c78ccb5207ae9b13b9d6ca447ff68c2b5526cf99aed7017b713",
       "sha256_webp": "48c94b5bff26a98672917b06e1e05823504fefbb9ea049d21f31b8d4aad8310b",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-024",
@@ -388,12 +577,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-024-home-renovation-with-pets-questions-to-assign-before-work-begins.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Home Renovation With Pets: Questions to Assign Before Work Begins.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Dog resting behind a temporary gate in a clean room separated from a home renovation area.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "31636c444d3513d25f135f5c0281e54e9572482ccb1b500245585dee67a2a18e",
+        "source_sha256": "0cc2781591758edb4e4fae5a3669ddba5eac7f18a857df513063ff0443ffd9f5",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "b526026bbf303cc1d717cf04cee992cc0b7dd151c85a78c67e6c7e7e727f1c84",
-      "sha256_webp": "e876736b8341e77aed05a7922a00d5b0df2d0064c9dc106e5c70b8670ab927f2",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "4e3e916788e0e6f7dfdd2dd0036974f33b5d1f0e9d303307273e57100adc5039",
+      "sha256_webp": "c63a1fb114ed3116e7f3e30f7f0e94e112dd6832410b4a40d71c39198d5add9d",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-025",
@@ -404,12 +601,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-025-leash-harness-and-collar-observation-record-before-a-busy-weekend.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Leash, Harness, and Collar Observation Record Before a Busy Weekend.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Harness, collar, leash, blank tags, and record cards.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "badc99f96cffcebffbe74077a8439f3c5971095571a4444e1599134db1304cc6",
+        "source_sha256": "eec533ffba2960a32bc0614e1311f357f377df7c840aaaec4014ec00193b2c34",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "9cf8f548745bd44b358ff6bd98063bf0cb20b4aec8747e1471d890c9b024c13e",
       "sha256_webp": "d9e2a031894dc9e87e4ceca5ec0c5668ef5c2039dca18124a918e4605d14fe5b",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-026",
@@ -420,12 +625,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-026-midyear-pet-gear-reset-keep-clean-repair-donate-recycle.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Midyear Pet Gear Reset: Keep, Clean, Repair, Donate, Recycle.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Sorted bins of pet gear with a stack of blank cards.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "badc99f96cffcebffbe74077a8439f3c5971095571a4444e1599134db1304cc6",
+        "source_sha256": "eec533ffba2960a32bc0614e1311f357f377df7c840aaaec4014ec00193b2c34",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "a0a658365c652e39ef518be2d973db4e6831d58d61b98bdd31d0c4b770d3d841",
       "sha256_webp": "eafa32e3a00dc35988fc2184b021316b3d48a312d7ce8e42fa46b74a85f1975e",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-027",
@@ -436,12 +649,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-027-rainy-day-indoor-activity-library-find-materials-without-the-search.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Rainy-Day Indoor Activity Library: Find Materials Without the Search.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Indoor pet-activity area with toys, snuffle-like mat, puzzle feeder, and shelf.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "badc99f96cffcebffbe74077a8439f3c5971095571a4444e1599134db1304cc6",
+        "source_sha256": "eec533ffba2960a32bc0614e1311f357f377df7c840aaaec4014ec00193b2c34",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "8b14389b9140420e65540a40b790a1faea36d37f675a1cf1354324612a7b7386",
       "sha256_webp": "ffbafa98463aadb85db9fc9bb2796d6496dfe079bc012d1db71ffecbed763ba5",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-028",
@@ -452,12 +673,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-028-guest-room-preparation-for-a-visiting-pet-host-guest-handoff-worksheet.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Guest Room Preparation for a Visiting Pet: Host–Guest Handoff Worksheet.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Guest room prepared with pet bed, carrier, and clipboard.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "badc99f96cffcebffbe74077a8439f3c5971095571a4444e1599134db1304cc6",
+        "source_sha256": "eec533ffba2960a32bc0614e1311f357f377df7c840aaaec4014ec00193b2c34",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "d6108f1de7e9abbda4a5148dbdc655f424e604d988eed16a2baad01a25a0b067",
       "sha256_webp": "36b814ed72996a1b758bd083ebdd642aa176c66bb0cdca024d4ecac9529e59f8",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-029",
@@ -468,12 +697,26 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-029-back-to-school-schedule-changes-a-pet-routine-planning-worksheet.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Back-to-School Schedule Changes: A Pet Routine Planning Worksheet.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Dog waiting beside a leash and water bowl near a school backpack and weekly routine calendar.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "030d5ba8bb5c7a5b9b167a1fe6d0b9731de89324c16e4a4cfaab43452c9d5f7b",
+        "source_sha256": "7854cfd61199128ebd7bb15faa99a4a46afc1a19a41f35b2748f16f23d97d231",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export",
+        "corrective_edit": {
+          "reason": "removed yellow brand-like backpack patch identified during mandatory local visual QA",
+          "pre_edit_source_sha256": "2311e935c24f3e0a90a114b850ff9ddad20e54b1856e7aad27392db0d922623e",
+          "edit_prompt_sha256": "97af6f250bafec6280e6ba42faa47fa5936eeb1ccad55445dfc0f8f984c17f72",
+          "final_source_sha256": "7854cfd61199128ebd7bb15faa99a4a46afc1a19a41f35b2748f16f23d97d231"
+        }
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "58ab96f9487c6f6dfef30c03c9e599e59affca8b8e8b2c615687cc6362a49b88",
-      "sha256_webp": "753d8fc7dde0c61c74916f0d79cfb47267e0349fe164d9f306052a2b57bd419b",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "dc8a468d51b6c69852aa32d635691f74fe313fbb4a301527186807d2d0103a01",
+      "sha256_webp": "50f7802c922b84ab96aaa707110c6b25e008057b3c7c3312d88bd3879ad1e65e",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-030",
@@ -484,12 +727,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-030-a-dog-walk-station-for-darker-evenings-organization-first.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for A Dog-Walk Station for Darker Evenings: Organization First.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Evening dog-walk wall station with leash, pouch, flashlight, and lantern.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "c2a127a09b59ac37d5f9c1f68b3385eb93e635266390e08112bde33b423d5e6c",
+        "source_sha256": "6a5e0401d27218aff4ea857a7357920c8c48bf90681f044fe7e75e0c03bd8b74",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "57b6b35fdd24918c3bfe1d75b46188140cd132d1a7281fb33e82594bdd876077",
       "sha256_webp": "08e48f6dd89c753f839f584147c58705bc86a3493166b6fd754c84ddb8d48e84",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-031",
@@ -500,12 +751,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-031-pet-supply-budget-planning-separate-essentials-replacements-and-nice-to-haves.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Pet-Supply Budget Planning: Separate Essentials, Replacements, and Nice-to-Haves.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Pet supplies sorted into essentials, replacements, and optional items beside a calculator and blank budget sheet.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "5155d26eb9dca33cc2e145c5a77bc754ac2196b4a3fe47d5abc36ffcd7c9d794",
+        "source_sha256": "f4d1e742f321b25beee40432e8177b969dd9acad1978abc8763d90644438b8c5",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "6c0d54fdaa22f2073166801b0f1a1116512ddaaca6e8a1afb33c63d9c4f793c2",
-      "sha256_webp": "63d7843fb17520b184bc22e329c88ca31fc50f56ae3dbb407b0a3e4245b37a03",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "e79aebda411abd5b02fad9de932ca25cb60fc79deff21e005c7990aa5773f06e",
+      "sha256_webp": "b79f78ce53d6e5f718a74130067b85855d16bd7a87201b6acbf1fc8036694db7",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-032",
@@ -516,12 +775,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-032-how-to-read-pet-product-listings-without-getting-lost-in-marketing-language.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for How to Read Pet Product Listings Without Getting Lost in Marketing Language.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Hands comparing the stitching, buckles, and materials of two unbranded dog harnesses.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "3b05bcddb3315b415420192646e1df68347f85fae3d82fa129a40f93924be927",
+        "source_sha256": "2dde0f860af84696943235226027f7418ae4818afd5b131f977b2facf276fbb7",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "238d8b9fcec1b0b54b1c72e8ea5224aad43531b2fd077755d671165dd59c2f91",
-      "sha256_webp": "4d2df6d65979f4c9c78743400f21f4a6c2b49e794603bca7cccd4faa6c120f1a",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "018067f3e3fd67f4855c9563eb8dcfa29890d7cd72b292e4f1549085ca05b181",
+      "sha256_webp": "fe14615db7ef91fa25709752746ce4e77427c1a9acd3efd7ac00c2ad042b8d0b",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-033",
@@ -532,12 +799,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-033-fall-pet-record-review-find-seasonal-instructions-before-you-need-them.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Fall Pet Record Review: Find Seasonal Instructions Before You Need Them.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Pet records folder, calendar, collar tag, and leash being reviewed beside a resting dog in autumn.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "d89b44fe36e2298ddaad072cda24786dce0333964107b5731a59f5b560989d6d",
+        "source_sha256": "cead9153c8cc17248f5ab5fb143d8f70de0212cc93e0a6a66bc20ffdab24431b",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "1691bf66f64d309d6e010fa587adae6f43b3631d6f5adb7dba98253fb7ffdc50",
-      "sha256_webp": "897d7a99ea975de7038a72361c4e98d0da024917567993774aaf6ce446aa7286",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "d94b2f44bff5d62c133b800769471124b7cfd1f688f61f38a85966024c749177",
+      "sha256_webp": "68a4f5b468fe428992b2cb45ab2463abd367dc130ae81ea28ba5135adcf8aa4a",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-034",
@@ -548,12 +823,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-034-pet-halloween-costume-planning-fit-visibility-and-an-exit-plan.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Pet Halloween Costume Planning: Fit, Visibility, and an Exit Plan.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Pet costume or garment with checklist and tail-like prop.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "905998c7aa76d31e627399339e0625796715b1aa7ce4ef669dfc703673a7dea8",
+        "source_sha256": "1f1d90a4ab30ef2965dc7a447191ddf097160721759d27e61c062986029b0c31",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "4037ea2955c5b3dbbc8b81b31b1ff0c130917997d37c49b5fa084b65d8959e41",
       "sha256_webp": "c8ae7eee3055f1032e4a1ced52681d0049439d64d827bf7973cefd570adb31bb",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-035",
@@ -564,12 +847,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-035-pet-sitting-instructions-for-holiday-weekends-the-one-page-version.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Pet-Sitting Instructions for Holiday Weekends: The One-Page Version.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Pet-sitting instruction sheet, keys, phone, towel, and blank tag.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "905998c7aa76d31e627399339e0625796715b1aa7ce4ef669dfc703673a7dea8",
+        "source_sha256": "1f1d90a4ab30ef2965dc7a447191ddf097160721759d27e61c062986029b0c31",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "1bdb0551c8c728971738b48f07f08de68d17e77a47904a5d90d3d7ad0428fdf1",
       "sha256_webp": "fa5a9400daa66d4c001f377c3411b93e2ae556227e8dbf4488fd2d420e5398a3",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-036",
@@ -580,12 +871,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-036-cold-weather-pet-gear-storage-drying-cleaning-and-label-checks.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Cold-Weather Pet Gear Storage: Drying, Cleaning, and Label Checks.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Cold-weather pet-gear storage with basket, leashes, brush, and clipboard.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "905998c7aa76d31e627399339e0625796715b1aa7ce4ef669dfc703673a7dea8",
+        "source_sha256": "1f1d90a4ab30ef2965dc7a447191ddf097160721759d27e61c062986029b0c31",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "aaa40221cccdfe93d6ee02f4e033d5977b1add6af8ec0c75acb5081e07ee8dc8",
       "sha256_webp": "c991b66d6b655b987265d29bf39853c8058a5a12d7487140b41625532460813b",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-037",
@@ -596,12 +895,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-037-holiday-pet-travel-an-itinerary-change-decision-log.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Holiday Pet Travel: An Itinerary Change Decision Log.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Cat beside an open carrier while alternate route cards and a calendar are reviewed for holiday travel.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "1e16f5f6fbdf892c3e4655ab52c280bfce933ae835831f77f85d45f875d72e6d",
+        "source_sha256": "25c735c385dbad443eccdb0bcea61924902ab2c780c3b04411445a2bec8349a7",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "fa5afbeed883691cf5a1dc4f7b0d8a9840c79af7052d595efd0ee2ad7ecd1102",
-      "sha256_webp": "5980c5f95f274daa19ed197c57286c57a4397ad6aba110a78543ec52a4e8f06e",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "e7f3e39732d9b639e0f88c46fe0a9850e4b7ede6663c090c7f72e55d8f0ea099",
+      "sha256_webp": "4cc288a92a9d3cefe78e18824f6c07da2c181b433ec4feea0a6adb4eb27558b1",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-038",
@@ -612,12 +919,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-038-gift-lists-for-pets-how-to-choose-useful-gear-instead-of-more-clutter.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Gift Lists for Pets: How to Choose Useful Gear Instead of More Clutter.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Pet gift-list flat lay of collar, leash, bowl, toy, brush, towel, and cards.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "45772f172ef669f0cb85b0400308b89b82d2cf938d8e4eb69f6042757ef34609",
+        "source_sha256": "eae6825be3ee32266aa775ea7ab08d38be62d7e0562b6c3d8df36236b3b9eb4c",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "7a20cc50da5b6eaf9a794ff730ed8c85ddb8c72d79c3ddc1c032f6ce5c785674",
       "sha256_webp": "703f1f6db6e9c1c308df8ac5cef3679805464d9fccc8b9c7a53fce3624fdc74a",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-039",
@@ -628,12 +943,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-039-holiday-decorations-and-pet-spaces-a-pre-setup-planning-checklist.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Holiday Decorations and Pet Spaces: A Pre-Setup Planning Checklist.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Living room with pet beds, holiday decor, floor plan, and overlays.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "45772f172ef669f0cb85b0400308b89b82d2cf938d8e4eb69f6042757ef34609",
+        "source_sha256": "eae6825be3ee32266aa775ea7ab08d38be62d7e0562b6c3d8df36236b3b9eb4c",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "6290a8f231040a384a6d38ed5e8c1ebac24ed9885461203b46335a40fa7727e7",
       "sha256_webp": "3e023316958e1a0a9f9d8322e5c735f494c135357d3d6aae9009365ad66b6ccd",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-040",
@@ -644,12 +967,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-040-dog-walk-cleanup-in-winter-stocking-a-simple-door-and-car-system.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Dog-Walk Cleanup in Winter: Stocking a Simple Door-and-Car System.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Winter cleanup supplies beside vehicle hatch, boots, and leash.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "45772f172ef669f0cb85b0400308b89b82d2cf938d8e4eb69f6042757ef34609",
+        "source_sha256": "eae6825be3ee32266aa775ea7ab08d38be62d7e0562b6c3d8df36236b3b9eb4c",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "afb0d3ad2c6124c785dcb061f2ef6b37ff9623d36422e0fafc318e876339b585",
       "sha256_webp": "c40e83ae4f5d5870c0255a63d6a1326ad3ead51108f40d04c17b43bf0a84920f",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-041",
@@ -660,12 +991,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-041-build-a-pet-supply-record-for-an-overnight-power-outage.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Build a Pet Supply Record for an Overnight Power Outage.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Flashlight, water, pet food, bowl, blanket, and carrier prepared for an overnight power outage.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "9f605a942074e83ae4701ff14f6a4dd206e3b0c3d2c147436523800e548c65c3",
+        "source_sha256": "2b851d4e4b8cbaac824c0f021329e1fac8bcd253528cdcf6fee09520dfffc22f",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "4d11bcb328b6192874a6e3f7448503b54b43f0784121410010578ed6cc5f486a",
-      "sha256_webp": "cedeacad1b0bb425151b8b6acb5118293327645f88d3855579fb135042e5aab6",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "37574b0f68693d9c327efa7233ccb738b92932644d7c483f7882e4b772794ba0",
+      "sha256_webp": "7ca33645d43ca02720bf495ea7a391aaf67503b97a16f227b5c860a7f39dfe96",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-042",
@@ -676,12 +1015,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-042-year-end-pet-records-review-renewals-receipts-and-contact-details.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Year-End Pet Records Review: Renewals, Receipts, and Contact Details.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Pet records, blank renewal cards, receipts, calendar, and collar tag being organized beside a cat.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "2c8764fea256ddbeac995bc7319aafa1f9ca4595c33cf278bd943ee632a9d3eb",
+        "source_sha256": "d2c53194497cf1b194a34d54dbd605ff3431e3ba2e0adbd4fe704d64a026b177",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "7ffc8d5f21b528407c2b4719cb3c078ba2661f59acd86e7ea235711c15ba2c42",
-      "sha256_webp": "0cf6c26356b1669d72acb77924522ce02aa63fe7c748b95327b8062e71942c1a",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "14a5c759317e8a7943b29b94d23122a4baa62eb34c766f330428bfb278516b1d",
+      "sha256_webp": "6cdec408f38803bae78fd539ff22fa104659efe09f1f996555d42cb8ec286173",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-043",
@@ -692,12 +1039,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-043-what-to-do-with-outgrown-pet-gear-donation-and-recycling-questions-to-ask.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for What to Do With Outgrown Pet Gear: Donation and Recycling Questions to Ask.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Withdrawn collar, harness, bowl, towel, and question-mark card.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "45e52c1b309dc61cc24bd9a18b7a31e3cd300f0f2063c604fd8c6e73c5f31d4d",
+        "source_sha256": "efcc5a238a161d86bb41c79a77c4c72f9bba3bc81ea70ca51c4e1317efd34a2c",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "858418daf376d6d987335b8c380010a22e54f210adcbfb782146980ff5ee623b",
       "sha256_webp": "4aa842574905f50e9ea9babfd6152f189a4f852f49991fe01070ef31d4a0cdc3",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-044",
@@ -708,12 +1063,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-044-a-better-pet-supply-restock-list-set-triggers-instead-of-guessing.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for A Better Pet-Supply Restock List: Set Triggers Instead of Guessing.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Low pet food, waste bags, and treats marked for restocking in an organized supply cabinet.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "8ff56a07a3073e0695834f359026cdb07cc81a9c8365c8850405a08a7cce3255",
+        "source_sha256": "e5391e66f1ad0fb69efbb0af7d2d7d98bfdf4a57822a6e897536a5359334ed25",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "4b89423dbbd460447b8d712c943a67bba971038c3d62e6d1ffdb7505bf9d8ab9",
-      "sha256_webp": "35d6049fcf4047e9579ce9bbff216ed413d30f54da7801d0666707767d2c5a0e",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "5b45b78064cd8ec0d319cdc287ca60e972af016541e13ce24c6a7a2b377be58c",
+      "sha256_webp": "9dea34d3a2fa856385369ad262d048f74318f024dac25895a501fa696880d53e",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-045",
@@ -724,12 +1087,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-045-how-to-compare-pet-gear-return-policies-before-you-buy.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for How to Compare Pet Gear Return Policies Before You Buy.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Two unbranded pet harnesses compared beside plain boxes, return-window cards, and a calendar.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "4db0b074299e641bad3487a2340c4ba01399a3b71668ca187f705f0c57aa36fa",
+        "source_sha256": "cfc16fa7337d66a2afe676be265b6941511c21ade7a43d6e7c239d9b3fcd3279",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "01e7a6bba4a2200cc013cc923c6340f2c262ee64eb02cc5cb68fe9eb47d5c3a4",
-      "sha256_webp": "e1a02f35c5551c4669b75eeb8d6cfe303348534fdf9580294aa0fe244a041b47",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "744fbb8d45ec356a392395203045a8154e579121256cdfa66b2b7092fec70d46",
+      "sha256_webp": "2a6dbac9472f6c5cc6603684cc41e869ffac923eb62455c3f7b5b2b02d72ce93",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-046",
@@ -740,12 +1111,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-046-pet-gear-photo-records-a-simple-system-for-receipts-sizes-and-labels.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Pet Gear Photo Records: A Simple System for Receipts, Sizes, and Labels.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Hand photographing a blank pet tag with phone beside blurred checklist.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "cdc9d4870716f383338de616ea74b4663b54df39b9130210298aed463130315e",
+        "source_sha256": "f7ca8f6373d9c8d629d78eb2d60c7d073aaeb71aea04b6210482cbf3897fe562",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "720682aad7e19fbac75fdc045b37459d8b08448db613ecea9c078ec4964efef9",
       "sha256_webp": "79846f5aedb3528c8ba4c36b9f67f409b278db59e4d6f7fd2df08718a9e29335",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-047",
@@ -756,12 +1135,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-047-planning-for-a-new-pet-without-a-giant-shopping-list.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Planning for a New Pet Without a Giant Shopping List.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "New-pet plan with two bowls, storage bin, toy, and floor diagram.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "cdc9d4870716f383338de616ea74b4663b54df39b9130210298aed463130315e",
+        "source_sha256": "f7ca8f6373d9c8d629d78eb2d60c7d073aaeb71aea04b6210482cbf3897fe562",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "35809f15157ca6208e4f6390e4947fa8563995741e98b50d38fedb3d8a1efa93",
       "sha256_webp": "940d14fb0558540891c937d71d50939dd09b83db51940ce303576ad069b9e9a0",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-048",
@@ -772,12 +1159,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-048-pet-adoption-day-logistics-a-home-arrival-checklist-for-supplies-and-records.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Pet Adoption Day Logistics: A Home-Arrival Checklist for Supplies and Records.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Newly adopted dog arriving beside a prepared bed, water bowl, leash, carrier, and records folder.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "1785beafd905c2afbc98a799fa991b178db2dad30ab3a9b31e60902e028fa5cc",
+        "source_sha256": "4000eca1d8c202be705ef2a79e6eb1db0ce81afa3a6bb60264a112f9afe79f17",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "eeee59f63b59af7c20a7176ad9b49fc7e8b00a7aba265057b320c25c33b32263",
-      "sha256_webp": "a1dd97fff3ca04dc56b3b717b54508d2a37d6993d7c4b8916bbc2211ee40420f",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "768b2e2e3db858c7634c5aba546dd260bc4f9beeca8d6f12fc5fa69eaa43ee08",
+      "sha256_webp": "4f473e983782e60af6c1a2abdad510f81bc3c780e44ed66778babdc1116376ed",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-049",
@@ -788,12 +1183,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-049-how-to-create-a-pet-gear-maintenance-calendar-built-around-manufacturer-instructions.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for How to Create a Pet Gear Maintenance Calendar Built Around Manufacturer Instructions.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Pet-gear calendar with cat paws, brush, leash, and swatches.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "8123367ec458a7bc3093b6a6fc2c85a1c9254853dacf609c1c837d1791e283da",
+        "source_sha256": "21dfcf4e27c37020db6e38bf0b7cb4f6eef89fd28bfcfd3697642ce67d7bd97d",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "5658ad20e239ad4339944a887b7c07c3941fb78875ae6e616d86448cfff39b8e",
       "sha256_webp": "9f9aafb837fc495b8d94b7c4e931276598b22d74435d9afa07e4acff4d33a8ca",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-050",
@@ -804,12 +1207,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-050-moving-day-labels-source-pointers-and-an-owner-entered-first-night-plan.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Moving-Day Labels, Source Pointers, and an Owner-Entered First-Night Plan.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Moving-day pet bin, blanket, dog, and question-mark card.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "8123367ec458a7bc3093b6a6fc2c85a1c9254853dacf609c1c837d1791e283da",
+        "source_sha256": "21dfcf4e27c37020db6e38bf0b7cb4f6eef89fd28bfcfd3697642ce67d7bd97d",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "aea279d08230e0ae5675323e8cdf541c722525e38c250f7baea08ad0dcf9d0fd",
       "sha256_webp": "cf5f36a80faaffc2ad3a738befb3ac4aab8c44acc0c97aa907e08820a9519f21",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-051",
@@ -820,12 +1231,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-051-a-responsible-pet-gear-wish-list-size-materials-care-and-storage-questions.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for A Responsible Pet Gear Wish List: Size, Materials, Care, and Storage Questions.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Illustrated pet-gear wish-list chart with blank planning tabs.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "8123367ec458a7bc3093b6a6fc2c85a1c9254853dacf609c1c837d1791e283da",
+        "source_sha256": "21dfcf4e27c37020db6e38bf0b7cb4f6eef89fd28bfcfd3697642ce67d7bd97d",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "66226ca2efa44e4466217426b1f34df76ffdf5c1ef4bd67d4bb12af8bf2e824e",
       "sha256_webp": "56fdce03cec30b74f53250ed306ef4885e69ddeef8dcc671dbc6b9cde8ff402c",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-BPG-052",
@@ -836,12 +1255,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/pawsome/blog-bpg-052-annual-pet-gear-records-reconciliation-changes-sources-and-open-questions.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Annual Pet Gear Records Reconciliation: Changes, Sources, and Open Questions.",
-      "caption": "Original Pawsome illustrative photo-style image for this practical pet guide.",
+      "alt": "Annual pet-record reconciliation board with repeated forms and punctuation cards.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "8123367ec458a7bc3093b6a6fc2c85a1c9254853dacf609c1c837d1791e283da",
+        "source_sha256": "21dfcf4e27c37020db6e38bf0b7cb4f6eef89fd28bfcfd3697642ce67d7bd97d",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "0d921ccf1248d0f70441b741be5c7fbb99d7b606677f2d974f46c52611af5dd2",
       "sha256_webp": "c4022307e8f4478450e775dc4c0774c2bf49cab32b8ea16623b58254f0e1852b",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-001",
@@ -852,12 +1279,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-001-a-church-supply-closet-inventory-that-volunteers-can-actually-maintain.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for A Church Supply Closet Inventory That Volunteers Can Actually Maintain.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Organized supply closet with bins, shelves, clipboard, and stationery.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "e2a5aa9f497ea0c8a20249c223dd1d06209c2547222df4efac89aec8fc6a14bc",
+        "source_sha256": "ba3f014d608840c075479a9826a2c8c436e9804aa5f16d3d8be39fb081b4efc2",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "ef83021cd302913ce5fbe44858af325aab7a3b9a3d5857bbd03f793014d5b1e1",
       "sha256_webp": "1e555332013bf4171af687234405a73554d47c1d1af79e146aec2ebe5c7271b5",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-002",
@@ -868,12 +1303,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-002-how-to-set-up-a-simple-sunday-morning-volunteer-handoff.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for How to Set Up a Simple Sunday Morning Volunteer Handoff.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Two anonymous cropped people passing a clipboard in a community room.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "e2a5aa9f497ea0c8a20249c223dd1d06209c2547222df4efac89aec8fc6a14bc",
+        "source_sha256": "ba3f014d608840c075479a9826a2c8c436e9804aa5f16d3d8be39fb081b4efc2",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "957a1b0b616fe0b37e9d5ad8d9c35663be866f446154225438ae8dac945ff64a",
       "sha256_webp": "08e3833ed6f4c8b240c8ab7643c6d86d98a21cb4a13f912f31f6a97185e35d54",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-003",
@@ -884,12 +1327,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-003-church-classroom-storage-a-pre-selection-fit-and-label-worksheet.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Church Classroom Storage: A Pre-Selection Fit-and-Label Worksheet.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Classroom storage bins, tape measure, and blank planning card.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "e2a5aa9f497ea0c8a20249c223dd1d06209c2547222df4efac89aec8fc6a14bc",
+        "source_sha256": "ba3f014d608840c075479a9826a2c8c436e9804aa5f16d3d8be39fb081b4efc2",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "abe83a9ae2cfdd723319171acc51b394f698129960bfbe058ccf69eb3bf88965",
       "sha256_webp": "aedbbd67436caf24173749b47d4dafe67e018b3e4704b2f3ad56cb4270377eca",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-004",
@@ -900,12 +1351,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-004-a-low-drama-method-for-tracking-shared-church-equipment.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for A Low-Drama Method for Tracking Shared Church Equipment.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Coiled equipment cable, clipboard, tags, and case.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "e2a5aa9f497ea0c8a20249c223dd1d06209c2547222df4efac89aec8fc6a14bc",
+        "source_sha256": "ba3f014d608840c075479a9826a2c8c436e9804aa5f16d3d8be39fb081b4efc2",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "ec0af5f7cd9842757a381af25895694f6f73af0fea81bd71936710ae372e9d28",
       "sha256_webp": "d738c527024de17b93e621e02a70f186b06c809b8c4ea786fb299ae34fb4958d",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-005",
@@ -916,12 +1375,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-005-welcome-desk-basics-designing-information-for-a-first-time-guest.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Welcome Desk Basics: Designing Information for a First-Time Guest.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Welcome-desk information holders, stationery, and blank cards.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "8b7899687d6fff3809da01284c9446fbbeac9afe3899193e2c25e05b440d98b2",
+        "source_sha256": "589965f074264fe08ed2a22aad11a338a79e19bd3c7b016797c576c591e8f35e",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "1036eb6e4f8e8bc8ac0fe53b37c5958bcd343abe953ae87aa13b8580d451a611",
       "sha256_webp": "56aa107a5bc8c14237832bfbe637a6220908c93983616b6d58b420b148c75945",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-006",
@@ -932,12 +1399,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-006-the-church-bulletin-board-refresh-what-belongs-up-and-what-can-come-down.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for The Church Bulletin Board Refresh: What Belongs Up and What Can Come Down.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Large bulletin board filled with blank geometric cards.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "8b7899687d6fff3809da01284c9446fbbeac9afe3899193e2c25e05b440d98b2",
+        "source_sha256": "589965f074264fe08ed2a22aad11a338a79e19bd3c7b016797c576c591e8f35e",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "0c2d1637a0012606b8c0960bd03e2159a661e1c65247ad61449afc2b85dfe8a6",
       "sha256_webp": "b28679df9f1a81a418f8a2360e9cc7ab0674219fba25df53fb8b7b0195062af4",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-007",
@@ -948,12 +1423,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-007-church-hospitality-kit-question-ledger.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Church Hospitality Kit Question Ledger.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Hospitality kit with bags, tags, papers, and basket.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "8b7899687d6fff3809da01284c9446fbbeac9afe3899193e2c25e05b440d98b2",
+        "source_sha256": "589965f074264fe08ed2a22aad11a338a79e19bd3c7b016797c576c591e8f35e",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "c938c80cb0df65758c1f9f9549e3de9aa4924749d2ad19a77b8c872fb95f8f6c",
       "sha256_webp": "2653cdc1fc7e77993fb009d919a6f2709937e9b47aa895d60b0be9630115cbf0",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-008",
@@ -964,12 +1447,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-008-planning-a-spring-building-reset-without-overloading-volunteers.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Planning a Spring Building Reset Without Overloading Volunteers.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Spring building-reset checklist, clipboard, brush, spray bottle, and cloths.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "8b7899687d6fff3809da01284c9446fbbeac9afe3899193e2c25e05b440d98b2",
+        "source_sha256": "589965f074264fe08ed2a22aad11a338a79e19bd3c7b016797c576c591e8f35e",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "047eac8dc9cbad5feae6c7dc1003cba588b069d48c71629b0679dc7d2e86ed71",
       "sha256_webp": "0bc2edc882a77abfb9f3b2387a7a0cdcf8a1b53a1f47768bd76f376442ddb0ce",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-009",
@@ -980,12 +1471,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-009-classroom-state-handoff-record-between-programs.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Classroom State-Handoff Record Between Programs.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Empty multipurpose classroom with tables, chairs, shelves, and supplies.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "1c237733587faa8ed96d29f3b052f7335d39301f2a36c1e9b9b63b756645f6d2",
+        "source_sha256": "6d7c5b5d53c211fdd2c037e8542dd97873f6f7345b16b18ab856867178fba7af",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "dadb51c88a645fa92da171fa6b1c8032c4c5b6510ac23a2d65956aa7f1c154e7",
       "sha256_webp": "044d40878d4a386016c44ce8d56a7402ad687c794dc8b4517a56190627170221",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-010",
@@ -996,12 +1495,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-010-a-practical-checklist-for-church-kitchen-supply-zones.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for A Practical Checklist for Church Kitchen Supply Zones.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Clean church-kitchen supply zone with shelves, bins, dishes, and clipboard.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "1c237733587faa8ed96d29f3b052f7335d39301f2a36c1e9b9b63b756645f6d2",
+        "source_sha256": "6d7c5b5d53c211fdd2c037e8542dd97873f6f7345b16b18ab856867178fba7af",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "575b2f760583bf249240dbbe749d397a557a74649b404ecade2e502a5bf935f7",
       "sha256_webp": "3a7651e759c065d25076e435404b869c4b0f110a99f9dc27f5adb13cb0fe4624",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-011",
@@ -1012,12 +1519,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-011-clearer-directions-indoors-a-wayfinding-review-for-church-buildings.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Clearer Directions Indoors: A Wayfinding Review for Church Buildings.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Indoor wayfinding-route cards with arrows, dotted paths, and map-pin icons.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "1c237733587faa8ed96d29f3b052f7335d39301f2a36c1e9b9b63b756645f6d2",
+        "source_sha256": "6d7c5b5d53c211fdd2c037e8542dd97873f6f7345b16b18ab856867178fba7af",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "b76c547d92e943470f88d7fd3758eec1278800dfc56d357c8f3b861801eb7e9d",
       "sha256_webp": "796c8ec8e55dbb8883bb8d96cb9052ed2a10a77a2c53e1d743b9773d7c3e6dd1",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-012",
@@ -1028,12 +1543,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-012-volunteer-name-tags-a-privacy-conscious-planning-guide.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Volunteer Name Tags: A Privacy-Conscious Planning Guide.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Blank volunteer name tags on lanyards.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "1c237733587faa8ed96d29f3b052f7335d39301f2a36c1e9b9b63b756645f6d2",
+        "source_sha256": "6d7c5b5d53c211fdd2c037e8542dd97873f6f7345b16b18ab856867178fba7af",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "371e66344da9f0c51714367b1e9421808f5ee0fd96dd8f9d6c6c6fed12ae775f",
       "sha256_webp": "4cbde0c6171f1bfcae7f861e081d184332934368ea341112d3cde3ed214d8888",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-013",
@@ -1044,12 +1567,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-013-easter-weekend-supply-planning-build-a-reusable-operations-list.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Easter Weekend Supply Planning: Build a Reusable Operations List.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Volunteer hands checking grouped linens, cups, activity packets, and equipment for Easter weekend operations.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "f370313de3e47712b5472409699c08b9e9d3aef7d4f71bba4179b8a0ef099512",
+        "source_sha256": "4b170bad5bcd92511bb86519ac9f85a8896d957581de5be40ea210267b8f0b94",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "68cade54316dc12017d9be291bab988fb02957dea6049725758375d829da0066",
-      "sha256_webp": "457bfd86eb1441f63f92a0482b6afb318e1dc5864508cfb7dd666b75c3bd2621",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "01692908e523c4a685f1c2260ecc8801aace16ddc4d618577d1450d0ae99e251",
+      "sha256_webp": "38aaad58cdea3cf9192926f9c6a9a9114fad5cd8457f4c535f9ceb552e9ac0b9",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-014",
@@ -1060,12 +1591,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-014-arrival-flow-observation-and-review-guide.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Arrival-Flow Observation and Review Guide.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Arrival-flow diagram with colored markers and cards.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "da5bbb75d220dde6cadb9ea52fe653818e80a9fd56ccdd39b49430e7a5af0d12",
+        "source_sha256": "07db2ac818afe0498107bf2e55f030a7dfd1ab3ac147fc9293de0df026b99810",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "86d9afc27ba042a89a39b12272ea7fe415d6376a3cc89cb99162aa8ef03538b6",
       "sha256_webp": "a90c59100c6229abd2fae5ca327756623e4508e2a9bf7528f1ce3f9d76fd452a",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-015",
@@ -1076,12 +1615,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-015-church-chair-layout-planning-record.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Church Chair Layout Planning Record.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Chair-layout planning diagrams and pen.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "da5bbb75d220dde6cadb9ea52fe653818e80a9fd56ccdd39b49430e7a5af0d12",
+        "source_sha256": "07db2ac818afe0498107bf2e55f030a7dfd1ab3ac147fc9293de0df026b99810",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "a4749670689da5a21dfc96a193d03f8d7c9c3c641d9ee4fa0155b791ef4fef53",
       "sha256_webp": "64d99bb4e86f49004b8780c74e97e264c87f0c0220bec3989a78c2c7aa8d55d6",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-016",
@@ -1092,12 +1639,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-016-church-volunteer-arrival-kit-planning-record.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Church Volunteer Arrival-Kit Planning Record.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Volunteer arrival-kit planning forms, blank tag, pouch, and lanyard.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "da5bbb75d220dde6cadb9ea52fe653818e80a9fd56ccdd39b49430e7a5af0d12",
+        "source_sha256": "07db2ac818afe0498107bf2e55f030a7dfd1ab3ac147fc9293de0df026b99810",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "81697776a73087fd96579d9ae45391d0f7dbdd85515b59eb20c3d3118fa651e9",
       "sha256_webp": "8b8d199dbf55d0b56e073a790b22972ca913d809ebf96c1846abac2c49922fe5",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-017",
@@ -1108,12 +1663,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-017-a-better-lost-and-found-process-for-church-buildings.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for A Better Lost-and-Found Process for Church Buildings.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Lost-and-found clipboard, box, pens, tags, and folded textiles.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "2ec5995b87f51014b7ee3359cd2ddaa02e9918c1c6dff243280cdbb3212d0ea9",
+        "source_sha256": "7eadd89237a6677aa3a494c726735c299ac9bcd989355e5a83877c553ab21c0e",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "337a1c7d9517e0dd2c6bb23fdd314c9398b2cbd9510f3425ae42e78941f0414c",
       "sha256_webp": "72b33b0a5ff11cd08e82223b3c1e36723dc233f0c7a62254d1fbdd63c3eda21c",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-018",
@@ -1124,12 +1687,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-018-outdoor-welcome-station-condition-observation-record.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Outdoor Welcome Station Condition-Observation Record.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Outdoor welcome station with table, blank signs, cards, clipboard, and trays.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "2ec5995b87f51014b7ee3359cd2ddaa02e9918c1c6dff243280cdbb3212d0ea9",
+        "source_sha256": "7eadd89237a6677aa3a494c726735c299ac9bcd989355e5a83877c553ab21c0e",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "f8c58c5e87990408c95ce2582be79fda6038ec76079a8781bb62c678151ece38",
       "sha256_webp": "44aaab8c30f8bdfce8325e07860f81dc9c23f4409d89f2791dc96a2f0ef82c28",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-019",
@@ -1140,12 +1711,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-019-church-event-registration-table-workflow.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Church Event Registration Table Workflow.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Event-registration table workflow with stations laid out on dark cloth.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "2ec5995b87f51014b7ee3359cd2ddaa02e9918c1c6dff243280cdbb3212d0ea9",
+        "source_sha256": "7eadd89237a6677aa3a494c726735c299ac9bcd989355e5a83877c553ab21c0e",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "1abd66c7ed45ad2898a43e0d39245f928c0ec863a1e00d56d52d11dfd94954a6",
       "sha256_webp": "a6755ce46bdb099ab66767fc0076aa61535fc879e93bb679231670f5b8d179e4",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-020",
@@ -1156,12 +1735,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-020-seasonal-church-d-cor-inventory-record-template.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Seasonal Church Décor Inventory-Record Template.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Seasonal decor inventory setup with bins, blank cards, and clipboard.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "2ec5995b87f51014b7ee3359cd2ddaa02e9918c1c6dff243280cdbb3212d0ea9",
+        "source_sha256": "7eadd89237a6677aa3a494c726735c299ac9bcd989355e5a83877c553ab21c0e",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "1277f25cc7e941770ce8b0d2d9282bd0f32c14290da06cce3e1c0b4bf33e672e",
       "sha256_webp": "b657c6ac9e9aa1519616ca0eda03ab18f75c4c652d898ed9da2df7f4369a5a23",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-021",
@@ -1172,12 +1759,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-021-a-simple-supply-par-level-system-for-church-hospitality.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for A Simple Supply Par Level System for Church Hospitality.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Supply par-level worksheet with simple icons and fields.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "4aa86fb8197ccd046f1eaa5d39a07c21c01fe4dd075c290679c21d39a59019ac",
+        "source_sha256": "988aff87c6792d90ee1efb814f9d828b0508dc64b3d6b98ca7e073de39b44ec3",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "74f0d2e2193530fcc78bee7a7adfd265522836afce4272891112e1afc57eb318",
       "sha256_webp": "df4cb7c18cf11d28f39eef0fc21c29f02f51fbc7963053c23d33670dad07e12f",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-022",
@@ -1188,12 +1783,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-022-sound-booth-organization-for-volunteer-friendly-changeovers.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Sound Booth Organization for Volunteer-Friendly Changeovers.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Sound-booth cables, mixer, headphones, and checklists.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "4aa86fb8197ccd046f1eaa5d39a07c21c01fe4dd075c290679c21d39a59019ac",
+        "source_sha256": "988aff87c6792d90ee1efb814f9d828b0508dc64b3d6b98ca7e073de39b44ec3",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "ff89ac13ff1b871a3aea160f9e3000be287ae53f3664009b853f2ea4a2c7ade8",
       "sha256_webp": "3d3747e12aa20f97d5dd3f8d9af2052fad77683c1df6d2bb491fd445d2f35d30",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-023",
@@ -1204,12 +1807,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-023-summer-church-room-setup-keeping-supplies-mobile-and-accountable.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Summer Church Room Setup: Keeping Supplies Mobile and Accountable.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Mobile room-supply carts and bins with blank labels.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "4aa86fb8197ccd046f1eaa5d39a07c21c01fe4dd075c290679c21d39a59019ac",
+        "source_sha256": "988aff87c6792d90ee1efb814f9d828b0508dc64b3d6b98ca7e073de39b44ec3",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "0bdd4d462122d9e5e49586082564118089fa34fc9d3c7f0f662410077f285161",
       "sha256_webp": "60fe16b9f6bdaf0888a0097c680f6ba66cfa1250afb8cafc5377f33c32a46f90",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-024",
@@ -1220,12 +1831,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-024-how-to-write-a-one-page-setup-guide-for-any-church-room.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for How to Write a One-Page Setup Guide for Any Church Room.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "One-page setup-guide diagram and checklists.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "4aa86fb8197ccd046f1eaa5d39a07c21c01fe4dd075c290679c21d39a59019ac",
+        "source_sha256": "988aff87c6792d90ee1efb814f9d828b0508dc64b3d6b98ca7e073de39b44ec3",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "1f894cb4cca219b566e74cd8c1cb721c855173e059c8377df699e1494d79aa7f",
       "sha256_webp": "8f69d90c4848521b849a9c8ae32cdac92bad9b8547b6c28ebb61a9b36e33d470",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-025",
@@ -1236,12 +1855,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-025-church-refreshment-stations-a-refill-and-reset-workflow.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Church Refreshment Stations: A Refill and Reset Workflow.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Anonymous hands at beverage refreshment station with cups and dispenser.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "e6c1f2468eb00f290f24c2e0a9d562e83a17215455ebb25da15448f84781dc62",
+        "source_sha256": "5dfafbde1b6a0bd33d7edd9953586494f8f5b4ea7d02663e3c2b8911673de9a7",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "6d10c83137f9af7d0926339fdf645447f9c494c107f43b18d3286ae0b49464cd",
       "sha256_webp": "d73f723fac131a85afcc0c7d868b078c947f343849b9d306140d183d692a5f7d",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-026",
@@ -1252,12 +1879,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-026-planning-a-midyear-church-supply-budget-review.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Planning a Midyear Church Supply Budget Review.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Volunteer hands comparing community-room supplies with a blank budget worksheet and calculator.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "296746f924fb2cbaa4a8d8fd044d469bbd0a9525ccdb457560985cdba0994af8",
+        "source_sha256": "fe3051fef274d162caa9df0f6c70013ddb26bb2624b21330d938f7dff381ed51",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "dbdf97ae7a718df0647bf862632f7e3400dfb54b1804d27aa5873d427c760f96",
-      "sha256_webp": "c4ce24e5c392e816f89bef9933dac86fc1179544105a6193bdb57309a504eb6b",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "d91666fd1e7be86a6ecedac3be8b0081781316a22288e5cc431f3014ceb4edd0",
+      "sha256_webp": "30eb1d0a9d6d1c5ea607ecb747c3cf87d3769c5809e84b0a725f39eb97200df1",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-027",
@@ -1268,12 +1903,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-027-children-s-ministry-take-home-material-planning-record.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Children's Ministry Take-Home Material Planning Record.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Children's take-home craft materials, illustrated cards, scissors, and pencils.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "e6c1f2468eb00f290f24c2e0a9d562e83a17215455ebb25da15448f84781dc62",
+        "source_sha256": "5dfafbde1b6a0bd33d7edd9953586494f8f5b4ea7d02663e3c2b8911673de9a7",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "2d78c7e6eca335f1d091e2b6d6ee3a064a362e4da860abbad5e8325d83e9e98f",
       "sha256_webp": "f48586b8dcb98665608b143f85bffbea1143cdd1c5896d30f06d3d2892a2d0b7",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-028",
@@ -1284,12 +1927,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-028-church-access-asset-record-boundary.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Church Access-Asset Record Boundary.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Anonymous hands returning a plain access fob to a secure storage station beside a blank checkout sheet.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "3158c408daa40c2de01059c66c219a6f7c673f2f2cda7785de7e06cbf871e8c1",
+        "source_sha256": "d31433677971f339d9cb33e8aa713554e1ed779693502c705a69952420dafcab",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "e0afd63fbc6d2bb6dcaf8308b6f48a6664ce88935fc7f2af81cd90ba994c66ec",
-      "sha256_webp": "e3b1bc537d14aabc57487d5cc383788d5ad1fca5fe0c6cbd10237e689fc6efd6",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "f2dd87e6017af63523b8a9d121866ae7e782eea220d910eff900e78a7fe38a34",
+      "sha256_webp": "7dd54f10140e252852d28d77de5bfc387ca4d028bcae008141deea9e650c9e48",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-029",
@@ -1300,12 +1951,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-029-back-to-program-classroom-supply-planning-for-churches.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Back-to-Program Classroom Supply Planning for Churches.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Back-to-program classroom supplies in bins with notebooks and pencils.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "00200adecc03b97b50464ae4ea3c249a99113b7912a8e77a78dbb71952a3f5eb",
+        "source_sha256": "c02f428b48256cc75a258b2d6b3dd9ba55908479e54417c0f890c48a8f602e87",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "0e07e521ee77cc9434b29975870d6d2e8006b419e010a97670b1d15a2d8b4613",
       "sha256_webp": "3812a98da400098a4401d28ef4bc8cd9dec34822c2fab515aaff61dd29111ad0",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-030",
@@ -1316,12 +1975,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-030-church-volunteer-orientation-the-supplies-and-signage-that-reduce-guesswork.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Church Volunteer Orientation: The Supplies and Signage That Reduce Guesswork.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Volunteer-orientation tablet surrounded by map and checklist cards.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "00200adecc03b97b50464ae4ea3c249a99113b7912a8e77a78dbb71952a3f5eb",
+        "source_sha256": "c02f428b48256cc75a258b2d6b3dd9ba55908479e54417c0f890c48a8f602e87",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "36cf5db16a149c99e54c5f7d3470a6824390727f3d767425ae85e959e8fed67c",
       "sha256_webp": "5cef8b0994141a331045029770fa6587489e6a9d3cb0ad333f21e7edabc77fe5",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-031",
@@ -1332,12 +1999,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-031-a-september-welcome-area-refresh-for-returning-and-new-families.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for A September Welcome Area Refresh for Returning and New Families.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Welcome-area refresh signs with colorful pictograms and trays.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "00200adecc03b97b50464ae4ea3c249a99113b7912a8e77a78dbb71952a3f5eb",
+        "source_sha256": "c02f428b48256cc75a258b2d6b3dd9ba55908479e54417c0f890c48a8f602e87",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "3a471e9e077d4fea9dcc36aa2a2bec53ba9e234ac007be7c949dbd2dc42904b7",
       "sha256_webp": "8f6fff17ddc187d224631835678f7af8d052e9e0fd90662cb984e74cb5f659a5",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-032",
@@ -1348,12 +2023,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-032-church-signage-copy-short-phrases-that-help-people-decide-where-to-go.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Church Signage Copy: Short Phrases That Help People Decide Where to Go.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Blank signage frames, clipboard, and tape in a hallway.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "00200adecc03b97b50464ae4ea3c249a99113b7912a8e77a78dbb71952a3f5eb",
+        "source_sha256": "c02f428b48256cc75a258b2d6b3dd9ba55908479e54417c0f890c48a8f602e87",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "6a5bda10f00534ec8135f08dd0a2170ff2267f87a20487c3577ebfd5ee486e6f",
       "sha256_webp": "61e7c741622e8ee56a7b18d660d61fc7d0a5ce4d4a3452d2461d934092833261",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-033",
@@ -1364,12 +2047,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-033-a-church-supply-receiving-routine-for-donations-and-deliveries.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for A Church Supply Receiving Routine for Donations and Deliveries.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Donation-receiving clipboard, boxes, tags, and twine.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "d0b37f37c184d78baaca8162eb199f1ec486d92a31aedcd926dfdd27150bd73f",
+        "source_sha256": "7a3989a0b0319656b05f8afeaf5d2b2a0eb425217c8a4bec90a7bf933934106a",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "4e09deeb0b4925b8d3df09d09dce160ae256c8599b94701ecd71128be3cf996e",
       "sha256_webp": "02eb9b2cee6b9e1ee08ee8e10ec64f37be4118a7a78c91dd37222877cb808a79",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-034",
@@ -1380,12 +2071,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-034-how-to-plan-a-church-information-table-without-visual-clutter.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for How to Plan a Church Information Table Without Visual Clutter.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Information-table layout using blank cards, trays, and basket.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "d0b37f37c184d78baaca8162eb199f1ec486d92a31aedcd926dfdd27150bd73f",
+        "source_sha256": "7a3989a0b0319656b05f8afeaf5d2b2a0eb425217c8a4bec90a7bf933934106a",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "73a0f7eb72440d250a3e4788b1465a5ede6eb2f2cc0d3d2d53eda95097768c2d",
       "sha256_webp": "1d94fe94f79c75c8e431ad7f5d7d826ae9349d5a4c46c7ca790125ec81be09f5",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-035",
@@ -1396,12 +2095,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-035-church-meeting-room-kits-make-small-gatherings-easier-to-host.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Church Meeting Room Kits: Make Small Gatherings Easier to Host.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Meeting-room kit shelf with storage boxes and stationery.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "d0b37f37c184d78baaca8162eb199f1ec486d92a31aedcd926dfdd27150bd73f",
+        "source_sha256": "7a3989a0b0319656b05f8afeaf5d2b2a0eb425217c8a4bec90a7bf933934106a",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "2fe467fd63639b38feb0ca065af4bf88b53c0f8af54b5cb9cbbb80bea0d082c5",
       "sha256_webp": "8642ef32b7c3b9c233757c3606d1fbe3b50f26431d50a113a87c57c84c3eae2c",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-036",
@@ -1412,12 +2119,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-036-a-fall-facilities-walkthrough-for-church-volunteer-teams.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for A Fall Facilities Walkthrough for Church Volunteer Teams.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Facilities-walkthrough map, clipboard, tape measure, tags, and pen.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "d0b37f37c184d78baaca8162eb199f1ec486d92a31aedcd926dfdd27150bd73f",
+        "source_sha256": "7a3989a0b0319656b05f8afeaf5d2b2a0eb425217c8a4bec90a7bf933934106a",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "1ee932c1e690da4507d9c1525d38a3dbc8304f79c9a0c373a3a09a68556d76a1",
       "sha256_webp": "91c8b7c242474cb6de25fba56f16431f63c6eeaa6f2da12a215aaada9666faf2",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-037",
@@ -1428,12 +2143,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-037-planning-seating-tables-and-supplies-for-church-community-meals.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Planning Seating, Tables, and Supplies for Church Community Meals.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Seating-and-tables floor plan with colored tokens and question cards.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "730ac2dd39be979df238d05847087878d6bbc7ae42d83c1429e57674f1e919f9",
+        "source_sha256": "3ab53bb21d216598429c8d2b83af67e62c8e69dc9e387f070af033fd73a88e51",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "02005f4f9a4dd5bca115d2a57a2a08684169927c4726980e843280910620fdbf",
       "sha256_webp": "20cfbe6638a71cabeab30cde5ebc533c78496495456ff46bcb1cba9642dc2a69",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-038",
@@ -1444,12 +2167,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-038-how-to-organize-church-craft-supplies-by-project-and-reuse.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for How to Organize Church Craft Supplies by Project and Reuse.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Church craft supplies sorted on shelves by project and palette.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "730ac2dd39be979df238d05847087878d6bbc7ae42d83c1429e57674f1e919f9",
+        "source_sha256": "3ab53bb21d216598429c8d2b83af67e62c8e69dc9e387f070af033fd73a88e51",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "280a9e30def29ff2d28e410ffc68e9a45279aa312c45316f845f282a0188f1e7",
       "sha256_webp": "77556c55496bbfc8ff2719a5702b29d84da67caeb131327436da0b1ebf492f7a",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-039",
@@ -1460,12 +2191,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-039-church-communications-calendar-coordinating-print-screens-and-verbal-reminders.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Church Communications Calendar: Coordinating Print, Screens, and Verbal Reminders.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Volunteer hand arranging color-coded communication cards for print, screen, and spoken reminders.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "18b62c6db0b89dedb3022a57e8972ba12946fa272c896a84637a57442c9022eb",
+        "source_sha256": "367fadf65bce8cdc240d5997c4ebb5dc83457a50a66f0bc28beb7be0c59c4e32",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "6f3fd4d19ecb4fcbf8acec83cc0ba15810498221f7e430516b5023a70fee208e",
-      "sha256_webp": "1a7a026f6effcd115482be6faa7dd1272777817c15b8f04e94ab8eb12b49b338",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "2a325b05713bf9d1968dad16a5d3b9d74d270e9011e76d29392293e9d6ad9080",
+      "sha256_webp": "f45c350c53184638ab5e4719d525de1217c4c97426253585d8d13992b96ebcfa",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-040",
@@ -1476,12 +2215,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-040-a-respectful-donation-item-sorting-process.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for A Respectful Donation-Item Sorting Process.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Donation items sorted into a floor grid with toys, toiletries, and textiles.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "730ac2dd39be979df238d05847087878d6bbc7ae42d83c1429e57674f1e919f9",
+        "source_sha256": "3ab53bb21d216598429c8d2b83af67e62c8e69dc9e387f070af033fd73a88e51",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "63c6939d62b802ee54417f0c10b6694fcbdbbf62601434cda7be1ddec7b7b2e3",
       "sha256_webp": "eec629599779f2f1c74f741aed3d6f5ab45093824e98bcfe72044fc34688f66f",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-041",
@@ -1492,12 +2239,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-041-winter-entryway-readiness-supplies-storage-and-volunteer-cues.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Winter Entryway Readiness: Supplies, Storage, and Volunteer Cues.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Winter entryway cubbies with coats, towels, boots, and bins.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "13d3887082af4d456a5b10137488f9e8bd3fa16631574d0380190e41ac79e7a6",
+        "source_sha256": "dd1d067634f1a58145072afb971151b72ec0702a6ce78887fc8cfa67cb93ef5e",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "076625c5ff8d9dbd731833e299bb408871482ea4f034743dbff42e7b0be9a136",
       "sha256_webp": "ac6149759cc7243946f0afda9faa94aa390354ee5ce4a99fea79cd4f168e4369",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-042",
@@ -1508,12 +2263,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-042-church-christmas-program-supply-planning-a-local-timeline-template.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Church Christmas Program Supply Planning: A Local Timeline Template.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Christmas-program planning board with blank cards and ornaments.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "13d3887082af4d456a5b10137488f9e8bd3fa16631574d0380190e41ac79e7a6",
+        "source_sha256": "dd1d067634f1a58145072afb971151b72ec0702a6ce78887fc8cfa67cb93ef5e",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "fa277d57be501b928a5f767ed1d4e290ae66ea2dcc111c3a0623a70ca3340ac4",
       "sha256_webp": "58c1458afa73e7b5a46d106ff782c8c8a203979faad5878b35042a2a3797504c",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-043",
@@ -1524,12 +2287,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-043-a-church-gift-wrapping-and-care-package-supply-station-plan.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for A Church Gift-Wrapping and Care-Package Supply Station Plan.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Gift-wrapping and care-package station with ribbon, boxes, and planning sheet.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "13d3887082af4d456a5b10137488f9e8bd3fa16631574d0380190e41ac79e7a6",
+        "source_sha256": "dd1d067634f1a58145072afb971151b72ec0702a6ce78887fc8cfa67cb93ef5e",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "624ebb1d544619d89699f52b0edc52ed92c7fb8d11690b9b0fc150c993d97b2e",
       "sha256_webp": "4d9a6a9b07ced999cec0ef5b8eb730472c5f184ac3352b7a63837b4751ceb0a8",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-044",
@@ -1540,12 +2311,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-044-how-to-prepare-church-storage-for-holiday-d-cor-return.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for How to Prepare Church Storage for Holiday Décor Return.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Holiday-decor storage bins with ornaments, towels, beads, and ribbon.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "13d3887082af4d456a5b10137488f9e8bd3fa16631574d0380190e41ac79e7a6",
+        "source_sha256": "dd1d067634f1a58145072afb971151b72ec0702a6ce78887fc8cfa67cb93ef5e",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "fd80e8f3738b178257f34fb5fc2d7fb0666b98fa1afff95b250b90ce9cab3b3f",
       "sha256_webp": "ffcadb8baa818296326584e000f409d897d35974aa9510d9d6592774507bd416",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-045",
@@ -1556,12 +2335,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-045-year-end-church-supply-review-questions-for-ministry-leads.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Year-End Church Supply Review: Questions for Ministry Leads.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Volunteer hands reviewing hospitality, classroom, and facility supplies beside a year-end checklist.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "7e8248a7bf8a4b3f7843e79968c2aac3da11718909aac24cf26dc4ea99dc5a79",
+        "source_sha256": "7761311c659f4f3cfb2eb32d1a0a956afde5383304e7c5c503950d7ac295a9bd",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "229fc473ef85e6e591eac6dddd9d391bf2898275f77355d29fba05acd5d07582",
-      "sha256_webp": "624f0c4e481157611da98b6ce16b2fe3bf40f7987937328e959ff526474db1e7",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "fb548563ad2ae738b04b10d2a0f5489335eaa5741819372ea264d9347daaa892",
+      "sha256_webp": "5171edbed149cd4d066d02793b645692a731a40008c24b2a8a432d066e4e5d60",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-046",
@@ -1572,12 +2359,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-046-creating-a-january-volunteer-re-entry-checklist.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Creating a January Volunteer Re-Entry Checklist.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Volunteer welcome kit, lanyards, checklist, coat rack, and boot tray prepared for a January return.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "7729ac13633391de50878bfd4df495fd6cdaccf905f9979a54667758769de8f1",
+        "source_sha256": "d699387e8ff61a81536b8b7d5bc1a3a44bddac71b4aa7a5958d70b5827eb03ac",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "fd7115fd0c0d6869ed280ea00b2f636f6c0e928c5ece9712debc6bc5f11cd92f",
-      "sha256_webp": "a9f60cffd7f2973a21cb70c5da36e6e37db41b125d5c39cacee667af83203a54",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "0453b5cc9de03d6c0badd0eecc4bc7017e904f162ac9543dff55ff80dff61bb5",
+      "sha256_webp": "350589e4d4b0a55ec90d5a32433862e1360f8ed20749865cf16451ac1907758b",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-047",
@@ -1588,12 +2383,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-047-church-technology-cable-management-a-documentation-first-guide.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Church Technology Cable Management: A Documentation-First Guide.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Technology cable-management flat lay with coiled cables, blank tags, and diagram.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "174360f5aecdd8ae55d49fffe026937aa8590c06c35c09a6e987ecf63f837472",
+        "source_sha256": "cbc6061a9dddfb53369f571a99d1d4e5fb02c602376243ca1a9e288b4130a03a",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "4f5ceea2776515205dd40f36ce2970fae4ed62e353a9e229260e1b61a6b4d5ce",
       "sha256_webp": "8144cdfc7001d723a99802731b6d9b3056130de82557ef361e8bd5409461db9c",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-048",
@@ -1604,12 +2407,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-048-planning-a-church-resource-library-that-is-easy-to-browse.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Planning a Church Resource Library That Is Easy to Browse.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Accessible shelves of plain books and binders organized with color markers beside a return basket.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "3f2a42199a67c1fdf0f3926f4808234bed8c86cb1c33a05af60127c9f922195e",
+        "source_sha256": "50e7f9f0a14b20250e7c314424cfa82c4d0ef8e119574665a1aaa172c2fe7424",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "a52b8a4003c7bd4bed9fd397830a18f2dd1b716446ca755bad4d04f9cc3c43ab",
-      "sha256_webp": "00639aebec98a9b2ded4b4a776eb2264f858bb2597beb13c22a2f6562a84c049",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "27f946c35606f8bf4a9c3ad15f1c61b4aed9f515735e3d416607498fdc8ba840",
+      "sha256_webp": "294c67492c4cb6e17db1205b2845f5d4f18c2e7a8bdd05b5f0bc8d71bda0da89",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-049",
@@ -1620,12 +2431,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-049-church-emergency-contact-planning-questions-a-no-data-conversation-guide.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Church Emergency-Contact Planning Questions: A No-Data Conversation Guide.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Anonymous participants discussing blank emergency-contact process cards with a closed phone and binder.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "8e80d7c0402a31d4ab6bb597e84f71ed81838f8840835b433b74a3f4ac245bc0",
+        "source_sha256": "bd59d97627e870834c1efc7b1a318337271833886c0e8dc1fe551cb48cad76c2",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "8104ef9c778bcd635fe4c9fd5ff0a258c73670d953cbe75fba4886c1e4e7dcbc",
-      "sha256_webp": "9ca4ca4351b2df68f9b474ba588b18ff4a16a8c1f5daabdae9160832ef86e8ae",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "462ce1da277d46fcb4a8a219883be883de40dd069457565adc5a0633a5188694",
+      "sha256_webp": "97cf339aacf048111f1f28b4a5e7acd3926dd49ad71974346fbe171f0106d86a",
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-050",
@@ -1636,12 +2455,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-050-a-new-year-church-room-booking-board-that-makes-conflicts-visible.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for A New-Year Church Room Booking Board That Makes Conflicts Visible.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Large color-coded room-booking board.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "98e16f39463d1a8369d738361a5f20efd8666d6049521314ead95d94b1337008",
+        "source_sha256": "a9b4cd1e87256a879889728923ce3400269d21f0b499de67ee5190d16fdfa32a",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "d528a8615c6a15f3577611dd9087312a3a072f793a464d5d84a3a402981c4457",
       "sha256_webp": "ba5ed9c045007a71f217594e6d71b3b7d1169a46c1d3ad73ff641707b243bcb9",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-051",
@@ -1652,12 +2479,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-051-church-welcome-follow-up-materials-what-to-prepare-before-you-need-them.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for Church Welcome Follow-Up Materials: What to Prepare Before You Need Them.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Welcome follow-up cards and hub-and-spoke process diagram.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "original_four_panel_source_sheet",
+        "prompt_sha256": "98e16f39463d1a8369d738361a5f20efd8666d6049521314ead95d94b1337008",
+        "source_sha256": "a9b4cd1e87256a879889728923ce3400269d21f0b499de67ee5190d16fdfa32a",
+        "export_chain": "deterministic source-sheet quadrant; centered 16:9 crop; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "f7cd6ab44559f964a70a7d63f2905f727addcff75e0033ec6a44cab2f6a7da5c",
       "sha256_webp": "b63d045de0bfc51b88c4f42ec02e5e9dd24098e2e258cdf283a18d38fa4bfc17",
-      "status": "asset_public_hash_verified"
+      "status": "asset_generated_local_not_yet_public_verified"
     },
     {
       "post_id": "BLOG-CHR-052",
@@ -1668,12 +2503,20 @@
       "public_webp": "https://thewatchersedge.ca/assets/blogger/r9/2026-08-15/church/blog-chr-052-the-church-operations-playbook-turning-one-year-s-lessons-into-next-year-s-routine.webp",
       "width": 1600,
       "height": 900,
-      "alt": "Original illustrative photo-style scene for The Church Operations Playbook: Turning One Year's Lessons Into Next Year's Routine.",
-      "caption": "Original illustrative photo-style image for this practical church-operations guide.",
+      "alt": "Open operations binder with color-tabbed routines, annual calendar, and community-room supply carts in the background.",
+      "caption": null,
+      "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
+      "generation_provenance": {
+        "method": "OpenAI gpt-image-2-medium via Hermes image_generate",
+        "source_kind": "individual_sol_directed_replacement",
+        "prompt_sha256": "128ee8690c1f548efe634bedcf28b1386cbc541fd4ac4931597680082a063070",
+        "source_sha256": "53fe9b12a83ef4c6a0282b3ba8b953861d5f5c12504c9ffabc897cc9b31dbb26",
+        "export_chain": "individual generated source; center crop-safe 16:9 fit; 1600x900 JPG/WEBP export"
+      },
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
-      "sha256_jpg": "cb6c7f16324a4bd3b36a0565342944a5c36fe6af1e2e23a82932fd0f090fad55",
-      "sha256_webp": "91ac7c12a618dcddad97f3beb57a189547c0c5a829e68bda2bcea98da8df7ac7",
-      "status": "asset_public_hash_verified"
+      "sha256_jpg": "e60c0f0b5b62473c16c09ae0f51898e4bceb2a992a8daa9df13dd0a77bd16034",
+      "sha256_webp": "3620bee3440683f83f15011f7c3380b138025bc56fdfa1e47ac0e243cb0c9dc5",
+      "status": "asset_generated_local_not_yet_public_verified"
     }
   ]
 }
