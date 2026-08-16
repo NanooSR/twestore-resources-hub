@@ -1,17 +1,17 @@
 {
-  "truth_label": "R9_BLOGGER_IMAGE_ASSETS_COMPLETE_LOCAL",
+  "truth_label": "R9_BLOGGER_IMAGE_ASSETS_COMPLETE_PUBLIC_VERIFIED",
   "expected_post_count": 104,
   "generated_post_count": 104,
   "asset_set_sha256": "d8f9b784894dd62c9f3365ad26d4c5f5bcd146dea71d380008158f1a5d32d2ee",
   "remediation_plan_sha256": "5e0689028b1dc45ba20ce084aad59d963c7dcb6cac3227d4410517d996cd33b1",
   "hero_contract_id": "TWE-BLOGGER-R9-HERO-2026-08-15-v2",
   "public_url_verification": {
-    "verified": false,
+    "verified": true,
     "checked": 208,
     "passed": 208,
     "failed_count": 0,
-    "asset_set_sha256": "efd457cd8cf94a62995489d89b9a9c37493389748ee1f61a4e494b8ed8a6473a",
-    "remediation_plan_sha256": "3e7b92a65d1a16478116b8071c2156cb0e6f2e394866db18a534e58bba017f9b",
+    "asset_set_sha256": "d8f9b784894dd62c9f3365ad26d4c5f5bcd146dea71d380008158f1a5d32d2ee",
+    "remediation_plan_sha256": "5e0689028b1dc45ba20ce084aad59d963c7dcb6cac3227d4410517d996cd33b1",
     "receipt": "runtime/amazon_channel_campaign_20260813/publication/R9_BLOGGER_IMAGE_PUBLIC_URL_VERIFICATION_20260815.json"
   },
   "rights_basis": "Original AI-generated illustrative photo-style assets created for TWEStore. No third-party stock/photo scrape, Amazon/product imagery, brand, logo, readable private record, or real-location claim.",
@@ -38,7 +38,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "f1476abcf23dbf90c8c71853f07f7d856a064edfd53a8428faaec3bafccd64fd",
       "sha256_webp": "c930b6a8d084eca537e88421658ab434b450edceb6dcf93ce9339b7d591fb65d",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-002",
@@ -62,7 +62,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "8182c29c045e90806cb415d8c9b0a2573c3190c8cdc58617293476776e6d7af6",
       "sha256_webp": "8e191147f663849942a2309458e5cb59fbf4194104e49e890a3580a70523df7f",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-003",
@@ -86,7 +86,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "acdeb57e3b95cfeca601d4bd7b99da76379bd640877a929d6772f79ec72ce6ce",
       "sha256_webp": "8a84a6d13ac69b527a470b9ea40b56928a094f22246f4a29afc60a25aa7906cf",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-004",
@@ -110,7 +110,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "08fe400ad4be044555d8aeb49a25c4046a865a9ecdf419d503f71dee26026c08",
       "sha256_webp": "a7ad48f6f429b03543a686133e824050cc69a07321808169632fcb4ff5c95b46",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-005",
@@ -134,7 +134,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "f836c8cf3ff0f889f8dd718118d9e515255240c44eb3ea8734a8a07d0b4002a2",
       "sha256_webp": "d396eb5663cfa04c86ccb3b657b6646cf78bee1ac5f0e14ae7da48dd61fd3470",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-006",
@@ -158,7 +158,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "15e81ed3a78dfe1cb3642e759f3f88b0c48921c30619d73d75adbf22b15f7a02",
       "sha256_webp": "435db54ec3baae29c8227f7ec7753473f2e36049a58db3174fb9537258cb88ae",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-007",
@@ -182,7 +182,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "d44e91c145e4b22455a2d300938df6eb720f1adbe55a6813336d9cb46f2c575a",
       "sha256_webp": "548a493ca66bfb007acf0189012bf712efd387903370f9c274fd726685c12f27",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-008",
@@ -206,7 +206,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "49d2130c9ebe583d9449c2b91092f955e1a14f34cacfeeae60a9a19db3ec0c88",
       "sha256_webp": "8134cb5bf7f3f23fe5353672cc9bad14dc30901b27a467d2098d013bd772aa66",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-009",
@@ -230,7 +230,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "4f5c3ba3cd59a1cd606468a5c4c99135422592efb1e9b2f343856a39750f7485",
       "sha256_webp": "fb48126eef5e4f0cc6b269b3caae54e9c31ff04ea1770674b3919de9f246e349",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-010",
@@ -254,7 +254,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "bfb013a1a7da3b2254270b62ded45e7712264066034676e9800e4be6a9cbe6d6",
       "sha256_webp": "e192e86ad3170f9caf3a5a44bd8dfe98374e16205fe7a22f7b2a4f440370b1d2",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-011",
@@ -278,7 +278,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "f57f087ceb936a1087b2744d25e85267983cc5c33d2d303b2d68abda9b217e9a",
       "sha256_webp": "0e489711d7a80a7c2dc3b0a7e50a99da03c28eea84206403ca1cd915651f4f80",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-012",
@@ -302,7 +302,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "ae78a7934c98d031ab870753fe475f0f2229c90c8b04ee7dba248c4cf11f88aa",
       "sha256_webp": "e9c447959c660917d57cef34ad36c5d8f0527c8cec852aa1b7b9f542558c4acf",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-013",
@@ -326,7 +326,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "bbcd9909ebb60d7a3d7f214d31a421ede3ce152cb2491c07972cd5e8dc5638bb",
       "sha256_webp": "7d6a93a5608af811d8a096d635dea85e90b7718f2dd8c1066a826abf723138f7",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-014",
@@ -350,7 +350,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "55a536eeefa105a0918d63daa899289b009e75e0039d3657148f02b2d1b48a33",
       "sha256_webp": "a8871a5950902d737c9fc84f8adee0a1ce80ad3438b3585e9cd9d058fb5c6eae",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-015",
@@ -374,7 +374,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "f25be67a237aa7a009e4787b758db9621b008768231ec76c0783f60cc0029c8f",
       "sha256_webp": "0c74cfdeb68031e4c0e83389bc5124c4572fd8c7be4b31a2280fbf541662f820",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-016",
@@ -398,7 +398,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "2d9775f9db5e09ddce38d10cf07795c1fa7cdc8b37c18ee33697104f77f861fe",
       "sha256_webp": "3b2c5bd4f48603e85567fb399f979caacce73bbe1827db74105bfeb5869a30cf",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-017",
@@ -422,7 +422,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "bf40d21d2f808d7e6a742072c5e10308db06d598d3abf58a39352529ea84624d",
       "sha256_webp": "fa92e4b2986cf60807882b77e5daf97231560d9346aa3bff9f999e4ea9380f30",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-018",
@@ -446,7 +446,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "ea179eee1ceb5ae6f57f2ae32a64d9274e85e7252d6d803500aaf3e97e72da0f",
       "sha256_webp": "2a337cd6d7dff807c8dad996f37ecb6bff34a2975b80c6b207e98539506c133c",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-019",
@@ -476,7 +476,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "f36ab74621e03d8027e657fb4496cd4fe1e991721ff05b4edd792690839fea63",
       "sha256_webp": "8e45d78298d4c77170f2c2b08d8e3834b8d73b5d6c2a398115561cfcb680bdfe",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-020",
@@ -500,7 +500,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "a0b9e3fdda7e693427d942ded2d322a4c8af3571ceb298840eea618d3347b46a",
       "sha256_webp": "7a1bc76ea497cb1cd0f00f52a5d81cdeabb7deec6943eeba4fb65582fdecc5d9",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-021",
@@ -524,7 +524,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "16aeb14ebd9609463e1b93051934388060581ca64075a1438f092e4ac75b45b2",
       "sha256_webp": "38c2f0a5102b97f35ddd32721748e1829a175cb226c9a48b8b17cb1800a37d5c",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-022",
@@ -548,7 +548,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "18403649cf61bfaff81d5f969830d4f2d5fead9c74c137112cc412bf232094e0",
       "sha256_webp": "e26f43fa400596bf053beb3331c794244af6efd9b9b12f473c97397fa881dbf5",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-023",
@@ -572,7 +572,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "e7c2891035a90c78ccb5207ae9b13b9d6ca447ff68c2b5526cf99aed7017b713",
       "sha256_webp": "48c94b5bff26a98672917b06e1e05823504fefbb9ea049d21f31b8d4aad8310b",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-024",
@@ -596,7 +596,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "4e3e916788e0e6f7dfdd2dd0036974f33b5d1f0e9d303307273e57100adc5039",
       "sha256_webp": "c63a1fb114ed3116e7f3e30f7f0e94e112dd6832410b4a40d71c39198d5add9d",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-025",
@@ -620,7 +620,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "9cf8f548745bd44b358ff6bd98063bf0cb20b4aec8747e1471d890c9b024c13e",
       "sha256_webp": "d9e2a031894dc9e87e4ceca5ec0c5668ef5c2039dca18124a918e4605d14fe5b",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-026",
@@ -644,7 +644,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "a0a658365c652e39ef518be2d973db4e6831d58d61b98bdd31d0c4b770d3d841",
       "sha256_webp": "eafa32e3a00dc35988fc2184b021316b3d48a312d7ce8e42fa46b74a85f1975e",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-027",
@@ -668,7 +668,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "8b14389b9140420e65540a40b790a1faea36d37f675a1cf1354324612a7b7386",
       "sha256_webp": "ffbafa98463aadb85db9fc9bb2796d6496dfe079bc012d1db71ffecbed763ba5",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-028",
@@ -692,7 +692,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "d6108f1de7e9abbda4a5148dbdc655f424e604d988eed16a2baad01a25a0b067",
       "sha256_webp": "36b814ed72996a1b758bd083ebdd642aa176c66bb0cdca024d4ecac9529e59f8",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-029",
@@ -722,7 +722,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "a4510f1ba69e9fa44e6d93dfef5d8150e5c93bd8a70757694ab8b75556ef9e31",
       "sha256_webp": "94574b6226d3d4f78ee4fc39d18d3aa52c9ba27bd18452bdc5346c72c95a6cce",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-030",
@@ -752,7 +752,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "447394ef45cdfb7f7765a20c03ed34644d175c3a91ba632ef061e495fd659d76",
       "sha256_webp": "a81c42a7dea2b6521b6bc1c7b40a817bac8fc8d0a2416547731ba08130ea997d",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-031",
@@ -776,7 +776,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "e79aebda411abd5b02fad9de932ca25cb60fc79deff21e005c7990aa5773f06e",
       "sha256_webp": "b79f78ce53d6e5f718a74130067b85855d16bd7a87201b6acbf1fc8036694db7",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-032",
@@ -800,7 +800,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "018067f3e3fd67f4855c9563eb8dcfa29890d7cd72b292e4f1549085ca05b181",
       "sha256_webp": "fe14615db7ef91fa25709752746ce4e77427c1a9acd3efd7ac00c2ad042b8d0b",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-033",
@@ -830,7 +830,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "6bbe49a9132f09d25a43d9aec32bbd4a984ba0e63744ae6e8e8aa92156ace6b9",
       "sha256_webp": "f94a365d6ce51e55edf1f5e8997b7fa3bb2dc3306de41c807db4b01b398e168d",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-034",
@@ -854,7 +854,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "4037ea2955c5b3dbbc8b81b31b1ff0c130917997d37c49b5fa084b65d8959e41",
       "sha256_webp": "c8ae7eee3055f1032e4a1ced52681d0049439d64d827bf7973cefd570adb31bb",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-035",
@@ -878,7 +878,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "1bdb0551c8c728971738b48f07f08de68d17e77a47904a5d90d3d7ad0428fdf1",
       "sha256_webp": "fa5a9400daa66d4c001f377c3411b93e2ae556227e8dbf4488fd2d420e5398a3",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-036",
@@ -902,7 +902,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "aaa40221cccdfe93d6ee02f4e033d5977b1add6af8ec0c75acb5081e07ee8dc8",
       "sha256_webp": "c991b66d6b655b987265d29bf39853c8058a5a12d7487140b41625532460813b",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-037",
@@ -932,7 +932,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "fab8e031b7c06c3599ee20dafd7425321a475e124c0a016790efe23d1f4f97c8",
       "sha256_webp": "d798c981d90f1c349e53547daf4ab2c4e8cd292439cc2bfaa1543bc97d3791cf",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-038",
@@ -956,7 +956,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "7a20cc50da5b6eaf9a794ff730ed8c85ddb8c72d79c3ddc1c032f6ce5c785674",
       "sha256_webp": "703f1f6db6e9c1c308df8ac5cef3679805464d9fccc8b9c7a53fce3624fdc74a",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-039",
@@ -980,7 +980,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "6290a8f231040a384a6d38ed5e8c1ebac24ed9885461203b46335a40fa7727e7",
       "sha256_webp": "3e023316958e1a0a9f9d8322e5c735f494c135357d3d6aae9009365ad66b6ccd",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-040",
@@ -1004,7 +1004,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "afb0d3ad2c6124c785dcb061f2ef6b37ff9623d36422e0fafc318e876339b585",
       "sha256_webp": "c40e83ae4f5d5870c0255a63d6a1326ad3ead51108f40d04c17b43bf0a84920f",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-041",
@@ -1028,7 +1028,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "37574b0f68693d9c327efa7233ccb738b92932644d7c483f7882e4b772794ba0",
       "sha256_webp": "7ca33645d43ca02720bf495ea7a391aaf67503b97a16f227b5c860a7f39dfe96",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-042",
@@ -1058,7 +1058,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "3ed9ba0811780719e8aeb43050d3840d40feed88481d17ba29a00291f775a867",
       "sha256_webp": "8928867b67729766a1df5aa9b54f4141adbb2f8fe303e06632a3e8542aa9bb28",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-043",
@@ -1082,7 +1082,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "858418daf376d6d987335b8c380010a22e54f210adcbfb782146980ff5ee623b",
       "sha256_webp": "4aa842574905f50e9ea9babfd6152f189a4f852f49991fe01070ef31d4a0cdc3",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-044",
@@ -1106,7 +1106,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "5b45b78064cd8ec0d319cdc287ca60e972af016541e13ce24c6a7a2b377be58c",
       "sha256_webp": "9dea34d3a2fa856385369ad262d048f74318f024dac25895a501fa696880d53e",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-045",
@@ -1130,7 +1130,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "744fbb8d45ec356a392395203045a8154e579121256cdfa66b2b7092fec70d46",
       "sha256_webp": "2a6dbac9472f6c5cc6603684cc41e869ffac923eb62455c3f7b5b2b02d72ce93",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-046",
@@ -1154,7 +1154,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "720682aad7e19fbac75fdc045b37459d8b08448db613ecea9c078ec4964efef9",
       "sha256_webp": "79846f5aedb3528c8ba4c36b9f67f409b278db59e4d6f7fd2df08718a9e29335",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-047",
@@ -1178,7 +1178,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "35809f15157ca6208e4f6390e4947fa8563995741e98b50d38fedb3d8a1efa93",
       "sha256_webp": "940d14fb0558540891c937d71d50939dd09b83db51940ce303576ad069b9e9a0",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-048",
@@ -1202,7 +1202,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "768b2e2e3db858c7634c5aba546dd260bc4f9beeca8d6f12fc5fa69eaa43ee08",
       "sha256_webp": "4f473e983782e60af6c1a2abdad510f81bc3c780e44ed66778babdc1116376ed",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-049",
@@ -1226,7 +1226,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "5658ad20e239ad4339944a887b7c07c3941fb78875ae6e616d86448cfff39b8e",
       "sha256_webp": "9f9aafb837fc495b8d94b7c4e931276598b22d74435d9afa07e4acff4d33a8ca",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-050",
@@ -1250,7 +1250,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "aea279d08230e0ae5675323e8cdf541c722525e38c250f7baea08ad0dcf9d0fd",
       "sha256_webp": "cf5f36a80faaffc2ad3a738befb3ac4aab8c44acc0c97aa907e08820a9519f21",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-051",
@@ -1274,7 +1274,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "66226ca2efa44e4466217426b1f34df76ffdf5c1ef4bd67d4bb12af8bf2e824e",
       "sha256_webp": "56fdce03cec30b74f53250ed306ef4885e69ddeef8dcc671dbc6b9cde8ff402c",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-BPG-052",
@@ -1298,7 +1298,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "0d921ccf1248d0f70441b741be5c7fbb99d7b606677f2d974f46c52611af5dd2",
       "sha256_webp": "c4022307e8f4478450e775dc4c0774c2bf49cab32b8ea16623b58254f0e1852b",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-001",
@@ -1322,7 +1322,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "ef83021cd302913ce5fbe44858af325aab7a3b9a3d5857bbd03f793014d5b1e1",
       "sha256_webp": "1e555332013bf4171af687234405a73554d47c1d1af79e146aec2ebe5c7271b5",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-002",
@@ -1346,7 +1346,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "957a1b0b616fe0b37e9d5ad8d9c35663be866f446154225438ae8dac945ff64a",
       "sha256_webp": "08e3833ed6f4c8b240c8ab7643c6d86d98a21cb4a13f912f31f6a97185e35d54",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-003",
@@ -1370,7 +1370,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "abe83a9ae2cfdd723319171acc51b394f698129960bfbe058ccf69eb3bf88965",
       "sha256_webp": "aedbbd67436caf24173749b47d4dafe67e018b3e4704b2f3ad56cb4270377eca",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-004",
@@ -1400,7 +1400,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "11ada628c00109db466732f18fe6fa899ecf6dbb4ba172d54eb60012f3907a6f",
       "sha256_webp": "2c5ffcb5b83b72ca5a8c461f954ea2e66f695cd163e55be3d5449ff3be3d7bf6",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-005",
@@ -1424,7 +1424,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "1036eb6e4f8e8bc8ac0fe53b37c5958bcd343abe953ae87aa13b8580d451a611",
       "sha256_webp": "56aa107a5bc8c14237832bfbe637a6220908c93983616b6d58b420b148c75945",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-006",
@@ -1448,7 +1448,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "0c2d1637a0012606b8c0960bd03e2159a661e1c65247ad61449afc2b85dfe8a6",
       "sha256_webp": "b28679df9f1a81a418f8a2360e9cc7ab0674219fba25df53fb8b7b0195062af4",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-007",
@@ -1472,7 +1472,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "c938c80cb0df65758c1f9f9549e3de9aa4924749d2ad19a77b8c872fb95f8f6c",
       "sha256_webp": "2653cdc1fc7e77993fb009d919a6f2709937e9b47aa895d60b0be9630115cbf0",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-008",
@@ -1496,7 +1496,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "047eac8dc9cbad5feae6c7dc1003cba588b069d48c71629b0679dc7d2e86ed71",
       "sha256_webp": "0bc2edc882a77abfb9f3b2387a7a0cdcf8a1b53a1f47768bd76f376442ddb0ce",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-009",
@@ -1520,7 +1520,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "dadb51c88a645fa92da171fa6b1c8032c4c5b6510ac23a2d65956aa7f1c154e7",
       "sha256_webp": "044d40878d4a386016c44ce8d56a7402ad687c794dc8b4517a56190627170221",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-010",
@@ -1544,7 +1544,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "575b2f760583bf249240dbbe749d397a557a74649b404ecade2e502a5bf935f7",
       "sha256_webp": "3a7651e759c065d25076e435404b869c4b0f110a99f9dc27f5adb13cb0fe4624",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-011",
@@ -1568,7 +1568,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "b76c547d92e943470f88d7fd3758eec1278800dfc56d357c8f3b861801eb7e9d",
       "sha256_webp": "796c8ec8e55dbb8883bb8d96cb9052ed2a10a77a2c53e1d743b9773d7c3e6dd1",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-012",
@@ -1592,7 +1592,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "371e66344da9f0c51714367b1e9421808f5ee0fd96dd8f9d6c6c6fed12ae775f",
       "sha256_webp": "4cbde0c6171f1bfcae7f861e081d184332934368ea341112d3cde3ed214d8888",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-013",
@@ -1616,7 +1616,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "01692908e523c4a685f1c2260ecc8801aace16ddc4d618577d1450d0ae99e251",
       "sha256_webp": "38aaad58cdea3cf9192926f9c6a9a9114fad5cd8457f4c535f9ceb552e9ac0b9",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-014",
@@ -1640,7 +1640,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "86d9afc27ba042a89a39b12272ea7fe415d6376a3cc89cb99162aa8ef03538b6",
       "sha256_webp": "a90c59100c6229abd2fae5ca327756623e4508e2a9bf7528f1ce3f9d76fd452a",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-015",
@@ -1664,7 +1664,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "a4749670689da5a21dfc96a193d03f8d7c9c3c641d9ee4fa0155b791ef4fef53",
       "sha256_webp": "64d99bb4e86f49004b8780c74e97e264c87f0c0220bec3989a78c2c7aa8d55d6",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-016",
@@ -1688,7 +1688,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "81697776a73087fd96579d9ae45391d0f7dbdd85515b59eb20c3d3118fa651e9",
       "sha256_webp": "8b8d199dbf55d0b56e073a790b22972ca913d809ebf96c1846abac2c49922fe5",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-017",
@@ -1712,7 +1712,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "1d369891f8dd59fa92ee27b78c18848ebe6e4c9db02557e48a9e6fe0db55acf1",
       "sha256_webp": "a513b8dba7dfb20e412eb91c323f7ca2b54b448182d8a445d3a1cad98f90d214",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-018",
@@ -1736,7 +1736,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "f8c58c5e87990408c95ce2582be79fda6038ec76079a8781bb62c678151ece38",
       "sha256_webp": "44aaab8c30f8bdfce8325e07860f81dc9c23f4409d89f2791dc96a2f0ef82c28",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-019",
@@ -1760,7 +1760,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "1abd66c7ed45ad2898a43e0d39245f928c0ec863a1e00d56d52d11dfd94954a6",
       "sha256_webp": "a6755ce46bdb099ab66767fc0076aa61535fc879e93bb679231670f5b8d179e4",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-020",
@@ -1784,7 +1784,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "1277f25cc7e941770ce8b0d2d9282bd0f32c14290da06cce3e1c0b4bf33e672e",
       "sha256_webp": "b657c6ac9e9aa1519616ca0eda03ab18f75c4c652d898ed9da2df7f4369a5a23",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-021",
@@ -1808,7 +1808,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "74f0d2e2193530fcc78bee7a7adfd265522836afce4272891112e1afc57eb318",
       "sha256_webp": "df4cb7c18cf11d28f39eef0fc21c29f02f51fbc7963053c23d33670dad07e12f",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-022",
@@ -1838,7 +1838,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "34ff599888014769bd0ffc5caccf74081823841f695f9263ce33bfd3c2c8833b",
       "sha256_webp": "7df8f057fd83a06e6adbd35cfc8e0b97a99afbc1d7aaf0c88ca743069ab4df5e",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-023",
@@ -1862,7 +1862,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "0bdd4d462122d9e5e49586082564118089fa34fc9d3c7f0f662410077f285161",
       "sha256_webp": "60fe16b9f6bdaf0888a0097c680f6ba66cfa1250afb8cafc5377f33c32a46f90",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-024",
@@ -1886,7 +1886,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "1f894cb4cca219b566e74cd8c1cb721c855173e059c8377df699e1494d79aa7f",
       "sha256_webp": "8f69d90c4848521b849a9c8ae32cdac92bad9b8547b6c28ebb61a9b36e33d470",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-025",
@@ -1910,7 +1910,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "6d10c83137f9af7d0926339fdf645447f9c494c107f43b18d3286ae0b49464cd",
       "sha256_webp": "d73f723fac131a85afcc0c7d868b078c947f343849b9d306140d183d692a5f7d",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-026",
@@ -1934,7 +1934,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "d91666fd1e7be86a6ecedac3be8b0081781316a22288e5cc431f3014ceb4edd0",
       "sha256_webp": "30eb1d0a9d6d1c5ea607ecb747c3cf87d3769c5809e84b0a725f39eb97200df1",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-027",
@@ -1958,7 +1958,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "2d78c7e6eca335f1d091e2b6d6ee3a064a362e4da860abbad5e8325d83e9e98f",
       "sha256_webp": "f48586b8dcb98665608b143f85bffbea1143cdd1c5896d30f06d3d2892a2d0b7",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-028",
@@ -1982,7 +1982,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "f2dd87e6017af63523b8a9d121866ae7e782eea220d910eff900e78a7fe38a34",
       "sha256_webp": "7dd54f10140e252852d28d77de5bfc387ca4d028bcae008141deea9e650c9e48",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-029",
@@ -2012,7 +2012,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "a347e15be073cfe7ac9c7ca482bf876bb6bffbddd39b2ae434b5293ccb8ee47d",
       "sha256_webp": "7b2a91bcd062a790057b48c7db8bbd3c1ed0aa774711f4f9127ebb5c5976598a",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-030",
@@ -2036,7 +2036,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "36cf5db16a149c99e54c5f7d3470a6824390727f3d767425ae85e959e8fed67c",
       "sha256_webp": "5cef8b0994141a331045029770fa6587489e6a9d3cb0ad333f21e7edabc77fe5",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-031",
@@ -2060,7 +2060,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "3a471e9e077d4fea9dcc36aa2a2bec53ba9e234ac007be7c949dbd2dc42904b7",
       "sha256_webp": "8f6fff17ddc187d224631835678f7af8d052e9e0fd90662cb984e74cb5f659a5",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-032",
@@ -2090,7 +2090,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "537c22ade12f6e2cd395fc23017d662ecbb2384d69bb1ddab466a207e66c98c1",
       "sha256_webp": "39aba26d91a0c6198ae6b35cb16c83efeacad7028db4da6a90636e5d5315f6cc",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-033",
@@ -2120,7 +2120,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "9ceba8e46c1bc4c40f975a360ce03ceef4f6607c49e28f8458cdbdba9d140b41",
       "sha256_webp": "2762b0e52b36808f2de46e3694d63d27b5a4cc49ddf0bcc4000a3bc2795f4920",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-034",
@@ -2144,7 +2144,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "73a0f7eb72440d250a3e4788b1465a5ede6eb2f2cc0d3d2d53eda95097768c2d",
       "sha256_webp": "1d94fe94f79c75c8e431ad7f5d7d826ae9349d5a4c46c7ca790125ec81be09f5",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-035",
@@ -2168,7 +2168,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "2fe467fd63639b38feb0ca065af4bf88b53c0f8af54b5cb9cbbb80bea0d082c5",
       "sha256_webp": "8642ef32b7c3b9c233757c3606d1fbe3b50f26431d50a113a87c57c84c3eae2c",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-036",
@@ -2192,7 +2192,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "1ee932c1e690da4507d9c1525d38a3dbc8304f79c9a0c373a3a09a68556d76a1",
       "sha256_webp": "91c8b7c242474cb6de25fba56f16431f63c6eeaa6f2da12a215aaada9666faf2",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-037",
@@ -2216,7 +2216,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "02005f4f9a4dd5bca115d2a57a2a08684169927c4726980e843280910620fdbf",
       "sha256_webp": "20cfbe6638a71cabeab30cde5ebc533c78496495456ff46bcb1cba9642dc2a69",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-038",
@@ -2240,7 +2240,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "280a9e30def29ff2d28e410ffc68e9a45279aa312c45316f845f282a0188f1e7",
       "sha256_webp": "77556c55496bbfc8ff2719a5702b29d84da67caeb131327436da0b1ebf492f7a",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-039",
@@ -2264,7 +2264,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "2a325b05713bf9d1968dad16a5d3b9d74d270e9011e76d29392293e9d6ad9080",
       "sha256_webp": "f45c350c53184638ab5e4719d525de1217c4c97426253585d8d13992b96ebcfa",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-040",
@@ -2288,7 +2288,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "63c6939d62b802ee54417f0c10b6694fcbdbbf62601434cda7be1ddec7b7b2e3",
       "sha256_webp": "eec629599779f2f1c74f741aed3d6f5ab45093824e98bcfe72044fc34688f66f",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-041",
@@ -2312,7 +2312,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "076625c5ff8d9dbd731833e299bb408871482ea4f034743dbff42e7b0be9a136",
       "sha256_webp": "ac6149759cc7243946f0afda9faa94aa390354ee5ce4a99fea79cd4f168e4369",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-042",
@@ -2336,7 +2336,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "fa277d57be501b928a5f767ed1d4e290ae66ea2dcc111c3a0623a70ca3340ac4",
       "sha256_webp": "58c1458afa73e7b5a46d106ff782c8c8a203979faad5878b35042a2a3797504c",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-043",
@@ -2360,7 +2360,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "624ebb1d544619d89699f52b0edc52ed92c7fb8d11690b9b0fc150c993d97b2e",
       "sha256_webp": "4d9a6a9b07ced999cec0ef5b8eb730472c5f184ac3352b7a63837b4751ceb0a8",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-044",
@@ -2384,7 +2384,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "fd80e8f3738b178257f34fb5fc2d7fb0666b98fa1afff95b250b90ce9cab3b3f",
       "sha256_webp": "ffcadb8baa818296326584e000f409d897d35974aa9510d9d6592774507bd416",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-045",
@@ -2414,7 +2414,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "60b64987d6c1900fae69f0ad5dd450477a1f77c6215dd1e995536136fd62a169",
       "sha256_webp": "7905d74f0a2fbc08b9715e83099a94fc6d2c15e4c30597c553c689470ca6fd26",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-046",
@@ -2438,7 +2438,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "0453b5cc9de03d6c0badd0eecc4bc7017e904f162ac9543dff55ff80dff61bb5",
       "sha256_webp": "350589e4d4b0a55ec90d5a32433862e1360f8ed20749865cf16451ac1907758b",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-047",
@@ -2462,7 +2462,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "4f5ceea2776515205dd40f36ce2970fae4ed62e353a9e229260e1b61a6b4d5ce",
       "sha256_webp": "8144cdfc7001d723a99802731b6d9b3056130de82557ef361e8bd5409461db9c",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-048",
@@ -2492,7 +2492,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "d9a9e5c1c72450b683bf73774a5fde6ebce2e50bf28e1fb6820fdc345adefe14",
       "sha256_webp": "f98e8b904ae34d05c19358878835f4f78ea62d939ee8da5e435511d9ab2ba685",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-049",
@@ -2516,7 +2516,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "462ce1da277d46fcb4a8a219883be883de40dd069457565adc5a0633a5188694",
       "sha256_webp": "97cf339aacf048111f1f28b4a5e7acd3926dd49ad71974346fbe171f0106d86a",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-050",
@@ -2540,7 +2540,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "d528a8615c6a15f3577611dd9087312a3a072f793a464d5d84a3a402981c4457",
       "sha256_webp": "ba5ed9c045007a71f217594e6d71b3b7d1169a46c1d3ad73ff641707b243bcb9",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-051",
@@ -2564,7 +2564,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "f7cd6ab44559f964a70a7d63f2905f727addcff75e0033ec6a44cab2f6a7da5c",
       "sha256_webp": "b63d045de0bfc51b88c4f42ec02e5e9dd24098e2e258cdf283a18d38fa4bfc17",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     },
     {
       "post_id": "BLOG-CHR-052",
@@ -2594,7 +2594,7 @@
       "licensing": "Original AI-generated illustrative photo-style asset created for TWEStore; no third-party stock/photo scrape, Amazon/product image, brand, logo, readable private record, or real-location claim.",
       "sha256_jpg": "60a5f1a36cdd4f51df523016cfe013cc3e47a3b27c6bfaf81eeabc98162913ec",
       "sha256_webp": "53c6f2cd8b442e4401b32a13600c61be70b5af201690ccb085558178b64759ca",
-      "status": "asset_generated_local_not_yet_public_verified"
+      "status": "asset_public_hash_verified"
     }
   ]
 }
