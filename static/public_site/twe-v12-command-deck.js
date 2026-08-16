@@ -9,40 +9,44 @@
 
   const DESTINATIONS = [
     {
-      id: "tools",
-      label: "Tools",
-      eyebrow: "Get something done",
-      description: "Fast practical helpers",
-      preview: "QR · calculate · convert",
-      href: "/toolbox/tools/",
-      icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 17.5h20a5 5 0 0 1 5 5v12.3A5.2 5.2 0 0 1 33.8 40H14.2A5.2 5.2 0 0 1 9 34.8V22.5a5 5 0 0 1 5-5Z"/><path d="M18 17.5v-3.2A4.3 4.3 0 0 1 22.3 10h3.4a4.3 4.3 0 0 1 4.3 4.3v3.2M9 27h30M20.5 24.8v4.4h7v-4.4"/><circle class="v12-orbit" cx="24" cy="24" r="20"/></svg>',
+      id: "tools", label: "Tools", eyebrow: "Get something done",
+      description: "Open practical browser tools for everyday tasks.", preview: "QR · calculate · convert", href: "/toolbox/tools/",
+      icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 17.5h20a5 5 0 0 1 5 5v12.3A5.2 5.2 0 0 1 33.8 40H14.2A5.2 5.2 0 0 1 9 34.8V22.5a5 5 0 0 1 5-5Z"/><path d="M18 17.5v-3.2A4.3 4.3 0 0 1 22.3 10h3.4a4.3 4.3 0 0 1 4.3 4.3v3.2M9 27h30"/></svg>',
     },
     {
-      id: "games",
-      label: "Games",
-      eyebrow: "Take a good break",
-      description: "Replayable browser games",
-      preview: "Reaction · trivia · sudoku",
-      href: "/toolbox/games/",
-      icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M15 18h18c5.7 0 9.3 14.7 5.5 18.2-2.1 2-5.2-.2-8.2-4.2H17.7c-3 4-6.1 6.2-8.2 4.2C5.7 32.7 9.3 18 15 18Z"/><path d="M17 23v8M13 27h8"/><circle cx="31.5" cy="25" r="1.7"/><circle cx="35" cy="29" r="1.7"/><rect class="v12-tile" x="19" y="12" width="10" height="4" rx="2"/></svg>',
+      id: "games", label: "Games", eyebrow: "Take a good break",
+      description: "Play short browser games with no setup.", preview: "Reaction · trivia · puzzles", href: "/toolbox/games/",
+      icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M15 18h18c5.7 0 9.3 14.7 5.5 18.2-2.1 2-5.2-.2-8.2-4.2H17.7c-3 4-6.1 6.2-8.2 4.2C5.7 32.7 9.3 18 15 18Z"/><path d="M17 23v8M13 27h8"/><circle cx="31.5" cy="25" r="1.7"/><circle cx="35" cy="29" r="1.7"/></svg>',
     },
     {
-      id: "resources",
-      label: "Resources",
-      eyebrow: "Find a clear answer",
-      description: "Guides for real decisions",
-      preview: "Buying · pets · community",
-      href: "/resources/",
-      icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><path class="v12-page" d="M8 12.5c6.1-2 11.4-1.1 16 2.6v25c-4.6-3.7-9.9-4.6-16-2.6v-25Z"/><path class="v12-page" d="M40 12.5c-6.1-2-11.4-1.1-16 2.6v25c4.6-3.7 9.9-4.6 16-2.6v-25Z"/><path d="M12.5 18.5c3.2-.5 5.8 0 8 1.6M12.5 24c3.2-.5 5.8 0 8 1.6M35.5 18.5c-3.2-.5-5.8 0-8 1.6M35.5 24c-3.2-.5-5.8 0-8 1.6"/></svg>',
+      id: "resources", label: "Resources", eyebrow: "Find a clear answer",
+      description: "Read buying guides and practical advice by real need.", preview: "Buying · pets · research", href: "/resources/",
+      icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 12.5c6.1-2 11.4-1.1 16 2.6v25c-4.6-3.7-9.9-4.6-16-2.6v-25Z"/><path d="M40 12.5c-6.1-2-11.4-1.1-16 2.6v25c4.6-3.7 9.9-4.6 16-2.6v-25Z"/></svg>',
     },
     {
-      id: "store",
-      label: "TWE Store",
-      eyebrow: "Browse when you want",
-      description: "Curated and optional",
-      preview: "Kits · picks · fit checks",
-      href: "/store/",
-      icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M11 18h26l-2.2 21H13.2L11 18Z"/><path d="M18 19v-4a6 6 0 0 1 12 0v4"/><path class="v12-glint" d="m34 8 1.2 3.1L38 12l-2.8 1-1.2 3-1.1-3-2.9-1 2.9-.9L34 8Z"/></svg>',
+      id: "store", label: "TWEStore", eyebrow: "Browse when you want",
+      description: "Compare optional digital kits and curated shopping paths.", preview: "Kits · picks · fit checks", href: "/store/",
+      icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M11 18h26l-2.2 21H13.2L11 18Z"/><path d="M18 19v-4a6 6 0 0 1 12 0v4"/><path d="m34 8 1.2 3.1L38 12l-2.8 1-1.2 3-1.1-3-2.9-1 2.9-.9L34 8Z"/></svg>',
+    },
+    {
+      id: "pawsome", label: "TWE Pawsome Pet Gear Hub", eyebrow: "Pet care & gear",
+      description: "Read practical pet gear, routine, and home-care guides.", preview: "Blogger · opens in a new tab", href: "https://pawsomepetgearhub.blogspot.com/", external: true,
+      icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="15" cy="17" r="4"/><circle cx="25" cy="13" r="4"/><circle cx="35" cy="17" r="4"/><path d="M14 32c0-7 5-12 10-12s10 5 10 12c0 5-4 8-10 8s-10-3-10-8Z"/></svg>',
+    },
+    {
+      id: "church-hub", label: "TWE Church Hub", eyebrow: "Church & ministry",
+      description: "Read church supply, event, and ministry setup guides.", preview: "Blogger · opens in a new tab", href: "https://thewatchersedgechurchsupplies.blogspot.com/", external: true,
+      icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 7v13M18 13h12M11 40V22l13-8 13 8v18M20 40V29h8v11"/></svg>',
+    },
+    {
+      id: "start", label: "Start Here", eyebrow: "Need a first step?",
+      description: "Choose the right tool, guide, store, church, or support path.", preview: "Orient · decide · continue", href: "/start-here/",
+      icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="16"/><path d="m19 29 4-10 10-4-4 10-10 4Z"/><circle cx="24" cy="24" r="2"/></svg>',
+    },
+    {
+      id: "collections", label: "Collections", eyebrow: "Browse by goal",
+      description: "Compare curated options by goal, platform, or outcome.", preview: "Bundles · paths · use cases", href: "/collections/",
+      icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="10" width="30" height="11" rx="3"/><rect x="9" y="27" width="30" height="11" rx="3"/><path d="M16 21v6M32 21v6"/></svg>',
     },
   ];
 
@@ -87,17 +91,13 @@
   }
 
   function activeDestination(path) {
+    if (path.startsWith("/church") || path.startsWith("/support")) return "";
     if (GAME_PATHS.has(path)) return "games";
     if (path.startsWith("/toolbox")) return "tools";
-    if (path.startsWith("/resources") || path.startsWith("/church"))
-      return "resources";
-    if (
-      path.startsWith("/store") ||
-      path.startsWith("/amazon-store") ||
-      path.startsWith("/collections")
-    ) {
-      return "store";
-    }
+    if (path.startsWith("/resources")) return "resources";
+    if (path.startsWith("/start-here")) return "start";
+    if (path.startsWith("/collections")) return "collections";
+    if (path.startsWith("/store") || path.startsWith("/amazon-store")) return "store";
     return "";
   }
 
@@ -168,8 +168,6 @@
     if (!nav || !deck) return;
 
     header.dataset.tweV12Layout = kind === "home" ? "home" : "route";
-    deck.setAttribute("role", "navigation");
-    deck.setAttribute("aria-label", "Explore The Watchers Edge");
 
     if (kind === "home") addBrandStory(nav);
 
@@ -187,11 +185,14 @@
       destination.id === active
         ? ' aria-current="page" class="is-current"'
         : "";
+    const external = destination.external
+      ? ' target="_blank" rel="noopener sponsored nofollow"'
+      : "";
     return `
-      <a href="${destination.href}" data-twe-v12-destination="${destination.id}"${current}>
+      <a href="${destination.href}" data-twe-v12-destination="${destination.id}"${current}${external}>
         <span class="twe-v12-bridge-icon" aria-hidden="true">${destination.icon}</span>
         <span><small>${destination.eyebrow}</small><strong>${destination.label}</strong></span>
-        <span class="twe-v12-bridge-arrow" aria-hidden="true">→</span>
+        <span class="twe-v12-bridge-arrow" aria-hidden="true">${destination.external ? "↗" : "→"}</span>
       </a>`;
   }
 
@@ -230,7 +231,9 @@
       { test: (path) => GAME_PATHS.has(path), label: "Games" },
       { test: (path) => path.startsWith("/toolbox"), label: "Tools" },
       { test: (path) => path.startsWith("/resources"), label: "Resources" },
-      { test: (path) => path.startsWith("/store"), label: "TWE Store" },
+      { test: (path) => path.startsWith("/store"), label: "TWEStore" },
+      { test: (path) => path.startsWith("/start-here"), label: "Start Here" },
+      { test: (path) => path.startsWith("/collections"), label: "Collections" },
     ];
 
     [...home.querySelectorAll("a")].forEach((link) => {
@@ -243,13 +246,6 @@
       label.textContent = item.label;
       link.prepend(label);
     });
-  }
-
-  function setMotionState() {
-    const button = document.querySelector("[data-twe-motion-toggle]");
-    if (!button) return;
-    document.documentElement.dataset.tweV12Motion =
-      button.getAttribute("aria-pressed") === "true" ? "paused" : "running";
   }
 
   function syncCompactHeader() {
@@ -275,13 +271,8 @@
       .forEach(enhanceMainHeader);
     addToolboxBridge();
     labelLivingPaths();
-    setMotionState();
     syncCompactHeader();
 
-    const motionButton = document.querySelector("[data-twe-motion-toggle]");
-    motionButton?.addEventListener("click", () =>
-      window.requestAnimationFrame(setMotionState),
-    );
     window.addEventListener("scroll", () => window.requestAnimationFrame(syncCompactHeader), { passive: true });
     window.addEventListener("resize", () => window.requestAnimationFrame(() => {
       document.querySelectorAll("[data-twe-header-slot]").forEach((slot) => {
