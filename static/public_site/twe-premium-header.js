@@ -11,98 +11,23 @@
     {id:'safe-sweep', name:'Safe Sweep', type:'Game', detail:'First-click-safe minesweeper with reveal and flag modes.', href:'/toolbox/minesweeper/', keywords:'safe sweep minesweeper mine mines flag reveal board puzzle game'},
     {id:'text-tools', name:'Writing & Planning Tools', type:'Tool', detail:'Lightweight text helpers and quick decision tools.', href:'/toolbox/tools/', keywords:'writing words text helper planning decision cleanup'},
     {id:'csv-cleaner', name:'CSV Table Cleaner', type:'Tool', detail:'Turn messy CSV data into a cleaner table.', href:'/toolbox/csv-table-cleaner/', keywords:'spreadsheet data tidy rows columns csv file clean'},
-    {id:'pet-home-resources', name:'Pet Home Resources', type:'Guide', detail:'Practical pet-home routines and buying guidance.', href:'/resources?category=pet-home', keywords:'pet pets dogs cats home routine guide'},
-    {id:'church-community', name:'Church & Community', type:'Resource', detail:'News, events, ministry guides, and practical support.', href:'/church/', keywords:'church community events news ministry'},
-    {id:'twe-store', name:'TWE Store', type:'Store', detail:'Optional digital kits, curated picks, and fit checks.', href:'/store/', keywords:'shop products kits amazon picks store buy optional'}
+    {id:'pet-home-resources', name:'Pet-home Resources', type:'Guide', detail:'Practical pet-home routines and buying guidance.', href:'/resources?category=pet-home', keywords:'pet pets dogs cats home routine guide'},
+    {id:'church-community', name:'Church & Ministry Guide', type:'Resource', detail:'Church supplies, ministry setup guides, and practical support.', href:'/church/', keywords:'church ministry supplies setup guide'},
+    {id:'twe-store', name:'TWEStore', type:'Store', detail:'Optional digital kits, curated picks, and fit checks.', href:'/store/', keywords:'shop products kits amazon picks store buy optional'}
   ];
-  const allowedIds = new Set(searchItems.map((item) => item.id));
-  const storageKeys = {
-    saved: 'twe-premium-saved',
-    recent: 'twe-premium-recent',
-    visits: 'twe-premium-visits',
-    lastVisit: 'twe-premium-last-visit',
-    motion: 'twe-premium-motion-paused'
-  };
 
   const status = header.querySelector('[data-twe-status]');
   const say = (message) => { if (status) status.textContent = message; };
   const normalize = (value) => String(value || '').toLowerCase().replace(/[^a-z0-9\s-]/g, ' ').replace(/\s+/g, ' ').trim();
-  const readJson = (key, fallback) => {
-    try { return JSON.parse(localStorage.getItem(key) || ''); } catch { return fallback; }
-  };
-  const writeJson = (key, value) => {
-    try { localStorage.setItem(key, JSON.stringify(value)); return true; } catch { return false; }
-  };
-  const cleanIds = (ids) => Array.isArray(ids) ? ids.filter((id, index) => allowedIds.has(id) && ids.indexOf(id) === index).slice(0, 12) : [];
-  const getSaved = () => cleanIds(readJson(storageKeys.saved, []));
-  const setSaved = (ids) => writeJson(storageKeys.saved, cleanIds(ids));
-  const getRecent = () => cleanIds(readJson(storageKeys.recent, []));
-  const setRecent = (ids) => writeJson(storageKeys.recent, cleanIds(ids));
-  const itemById = (id) => searchItems.find((item) => item.id === id);
 
-  const recordVisit = () => {
-    const today = new Intl.DateTimeFormat('en-CA', {timeZone: 'America/Toronto'}).format(new Date());
-    try {
-      if (localStorage.getItem(storageKeys.lastVisit) !== today) {
-        const visits = Math.max(0, Number(localStorage.getItem(storageKeys.visits) || 0)) + 1;
-        localStorage.setItem(storageKeys.visits, String(visits));
-        localStorage.setItem(storageKeys.lastVisit, today);
-      }
-    } catch {}
-  };
-  recordVisit();
-
-  const renderItemList = (container, ids, emptyText) => {
-    if (!container) return;
-    const items = cleanIds(ids).map(itemById).filter(Boolean);
-    if (!items.length) {
-      container.innerHTML = `<p class="twe-premium-empty">${emptyText}</p>`;
-      return;
-    }
-    container.innerHTML = items.map((item) => `
-      <a class="twe-premium-mini-result" href="${item.href}" data-twe-item-id="${item.id}">
-        <span>${item.type}</span><strong>${item.name}</strong><small>${item.detail}</small>
-      </a>`).join('');
-  };
-  const refreshMyTWE = () => {
-    renderItemList(header.querySelector('[data-twe-saved-list]'), getSaved(), 'Save a tool, game, guide, or store item and it will appear here on this device.');
-    renderItemList(header.querySelector('[data-twe-recent-list]'), getRecent(), 'Open a TWE item and recent picks will appear here locally.');
-    const visits = Math.max(0, Number(localStorage.getItem(storageKeys.visits) || 0));
-    const install = header.querySelector('[data-twe-install]');
-    if (install) {
-      const eligible = visits >= 3 && Boolean(window.matchMedia) && ('onbeforeinstallprompt' in window || 'BeforeInstallPromptEvent' in window);
-      install.disabled = !eligible;
-      install.textContent = eligible ? 'Install shortcut' : `Shortcut unlocks after repeat visits (${Math.min(visits, 3)}/3)`;
-    }
-  };
-
-  // SOL/Ryan 2026-07-26: do not mutate the shared header into compact mode on scroll.
-  // The old scrollY>=150 class toggle changed header height/display during the first
-  // scroll and caused visible screen shake/twitch across platforms. Route-level compact
-  // treatment is now CSS/static only; scrolling must not rewrite the layout.
+  // Route-level compactness is rendered statically; scrolling must not rewrite layout.
   header.classList.remove('is-compact');
-
-  const motion = header.querySelector('[data-twe-motion-toggle]');
-  const applyMotion = () => {
-    const paused = localStorage.getItem(storageKeys.motion) === '1';
-    header.classList.toggle('motion-paused', paused);
-    if (motion) {
-      motion.setAttribute('aria-pressed', paused ? 'true' : 'false');
-      motion.textContent = paused ? 'Header motion paused' : 'Pause header motion';
-    }
-  };
-  motion?.addEventListener('click', () => {
-    const next = localStorage.getItem(storageKeys.motion) === '1' ? '0' : '1';
-    try { localStorage.setItem(storageKeys.motion, next); } catch {}
-    applyMotion();
-    say(next === '1' ? 'Decorative header motion paused.' : 'Decorative header motion resumed.');
-  });
-  applyMotion();
 
   const searchForm = header.querySelector('[data-header-search-form]');
   const searchInput = searchForm?.querySelector('input[name="q"]');
   const resultsBox = header.querySelector('[data-twe-search-results]');
   const searchResults = header.querySelector('[data-twe-search-results-list]');
+
   const runSearch = (query) => {
     const q = normalize(query);
     const terms = q.split(' ').filter(Boolean);
@@ -113,7 +38,7 @@
     if (!resultsBox || !searchResults) return;
     resultsBox.hidden = false;
     if (!matches.length) {
-      searchResults.innerHTML = '<p class="twe-premium-empty">No exact match yet. Try a shorter phrase like “pet”, “QR”, “time”, or “trivia”, or browse Tools, Games, Resources, and Store.</p>';
+      searchResults.innerHTML = '<p class="twe-premium-empty">No exact match yet. Try a shorter phrase like “pet”, “QR”, “time”, or “trivia”, or browse Tools, Games, Resources, and TWEStore.</p>';
       say('No matching TWE result found. Try a shorter phrase.');
       return;
     }
@@ -123,22 +48,26 @@
       </a>`).join('');
     say(`${matches.length} TWE result${matches.length === 1 ? '' : 's'} shown for ${q || 'featured picks'}.`);
   };
+
+  const closeSearchResults = () => {
+    if (resultsBox) resultsBox.hidden = true;
+    if (searchResults) searchResults.innerHTML = '';
+    if (searchInput) searchInput.value = '';
+    say('');
+  };
+
   searchForm?.addEventListener('submit', (event) => {
     const value = searchInput?.value || '';
     if (!value.trim()) return;
     event.preventDefault();
     runSearch(value);
   });
-  const closeSearchResults = (message = 'Search results closed.') => {
-    if (resultsBox) resultsBox.hidden = true;
-    if (searchResults) searchResults.innerHTML = '';
-    if (searchInput) searchInput.value = '';
-    say('');
-  };
+
   header.querySelector('[data-twe-search-close]')?.addEventListener('click', () => {
-    closeSearchResults('Search cleared.');
+    closeSearchResults();
     searchInput?.focus();
   });
+
   document.addEventListener('keydown', (event) => {
     if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
       event.preventDefault();
@@ -146,62 +75,10 @@
       searchInput?.select();
       say('Search focused. Type a task like pet guide, QR code, time zone, or trivia.');
     }
-    if (event.key === 'Escape') {
-      if (resultsBox && !resultsBox.hidden) {
-        closeSearchResults('Search cleared.');
-        searchInput?.focus();
-      }
-      const drawer = header.querySelector('[data-twe-drawer]');
-      const trigger = header.querySelector('[data-twe-drawer-toggle]');
-      if (drawer && !drawer.hidden) {
-        drawer.hidden = true;
-        header.classList.remove('is-drawer-open');
-        header.querySelector('[data-nav-menu-panel]')?.classList.remove('is-drawer-open');
-        trigger?.setAttribute('aria-expanded', 'false');
-        trigger?.focus();
-        say('My TWE closed.');
-      }
+    if (event.key === 'Escape' && resultsBox && !resultsBox.hidden) {
+      closeSearchResults();
+      searchInput?.focus();
     }
-  });
-
-  const drawer = header.querySelector('[data-twe-drawer]');
-  const drawerToggle = header.querySelector('[data-twe-drawer-toggle]');
-  const navPanel = header.querySelector('[data-nav-menu-panel]');
-  const navToggle = header.querySelector('[data-nav-menu-toggle]');
-  const setDrawerOpenState = (open) => {
-    header.classList.toggle('is-drawer-open', Boolean(open));
-    if (navPanel) navPanel.classList.toggle('is-drawer-open', Boolean(open));
-  };
-  drawerToggle?.addEventListener('click', () => {
-    const open = drawer?.hidden !== false;
-    if (drawer) drawer.hidden = !open;
-    setDrawerOpenState(open);
-    if (open) closeSearchResults('Search cleared before opening My TWE.');
-    if (open && navPanel) {
-      navPanel.hidden = false;
-      navToggle?.setAttribute('aria-expanded', 'true');
-    }
-    drawerToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    refreshMyTWE();
-    if (open) drawer?.querySelector('a,button')?.focus();
-    say(open ? 'My TWE opened. Saved and recent items are stored only on this device.' : 'My TWE closed.');
-  });
-  header.querySelector('[data-twe-save-current]')?.addEventListener('click', () => {
-    const path = window.location.pathname;
-    const current = searchItems.find((item) => path === new URL(item.href, window.location.origin).pathname);
-    if (!current) {
-      say('This page is not one of the quick-save header items yet.');
-      return;
-    }
-    setSaved([current.id, ...getSaved()]);
-    refreshMyTWE();
-    say(`${current.name} saved on this device.`);
-  });
-  header.querySelector('[data-twe-clear]')?.addEventListener('click', () => {
-    setSaved([]);
-    setRecent([]);
-    refreshMyTWE();
-    say('My TWE saved and recent items cleared from this device.');
   });
 
   header.querySelectorAll('[role="tab"][data-twe-daily-tab]').forEach((tab, index, tabs) => {
@@ -216,6 +93,7 @@
       if (next) { event.preventDefault(); activateTab(next); next.focus(); }
     });
   });
+
   function activateTab(tab) {
     const id = tab.getAttribute('aria-controls');
     header.querySelectorAll('[role="tab"][data-twe-daily-tab]').forEach((candidate) => {
@@ -227,14 +105,4 @@
     });
     say(`${tab.textContent.trim()} Daily Edge mode selected.`);
   }
-
-  header.addEventListener('click', (event) => {
-    const link = event.target.closest?.('[data-twe-item-id]');
-    if (!link) return;
-    const id = link.getAttribute('data-twe-item-id');
-    if (!allowedIds.has(id)) return;
-    setRecent([id, ...getRecent()]);
-  });
-
-  refreshMyTWE();
 })();
