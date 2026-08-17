@@ -1002,7 +1002,8 @@ html[data-twe-v12="ready"] [data-twe-premium-header] .twe-destination-card[data-
     padding: 12px;
   }
 
-  html[data-twe-v12="ready"] [data-twe-v12-layout="route"] .nav{
+  html[data-twe-v12="ready"] [data-twe-v12-layout="route"] .nav, html[data-twe-v12="ready"] .site-header-band[data-twe-premium-header][data-twe-v12-layout="route"].is-route-compact .nav{
+    grid-template-columns: minmax(0, 1fr) auto !important;
     grid-template-rows: auto auto auto auto !important;
     grid-template-areas:
       "brand toggle"
