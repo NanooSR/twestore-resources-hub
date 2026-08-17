@@ -1012,6 +1012,19 @@ html[data-twe-v12="ready"] [data-twe-premium-header] .twe-destination-card[data-
       "panel panel" !important;
   }
 
+  html[data-twe-v12="ready"] .site-header-band[data-twe-premium-header][data-twe-v12-layout="route"].is-route-compact .nav{
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-areas:
+      "brand"
+      "search"
+      "destinations"
+      "panel" !important;
+  }
+
+  html[data-twe-v12="ready"] .site-header-band[data-twe-premium-header][data-twe-v12-layout="route"].is-route-compact .nav-menu-toggle{
+    display: none !important;
+  }
+
   html[data-twe-v12="ready"] [data-twe-premium-header] .brand{
     min-height: 69px;
     gap: 9px;
