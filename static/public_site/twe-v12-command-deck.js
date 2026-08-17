@@ -29,7 +29,7 @@
       icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M11 18h26l-2.2 21H13.2L11 18Z"/><path d="M18 19v-4a6 6 0 0 1 12 0v4"/><path d="m34 8 1.2 3.1L38 12l-2.8 1-1.2 3-1.1-3-2.9-1 2.9-.9L34 8Z"/></svg>',
     },
     {
-      id: "pawsome", label: "TWE Pawsome Pet Gear Hub", eyebrow: "Pet care & gear",
+      id: "pawsome", label: "Pawsome Hub", accessibleLabel: "TWE Pawsome Pet Gear Hub", eyebrow: "Pet care & gear",
       description: "Read practical pet gear, routine, and home-care guides.", preview: "Blogger · opens in a new tab", href: "https://pawsomepetgearhub.blogspot.com/", external: true,
       icon: '<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="15" cy="17" r="4"/><circle cx="25" cy="13" r="4"/><circle cx="35" cy="17" r="4"/><path d="M14 32c0-7 5-12 10-12s10 5 10 12c0 5-4 8-10 8s-10-3-10-8Z"/></svg>',
     },
@@ -189,7 +189,7 @@
       ? ' target="_blank" rel="noopener sponsored nofollow"'
       : "";
     return `
-      <a href="${destination.href}" data-twe-v12-destination="${destination.id}"${current}${external}>
+      <a href="${destination.href}" data-twe-v12-destination="${destination.id}"${destination.accessibleLabel ? ` aria-label="${destination.accessibleLabel}"` : ""}${current}${external}>
         <span class="twe-v12-bridge-icon" aria-hidden="true">${destination.icon}</span>
         <span><small>${destination.eyebrow}</small><strong>${destination.label}</strong></span>
         <span class="twe-v12-bridge-arrow" aria-hidden="true">${destination.external ? "↗" : "→"}</span>
