@@ -1,0 +1,89 @@
+{
+  "books": [
+    {
+      "slug": "milo-and-the-maybe-shadows",
+      "title": "Milo and the Maybe Shadows",
+      "source": "projects/children_books/book_20260730_brave_little_night_light/review_package/cover_front_review.png",
+      "source_size": [
+        2550,
+        2550
+      ],
+      "source_sha256": "b8786594d58af8031644ee36acf3393a046f299ade72f3e1723c68dd603c50ce",
+      "output": "admin_portal/static/public_site/book_store/milo-and-the-maybe-shadows.webp",
+      "output_size": [
+        900,
+        900
+      ],
+      "output_bytes": 37424,
+      "output_sha256": "7db17859846dd7db4154bef9f305ef2366397c71b1090c6702190e2d312f78e9"
+    },
+    {
+      "slug": "the-moon-needed-a-blanket",
+      "title": "The Moon Needed a Blanket",
+      "source": "projects/children_books/book_20260731_the_moon_needed_a_blanket/review_package/The_Moon_Needed_a_Blanket_front_cover_proof.png",
+      "source_size": [
+        2550,
+        2550
+      ],
+      "source_sha256": "fa5bde1f4debab0fd9123e5bbbff368046e64472ff7c0918aeec82265eebbd08",
+      "output": "admin_portal/static/public_site/book_store/the-moon-needed-a-blanket.webp",
+      "output_size": [
+        900,
+        900
+      ],
+      "output_bytes": 194354,
+      "output_sha256": "b1a6ebe845fd85c91e547f5822ba17719e3cb609be0523a6e4ed48335e07a2e8"
+    },
+    {
+      "slug": "the-too-big-sorry",
+      "title": "The Too-Big Sorry",
+      "source": "projects/children_books/book_20260731_sol_first_new_book/06_kdp/kindle_ebook_candidates_20260802/The_Too_Big_Sorry_front_cover_kindle_CANDIDATE_RGB.jpg",
+      "source_size": [
+        2550,
+        2550
+      ],
+      "source_sha256": "9cfc30ddda89e1d9d75f5c7971fb8d35763099d9a624b979ab715c6d9037e7db",
+      "output": "admin_portal/static/public_site/book_store/the-too-big-sorry.webp",
+      "output_size": [
+        900,
+        900
+      ],
+      "output_bytes": 147402,
+      "output_sha256": "46a2c892f52f84862529a9ca33cdb18272ea3f8e7c51886a49ab184a6db800b4"
+    },
+    {
+      "slug": "this-pocket-is-still-awake",
+      "title": "This Pocket Is Still Awake!",
+      "source": "test_books/2026_children_test_book/05_layout/sol_approved_full_layout_v0.7/cover_SOL_full_v0.7.png",
+      "source_size": [
+        2550,
+        2550
+      ],
+      "source_sha256": "81622f71fb20407a86f54cbb509321a0336450cc2abfae57a3b280c8c8986341",
+      "output": "admin_portal/static/public_site/book_store/this-pocket-is-still-awake.webp",
+      "output_size": [
+        900,
+        900
+      ],
+      "output_bytes": 187274,
+      "output_sha256": "c66d63e832c1cbff41c2bad64aa40c18a3f6789dd7cf0d4e6fb2d2565f6ecd22"
+    },
+    {
+      "slug": "marlow-builds-a-better-next",
+      "title": "Marlow Builds a Better Next",
+      "source": "runtime/new_book_build_20260804/kdp_publish_candidate_20260805/Marlow_Builds_a_Better_Next_FRONT_COVER_RGB_20260805_v2.jpg",
+      "source_size": [
+        2550,
+        2550
+      ],
+      "source_sha256": "143822917f8ce87f0a81ed31483cc537177666504938671379d4842b2473e5b1",
+      "output": "admin_portal/static/public_site/book_store/marlow-builds-a-better-next.webp",
+      "output_size": [
+        900,
+        900
+      ],
+      "output_bytes": 107356,
+      "output_sha256": "af1db938b97b98296205843722b43a35bacb2d521a98682d249afb693d62293a"
+    }
+  ]
+}

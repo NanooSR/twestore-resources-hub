@@ -4523,6 +4523,7 @@
         .site-header-band.site-header-simple .brand-copy span:last-child { display: none !important; }
       }
 
+
       /* 2026-07-26 Header Design Concepts final-output V11 implementation.
          Source: final ChatGPT Header Design Concepts package only, SHA-256
          1bb79923afc44ae1848889b2059d5b8059e475cdcb0d270894dcd8eafa4f9542. */
@@ -4776,6 +4777,7 @@
       .twe-premium-panel { padding: 16px; }
       .twe-premium-panel[hidden],
       .twe-premium-search-results[hidden]{ display: none !important; }
+
 
       /* SOL full-site re-audit hardening: compact desktop drawers must stay readable panels. */
       @media (min-width: 1181px) {
@@ -5073,7 +5075,7 @@
 
     </style>
     <link rel="stylesheet" href="/static/public_site/twe-v12-command-deck.css?v=20260816c">
-    <link rel="stylesheet" href="/static/public_site/twe-v12-body-polish.css?v=20260811a">
+    <link rel="stylesheet" href="/static/public_site/twe-v12-body-polish.css?v=20260817a">
     <script nonce="twe-static-export-v1">
       window.TWE_PUBLIC_API_BASE_URL = "https://twestore-public-api.ryan-4e0.workers.dev";
       window.tweApiUrl = function (path) {
@@ -5171,6 +5173,7 @@
     </div>
     <div class="cta-row store-hero-actions" role="group" aria-label="Store quick picks">
       <a class="btn" href="#store-front-product-picks">Review digital kits</a>
+      <a class="btn secondary" href="#twe-book-store">Browse TWE books</a>
       <a class="btn secondary" href="/amazon-store/">Open Amazon Store</a>
       <a class="text-link" href="/toolbox/?cb=">Try the free toolbox</a>
     </div>
@@ -5311,6 +5314,40 @@
   <p class="muted" style="margin-top: 12px; margin-bottom: 0;">You will still see the latest price, delivery details, and seller terms on Gumroad before checkout.</p>
 </section>
 
+<section class="section card twe-book-store" id="twe-book-store" aria-labelledby="twe-book-store-title">
+  <div class="section-head twe-book-store-head">
+    <div>
+      <p class="eyebrow">Books by The Watchers Edge</p>
+      <h2 id="twe-book-store-title">TWE Book Store</h2>
+      <p class="muted">Warm, illustrated read-aloud stories about bedtime worries, friendship, apologies, big feelings, and making things right.</p>
+    </div>
+    <span class="pill is-accent">Live Kindle and paperback editions</span>
+  </div>
+  <div class="twe-book-grid">
+    <article class="twe-book-card" data-twe-book-card="true">
+      <a class="twe-book-cover" style="border:0!important;border-radius:0!important" href="https://www.amazon.ca/dp/B0HCLNJ23V" target="_blank" rel="noopener" aria-label="View Milo and the Maybe Shadows Kindle edition on Amazon.ca"><img src="/static/public_site/book_store/milo-and-the-maybe-shadows.webp" alt="Cover of Milo and the Maybe Shadows by The Watchers Edge" width="900" height="900" loading="lazy"></a>
+      <div class="twe-book-card-body"><p class="eyebrow">Cozy bedtime story</p><h3>Milo and the Maybe Shadows</h3><p class="muted">A gentle bedtime story for children working through nighttime worries and mysterious shadows.</p><div class="twe-book-actions"><a class="btn" href="https://www.amazon.ca/dp/B0HCLNJ23V" target="_blank" rel="noopener">View Kindle</a><a class="btn secondary" href="https://www.amazon.ca/dp/B0HCNCTV8Y" target="_blank" rel="noopener">View paperback</a></div></div>
+    </article>
+    <article class="twe-book-card" data-twe-book-card="true">
+      <a class="twe-book-cover" style="border:0!important;border-radius:0!important" href="https://www.amazon.ca/dp/B0H7X5FW6P" target="_blank" rel="noopener" aria-label="View The Moon Needed a Blanket Kindle edition on Amazon.ca"><img src="/static/public_site/book_store/the-moon-needed-a-blanket.webp" alt="Cover of The Moon Needed a Blanket by The Watchers Edge" width="900" height="900" loading="lazy"></a>
+      <div class="twe-book-card-body"><p class="eyebrow">Tender nighttime adventure</p><h3>The Moon Needed a Blanket</h3><p class="muted">A warm forest story about noticing someone in need and finding a caring way to help.</p><div class="twe-book-actions"><a class="btn" href="https://www.amazon.ca/dp/B0H7X5FW6P" target="_blank" rel="noopener">View Kindle</a><a class="btn secondary" href="https://www.amazon.ca/dp/B0HCYK7K6P" target="_blank" rel="noopener">View paperback</a></div></div>
+    </article>
+    <article class="twe-book-card" data-twe-book-card="true">
+      <a class="twe-book-cover" style="border:0!important;border-radius:0!important" href="https://www.amazon.ca/dp/B0HCM8436X" target="_blank" rel="noopener" aria-label="View The Too-Big Sorry Kindle edition on Amazon.ca"><img src="/static/public_site/book_store/the-too-big-sorry.webp" alt="Cover of The Too-Big Sorry by The Watchers Edge" width="900" height="900" loading="lazy"></a>
+      <div class="twe-book-card-body"><p class="eyebrow">Friendship and repair</p><h3>The Too-Big Sorry</h3><p class="muted">A funny story about listening, friendship, and learning how to make things right after a mistake.</p><div class="twe-book-actions"><a class="btn" href="https://www.amazon.ca/dp/B0HCM8436X" target="_blank" rel="noopener">View Kindle</a><a class="btn secondary" href="https://www.amazon.ca/dp/B0HCTGJYZY" target="_blank" rel="noopener">View paperback</a></div></div>
+    </article>
+    <article class="twe-book-card" data-twe-book-card="true">
+      <a class="twe-book-cover" style="border:0!important;border-radius:0!important" href="https://www.amazon.ca/dp/B0HCJJDPPK" target="_blank" rel="noopener" aria-label="View This Pocket Is Still Awake! Kindle edition on Amazon.ca"><img src="/static/public_site/book_store/this-pocket-is-still-awake.webp" alt="Cover of This Pocket Is Still Awake! by The Watchers Edge" width="900" height="900" loading="lazy"></a>
+      <div class="twe-book-card-body"><p class="eyebrow">Playful bedtime read</p><h3>This Pocket Is Still Awake!</h3><p class="muted">A playful nighttime story with a lively little passenger who is not quite ready to settle down.</p><div class="twe-book-actions"><a class="btn" href="https://www.amazon.ca/dp/B0HCJJDPPK" target="_blank" rel="noopener">View Kindle</a><a class="btn secondary" href="https://www.amazon.ca/dp/B0HCJM2NY8" target="_blank" rel="noopener">View paperback</a></div></div>
+    </article>
+    <article class="twe-book-card" data-twe-book-card="true">
+      <a class="twe-book-cover" style="border:0!important;border-radius:0!important" href="https://www.amazon.ca/dp/B0HD6MGNMS" target="_blank" rel="noopener" aria-label="View Marlow Builds a Better Next Kindle edition on Amazon.ca"><img src="/static/public_site/book_store/marlow-builds-a-better-next.webp" alt="Cover of Marlow Builds a Better Next by The Watchers Edge" width="900" height="900" loading="lazy"></a>
+      <div class="twe-book-card-body"><p class="eyebrow">Big feelings and honest apologies</p><h3>Marlow Builds a Better Next</h3><p class="muted">A read-aloud story about big feelings, honest apologies, and choosing what to build next.</p><div class="twe-book-actions"><a class="btn" href="https://www.amazon.ca/dp/B0HD6MGNMS" target="_blank" rel="noopener">View Kindle</a><a class="btn secondary" href="https://www.amazon.ca/dp/B0HDJ1QWR1" target="_blank" rel="noopener">View paperback</a></div></div>
+    </article>
+  </div>
+  <p class="twe-book-store-note">Amazon.ca shows current pricing, availability, format details, and checkout terms.</p>
+</section>
+
 <section class="section card" id="store-front-amazon-picks" style="padding: 24px; border-radius: 22px; background: linear-gradient(180deg, rgba(255,255,255,0.99), rgba(255,241,214,0.46));">
   <div class="section-head" style="align-items: center; margin-bottom: 16px;">
     <div>
@@ -5397,7 +5434,7 @@
         <span class="product-preview-copy"><strong>TWE Operator Systems Bundle</strong></span>
       </a>
 
-      <p class="eyebrow">gumroad · CAD $112.00</p>
+      <p class="eyebrow">gumroad · CAD $126.00</p>
       <h3 style="margin-bottom: 6px;"><a href="/store/twe-operator-systems-bundle/" style="text-decoration:none;">TWE Operator Systems Bundle</a></h3>
       <p class="muted">Get five practical operator systems in one stack so you can manage follow-up, onboarding, SOPs, cash-flow visibility, and AI output review without building every workflow from scratch.</p>
       <div class="product-scan-grid" role="group" aria-label="Quick product fit for TWE Operator Systems Bundle">
@@ -5774,6 +5811,13 @@
 
 (() => {
   const params = new URLSearchParams(window.location.search);
+  const resetStoreHref = `${window.location.pathname}`;
+  const removalHref = name => {
+    const next = new URLSearchParams(window.location.search);
+    next.delete(name);
+    const queryString = next.toString();
+    return `${window.location.pathname}${queryString ? `?${queryString}` : ''}#store-filter-summary`;
+  };
   const query = (params.get('q') || '').trim();
   const selectedFamily = (params.get('family') || '').trim();
   const selectedPlatform = (params.get('platform') || '').trim();
@@ -5858,7 +5902,7 @@
           <h2>Try these next</h2>
           <p class="muted">Keep the filtered view compact. Use one of these wider paths if this search feels too narrow.</p>
           <div class="mini-stack" style="gap: 10px; margin-top: 12px;">
-            <a class="btn secondary" href="/store/">Reset store view</a>
+            <a class="btn secondary" href="${escapeHtml(resetStoreHref)}">Reset store view</a>
             <a class="btn ghost" href="/amazon-store/">Open Amazon Store</a>
             <a class="btn ghost" href="/collections/">Browse collections</a>
             <a class="btn ghost" href="/start-here/">Use Start Here</a>
@@ -5896,8 +5940,15 @@
   };
 
   let visible = 0;
+  const visibleSlugs = new Set();
   cards.forEach(card => {
-    const show = matches(card);
+    let show = matches(card);
+    const productSlug = card.dataset.productSlug || '';
+    if (show && !selectedPlatform && productSlug) {
+      if (visibleSlugs.has(productSlug)) show = false;
+      else visibleSlugs.add(productSlug);
+    }
+    if (show && !filterActive && visible >= 24) show = false;
     card.style.display = show ? '' : 'none';
     if (show) visible += 1;
   });
@@ -5968,12 +6019,13 @@
     if (labelFallbacks[name]?.[value]) return labelFallbacks[name][value];
     return (value || '').replace(/[-_]+/g, ' ').replace(/\b\w/g, letter => letter.toUpperCase());
   };
-  const activeLabels = [];
+  const activeFilters = [];
   for (const [label, name, value] of [['Family', 'family', selectedFamily], ['Platform', 'platform', selectedPlatform], ['Outcome', 'outcome', selectedOutcome], ['Amazon category', 'resource_category', selectedResourceCategory]]) {
     if (!value) continue;
-    activeLabels.push(`${label}: ${readableFilterValue(name, value)}`);
+    activeFilters.push({label, name, value: readableFilterValue(name, value)});
   }
-  if (query) activeLabels.push(`Search: ${query}`);
+  if (query) activeFilters.push({label: 'Search', name: 'q', value: query});
+  const activeLabels = activeFilters.map(({label, value}) => `${label}: ${value}`);
   const totalVisible = visible + visibleResources + visibleGuides;
   const summaryLabel = activeLabels.length ? activeLabels.join(' · ') : 'Filtered results';
   const setMetaContent = (selector, value) => {
@@ -6008,7 +6060,7 @@
     const summaryTitle = document.getElementById('store-filter-summary-title');
     const summaryCopy = document.getElementById('store-filter-summary-copy');
     if (activePills) {
-      activePills.innerHTML = '<span class="pill">Current search scope</span>' + activeLabels.map(label => `<span class="pill">${escapeHtml(label)}</span>`).join('') + `<span class="pill">${totalVisible} matching result${totalVisible === 1 ? '' : 's'}</span><a class="pill is-accent" href="/store/">Clear all filters</a>`;
+      activePills.innerHTML = '<span class="pill">Current search scope</span>' + activeFilters.map(({label, name, value}) => `<a class="pill" aria-label="${escapeHtml(`Remove ${label.toLowerCase()} filter: ${value}`)}" href="${escapeHtml(removalHref(name))}">${escapeHtml(`${label}: ${value}`)} ×</a>`).join('') + `<span class="pill">${totalVisible} matching result${totalVisible === 1 ? '' : 's'}</span><a class="pill is-accent" href="${escapeHtml(resetStoreHref)}">Clear all filters</a>`;
     }
     if (summaryTitle) summaryTitle.textContent = activeLabels.length ? `Filtered view: ${summaryLabel}` : 'Filtered results are ready';
     if (summaryCopy) {
@@ -6169,7 +6221,7 @@
       <footer class="footer">
         <p><strong>TheWatchersEdge.ca</strong> is a free customer and community site for practical tools, quick games, church news and events, pet content, helpful resources, and an optional TWE Store.</p>
         <p>Some links on this site are affiliate links. If you buy through them, The Watchers Edge may earn a small commission at no extra cost to you. As an Amazon Associate I earn from qualifying purchases. Store, price, taxes, delivery, and checkout details stay on the live provider page you open next.</p>
-        <p>Support and contact: <a class="text-link" href="/support/">the Support page</a></p>
+        <p>Support and contact: <a class="text-link" href="mailto:support@thewatchersedge.ca?subject=The%20Watchers%20Edge%20support%20question&amp;body=Order%20ID%20or%20receipt%20reference%2C%20if%20you%20have%20one%3A%0AProduct%20or%20page%3A%0ACheckout%2Faccess%20platform%2C%20if%20relevant%3A%0AQuestion%20or%20issue%3A">support@thewatchersedge.ca</a></p>
         <div class="footer-links">
           <a class="text-link" href="/affiliate-disclosure/">Affiliate disclosure</a>
           <a class="text-link" href="/about/">About</a>
@@ -6240,7 +6292,7 @@
         });
         const localSupportFallback = (message) => {
           const text = message.toLowerCase();
-          const emailLink = '<a class="text-link" href="/support/">the Support page</a>';
+          const emailLink = '<a class="text-link" href="mailto:support@thewatchersedge.ca?subject=Watchers%20Edge%20support%20chat%20follow-up&amp;body=Page%20or%20route%3A%0AProduct%20or%20topic%3A%0AOrder%20ID%20or%20receipt%20reference%2C%20if%20relevant%3A%0AQuestion%20or%20issue%20from%20chat%3A">support@thewatchersedge.ca</a>';
           if (/(human|live person|refund|payment|billing|account|login|password|paypal|bank|tax|legal|lawyer)/.test(text)) {
             return 'Thanks for asking. This one needs personal support, so please email ' + emailLink + ' and leave out passwords, payment details, tax or banking details, API keys, and private account information.';
           }
