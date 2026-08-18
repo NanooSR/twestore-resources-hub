@@ -3,19 +3,19 @@
     {
       "slug": "milo-and-the-maybe-shadows",
       "title": "Milo and the Maybe Shadows",
-      "source": "projects/children_books/book_20260730_brave_little_night_light/review_package/cover_front_review.png",
+      "source": "projects/children_books/book_20260730_brave_little_night_light/06_kdp/kindle_ebook_candidates_20260731/Milo_and_the_Maybe_Shadows_front_cover_kindle_CANDIDATE_RGB.jpg",
       "source_size": [
-        2550,
-        2550
+        2625,
+        2625
       ],
-      "source_sha256": "b8786594d58af8031644ee36acf3393a046f299ade72f3e1723c68dd603c50ce",
+      "source_sha256": "735d381d667e3bbf16c52dfad8d5b091de46712fc582ab87cec5cd106f75ab7e",
       "output": "admin_portal/static/public_site/book_store/milo-and-the-maybe-shadows.webp",
       "output_size": [
         900,
         900
       ],
-      "output_bytes": 37424,
-      "output_sha256": "7db17859846dd7db4154bef9f305ef2366397c71b1090c6702190e2d312f78e9"
+      "output_bytes": 101928,
+      "output_sha256": "1d65270478f6d5b443d0e53dbc1c35651016bb3eacbcca14920ff3c6a49c21bd"
     },
     {
       "slug": "the-moon-needed-a-blanket",
