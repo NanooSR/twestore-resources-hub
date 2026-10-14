@@ -75,7 +75,12 @@
     "/store/lead-value-roi-calculator",
     "/store/local-service-quote-calculator",
     "/store/website-audit-scorecard",
-    "/store/twe-follow-up-cadence-calculator"
+    "/store/twe-follow-up-cadence-calculator",
+    "/store/twe-discovery-call-qualification-worksheet",
+    "/store/twe-retainer-value-planner",
+    "/store/twe-offer-packaging-scorecard",
+    "/store/twe-client-scope-change-tracker",
+    "/store/twe-proposal-profitability-estimator"
   ],
   "affiliate_guide_routes": [
     "/best-admin-desk-tools-for-invoices-and-paperwork.html",
@@ -207,6 +212,11 @@
     "/store/local-service-quote-calculator",
     "/store/website-audit-scorecard",
     "/store/twe-follow-up-cadence-calculator",
+    "/store/twe-discovery-call-qualification-worksheet",
+    "/store/twe-retainer-value-planner",
+    "/store/twe-offer-packaging-scorecard",
+    "/store/twe-client-scope-change-tracker",
+    "/store/twe-proposal-profitability-estimator",
     "/best-admin-desk-tools-for-invoices-and-paperwork.html",
     "/best-ai-agent-ops-run-review-desk-setup.html",
     "/best-ai-output-qa-review-desk-setup.html",
@@ -267,8 +277,8 @@
     "/amazon-share-kit"
   ],
   "affiliate_guide_route_count": 54,
-  "product_count": 47,
-  "unique_product_route_count": 24,
+  "product_count": 52,
+  "unique_product_route_count": 29,
   "product_slugs": [
     "the-watchers-edge-botops-toolkit",
     "twe-solo-crm-follow-up-system",
@@ -316,7 +326,12 @@
     "lead-value-roi-calculator",
     "local-service-quote-calculator",
     "website-audit-scorecard",
-    "twe-follow-up-cadence-calculator"
+    "twe-follow-up-cadence-calculator",
+    "twe-discovery-call-qualification-worksheet",
+    "twe-retainer-value-planner",
+    "twe-offer-packaging-scorecard",
+    "twe-client-scope-change-tracker",
+    "twe-proposal-profitability-estimator"
   ],
   "unique_product_slugs": [
     "the-watchers-edge-botops-toolkit",
@@ -342,7 +357,12 @@
     "lead-value-roi-calculator",
     "local-service-quote-calculator",
     "website-audit-scorecard",
-    "twe-follow-up-cadence-calculator"
+    "twe-follow-up-cadence-calculator",
+    "twe-discovery-call-qualification-worksheet",
+    "twe-retainer-value-planner",
+    "twe-offer-packaging-scorecard",
+    "twe-client-scope-change-tracker",
+    "twe-proposal-profitability-estimator"
   ],
   "redirects": [
     {
@@ -350,5 +370,5 @@
       "location": "/"
     }
   ],
-  "exported_count": 75
+  "exported_count": 80
 }
